@@ -1,0 +1,24 @@
+#folders
+target/
+TestResults/
+#idea
+.idea
+*.iml
+
+#java
+*.class
+*.jar
+
+#vscode
+.classpath
+.project
+.vscode
+.settings
+
+# log files
+*.log
+*.log.?
+logs
+
+# Property file for Serentiy report
+serenity-report.properties

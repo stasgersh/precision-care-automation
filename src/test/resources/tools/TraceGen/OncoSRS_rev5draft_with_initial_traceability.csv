@@ -1,0 +1,182 @@
+ID;Requirement;Safety;Link;Test Ids
+SRS-1;OncoCare shall leverage PDS to get the OncoCare patients’ data.;No;x;SRS-11.01,SRS-11.02
+SRS-2;OncoCare shall be able to process and visualize CLP enriched data provided by PDS.;No;x;SRS-3.01,SRS-3.02,SRS-37.01,SRS-37.02,SRS-37.03,SRS-37.04
+SRS-3;OncoCare users shall be able to turn On/Off CLP visualization.;No;;
+SRS-4;OncoCare shall be able to leverage the federation between the hospital’s LDAP server and Cloud IDAM service for account management.;No;;
+SRS-5;OncoCare shall be able to open DICOM viewer URL.;No;;
+SRS-6;OncoCare shall handle different Patient ID formats available in the hospital.;No;;
+SRS-7;OncoCare shall ensure that whenever Patient name is displayed, then Patient ID is also displayed.;Yes;;
+SRS-8;OncoCare shall ensure that Patient's name, ID are non-editable through the application.;Yes;;
+SRS-9;OncoCare shall provide the possibility to refresh patient data on demand.;Yes;;
+SRS-11;OncoCare shall be able to consume FHIR formats that are based on the R4 version.;No;;
+SRS-12;OncoCare shall be able to process patient longitudinal health record sent by the PDS.;No;x;SRS-11.02,SRS-28.01,SRS-29.01,SRS-33.01,SRS-43.01
+SRS-13;OncoCare users shall not be able to hide all the swimlanes.-;No;;
+SRS-14;OncoCare shall integrate with EHS Login page, which provides place for the user to enter their username and password.;No;;
+SRS-15;OncoCare users shall be informed when any swimlanes are hidden.;Yes;;
+SRS-16;OncoCare shall allow access only the securely authenticated users to the system.;No;;
+SRS-17;OncoCare shall logout users after one hour inactivity.;No;;
+SRS-18;OncoCare users shall be able to logout from the application.;No;;
+SRS-19;OncoCare user session shall be maximized in 6 hours.;No;;
+SRS-21;OncoCare users shall be able to select patient from the patient list.;No;x;SRS-28.01,SRS-22.09
+SRS-22;OncoCare users shall be able to search patients from the patient list based on patient name or patient ID.;No;;
+SRS-23;The user shall be able to launch the OncoCare Application from EMR in case when EMR supports SMART App Launch.;No;;
+SRS-24;The user shall be able to launch OncoCare application from the browser.;No;x;SRS-14.01,SRS-18.01
+SRS-25;OncoCare application shall support at least 30 users to actively use the Summary View, Timeline View, Medical History, Comment View and Trend View of the OncoCare application simultaneously.;No;;
+SRS-26;OncoCare users shall be able to mark important events.;No;;
+SRS-27;OncoCare users shall be able to login to OncoCare with a unique user id and password.;No;x;SRS-18.01,SRS-26.01,SRS-16.01,SRS-16.04
+SRS-28;OncoCare shall display the following basic information of the selected patient on the Patient Banner:-Patient ID,-DOB, -Gender, -ECOG grade, -Diagnosis, -Stage, -Last Treatment (Tx), -Weight,-Height,-BMI,-BSA,-Molecular Profile, -Comorbidities, -Allergies and intolerances.;Yes;;
+SRS-29;OncoCare shall display the following Patient History info of a patient:-Family history,-Social history,-Substance history and-Environmental/occupation history.;No;;
+SRS-30;OncoCare shall be able to display the Patient data points on a timeline, grouped by the following swimlanes:-Encounters,-Imaging,-Pathology and Labs,-Biomarkers,-Treatment and Plan and -Uncategorized.;No;;
+SRS-31;OncoCare patient timeline shall be able to display patient data from the actual patient's first data point until the current day.;No;;
+SRS-32;OncoCare users shall be able to filter on the Timeline for events which were marked as important events.;No;;
+SRS-33;OncoCare shall be able to display patients active and completed medications sorted by time with the following info:-Medication Name-Dosage-Route-Frequency -Notes-Prescribed;No-;;
+SRS-34;OncoCare shall display events on the timeline. (For event definition see the 'Definitions, Acronyms, Abbreviations' chapter.);No;;
+SRS-35;OncoCare shall be able to display the label of the event points.;No;;
+SRS-36;OncoCare shall be able to display event names on the event labels.;No;;
+SRS-37;OncoCare shall be able to display CLP based secondary info on-The event labels-Side panel-Patient banner and -Summary view.;No;;
+SRS-38;OncoCare users shall be able to download Summary view in PDF format.;No;;
+SRS-39;OncoCare users shall be able to drill down the details of each event by clicking on the event to see more details.;No;;
+SRS-40;OncoCare shall be able to display lab results in tabular format on the side panel.;No;;
+SRS-41;OncoCare shall be able to visualize out of range lab results on the side panel.;No;;
+SRS-43;OncoCare shall provide access to the original report to see full fidelity details.;Yes;;
+SRS-44;OncoCare shall provide web-based access to the users in US English language.;No;;
+SRS-45;OncoCare shall provide web-based access to the users with the following browsers:-Google Chrome -Microsoft Edge  ;No;;
+SRS-46;OncoCare shall be able to be deployed on EHS Fenwood version.;No;;
+SRS-48;"OncoCare shall be able to visualize the followings, complying with country specific requirements as defined in DOC0841496 ""Global Labeling Content Requirements"":-Product name-Software version-GE Healthcare's name-The legal manufacturer site name and address.";No;x;SRS-59.01
+SRS-49;OncoCare shall have visual cue for data coming from CLP.;Yes;x;SRS-37.01,SRS-37.02,SRS-37.03,SRS-37.04
+SRS-50;OncoCare users shall be able to see their user menu, providing the availability of the following functionalities:-User manual,-About,-Settings, -Logout.;Yes;;
+SRS-51;OncoCare shall be able to group events close to each other on the timeline.;No;;
+SRS-52;OncoCare shall display the number of Events in each Event Group on the timeline.;Yes;;
+SRS-53;OncoCare users shall be able to ungroup the Event Groups when the user clicks on the grouped event on the timeline.-;Yes;;
+SRS-54;OncoCare users shall be able to zoom in and out on the timeline.;No;;
+SRS-55;OncoCare users shall be able to scroll the timeline vertically.;No;;
+SRS-56;OncoCare users shall be able to pan the timeline horizontally.;No;;
+SRS-59;OncoCare shall have 'About' info, which includes:-GE HealthCare logo-Product name-Part number-Software version number-Electronic IFU icon and link to the eIFU-Consult instructions for use symbol-Read warnings-Copyright information-Manufacturer icon, name and address-Manufacturer date-NotifyMe catalog reference-Used Licences.;No;;
+SRS-60;OncoCare shall provide online User Manual for the users. -Name of Device-Name and Address of the Legal Manufacturer-Country of Origin-Warnings / Precautions(if necessary)-Directions [Instructions] for Use-Indications for Use-Contraindications-Revision/control;Yes;;
+SRS-61;OncoCare shall inform the users when new or updated data is available.;Yes;;
+SRS-62;OncoCare shall capture the following events in the Audit Trail:-Add / Delete Comment-View patient-Create Label-Export-Configuration change-Valueset import/ Export.;Yes;;
+SRS-63;Audit log entries shall be tagged with authenticated user, an unambiguous time stamp and information about the event.;No;x;SRS-62.01,SRS-62.02,SRS-62.03,SRS-62.04,SRS-62.05,SRS-62.06,SRS-62.07,SRS-62.08,SRS-62.09,SRS-62.10,SRS-62.11,SRS-62.12,SRS-62.13,SRS-62.14,SRS-62.15,SRS-62.16,SRS-62.17,SRS-62.18,SRS-62.19,SRS-62.20,SRS-62.21,SRS-62.22,SRS-62.23,SRS-62.24,SRS-62.25,SRS-62.26,SRS-62.27,SRS-62.28
+SRS-67;OncoCare users shall be able to see visual Trends of the patient's weight, tumor marker (eg CA125, PSA), hemoglobin, platelets, creatinine and total bilirubin parameters on the trend dashboard in case these parameters have data for the patient.;No;;
+SRS-68;GE service personnel shall be able to access the OncoCare Audit log entries.;No;x;SRS-62.01,SRS-62.02,SRS-62.03,SRS-62.04,SRS-62.05,SRS-62.06,SRS-62.07,SRS-62.08,SRS-62.09,SRS-62.10,SRS-62.11,SRS-62.12,SRS-62.13,SRS-62.14,SRS-62.15,SRS-62.16,SRS-62.17,SRS-62.18,SRS-62.19,SRS-62.20,SRS-62.21,SRS-62.22,SRS-62.23,SRS-62.24,SRS-62.25,SRS-62.26,SRS-62.27,SRS-62.28
+SRS-69;OncoCare users shall not be able to edit any data that have been aggregated from the hospital systems.;Yes;;
+SRS-70;OncoCare shall be able to trace OncoCare data to the source data health record.;No;;
+SRS-71;OncoCare service manual for GE service personnel shall be provided in English language and include the following information for OncoCare and CLP: -Product name and version,-Deployment,-Configuration,-troubleshooting details.;No;;
+SRS-74;OncoCare users shall be informed when any events are hidden.;Yes;;
+SRS-76;OncoCare shall display Error message to the users when any service/network failure occurred.;Yes;;
+SRS-79;OncoCare users shall be able to close the side panel.;No;;
+SRS-80;OncoCare shall track usage analytics (if the functionality is turned on) for product improvement and resolution of customer issues.;No;;
+SRS-81;OncoCare users shall be informed about the status of the data synchronization.;Yes;;
+SRS-82;OncoCare shall populate active and completed medications in separate groups.;Yes;;
+SRS-83;OncoCare shall collapse completed medication info by default to avoid mixing up active and completed medications.;Yes;;
+SRS-84;OncoCare shall display events on the Uncategorized swimlane in the cases when:-- Date information is not available for the record-- OncoCare fails to determine timeline event domain group.;Yes;;
+SRS-85;OncoCare shall have visual cue when the timeline is zoomed in.;Yes;;
+SRS-86;OncoCare shall display medications with unknown time at the end of the medication list.;No;;
+SRS-90;OncoCare users shall only see the Event Labels added by themselves.;No;;
+SRS-91;OncoCare shall be able to display on the timeline the changes of medication doses within a chemo regimen.;Yes;;
+SRS-92;OncoCare shall be able to visually indicate the Chemo cycle numbers on the timeline and on the Side panel.;No;;
+SRS-93;OncoCare users shall be able to rearrange swimlanes.;No;;
+SRS-94;OncoCare shall be able to store the CLP on/off, timeline direction and swimlane order settings in user level.;No;x;SRS-3.04
+SRS-95;When presenting data, OncoCare shall apply the stored user settings for CLP on/off, timeline direction and swimlane order.;No;x;SRS-94.01,SRS-94.07,SRS-3.03
+SRS-96;OncoCare users shall be able to change the timeline's time direction to see newest event on the right or on the left.;No;;
+SRS-98;OncoCare users shall be able to add comments to each Patient.;No;;
+SRS-99;OncoCare shall only accept maximum 2000 character long Patient comments.;No;;
+SRS-100;OncoCare shall automatically add the commenter's name and the date to the saved Patient comments.;No;;
+SRS-101;OncoCare users shall only see their own Patient comments.;No;;
+SRS-102;OncoCare users shall be able to delete Patient comments.;No;;
+SRS-103;OncoCare users shall be able to add comments to the Events.;No;;
+SRS-104;OncoCare shall only accept maximum 2000 character long Event comments.;No;;
+SRS-105;OncoCare shall automatically add the commenter's name and the date to the saved Event comments.;No;;
+SRS-106;OncoCare users shall be able to delete Event comments.;No;;
+SRS-107;OncoCare shall display vertical markers on the timeline along the swimlanes by hovering on an event.;No;;
+SRS-108;OncoCare shall display vertical markers on the trend dashboards.;No;;
+SRS-109;OncoCare shall keep in sync the vertical markers on all the chart on the Trend dashboard.;No;;
+SRS-110;OncoCare shall keep in sync the vertical markers on the timeline and the Side panel chart. (In the cases when the Side panel has chart.);No;;
+SRS-111;OncoCare users shall be able to filter for swimlanes.;No;;
+SRS-113;OncoCare shall provide a Summary view with the following sections:-Diagnosis, -Molecular profile, -Care team, -Imaging - most recent, ER visit - most recent, -MDT report - most recent, -Comments - most recent, -Treatment-Labs, -Oncology note - most recent, -Medical history.;No;;
+SRS-114;OncoCare shall provide a way to access and download logs from the system for investigation purposes.;No;;
+SRS-115;OncoCare shall provide a way for GE service to configure the following parameters:-EMR smart integration,-DICOM viewer URL,-Patient identifier,Oncology Department Identifier,Analytic log collection in SPR snap tool - in case analytics is enabled.;No;;
+SRS-116;OncoCare shall provide a way to backup and restore:-application configurations -comments,  label list, labeled events, CLP on/off, EMR data sync status, marked as important events, timeline direction and swimlane order settings-valuesets.;No;;
+SRS-117;OncoCare shall provide the following capabilities for Hospital IT Administrators and GE Service personnels:-upload valueset-download valueset.;No;;
+SRS-118;OncoCare shall provide manual for the Hospital IT Administrator in English language which describes the configuration of Valueset Store and the configuration of OncoCare.;No;;
+SRS-119;Patient Banner shall be open by default.;Yes;;
+SRS-120;OncoCare users shall be able to Expand Patient Banner to see all the data.;Yes;;
+SRS-121;OncoCare users shall be able to Collapse Patient Banner when it is displayed in more than one row.;Yes;;
+SRS-122;OncoCare Timeline view shall contain Macro navigator, Timeline and Timeline Toolbar.;No;;
+SRS-123;OncoCare Timeline view shall have a Macro navigator with swimlanes and events represented by dots.;No;;
+SRS-124;OncoCare Timeline view shall have a Macro navigator with a sliding window about the time frame that is displayed in the bottom Timeline section.;No;;
+SRS-125;OncoCare shall be able to show/hide Macro navigator.;No;;
+SRS-126;OncoCare Macro navigator shall reflect to the filtered events.;No;;
+SRS-127;OncoCare Macro navigator shall reflect to the filtered swimlanes.;No;;
+SRS-128;OncoCare users shall be able to add the following predefined labels to the events:-Adverse Event-Date of diagnosis-MDT discussion-Molecular testing-Progression-Recurrence-To Be Reviewed.;No;;
+SRS-129;OncoCare users shall be able to add new custom labels to the label list.;No;;
+SRS-130;OncoCare users shall be able to add custom labels to events.;No;x;SRS-129.01
+SRS-131;OncoCare users shall be able to remove labels from the events.;No;;
+SRS-132;OncoCare label list shall be ordered in alphabetic order.;No;;
+SRS-133;OncoCare labels in the label list shall be searchable.;No;;
+SRS-134;OncoCare shall be able to display graph on the side panel for the events which values are changing in time.;No;;
+SRS-135;OncoCare's Medical History view shall contain -Comorbidities, -Medications, -Allergies and Intolerances and -Patient History info.;No;;
+SRS-136;OncoCare shall display Comorbidities with Name and Effectivity date.;No;;
+SRS-137;OncoCare shall display Allergies and Intolerances with name, type, criticality and observation date.;No;;
+SRS-138;OncoCare users shall be able to see the trend cards on the trend dashboard in grid or in list view.;No;;
+SRS-139;OncoCare users shall be able to select to see last 30 days, last 90 days or all time data on the trend cards.;No;;
+SRS-140;OncoCare users shall be able to set date range for the data on the trend cards.;No;;
+SRS-141;OncoCare users shall be able to see the number of comments added to the Patient comments.;No;x;SRS-98.01,SRS-98.02,SRS-98.03,SRS-98.04,SRS-102.01,SRS-103.18,SRS-103.19,SRS-106.03
+SRS-142;OncoCare users shall only see their own Event comments.;No;;
+SRS-143;OncoCare users shall be able to filter on the Timeline for events which has comments.;No;x;SRS-103.17
+SRS-144;OncoCare users shall be able to filter on the Timeline for predefined Labels:-Adverse Event-Date of diagnosis-MDT discussion-Molecular testing-Progression-Recurrence-To Be Reviewed-and custom event labels.;No;;
+SRS-145;OncoCare users shall be able to select to see last 30 days, last 90 days or all time data on the Timeline view.;No;;
+SRS-146;OncoCare shall be able to visualize the reference ranges on the Trend cards to easily notice the outlier datapoints.;No;;
+SRS-147;OncoCare users shall be able to filter on the Timeline for Chemo cycle events.;No;;
+SRS-148;OncoCare users shall be able to filter on the Timeline for events which has AI enriched data.;No;;
+SRS-149;OncoCare users shall be able to filter on the Timeline for the following events:-Fluoroscopy,-Genomic report,-Bone scan,-CT,-Mammography,-MR,-PET,-PET-CT,-PET-MR,-SPECT,-Ultrasound,-X-ray,-Pathology,-Labs,-Radiation,-Surgery,-Systemic Tx,-ER visit,-Inpatient visit,-Outpatient visit.;No;;
+SRS-150;OncoCare patient default timeline view shall be: •6 months back from the actual day (“Today”), •No event is selected, •No filter is selected, •Macro navigator is opened.;Yes;x;SRS-124.01,SRS-205.01,SRS-205.02,SRS-205.03
+SRS-151;OncoCare shall support software deployment on EHS Cloud Platform via SpectroCloud.;No;;
+SRS-152;OncoCare shall support removal of OncoCare software.;No;;
+SRS-153;OncoCare shall inform the users that the Summary view page presents filtered data.;Yes;;
+SRS-154;OncoCare users shall be able to see the corresponding full report or reports of the following cards:-Key events, -Imaging - most recent, -Imaging history, -MDT report - most recent, -Oncology note - most recent;No;;
+SRS-155;OncoCare users shall be able to see the corresponding event or events on the timeline of the following cards:-Key events, -Molecular profile, -Imaging - most recent, -Imaging history, -MDT report - most recent, -Radiation therapy, -Systemic therapy, -Lab history, -Oncology note - most recent;No;;
+SRS-156;OncoCare shall display the date of the report on the following Summary view cards:-Key events,-Imaging - most recent, -Imaging history, -MDT report - most recent, -Radiation therapy, -Systemic therapy, -Lab history, -Oncology note - most recent;No;x;SRS-154.01,SRS-154.02,SRS-154.03,SRS-154.04,SRS-154.06,SRS-154.07
+SRS-157;Medical history card on the Summary view tab shall include links for:-Comorbidities-Medications-Allergies and intolerances-Patient history.;No;;
+SRS-158;OncoCare users shall be able to reset filters.;No;x;SRS-111.04,SRS-144.06,SRS-149.05,SRS-147.01
+SRS-159;When the patient is deleted from PDS, all the stored patient data (comments as well) shall be deleted from OncoCare as well.;No;;
+SRS-160;OncoCare shall provide charts for the GE service person to visualize in EHS Admin Console Grafana UI:-CPU utilization-memory consumption-response times. ;No;;
+SRS-162;OncoCare shall inform the users about the case when the data is extracted by CLP.;Yes;x;SRS-163.01,SRS-163.02,SRS-163.03,SRS-49.01
+SRS-163;OncoCare shall indicate the confidence score of the CLP extractions, as the level of certainty in the correctness of the CLP output.;Yes;;
+SRS-164;OncoCare shall provide a way for Hospital IT Administrators to configure the following parameters in EHS Admin Console UI:-EMR smart integration,-DICOM viewer URL,-Patient identifier,Oncology Department Identifier;No;;
+SRS-165;OncoCare shall restrict Patient selection when the OncoCare application is started with SMART App Launch.;Yes;x;SRS-23.01
+SRS-166;OncoCare application shall support at least 30 concurrent user sessions.;No;x;SRS-25.01
+SRS-167;OncoCare shall be able to display regimen for Chemotherapy on the timeline.;No;;
+SRS-171;OncoCare users shall be able to save the patient banner opened or closed state per patient.;Yes;;
+SRS-172;OncoCare shall provide a “Status and response” button under Treatment section in the Summary page to navigate to the “Treatment and response” view page.;No;x;SRS-173.01
+SRS-173;OncoCare shall provide a button on the “Treatment and Response” view page to navigate Back to the Summary page.;No;;
+SRS-174;OncoCare shall provide a two-column view on the “Treatment and Response” view page with the following groupings: Most recent Treatment group (Treatment – most recent), “Systemic therapy” – content shall match with Systemic therapy in Summary view page, “Radiation therapy” – content shall match with the Radiation therapy in Summary view page, “Oncology note – most recent” – content shall match with “Oncology note – most recent” in Summary view page, Response group, Imaging studies, Measurement cards, Trend charts;No;;
+SRS-175;OncoCare shall provide empty state if there is no data for the “Systemic therapy”,  “Radiation therapy”, “Oncology note – most recent” events or for the selected imaging study.;No;;
+SRS-176;OncoCare shall provide an option to open the complete report for the “Oncology note – most recent” and “Imaging study” cards.;No;;
+SRS-177;OncoCare shall provide an option to open imaging for the “Imaging study” cards.;No;;
+SRS-178;OncoCare shall display the imaging studies in two columns in the “Treatment response” section when the Treatment and Response view is first opened for a patient: Column “A”: empty with selection option, Column “B”: most recent imaging (if exists);No;;
+SRS-180;OncoCare shall have an option to: "Change imaging study" to open the imaging study selector panel when the study is already selected., “Select imaging study” to open the imaging study selector panel when no study was selected.;No;x;SRS-178.01
+SRS-181;OncoCare shall have imaging selector panel, which displays the available imaging studies ordered by time (most recent first).;No;;
+SRS-182;OncoCare shall provide search functionality for the imaging study selector panel.;No;;
+SRS-183;OncoCare shall display long text as truncated text with popover in the imaging study selector panel.;No;;
+SRS-184;OncoCare shall provide the possibility to cancel/closing the imaging selector panel.;No;;
+SRS-190;OncoCare shall display the following Measurement cards in the Response group: •	Tumor markers •	Weight;No;;
+SRS-192;Measurement card shall contain:•Event title •A and B badges referring to the selected imaging studies •	Explanations of A and B badges: “Values closest to the date of imaging A and B” •	The value and date closest to the Imaging study later in time, which shall be the most recent after result regardless of time threshold. •	The value and date closest to the Imaging study earlier in time, which shall be within the month after the imaging study. If no result found, then the user shall be informed that there were “No value within one month”.;No;;
+SRS-193;OncoCare shall provide empty state if there is no Tumor markers or weight event data to be displayed on the Measurement cards.;No;x;SRS-175.03
+SRS-194;OncoCare shall provide empty state if there is no selected imaging study.;No;;
+SRS-195;OncoCare shall provide empty state for the Measurement cards if there is no result for selected imaging study: "No value within one month".;No;;
+SRS-196;OncoCare shall display a Trend chart(s) in the Response group with the following data: 	Tumor markers, Weight.;No;;
+SRS-197;OncoCare shall display the following Vertical markers on the Trend charts in the Response group: •	A, B badges, according to the date of the selected imaging studies •	Date of the systemic therapy •	Date of the radiation therapy;No;x;SRS-196.02,SRS-196.03,SRS-196.04
+SRS-199;OncoCare shall save the following timeline view settings on patient level: - Selected event (side panel open) - Data filters - Show/hide Macronavigator - Timeline zoom status - Horizontal scroll position of the timeline.;No;;
+SRS-200;OncoCare users shall see the Timeline based on the saved timeline settings.;No;x;SRS-199.01,SRS-199.02,SRS-199.03,SRS-199.05
+SRS-201;OncoCare shall backup and restore the saved timeline settings.;No;;
+SRS-203;OncoCare users shall see the linked (URL routed) timeline event’s panel info even if it is filtered out with the following notification: "This event is not visible on timeline due to filter(s) applied.";Yes;;
+SRS-205;OncoCare users shall be able to reset the timeline settings to the default Timeline view.;No;;
+SRS-206;OncoCare shall not show any error message in case of unsuccessful timeline settings save, and let the user continue his/her workflow;No;x;SRS-199.04
+SRS-208;OncoCare users shall be able to see detailed tooltips with full badges on the timeline for the mouse hover action.;No;;
+SRS-209;OncoCare shall save the following Trend dashboard view settings on patient level: Time range, Layout, Reference range visibility.;No;;
+SRS-210;OncoCare shall backup and restore the saved trend dashboard settings.;No;;
+SRS-212;OncoCare shall not show any error message in case of unsuccessful trend dashboard settings save, and let the user continue his/her workflow.;No;x;SRS-209.06
+SRS-213;OncoCare users shall be able to reset the trends settings for the default Trend dashboard view.;No;;
+SRS-217;OncoCare shall support software upgrade on EHS Cloud Platform via SpectroCloud.;No;x;SRS-151.01
+SRS-222;OncoCare shall display labels (except custom and predefined labels) with icon in the filter section (modal, navigator).;No;;
+SRS-224;OncoCare shall display the labels in the filter modal by the following groups: -Swimlanes -Labels -Imaging modalities -Pathology and Labs -Encounter types -Biomarkers -Treatment types.;No;;

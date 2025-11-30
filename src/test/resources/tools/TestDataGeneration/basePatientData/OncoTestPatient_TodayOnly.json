@@ -1,0 +1,72 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/ef37efe2-bea8-4198-85d6-cc29b97c70df",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "ef37efe2-bea8-4198-85d6-cc29b97c70df",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "TodayOnly"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "111-987-0000",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2003-02-24",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "b81ad101-2fac-40ea-a5b9-8f87fef2bb48",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report today"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/ef37efe2-bea8-4198-85d6-cc29b97c70df"
+        },
+        "effectiveDateTime": "<TODAY>T00:10:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    }
+  ]
+}

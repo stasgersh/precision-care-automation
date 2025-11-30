@@ -1,0 +1,124 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/cce647e7-40b8-4750-9865-9b656957737b",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "cce647e7-40b8-4750-9865-9b656957737b",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "MacroNavDay2"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "111-987-0001",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2001-01-26",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "34245d2b-d8f8-47ab-bb89-eed7600544cb",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report today"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cce647e7-40b8-4750-9865-9b656957737b"
+        },
+        "effectiveDateTime": "<TODAY>T00:10:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/7fcc9d03-5cc8-4f27-b293-62967bdb6717"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ee3fa38f-5d5e-4ed7-8f4f-d2cac1b611e5",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 45 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cce647e7-40b8-4750-9865-9b656957737b"
+        },
+        "effectiveDateTime": "<45_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "bd72474a-e338-42ca-ba1b-b581123480db"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "73ac150e-6c06-459a-a763-1713ab0c0465",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 58 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/cce647e7-40b8-4750-9865-9b656957737b"
+        },
+        "effectiveDateTime": "<58_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/f6852981-c509-4dff-ba8b-944cd25694f3"
+          }
+        ]
+      }
+    }
+  ]
+}

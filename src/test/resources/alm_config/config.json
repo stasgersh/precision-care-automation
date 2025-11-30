@@ -1,0 +1,14 @@
+{
+  "Project ID": 57030,
+  "Project Reference": 66,
+  "Project Name": "CareIntellect for Oncology",
+  "Execution Set Mapping": {
+    "CareIntellect\\ for\\ Oncology\\ 1\\.0\\.0\\ VPR\\ for\\ System\\ Sanity\\-Exploratory/VPR List .*?- Automated": 102821,
+    "CareIntellect\\ for\\ Oncology\\ 1\\.0\\.0\\ VPR\\ for\\ System\\ Sanity\\-Exploratory/VPR List .*?- Manual": 102800,
+    "CareIntellect\\ for\\ Oncology\\ 1\\.0\\.0\\ VPR\\ for\\ System\\ SRS/Automated .*?": 102822,
+    "CareIntellect\\ for\\ Oncology\\ 1\\.0\\.0\\ VPR\\ for\\ System\\ SRS/Manual .*?": 102802,
+    "CareIntellect for Oncology 1.0.0 VPR for System Performance": 102823,
+    "CareIntellect\\ for\\ Oncology\\ 1\\.0\\.0\\ VPR\\ for\\ System\\ Integration/VPR List .*?- Automated": 102824,
+    "CareIntellect\\ for\\ Oncology\\ 1\\.0\\.0\\ VPR\\ for\\ System\\ Integration/VPR List .*?- Manual": 102825
+  }
+}

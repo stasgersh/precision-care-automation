@@ -1,0 +1,7 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: none
+
+include:
+  - project: ${CI_CD_PROJECT}
+    ref: ${CI_CD_VERSION}
+    file: 'docker.yml'

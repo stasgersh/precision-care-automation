@@ -1,0 +1,196 @@
+ID;Requirement;Safety;Link;Test IDs
+SRS-1;OncoFlow shall leverage EDA 2.0 or above versions to get the OncoFlow patients' data.;No;x;SRS-11.01,SRS-11.02
+SRS-2;OncoFlow shall be able to process and visualize NLP enriched data provided by EDA.;No;x;SRS-3.01,SRS-3.02,SRS-37.01,SRS-49.01,SRS-49.02
+SRS-3;OncoFlow users shall be able to switch On/Off NLP visualization.;No;;
+SRS-4;OncoFlow shall be able to integrate with the hospital's LDAP server through EHL identity service.;No;;
+SRS-5;OncoFlow shall be able to visualize DICOM series. ;No;;
+SRS-6;OncoFlow shall handle different Patient ID formats available in the hospital.;No;;
+SRS-7;OncoFlow shall ensure to display, send and retrieve Patient's name and Patient ID together. ;Yes;;
+SRS-8;OncoFlow shall ensure that Patient's name, ID are non-editable through the application.;Yes;;
+SRS-10;OncoFlow shall be able to inform the user when new or updated data is available in EDA.;Yes;x;SRS-61.01,SRS-61.02,SRS-61.03,SRS-61.04,SRS-61.05,SRS-61.06
+SRS-11;OncoFlow shall be able to consume FHIR formats that are based on the R4 version.;No;;
+SRS-12;OncoFlow shall be able to process Patient Jacket sent by the EDA.;No;x;SRS-11.02,SRS-28.01,SRS-29.01,SRS-33.01,SRS-43.01
+SRS-14;OncoFlow shall integrate with EHL Login page, which provides place for the user to enter their username and password.;No;;
+SRS-16;OncoFlow shall allow access only the securely authenticated users to the system.;No;;
+SRS-17;OncoFlow shall logout users after one hour inactivity.;No;;
+SRS-18;OncoFlow users shall be able to logout from the application.;No;;
+SRS-19;OncoFlow user session shall be maximized in 6 hours.;No;;
+SRS-21;OncoFlow users shall be able to select patient from the patient list.;No;x;SRS-28.01,SRS-22.09
+SRS-22;OncoFlow users shall be able to search patients from the patient list based on patient name or patient ID.;No;;
+SRS-23;The user shall be able to launch the OncoFlow Application from EMR in case when EMR supports SMART App Launch.;No;;
+SRS-24;The user shall be able to launch OncoFlow application from the browser.;No;x;SRS-14.01,SRS-18.01
+SRS-25;OncoFlow application shall support up to 100 users to use OncoFlow simultaneously.;No;;
+SRS-27;OncoFlow users shall be able to login to OncoFlow with a unique user id and password.;No;x;SRS-18.01,SRS-26.01,SRS-16.01,SRS-16.04
+SRS-28;"OncoFlow shall display the following basic information of the selected patient:
+- Patient ID,
+- DOB,
+- Gender,
+- ECOG grade,
+- Diagnosis,
+- Stage,
+- Last Treatment (Tx),
+- Allergies,
+- Comorbidities,
+- Molecular Profile,
+- Metastasis,
+- Weight,
+- Height,
+- BMI and
+- BSA.";Yes;;
+SRS-29;"OncoFlow shall display the following patient history info of a patient:
+- Family history,
+- Social history,
+- Substance history and
+- Environmental/occupation history.";No;;
+SRS-30;"OncoFlow shall be able to display the Patient data points on a timeline, grouped by the following swimlanes:
+- Clinical evaluation,
+- Imaging,
+- Pathology,
+- Biomarkers,
+- Treatment and Plan,
+- Encounters,
+- Patient Status and Events,
+- Uncategorized.";No;;
+SRS-31;OncoFlow patient timeline shall start from the actual patient's first data point until the current day.;No;;
+SRS-33;"OncoFlow shall be able to display patients active and completed medications sorted by time with the following info:
+- Route
+- Medicine name
+- Dosage
+- Duration
+- Notes
+- Prescribed date.";No;;
+SRS-82;OncoFlow shall populate active and completed medications in separate groups.;Yes;;
+SRS-83;OncoFlow shall collapse completed medication info by default to avoid mixing up active and completed medications.;Yes;;
+SRS-86;OncoFlow shall display medications with unknown time at the end of the medication list.;No;;
+SRS-34;"OncoFlow shall display events on the timeline.
+(For event definition see the "Definitions, Acronyms, Abbreviations" chapter.)";No;;
+SRS-35;OncoFlow shall be able to display the label of the event points.;No;;
+SRS-36;OncoFlow shall be able to display event names on the event labels.;No;;
+SRS-37;OncoFlow shall be able to display NLP based secondary info on the event labels.;No;;
+SRS-38;OncoFlow shall be able to export the Patient's timeline view and comments into a PDF or a JPEG format.;No;;
+SRS-39;OncoFlow users shall be able to drill down the details of each event by clicking on the event to see more details.;No;;
+SRS-40;OncoFlow shall be able to display lab results in tabular format on a side panel.;No;;
+SRS-41;OncoFlow shall be able to visualize out of range lab results on a side panel.;No;;
+SRS-42;OncoFlow shall be able to display DICOM image's preview on a side panel.;No;;
+SRS-79;OncoFlow users shall be able to close the side panel.;No;;
+SRS-67;OncoFlow users shall be able to see visual trends of the trendable parameters.;No;;
+SRS-43;OncoFlow shall provide access to the original report to see full fidelity details.;Yes;;
+SRS-44;OncoFlow shall provide web-based access to the users in US English language. ;No;;
+SRS-45;"OncoFlow shall provide web-based access to the users with the following browsers:
+-	Google Chrome
+-	Microsoft Edge
+-	Safari browser";No;;
+SRS-46;OncoFlow shall be able to be deployed on a virtualized environment on the top of EHL 2.0 platform or higher.;No;;
+SRS-47;"OncoFlow shall respond within 3 secs of user action to subsequent clicks of the user (after the first load) on the application.
+Note : The assumption is that the network/environment related effects are in the operating range per the Service Manual.";No;;
+SRS-48;"OncoFlow shall be able to visualize the followings, complying with country specific requirements as defined in DOC0841496 ""Global Labeling Content Requirements"":
+-	Product name
+-	Software version
+-	GE Healthcare's name and address
+-	The legal manufacturer site name and address.";No;;
+SRS-80;OncoFlow shall track usage analytics in a privacy and security compliant method for product improvement and resolution of customer issues.;No;;
+SRS-50;"OncoFlow users shall be able to see their user menu, providing the availability of the following functionalities:
+- User guide,
+- About,
+- Settings and
+- Logout.";Yes;;
+SRS-51;OncoFlow shall be able to group events close to each other on the timeline.;No;;
+SRS-52;OncoFlow shall display the number of Events in each Event Group on the timeline.;No;;
+SRS-53;OncoFlow users shall be able to ungroup the Event Groups when the user clicks on the grouped event on the timeline.;No;;
+SRS-54;OncoFlow users shall be able to zoom in and out on the timeline.;No;;
+SRS-55;OncoFlow users shall be able to scroll the timeline vertically.;No;;
+SRS-56;OncoFlow users shall be able to pan the timeline horizontally.;No;;
+SRS-58;OncoFlow users shall be able to hide and show swimlanes.;No;;
+SRS-93;OncoFlow users shall be able to rearrange swimlanes.;No;;
+SRS-94;OncoFlow users shall be able to save the swimlane order as a user preference.;No;;
+SRS-95;"When presenting data, OncoFlow shall apply the saved user preference state for:
+- timeline direction
+- swimlane order
+- swimlane filtering
+- mark as important
+- NLP on/off";No;;
+SRS-96;OncoFlow users shall be able to change the timeline's time direction.;No;;
+SRS-97;OncoFlow users shall be able to save timeline direction as a user preference.;No;;
+SRS-98;OncoFlow users shall be able to add comments to each Patient.;No;;
+SRS-99;OncoFlow shall only accept maximum 2000 character long Patient comments.;No;;
+SRS-100;OncoFlow shall automatically add the commenter's name and the date to the saved Patient comments.;No;;
+SRS-101;OncoFlow users shall only see their own Patient/Event comments.;No;;
+SRS-102;OncoFlow users shall be able to delete Patient comments.;No;;
+SRS-103;OncoFlow users shall be able to add comments to the Events.;No;;
+SRS-104;OncoFlow shall only accept maximum 2000 character long Event comments.;No;;
+SRS-105;OncoFlow shall automatically add the commenter's name and the date to the saved Event comments.;No;;
+SRS-106;OncoFlow users shall be able to delete Event comments.;No;;
+SRS-13;OncoFlow users shall not be able to hide all the swimlanes.;No;;
+SRS-15;OncoFlow users shall be informed when any swimlanes are hidden.;Yes;;
+SRS-26;OncoFlow users shall be able to mark important events.;No;;
+SRS-32;OncoFlow users shall be able to filter for marked as important events.;No;;
+SRS-74;OncoFlow users shall be informed when any events are hidden.;Yes;;SRS-13.01,SRS-88.09,SRS-88.10,SRS-103.17
+SRS-88;OncoFlow users shall be able to add Tags for Events to ease the quick patient overview.;No;;
+SRS-89;OncoFlow users shall be able to remove Tags from Events to ease the quick patient overview.;No;;
+SRS-90;OncoFlow users shall only see the Event Tags added by themselves.;No;;
+SRS-91;OncoFlow shall be able to display on the timeline the changes of medication doses.;No;;
+SRS-92;OncoFlow shall be able to visually indicate the Chemo cycle numbers on the timeline and on the Side panel.;No;;
+SRS-107;OncoFlow shall display vertical markers on the timeline along the swimlanes by hovering on an event.;No;;
+SRS-108;OncoFlow shall display vertical markers on the trend dashboards.;No;;
+SRS-109;OncoFlow shall keep in sync the vertical markers on all the chart on the Trend dashboard.;No;;
+SRS-110;OncoFlow shall keep in sync the vertical markers on the timeline and the Side panel chart. (In the cases when the Side panel has chart.);No;;
+SRS-111;OncoFlow users shall be able to filter for swimlanes.;No;;
+SRS-112;OncoFlow users shall be able to save filtered swimlane as a user preference.;No;;
+SRS-113;OncoFlow shall provide a Summary view to summarize what happened in a given timerange.;Yes;;
+SRS-59;"OncoFlow shall have "About" info, which includes:
+-	Product name
+-	Device Identifier (Product or Catalog number)
+-	Software version number
+-	Copyright disclaimer
+-	Trademark disclaimer
+-	Open source and commercial software disclosure
+-	Name and address of the legal manufacturer
+-	Country of Origin
+-	Warnings/Precautions (If applicable)";No;;
+SRS-60;"OncoFlow shall provide online User Manual for the users.
+-	Name of Device
+-	Name and Address of the Legal Manufacturer
+-	Country of Origin
+-	Warnings / Precautions(if necessary)
+-	Directions [Instructions] for Use
+-	Indications for Use
+-	Contraindications
+-	Revision/control";Yes;;
+SRS-61;OncoFlow shall inform the users when new or updated data is available.;Yes;;
+SRS-76;OncoFlow shall display Error message to the users when any service/network failure occurred.;Yes;;
+SRS-77;OncoFlow shall display Error message to the users when patient mismatch is detected.;Yes;;
+SRS-81;OncoFlow shall display the time of the last update.;Yes;;
+SRS-9;OncoFlow shall provide the possibility to refresh patient data on demand.;Yes;;
+SRS-84;"OncoFlow shall display events on the Uncategorized swimlane in the cases when:
+- Date information is not available for the record
+- OncoFlow fails to determine timeline event domain group.";Yes;;
+SRS-85;OncoFlow shall have visual cue when the timeline is zoomed in.;Yes;;
+SRS-49;OncoFlow shall have visual cue for data coming from NLP.;Yes;;
+SRS-62;"OncoFlow shall capture the following events in the audit trail:
+- Login
+- Logout
+- Add / Delete Comment
+- View patient
+- Add / Delete Tag
+- Export.";No;;
+SRS-63;Audit log entries shall be tagged with authenticated user, an unambiguous time stamp and information about the event.;No;;
+SRS-65;OncoFlow shall support remote software delivery, installation and upgrade.;No;;
+SRS-87;"All service and administration activity related to the below shall be logged for the system:
+- Service user login and logout timestamp,
+- Service name,
+- Service upgrades,
+- User licenses.";No;;
+SRS-66;OncoFlow shall provide remote service capabilities.;No;;
+SRS-68;Administrators shall be able to access the OncoFlow Audit log entries.;No;;
+SRS-69;OncoFlow users shall not be able to edit any data that have been aggregated from the hospital systems.;Yes;;
+SRS-70;OncoFlow shall be able to trace OncoFlow data to the source data health record.;No;;
+SRS-71;OncoFlow shall provide an online service manual for the service personnel that includes installation, integration and troubleshooting details.;No;;
+SRS-72;OncoFlow shall provide preinstall manual.;No;;
+SRS-73;OncoFlow shall provide install manual.;No;;
+SRS-145;OncoFlow users shall be able to select to see last 30 days, last 90 days or all time data on the Timeline view.;No;;
+SRS-MACRONAV;PLACEHOLDER for timeline macro-navigator requirement.;No;;
+SRS-REGIMEN;PLACEHOLDER for chemo regimen on timeline requirement.;No;;
+SRS-NOTEABLE_EVENTS;PLACEHOLDER for notable events requirement.;No;;
+SRS-117;"Oncoflow shall provide the following capabilities for Hospital IT Administrators:
+- upload valueset
+- download valueset";No;;
