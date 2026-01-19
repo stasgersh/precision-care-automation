@@ -1,0 +1,143 @@
+{
+  "configType": "entity",
+  "classId": "allergy",
+  "description": "",
+  "definitions": [
+    {
+      "resourceType": "AllergyIntolerance",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.clinicalStatus",
+              "include": "active-allergy-status-vs"
+            },
+            {
+              "path": "$.verificationStatus",
+              "include": "valid-allergy-verification-status-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.recordedDate"
+          }
+        },
+        {
+          "source": {
+            "path": "$.onsetDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.onsetPeriod"
+          },
+          "processor": "periodDateText"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "clinicalStatus",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.clinicalStatus"
+              }
+            }
+          ]
+        },
+        {
+          "key": "verificationStatus",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.verificationStatus"
+              }
+            }
+          ]
+        },
+        {
+          "key": "type",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.type"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "criticality",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.criticality"
+              }
+            }
+          ]
+        },
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "lastOccurrence",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.lastOccurrence"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note"
+              }
+            }
+          ]
+        },
+        {
+          "key": "reaction",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.reaction"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "valueset": {
+    "url": "www.some.url.com",
+    "description": "input validation vs",
+    "compose": {
+      "include": [
+        {
+          "system": "www.loinc.co.il",
+          "concept": [
+            {
+              "code": "c-234",
+              "display": "<svg/onload=alert('XSS')>"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "version_1"
+  },
+  "name": "iv_vs2"
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "d2ca0794-b513-4592-a1fb-e2863a3f16fc",
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "LP18648-3",
+        "display": "Pathologist Report"
+      }
+    ],
+    "text": "Pathology Report"
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "27898-6",
+          "display": "Pathology studies (set)"
+        }
+      ],
+      "text": "Pathology Report"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/7cfe48ab-eb05-9ee1-84a4-f59c8a84e05a"
+  },
+  "date": "2023-10-13T14:00:00Z",
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/plain",
+        "data": "UGF0aWVudCBOYW1lOiBNYXJpYSBHb256YWxlejsgQWdlOiA1OTsgR2VuZGVyOiBGZW1hbGU7IERhdGUgb2YgUmVwb3J0OiAyMDI0LTA5LTI0OyBTcGVjaW1lbiBUeXBlOiBMZWZ0IGJyZWFzdCBiaW9wc3k7IENsaW5pY2FsIERpYWdub3NpczogU3VzcGljaW91cyBtYXNzIGluIHRoZSB1cHBlciBvdXRlciBxdWFkcmFudCBvZiB0aGUgbGVmdCBicmVhc3QuOyBNYWNyb3Njb3BpYyBEZXNjcmlwdGlvbjogQSBmaXJtLCBpcnJlZ3VsYXIgbWFzcyBtZWFzdXJpbmcgMy44IGNtIGluIGRpYW1ldGVyIHdhcyBleGNpc2VkLiBUaGUgdHVtb3IgaXMgbG9jYXRlZCAxLjIgY20gZnJvbSB0aGUgbmVhcmVzdCBzdXJnaWNhbCBtYXJnaW4uOyBNaWNyb3Njb3BpYyBEZXNjcmlwdGlvbjogSGlzdG9sb2dpY2FsIGV4YW1pbmF0aW9uIHJldmVhbHMgYW4gaW52YXNpdmUgY2FyY2lub21hIHdpdGggZ2xhbmQtZm9ybWluZyBzdHJ1Y3R1cmVzLCBjb25zaXN0ZW50IHdpdGggYW4gaW52YXNpdmUgZHVjdGFsIGNhcmNpbm9tYS4gVGhlIHR1bW9yIGNlbGxzIGRpc3BsYXkgbW9kZXJhdGUgbnVjbGVhciBwbGVvbW9ycGhpc20gYW5kIGEgaGlnaCBtaXRvdGljIHJhdGUsIHdpdGggZXZpZGVuY2Ugb2YgbHltcGhvdmFzY3VsYXIgaW52YXNpb24uIFN1cnJvdW5kaW5nIGJyZWFzdCB0aXNzdWUgc2hvd3MgZHVjdGFsIGNhcmNpbm9tYSBpbiBzaXR1IChEQ0lTKSwgd2l0aCBubyBzaWduaWZpY2FudCBpbnZvbHZlbWVudCBvZiB0aGUgc2tpbiBvciBjaGVzdCB3YWxsLjsgSGlzdG9sb2d5IFR5cGU6IEludmFzaXZlIGR1Y3RhbCBjYXJjaW5vbWEgKElEQyksIGdyYWRlIDIuOyBUdW1vciBTaXplOiAzLjggY20gYXQgdGhlIGxhcmdlc3QgZGltZW5zaW9uLjsgSW1tdW5vaGlzdG9jaGVtaXN0cnk6IEVzdHJvZ2VuIHJlY2VwdG9yIChFUik6IFBvc2l0aXZlICg4NSUpOyBQcm9nZXN0ZXJvbmUgcmVjZXB0b3IgKFBSKTogUG9zaXRpdmUgKDYwJSk7IEhFUjIvbmV1OiBOZWdhdGl2ZSAoMSspOyBLaS02NzogMzAlLjsgUGF0aG9sb2dpY2FsIFN0YWdpbmcgKEFKQ0MgOHRoIEVkaXRpb24pOiBQcmltYXJ5IFR1bW9yIChUKTogVDIgKFR1bW9yID4gMiBjbSBidXQgPSA1IGNtKTsgUmVnaW9uYWwgTHltcGggTm9kZXMgKE4pOiBOMSAoTWV0YXN0YXNpcyB0byAxLTMgYXhpbGxhcnkgbHltcGggbm9kZXMpOyBEaXN0YW50IE1ldGFzdGFzaXMgKE0pOiBNMCAoTm8gZXZpZGVuY2Ugb2YgZGlzdGFudCBtZXRhc3Rhc2lzKS47IEZpbmFsIFBhdGhvbG9naWMgU3RhZ2luZzogR3JvdXAgU3RhZ2U6IElJQiAoVDIsIE4xLCBNMCkuOyBBZGRpdGlvbmFsIEZpbmRpbmdzOiBMeW1waG92YXNjdWxhciBpbnZhc2lvbjogUHJlc2VudC47IE1hcmdpbnM6IE5lZ2F0aXZlIGZvciB0dW1vciBpbnZvbHZlbWVudCAoY2xlYXIgYnkgMS4yIGNtKS47IENvbmNsdXNpb246IFRoaXMgaXMgYW4gaW52YXNpdmUgZHVjdGFsIGNhcmNpbm9tYSwgZ3JhZGUgMiwgd2l0aCBhc3NvY2lhdGVkIGR1Y3RhbCBjYXJjaW5vbWEgaW4gc2l0dS4gVHVtb3Igc2l6ZSBpcyAzLjggY20sIHdpdGggaW52b2x2ZW1lbnQgb2YgMSBheGlsbGFyeSBseW1waCBub2RlIGFuZCBubyBkaXN0YW50IG1ldGFzdGFzaXMuIEZpbmFsIHBhdGhvbG9naWMgc3RhZ2U6IElJQi4="
+      }
+    }
+  ]
+}

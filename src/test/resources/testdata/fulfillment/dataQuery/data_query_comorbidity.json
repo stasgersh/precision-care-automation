@@ -1,0 +1,117 @@
+{
+  "patient": "testPatientIdAmit",
+  "version": 1725280538039,
+  "results": [
+    {
+      "alias": "comorbidity",
+      "entries": [
+        {
+          "date": "2021-06-16T00:00:00.000Z",
+          "provenance": [
+            "Condition/condition2"
+          ],
+          "attributes": {
+            "severity": null,
+            "note": null,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "699214007",
+                  "display": "Pressure ulcer of hip"
+                }
+              ],
+              "text": "Pressure ulcer of hip"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "provisional",
+                  "display": "Provisional"
+                }
+              ],
+              "text": "Provisional"
+            },
+            "category": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "encounter-diagnosis",
+                    "display": "Encounter Diagnosis"
+                  }
+                ]
+              }
+            ],
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            }
+          },
+          "id": "comorbidity:condition2",
+          "type": "comorbidity",
+          "patient_version": 1725278928445
+        },
+        {
+          "date": "2021-05-13T00:00:00.000Z",
+          "provenance": [
+            "Condition/condition4"
+          ],
+          "attributes": {
+            "severity": null,
+            "note": null,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "14760008",
+                  "display": "Constipation"
+                }
+              ],
+              "text": "Constipation"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "confirmed",
+                  "display": "Confirmed"
+                }
+              ],
+              "text": "Confirmed"
+            },
+            "category": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "encounter-diagnosis",
+                    "display": "Encounter Diagnosis"
+                  }
+                ]
+              }
+            ],
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            }
+          },
+          "id": "comorbidity:condition4",
+          "type": "comorbidity",
+          "patient_version": 1725278928445
+        }
+      ],
+      "name": ["entities-comorbidity-513b1be0-050d-4c07-8ee5-1d0464a2363d"],
+      "nextPageToken": null
+    }
+  ]
+}

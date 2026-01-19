@@ -1,0 +1,20 @@
+{
+    "name": "ard-medication-vs",
+    "valueset": {
+      "version": "1.0",
+      "url": "ard-medication-vs",
+      "compose": {
+        "include": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "concept": [
+              {
+                "code": "CC-94676",
+                "display": "Androgen Receptor Degrade"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

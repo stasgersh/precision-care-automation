@@ -1,0 +1,666 @@
+{
+  "id": "NCT05568777",
+  "type": "trial",
+  "name": "Monitoring Symptoms to Help Young Women Take Hormone Therapy for Stage I-III Breast Cancer, ASPEN Study",
+  "usingAi": true,
+  "studyCompletion": "2027-05-01",
+  "description": "This phase III trial compares the effect of active symptom monitoring and patient education to patient education alone in helping young women with stage I-III breast cancer stay on their hormone therapy medicines.\nThe patient education tool contains interactive weblinks which provide patients with education material about breast cancer and side effects of therapy.\nSymptom monitoring is a weblink via email or text message with questions asking about symptoms.\nHormone therapy for breast cancer can cause side effects, and may cause some women to stop treatment early.\nAsking about symptoms more often may help women keep taking hormone therapy medicines.",
+  "patientsFilter": {
+    "filter": {
+      "must": [
+        {
+          "attributes.gender": {
+            "eq": "female"
+          }
+        }
+      ]
+    }
+  },
+  "status": "Recruiting",
+  "phase": "NA",
+  "link": "https://clinicaltrials.gov/study/NCT05568777",
+  "constants": null,
+  "variables": [
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    },
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "IsStageI_IIIHRPositive",
+      "definition": {
+        "ai": {
+          "criteria": "Has Stage I, II, or III hormone receptor positive breast cancer based on clinical or pathologic evaluation."
+        }
+      },
+      "display": "Female with Stage I-III HR+ breast cancer",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPrePeriMenopausalAtDiagnosis",
+      "definition": {
+        "ai": {
+          "criteria": "Had a menstrual period (by self-report) within the 12 months before breast cancer diagnosis."
+        }
+      },
+      "display": "Pre- or peri-menopausal at diagnosis",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPrePeriMenopausaEstradiol",
+      "definition": {
+        "ai": {
+          "criteria": "Had a serum or plasma estradiol and/or follicle stimulating hormone (FSH) concentration consistent with premenopausal status (based on institutional standards) within the 12 months before breast cancer diagnosis or when checked after breast cancer diagnosis."
+        }
+      },
+      "display": "Pre- or peri-menopausal at diagnosis",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "HasStartedOrPlanningOralET",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has started initial treatment with standard of care oral endocrine therapy (ET) (i.e., tamoxifen, anastrozole, exemestane, or letrozole; within 14 days prior to randomization or be planning to start initial treatment with standard of care oral ET within 14 days after randomization."
+        }
+      },
+      "display": "Started or planning to start oral ET",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "OvarianFunctionSuppressionPlan",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has ovarian function (estradiol above the postmenopausal range) must be planning to undergo ovarian suppression or ablation concomitantly with oral ET medication, starting before or at the same time as oral ET initiation. Participants with chemotherapy-induced amenorrhea or ovarian failure at time of registration must be planning to start ovarian suppression or ablation if they have recurrence of ovarian function during study participation (circulating estradiol concentration in the premenopausal range or recurrence of menses)."
+        }
+      },
+      "display": "Ovarian function and suppression/ablation plan",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "ChemotherapyInducedAmenorrhea",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has a chemotherapy-induced amenorrhea or ovarian failure at time of registration must be planning to start ovarian suppression or ablation if they have recurrence of ovarian function during study participation (circulating estradiol concentration in the premenopausal range or recurrence of menses)."
+        }
+      },
+      "display": "Chemotherapy-induced amenorrhea or ovarian failure",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "CompletedSurgeryForBreastCancer",
+      "definition": {
+        "ai": {
+          "criteria": "Patient must have completed surgery for treatment of breast cancer at least 14 days prior to randomization. NOTE: Concomitant radiotherapy at the time of randomization and/or during study participation is allowed."
+        }
+      },
+      "display": "Completed surgery for breast cancer",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "FinishedChemotherapy",
+      "definition": {
+        "ai": {
+          "criteria": "Patient that received chemotherapy and have finished it at least 14 days prior to randomization. NOTE: Concomitant maintenance targeted or biologic therapy (e.g., human epidermal growth factor receptor 2 [anti-HER2] therapy, poly-ADP ribose polymerase [PARP] inhibitor therapy, CDK4/6 inhibitor therapy, osteoclast inhibitor therapy) at the time of randomization and/or during study participation is allowed."
+        }
+      },
+      "display": "Finished chemotherapy",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "HasCompleteMedicalHistory",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has a complete medical history within 60 days prior to randomization."
+        }
+      },
+      "display": "Complete medical history",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "CanCompletePROInEnglishOrSpanish",
+      "definition": {
+        "ai": {
+          "criteria": "Patient is able to complete Patient-Reported Outcome (PRO) instruments in English or Spanish."
+        }
+      },
+      "display": "Complete PRO instruments in English or Spanish",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoDistantMetastaticBreastCancer",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has a distant metastatic breast cancer."
+        }
+      },
+      "display": "Distant metastatic breast cancer",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoPriorTamoxifenForTreatmentOrPrevention",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has started or plan to start treatment with tamoxifen during study participation and havn't received prior tamoxifen for treatment or prevention of breast cancer."
+        }
+      },
+      "display": "Prior tamoxifen for treatment or prevention",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoPriorAromataseInhibitorTherapy",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has started or plan to start treatment with an aromatase inhibitor during study participation must not have received prior aromatase inhibitor therapy for treatment or prevention of breast cancer."
+        }
+      },
+      "display": "Prior aromatase inhibitor therapy",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoOralEstrogenOrProgesteroneTreatments",
+      "definition": {
+        "ai": {
+          "criteria": "Patient is taking or planning to take oral estrogen-or progesterone-containing treatments during study participation."
+        }
+      },
+      "display": "Oral estrogen or progesterone treatments",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoAdditionalAntiCancerTreatments",
+      "definition": {
+        "ai": {
+          "criteria": "Patient receives additional anti-cancer treatments (i.e., experimental therapy, immunotherapy, biologics, etc.) as part of another clinical trial."
+        }
+      },
+      "display": "Additional anti-cancer treatments",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoNonBreastMalignancyTreatment",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has a non-breast malignancy for which they are currently receiving treatment."
+        }
+      },
+      "display": "Non-breast malignancy treatment",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoPregnancyDuringStudy",
+      "definition": {
+        "ai": {
+          "criteria": "Patient is planning to become pregnant during the 80 weeks of study participation."
+        }
+      },
+      "display": "Pregnancy during study",
+      "value": null,
+      "usingAi": true
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_female",
+      "type": "inclusion",
+      "title": "Gender is female",
+      "dependency": [
+        "gender"
+      ],
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is female",
+          "description": "Gender is female",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `female`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must be female and have stage I-III HR+ breast cancer",
+      "expression": "IsStageI_IIIHRPositive",
+      "id": "IsStageI_IIIHRPositive",
+      "allowMissingVariables": [
+        "IsStageI_IIIHRPositive"
+      ],
+      "dependency": [
+        "IsStageI_IIIHRPositive"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsStageI_IIIHRPositive",
+          "title": "Stage I-III HR+ breast cancer",
+          "description": "Has Stage I, II, or III hormone receptor positive breast cancer based on clinical or pathologic evaluation",
+          "expression": "variables.IsStageI_IIIHRPositive.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.IsStageI_IIIHRPositive.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have been pre- or peri-menopausal at the time of breast cancer diagnosis by satisfying one of the following: had a menstrual period (by self-report) within the 12 months before breast cancer diagnosis, or had a serum or plasma estradiol and/or follicle stimulating hormone (FSH) concentration consistent with premenopausal status (based on institutional standards) within the 12 months before breast cancer diagnosis or when checked after breast cancer diagnosis",
+      "expression": "IsPrePeriMenopausalAtDiagnosis || IsPrePeriMenopausaEstradiol",
+      "id": "IsPrePeriMenopausalAtDiagnosis_Or_IsPrePeriMenopausaEstradiol",
+      "allowMissingVariables": [
+        "IsPrePeriMenopausalAtDiagnosis",
+        "IsPrePeriMenopausaEstradiol"
+      ],
+      "dependency": [
+        "IsPrePeriMenopausalAtDiagnosis",
+        "IsPrePeriMenopausaEstradiol"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsPrePeriMenopausalAtDiagnosis",
+          "title": "Pre- or peri-menopausal at diagnosis",
+          "description": "Had a menstrual period (by self-report) within the 12 months before breast cancer diagnosis",
+          "expression": "variables.IsPrePeriMenopausalAtDiagnosis.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.IsPrePeriMenopausalAtDiagnosis.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsPrePeriMenopausaEstradiol",
+          "title": "Serum or plasma estradiol and/or follicle stimulating hormone",
+          "description": "Had a serum or plasma estradiol and/or follicle stimulating hormone (FSH) concentration consistent with premenopausal status (based on institutional standards) within the 12 months before breast cancer diagnosis or when checked after breast cancer diagnosis",
+          "expression": "variables.IsPrePeriMenopausaEstradiol.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.IsPrePeriMenopausaEstradiol.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have started initial treatment with standard of care oral endocrine therapy (ET) (i.e., tamoxifen, anastrozole, exemestane, or letrozole; within 14 days prior to randomization or be planning to start initial treatment with standard of care oral ET within 14 days after randomization.",
+      "expression": "HasStartedOrPlanningOralET",
+      "id": "HasStartedOrPlanningOralET",
+      "dependency": [
+        "HasStartedOrPlanningOralET"
+      ],
+      "subCriteria": [
+        {
+          "id": "HasStartedOrPlanningOralET",
+          "title": "Started or planning to start oral ET",
+          "description": "Patient has started initial treatment with standard of care oral endocrine therapy (ET) ",
+          "expression": "variables.HasStartedOrPlanningOralET.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.HasStartedOrPlanningOralET.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants who currently have ovarian function (estradiol above the postmenopausal range) must be planning to undergo ovarian suppression or ablation concomitantly with oral ET medication, starting before or at the same time as oral ET initiation. Participants with chemotherapy-induced amenorrhea or ovarian failure at time of registration must be planning to start ovarian suppression or ablation if they have recurrence of ovarian function during study participation (circulating estradiol concentration in the premenopausal range or recurrence of menses).",
+      "expression": "OvarianFunctionSuppressionPlan",
+      "id": "OvarianFunctionSuppressionPlan",
+      "allowMissingVariables": [
+        "OvarianFunctionSuppressionPlan"
+      ],
+      "dependency": [
+        "OvarianFunctionSuppressionPlan"
+      ],
+      "subCriteria": [
+        {
+          "id": "OvarianFunctionSuppressionPlan",
+          "title": "Ovarian function and suppression/ablation plan",
+          "description": "Ovarian function and suppression/ablation plan",
+          "expression": "variables.OvarianFunctionSuppressionPlan.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.OvarianFunctionSuppressionPlan.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have a chemotherapy-induced amenorrhea or ovarian failure at time of registration must be planning to start ovarian suppression or ablation if they have recurrence of ovarian function during study participation (circulating estradiol concentration in the premenopausal range or recurrence of menses).",
+      "expression": "ChemotherapyInducedAmenorrhea",
+      "id": "ChemotherapyInducedAmenorrhea",
+      "allowMissingVariables": [
+        "ChemotherapyInducedAmenorrhea"
+      ],
+      "dependency": [
+        "ChemotherapyInducedAmenorrhea"
+      ],
+      "subCriteria": [
+        {
+          "id": "ChemotherapyInducedAmenorrhea",
+          "title": "Chemotherapy-induced amenorrhea or ovarian failure",
+          "description": "Chemotherapy-induced amenorrhea or ovarian failure",
+          "expression": "variables.ChemotherapyInducedAmenorrhea.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.ChemotherapyInducedAmenorrhea.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participant must have completed surgery for treatment of breast cancer at least 14 days prior to randomization. NOTE: Concomitant radiotherapy at the time of randomization and/or during study participation is allowed.",
+      "expression": "CompletedSurgeryForBreastCancer",
+      "id": "CompletedSurgeryForBreastCancer",
+      "allowMissingVariables": [
+        "CompletedSurgeryForBreastCancer"
+      ],
+      "dependency": [
+        "CompletedSurgeryForBreastCancer"
+      ],
+      "subCriteria": [
+        {
+          "id": "CompletedSurgeryForBreastCancer",
+          "title": "Completed surgery for breast cancer",
+          "description": "Completed surgery for breast cancer",
+          "expression": "variables.CompletedSurgeryForBreastCancer.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.CompletedSurgeryForBreastCancer.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Patient that received chemotherapy and have finished it at least 14 days prior to randomization. NOTE: Concomitant maintenance targeted or biologic therapy (e.g., human epidermal growth factor receptor 2 [anti-HER2] therapy, poly-ADP ribose polymerase [PARP] inhibitor therapy, CDK4/6 inhibitor therapy, osteoclast inhibitor therapy) at the time of randomization and/or during study participation is allowed.",
+      "expression": "FinishedChemotherapy",
+      "id": "FinishedChemotherapy",
+      "allowMissingVariables": [
+        "FinishedChemotherapy"
+      ],
+      "dependency": [
+        "FinishedChemotherapy"
+      ],
+      "subCriteria": [
+        {
+          "id": "FinishedChemotherapy",
+          "title": "Finished chemotherapy",
+          "description": "Finished chemotherapy",
+          "expression": "variables.FinishedChemotherapy.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.FinishedChemotherapy.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "dependency": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-03-10`,`years`,`int`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-03-10`,`years`,`int`)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have a complete medical history within 60 days prior to randomization.",
+      "expression": "HasCompleteMedicalHistory",
+      "id": "HasCompleteMedicalHistory",
+      "allowMissingVariables": [
+        "HasCompleteMedicalHistory"
+      ],
+      "dependency": [
+        "HasCompleteMedicalHistory"
+      ],
+      "subCriteria": [
+        {
+          "id": "HasCompleteMedicalHistory",
+          "title": "Complete medical history",
+          "description": "Complete medical history",
+          "expression": "variables.HasCompleteMedicalHistory.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.HasCompleteMedicalHistory.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must be able to complete Patient-Reported Outcome (PRO) instruments in English or Spanish.",
+      "expression": "CanCompletePROInEnglishOrSpanish",
+      "id": "CanCompletePROInEnglishOrSpanish",
+      "allowMissingVariables": [
+        "CanCompletePROInEnglishOrSpanish"
+      ],
+      "dependency": [
+        "CanCompletePROInEnglishOrSpanish"
+      ],
+      "subCriteria": [
+        {
+          "id": "CanCompletePROInEnglishOrSpanish",
+          "title": "Complete PRO instruments in English or Spanish",
+          "description": "Complete PRO instruments in English or Spanish",
+          "expression": "variables.CanCompletePROInEnglishOrSpanish.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.CanCompletePROInEnglishOrSpanish.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have a distant metastatic breast cancer.",
+      "expression": "NoDistantMetastaticBreastCancer",
+      "id": "NoDistantMetastaticBreastCancer",
+      "dependency": [
+        "NoDistantMetastaticBreastCancer"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoDistantMetastaticBreastCancer",
+          "title": "Distant metastatic breast cancer",
+          "description": "Distant metastatic breast cancer",
+          "expression": "variables.NoDistantMetastaticBreastCancer.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoDistantMetastaticBreastCancer.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patient have not started or plan to start treatment with tamoxifen during study participation and havn't received prior tamoxifen for treatment or prevention of breast cancer.",
+      "expression": "NoPriorTamoxifenForTreatmentOrPrevention",
+      "id": "NoPriorTamoxifenForTreatmentOrPrevention",
+      "allowMissingVariables": [
+        "NoPriorTamoxifenForTreatmentOrPrevention"
+      ],
+      "dependency": [
+        "NoPriorTamoxifenForTreatmentOrPrevention"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoPriorTamoxifenForTreatmentOrPrevention",
+          "title": "Prior tamoxifen for treatment or prevention",
+          "description": "Prior tamoxifen for treatment or prevention",
+          "expression": "variables.NoPriorTamoxifenForTreatmentOrPrevention.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoPriorTamoxifenForTreatmentOrPrevention.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patient has not started or plan to start treatment with an aromatase inhibitor during study participation must not have received prior aromatase inhibitor therapy for treatment or prevention of breast cancer.",
+      "expression": "NoPriorAromataseInhibitorTherapy",
+      "id": "NoPriorAromataseInhibitorTherapy",
+      "allowMissingVariables": [
+        "NoPriorAromataseInhibitorTherapy"
+      ],
+      "dependency": [
+        "NoPriorAromataseInhibitorTherapy"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoPriorAromataseInhibitorTherapy",
+          "title": "Prior aromatase inhibitor therapy",
+          "description": "Prior aromatase inhibitor therapy",
+          "expression": "variables.NoPriorAromataseInhibitorTherapy.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoPriorAromataseInhibitorTherapy.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patient is not taking or planning to take oral estrogen-or progesterone-containing treatments during study participation.",
+      "expression": "NoOralEstrogenOrProgesteroneTreatments",
+      "id": "NoOralEstrogenOrProgesteroneTreatments",
+      "allowMissingVariables": [
+        "NoOralEstrogenOrProgesteroneTreatments"
+      ],
+      "dependency": [
+        "NoOralEstrogenOrProgesteroneTreatments"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoOralEstrogenOrProgesteroneTreatments",
+          "title": "Oral estrogen or progesterone treatments",
+          "description": "Patient is taking or planning to take oral estrogen-or progesterone-containing treatments during study participation.",
+          "expression": "variables.NoOralEstrogenOrProgesteroneTreatments.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoOralEstrogenOrProgesteroneTreatments.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patient doesn't receive additional anti-cancer treatments (i.e., experimental therapy, immunotherapy, biologics, etc.) as part of another clinical trial.",
+      "expression": "NoAdditionalAntiCancerTreatments",
+      "id": "NoAdditionalAntiCancerTreatments",
+      "dependency": [
+        "NoAdditionalAntiCancerTreatments"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoAdditionalAntiCancerTreatments",
+          "title": "Additional anti-cancer treatments",
+          "description": "Patient receives additional anti-cancer treatments (i.e., experimental therapy, immunotherapy, biologics, etc.) as part of another clinical trial.",
+          "expression": "variables.NoAdditionalAntiCancerTreatments.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoAdditionalAntiCancerTreatments.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patient does not have a non-breast malignancy for which they are currently receiving treatment.",
+      "expression": "NoNonBreastMalignancyTreatment",
+      "id": "NoNonBreastMalignancyTreatment",
+      "dependency": [
+        "NoNonBreastMalignancyTreatment"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoNonBreastMalignancyTreatment",
+          "title": "Non-breast malignancy treatment",
+          "description": "Patient has a non-breast malignancy for which they are currently receiving treatment.",
+          "expression": "variables.NoNonBreastMalignancyTreatment.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoNonBreastMalignancyTreatment.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patient is not planning to become pregnant during the 80 weeks of study participation.",
+      "expression": "NoPregnancyDuringStudy",
+      "id": "NoPregnancyDuringStudy",
+      "allowMissingVariables": [
+        "NoPregnancyDuringStudy"
+      ],
+      "dependency": [
+        "NoPregnancyDuringStudy"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoPregnancyDuringStudy",
+          "title": "Pregnancy during study",
+          "description": "Patient is planning to become pregnant during the 80 weeks of study participation.",
+          "expression": "variables.NoPregnancyDuringStudy.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoPregnancyDuringStudy.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    }
+  ]
+}

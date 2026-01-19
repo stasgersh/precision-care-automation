@@ -1,0 +1,45 @@
+{
+  "id": "oncology.breast",
+  "banner": {
+    "representationId": "patientBanner.onco.breast",
+    "querySetId": "patientProfile.onco.breast"
+  },
+  "dashboards": {
+    "timeline": {
+      "representationId": "timeline.onco.breast",
+      "querySetId": "timeline.onco.breast"
+    },
+    "summary": {
+      "main": {
+        "representationId": "summary.onco.breast",
+        "querySetId": "summary.onco.breast"
+      },
+      "recentEvents": {
+        "representationId": "recentEvents.onco.general",
+        "querySetId": "recentEvents.onco.general"
+      }
+    },
+    "medicalHistory": {
+      "representationId": "medicalHistory.onco.general",
+      "querySetId": "medicalHistory.onco.general"
+    },
+    "trends": {
+      "representationId": "trend.onco.breast",
+      "querySetId": "trend.onco.breast"
+    },
+    "treatmentResponse": {
+      "imagingSelector": {
+        "representationId": "imagingStudy.onco.general",
+        "querySetId": "imagingReports.onco.general"
+      },
+      "main": {
+        "representationId": "treatmentResponse.onco.general",
+        "querySetId": "treatmentResponse.onco.breast"
+      },
+      "charts": {
+        "representationId": "treatmentResponseChartMarkers.onco.general",
+        "querySetId": "treatmentResponse.onco.breast"
+      }
+    }
+  }
+}

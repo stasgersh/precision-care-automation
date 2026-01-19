@@ -1,0 +1,3828 @@
+{
+  "id": "summary.onco.extended",
+  "items": [
+    {
+      "group": "groupLinks",
+      "elements": [
+        {
+          "value": {
+            "label": [{ "constant": "Diagnosis" }],
+            "url": { "constant": "/summary#diagnosis" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Imaging" }],
+            "url": { "constant": "/summary#mostRecentImaging" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Treatments" }],
+            "url": { "constant": "/summary#treatments" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Molecular profile" }],
+            "url": { "constant": "/summary#molecularProfile" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Oncology note" }],
+            "url": { "constant": "/summary#mostRecentOncologyNote" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Labs" }],
+            "url": { "constant": "/summary#labs" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "ER visit" }],
+            "url": { "constant": "/summary#mostRecentErVisit" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "MDT report" }],
+            "url": { "constant": "/summary#mostRecentMdtReport" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Care team" }],
+            "url": { "constant": "/summary#careTeam" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "group": "patient",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "key": { "constant": "MRN" },
+                "value": {
+                  "path": "$.patient[0]",
+                  "processor": { "name": "patientIdentifierValueText" }
+                },
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "diagnosis",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": {
+                  "constant": "Diagnosis"
+                },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "diagnosis"
+                },
+                "type": "text"
+              },
+              {
+                "type": "text",
+                "value": {
+                  "path": "$.earliestGroupedPrimaryDiagnosis[*]",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Primary diagnosis",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.attributes.code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Date",
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.earliestGroupedMetastasis[*]",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Metastasis",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.attributes.code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "diagnosis",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": {
+                  "constant": "Stage"
+                },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "stage"
+                },
+                "type": "text"
+              },
+              [
+                {
+                  "type": "table",
+                  "value": {
+                    "path": "$.earliestGroupedPrimaryDiagnosis[0].attributes.stage[*]",
+                    "config": {
+                      "cells": [
+                        {
+                          "header": "Category",
+                          "elements": [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.type",
+                                "processor": { "name": "codeableConceptText" }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "header": "Value",
+                          "elements": [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.summary",
+                                "processor": { "name": "codeableConceptText" }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "header": "Date",
+                          "elements": [
+                            {
+                              "type": "datetime",
+                              "value": {
+                                "path": "$.date"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "table",
+                  "value": {
+                    "path": "$.[earliestNlpStageDocument,mostRecentNlpTnmDocument]",
+                    "config": {
+                      "cells": [
+                        {
+                          "header": "Category",
+                          "elements": [
+                            {
+                              "type": "text",
+                              "value": {
+                                "constant": "Stage"
+                              },
+                              "dependsOn": {
+                                "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[0].Staging_object[Stage_Group_str]"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "constant": "pTNM"
+                              },
+                              "dependsOn": {
+                                "path": "$.attributes.clpFindings[?(@root.type === 'pathologyReport')].findings.PrimaryCancer_array[0].Staging_object[T_Stage_str,N_Stage_str,M_Stage_str]"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "constant": "cTNM"
+                              },
+                              "dependsOn": {
+                                "path": "$.attributes.clpFindings[?(@root.type === 'oncologyMDTReport' || @root.type === 'imagingReport')].findings.PrimaryCancer_array[0].Staging_object[T_Stage_str,N_Stage_str,M_Stage_str]"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "header": "Value",
+                          "elements": [
+                            {
+                              "type": "nlp",
+                              "value": {
+                                "sourceDocument": {
+                                  "path": "$"
+                                },
+                                "clpFindings": {
+                                  "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[0].Staging_object[Stage_Group_str,T_Stage_str,N_Stage_str,M_Stage_str]"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "header": "Date",
+                          "elements": [
+                            {
+                              "type": "datetime",
+                              "value": {
+                                "path": "$.date"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.[earliestNlpStageDocument,mostRecentNlpTnmDocument]",
+                    "elements": {
+                      "type": "link",
+                      "dependsOn": {
+                        "path": "$.attributes.reportContent[0]"
+                      },
+                      "value": {
+                        "label": [
+                          [
+                            { "path": "$.attributes.title" },
+                            {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          ],
+                          {
+                            "path": "$.attributes.conclusionCode",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "internal",
+                        "url": {
+                          "path": "$",
+                          "processor": {
+                            "name": "reportLink",
+                            "args": {
+                              "representation": "reportHtml.onco.general"
+                            }
+                          }
+                        }
+                      },
+                      "meta": {
+                        "title": [
+                          {
+                            "value": { "path": "$.attributes.title" },
+                            "type": "text"
+                          },
+                          {
+                            "value": {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            },
+                            "type": "text"
+                          }
+                        ],
+                        "subTitle": {
+                          "type": "list",
+                          "value": {
+                            "elements": [
+                              {
+                                "type": "datetime",
+                                "value": { "path": "$.date" }
+                              },
+                              [
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.author[*].name[*]",
+                                    "processor": { "name": "humanName" }
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.organization[*].name"
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No author" }
+                                }
+                              ],
+                              [
+                                {
+                                  "type": "text",
+                                  "value": { "path": "$.attributes.status" }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No status" }
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "date": {
+                          "value": { "path": "$.date" },
+                          "type": "datetime"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.[earliestNlpStageDocument,mostRecentNlpTnmDocument]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              [
+                                { "path": "$.attributes.title" },
+                                {
+                                  "path": "$.attributes.context.procedure[*].code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              ],
+                              {
+                                "path": "$.attributes.conclusionCode",
+                                "processor": { "name": "codeableConceptText" }
+                              }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "diagnosis",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Key events" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "key events"
+                },
+                "type": "text"
+              },
+              {
+                "type": "list",
+                "value": {
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.cancerDiagnosisKeyEvents[*]",
+                        "elements": {
+                          "value": {
+                            "leftColumn": [
+                              {
+                                "type": "link",
+                                "dependsOn": {
+                                  "path": "$.attributes.reportContent[0]"
+                                },
+                                "value": {
+                                  "label": [
+                                    [
+                                      { "path": "$.attributes.title" },
+                                      {
+                                        "path": "$.attributes.context.procedure[*].code",
+                                        "processor": {
+                                          "name": "codeableConceptText"
+                                        }
+                                      }
+                                    ],
+                                    {
+                                      "path": "$.attributes.conclusionCode",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    }
+                                  ],
+                                  "target": "internal",
+                                  "url": {
+                                    "path": "$",
+                                    "processor": {
+                                      "name": "reportLink",
+                                      "args": {
+                                        "representation": "reportHtml.onco.general"
+                                      }
+                                    }
+                                  }
+                                },
+                                "meta": {
+                                  "title": [
+                                    {
+                                      "value": { "path": "$.attributes.title" },
+                                      "type": "text"
+                                    },
+                                    {
+                                      "value": {
+                                        "path": "$.attributes.context.procedure[*].code",
+                                        "processor": {
+                                          "name": "codeableConceptText"
+                                        }
+                                      },
+                                      "type": "text"
+                                    }
+                                  ],
+                                  "subTitle": {
+                                    "type": "list",
+                                    "value": {
+                                      "elements": [
+                                        [
+                                          {
+                                            "type": "datetime",
+                                            "value": { "path": "$.date" }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "constant": "Date Unknown"
+                                            }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.author[*].name[*]",
+                                              "processor": {
+                                                "name": "humanName"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.organization[*].name"
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": { "constant": "No author" }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.status"
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": { "constant": "No status" }
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  },
+                                  "date": {
+                                    "value": { "path": "$.date" },
+                                    "type": "datetime"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "value": { "path": "$.attributes.title" }
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "path": "$.attributes.context.procedure[*].code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "path": "$.attributes.conclusionCode",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "path": "$.attributes.code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              }
+                            ],
+                            "rightColumn": [
+                              {
+                                "type": "datetime",
+                                "value": { "path": "$.date" }
+                              },
+                              {
+                                "type": "text",
+                                "value": { "constant": "Date Unknown" }
+                              }
+                            ]
+                          },
+                          "type": "twoColumn"
+                        }
+                      },
+                      "type": "array"
+                    }
+                  ]
+                }
+              }
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.cancerDiagnosisKeyEvents[*]",
+                    "elements": {
+                      "type": "link",
+                      "dependsOn": {
+                        "path": "$.attributes.reportContent[0]"
+                      },
+                      "value": {
+                        "label": [
+                          [
+                            { "path": "$.attributes.title" },
+                            {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          ],
+                          {
+                            "path": "$.attributes.conclusionCode",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "internal",
+                        "url": {
+                          "path": "$",
+                          "processor": {
+                            "name": "reportLink",
+                            "args": {
+                              "representation": "reportHtml.onco.general"
+                            }
+                          }
+                        }
+                      },
+                      "meta": {
+                        "title": [
+                          {
+                            "value": { "path": "$.attributes.title" },
+                            "type": "text"
+                          },
+                          {
+                            "value": {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            },
+                            "type": "text"
+                          }
+                        ],
+                        "subTitle": {
+                          "type": "list",
+                          "value": {
+                            "elements": [
+                              [
+                                {
+                                  "type": "datetime",
+                                  "value": { "path": "$.date" }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "Date Unknown" }
+                                }
+                              ],
+                              [
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.author[*].name[*]",
+                                    "processor": { "name": "humanName" }
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.organization[*].name"
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No author" }
+                                }
+                              ],
+                              [
+                                {
+                                  "type": "text",
+                                  "value": { "path": "$.attributes.status" }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No status" }
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "date": {
+                          "type": "datetime",
+                          "value": { "path": "$.date" }
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.cancerDiagnosisKeyEvents[*]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              [
+                                { "path": "$.attributes.title" },
+                                {
+                                  "path": "$.attributes.context.procedure[*].code",
+                                  "processor": { "name": "codeableConceptText" }
+                                },
+                                {
+                                  "path": "$.attributes.code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              ],
+                              {
+                                "path": "$.attributes.conclusionCode",
+                                "processor": { "name": "codeableConceptText" }
+                              }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.date" }
+                          },
+                          {
+                            "type": "text",
+                            "value": { "constant": "Date Unknown" }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "molecularProfile",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Molecular profile" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "molecular profile"
+                },
+                "type": "text"
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.[genomicAndImmunologyMarkers,breastReceptorTumorMarkerTestResult]",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Marker",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.attributes.code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Value",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": { "path": "$.attributes.value" }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Date",
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.mostRecentNlpMammaPrintIndexResult[*]",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Marker",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "constant": "Mammaprint Index"
+                            },
+                            "dependsOn": {
+                              "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*][MammaPrint_Index_str]"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Value",
+                        "elements": [
+                          {
+                            "type": "nlp",
+                            "value": {
+                              "sourceDocument": {
+                                "path": "$"
+                              },
+                              "clpFindings": {
+                                "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*].MammaPrint_Index_str"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Date",
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.mostRecentNlpOncoTypeResult[*]",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Marker",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "constant": "Oncotype Dx"
+                            },
+                            "dependsOn": {
+                              "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*][Oncotype_Dx_str]"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Value",
+                        "elements": [
+                          {
+                            "type": "nlp",
+                            "value": {
+                              "sourceDocument": {
+                                "path": "$"
+                              },
+                              "clpFindings": {
+                                "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*].Oncotype_Dx_str"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Date",
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.mostRecentNlpNottinghamScore[*]",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Marker",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "constant": "Nottingham score"
+                            },
+                            "dependsOn": {
+                              "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*].Grading_object[Nottingham_Grade_str]"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Value",
+                        "elements": [
+                          {
+                            "key": { "constant": "Nottingham score" },
+                            "value": {
+                              "sourceDocument": { "path": "$" },
+                              "clpFindings": {
+                                "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*].Grading_object.Nottingham_Grade_str"
+                              }
+                            },
+                            "type": "nlp"
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Date",
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.mostRecentNlpKi67[*]",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Marker",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "constant": "Ki-67"
+                            },
+                            "dependsOn": {
+                              "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*].Biomarkers_array[?(@.Biomarker_Name_str == 'Ki-67')][Biomarker_Value_str]"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Value",
+                        "elements": [
+                          {
+                            "key": { "constant": "Ki-67" },
+                            "value": {
+                              "sourceDocument": { "path": "$" },
+                              "clpFindings": {
+                                "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*].Biomarkers_array[?(@.Biomarker_Name_str == 'Ki-67')][Biomarker_Value_str]"
+                              }
+                            },
+                            "type": "nlp"
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Date",
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.[genomicAndImmunologyMarkers,breastReceptorTumorMarkerTestResult]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              {
+                                "path": "$.attributes.code",
+                                "processor": { "name": "codeableConceptText" }
+                              },
+                              { "path": "$.attributes.value" }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "careTeam",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": {
+                  "constant": "Care team"
+                },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "care team"
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.careTeamMembers",
+                  "elements": {
+                    "value": {
+                      "leftColumn": {
+                        "type": "text",
+                        "value": {
+                          "path": "$.attributes.roleName"
+                        }
+                      },
+                      "rightColumn": {
+                        "type": "text",
+                        "value": {
+                          "path": "$.attributes.name"
+                        }
+                      }
+                    },
+                    "type": "twoColumn"
+                  }
+                },
+                "type": "array"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "mostRecentImaging",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": {
+                  "constant": "Imaging - most recent"
+                },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "imaging"
+                },
+                "type": "text"
+              },
+              [
+                {
+                  "value": {
+                    "path": "$.mostRecentImaging[0].attributes.title"
+                  },
+                  "type": "text"
+                },
+                {
+                  "value": {
+                    "path": "$.mostRecentImaging[0].attributes.context.procedure[*].code",
+                    "processor": { "name": "codeableConceptText" }
+                  },
+                  "type": "text"
+                }
+              ],
+              {
+                "value": {
+                  "sourceDocument": {
+                    "path": "$.mostRecentImaging[0]"
+                  },
+                  "clpFindings": {
+                    "path": "$.attributes.aiSummary.l2"
+                  }
+                },
+                "type": "nlp"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": {
+                      "constant": "Date"
+                    },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentImaging[0].date"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "icon": "ico-ct",
+                  "label": [{ "constant": "Open images" }],
+                  "url": {
+                    "path": "$.mostRecentImaging[0].attributes.imagingStudy[0].identifier",
+                    "processor": {
+                      "name": "dicomViewerUrl",
+                      "args": {
+                        "imagingParameters": [
+                          {
+                            "name": "acsn",
+                            "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                          },
+                          {
+                            "name": "studyId",
+                            "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                            "processor": { "name": "dicomId" }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "target": "iFrame"
+                },
+                "type": "link",
+                "meta": {
+                  "title": [
+                    {
+                      "value": {
+                        "path": "$.mostRecentImaging[0].attributes.title"
+                      },
+                      "type": "text"
+                    },
+                    {
+                      "value": {
+                        "path": "$.mostRecentImaging[0].attributes.context.procedure[*].code",
+                        "processor": { "name": "codeableConceptText" }
+                      },
+                      "type": "text"
+                    }
+                  ],
+                  "subTitle": {
+                    "type": "list",
+                    "value": {
+                      "elements": [
+                        {
+                          "type": "datetime",
+                          "value": { "path": "$.mostRecentImaging[0].date" }
+                        }
+                      ]
+                    }
+                  },
+                  "date": {
+                    "value": { "path": "$.mostRecentImaging[0].date" },
+                    "type": "datetime"
+                  }
+                }
+              },
+              {
+                "value": {
+                  "icon": "ico-ct",
+                  "label": [{ "constant": "Open images" }],
+                  "url": {
+                    "path": "$.mostRecentImaging[0].attributes.identifier",
+                    "processor": {
+                      "name": "dicomViewerUrl",
+                      "args": {
+                        "imagingParameters": [
+                          {
+                            "name": "acsn",
+                            "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                          },
+                          {
+                            "name": "studyId",
+                            "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                            "processor": { "name": "dicomId" }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "target": "iFrame"
+                },
+                "type": "link",
+                "meta": {
+                  "title": [
+                    {
+                      "value": {
+                        "path": "$.mostRecentImaging[0].attributes.title"
+                      },
+                      "type": "text"
+                    },
+                    {
+                      "value": {
+                        "path": "$.mostRecentImaging[0].attributes.context.procedure[*].code",
+                        "processor": { "name": "codeableConceptText" }
+                      },
+                      "type": "text"
+                    }
+                  ],
+                  "subTitle": {
+                    "type": "list",
+                    "value": {
+                      "elements": [
+                        {
+                          "type": "datetime",
+                          "value": { "path": "$.mostRecentImaging[0].date" }
+                        }
+                      ]
+                    }
+                  },
+                  "date": {
+                    "value": { "path": "$.mostRecentImaging[0].date" },
+                    "type": "datetime"
+                  }
+                }
+              }
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "link",
+                  "dependsOn": {
+                    "path": "$.mostRecentImaging[0].attributes.reportContent[0]"
+                  },
+                  "value": {
+                    "label": [
+                      [
+                        {
+                          "path": "$.mostRecentImaging[0].attributes.title"
+                        },
+                        {
+                          "path": "$.mostRecentImaging[0].attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        }
+                      ],
+                      {
+                        "path": "$.mostRecentImaging[0].attributes.conclusionCode",
+                        "processor": { "name": "codeableConceptText" }
+                      }
+                    ],
+                    "target": "internal",
+                    "url": {
+                      "path": "$.mostRecentImaging[0]",
+                      "processor": {
+                        "name": "reportLink",
+                        "args": {
+                          "representation": "reportHtml.onco.general"
+                        }
+                      }
+                    }
+                  },
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.mostRecentImaging[0].attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.mostRecentImaging[0].attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.mostRecentImaging[0].date"
+                            }
+                          },
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentImaging[0].attributes.author[*].name[*]",
+                                "processor": { "name": "humanName" }
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentImaging[0].attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No author" }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentImaging[0].attributes.status"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No status" }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.mostRecentImaging[0].date" },
+                      "type": "datetime"
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [
+                          [
+                            {
+                              "path": "$.mostRecentImaging[0].attributes.title"
+                            },
+                            {
+                              "path": "$.mostRecentImaging[0].attributes.context.procedure[*].code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          ],
+                          {
+                            "path": "$.mostRecentImaging[0].attributes.conclusionCode",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$.mostRecentImaging[0]",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.mostRecentImaging[0].date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "mostRecentImaging",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Imaging history" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "imaging history"
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.imagingReportsFromLastThreeMonths[*]",
+                  "processor": { "name": "fromLastThreeMonthsDateRangeText" }
+                },
+                "type": "dateRange"
+              },
+              {
+                "type": "list",
+                "value": {
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.imagingReportsFromLastThreeMonths[*]",
+                        "elements": {
+                          "value": {
+                            "leftColumn": [
+                              {
+                                "value": {
+                                  "label": [{ "path": "$.attributes.title" }],
+                                  "url": {
+                                    "path": "$.attributes.imagingStudy[0].identifier",
+                                    "processor": {
+                                      "name": "dicomViewerUrl",
+                                      "args": {
+                                        "imagingParameters": [
+                                          {
+                                            "name": "acsn",
+                                            "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                          },
+                                          {
+                                            "name": "studyId",
+                                            "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                                            "processor": { "name": "dicomId" }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "target": "iFrame"
+                                },
+                                "type": "link",
+                                "meta": {
+                                  "title": {
+                                    "value": { "path": "$.attributes.title" },
+                                    "type": "text"
+                                  },
+                                  "subTitle": {
+                                    "type": "list",
+                                    "value": {
+                                      "elements": [
+                                        {
+                                          "type": "datetime",
+                                          "value": { "path": "$.date" }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "date": {
+                                    "value": { "path": "$.date" },
+                                    "type": "datetime"
+                                  }
+                                }
+                              },
+                              {
+                                "value": {
+                                  "label": [
+                                    {
+                                      "path": "$.attributes.context.procedure[*].code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    }
+                                  ],
+                                  "url": {
+                                    "path": "$.attributes.imagingStudy[0].identifier",
+                                    "processor": {
+                                      "name": "dicomViewerUrl",
+                                      "args": {
+                                        "imagingParameters": [
+                                          {
+                                            "name": "acsn",
+                                            "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                          },
+                                          {
+                                            "name": "studyId",
+                                            "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                                            "processor": { "name": "dicomId" }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "target": "iFrame"
+                                },
+                                "type": "link",
+                                "meta": {
+                                  "title": {
+                                    "value": {
+                                      "path": "$.attributes.context.procedure[*].code"
+                                    },
+                                    "type": "text"
+                                  },
+                                  "subTitle": {
+                                    "type": "list",
+                                    "value": {
+                                      "elements": [
+                                        {
+                                          "type": "datetime",
+                                          "value": { "path": "$.date" }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "date": {
+                                    "value": { "path": "$.date" },
+                                    "type": "datetime"
+                                  }
+                                }
+                              },
+                              {
+                                "value": {
+                                  "label": [{ "path": "$.attributes.title" }],
+                                  "url": {
+                                    "path": "$.attributes.identifier",
+                                    "processor": {
+                                      "name": "dicomViewerUrl",
+                                      "args": {
+                                        "imagingParameters": [
+                                          {
+                                            "name": "acsn",
+                                            "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                          },
+                                          {
+                                            "name": "studyId",
+                                            "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                                            "processor": { "name": "dicomId" }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "target": "iFrame"
+                                },
+                                "type": "link",
+                                "meta": {
+                                  "title": {
+                                    "value": { "path": "$.attributes.title" },
+                                    "type": "text"
+                                  },
+                                  "subTitle": {
+                                    "type": "list",
+                                    "value": {
+                                      "elements": [
+                                        {
+                                          "type": "datetime",
+                                          "value": { "path": "$.date" }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "date": {
+                                    "value": { "path": "$.date" },
+                                    "type": "datetime"
+                                  }
+                                }
+                              },
+                              {
+                                "value": {
+                                  "label": [
+                                    {
+                                      "path": "attributes.context.procedure[*].code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    }
+                                  ],
+                                  "url": {
+                                    "path": "$.attributes.identifier",
+                                    "processor": {
+                                      "name": "dicomViewerUrl",
+                                      "args": {
+                                        "imagingParameters": [
+                                          {
+                                            "name": "acsn",
+                                            "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                          },
+                                          {
+                                            "name": "studyId",
+                                            "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                                            "processor": { "name": "dicomId" }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "target": "iFrame"
+                                },
+                                "type": "link",
+                                "meta": {
+                                  "title": {
+                                    "value": {
+                                      "path": "$.attributes.context.procedure[*].code"
+                                    },
+                                    "type": "text"
+                                  },
+                                  "subTitle": {
+                                    "type": "list",
+                                    "value": {
+                                      "elements": [
+                                        {
+                                          "type": "datetime",
+                                          "value": { "path": "$.date" }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "date": {
+                                    "value": { "path": "$.date" },
+                                    "type": "datetime"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "value": { "path": "$.attributes.title" }
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "path": "$.attributes.context.procedure[*].code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              }
+                            ],
+                            "rightColumn": {
+                              "type": "datetime",
+                              "value": { "path": "$.date" }
+                            }
+                          },
+                          "type": "twoColumn"
+                        }
+                      },
+                      "type": "array"
+                    }
+                  ]
+                }
+              }
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.imagingReportsFromLastThreeMonths[*]",
+                    "elements": {
+                      "type": "link",
+                      "dependsOn": {
+                        "path": "$.attributes.reportContent[0]"
+                      },
+                      "value": {
+                        "label": [
+                          [
+                            { "path": "$.attributes.title" },
+                            {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          ],
+                          {
+                            "path": "$.attributes.conclusionCode",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "internal",
+                        "url": {
+                          "path": "$",
+                          "processor": {
+                            "name": "reportLink",
+                            "args": {
+                              "representation": "reportHtml.onco.general"
+                            }
+                          }
+                        }
+                      },
+                      "meta": {
+                        "title": [
+                          {
+                            "value": { "path": "$.attributes.title" },
+                            "type": "text"
+                          },
+                          {
+                            "value": {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            },
+                            "type": "text"
+                          }
+                        ],
+                        "subTitle": {
+                          "type": "list",
+                          "value": {
+                            "elements": [
+                              {
+                                "type": "datetime",
+                                "value": { "path": "$.date" }
+                              },
+                              [
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.author[*].name[*]",
+                                    "processor": { "name": "humanName" }
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.organization[*].name"
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No author" }
+                                }
+                              ],
+                              [
+                                {
+                                  "type": "text",
+                                  "value": { "path": "$.attributes.status" }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No status" }
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "date": {
+                          "value": { "path": "$.date" },
+                          "type": "datetime"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.imagingReportsFromLastThreeMonths[*]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              [
+                                { "path": "$.attributes.title" },
+                                {
+                                  "path": "$.attributes.context.procedure[*].code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              ],
+                              {
+                                "path": "$.attributes.conclusionCode",
+                                "processor": { "name": "codeableConceptText" }
+                              }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "mostRecentErVisit",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "ER visit - most recent" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "ER visit"
+                },
+                "type": "text"
+              },
+              [
+                {
+                  "value": {
+                    "path": "$.mostRecentERVisit[0].attributes.serviceType",
+                    "processor": { "name": "codeableConceptText" }
+                  },
+                  "type": "text"
+                },
+                {
+                  "value": {
+                    "path": "$.mostRecentERVisit[0].attributes.type",
+                    "processor": { "name": "codeableConceptText" }
+                  },
+                  "type": "text"
+                },
+                {
+                  "value": {
+                    "path": "$.mostRecentERVisit[0].attributes.class",
+                    "processor": { "name": "codingText" }
+                  },
+                  "type": "text"
+                }
+              ],
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Chief complaint" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentERVisit[0].attributes.reason",
+                      "processor": { "name": "codeableConceptText" }
+                    },
+                    "type": "text"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Diagnosis" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentERVisit[0].attributes.diagnosis",
+                      "processor": { "name": "codeableConceptText" }
+                    },
+                    "type": "text"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Discharge instructions" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentERVisit[0].attributes.dischargeDisposition",
+                      "processor": { "name": "codeableConceptText" }
+                    },
+                    "type": "text"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Date" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentERVisit[0].date"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": [
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [
+                          [
+                            {
+                              "path": "$.mostRecentERVisit[0].attributes.serviceType",
+                              "processor": { "name": "codeableConceptText" }
+                            },
+                            {
+                              "path": "$.mostRecentERVisit[0].attributes.type",
+                              "processor": { "name": "codeableConceptText" }
+                            },
+                            {
+                              "path": "$.mostRecentERVisit[0].attributes.class",
+                              "processor": { "name": "codingText" }
+                            }
+                          ]
+                        ],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$.mostRecentERVisit[0]",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.mostRecentERVisit[0].date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "mostRecentMdtReport",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "MDT report - most recent" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "MDT report"
+                },
+                "type": "text"
+              },
+              [
+                {
+                  "value": {
+                    "path": "$.mostRecentMDTReport[0].attributes.title"
+                  },
+                  "type": "text"
+                },
+                {
+                  "value": {
+                    "path": "$.mostRecentMDTReport[0].attributes.context.procedure[*].code",
+                    "processor": { "name": "codeableConceptText" }
+                  },
+                  "type": "text"
+                }
+              ],
+              {
+                "value": {
+                  "sourceDocument": { "path": "$.mostRecentMDTReport[0]" },
+                  "clpFindings": { "path": "$.attributes.aiSummary.l2" }
+                },
+                "type": "nlp"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Date" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentMDTReport[0].date"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              }
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "link",
+                  "dependsOn": {
+                    "path": "$.mostRecentMDTReport[0].attributes.reportContent[0]"
+                  },
+                  "value": {
+                    "label": [
+                      [
+                        {
+                          "path": "$.mostRecentMDTReport[0].attributes.title"
+                        },
+                        {
+                          "path": "$.mostRecentMDTReport[0].attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        }
+                      ]
+                    ],
+                    "target": "internal",
+                    "url": {
+                      "path": "$.mostRecentMDTReport[0]",
+                      "processor": {
+                        "name": "reportLink",
+                        "args": {
+                          "representation": "reportHtml.onco.general"
+                        }
+                      }
+                    }
+                  },
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.mostRecentMDTReport[0].attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.mostRecentMDTReport[0].attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.mostRecentMDTReport[0].date"
+                            }
+                          },
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentMDTReport[0].attributes.author[*].name[*]",
+                                "processor": { "name": "humanName" }
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentMDTReport[0].attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No author" }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentMDTReport[0].attributes.status"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No status" }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.mostRecentMDTReport[0].date" },
+                      "type": "datetime"
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [
+                          [
+                            {
+                              "path": "$.mostRecentMDTReport[0].attributes.title"
+                            },
+                            {
+                              "path": "$.mostRecentMDTReport[0].attributes.context.procedure[*].code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          ]
+                        ],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$.mostRecentMDTReport[0]",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.mostRecentMDTReport[0].date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "mostRecentComments",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Comments - most recent" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "comments"
+                },
+                "type": "text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatments",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Systemic therapy" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "systemic therapy"
+                },
+                "type": "text"
+              },
+              {
+                "type": "indicator",
+                "value": {
+                  "icon": {
+                    "constant": "ico-intra-van"
+                  },
+                  "paletteColor": {
+                    "constant": "5"
+                  },
+                  "message": {
+                    "path": "$.systemicTherapies[0].attributes.cycle"
+                  }
+                }
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.systemicTherapies",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Drug",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.attributes.code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Dose",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.attributes.dosage[*]",
+                              "processor": { "name": "orderedDosageText" }
+                            }
+                          },
+                          {
+                            "type": "indicator",
+                            "value": {
+                              "icon": {
+                                "constant": "ico-minus-plus"
+                              },
+                              "paletteColor": {
+                                "constant": "11"
+                              },
+                              "message": {
+                                "path": "$.attributes.doseChange"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "type": "twoColumn",
+                "value": {
+                  "leftColumn": {
+                    "type": "text",
+                    "value": { "constant": "Date" }
+                  },
+                  "rightColumn": {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.systemicTherapies[0].date"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "twoColumn",
+                "value": {
+                  "leftColumn": {
+                    "type": "text",
+                    "value": { "constant": "Start of therapy" }
+                  },
+                  "rightColumn": {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.systemicTherapies[0].attributes.regimen.period.start"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "twoColumn",
+                "value": {
+                  "leftColumn": {
+                    "type": "text",
+                    "value": { "constant": "End of therapy" }
+                  },
+                  "rightColumn": {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.systemicTherapies[0].attributes.regimen.period.end"
+                    }
+                  }
+                }
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.systemicTherapies[*]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              {
+                                "path": "$.attributes.code",
+                                "processor": { "name": "codeableConceptText" }
+                              }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatments",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Radiation therapy" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "radiation therapy"
+                },
+                "type": "text"
+              },
+              {
+                "value": { "constant": "Procedure - most recent" },
+                "type": "text",
+                "dependsOn": {
+                  "path": "$.mostRecentRadioTherapyProcedure[0]"
+                }
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": {
+                      "path": "$.mostRecentRadioTherapyProcedure[0].attributes.code",
+                      "processor": { "name": "codeableConceptText" }
+                    },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentRadioTherapyProcedure[0].date"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": { "constant": "Start of therapy" },
+                "type": "text",
+                "dependsOn": {
+                  "path": "$.leastRecentRadioTherapyProcedure[0]"
+                }
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": {
+                      "path": "$.leastRecentRadioTherapyProcedure[0].attributes.code",
+                      "processor": { "name": "codeableConceptText" }
+                    },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.leastRecentRadioTherapyProcedure[0].date"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": [
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [
+                          {
+                            "path": "$.leastRecentRadioTherapyProcedure[0].attributes.code",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$.leastRecentRadioTherapyProcedure[0]",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.leastRecentRadioTherapyProcedure[0].date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [
+                          {
+                            "path": "$.mostRecentRadioTherapyProcedure[0].attributes.code",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$.mostRecentRadioTherapyProcedure[0]",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.mostRecentRadioTherapyProcedure[0].date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatments",
+      "sources": "$.radiotherapyCourseSummary[*]",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Radiation therapy" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "radiation therapy"
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Site of therapy" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.attributes.bodySite",
+                      "processor": { "name": "codeableConceptText" }
+                    },
+                    "type": "text"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Number of sessions" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.attributes.sessions"
+                    },
+                    "type": "text"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Phases" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.attributes.phases.length"
+                    },
+                    "type": "text"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Modalities" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.attributes.modalities",
+                      "processor": { "name": "codeableConceptText" }
+                    },
+                    "type": "text"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "type": "table",
+                "value": {
+                  "path": "$.attributes.phases",
+                  "config": {
+                    "cells": [
+                      {
+                        "header": "Body Site",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.bodyStructure.description"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Fractions",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.numberOfFractions"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "header": "Dose Delivered",
+                        "elements": [
+                          {
+                            "type": "text",
+                            "value": {
+                              "path": "$.totalDose",
+                              "processor": { "name": "quantityText" }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Start of therapy" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.attributes.performedPeriod.start"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "End of therapy" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.attributes.performedPeriod.end"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": [
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [
+                          {
+                            "path": "$.attributes.code",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatments",
+      "sources": "$.radiotherapySummaryNote[*]",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": {
+                  "constant": "Radiation therapy"
+                },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "radiation therapy"
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "type": "link",
+                    "dependsOn": { "path": "$.attributes.reportContent[0]" },
+                    "value": {
+                      "label": [{ "path": "$.attributes.title" }],
+                      "url": {
+                        "path": "$",
+                        "processor": {
+                          "name": "reportLink",
+                          "args": {
+                            "representation": "reportHtml.onco.general"
+                          }
+                        }
+                      },
+                      "target": "internal"
+                    },
+                    "meta": {
+                      "title": {
+                        "value": { "path": "$.attributes.title" },
+                        "type": "text"
+                      },
+                      "subTitle": {
+                        "type": "list",
+                        "value": {
+                          "elements": [
+                            {
+                              "type": "datetime",
+                              "value": { "path": "$.date" }
+                            },
+                            [
+                              {
+                                "type": "text",
+                                "value": {
+                                  "path": "$.attributes.author[*].name[*]",
+                                  "processor": { "name": "humanName" }
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "path": "$.attributes.organization[*].name"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "value": { "constant": "No author" }
+                              }
+                            ],
+                            [
+                              {
+                                "type": "text",
+                                "value": { "path": "$.attributes.status" }
+                              },
+                              {
+                                "type": "text",
+                                "value": { "constant": "No status" }
+                              }
+                            ]
+                          ]
+                        }
+                      },
+                      "date": {
+                        "value": { "path": "$.date" },
+                        "type": "datetime"
+                      }
+                    }
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.date"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              }
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "link",
+                  "dependsOn": { "path": "$.attributes.reportContent[0]" },
+                  "value": {
+                    "label": [{ "path": "$.attributes.title" }],
+                    "target": "internal",
+                    "url": {
+                      "path": "$",
+                      "processor": {
+                        "name": "reportLink",
+                        "args": {
+                          "representation": "reportHtml.onco.general"
+                        }
+                      }
+                    }
+                  },
+                  "meta": {
+                    "title": {
+                      "value": { "path": "$.attributes.title" },
+                      "type": "text"
+                    },
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.date" }
+                          },
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.author[*].name[*]",
+                                "processor": { "name": "humanName" }
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No author" }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": { "path": "$.attributes.status" }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No status" }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.date" },
+                      "type": "datetime"
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [{ "path": "$.attributes.title" }],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "labs",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "type": "text",
+                "value": {
+                  "constant": "PSA"
+                },
+                "meta": {
+                  "title": true
+                }
+              },
+              {
+                "type": "array",
+                "value": {
+                  "path": "$.mostRecentProstateTumorMarkerTestResults[*]",
+                  "elements": {
+                    "type": "trendKey",
+                    "value": {
+                      "path": "$.attributes.trendKey"
+                    }
+                  }
+                }
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.mostRecentProstateTumorMarkerTestResults[*]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              {
+                                "path": "$.attributes.code",
+                                "processor": { "name": "codeableConceptText" }
+                              },
+                              { "path": "$.attributes.value" }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "array",
+          "value": {
+            "path": "$.mostRecentBreastTumorMarkerTestResults[*]",
+            "elements": {
+              "type": "card",
+              "value": {
+                "content": [
+                  {
+                    "type": "text",
+                    "value": {
+                      "path": "$.attributes.code",
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    },
+                    "meta": {
+                      "title": true
+                    }
+                  },
+                  {
+                    "type": "trendKey",
+                    "value": {
+                      "path": "$.attributes.trendKey"
+                    }
+                  }
+                ],
+                "footer": {
+                  "reports": [],
+                  "timelineNavigation": [
+                    {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              {
+                                "path": "$.attributes.code",
+                                "processor": { "name": "codeableConceptText" }
+                              },
+                              {
+                                "path": "$.attributes.value"
+                              }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "type": "text",
+                "value": {
+                  "constant": "Testosterone"
+                },
+                "meta": {
+                  "title": true
+                }
+              },
+              {
+                "type": "array",
+                "value": {
+                  "path": "$.mostRecentTestosterone[*]",
+                  "elements": {
+                    "type": "trendKey",
+                    "value": {
+                      "path": "$.attributes.trendKey"
+                    }
+                  }
+                }
+              }
+            ],
+            "footer": {
+              "reports": [],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.mostRecentTestosterone[*]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              {
+                                "path": "$.attributes.code",
+                                "processor": { "name": "codeableConceptText" }
+                              },
+                              { "path": "$.attributes.value" }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "labs",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Lab history" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "lab history"
+                },
+                "type": "text"
+              },
+              {
+                "type": "list",
+                "value": {
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.labReportsFromLastThreeMonths[*]",
+                        "processor": {
+                          "name": "fromLastThreeMonthsDateRangeText"
+                        }
+                      },
+                      "type": "dateRange"
+                    },
+                    {
+                      "value": {
+                        "path": "$.labReportsFromLastThreeMonths[*]",
+                        "elements": {
+                          "value": {
+                            "leftColumn": [
+                              {
+                                "type": "link",
+                                "dependsOn": {
+                                  "path": "attributes.results[0]"
+                                },
+                                "value": {
+                                  "label": [{ "path": "$.attributes.title" }],
+                                  "target": "internal",
+                                  "url": {
+                                    "path": "$",
+                                    "processor": {
+                                      "name": "reportLink",
+                                      "args": {
+                                        "representation": "labReportResults.onco.general"
+                                      }
+                                    }
+                                  }
+                                },
+                                "meta": {
+                                  "title": {
+                                    "value": { "path": "$.attributes.title" },
+                                    "type": "text"
+                                  },
+                                  "subTitle": {
+                                    "type": "list",
+                                    "value": {
+                                      "elements": [
+                                        {
+                                          "type": "datetime",
+                                          "value": { "path": "$.date" }
+                                        },
+                                        [
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.author[*].name[*]",
+                                              "processor": {
+                                                "name": "humanName"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.organization[*].name"
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": { "constant": "No author" }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.status"
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": { "constant": "No status" }
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  },
+                                  "date": {
+                                    "value": { "path": "$.date" },
+                                    "type": "datetime"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "link",
+                                "dependsOn": {
+                                  "path": "attributes.results[0]"
+                                },
+                                "value": {
+                                  "target": "internal",
+                                  "label": [
+                                    {
+                                      "path": "$.attributes.context.procedure[*].code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    }
+                                  ],
+                                  "url": {
+                                    "path": "$",
+                                    "processor": {
+                                      "name": "reportLink",
+                                      "args": {
+                                        "representation": "labReportResults.onco.general"
+                                      }
+                                    }
+                                  }
+                                },
+                                "meta": {
+                                  "title": {
+                                    "value": {
+                                      "path": "$.attributes.context.procedure[*].code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    },
+                                    "type": "text"
+                                  },
+                                  "subTitle": {
+                                    "type": "list",
+                                    "value": {
+                                      "elements": [
+                                        {
+                                          "type": "datetime",
+                                          "value": { "path": "$.date" }
+                                        },
+                                        [
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.author[*].name[*]",
+                                              "processor": {
+                                                "name": "humanName"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.organization[*].name"
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": { "constant": "No author" }
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "type": "text",
+                                            "value": {
+                                              "path": "$.attributes.status"
+                                            }
+                                          },
+                                          {
+                                            "type": "text",
+                                            "value": { "constant": "No status" }
+                                          }
+                                        ]
+                                      ]
+                                    }
+                                  },
+                                  "date": {
+                                    "value": { "path": "$.date" },
+                                    "type": "datetime"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "value": { "path": "$.attributes.title" }
+                              },
+                              {
+                                "type": "text",
+                                "value": {
+                                  "path": "$.attributes.context.procedure[*].code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              }
+                            ],
+                            "rightColumn": {
+                              "type": "datetime",
+                              "value": { "path": "$.date" }
+                            }
+                          },
+                          "type": "twoColumn"
+                        }
+                      },
+                      "type": "array"
+                    }
+                  ]
+                }
+              }
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.labReportsFromLastThreeMonths[*]",
+                    "elements": {
+                      "type": "link",
+                      "dependsOn": {
+                        "path": "$.attributes.reportContent[0]"
+                      },
+                      "value": {
+                        "label": [
+                          [
+                            { "path": "$.attributes.title" },
+                            {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          ],
+                          {
+                            "path": "$.attributes.conclusionCode",
+                            "processor": { "name": "codeableConceptText" }
+                          }
+                        ],
+                        "target": "internal",
+                        "url": {
+                          "path": "$",
+                          "processor": {
+                            "name": "reportLink",
+                            "args": {
+                              "representation": "reportHtml.onco.general"
+                            }
+                          }
+                        }
+                      },
+                      "meta": {
+                        "title": [
+                          {
+                            "value": { "path": "$.attributes.title" },
+                            "type": "text"
+                          },
+                          {
+                            "value": {
+                              "path": "$.attributes.context.procedure[*].code",
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            },
+                            "type": "text"
+                          }
+                        ],
+                        "subTitle": {
+                          "type": "list",
+                          "value": {
+                            "elements": [
+                              {
+                                "type": "datetime",
+                                "value": { "path": "$.date" }
+                              },
+                              [
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.author[*].name[*]",
+                                    "processor": { "name": "humanName" }
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": {
+                                    "path": "$.attributes.organization[*].name"
+                                  }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No author" }
+                                }
+                              ],
+                              [
+                                {
+                                  "type": "text",
+                                  "value": { "path": "$.attributes.status" }
+                                },
+                                {
+                                  "type": "text",
+                                  "value": { "constant": "No status" }
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "date": {
+                          "value": { "path": "$.date" },
+                          "type": "datetime"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "array",
+                  "value": {
+                    "path": "$.labReportsFromLastThreeMonths[*]",
+                    "elements": {
+                      "type": "twoColumn",
+                      "value": {
+                        "leftColumn": {
+                          "type": "link",
+                          "value": {
+                            "label": [
+                              [
+                                { "path": "$.attributes.title" },
+                                {
+                                  "path": "$.attributes.context.procedure[*].code",
+                                  "processor": { "name": "codeableConceptText" }
+                                }
+                              ],
+                              {
+                                "path": "$.attributes.conclusionCode",
+                                "processor": { "name": "codeableConceptText" }
+                              }
+                            ],
+                            "target": "siteNavigation",
+                            "url": {
+                              "path": "$",
+                              "processor": { "name": "timelineNavigationLink" }
+                            }
+                          }
+                        },
+                        "rightColumn": {
+                          "type": "datetime",
+                          "value": {
+                            "path": "$.date",
+                            "processor": { "name": "getDefaultDateTime" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "mostRecentOncologyNote",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": { "constant": "Oncology note - most recent" },
+                "meta": {
+                  "title": true,
+                  "emptyValue": "oncology note"
+                },
+                "type": "text"
+              },
+              [
+                {
+                  "value": {
+                    "path": "$.mostRecentOncologyNote[0].attributes.title"
+                  },
+                  "type": "text"
+                },
+                {
+                  "value": {
+                    "path": "$.mostRecentOncologyNote[0].attributes.context.procedure[*].code",
+                    "processor": { "name": "codeableConceptText" }
+                  },
+                  "type": "text"
+                }
+              ],
+              {
+                "value": {
+                  "sourceDocument": { "path": "$.mostRecentOncologyNote[0]" },
+                  "clpFindings": { "path": "$.attributes.aiSummary.l2" }
+                },
+                "type": "nlp"
+              },
+              {
+                "value": {
+                  "leftColumn": {
+                    "value": { "constant": "Date" },
+                    "type": "text"
+                  },
+                  "rightColumn": {
+                    "value": {
+                      "path": "$.mostRecentOncologyNote[0].date"
+                    },
+                    "type": "datetime"
+                  }
+                },
+                "type": "twoColumn"
+              }
+            ],
+            "footer": {
+              "reports": [
+                {
+                  "type": "link",
+                  "dependsOn": {
+                    "path": "$.mostRecentOncologyNote[0].attributes.reportContent[0]"
+                  },
+                  "value": {
+                    "label": [
+                      [
+                        {
+                          "path": "$.mostRecentOncologyNote[0].attributes.title"
+                        },
+                        {
+                          "path": "$.mostRecentOncologyNote[0].attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        }
+                      ]
+                    ],
+                    "target": "internal",
+                    "url": {
+                      "path": "$.mostRecentOncologyNote[0]",
+                      "processor": {
+                        "name": "reportLink",
+                        "args": {
+                          "representation": "reportHtml.onco.general"
+                        }
+                      }
+                    }
+                  },
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.mostRecentOncologyNote[0].attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.mostRecentOncologyNote[0].attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.mostRecentOncologyNote[0].date"
+                            }
+                          },
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentOncologyNote[0].attributes.author[*].name[*]",
+                                "processor": { "name": "humanName" }
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentOncologyNote[0].attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No author" }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.mostRecentOncologyNote[0].attributes.status"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No status" }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.mostRecentOncologyNote[0].date" },
+                      "type": "datetime"
+                    }
+                  }
+                }
+              ],
+              "timelineNavigation": [
+                {
+                  "type": "twoColumn",
+                  "value": {
+                    "leftColumn": {
+                      "type": "link",
+                      "value": {
+                        "label": [
+                          [
+                            {
+                              "path": "$.mostRecentOncologyNote[0].attributes.title"
+                            },
+                            {
+                              "path": "$.mostRecentOncologyNote[0].attributes.context.procedure[*].code",
+                              "processor": { "name": "codeableConceptText" }
+                            }
+                          ]
+                        ],
+                        "target": "siteNavigation",
+                        "url": {
+                          "path": "$.mostRecentOncologyNote[0]",
+                          "processor": { "name": "timelineNavigationLink" }
+                        }
+                      }
+                    },
+                    "rightColumn": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.mostRecentOncologyNote[0].date",
+                        "processor": { "name": "getDefaultDateTime" }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "medicalHistory",
+      "elements": [
+        {
+          "type": "card",
+          "value": {
+            "content": [
+              {
+                "value": {
+                  "label": [{ "constant": "Comorbidities" }],
+                  "url": { "constant": "/medical-history#comorbidities" },
+                  "target": "siteNavigation"
+                },
+                "type": "link"
+              },
+              {
+                "value": {
+                  "label": [{ "constant": "Medications" }],
+                  "url": { "constant": "/medical-history#medications" },
+                  "target": "siteNavigation"
+                },
+                "type": "link"
+              },
+              {
+                "value": {
+                  "label": [{ "constant": "Allergies and intolerances" }],
+                  "url": { "constant": "/medical-history#allergies" },
+                  "target": "siteNavigation"
+                },
+                "type": "link"
+              },
+              {
+                "value": {
+                  "label": [{ "constant": "Patient history" }],
+                  "url": { "constant": "/medical-history#patientHistory" },
+                  "target": "siteNavigation"
+                },
+                "type": "link"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    [
+      {
+        "id": "patient",
+        "label": "Patient"
+      },
+      {
+        "id": "diagnosis",
+        "label": "Diagnosis",
+        "icon": "ico-oncology"
+      },
+      {
+        "id": "molecularProfile",
+        "label": "Molecular profile",
+        "icon": "ico-genetics"
+      },
+      {
+        "id": "careTeam",
+        "label": "Care team",
+        "icon": "ico-idcredentials"
+      }
+    ],
+    [
+      {
+        "id": "mostRecentImaging",
+        "label": "Imaging",
+        "icon": "ico-mr",
+        "status": "Most recent"
+      },
+      {
+        "id": "mostRecentOncologyNote",
+        "label": "Oncology note",
+        "icon": "ico-overlay",
+        "status": "Most recent"
+      },
+      {
+        "id": "mostRecentErVisit",
+        "label": "ER visit",
+        "icon": "ico-emergency",
+        "status": "Most recent"
+      },
+      {
+        "id": "mostRecentMdtReport",
+        "label": "MDT report",
+        "icon": "ico-patient-checklist",
+        "status": "Most recent"
+      }
+    ],
+    [
+      {
+        "id": "treatments",
+        "label": "Treatments",
+        "icon": "ico-chest"
+      },
+      {
+        "id": "labs",
+        "label": "Labs",
+        "icon": "ico-lab"
+      },
+      {
+        "id": "medicalHistory",
+        "label": "Medical history",
+        "icon": "ico-healthcare"
+      },
+      {
+        "id": "mostRecentComments",
+        "label": "Comments",
+        "icon": "ico-chat",
+        "status": "Most recent"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "respiration-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "respiration-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

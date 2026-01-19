@@ -1,0 +1,20 @@
+{
+    "name": "sabr-radiotherapy-procedure-vs",
+    "valueset": {
+      "version": "1.0",
+      "url": "sabr-radiotherapy-procedure-vs",
+      "compose": {
+        "include": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "concept": [
+              {
+                "code": "77373",
+                "display": "Stereotactic body radiation therapy, treatment delivery, per fraction to 1 or more lesions, including image guidance, entire course not to exceed 5 fractions"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

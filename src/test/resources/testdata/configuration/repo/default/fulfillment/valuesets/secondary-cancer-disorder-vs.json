@@ -1,0 +1,3622 @@
+{
+  "name": "secondary-cancer-disorder-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "secondary-cancer-disorder-vs",
+    "description": "Based on mCODE, see definition: http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "128462008",
+              "display": "Metastatic neoplasm (disease)"
+            },
+            {
+              "code": "40312006",
+              "display": "Pericarditis secondary to tumor metastatic to pericardium"
+            },
+            {
+              "code": "93144003",
+              "display": "Leukemic reticuloendotheliosis of intra-abdominal lymph nodes"
+            },
+            {
+              "code": "93145002",
+              "display": "Leukemic reticuloendotheliosis of intrapelvic lymph nodes"
+            },
+            {
+              "code": "93146001",
+              "display": "Leukemic reticuloendotheliosis of intrathoracic lymph nodes"
+            },
+            {
+              "code": "93150008",
+              "display": "Leukemic reticuloendotheliosis of lymph nodes of multiple sites"
+            },
+            {
+              "code": "94152006",
+              "display": "Secondary malignant neoplasm of abdominal esophagus"
+            },
+            {
+              "code": "94153001",
+              "display": "Secondary malignant neoplasm of abducens nerve"
+            },
+            {
+              "code": "94154007",
+              "display": "Secondary malignant neoplasm of accessory nerve"
+            },
+            {
+              "code": "94155008",
+              "display": "Secondary malignant neoplasm of accessory sinus"
+            },
+            {
+              "code": "94156009",
+              "display": "Secondary malignant neoplasm of acoustic nerve"
+            },
+            {
+              "code": "94157000",
+              "display": "Secondary malignant neoplasm of acromion"
+            },
+            {
+              "code": "94158005",
+              "display": "Secondary malignant neoplasm of adenoid"
+            },
+            {
+              "code": "94159002",
+              "display": "Secondary malignant neoplasm of adnexa of skin"
+            },
+            {
+              "code": "94160007",
+              "display": "Secondary malignant neoplasm of adrenal cortex"
+            },
+            {
+              "code": "94161006",
+              "display": "Secondary malignant neoplasm of adrenal gland"
+            },
+            {
+              "code": "94162004",
+              "display": "Secondary malignant neoplasm of adrenal medulla"
+            },
+            {
+              "code": "94163009",
+              "display": "Secondary malignant neoplasm of alveolar ridge mucosa"
+            },
+            {
+              "code": "94164003",
+              "display": "Secondary malignant neoplasm of ampulla of Vater"
+            },
+            {
+              "code": "94165002",
+              "display": "Secondary malignant neoplasm of anal canal"
+            },
+            {
+              "code": "94166001",
+              "display": "Secondary malignant neoplasm of anterior aspect of epiglottis"
+            },
+            {
+              "code": "94167005",
+              "display": "Secondary malignant neoplasm of anterior mediastinum"
+            },
+            {
+              "code": "94168000",
+              "display": "Secondary malignant neoplasm of anterior portion of floor of mouth"
+            },
+            {
+              "code": "94169008",
+              "display": "Secondary malignant neoplasm of anterior two-thirds of tongue"
+            },
+            {
+              "code": "94170009",
+              "display": "Secondary malignant neoplasm of anterior wall of nasopharynx"
+            },
+            {
+              "code": "94171008",
+              "display": "Secondary malignant neoplasm of anterior wall of urinary bladder"
+            },
+            {
+              "code": "94172001",
+              "display": "Secondary malignant neoplasm of anus"
+            },
+            {
+              "code": "94173006",
+              "display": "Secondary malignant neoplasm of aortic body"
+            },
+            {
+              "code": "94175004",
+              "display": "Secondary malignant neoplasm of appendix"
+            },
+            {
+              "code": "94176003",
+              "display": "Secondary malignant neoplasm of areola of female breast"
+            },
+            {
+              "code": "94177007",
+              "display": "Secondary malignant neoplasm of areola of male breast"
+            },
+            {
+              "code": "94179005",
+              "display": "Secondary malignant neoplasm of ascending colon"
+            },
+            {
+              "code": "94180008",
+              "display": "Secondary malignant neoplasm of axilla"
+            },
+            {
+              "code": "94181007",
+              "display": "Secondary malignant neoplasm of axillary lymph nodes"
+            },
+            {
+              "code": "94182000",
+              "display": "Secondary malignant neoplasm of axillary tail of female breast"
+            },
+            {
+              "code": "94183005",
+              "display": "Secondary malignant neoplasm of back"
+            },
+            {
+              "code": "94184004",
+              "display": "Secondary malignant neoplasm of base of tongue"
+            },
+            {
+              "code": "94185003",
+              "display": "Secondary malignant neoplasm of biliary tract"
+            },
+            {
+              "code": "94186002",
+              "display": "Secondary malignant neoplasm of bladder"
+            },
+            {
+              "code": "94187006",
+              "display": "Secondary malignant neoplasm of blood vessel of abdomen"
+            },
+            {
+              "code": "94189009",
+              "display": "Secondary malignant neoplasm of blood vessel of axilla"
+            },
+            {
+              "code": "94190000",
+              "display": "Secondary malignant neoplasm of blood vessel of buttock"
+            },
+            {
+              "code": "94191001",
+              "display": "Secondary malignant neoplasm of blood vessel of face"
+            },
+            {
+              "code": "94192008",
+              "display": "Secondary malignant neoplasm of blood vessel of finger"
+            },
+            {
+              "code": "94193003",
+              "display": "Secondary malignant neoplasm of blood vessel of foot"
+            },
+            {
+              "code": "94194009",
+              "display": "Secondary malignant neoplasm of blood vessel of forearm"
+            },
+            {
+              "code": "94195005",
+              "display": "Secondary malignant neoplasm of blood vessel of hand"
+            },
+            {
+              "code": "94196006",
+              "display": "Secondary malignant neoplasm of blood vessel of head"
+            },
+            {
+              "code": "94197002",
+              "display": "Secondary malignant neoplasm of blood vessel of hip"
+            },
+            {
+              "code": "94198007",
+              "display": "Secondary malignant neoplasm of blood vessel of inguinal region"
+            },
+            {
+              "code": "94200001",
+              "display": "Secondary malignant neoplasm of blood vessel of lower limb"
+            },
+            {
+              "code": "94201002",
+              "display": "Secondary malignant neoplasm of blood vessel of neck"
+            },
+            {
+              "code": "94202009",
+              "display": "Secondary malignant neoplasm of blood vessel of pelvis"
+            },
+            {
+              "code": "94203004",
+              "display": "Secondary malignant neoplasm of blood vessel of perineum"
+            },
+            {
+              "code": "94204005",
+              "display": "Secondary malignant neoplasm of blood vessel of popliteal space"
+            },
+            {
+              "code": "94205006",
+              "display": "Secondary malignant neoplasm of blood vessel of shoulder"
+            },
+            {
+              "code": "94206007",
+              "display": "Secondary malignant neoplasm of blood vessel of thigh"
+            },
+            {
+              "code": "94207003",
+              "display": "Secondary malignant neoplasm of blood vessel of thorax"
+            },
+            {
+              "code": "94208008",
+              "display": "Secondary malignant neoplasm of blood vessel of toe"
+            },
+            {
+              "code": "94209000",
+              "display": "Secondary malignant neoplasm of blood vessel of trunk"
+            },
+            {
+              "code": "94210005",
+              "display": "Secondary malignant neoplasm of blood vessel of upper limb"
+            },
+            {
+              "code": "94211009",
+              "display": "Secondary malignant neoplasm of blood vessel"
+            },
+            {
+              "code": "94212002",
+              "display": "Secondary malignant neoplasm of body of pancreas"
+            },
+            {
+              "code": "94213007",
+              "display": "Secondary malignant neoplasm of body of penis"
+            },
+            {
+              "code": "94214001",
+              "display": "Secondary malignant neoplasm of body of stomach"
+            },
+            {
+              "code": "94215000",
+              "display": "Secondary malignant neoplasm of body of uterus"
+            },
+            {
+              "code": "94217008",
+              "display": "Secondary malignant neoplasm of bone marrow"
+            },
+            {
+              "code": "94218003",
+              "display": "Secondary malignant neoplasm of bone of face"
+            },
+            {
+              "code": "94219006",
+              "display": "Secondary malignant neoplasm of bone of lower limb"
+            },
+            {
+              "code": "94220000",
+              "display": "Secondary malignant neoplasm of bone of skull"
+            },
+            {
+              "code": "94221001",
+              "display": "Secondary malignant neoplasm of bone of upper limb"
+            },
+            {
+              "code": "94222008",
+              "display": "Secondary malignant neoplasm of bone"
+            },
+            {
+              "code": "94224009",
+              "display": "Secondary malignant neoplasm of brain stem"
+            },
+            {
+              "code": "94225005",
+              "display": "Secondary malignant neoplasm of brain"
+            },
+            {
+              "code": "94226006",
+              "display": "Secondary malignant neoplasm of broad ligament"
+            },
+            {
+              "code": "94227002",
+              "display": "Secondary malignant neoplasm of bronchopulmonary lymph nodes"
+            },
+            {
+              "code": "94228007",
+              "display": "Secondary malignant neoplasm of bronchus of left lower lobe"
+            },
+            {
+              "code": "94229004",
+              "display": "Secondary malignant neoplasm of bronchus of left upper lobe"
+            },
+            {
+              "code": "94230009",
+              "display": "Secondary malignant neoplasm of bronchus of right lower lobe"
+            },
+            {
+              "code": "94231008",
+              "display": "Secondary malignant neoplasm of bronchus of right middle lobe"
+            },
+            {
+              "code": "94232001",
+              "display": "Secondary malignant neoplasm of bronchus of right upper lobe"
+            },
+            {
+              "code": "94233006",
+              "display": "Secondary malignant neoplasm of bronchus"
+            },
+            {
+              "code": "94234000",
+              "display": "Secondary malignant neoplasm of buccal mucosa"
+            },
+            {
+              "code": "94235004",
+              "display": "Secondary malignant neoplasm of cecum"
+            },
+            {
+              "code": "94236003",
+              "display": "Secondary malignant neoplasm of calcaneus"
+            },
+            {
+              "code": "94237007",
+              "display": "Secondary malignant neoplasm of cardia of stomach"
+            },
+            {
+              "code": "94238002",
+              "display": "Secondary malignant neoplasm of carina"
+            },
+            {
+              "code": "94239005",
+              "display": "Secondary malignant neoplasm of carotid body"
+            },
+            {
+              "code": "94240007",
+              "display": "Secondary malignant neoplasm of carpal bone"
+            },
+            {
+              "code": "94241006",
+              "display": "Secondary malignant neoplasm of cartilage of nose"
+            },
+            {
+              "code": "94242004",
+              "display": "Secondary malignant neoplasm of cauda equina"
+            },
+            {
+              "code": "94243009",
+              "display": "Secondary malignant neoplasm of central nervous system"
+            },
+            {
+              "code": "94244003",
+              "display": "Secondary malignant neoplasm of central portion of female breast"
+            },
+            {
+              "code": "94245002",
+              "display": "Secondary malignant neoplasm of cerebellum"
+            },
+            {
+              "code": "94246001",
+              "display": "Secondary malignant neoplasm of cerebral meninges"
+            },
+            {
+              "code": "94247005",
+              "display": "Secondary malignant neoplasm of cerebral ventricle"
+            },
+            {
+              "code": "94248000",
+              "display": "Secondary malignant neoplasm of cerebrum"
+            },
+            {
+              "code": "94249008",
+              "display": "Secondary malignant neoplasm of cervical esophagus"
+            },
+            {
+              "code": "94250008",
+              "display": "Secondary malignant neoplasm of cervical vertebral column"
+            },
+            {
+              "code": "94252000",
+              "display": "Secondary malignant neoplasm of cheek"
+            },
+            {
+              "code": "94253005",
+              "display": "Secondary malignant neoplasm of chest wall"
+            },
+            {
+              "code": "94254004",
+              "display": "Secondary malignant neoplasm of choroid"
+            },
+            {
+              "code": "94255003",
+              "display": "Secondary malignant neoplasm of ciliary body"
+            },
+            {
+              "code": "94256002",
+              "display": "Secondary malignant neoplasm of clavicle"
+            },
+            {
+              "code": "94257006",
+              "display": "Secondary malignant neoplasm of clitoris"
+            },
+            {
+              "code": "94258001",
+              "display": "Secondary malignant neoplasm of coccygeal body"
+            },
+            {
+              "code": "94259009",
+              "display": "Secondary malignant neoplasm of coccyx"
+            },
+            {
+              "code": "94260004",
+              "display": "Secondary malignant neoplasm of colon"
+            },
+            {
+              "code": "94261000",
+              "display": "Secondary malignant neoplasm of commissure of lip"
+            },
+            {
+              "code": "94262007",
+              "display": "Secondary malignant neoplasm of common bile duct"
+            },
+            {
+              "code": "94263002",
+              "display": "Secondary malignant neoplasm of conjunctiva"
+            },
+            {
+              "code": "94264008",
+              "display": "Secondary malignant neoplasm of connective and other soft tissues"
+            },
+            {
+              "code": "94265009",
+              "display": "Secondary malignant neoplasm of cornea"
+            },
+            {
+              "code": "94266005",
+              "display": "Secondary malignant neoplasm of cranial nerve"
+            },
+            {
+              "code": "94267001",
+              "display": "Secondary malignant neoplasm of craniopharyngeal duct"
+            },
+            {
+              "code": "94268006",
+              "display": "Secondary malignant neoplasm of cubital lymph nodes"
+            },
+            {
+              "code": "94269003",
+              "display": "Secondary malignant neoplasm of cuboid"
+            },
+            {
+              "code": "94270002",
+              "display": "Secondary malignant neoplasm of cystic duct"
+            },
+            {
+              "code": "94271003",
+              "display": "Secondary malignant neoplasm of descending colon"
+            },
+            {
+              "code": "94272005",
+              "display": "Secondary malignant neoplasm of diaphragm"
+            },
+            {
+              "code": "94273000",
+              "display": "Secondary malignant neoplasm of dorsal surface of tongue"
+            },
+            {
+              "code": "94274006",
+              "display": "Secondary malignant neoplasm of thoracic vertebral column"
+            },
+            {
+              "code": "94275007",
+              "display": "Secondary malignant neoplasm of duodenum"
+            },
+            {
+              "code": "94276008",
+              "display": "Secondary malignant neoplasm of ectopic female breast tissue"
+            },
+            {
+              "code": "94277004",
+              "display": "Secondary malignant neoplasm of ectopic male breast tissue"
+            },
+            {
+              "code": "94278009",
+              "display": "Secondary malignant neoplasm of endocardium"
+            },
+            {
+              "code": "94279001",
+              "display": "Secondary malignant neoplasm of endocervix"
+            },
+            {
+              "code": "94280003",
+              "display": "Secondary malignant neoplasm of endocrine gland"
+            },
+            {
+              "code": "94281004",
+              "display": "Secondary malignant neoplasm of endometrium"
+            },
+            {
+              "code": "94282006",
+              "display": "Secondary malignant neoplasm of epicardium"
+            },
+            {
+              "code": "94283001",
+              "display": "Secondary malignant neoplasm of epididymis"
+            },
+            {
+              "code": "94284007",
+              "display": "Secondary malignant neoplasm of epiglottis"
+            },
+            {
+              "code": "94285008",
+              "display": "Secondary malignant neoplasm of epitrochlear lymph nodes"
+            },
+            {
+              "code": "94286009",
+              "display": "Secondary malignant neoplasm of esophagus"
+            },
+            {
+              "code": "94287000",
+              "display": "Secondary malignant neoplasm of ethmoid bone"
+            },
+            {
+              "code": "94288005",
+              "display": "Secondary malignant neoplasm of ethmoidal sinus"
+            },
+            {
+              "code": "94289002",
+              "display": "Secondary malignant neoplasm of eustachian tube"
+            },
+            {
+              "code": "94290006",
+              "display": "Secondary malignant neoplasm of exocervix"
+            },
+            {
+              "code": "94291005",
+              "display": "Secondary malignant neoplasm of extrahepatic bile ducts"
+            },
+            {
+              "code": "94292003",
+              "display": "Secondary malignant neoplasm of eye"
+            },
+            {
+              "code": "94293008",
+              "display": "Secondary malignant neoplasm of face"
+            },
+            {
+              "code": "94294002",
+              "display": "Secondary malignant neoplasm of facial nerve"
+            },
+            {
+              "code": "94295001",
+              "display": "Secondary malignant neoplasm of fallopian tube"
+            },
+            {
+              "code": "94296000",
+              "display": "Secondary malignant neoplasm of false vocal cord"
+            },
+            {
+              "code": "94297009",
+              "display": "Secondary malignant neoplasm of female breast"
+            },
+            {
+              "code": "94298004",
+              "display": "Secondary malignant neoplasm of female genital organ"
+            },
+            {
+              "code": "94299007",
+              "display": "Secondary malignant neoplasm of femoral lymph nodes"
+            },
+            {
+              "code": "94300004",
+              "display": "Secondary malignant neoplasm of femur"
+            },
+            {
+              "code": "94301000",
+              "display": "Secondary malignant neoplasm of fibula"
+            },
+            {
+              "code": "94302007",
+              "display": "Secondary malignant neoplasm of first cuneiform bone of foot"
+            },
+            {
+              "code": "94303002",
+              "display": "Secondary malignant neoplasm of flank"
+            },
+            {
+              "code": "94304008",
+              "display": "Secondary malignant neoplasm of floor of mouth"
+            },
+            {
+              "code": "94305009",
+              "display": "Secondary malignant neoplasm of foot"
+            },
+            {
+              "code": "94306005",
+              "display": "Secondary malignant neoplasm of forearm"
+            },
+            {
+              "code": "94307001",
+              "display": "Secondary malignant neoplasm of prepuce"
+            },
+            {
+              "code": "94308006",
+              "display": "Secondary malignant neoplasm of frontal bone"
+            },
+            {
+              "code": "94309003",
+              "display": "Secondary malignant neoplasm of frontal lobe"
+            },
+            {
+              "code": "94310008",
+              "display": "Secondary malignant neoplasm of frontal sinus"
+            },
+            {
+              "code": "94311007",
+              "display": "Secondary malignant neoplasm of fundus of stomach"
+            },
+            {
+              "code": "94312000",
+              "display": "Secondary malignant neoplasm of gallbladder"
+            },
+            {
+              "code": "94313005",
+              "display": "Secondary malignant neoplasm of gastrointestinal tract"
+            },
+            {
+              "code": "94314004",
+              "display": "Secondary malignant neoplasm of gingival mucosa"
+            },
+            {
+              "code": "94315003",
+              "display": "Secondary malignant neoplasm of glans penis"
+            },
+            {
+              "code": "94316002",
+              "display": "Secondary malignant neoplasm of glomus jugulare"
+            },
+            {
+              "code": "94317006",
+              "display": "Secondary malignant neoplasm of glossopharyngeal nerve"
+            },
+            {
+              "code": "94318001",
+              "display": "Secondary malignant neoplasm of glottis"
+            },
+            {
+              "code": "94319009",
+              "display": "Secondary malignant neoplasm of great vessels"
+            },
+            {
+              "code": "94320003",
+              "display": "Secondary malignant neoplasm of greater curvature of stomach"
+            },
+            {
+              "code": "94321004",
+              "display": "Secondary malignant neoplasm of gum"
+            },
+            {
+              "code": "94322006",
+              "display": "Secondary malignant neoplasm of hamate bone"
+            },
+            {
+              "code": "94323001",
+              "display": "Secondary malignant neoplasm of hand"
+            },
+            {
+              "code": "94324007",
+              "display": "Secondary malignant neoplasm of hard palate"
+            },
+            {
+              "code": "94325008",
+              "display": "Secondary malignant neoplasm of head of pancreas"
+            },
+            {
+              "code": "94326009",
+              "display": "Secondary malignant neoplasm of head"
+            },
+            {
+              "code": "94327000",
+              "display": "Secondary malignant neoplasm of heart"
+            },
+            {
+              "code": "94328005",
+              "display": "Secondary malignant neoplasm of hepatic flexure of colon"
+            },
+            {
+              "code": "94329002",
+              "display": "Secondary malignant neoplasm of hilus of lung"
+            },
+            {
+              "code": "94330007",
+              "display": "Secondary malignant neoplasm of hypogastric lymph nodes"
+            },
+            {
+              "code": "94331006",
+              "display": "Secondary malignant neoplasm of hypoglossal nerve"
+            },
+            {
+              "code": "94332004",
+              "display": "Secondary malignant neoplasm of hypopharyngeal aspect of aryepiglottic fold"
+            },
+            {
+              "code": "94333009",
+              "display": "Secondary malignant neoplasm of hypopharyngeal aspect of interarytenoid fold"
+            },
+            {
+              "code": "94334003",
+              "display": "Secondary malignant neoplasm of hypopharynx"
+            },
+            {
+              "code": "94335002",
+              "display": "Secondary malignant neoplasm of ileum"
+            },
+            {
+              "code": "94336001",
+              "display": "Secondary malignant neoplasm of iliac lymph nodes"
+            },
+            {
+              "code": "94337005",
+              "display": "Secondary malignant neoplasm of ilium"
+            },
+            {
+              "code": "94338000",
+              "display": "Secondary malignant neoplasm of infraclavicular lymph nodes"
+            },
+            {
+              "code": "94339008",
+              "display": "Secondary malignant neoplasm of inguinal lymph nodes"
+            },
+            {
+              "code": "94340005",
+              "display": "Secondary malignant neoplasm of inguinal region"
+            },
+            {
+              "code": "94341009",
+              "display": "Secondary malignant neoplasm of inner aspect of lip"
+            },
+            {
+              "code": "94342002",
+              "display": "Secondary malignant neoplasm of inner aspect of lower lip"
+            },
+            {
+              "code": "94343007",
+              "display": "Secondary malignant neoplasm of inner aspect of upper lip"
+            },
+            {
+              "code": "94344001",
+              "display": "Secondary malignant neoplasm of intercostal lymph nodes"
+            },
+            {
+              "code": "94345000",
+              "display": "Secondary malignant neoplasm of intestinal lymph nodes"
+            },
+            {
+              "code": "94346004",
+              "display": "Secondary malignant neoplasm of intestinal tract"
+            },
+            {
+              "code": "94347008",
+              "display": "Secondary malignant neoplasm of intra-abdominal lymph nodes"
+            },
+            {
+              "code": "94348003",
+              "display": "Secondary malignant neoplasm of intra-abdominal organs"
+            },
+            {
+              "code": "94349006",
+              "display": "Secondary malignant neoplasm of intrahepatic bile ducts"
+            },
+            {
+              "code": "94350006",
+              "display": "Secondary malignant neoplasm of intrapelvic lymph nodes"
+            },
+            {
+              "code": "94351005",
+              "display": "Secondary malignant neoplasm of intrathoracic lymph nodes"
+            },
+            {
+              "code": "94352003",
+              "display": "Secondary malignant neoplasm of intrathoracic organs"
+            },
+            {
+              "code": "94353008",
+              "display": "Secondary malignant neoplasm of ischium"
+            },
+            {
+              "code": "94354002",
+              "display": "Secondary malignant neoplasm of islets of Langerhans"
+            },
+            {
+              "code": "94355001",
+              "display": "Secondary malignant neoplasm of isthmus of uterus"
+            },
+            {
+              "code": "94356000",
+              "display": "Secondary malignant neoplasm of jaw"
+            },
+            {
+              "code": "94357009",
+              "display": "Secondary malignant neoplasm of jejunum"
+            },
+            {
+              "code": "94358004",
+              "display": "Secondary malignant neoplasm of junctional region of epiglottis"
+            },
+            {
+              "code": "94359007",
+              "display": "Secondary malignant neoplasm of junctional zone of tongue"
+            },
+            {
+              "code": "94360002",
+              "display": "Secondary malignant neoplasm of kidney"
+            },
+            {
+              "code": "94361003",
+              "display": "Secondary malignant neoplasm of labia majora"
+            },
+            {
+              "code": "94362005",
+              "display": "Secondary malignant neoplasm of labia minora"
+            },
+            {
+              "code": "94364006",
+              "display": "Secondary malignant neoplasm of lacrimal gland"
+            },
+            {
+              "code": "94365007",
+              "display": "Secondary malignant neoplasm of large intestine"
+            },
+            {
+              "code": "94366008",
+              "display": "Secondary malignant neoplasm of laryngeal aspect of aryepiglottic fold"
+            },
+            {
+              "code": "94367004",
+              "display": "Secondary malignant neoplasm of laryngeal aspect of interarytenoid fold"
+            },
+            {
+              "code": "94368009",
+              "display": "Secondary malignant neoplasm of laryngeal commissure"
+            },
+            {
+              "code": "94369001",
+              "display": "Secondary malignant neoplasm of laryngeal surface of epiglottis"
+            },
+            {
+              "code": "94370000",
+              "display": "Secondary malignant neoplasm of larynx"
+            },
+            {
+              "code": "94371001",
+              "display": "Secondary malignant neoplasm of lateral portion of floor of mouth"
+            },
+            {
+              "code": "94372008",
+              "display": "Secondary malignant neoplasm of lateral wall of nasopharynx"
+            },
+            {
+              "code": "94373003",
+              "display": "Secondary malignant neoplasm of lateral wall of oropharynx"
+            },
+            {
+              "code": "94374009",
+              "display": "Secondary malignant neoplasm of lateral wall of urinary bladder"
+            },
+            {
+              "code": "94375005",
+              "display": "Secondary malignant neoplasm of left lower lobe of lung"
+            },
+            {
+              "code": "94376006",
+              "display": "Secondary malignant neoplasm of left upper lobe of lung"
+            },
+            {
+              "code": "94378007",
+              "display": "Secondary malignant neoplasm of lesser curvature of stomach"
+            },
+            {
+              "code": "94379004",
+              "display": "Secondary malignant neoplasm of lingual tonsil"
+            },
+            {
+              "code": "94380001",
+              "display": "Secondary malignant neoplasm of lip"
+            },
+            {
+              "code": "94381002",
+              "display": "Secondary malignant neoplasm of liver"
+            },
+            {
+              "code": "94382009",
+              "display": "Secondary malignant neoplasm of long bone of lower limb"
+            },
+            {
+              "code": "94383004",
+              "display": "Secondary malignant neoplasm of long bone of upper limb"
+            },
+            {
+              "code": "94384005",
+              "display": "Secondary malignant neoplasm of lower gum"
+            },
+            {
+              "code": "94385006",
+              "display": "Secondary malignant neoplasm of lower inner quadrant of female breast"
+            },
+            {
+              "code": "94386007",
+              "display": "Secondary malignant neoplasm of lower limb"
+            },
+            {
+              "code": "94387003",
+              "display": "Secondary malignant neoplasm of lower outer quadrant of female breast"
+            },
+            {
+              "code": "94388008",
+              "display": "Secondary malignant neoplasm of lower third of esophagus"
+            },
+            {
+              "code": "94389000",
+              "display": "Secondary malignant neoplasm of lumbar vertebral column"
+            },
+            {
+              "code": "94390009",
+              "display": "Secondary malignant neoplasm of lunate bone"
+            },
+            {
+              "code": "94391008",
+              "display": "Secondary malignant neoplasm of lung"
+            },
+            {
+              "code": "94392001",
+              "display": "Secondary malignant neoplasm of lymph node"
+            },
+            {
+              "code": "94393006",
+              "display": "Secondary malignant neoplasm of lymph nodes of face"
+            },
+            {
+              "code": "94394000",
+              "display": "Secondary malignant neoplasm of lymph nodes of head"
+            },
+            {
+              "code": "94395004",
+              "display": "Secondary malignant neoplasm of lymph nodes of lower limb"
+            },
+            {
+              "code": "94396003",
+              "display": "Secondary malignant neoplasm of lymph nodes of multiple sites"
+            },
+            {
+              "code": "94397007",
+              "display": "Secondary malignant neoplasm of lymph nodes of neck"
+            },
+            {
+              "code": "94398002",
+              "display": "Secondary malignant neoplasm of lymph nodes of upper limb"
+            },
+            {
+              "code": "94399005",
+              "display": "Secondary malignant neoplasm of main bronchus"
+            },
+            {
+              "code": "94400003",
+              "display": "Secondary malignant neoplasm of major salivary gland"
+            },
+            {
+              "code": "94401004",
+              "display": "Secondary malignant neoplasm of male breast"
+            },
+            {
+              "code": "94402006",
+              "display": "Secondary malignant neoplasm of male genital organ"
+            },
+            {
+              "code": "94403001",
+              "display": "Secondary malignant neoplasm of mandible"
+            },
+            {
+              "code": "94404007",
+              "display": "Secondary malignant neoplasm of mastoid air cells"
+            },
+            {
+              "code": "94405008",
+              "display": "Secondary malignant neoplasm of maxilla"
+            },
+            {
+              "code": "94406009",
+              "display": "Secondary malignant neoplasm of maxillary sinus"
+            },
+            {
+              "code": "94407000",
+              "display": "Secondary malignant neoplasm of Meckel's diverticulum"
+            },
+            {
+              "code": "94408005",
+              "display": "Secondary malignant neoplasm of mediastinal lymph nodes"
+            },
+            {
+              "code": "94409002",
+              "display": "Secondary malignant neoplasm of mediastinum"
+            },
+            {
+              "code": "94410007",
+              "display": "Secondary malignant neoplasm of mesenteric lymph nodes"
+            },
+            {
+              "code": "94411006",
+              "display": "Secondary malignant neoplasm of metacarpal bone"
+            },
+            {
+              "code": "94412004",
+              "display": "Secondary malignant neoplasm of metatarsal bone"
+            },
+            {
+              "code": "94413009",
+              "display": "Secondary malignant neoplasm of middle ear"
+            },
+            {
+              "code": "94414003",
+              "display": "Secondary malignant neoplasm of middle third of esophagus"
+            },
+            {
+              "code": "94415002",
+              "display": "Secondary malignant neoplasm of minor salivary gland"
+            },
+            {
+              "code": "94416001",
+              "display": "Secondary malignant neoplasm of mouth"
+            },
+            {
+              "code": "94417005",
+              "display": "Secondary malignant neoplasm of multiple endocrine glands"
+            },
+            {
+              "code": "94418000",
+              "display": "Secondary malignant neoplasm of muscle of abdomen"
+            },
+            {
+              "code": "94419008",
+              "display": "Secondary malignant neoplasm of muscle of buttock"
+            },
+            {
+              "code": "94420002",
+              "display": "Secondary malignant neoplasm of muscle of face"
+            },
+            {
+              "code": "94421003",
+              "display": "Secondary malignant neoplasm of muscle of head"
+            },
+            {
+              "code": "94422005",
+              "display": "Secondary malignant neoplasm of muscle of hip"
+            },
+            {
+              "code": "94423000",
+              "display": "Secondary malignant neoplasm of muscle of inguinal region"
+            },
+            {
+              "code": "94424006",
+              "display": "Secondary malignant neoplasm of muscle of lower limb"
+            },
+            {
+              "code": "94425007",
+              "display": "Secondary malignant neoplasm of muscle of neck"
+            },
+            {
+              "code": "94426008",
+              "display": "Secondary malignant neoplasm of muscle of pelvis"
+            },
+            {
+              "code": "94427004",
+              "display": "Secondary malignant neoplasm of muscle of perineum"
+            },
+            {
+              "code": "94428009",
+              "display": "Secondary malignant neoplasm of muscle of shoulder"
+            },
+            {
+              "code": "94429001",
+              "display": "Secondary malignant neoplasm of muscle of thorax"
+            },
+            {
+              "code": "94430006",
+              "display": "Secondary malignant neoplasm of muscle of trunk"
+            },
+            {
+              "code": "94431005",
+              "display": "Secondary malignant neoplasm of muscle of upper limb"
+            },
+            {
+              "code": "94432003",
+              "display": "Secondary malignant neoplasm of muscle"
+            },
+            {
+              "code": "94433008",
+              "display": "Secondary malignant neoplasm of myocardium"
+            },
+            {
+              "code": "94434002",
+              "display": "Secondary malignant neoplasm of myometrium"
+            },
+            {
+              "code": "94435001",
+              "display": "Secondary malignant neoplasm of nasal bone"
+            },
+            {
+              "code": "94436000",
+              "display": "Secondary malignant neoplasm of nasal cavity"
+            },
+            {
+              "code": "94437009",
+              "display": "Secondary malignant neoplasm of nasal concha"
+            },
+            {
+              "code": "94439007",
+              "display": "Secondary malignant neoplasm of navicular bone of foot"
+            },
+            {
+              "code": "94440009",
+              "display": "Secondary malignant neoplasm of scaphoid bone"
+            },
+            {
+              "code": "94441008",
+              "display": "Secondary malignant neoplasm of neck"
+            },
+            {
+              "code": "94442001",
+              "display": "Secondary malignant neoplasm of nervous system"
+            },
+            {
+              "code": "94443006",
+              "display": "Secondary malignant neoplasm of nipple of female breast"
+            },
+            {
+              "code": "94444000",
+              "display": "Secondary malignant neoplasm of nipple of male breast"
+            },
+            {
+              "code": "94445004",
+              "display": "Secondary malignant neoplasm of nose"
+            },
+            {
+              "code": "94446003",
+              "display": "Secondary malignant neoplasm of obturator lymph nodes"
+            },
+            {
+              "code": "94447007",
+              "display": "Secondary malignant neoplasm of occipital bone"
+            },
+            {
+              "code": "94448002",
+              "display": "Secondary malignant neoplasm of occipital lobe"
+            },
+            {
+              "code": "94449005",
+              "display": "Secondary malignant neoplasm of occipital lymph nodes"
+            },
+            {
+              "code": "94450005",
+              "display": "Secondary malignant neoplasm of oculomotor nerve"
+            },
+            {
+              "code": "94451009",
+              "display": "Secondary malignant neoplasm of olfactory nerve"
+            },
+            {
+              "code": "94452002",
+              "display": "Secondary malignant neoplasm of optic nerve"
+            },
+            {
+              "code": "94453007",
+              "display": "Secondary malignant neoplasm of orbit"
+            },
+            {
+              "code": "94454001",
+              "display": "Secondary malignant neoplasm of oropharynx"
+            },
+            {
+              "code": "94455000",
+              "display": "Secondary malignant neoplasm of ovary"
+            },
+            {
+              "code": "94456004",
+              "display": "Secondary malignant neoplasm of palate"
+            },
+            {
+              "code": "94457008",
+              "display": "Secondary malignant neoplasm of palatine bone"
+            },
+            {
+              "code": "94458003",
+              "display": "Secondary malignant neoplasm of tonsil"
+            },
+            {
+              "code": "94459006",
+              "display": "Secondary malignant neoplasm of pancreas"
+            },
+            {
+              "code": "94460001",
+              "display": "Secondary malignant neoplasm of pancreatic duct"
+            },
+            {
+              "code": "94461002",
+              "display": "Secondary malignant neoplasm of para-aortic body"
+            },
+            {
+              "code": "94462009",
+              "display": "Secondary malignant neoplasm of paraganglion"
+            },
+            {
+              "code": "94463004",
+              "display": "Secondary malignant neoplasm of paramammary lymph nodes"
+            },
+            {
+              "code": "94464005",
+              "display": "Secondary malignant neoplasm of parametrial lymph nodes"
+            },
+            {
+              "code": "94465006",
+              "display": "Secondary malignant neoplasm of parametrium"
+            },
+            {
+              "code": "94466007",
+              "display": "Secondary malignant neoplasm of pararectal lymph nodes"
+            },
+            {
+              "code": "94467003",
+              "display": "Secondary malignant neoplasm of parathyroid gland"
+            },
+            {
+              "code": "94468008",
+              "display": "Secondary malignant neoplasm of paraurethral glands"
+            },
+            {
+              "code": "94469000",
+              "display": "Secondary malignant neoplasm of paravaginal lymph nodes"
+            },
+            {
+              "code": "94470004",
+              "display": "Secondary malignant neoplasm of parietal bone"
+            },
+            {
+              "code": "94471000",
+              "display": "Secondary malignant neoplasm of parietal lobe"
+            },
+            {
+              "code": "94472007",
+              "display": "Secondary malignant neoplasm of parietal peritoneum"
+            },
+            {
+              "code": "94473002",
+              "display": "Secondary malignant neoplasm of parietal pleura"
+            },
+            {
+              "code": "94474008",
+              "display": "Secondary malignant neoplasm of parotid gland"
+            },
+            {
+              "code": "94475009",
+              "display": "Secondary malignant neoplasm of parotid lymph nodes"
+            },
+            {
+              "code": "94476005",
+              "display": "Secondary malignant neoplasm of patella"
+            },
+            {
+              "code": "94477001",
+              "display": "Secondary malignant neoplasm of pectoral axillary lymph nodes"
+            },
+            {
+              "code": "94478006",
+              "display": "Secondary malignant neoplasm of pelvic bone"
+            },
+            {
+              "code": "94479003",
+              "display": "Secondary malignant neoplasm of pelvic peritoneum"
+            },
+            {
+              "code": "94480000",
+              "display": "Secondary malignant neoplasm of pelvis"
+            },
+            {
+              "code": "94481001",
+              "display": "Secondary malignant neoplasm of penis"
+            },
+            {
+              "code": "94482008",
+              "display": "Secondary malignant neoplasm of periadrenal tissue"
+            },
+            {
+              "code": "94483003",
+              "display": "Secondary malignant neoplasm of perianal skin"
+            },
+            {
+              "code": "94484009",
+              "display": "Secondary malignant neoplasm of pericardium"
+            },
+            {
+              "code": "94485005",
+              "display": "Secondary malignant neoplasm of perirenal tissue"
+            },
+            {
+              "code": "94486006",
+              "display": "Secondary malignant neoplasm of phalanx of foot"
+            },
+            {
+              "code": "94487002",
+              "display": "Secondary malignant neoplasm of phalanx of hand"
+            },
+            {
+              "code": "94488007",
+              "display": "Secondary malignant neoplasm of pharynx"
+            },
+            {
+              "code": "94489004",
+              "display": "Secondary malignant neoplasm of pineal gland"
+            },
+            {
+              "code": "94490008",
+              "display": "Secondary malignant neoplasm of pisiform bone of hand"
+            },
+            {
+              "code": "94491007",
+              "display": "Secondary malignant neoplasm of pituitary gland"
+            },
+            {
+              "code": "94492000",
+              "display": "Secondary malignant neoplasm of placenta"
+            },
+            {
+              "code": "94493005",
+              "display": "Secondary malignant neoplasm of pleura"
+            },
+            {
+              "code": "94494004",
+              "display": "Secondary malignant neoplasm of popliteal lymph nodes"
+            },
+            {
+              "code": "94495003",
+              "display": "Secondary malignant neoplasm of postcricoid region"
+            },
+            {
+              "code": "94496002",
+              "display": "Secondary malignant neoplasm of posterior hypopharyngeal wall"
+            },
+            {
+              "code": "94497006",
+              "display": "Secondary malignant neoplasm of posterior mediastinum"
+            },
+            {
+              "code": "94498001",
+              "display": "Secondary malignant neoplasm of posterior wall of nasopharynx"
+            },
+            {
+              "code": "94499009",
+              "display": "Secondary malignant neoplasm of posterior wall of oropharynx"
+            },
+            {
+              "code": "94500000",
+              "display": "Secondary malignant neoplasm of posterior wall of urinary bladder"
+            },
+            {
+              "code": "94501001",
+              "display": "Secondary malignant neoplasm of preauricular lymph nodes"
+            },
+            {
+              "code": "94502008",
+              "display": "Secondary malignant neoplasm of presacral region"
+            },
+            {
+              "code": "94503003",
+              "display": "Secondary malignant neoplasm of prostate"
+            },
+            {
+              "code": "94504009",
+              "display": "Secondary malignant neoplasm of pubis"
+            },
+            {
+              "code": "94505005",
+              "display": "Secondary malignant neoplasm of pyloric antrum"
+            },
+            {
+              "code": "94506006",
+              "display": "Secondary malignant neoplasm of pylorus"
+            },
+            {
+              "code": "94507002",
+              "display": "Secondary malignant neoplasm of pyriform sinus"
+            },
+            {
+              "code": "94508007",
+              "display": "Secondary malignant neoplasm of radius"
+            },
+            {
+              "code": "94509004",
+              "display": "Secondary malignant neoplasm of rectosigmoid junction"
+            },
+            {
+              "code": "94510009",
+              "display": "Secondary malignant neoplasm of rectouterine pouch"
+            },
+            {
+              "code": "94511008",
+              "display": "Secondary malignant neoplasm of rectovaginal septum"
+            },
+            {
+              "code": "94512001",
+              "display": "Secondary malignant neoplasm of rectovesical septum"
+            },
+            {
+              "code": "94513006",
+              "display": "Secondary malignant neoplasm of rectum"
+            },
+            {
+              "code": "94514000",
+              "display": "Secondary malignant neoplasm of renal pelvis"
+            },
+            {
+              "code": "94515004",
+              "display": "Secondary malignant neoplasm of respiratory tract"
+            },
+            {
+              "code": "94516003",
+              "display": "Secondary malignant neoplasm of retina"
+            },
+            {
+              "code": "94517007",
+              "display": "Secondary malignant neoplasm of retrocecal tissue"
+            },
+            {
+              "code": "94518002",
+              "display": "Secondary malignant neoplasm of retromolar area"
+            },
+            {
+              "code": "94519005",
+              "display": "Secondary malignant neoplasm of retroperitoneal lymph nodes"
+            },
+            {
+              "code": "94520004",
+              "display": "Secondary malignant neoplasm of retropharyngeal lymph nodes"
+            },
+            {
+              "code": "94521000",
+              "display": "Secondary malignant neoplasm of rib"
+            },
+            {
+              "code": "94522007",
+              "display": "Secondary malignant neoplasm of right lower lobe of lung"
+            },
+            {
+              "code": "94523002",
+              "display": "Secondary malignant neoplasm of right middle lobe of lung"
+            },
+            {
+              "code": "94524008",
+              "display": "Secondary malignant neoplasm of right upper lobe of lung"
+            },
+            {
+              "code": "94525009",
+              "display": "Secondary malignant neoplasm of round ligament of uterus"
+            },
+            {
+              "code": "94526005",
+              "display": "Secondary malignant neoplasm of sacrococcygeal region"
+            },
+            {
+              "code": "94527001",
+              "display": "Secondary malignant neoplasm of sacrum"
+            },
+            {
+              "code": "94528006",
+              "display": "Secondary malignant neoplasm of scalene lymph nodes"
+            },
+            {
+              "code": "94529003",
+              "display": "Secondary malignant neoplasm of scapula"
+            },
+            {
+              "code": "94530008",
+              "display": "Secondary malignant neoplasm of sclera"
+            },
+            {
+              "code": "94531007",
+              "display": "Secondary malignant neoplasm of scrotum"
+            },
+            {
+              "code": "94532000",
+              "display": "Secondary malignant neoplasm of sebaceous gland"
+            },
+            {
+              "code": "94533005",
+              "display": "Secondary malignant neoplasm of second cuneiform bone of foot"
+            },
+            {
+              "code": "94534004",
+              "display": "Secondary malignant neoplasm of septum of nose"
+            },
+            {
+              "code": "94535003",
+              "display": "Secondary malignant neoplasm of short bone of lower limb"
+            },
+            {
+              "code": "94536002",
+              "display": "Secondary malignant neoplasm of short bone of upper limb"
+            },
+            {
+              "code": "94537006",
+              "display": "Secondary malignant neoplasm of shoulder"
+            },
+            {
+              "code": "94538001",
+              "display": "Secondary malignant neoplasm of sigmoid colon"
+            },
+            {
+              "code": "94539009",
+              "display": "Secondary malignant neoplasm of skin of abdomen"
+            },
+            {
+              "code": "94540006",
+              "display": "Secondary malignant neoplasm of skin of ankle"
+            },
+            {
+              "code": "94542003",
+              "display": "Secondary malignant neoplasm of skin of axilla"
+            },
+            {
+              "code": "94543008",
+              "display": "Secondary malignant neoplasm of skin of back"
+            },
+            {
+              "code": "94544002",
+              "display": "Secondary malignant neoplasm of skin of breast"
+            },
+            {
+              "code": "94545001",
+              "display": "Secondary malignant neoplasm of skin of buttock"
+            },
+            {
+              "code": "94546000",
+              "display": "Secondary malignant neoplasm of skin of cheek"
+            },
+            {
+              "code": "94547009",
+              "display": "Secondary malignant neoplasm of skin of chest"
+            },
+            {
+              "code": "94548004",
+              "display": "Secondary malignant neoplasm of skin of chin"
+            },
+            {
+              "code": "94549007",
+              "display": "Secondary malignant neoplasm of skin of ear"
+            },
+            {
+              "code": "94550007",
+              "display": "Secondary malignant neoplasm of skin of elbow"
+            },
+            {
+              "code": "94551006",
+              "display": "Secondary malignant neoplasm of skin of external auditory canal"
+            },
+            {
+              "code": "94552004",
+              "display": "Secondary malignant neoplasm of skin of eyebrow"
+            },
+            {
+              "code": "94553009",
+              "display": "Secondary malignant neoplasm of skin of eyelid"
+            },
+            {
+              "code": "94554003",
+              "display": "Secondary malignant neoplasm of skin of face"
+            },
+            {
+              "code": "94555002",
+              "display": "Secondary malignant neoplasm of skin of finger"
+            },
+            {
+              "code": "94556001",
+              "display": "Secondary malignant neoplasm of skin of foot"
+            },
+            {
+              "code": "94557005",
+              "display": "Secondary malignant neoplasm of skin of forearm"
+            },
+            {
+              "code": "94558000",
+              "display": "Secondary malignant neoplasm of skin of forehead"
+            },
+            {
+              "code": "94559008",
+              "display": "Secondary malignant neoplasm of skin of groin"
+            },
+            {
+              "code": "94560003",
+              "display": "Secondary malignant neoplasm of skin of hand"
+            },
+            {
+              "code": "94561004",
+              "display": "Secondary malignant neoplasm of skin of hip"
+            },
+            {
+              "code": "94562006",
+              "display": "Secondary malignant neoplasm of skin of knee"
+            },
+            {
+              "code": "94564007",
+              "display": "Secondary malignant neoplasm of skin of lip"
+            },
+            {
+              "code": "94565008",
+              "display": "Secondary malignant neoplasm of skin of lower limb"
+            },
+            {
+              "code": "94566009",
+              "display": "Secondary malignant neoplasm of skin of neck"
+            },
+            {
+              "code": "94567000",
+              "display": "Secondary malignant neoplasm of skin of nose"
+            },
+            {
+              "code": "94568005",
+              "display": "Secondary malignant neoplasm of skin of perineum"
+            },
+            {
+              "code": "94569002",
+              "display": "Secondary malignant neoplasm of skin of popliteal area"
+            },
+            {
+              "code": "94570001",
+              "display": "Secondary malignant neoplasm of skin of scalp"
+            },
+            {
+              "code": "94571002",
+              "display": "Secondary malignant neoplasm of skin of shoulder"
+            },
+            {
+              "code": "94572009",
+              "display": "Secondary malignant neoplasm of skin of temporal region"
+            },
+            {
+              "code": "94573004",
+              "display": "Secondary malignant neoplasm of skin of thigh"
+            },
+            {
+              "code": "94574005",
+              "display": "Secondary malignant neoplasm of skin of toe"
+            },
+            {
+              "code": "94575006",
+              "display": "Secondary malignant neoplasm of skin of trunk"
+            },
+            {
+              "code": "94576007",
+              "display": "Secondary malignant neoplasm of skin of umbilicus"
+            },
+            {
+              "code": "94577003",
+              "display": "Secondary malignant neoplasm of skin of upper limb"
+            },
+            {
+              "code": "94578008",
+              "display": "Secondary malignant neoplasm of skin of wrist"
+            },
+            {
+              "code": "94579000",
+              "display": "Secondary malignant neoplasm of skin"
+            },
+            {
+              "code": "94580002",
+              "display": "Secondary malignant neoplasm of small intestine"
+            },
+            {
+              "code": "94581003",
+              "display": "Secondary malignant neoplasm of soft palate"
+            },
+            {
+              "code": "94582005",
+              "display": "Secondary malignant neoplasm of soft tissues of abdomen"
+            },
+            {
+              "code": "94583000",
+              "display": "Secondary malignant neoplasm of soft tissues of axilla"
+            },
+            {
+              "code": "94584006",
+              "display": "Secondary malignant neoplasm of soft tissues of buttock"
+            },
+            {
+              "code": "94585007",
+              "display": "Secondary malignant neoplasm of soft tissues of face"
+            },
+            {
+              "code": "94586008",
+              "display": "Secondary malignant neoplasm of soft tissues of head"
+            },
+            {
+              "code": "94587004",
+              "display": "Secondary malignant neoplasm of soft tissues of hip"
+            },
+            {
+              "code": "94588009",
+              "display": "Secondary malignant neoplasm of soft tissues of inguinal region"
+            },
+            {
+              "code": "94589001",
+              "display": "Secondary malignant neoplasm of soft tissues of lower limb"
+            },
+            {
+              "code": "94590005",
+              "display": "Secondary malignant neoplasm of soft tissues of neck"
+            },
+            {
+              "code": "94591009",
+              "display": "Secondary malignant neoplasm of soft tissues of pelvis"
+            },
+            {
+              "code": "94592002",
+              "display": "Secondary malignant neoplasm of soft tissues of perineum"
+            },
+            {
+              "code": "94593007",
+              "display": "Secondary malignant neoplasm of soft tissues of shoulder"
+            },
+            {
+              "code": "94594001",
+              "display": "Secondary malignant neoplasm of soft tissues of thorax"
+            },
+            {
+              "code": "94595000",
+              "display": "Secondary malignant neoplasm of soft tissues of trunk"
+            },
+            {
+              "code": "94596004",
+              "display": "Secondary malignant neoplasm of soft tissues of upper limb"
+            },
+            {
+              "code": "94597008",
+              "display": "Secondary malignant neoplasm of spermatic cord"
+            },
+            {
+              "code": "94598003",
+              "display": "Secondary malignant neoplasm of sphenoid bone"
+            },
+            {
+              "code": "94599006",
+              "display": "Secondary malignant neoplasm of sphenoidal sinus"
+            },
+            {
+              "code": "94600009",
+              "display": "Secondary malignant neoplasm of spinal cord"
+            },
+            {
+              "code": "94601008",
+              "display": "Secondary malignant neoplasm of spinal meninges"
+            },
+            {
+              "code": "94602001",
+              "display": "Secondary malignant neoplasm of vertebral column"
+            },
+            {
+              "code": "94603006",
+              "display": "Secondary malignant neoplasm of spleen"
+            },
+            {
+              "code": "94604000",
+              "display": "Secondary malignant neoplasm of splenic flexure of colon"
+            },
+            {
+              "code": "94605004",
+              "display": "Secondary malignant neoplasm of sternum"
+            },
+            {
+              "code": "94606003",
+              "display": "Secondary malignant neoplasm of stomach"
+            },
+            {
+              "code": "94607007",
+              "display": "Secondary malignant neoplasm of subglottis"
+            },
+            {
+              "code": "94608002",
+              "display": "Secondary malignant neoplasm of sublingual gland"
+            },
+            {
+              "code": "94609005",
+              "display": "Secondary malignant neoplasm of submandibular lymph nodes"
+            },
+            {
+              "code": "94610000",
+              "display": "Secondary malignant neoplasm of submaxillary gland"
+            },
+            {
+              "code": "94611001",
+              "display": "Secondary malignant neoplasm of submental lymph nodes"
+            },
+            {
+              "code": "94612008",
+              "display": "Secondary malignant neoplasm of superficial inguinal lymph nodes"
+            },
+            {
+              "code": "94613003",
+              "display": "Secondary malignant neoplasm of superior wall of nasopharynx"
+            },
+            {
+              "code": "94614009",
+              "display": "Secondary malignant neoplasm of supraclavicular lymph nodes"
+            },
+            {
+              "code": "94615005",
+              "display": "Secondary malignant neoplasm of supraclavicular region"
+            },
+            {
+              "code": "94616006",
+              "display": "Secondary malignant neoplasm of supraglottis"
+            },
+            {
+              "code": "94617002",
+              "display": "Secondary malignant neoplasm of sweat gland"
+            },
+            {
+              "code": "94618007",
+              "display": "Secondary malignant neoplasm of tail of pancreas"
+            },
+            {
+              "code": "94619004",
+              "display": "Secondary malignant neoplasm of talus"
+            },
+            {
+              "code": "94620005",
+              "display": "Secondary malignant neoplasm of tarsal bone"
+            },
+            {
+              "code": "94621009",
+              "display": "Secondary malignant neoplasm of temporal bone"
+            },
+            {
+              "code": "94622002",
+              "display": "Secondary malignant neoplasm of temporal lobe"
+            },
+            {
+              "code": "94623007",
+              "display": "Secondary malignant neoplasm of testis"
+            },
+            {
+              "code": "94624001",
+              "display": "Secondary malignant neoplasm of the mesentery"
+            },
+            {
+              "code": "94625000",
+              "display": "Secondary malignant neoplasm of the mesocolon"
+            },
+            {
+              "code": "94626004",
+              "display": "Omental metastasis"
+            },
+            {
+              "code": "94627008",
+              "display": "Metastasis to peritoneum"
+            },
+            {
+              "code": "94628003",
+              "display": "Secondary malignant neoplasm of the retroperitoneum"
+            },
+            {
+              "code": "94629006",
+              "display": "Secondary malignant neoplasm of thigh"
+            },
+            {
+              "code": "94630001",
+              "display": "Secondary malignant neoplasm of third cuneiform bone of foot"
+            },
+            {
+              "code": "94631002",
+              "display": "Secondary malignant neoplasm of thoracic esophagus"
+            },
+            {
+              "code": "94632009",
+              "display": "Secondary malignant neoplasm of thymus"
+            },
+            {
+              "code": "94633004",
+              "display": "Secondary malignant neoplasm of thyroglossal duct"
+            },
+            {
+              "code": "94634005",
+              "display": "Secondary malignant neoplasm of thyroid gland"
+            },
+            {
+              "code": "94635006",
+              "display": "Secondary malignant neoplasm of tibia"
+            },
+            {
+              "code": "94636007",
+              "display": "Secondary malignant neoplasm of tibial lymph nodes"
+            },
+            {
+              "code": "94637003",
+              "display": "Secondary malignant neoplasm of tip and lateral border of tongue"
+            },
+            {
+              "code": "94638008",
+              "display": "Secondary malignant neoplasm of tongue"
+            },
+            {
+              "code": "94639000",
+              "display": "Secondary malignant neoplasm of tonsillar fossa"
+            },
+            {
+              "code": "94640003",
+              "display": "Secondary malignant neoplasm of tonsillar pillar"
+            },
+            {
+              "code": "94641004",
+              "display": "Secondary malignant neoplasm of trachea"
+            },
+            {
+              "code": "94642006",
+              "display": "Secondary malignant neoplasm of tracheobronchial lymph nodes"
+            },
+            {
+              "code": "94643001",
+              "display": "Secondary malignant neoplasm of transverse colon"
+            },
+            {
+              "code": "94644007",
+              "display": "Secondary malignant neoplasm of trapezium"
+            },
+            {
+              "code": "94645008",
+              "display": "Secondary malignant neoplasm of trapezoid bone"
+            },
+            {
+              "code": "94646009",
+              "display": "Secondary malignant neoplasm of trigeminal nerve"
+            },
+            {
+              "code": "94647000",
+              "display": "Secondary malignant neoplasm of trigone of urinary bladder"
+            },
+            {
+              "code": "94648005",
+              "display": "Secondary malignant neoplasm of trochlear nerve"
+            },
+            {
+              "code": "94649002",
+              "display": "Secondary malignant neoplasm of trunk"
+            },
+            {
+              "code": "94650002",
+              "display": "Secondary malignant neoplasm of ulna"
+            },
+            {
+              "code": "94651003",
+              "display": "Secondary malignant neoplasm of undescended testis"
+            },
+            {
+              "code": "94652005",
+              "display": "Secondary malignant neoplasm of upper gum"
+            },
+            {
+              "code": "94653000",
+              "display": "Secondary malignant neoplasm of upper inner quadrant of female breast"
+            },
+            {
+              "code": "94654006",
+              "display": "Secondary malignant neoplasm of upper limb"
+            },
+            {
+              "code": "94655007",
+              "display": "Secondary malignant neoplasm of upper outer quadrant of female breast"
+            },
+            {
+              "code": "94656008",
+              "display": "Secondary malignant neoplasm of upper respiratory tract"
+            },
+            {
+              "code": "94657004",
+              "display": "Metastatic malignant neoplasm to upper third of esophagus"
+            },
+            {
+              "code": "94658009",
+              "display": "Secondary malignant neoplasm of urachus"
+            },
+            {
+              "code": "94659001",
+              "display": "Secondary malignant neoplasm of ureter"
+            },
+            {
+              "code": "94660006",
+              "display": "Secondary malignant neoplasm of ureteric orifice of urinary bladder"
+            },
+            {
+              "code": "94661005",
+              "display": "Secondary malignant neoplasm of urethra"
+            },
+            {
+              "code": "94662003",
+              "display": "Secondary malignant neoplasm of urinary bladder neck"
+            },
+            {
+              "code": "94663008",
+              "display": "Secondary malignant neoplasm of urinary system"
+            },
+            {
+              "code": "94664002",
+              "display": "Secondary malignant neoplasm of uterine adnexa"
+            },
+            {
+              "code": "94665001",
+              "display": "Secondary malignant neoplasm of uterus"
+            },
+            {
+              "code": "94666000",
+              "display": "Secondary malignant neoplasm of uveal tract"
+            },
+            {
+              "code": "94667009",
+              "display": "Secondary malignant neoplasm of uvula"
+            },
+            {
+              "code": "94668004",
+              "display": "Secondary malignant neoplasm of vagina"
+            },
+            {
+              "code": "94669007",
+              "display": "Secondary malignant neoplasm of vagus nerve"
+            },
+            {
+              "code": "94670008",
+              "display": "Secondary malignant neoplasm of vallecula"
+            },
+            {
+              "code": "94671007",
+              "display": "Secondary malignant neoplasm of vas deferens"
+            },
+            {
+              "code": "94672000",
+              "display": "Secondary malignant neoplasm of ventral surface of tongue"
+            },
+            {
+              "code": "94673005",
+              "display": "Secondary malignant neoplasm of vermilion border of lip"
+            },
+            {
+              "code": "94674004",
+              "display": "Secondary malignant neoplasm of vermilion border of lower lip"
+            },
+            {
+              "code": "94675003",
+              "display": "Secondary malignant neoplasm of vermilion border of upper lip"
+            },
+            {
+              "code": "94676002",
+              "display": "Secondary malignant neoplasm of vestibule of mouth"
+            },
+            {
+              "code": "94677006",
+              "display": "Secondary malignant neoplasm of vestibule of nose"
+            },
+            {
+              "code": "94678001",
+              "display": "Secondary malignant neoplasm of visceral pleura"
+            },
+            {
+              "code": "94679009",
+              "display": "Secondary malignant neoplasm of vocal cord"
+            },
+            {
+              "code": "94680007",
+              "display": "Secondary malignant neoplasm of vomer"
+            },
+            {
+              "code": "94681006",
+              "display": "Secondary malignant neoplasm of vulva"
+            },
+            {
+              "code": "94682004",
+              "display": "Secondary malignant neoplasm of Waldeyer's ring"
+            },
+            {
+              "code": "94683009",
+              "display": "Secondary malignant neoplasm of zygomatic bone"
+            },
+            {
+              "code": "128465005",
+              "display": "Secondary malignant neoplasm of articular cartilage"
+            },
+            {
+              "code": "134421000",
+              "display": "Pathologic fracture of bone at site of metastatic neoplasm (disorder)"
+            },
+            {
+              "code": "188445006",
+              "display": "Secondary malignant neoplasm of retroperitoneum and peritoneum"
+            },
+            {
+              "code": "188454009",
+              "display": "Secondary malignant neoplasm of skin of head"
+            },
+            {
+              "code": "188458007",
+              "display": "Secondary malignant neoplasm of skin of shoulder and arm"
+            },
+            {
+              "code": "188462001",
+              "display": "Secondary malignant neoplasm of brain and spinal cord"
+            },
+            {
+              "code": "188469005",
+              "display": "Secondary malignant neoplasm of cervix uteri"
+            },
+            {
+              "code": "188471005",
+              "display": "Secondary malignant neoplasm of epididymis and vas deferens"
+            },
+            {
+              "code": "188645002",
+              "display": "Leukemic reticuloendotheliosis of lymph nodes of head, face and neck"
+            },
+            {
+              "code": "188648000",
+              "display": "Leukemic reticuloendotheliosis of lymph nodes of axilla and upper limb"
+            },
+            {
+              "code": "188649008",
+              "display": "Leukemic reticuloendotheliosis of lymph nodes of inguinal region and lower limb"
+            },
+            {
+              "code": "230156002",
+              "display": "Malignant meningitis"
+            },
+            {
+              "code": "233940007",
+              "display": "Pulmonary tumor embolism"
+            },
+            {
+              "code": "236512004",
+              "display": "Leukemic infiltrate of kidney"
+            },
+            {
+              "code": "241861008",
+              "display": "Metastatic malignant neoplasm to nasopharynx"
+            },
+            {
+              "code": "242862004",
+              "display": "Secondary malignant neoplasm of nasopharyngeal wall"
+            },
+            {
+              "code": "255118005",
+              "display": "Secondary lymphangitic carcinoma"
+            },
+            {
+              "code": "255119002",
+              "display": "Lymphangitis carcinomatosa"
+            },
+            {
+              "code": "255121007",
+              "display": "Carcinomatosis of peritoneal cavity"
+            },
+            {
+              "code": "255123005",
+              "display": "Metastasis to nervous system and eye"
+            },
+            {
+              "code": "255124004",
+              "display": "Metastasis to peripheral nerve"
+            },
+            {
+              "code": "269473008",
+              "display": "Secondary malignant neoplasm of respiratory and digestive systems"
+            },
+            {
+              "code": "269616004",
+              "display": "Secondary nodes - axilla/arm"
+            },
+            {
+              "code": "274088005",
+              "display": "Secondary malignant neoplasm of unknown site"
+            },
+            {
+              "code": "275266006",
+              "display": "Metastasis to digestive organs"
+            },
+            {
+              "code": "278051002",
+              "display": "Malignant lymphoma of thyroid gland"
+            },
+            {
+              "code": "278433008",
+              "display": "Malignant infiltration of soft tissue"
+            },
+            {
+              "code": "285598005",
+              "display": "UKP - Metastasis to trachea of unknown primary"
+            },
+            {
+              "code": "285603002",
+              "display": "UKP - Metastasis to bronchus of unknown primary"
+            },
+            {
+              "code": "285604008",
+              "display": "Metastasis to lung of unknown primary"
+            },
+            {
+              "code": "285605009",
+              "display": "UKP - Metastasis to pleura of unknown primary"
+            },
+            {
+              "code": "285606005",
+              "display": "Metastasis to heart of unknown primary"
+            },
+            {
+              "code": "285607001",
+              "display": "UKP - Metastasis to mediastinum of unknown primary"
+            },
+            {
+              "code": "285608006",
+              "display": "Metastasis to thymus of unknown primary"
+            },
+            {
+              "code": "285609003",
+              "display": "UKP - Metastasis to small intestine of unknown primary"
+            },
+            {
+              "code": "285610008",
+              "display": "UKP - Metastasis to large intestine of unknown primary"
+            },
+            {
+              "code": "285611007",
+              "display": "Metastasis to colon of unknown primary"
+            },
+            {
+              "code": "285612000",
+              "display": "UKP - Metastasis to rectum of unknown primary"
+            },
+            {
+              "code": "285613005",
+              "display": "Metastasis to liver of unknown primary"
+            },
+            {
+              "code": "285614004",
+              "display": "UKP - Metastasis to pancreas of unknown primary"
+            },
+            {
+              "code": "285615003",
+              "display": "Metastasis to spleen of unknown primary"
+            },
+            {
+              "code": "285616002",
+              "display": "UKP - Metastasis to peritoneum of unknown primary"
+            },
+            {
+              "code": "285617006",
+              "display": "Metastasis to retroperitoneum of unknown primary"
+            },
+            {
+              "code": "285618001",
+              "display": "UKP - Metastasis to bone of unknown primary"
+            },
+            {
+              "code": "285619009",
+              "display": "Metastasis to vertebral column of unknown primary"
+            },
+            {
+              "code": "285631006",
+              "display": "Metastasis to skin of unknown primary"
+            },
+            {
+              "code": "285633009",
+              "display": "UKP - Metastasis to soft tissue of unknown primary"
+            },
+            {
+              "code": "285634003",
+              "display": "UKP - Metastasis to breast of unknown primary"
+            },
+            {
+              "code": "285635002",
+              "display": "Metastasis to uterus of unknown primary"
+            },
+            {
+              "code": "285637005",
+              "display": "Metastasis to ovary of unknown primary"
+            },
+            {
+              "code": "285638000",
+              "display": "UKP - Metastasis to vagina of unknown primary"
+            },
+            {
+              "code": "285639008",
+              "display": "Metastasis to kidney of unknown primary"
+            },
+            {
+              "code": "285640005",
+              "display": "UKP - Metastasis to bladder of unknown primary"
+            },
+            {
+              "code": "285641009",
+              "display": "UKP - Metastasis to brain of unknown primary"
+            },
+            {
+              "code": "285642002",
+              "display": "Metastasis to eye of unknown primary"
+            },
+            {
+              "code": "285643007",
+              "display": "UKP - Metastasis to adrenal gland of unknown primary"
+            },
+            {
+              "code": "285644001",
+              "display": "Metastasis to lymph node of unknown primary"
+            },
+            {
+              "code": "285645000",
+              "display": "UKP - Disseminated malignancy of unknown primary"
+            },
+            {
+              "code": "286902000",
+              "display": "Secondary carcinoma of gastrointestinal tract"
+            },
+            {
+              "code": "303194003",
+              "display": "Metastasis to head and neck lymph node"
+            },
+            {
+              "code": "303201005",
+              "display": "Metastasis to multiple lymph nodes"
+            },
+            {
+              "code": "307226002",
+              "display": "Metastatic adenocarcinoma of unknown origin"
+            },
+            {
+              "code": "307593001",
+              "display": "Disseminated carcinomatosis"
+            },
+            {
+              "code": "307601000",
+              "display": "Pseudomyxoma peritonei"
+            },
+            {
+              "code": "314408000",
+              "display": "Leukemic infiltrate of choroid"
+            },
+            {
+              "code": "314418005",
+              "display": "Leukemic infiltrate of retina"
+            },
+            {
+              "code": "314987003",
+              "display": "Metastasis from malignant melanoma of skin"
+            },
+            {
+              "code": "314988008",
+              "display": "Metastasis from malignant tumor of skin"
+            },
+            {
+              "code": "314989000",
+              "display": "Metastasis from malignant tumor of soft tissues"
+            },
+            {
+              "code": "314990009",
+              "display": "Metastasis from malignant tumor of bone"
+            },
+            {
+              "code": "314991008",
+              "display": "Metastasis from malignant tumor of adrenal gland"
+            },
+            {
+              "code": "314992001",
+              "display": "Metastasis from malignant tumor of cervix"
+            },
+            {
+              "code": "314993006",
+              "display": "Metastasis from malignant tumor of uterus"
+            },
+            {
+              "code": "314994000",
+              "display": "Metastasis from malignant tumor of prostate"
+            },
+            {
+              "code": "314995004",
+              "display": "Metastasis from malignant tumor of bladder"
+            },
+            {
+              "code": "314996003",
+              "display": "Metastasis from malignant tumor of kidney"
+            },
+            {
+              "code": "314997007",
+              "display": "Metastasis from malignant tumor of rectum"
+            },
+            {
+              "code": "314998002",
+              "display": "Metastasis from malignant tumor of colon"
+            },
+            {
+              "code": "314999005",
+              "display": "Metastasis from malignant tumor of pancreas"
+            },
+            {
+              "code": "315000005",
+              "display": "Metastasis from malignant tumor of liver"
+            },
+            {
+              "code": "315001009",
+              "display": "Metastasis from malignant tumor of gallbladder"
+            },
+            {
+              "code": "315002002",
+              "display": "Metastasis from malignant tumor of stomach"
+            },
+            {
+              "code": "315003007",
+              "display": "Metastasis from malignant tumor of esophagus"
+            },
+            {
+              "code": "315004001",
+              "display": "Metastasis from malignant tumor of breast"
+            },
+            {
+              "code": "315005000",
+              "display": "Metastasis from malignant tumor of bronchus"
+            },
+            {
+              "code": "315006004",
+              "display": "Metastasis from malignant tumor of lung"
+            },
+            {
+              "code": "315007008",
+              "display": "Metastasis from malignant tumor of thyroid"
+            },
+            {
+              "code": "315008003",
+              "display": "Metastasis from malignant tumor of buccal cavity"
+            },
+            {
+              "code": "315009006",
+              "display": "Metastasis from malignant tumor of tongue"
+            },
+            {
+              "code": "359780007",
+              "display": "Metastatic malignant neoplasm to lateral axillary lymph nodes"
+            },
+            {
+              "code": "359782004",
+              "display": "Metastatic malignant neoplasm to apex of urinary bladder"
+            },
+            {
+              "code": "359785002",
+              "display": "Metastatic malignant neoplasm to dome of urinary bladder"
+            },
+            {
+              "code": "359987004",
+              "display": "Krukenberg tumor (disorder)"
+            },
+            {
+              "code": "369455009",
+              "display": "Malignant tumor involving rectum by separate metastasis from endometrium"
+            },
+            {
+              "code": "369456005",
+              "display": "Malignant tumor involving rectum by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369457001",
+              "display": "Malignant tumor involving rectum by separate metastasis from ovary"
+            },
+            {
+              "code": "369458006",
+              "display": "Malignant tumor involving rectum by separate metastasis from prostate"
+            },
+            {
+              "code": "369459003",
+              "display": "Malignant tumor involving rectum by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369460008",
+              "display": "Malignant tumor involving rectum by separate metastasis from uterus"
+            },
+            {
+              "code": "369461007",
+              "display": "Malignant tumor involving rectum by separate metastasis from vagina"
+            },
+            {
+              "code": "369464004",
+              "display": "Malignant tumor involving ureter by separate metastasis from bladder"
+            },
+            {
+              "code": "369467006",
+              "display": "Malignant tumor involving urethra by separate metastasis from bladder"
+            },
+            {
+              "code": "369468001",
+              "display": "Malignant tumor involving urethra by separate metastasis from prostate"
+            },
+            {
+              "code": "369476004",
+              "display": "Malignant tumor involving bladder by separate metastasis from endometrium"
+            },
+            {
+              "code": "369477008",
+              "display": "Malignant tumor involving bladder by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369478003",
+              "display": "Malignant tumor involving bladder by separate metastasis from ovary"
+            },
+            {
+              "code": "369479006",
+              "display": "Malignant tumor involving bladder by separate metastasis from prostate"
+            },
+            {
+              "code": "369480009",
+              "display": "Malignant tumor involving bladder by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369481008",
+              "display": "Malignant tumor involving bladder by separate metastasis from uterus"
+            },
+            {
+              "code": "369482001",
+              "display": "Malignant tumor involving bladder by separate metastasis from vagina"
+            },
+            {
+              "code": "369484000",
+              "display": "Malignant tumor involving vasa deferentia by separate metastasis from prostate"
+            },
+            {
+              "code": "369486003",
+              "display": "Malignant tumor involving prostate by separate metastasis from bladder"
+            },
+            {
+              "code": "369488002",
+              "display": "Secondary malignant neoplasm of seminal vesicle"
+            },
+            {
+              "code": "369491002",
+              "display": "Malignant tumor involving seminal vesicle by separate metastasis from bladder"
+            },
+            {
+              "code": "369492009",
+              "display": "Malignant tumor involving seminal vesicle by separate metastasis from prostate"
+            },
+            {
+              "code": "369500009",
+              "display": "Malignant tumor involving uterine cervix by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369501008",
+              "display": "Malignant tumor involving uterine cervix by separate metastasis from ovary"
+            },
+            {
+              "code": "369502001",
+              "display": "Malignant tumor involving uterine corpus by separate metastasis from bladder"
+            },
+            {
+              "code": "369514009",
+              "display": "Secondary malignant neoplasm of left fallopian tube"
+            },
+            {
+              "code": "369521009",
+              "display": "Secondary malignant neoplasm of right fallopian tube"
+            },
+            {
+              "code": "369523007",
+              "display": "Secondary malignant neoplasm of left ovary"
+            },
+            {
+              "code": "369530001",
+              "display": "Secondary malignant neoplasm of right ovary"
+            },
+            {
+              "code": "369535006",
+              "display": "Secondary neoplasm of left broad ligament"
+            },
+            {
+              "code": "369536007",
+              "display": "Secondary neoplasm of right broad ligament"
+            },
+            {
+              "code": "369538008",
+              "display": "Malignant tumor involving left broad ligament by metastasis from ovary"
+            },
+            {
+              "code": "369540003",
+              "display": "Malignant tumor involving right broad ligament by metastasis from ovary"
+            },
+            {
+              "code": "369542006",
+              "display": "Malignant tumor involving left fallopian tube by separate metastasis from endometrium"
+            },
+            {
+              "code": "369543001",
+              "display": "Malignant tumor involving left fallopian tube by separate metastasis from ovary"
+            },
+            {
+              "code": "369544007",
+              "display": "Malignant tumor involving left fallopian tube by separate metastasis from right fallopian tube"
+            },
+            {
+              "code": "369545008",
+              "display": "Malignant tumor involving left fallopian tube by separate metastasis from uterus"
+            },
+            {
+              "code": "369546009",
+              "display": "Malignant tumor involving left fallopian tube by separate metastasis from vagina"
+            },
+            {
+              "code": "369553000",
+              "display": "Malignant tumor involving right fallopian tube by separate metastasis from endometrium"
+            },
+            {
+              "code": "369554006",
+              "display": "Malignant tumor involving right fallopian tube by separate metastasis from left fallopian tube"
+            },
+            {
+              "code": "369555007",
+              "display": "Malignant tumor involving right fallopian tube by separate metastasis from ovary"
+            },
+            {
+              "code": "369556008",
+              "display": "Malignant tumor involving right fallopian tube by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369557004",
+              "display": "Malignant tumor involving right fallopian tube by separate metastasis from uterus"
+            },
+            {
+              "code": "369558009",
+              "display": "Malignant tumor involving right fallopian tube by separate metastasis from vagina"
+            },
+            {
+              "code": "369560006",
+              "display": "Malignant tumor involving left ovary by separate metastasis from endometrium"
+            },
+            {
+              "code": "369561005",
+              "display": "Malignant tumor involving left ovary by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369562003",
+              "display": "Malignant tumor involving left ovary by separate metastasis from right ovary"
+            },
+            {
+              "code": "369563008",
+              "display": "Malignant tumor involving left ovary by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369564002",
+              "display": "Malignant tumor involving left ovary by separate metastasis from vagina"
+            },
+            {
+              "code": "369565001",
+              "display": "Malignant tumor involving left ovary by separate metastasis uterus"
+            },
+            {
+              "code": "369568004",
+              "display": "Malignant tumor involving right ovary by separate metastasis from endometrium"
+            },
+            {
+              "code": "369569007",
+              "display": "Malignant tumor involving right ovary by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369570008",
+              "display": "Malignant tumor involving right ovary by separate metastasis from left ovary"
+            },
+            {
+              "code": "369571007",
+              "display": "Malignant tumor involving right ovary by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369572000",
+              "display": "Malignant tumor involving right ovary by separate metastasis from uterus"
+            },
+            {
+              "code": "369573005",
+              "display": "Malignant tumor involving right ovary by separate metastasis from vagina"
+            },
+            {
+              "code": "369574004",
+              "display": "Malignant tumor involving uterine cervix by separate metastasis from vagina"
+            },
+            {
+              "code": "369575003",
+              "display": "Malignant tumor involving uterine corpus by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369576002",
+              "display": "Malignant tumor involving uterine corpus by separate metastasis from ovary"
+            },
+            {
+              "code": "369577006",
+              "display": "Malignant tumor involving uterine corpus by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369578001",
+              "display": "Malignant tumor involving uterine corpus by separate metastasis from vagina"
+            },
+            {
+              "code": "369581006",
+              "display": "Malignant tumor involving vagina by separate metastasis from bladder"
+            },
+            {
+              "code": "369582004",
+              "display": "Malignant tumor involving vagina by separate metastasis from endometrium"
+            },
+            {
+              "code": "369583009",
+              "display": "Malignant tumor involving vagina by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369584003",
+              "display": "Malignant tumor involving vagina by separate metastasis from ovary"
+            },
+            {
+              "code": "369585002",
+              "display": "Malignant tumor involving vagina by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369586001",
+              "display": "Malignant tumor involving vagina by separate metastasis from uterus"
+            },
+            {
+              "code": "369588000",
+              "display": "Malignant tumor involving vulva by separate metastasis from endometrium"
+            },
+            {
+              "code": "369589008",
+              "display": "Malignant tumor involving vulva by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369590004",
+              "display": "Malignant tumor involving vulva by separate metastasis from ovary"
+            },
+            {
+              "code": "369591000",
+              "display": "Malignant tumor involving vulva by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369592007",
+              "display": "Malignant tumor involving vulva by separate metastasis from uterus"
+            },
+            {
+              "code": "369593002",
+              "display": "Malignant tumor involving vulva by separate metastasis from vagina"
+            },
+            {
+              "code": "369602008",
+              "display": "Malignant tumor involving an organ by separate metastasis from bladder"
+            },
+            {
+              "code": "369603003",
+              "display": "Malignant tumor involving an organ by separate metastasis from endometrium"
+            },
+            {
+              "code": "369604009",
+              "display": "Malignant tumor involving an organ by separate metastasis from fallopian tube"
+            },
+            {
+              "code": "369605005",
+              "display": "Malignant tumor involving an organ by separate metastasis from ovary"
+            },
+            {
+              "code": "369606006",
+              "display": "Malignant tumor involving an organ by separate metastasis from prostate"
+            },
+            {
+              "code": "369607002",
+              "display": "Malignant tumor involving an organ by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "369608007",
+              "display": "Malignant tumor involving an organ by separate metastasis from uterus"
+            },
+            {
+              "code": "369609004",
+              "display": "Malignant tumor involving an organ by separate metastasis from vagina"
+            },
+            {
+              "code": "369610009",
+              "display": "Malignant tumor involving left fallopian tube by separate metastasis from uterine cervix"
+            },
+            {
+              "code": "372093008",
+              "display": "Secondary malignant neoplasm of axillary tail of breast (disorder)"
+            },
+            {
+              "code": "399969009",
+              "display": "Secondary malignant neoplasm of blood vessel of upper arm (disorder)"
+            },
+            {
+              "code": "400058002",
+              "display": "Secondary malignant neoplasm of blood vessel of lower leg (disorder)"
+            },
+            {
+              "code": "402537005",
+              "display": "Metastatic basal cell carcinoma (disorder)"
+            },
+            {
+              "code": "402563000",
+              "display": "Metastatic malignant melanoma with diffuse hypermelanosis (disorder)"
+            },
+            {
+              "code": "402879006",
+              "display": "T-cell leukemic infiltration of skin (disorder)"
+            },
+            {
+              "code": "403906006",
+              "display": "Metastatic squamous cell carcinoma (disorder)"
+            },
+            {
+              "code": "404090003",
+              "display": "Malignant infiltration of oral cavity by underlying tumor (disorder)"
+            },
+            {
+              "code": "404091004",
+              "display": "Malignant infiltration of skin by underlying tumor (disorder)"
+            },
+            {
+              "code": "404092006",
+              "display": "Carcinomatous metastasis in skin (disorder)"
+            },
+            {
+              "code": "404093001",
+              "display": "Sarcomatous metastasis in skin (disorder)"
+            },
+            {
+              "code": "404094007",
+              "display": "Metastasis involving oral cavity (disorder)"
+            },
+            {
+              "code": "404122003",
+              "display": "Leukemic infiltration of skin (chronic T-cell lymphocytic leukemia) (disorder)"
+            },
+            {
+              "code": "404123008",
+              "display": "Leukemic infiltration of skin (T-cell prolymphocytic leukemia) (disorder)"
+            },
+            {
+              "code": "404124002",
+              "display": "Leukemic infiltration of skin (T-cell lymphoblastic leukemia) (disorder)"
+            },
+            {
+              "code": "404151004",
+              "display": "Leukemic infiltration of skin in myeloid leukemia (disorder)"
+            },
+            {
+              "code": "404152006",
+              "display": "Leukemic infiltration of skin in acute myeloid leukemia (disorder)"
+            },
+            {
+              "code": "404153001",
+              "display": "Leukemic infiltration of skin in chronic myeloid leukemia (disorder)"
+            },
+            {
+              "code": "404156009",
+              "display": "Leukemic infiltration of skin (disorder)"
+            },
+            {
+              "code": "405843009",
+              "display": "Widespread metastatic malignant neoplastic disease (disorder)"
+            },
+            {
+              "code": "414676007",
+              "display": "Metastatic neuroblastoma of orbit proper (disorder)"
+            },
+            {
+              "code": "418529003",
+              "display": "Secondary malignant neoplasm of lacrimal drainage structure (disorder)"
+            },
+            {
+              "code": "422782004",
+              "display": "Primary malignant neoplasm of ovary, with widespread metastatic disease (disorder)"
+            },
+            {
+              "code": "423032007",
+              "display": "Leukemic infiltration of orbit (disorder)"
+            },
+            {
+              "code": "423384009",
+              "display": "Secondary malignant neoplasm of lacrimal gland duct (disorder)"
+            },
+            {
+              "code": "423595004",
+              "display": "Adenocarcinoma carcinomatosis (disorder)"
+            },
+            {
+              "code": "423987006",
+              "display": "Primary malignant neoplasm of vulva, with widespread metastatic disease (disorder)"
+            },
+            {
+              "code": "424052001",
+              "display": "Small cell carcinoma carcinomatosis (disorder)"
+            },
+            {
+              "code": "424887002",
+              "display": "Primary malignant neoplasm of thyroid gland, metastatic to bone (disorder)"
+            },
+            {
+              "code": "424954002",
+              "display": "Undifferentiated large cell carcinomatosis (disorder)"
+            },
+            {
+              "code": "425303004",
+              "display": "Squamous cell carcinomatosis (disorder)"
+            },
+            {
+              "code": "443144000",
+              "display": "Metastatic sarcoma (disorder)"
+            },
+            {
+              "code": "443493003",
+              "display": "Metastatic malignant melanoma (disorder)"
+            },
+            {
+              "code": "449630001",
+              "display": "Secondary malignant neoplasm of skin of lower leg (disorder)"
+            },
+            {
+              "code": "449631002",
+              "display": "Secondary malignant neoplasm of skin of upper arm"
+            },
+            {
+              "code": "449632009",
+              "display": "Secondary malignant neoplasm of lower leg (disorder)"
+            },
+            {
+              "code": "449633004",
+              "display": "Secondary malignant neoplasm of upper arm (disorder)"
+            },
+            {
+              "code": "702392008",
+              "display": "Metastatic renal cell carcinoma"
+            },
+            {
+              "code": "704152002",
+              "display": "Metastatic neuroblastoma (disorder)"
+            },
+            {
+              "code": "705176003",
+              "display": "Metastatic carcinoid tumor"
+            },
+            {
+              "code": "709285002",
+              "display": "Secondary malignant neoplasm of lumbosacral plexus (disorder)"
+            },
+            {
+              "code": "712849003",
+              "display": "Carcinoma of prostate with bony metastases"
+            },
+            {
+              "code": "720587009",
+              "display": "Donor derived melanoma (disorder)"
+            },
+            {
+              "code": "722671009",
+              "display": "Metastatic malignant neoplasm of meninges (disorder)"
+            },
+            {
+              "code": "722707001",
+              "display": "Metastatic malignant neoplasm of peripheral nervous system (disorder)"
+            },
+            {
+              "code": "767444009",
+              "display": "Germline BRCA-mutated, HER2-negative metastatic breast cancer"
+            },
+            {
+              "code": "781076008",
+              "display": "Secondary malignant neoplasm of colon and/or rectum"
+            },
+            {
+              "code": "827186009",
+              "display": "Secondary malignant neoplasm of skin of hip and skin of lower leg"
+            },
+            {
+              "code": "836274002",
+              "display": "Carcinomatosis of peritoneum (disorder)"
+            },
+            {
+              "code": "836486002",
+              "display": "Lymphomatous infiltrate of kidney"
+            },
+            {
+              "code": "866087009",
+              "display": "Metastatic fracture of vertebra"
+            },
+            {
+              "code": "1155991005",
+              "display": "Secondary malignant neoplasm of leptomeninges"
+            },
+            {
+              "code": "1661000119106",
+              "display": "Metastasis to lung from adenocarcinoma (disorder)"
+            },
+            {
+              "code": "1671000119100",
+              "display": "Metastasis to lymph node from squamous cell carcinoma (disorder)"
+            },
+            {
+              "code": "1681000119102",
+              "display": "Metastasis to lymph node from adenocarcinoma (disorder)"
+            },
+            {
+              "code": "1691000119104",
+              "display": "Metastasis to liver from adenocarcinoma (disorder)"
+            },
+            {
+              "code": "78461000119105",
+              "display": "Squamous cell carcinoma metastatic to skin"
+            },
+            {
+              "code": "91181000119105",
+              "display": "Squamous cell carcinoma metastatic to pleura (disorder)"
+            },
+            {
+              "code": "91191000119108",
+              "display": "Secondary adenocarcinoma of pleura (disorder)"
+            },
+            {
+              "code": "91211000119109",
+              "display": "Secondary small cell carcinoma of pleura"
+            },
+            {
+              "code": "91221000119102",
+              "display": "Secondary malignant melanoma of pleura"
+            },
+            {
+              "code": "91231000119104",
+              "display": "Secondary adenocarcinoma of skin (disorder)"
+            },
+            {
+              "code": "91251000119105",
+              "display": "Small cell carcinoma metastatic to skin (disorder)"
+            },
+            {
+              "code": "91271000119101",
+              "display": "Secondary squamous cell carcinoma of bone (disorder)"
+            },
+            {
+              "code": "91281000119103",
+              "display": "Secondary adenocarcinoma of bone (disorder)"
+            },
+            {
+              "code": "96901000119105",
+              "display": "Prostate cancer metastatic to eye (disorder)"
+            },
+            {
+              "code": "96981000119102",
+              "display": "Malignant neoplasm of rectosigmoid junction metastatic to brain"
+            },
+            {
+              "code": "97051000119105",
+              "display": "Malignant melanoma metastatic to pancreas (disorder)"
+            },
+            {
+              "code": "103511000119103",
+              "display": "Melanoma carcinomatosis (disorder)"
+            },
+            {
+              "code": "105041000119109",
+              "display": "Secondary squamous cell carcinoma of lung"
+            },
+            {
+              "code": "105051000119106",
+              "display": "Undifferentiated large cell cancer metastatic to lung"
+            },
+            {
+              "code": "107811000119106",
+              "display": "Secondary small cell carcinoma of liver (disorder)"
+            },
+            {
+              "code": "107831000119101",
+              "display": "Squamous cell carcinoma metastatic to liver"
+            },
+            {
+              "code": "108101000119101",
+              "display": "Malignant melanoma metastatic to kidney (disorder)"
+            },
+            {
+              "code": "108131000119108",
+              "display": "Small cell carcinoma metastatic to kidney (disorder)"
+            },
+            {
+              "code": "108201000119105",
+              "display": "Undifferentiated large cell carcinoma metastatic to kidney (disorder)"
+            },
+            {
+              "code": "108211000119108",
+              "display": "Secondary adenocarcinoma of kidney (disorder)"
+            },
+            {
+              "code": "116811000119106",
+              "display": "Non-Hodgkin lymphoma of central nervous system metastatic to lymph node of lower limb"
+            },
+            {
+              "code": "116821000119104",
+              "display": "Non-Hodgkin lymphoma of central nervous system metastatic to lymph node of upper limb (disorder)"
+            },
+            {
+              "code": "135091000119106",
+              "display": "Secondary neuroendocrine carcinoma of peritoneum (disorder)"
+            },
+            {
+              "code": "145501000119108",
+              "display": "Secondary malignant neoplasm of breast (disorder)"
+            },
+            {
+              "code": "145511000119106",
+              "display": "Secondary malignant neoplasm of genital organ"
+            },
+            {
+              "code": "353561000119103",
+              "display": "Cancer metastatic to right lung"
+            },
+            {
+              "code": "353571000119109",
+              "display": "Secondary malignant neoplasm of right adrenal gland"
+            },
+            {
+              "code": "353721000119100",
+              "display": "Secondary malignant neoplasm of left adrenal gland (disorder)"
+            },
+            {
+              "code": "353741000119106",
+              "display": "Cancer metastatic to left lung"
+            },
+            {
+              "code": "354081000119101",
+              "display": "Secondary adenocarcinoma (disorder)"
+            },
+            {
+              "code": "457721000124104",
+              "display": "Metastatic non-small cell lung cancer"
+            },
+            {
+              "code": "458321000124102",
+              "display": "Metastatic transitional cell carcinoma of the urinary tract"
+            },
+            {
+              "code": "458581000124106",
+              "display": "Metastatic HER2 positive neoplasm of gastroesophageal junction (disorder)"
+            },
+            {
+              "code": "459371000124108",
+              "display": "Metastatic gastroesophageal adenocarcinoma"
+            },
+            {
+              "code": "459381000124106",
+              "display": "Metastatic castration-resistant prostate cancer"
+            },
+            {
+              "code": "459391000124109",
+              "display": "Metastasis from human epidermal growth factor 2 positive carcinoma of breast (disorder)"
+            },
+            {
+              "code": "459401000124106",
+              "display": "Metastasis from pancreatic endocrine carcinoma (disorder)"
+            },
+            {
+              "code": "459411000124109",
+              "display": "Metastatic collecting duct carcinoma"
+            },
+            {
+              "code": "459421000124101",
+              "display": "Metastatic penile cancer"
+            },
+            {
+              "code": "1079531000119106",
+              "display": "Secondary malignant neoplasm of left kidney (disorder)"
+            },
+            {
+              "code": "1079541000119102",
+              "display": "Secondary malignant neoplasm of right kidney"
+            },
+            {
+              "code": "1082601000112109",
+              "display": "Secondary malignant neoplasm of viscera (disorder)"
+            },
+            {
+              "code": "1082901000112103",
+              "display": "Lymph node positive breast cancer"
+            },
+            {
+              "code": "11717361000119108",
+              "display": "Secondary malignant neoplasm of soft tissue of back"
+            },
+            {
+              "code": "12241031000119108",
+              "display": "Secondary malignant neoplasm of left breast (disorder)"
+            },
+            {
+              "code": "12241071000119106",
+              "display": "Secondary malignant neoplasm of right breast"
+            },
+            {
+              "code": "12246481000119106",
+              "display": "Bilateral secondary malignant neoplasm of kidneys"
+            },
+            {
+              "code": "12246561000119101",
+              "display": "Secondary malignant neoplasm of bilateral adrenal glands"
+            },
+            {
+              "code": "12246601000119101",
+              "display": "Secondary malignant neoplasm of bilateral lungs (disorder)"
+            },
+            {
+              "code": "12246641000119104",
+              "display": "Secondary malignant neoplasm of bilateral breasts"
+            },
+            {
+              "code": "13351431000119102",
+              "display": "Secondary malignant neoplasm of lymph nodes of neck from thyroid (disorder)"
+            },
+            {
+              "code": "15930821000119105",
+              "display": "Secondary malignant neoplasm of bilateral ovaries"
+            },
+            {
+              "code": "15956181000119102",
+              "display": "Secondary adenocarcinoma of bilateral lungs"
+            },
+            {
+              "code": "15956221000119105",
+              "display": "Secondary adenocarcinoma of right lung"
+            },
+            {
+              "code": "15956261000119100",
+              "display": "Secondary adenocarcinoma of left lung (disorder)"
+            },
+            {
+              "code": "15956661000119102",
+              "display": "Secondary small cell carcinoma of right lung (disorder)"
+            },
+            {
+              "code": "15956701000119109",
+              "display": "Secondary small cell carcinoma of left lung (disorder)"
+            },
+            {
+              "code": "15956741000119106",
+              "display": "Secondary small cell carcinoma of both lungs"
+            },
+            {
+              "code": "15957141000119109",
+              "display": "Secondary squamous cell carcinoma of both lungs"
+            },
+            {
+              "code": "15957181000119104",
+              "display": "Secondary squamous cell carcinoma of right lung (disorder)"
+            },
+            {
+              "code": "15957221000119107",
+              "display": "Secondary squamous cell carcinoma of left lung"
+            },
+            {
+              "code": "15958181000119103",
+              "display": "Secondary adenocarcinoma of bilateral kidneys (disorder)"
+            },
+            {
+              "code": "15958221000119106",
+              "display": "Secondary adenocarcinoma of left kidney"
+            },
+            {
+              "code": "15958261000119101",
+              "display": "Secondary adenocarcinoma of right kidney (disorder)"
+            },
+            {
+              "code": "15958301000119109",
+              "display": "Secondary squamous cell carcinoma of right kidney"
+            },
+            {
+              "code": "15958381000119101",
+              "display": "Secondary squamous cell carcinoma of left kidney"
+            },
+            {
+              "code": "15958661000119103",
+              "display": "Secondary malignant melanoma of left kidney (disorder)"
+            },
+            {
+              "code": "15958701000119105",
+              "display": "Secondary malignant melanoma of bilateral kidneys (disorder)"
+            },
+            {
+              "code": "15958741000119107",
+              "display": "Secondary malignant melanoma of right kidney"
+            },
+            {
+              "code": "15977551000119100",
+              "display": "Bilateral secondary malignant neoplasm of eyes"
+            },
+            {
+              "code": "15977591000119105",
+              "display": "Secondary malignant neoplasm of right eye"
+            },
+            {
+              "code": "15977631000119105",
+              "display": "Secondary malignant neoplasm of left eye"
+            },
+            {
+              "code": "16260631000119101",
+              "display": "Secondary malignant neoplasm of lymph node from neoplasm of female breast (disorder)"
+            },
+            {
+              "code": "19090001000004101",
+              "display": "Metastatic neoplasm of left basal ganglion (disorder)"
+            }
+          ]
+        },
+        {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "concept": [
+            {
+              "code": "C77",
+              "display": "SECONDARY AND UNSPECIFIED MALIGNANT NEOPLASM OF LYMPH NODES"
+            },
+            {
+              "code": "C77.0",
+              "display": "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
+            },
+            {
+              "code": "C77.1",
+              "display": "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
+            },
+            {
+              "code": "C77.2",
+              "display": "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes"
+            },
+            {
+              "code": "C77.3",
+              "display": "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes"
+            },
+            {
+              "code": "C77.4",
+              "display": "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes"
+            },
+            {
+              "code": "C77.5",
+              "display": "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes"
+            },
+            {
+              "code": "C77.8",
+              "display": "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions"
+            },
+            {
+              "code": "C77.9",
+              "display": "Secondary and unspecified malignant neoplasm of lymph node, unspecified"
+            },
+            {
+              "code": "C78",
+              "display": "SECONDARY MALIGNANT NEOPLASM OF RESPIRATORY AND DIGESTIVE ORGANS"
+            },
+            {
+              "code": "C78.0",
+              "display": "Secondary malignant neoplasm of lung"
+            },
+            {
+              "code": "C78.00",
+              "display": "Secondary malignant neoplasm of unspecified lung"
+            },
+            {
+              "code": "C78.01",
+              "display": "Secondary malignant neoplasm of right lung"
+            },
+            {
+              "code": "C78.02",
+              "display": "Secondary malignant neoplasm of left lung"
+            },
+            {
+              "code": "C78.1",
+              "display": "Secondary malignant neoplasm of mediastinum"
+            },
+            {
+              "code": "C78.2",
+              "display": "Secondary malignant neoplasm of pleura"
+            },
+            {
+              "code": "C78.3",
+              "display": "Secondary malignant neoplasm of other and unspecified respiratory organs"
+            },
+            {
+              "code": "C78.30",
+              "display": "Secondary malignant neoplasm of unspecified respiratory organ"
+            },
+            {
+              "code": "C78.39",
+              "display": "Secondary malignant neoplasm of other respiratory organs"
+            },
+            {
+              "code": "C78.4",
+              "display": "Secondary malignant neoplasm of small intestine"
+            },
+            {
+              "code": "C78.5",
+              "display": "Secondary malignant neoplasm of large intestine and rectum"
+            },
+            {
+              "code": "C78.6",
+              "display": "Secondary malignant neoplasm of retroperitoneum and peritoneum"
+            },
+            {
+              "code": "C78.7",
+              "display": "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+            },
+            {
+              "code": "C78.8",
+              "display": "Secondary malignant neoplasm of other and unspecified digestive organs"
+            },
+            {
+              "code": "C78.80",
+              "display": "Secondary malignant neoplasm of unspecified digestive organ"
+            },
+            {
+              "code": "C78.89",
+              "display": "Secondary malignant neoplasm of other digestive organs"
+            },
+            {
+              "code": "C79",
+              "display": "SECONDARY MALIGNANT NEOPLASM OF OTHER AND UNSPECIFIED SITES"
+            },
+            {
+              "code": "C79.0",
+              "display": "Secondary malignant neoplasm of kidney and renal pelvis"
+            },
+            {
+              "code": "C79.00",
+              "display": "Secondary malignant neoplasm of unspecified kidney and renal pelvis"
+            },
+            {
+              "code": "C79.01",
+              "display": "Secondary malignant neoplasm of right kidney and renal pelvis"
+            },
+            {
+              "code": "C79.02",
+              "display": "Secondary malignant neoplasm of left kidney and renal pelvis"
+            },
+            {
+              "code": "C79.1",
+              "display": "Secondary malignant neoplasm of bladder and other urinary organs"
+            },
+            {
+              "code": "C79.10",
+              "display": "Secondary malignant neoplasm of unspecified urinary organs"
+            },
+            {
+              "code": "C79.11",
+              "display": "Secondary malignant neoplasm of bladder"
+            },
+            {
+              "code": "C79.19",
+              "display": "Secondary malignant neoplasm of other urinary organs"
+            },
+            {
+              "code": "C79.2",
+              "display": "Secondary malignant neoplasm of skin"
+            },
+            {
+              "code": "C79.3",
+              "display": "Secondary malignant neoplasm of brain cerebral meninges"
+            },
+            {
+              "code": "C79.31",
+              "display": "Secondary malignant neoplasm of brain"
+            },
+            {
+              "code": "C79.32",
+              "display": "Secondary malignant neoplasm of cerebral meninges"
+            },
+            {
+              "code": "C79.4",
+              "display": "Secondary malignant neoplasm of other and unspecified of nervous system"
+            },
+            {
+              "code": "C79.40",
+              "display": "Secondary malignant neoplasm of unspecified part of nervous system"
+            },
+            {
+              "code": "C79.49",
+              "display": "Secondary malignant neoplasm of other parts of nervous system"
+            },
+            {
+              "code": "C79.5",
+              "display": "Secondary malignant neoplasm of bone and bone marrow"
+            },
+            {
+              "code": "C79.51",
+              "display": "Secondary malignant neoplasm of bone"
+            },
+            {
+              "code": "C79.52",
+              "display": "Secondary malignant neoplasm of bone marrow"
+            },
+            {
+              "code": "C79.6",
+              "display": "Secondary malignant neoplasm of ovary"
+            },
+            {
+              "code": "C79.60",
+              "display": "Secondary malignant neoplasm of unspecified ovary"
+            },
+            {
+              "code": "C79.61",
+              "display": "Secondary malignant neoplasm of right ovary"
+            },
+            {
+              "code": "C79.62",
+              "display": "Secondary malignant neoplasm of left ovary"
+            },
+            {
+              "code": "C79.7",
+              "display": "Secondary malignant neoplasm of adrenal gland"
+            },
+            {
+              "code": "C79.70",
+              "display": "Secondary malignant neoplasm of unspecified adrenal gland"
+            },
+            {
+              "code": "C79.71",
+              "display": "Secondary malignant neoplasm of right adrenal gland"
+            },
+            {
+              "code": "C79.72",
+              "display": "Secondary malignant neoplasm of left adrenal gland"
+            },
+            {
+              "code": "C79.8",
+              "display": "Secondary malignant neoplasm of other specified sites"
+            },
+            {
+              "code": "C79.81",
+              "display": "Secondary malignant neoplasm of breast"
+            },
+            {
+              "code": "C79.82",
+              "display": "Secondary malignant neoplasm of genital organs"
+            },
+            {
+              "code": "C79.89",
+              "display": "Secondary malignant neoplasm of other specified sites"
+            },
+            {
+              "code": "C79.9",
+              "display": "Secondary malignant neoplasm of unspecified site"
+            },
+            {
+              "code": "C7B",
+              "display": "SECONDARY NEUROENDOCRINE TUMORS"
+            },
+            {
+              "code": "C7B.0",
+              "display": "Secondary carcinoid tumors"
+            },
+            {
+              "code": "C7B.00",
+              "display": "Secondary carcinoid tumors, unspecified site"
+            },
+            {
+              "code": "C7B.01",
+              "display": "Secondary carcinoid tumors of distant lymph nodes"
+            },
+            {
+              "code": "C7B.02",
+              "display": "Secondary carcinoid tumors of liver"
+            },
+            {
+              "code": "C7B.03",
+              "display": "Secondary carcinoid tumors of bone"
+            },
+            {
+              "code": "C7B.04",
+              "display": "Secondary carcinoid tumors of peritoneum"
+            },
+            {
+              "code": "C7B.09",
+              "display": "Secondary carcinoid tumors of other sites"
+            },
+            {
+              "code": "C7B.1",
+              "display": "Secondary merkel cell carcinoma"
+            },
+            {
+              "code": "C7B.8",
+              "display": "Other secondary neuroendocrine tumors"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

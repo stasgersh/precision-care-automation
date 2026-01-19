@@ -1,0 +1,14 @@
+{
+  "eventId": "<PROVIDE_UUID_HERE>",
+  "eventType": "IngestionFinish",
+  "eventVersion": 1,
+  "timestamp": "<PROVIDE_CURRENT_TIMESTAMP_IN_MILLIS_HERE>",
+  "payload": {
+    "impl": "ingest-status",
+    "patientId": "12345678-9095-4ac2-945b-9TEST579cc2f",
+    "status": "<ACTUAL_STATUS>",
+    "bundleSize": 1,
+    "ingested": 0
+  },
+  "correlationId": "<PROVIDE_CORRELATION_ID_HERE>"
+}

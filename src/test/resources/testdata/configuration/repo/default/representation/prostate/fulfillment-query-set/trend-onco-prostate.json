@@ -1,0 +1,42 @@
+{
+  "id": "trend.onco.prostate",
+  "items": [
+    [
+      {
+        "key": "trendableEntities",
+        "query": {
+          "from": [
+            "generalTumorMarkerTestResult",
+            "prostateTumorMarkerTestResult",
+            "weight",
+            "labCreatinineResult",
+            "labHemoglobinResult",
+            "labPlateletsResult",
+            "labTotalBilirubinResult",
+            "labWbcResult",
+            "testosterone"
+          ],
+          "filter": {
+            "must": [
+              { "date": { "neq": null } },
+              { "attributes.code.$coding": { "neq": null } },
+              { "attributes.trendKey": { "neq": null } },
+              { "attributes.valueQuantity.value": { "neq": null } },
+              { "attributes.status": { "neq": "registered" } }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "asc" }],
+          "show": [
+            "id",
+            "date",
+            "attributes.code",
+            "attributes.trendKey",
+            "attributes.referenceRange",
+            "attributes.valueQuantity"
+          ]
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "oncology-care-team-category-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-care-team-category-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "LA27977-0",
+              "display": "Episode of care-focused care team"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

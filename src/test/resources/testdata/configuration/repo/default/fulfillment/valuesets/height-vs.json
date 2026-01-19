@@ -1,0 +1,36 @@
+{
+  "name": "height-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "height-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "3137-7",
+              "display": "Body height Measured"
+            },
+            {
+              "code": "3138-5",
+              "display": "Body height Stated"
+            },
+            {
+              "code": "8302-2",
+              "display": "Body height"
+            },
+            {
+              "code": "8306-3",
+              "display": "Body height --lying"
+            },
+            {
+              "code": "8308-9",
+              "display": "Body height --standing"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

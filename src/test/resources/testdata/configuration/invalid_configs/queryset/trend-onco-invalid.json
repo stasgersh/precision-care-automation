@@ -1,0 +1,37 @@
+{
+  "id": "trend.onco.extended",
+  "items": [
+    [
+      {
+        "query": {
+          "from": [
+            "TumorMarker",
+            "prostateTumorMarker",
+            "labCreatinineResult"
+          ],
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              },
+              {
+                "should": [
+                  { "attributes.trendKey": { "neq": null } },
+                  { "attributes.$components.trendKey": { "neq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [
+            {
+              "date": "descending"
+            }
+          ]
+        }
+      }
+    ]
+  ]
+}

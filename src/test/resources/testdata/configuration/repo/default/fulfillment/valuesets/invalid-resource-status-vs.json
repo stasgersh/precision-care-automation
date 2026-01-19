@@ -1,0 +1,36 @@
+{
+  "name": "invalid-resource-status-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "invalid-resource-status-vs",
+    "description": "Based on https://hl7.org/fhir/r4B/lifecycle.html#error, scarping the listed resource types",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification",
+          "concept": [
+            {
+              "code": "entered-in-error"
+            }
+          ]
+        },
+        {
+          "system": "http://hl7.org/fhir/ValueSet/condition-ver-status",
+          "concept": [
+            {
+              "code": "entered-in-error"
+            }
+          ]
+        },
+        {
+          "system": "http://hl7.org/fhir/ValueSet/publication-status",
+          "concept": [
+            {
+              "code": "entered-in-error"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "${id}",
+  "type": "custom",
+  "metadata": {
+    "name": "Prostate MRI and Pylarify PSMA PET/CT",
+    "description": "math_operation_expression_config- This is a voluntary research study to find out how using technology including advanced magnetic resonance imaging (MRI) and prostate-specific membrane antigen - positron emission tomography (PSMA-PET) scan imaging",
+    "status": "NOT YET RECRUITING",
+    "phase": "4",
+    "link": "https://clinicaltrials.gov/study/NCT05568537?cond=Prostate%20Cancer&titles=radiotherapy&aggFilters=phase:4,sex:m,status:rec%20not&rank=1"
+  },
+  "variables": [
+    {
+      "id": "psa",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA Criteria",
+      "value": null
+    }
+  ],
+  "outputs": [
+    {
+      "id": "psa_criteria",
+      "display": "PSA General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "type": "exclusion"
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].value|[0] + 5 >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] - 3 <= `60`"
+            }
+          ],
+          "expression": "(isPsaGt30 && isPsaLt60)"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value/2 < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value*2 > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    }
+  ]
+}

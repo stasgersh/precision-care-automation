@@ -1,0 +1,376 @@
+{
+  "id": "NCT04428789",
+  "type": "trial",
+  "status": "Recruiting",
+  "studyCompletion": "2026-12-27",
+  "name": "Study II to Evaluate the Safety and Tolerability of CC-94676 in Participants With Metastatic Castration-Resistant Prostate Cancer",
+  "description": "The purpose of this study is to assess the safety, tolerability and preliminary efficacy of CC-94676 in men with progressive metastatic castration resistant prostate cancer.",
+  "phase": "1",
+  "link": "https://clinicaltrials.gov/study/NCT04428789?a=23",
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    },
+    {
+      "id": "ecog",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ECOG",
+              "query": {
+                "from": "ecog",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's ecog",
+      "usingAi": false
+    },
+    {
+      "id": "histologically",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "pathologyReportAlias",
+              "query": {
+                "from": "pathologyReport",
+                "show": [
+                  "attributes.clpFindings",
+                  "attributes.code"
+                ],
+                "dedup": true,
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.clpFindings$.findings.PrimaryCancer_object.Diagnosis_str": {
+                        "eq": "ADENOCARCINOMA"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's histologic type",
+      "usingAi": true
+    },
+    {
+      "id": "comorbidity",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ComorbidityAlias",
+              "query": {
+
+                "from": "comorbidity"
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's comorbidity",
+      "usingAi": false
+    },
+    {
+      "id": "primary_cancer_type",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "primaryCancerDiseaseAlias",
+              "query": {
+                "from": "primaryCancerDisease"
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's primary cancer types",
+      "usingAi": false
+    },
+    {
+      "id": "ADT",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ADT",
+              "query": {
+                "from": "medication",
+                "show": [
+                  "attributes.code"
+                ],
+                "limit": 1,
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "leuprolide"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's ADT med",
+      "usingAi": false
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_gender",
+      "type": "inclusion",
+      "title": "Gender ?",
+      "allowMissingVariables": null,
+      "dependency": [
+        "gender"
+      ],
+      "expression": "gender_female || gender_male ",
+      "subCriteria": [
+        {
+          "id": "gender_female",
+          "title": "Gender is female",
+          "description": "Gender is female",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `female`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        },
+        {
+          "id": "gender_male",
+          "title": "Gender is male",
+          "description": "Gender is male",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "dependency": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ECOG_value",
+      "type": "inclusion",
+      "title": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0 or 1",
+      "allowMissingVariables": [
+        "ecog"
+      ],
+      "dependency": [
+        "ecog"
+      ],
+      "expression": "EcogStatus",
+      "subCriteria": [
+        {
+          "id": "EcogStatus",
+          "title": "ECOG status is 0 or 1",
+          "description": "ECOG status is 0 or 1",
+          "expression": "variables.ecog.value[].attributes.value|[0]<=`1`",
+          "explainability": {
+            "displayValue": "variables.ecog.value[].attributes.value|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_histologically",
+      "type": "inclusion",
+      "title": "must have histologically or cytologically confirmed adenocarcinoma of the prostate",
+      "allowMissingVariables": [
+        "histologically"
+      ],
+      "dependency": [
+        "histologically"
+      ],
+      "expression": "isProstaticAdenocarcinoma",
+      "subCriteria": [
+        {
+          "id": "isProstaticAdenocarcinoma",
+          "title": "histologically type is prostatic adenocarcinoma",
+          "description": "histologically type is prostatic adenocarcinoma",
+          "expression": "variables.histologically.value[].attributes.clpFindings[].findings.PrimaryCancer_object.Diagnosis_str|[?contains(@,`ADENOCARCINOMA`)]|length(@)>`0`",
+          "explainability": {
+            "displayValue": "variables.histologically.value[].attributes.clpFindings[].findings.PrimaryCancer_object.Diagnosis_str|[?contains(@,`ADENOCARCINOMA`)]|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_only_prostate_primary_cancer",
+      "type": "exclusion",
+      "title": "Concurrent Malignancy (present during screening) requiring treatment or history of prior malignancy active within 1 year prior to the first dose of IP",
+      "allowMissingVariables": [
+        "primary_cancer_type"
+      ],
+      "dependency": [
+        "primary_cancer_type"
+      ],
+      "expression": "OnlyPrimaryProstateCancer",
+      "subCriteria": [
+        {
+          "id": "OnlyPrimaryProstateCancer",
+          "title": "Patient  doesn't have additional primary cancer diseases",
+          "description": "Patient  doesn't have additional primary cancer diseases",
+          "expression": "variables.primary_cancer_type.value[].attributes.code.coding[]|length([?! contains(display, `prostate`)])==`0`",
+          "explainability": {
+            "displayValue": "variables.primary_cancer_type.value[].attributes.code.coding[].display|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_Comorbidity",
+      "type": "exclusion",
+      "title": "Clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+      "allowMissingVariables": null,
+      "dependency": [
+        "comorbidity"
+      ],
+      "expression": "Prediabetes && Anemia && Alcoholism && DiabetesMellitus && Obesity",
+      "subCriteria": [
+        {
+          "id": "Prediabetes",
+          "title": "Prediabetes",
+          "description": "Prediabetes - happens when you have elevated blood sugar levels, but they're not high enough to be considered Type 2 diabetes.",
+          "expression": "results[].entries[].attributes.*[].coding[?code == '15777000'].display | [?contains(@,`Prediabetes`)])",
+          "explainability": {
+            "displayValue": "variables.comorbidity.value[].attributes.*[].coding[?code == '15777000'].display|[0]"
+          }
+        },
+        {
+          "id": "Anemia",
+          "title": "Anemia (disorder)",
+          "description": "Anemia - Anemia is a problem of not having enough healthy red blood cells or hemoglobin to carry oxygen to the body's tissues.",
+          "expression": "results[].entries[].attributes.*[].coding[?code == '271737000'].display | [?contains(@,`Anemia (disorder)`)])",
+          "explainability": {
+            "displayValue": "variables.comorbidity.value[].attributes.*[].coding[?code == '271737000'].display|[0]"
+          }
+        },
+        {
+          "id": "Alcoholism",
+          "title": "Alcoholism",
+          "description": "Alcoholism - people can't stop drinking, even when drinking affects their health, puts their safety at risk and damages their personal relationships.",
+          "expression": "results[].entries[].attributes.*[].coding[?code == '7200002'].display | [?contains(@,`Alcoholism`)])",
+          "explainability": {
+            "displayValue": "variables.comorbidity.value[].attributes.*[].coding[?code == '7200002'].display|[0]"
+          }
+        },
+
+        {
+          "id": "DiabetesMellitus",
+          "title": "Diabetes Mellitus",
+          "description": "People with diabetes have an increased risk of developing blood clots due to changes in blood vessel health and circulation.",
+          "expression": "variables.comorbidity.value[]|[-1:].attributes.date|[0]| @ == `null` || abs_date_diff(@, `2024-09-04`,`years`)>`0` || (abs_date_diff(@, `2024-09-04`,`years`)==`0` && abs_date_diff(@, `2024-09-04`,`months`)>`3`)",
+          "explainability": {
+            "displayValue": "variables.comorbidity.value[]|[-1:].attributes.date|[0]"
+          }
+        },
+        {
+          "id": "Obesity",
+          "title": "Obesity",
+          "description": "Obesity is associated with inflammation and reduced mobility, both of which can increase the risk of blood clot formation.",
+          "expression": "variables.comorbidity.value[]|[-1:].attributes.date|[0]| @ == `null` || abs_date_diff(@, `2024-09-04`,`years`)>`0` || (abs_date_diff(@, `2024-09-04`,`years`)==`0` && abs_date_diff(@, `2024-09-04`,`months`)>`3`)",
+          "explainability": {
+            "displayValue": "variables.comorbidity.value[]|[-1:].attributes.date|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_ADT",
+      "type": "inclusion",
+      "title": "Progressed on androgen deprivation therapy (ADT) and at least one prior secondary hormonal therapy approved for castration-resistant prostate cancer (CRPC)",
+      "allowMissingVariables": [
+        "ADT"
+      ],
+      "dependency": [
+        "ADT"
+      ],
+      "expression": "ADT",
+      "subCriteria": [
+        {
+          "id": "ADT",
+          "title": "Progressed on androgen deprivation therapy",
+          "description": "Progressed on androgen deprivation therapy",
+          "expression": "variables.ADT.value[].attributes.code.coding[]|length(@)>`0`",
+          "explainability": {
+            "displayValue": "variables.ADT.value[].attributes.code.coding[].display|[0]"
+          }
+        }
+      ]
+    }
+  ]
+}

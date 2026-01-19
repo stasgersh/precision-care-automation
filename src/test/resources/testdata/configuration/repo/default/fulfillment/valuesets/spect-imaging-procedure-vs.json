@@ -1,0 +1,954 @@
+{
+  "name": "spect-imaging-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "spect-imaging-procedure-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "765354008",
+              "display": "Dual isotope single photon emission computed tomography with computed tomography of parathyroid using technetium-99m and thallium-201"
+            },
+            {
+              "code": "16545381000119100",
+              "display": "Single photon emission computed tomography of myocardial perfusion with computed tomography"
+            },
+            {
+              "code": "713558005",
+              "display": "Single photon emission computed tomography using gallium 67 with computed tomography of abdomen"
+            },
+            {
+              "code": "713635004",
+              "display": "Single photon emission computed tomography using gallium 67 with computed tomography of pelvis"
+            },
+            {
+              "code": "713553001",
+              "display": "Single photon emission computed tomography using gallium 67 with computed tomography of thorax"
+            },
+            {
+              "code": "443940008",
+              "display": "Single photon emission computed tomography using iodine 123 meta-iodobenzylguanidine with computed tomography"
+            },
+            {
+              "code": "713552006",
+              "display": "Single photon emission computed tomography using iodine 123 meta-iodobenzylguanidine with computed tomography of abdomen"
+            },
+            {
+              "code": "714257005",
+              "display": "Single photon emission computed tomography using iodine 123 meta-iodobenzylguanidine with computed tomography of pelvis"
+            },
+            {
+              "code": "714977007",
+              "display": "Single photon emission computed tomography using iodine 123 meta-iodobenzylguanidine with computed tomography of thorax"
+            },
+            {
+              "code": "443306003",
+              "display": "Single photon emission computed tomography using iodine 123 with computed tomography of whole body"
+            },
+            {
+              "code": "443299001",
+              "display": "Single photon emission computed tomography using iodine 131 meta-iodobenzylguanidine with computed tomography"
+            },
+            {
+              "code": "444017003",
+              "display": "Single photon emission computed tomography using iodine 131 with computed tomography of whole body"
+            },
+            {
+              "code": "713562004",
+              "display": "Single photon emission computed tomography using technetium 99m with computed tomography of thyroid"
+            },
+            {
+              "code": "443127004",
+              "display": "Single photon emission computed tomography using thallium with computed tomography of brain"
+            },
+            {
+              "code": "450438002",
+              "display": "Single photon emission computed tomography with computed tomography"
+            },
+            {
+              "code": "443215008",
+              "display": "Single photon emission computed tomography with computed tomography cardiac stress ventriculography"
+            },
+            {
+              "code": "16554571000119100",
+              "display": "Single photon emission computed tomography with computed tomography for localization of inflammation"
+            },
+            {
+              "code": "443235009",
+              "display": "Single photon emission computed tomography with computed tomography indium 111 leukocyte study"
+            },
+            {
+              "code": "713561006",
+              "display": "Single photon emission computed tomography with computed tomography of abdomen using indium (111-In) radiolabeled octreotide"
+            },
+            {
+              "code": "443408003",
+              "display": "Single photon emission computed tomography with computed tomography of bone"
+            },
+            {
+              "code": "443409006",
+              "display": "Single photon emission computed tomography with computed tomography of bone of ankle and foot"
+            },
+            {
+              "code": "443365001",
+              "display": "Single photon emission computed tomography with computed tomography of bone of head and neck"
+            },
+            {
+              "code": "443366000",
+              "display": "Single photon emission computed tomography with computed tomography of bone of knee"
+            },
+            {
+              "code": "444023008",
+              "display": "Single photon emission computed tomography with computed tomography of bone of lower leg"
+            },
+            {
+              "code": "443580006",
+              "display": "Single photon emission computed tomography with computed tomography of bone of lumbar spine"
+            },
+            {
+              "code": "443536006",
+              "display": "Single photon emission computed tomography with computed tomography of bone of pelvis"
+            },
+            {
+              "code": "443537002",
+              "display": "Single photon emission computed tomography with computed tomography of bone of thorax"
+            },
+            {
+              "code": "443594007",
+              "display": "Single photon emission computed tomography with computed tomography of bone of upper limb"
+            },
+            {
+              "code": "443595008",
+              "display": "Single photon emission computed tomography with computed tomography of bone of wrist"
+            },
+            {
+              "code": "443170004",
+              "display": "Single photon emission computed tomography with computed tomography of brain perfusion"
+            },
+            {
+              "code": "770808006",
+              "display": "Single photon emission computed tomography with computed tomography of entire bony skeleton"
+            },
+            {
+              "code": "443128009",
+              "display": "Single photon emission computed tomography with computed tomography of femur"
+            },
+            {
+              "code": "443637005",
+              "display": "Single photon emission computed tomography with computed tomography of hemangioma of liver"
+            },
+            {
+              "code": "16534151000119100",
+              "display": "Single photon emission computed tomography with computed tomography of liver"
+            },
+            {
+              "code": "443638000",
+              "display": "Single photon emission computed tomography with computed tomography of liver and spleen"
+            },
+            {
+              "code": "16534101000119100",
+              "display": "Single photon emission computed tomography with computed tomography of liver using technetium Tc^99m^ sulfur colloid"
+            },
+            {
+              "code": "443145004",
+              "display": "Single photon emission computed tomography with computed tomography of lung"
+            },
+            {
+              "code": "713557000",
+              "display": "Single photon emission computed tomography with computed tomography of neck using indium (111-In) radiolabeled octreotide"
+            },
+            {
+              "code": "443774001",
+              "display": "Single photon emission computed tomography with computed tomography of neoplasm"
+            },
+            {
+              "code": "443236005",
+              "display": "Single photon emission computed tomography with computed tomography of parathyroid"
+            },
+            {
+              "code": "713560007",
+              "display": "Single photon emission computed tomography with computed tomography of pelvis using indium (111-In) radiolabeled octreotide"
+            },
+            {
+              "code": "443237001",
+              "display": "Single photon emission computed tomography with computed tomography of perfusion of lung"
+            },
+            {
+              "code": "447974008",
+              "display": "Single photon emission computed tomography with computed tomography of sentinel lymph node"
+            },
+            {
+              "code": "713559002",
+              "display": "Single photon emission computed tomography with computed tomography of thorax using indium (111-In) radiolabeled octreotide"
+            },
+            {
+              "code": "443386001",
+              "display": "Single photon emission computed tomography with computed tomography of ventilation of lung"
+            },
+            {
+              "code": "443275001",
+              "display": "Single photon emission computed tomography with computed tomography scintimammography"
+            },
+            {
+              "code": "443276000",
+              "display": "Single photon emission computed tomography with computed tomography technetium-99m hexamethylpropyleneamine oxime leukocyte scan"
+            },
+            {
+              "code": "443367009",
+              "display": "Single photon emission computed tomography with computed tomography using gallium"
+            },
+            {
+              "code": "443383009",
+              "display": "Single photon emission computed tomography with computed tomography using radiolabeled octreotide"
+            },
+            {
+              "code": "443701005",
+              "display": "Single photon emission computed tomography with computed tomography using technetium (99m-Tc) sulesomab"
+            },
+            {
+              "code": "443368004",
+              "display": "Single photon emission computed tomography with computed tomography ventriculography at cardiac rest"
+            },
+            {
+              "code": "443561009",
+              "display": "Single photon emission using iodine 123 meta-iodobenzylguanidine computed tomography with computed tomography of heart"
+            },
+            {
+              "code": "764684000",
+              "display": "SPECT CT of bone of ankle using 186-Re (rhenium-186)"
+            },
+            {
+              "code": "764620007",
+              "display": "SPECT CT of bone of elbow using 186-Re (rhenium-186)"
+            },
+            {
+              "code": "764626001",
+              "display": "SPECT CT of bone of knee using 186-Re (rhenium-186)"
+            },
+            {
+              "code": "443267007",
+              "display": "SPECT CT of kidney using dimercaptosuccinic acid"
+            },
+            {
+              "code": "718394008",
+              "display": "SPECT CT of kidney using dimercaptosuccinic acid with contrast"
+            },
+            {
+              "code": "105371005",
+              "display": "Single photon emission computed tomography"
+            },
+            {
+              "code": "429781007",
+              "display": "Single photon emission computed tomography for dopamine transport"
+            },
+            {
+              "code": "765338005",
+              "display": "Dual isotope single photon emission computed tomography of parathyroid using technetium-99m and thallium-201"
+            },
+            {
+              "code": "764840003",
+              "display": "GSPECT of myocardium using technetium (99m-Tc) sestamibi"
+            },
+            {
+              "code": "429821000",
+              "display": "Single photon emission computed tomography cardiac stress ventriculography"
+            },
+            {
+              "code": "16554721000119100",
+              "display": "Single photon emission computed tomography for localization of inflammation"
+            },
+            {
+              "code": "431191001",
+              "display": "Single photon emission computed tomography indium 111 leukocyte study"
+            },
+            {
+              "code": "432630004",
+              "display": "Single photon emission computed tomography of bone"
+            },
+            {
+              "code": "432661008",
+              "display": "Single photon emission computed tomography of bone of ankle and foot"
+            },
+            {
+              "code": "432393009",
+              "display": "Single photon emission computed tomography of bone of femur"
+            },
+            {
+              "code": "431837001",
+              "display": "Single photon emission computed tomography of bone of head and neck"
+            },
+            {
+              "code": "432366006",
+              "display": "Single photon emission computed tomography of bone of knee"
+            },
+            {
+              "code": "432392004",
+              "display": "Single photon emission computed tomography of bone of lower leg"
+            },
+            {
+              "code": "432662001",
+              "display": "Single photon emission computed tomography of bone of lumbar spine"
+            },
+            {
+              "code": "432367002",
+              "display": "Single photon emission computed tomography of bone of pelvis"
+            },
+            {
+              "code": "433130008",
+              "display": "Single photon emission computed tomography of bone of thorax"
+            },
+            {
+              "code": "431838006",
+              "display": "Single photon emission computed tomography of bone of upper limb"
+            },
+            {
+              "code": "432310006",
+              "display": "Single photon emission computed tomography of bone of wrist"
+            },
+            {
+              "code": "16534511000119100",
+              "display": "Single photon emission computed tomography of bones of whole body"
+            },
+            {
+              "code": "16548951000119100",
+              "display": "Single photon emission computed tomography of brain"
+            },
+            {
+              "code": "429823002",
+              "display": "Single photon emission computed tomography of brain perfusion"
+            },
+            {
+              "code": "429824008",
+              "display": "Single photon emission computed tomography of brain using thallium"
+            },
+            {
+              "code": "396321000119104",
+              "display": "Single photon emission computed tomography of cerebrospinal fluid flow"
+            },
+            {
+              "code": "709549003",
+              "display": "Single photon emission computed tomography of heart"
+            },
+            {
+              "code": "440043007",
+              "display": "Single photon emission computed tomography of heart using iodine 123 meta-iodobenzylguanidine"
+            },
+            {
+              "code": "431948007",
+              "display": "Single photon emission computed tomography of hemangioma of liver"
+            },
+            {
+              "code": "16548901000119100",
+              "display": "Single photon emission computed tomography of kidney"
+            },
+            {
+              "code": "571921000119104",
+              "display": "Single photon emission computed tomography of liver"
+            },
+            {
+              "code": "429791001",
+              "display": "Single photon emission computed tomography of liver and spleen"
+            },
+            {
+              "code": "405481000119105",
+              "display": "Single photon emission computed tomography of liver with vascular flow"
+            },
+            {
+              "code": "440466000",
+              "display": "Single photon emission computed tomography of lung"
+            },
+            {
+              "code": "443939006",
+              "display": "Single photon emission computed tomography of myocardial perfusion using technetium 99m meta-iodobenzylguanidine tetrofosmin"
+            },
+            {
+              "code": "709548006",
+              "display": "Single photon emission computed tomography of neck"
+            },
+            {
+              "code": "429792008",
+              "display": "Single photon emission computed tomography of parathyroid"
+            },
+            {
+              "code": "448046003",
+              "display": "Single photon emission computed tomography of sentinel lymph node"
+            },
+            {
+              "code": "432116005",
+              "display": "Single photon emission computed tomography of tumor"
+            },
+            {
+              "code": "443266003",
+              "display": "Single photon emission computed tomography of ventilation and perfusion of lung"
+            },
+            {
+              "code": "441624004",
+              "display": "Single photon emission computed tomography of ventilation of lung"
+            },
+            {
+              "code": "16553961000119100",
+              "display": "Single photon emission computed tomography of whole body for localization of abscess"
+            },
+            {
+              "code": "432881007",
+              "display": "Single photon emission computed tomography of whole body using iodine 123"
+            },
+            {
+              "code": "431890002",
+              "display": "Single photon emission computed tomography of whole body using iodine 131"
+            },
+            {
+              "code": "431350006",
+              "display": "Single photon emission computed tomography scintimammography"
+            },
+            {
+              "code": "429818002",
+              "display": "Single photon emission computed tomography using gallium"
+            },
+            {
+              "code": "413371000119104",
+              "display": "Single photon emission computed tomography using gallium for localization of neoplasm"
+            },
+            {
+              "code": "16554511000119100",
+              "display": "Single photon emission computed tomography using gallium radiolabeled white blood cells for localization of inflammation"
+            },
+            {
+              "code": "429796006",
+              "display": "Single photon emission computed tomography using iodine 123 meta-iodobenzylguanidine"
+            },
+            {
+              "code": "429797002",
+              "display": "Single photon emission computed tomography using iodine 131 meta-iodobenzylguanidine"
+            },
+            {
+              "code": "413431000119108",
+              "display": "Single photon emission computed tomography using octreotide for localization of neoplasm"
+            },
+            {
+              "code": "429800000",
+              "display": "Single photon emission computed tomography using radiolabeled octreotide"
+            },
+            {
+              "code": "431745003",
+              "display": "Single photon emission computed tomography using technetium (99m-Tc) exametazine labeled leucocytes"
+            },
+            {
+              "code": "765353002",
+              "display": "Single photon emission computed tomography using technetium (99m-Tc) sulesomab"
+            },
+            {
+              "code": "413441000119104",
+              "display": "Single photon emission computed tomography using technetium Tc^99m^ sestamibi for localization of neoplasm"
+            },
+            {
+              "code": "429801001",
+              "display": "Single photon emission computed tomography ventriculography at cardiac rest"
+            },
+            {
+              "code": "764681008",
+              "display": "SPECT of bone of ankle using 186-Re (rhenium-186)"
+            },
+            {
+              "code": "764683006",
+              "display": "SPECT of bone of elbow using 186-Re (rhenium-186)"
+            },
+            {
+              "code": "764682001",
+              "display": "SPECT of bone of knee using 186-Re (rhenium-186)"
+            },
+            {
+              "code": "431729000",
+              "display": "SPECT of kidney using dimercaptosuccinic acid"
+            },
+            {
+              "code": "16552301000119100",
+              "display": "SPECT of whole body for localization of neoplasm"
+            },
+            {
+              "code": "38644000",
+              "display": "Kidney imaging, SPECT technique"
+            }
+          ]
+        },
+        {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "concept": [
+            {
+              "code": "78102",
+              "display": "Bone marrow imaging; limited area"
+            },
+            {
+              "code": "78494",
+              "display": "Cardiac blood pool imaging, gated equilibrium, SPECT, at rest, wall motion study plus ejection fraction, with or without quantitative processing"
+            },
+            {
+              "code": "78469",
+              "display": "Myocardial imaging, infarct avid, planar; tomographic SPECT with or without quantification"
+            },
+            {
+              "code": "78452",
+              "display": "Myocardial perfusion imaging, tomographic (SPECT) (including attenuation correction, qualitative or quantitative wall motion, ejection fraction by first pass or gated technique, additional quantification, when performed); multiple studies, at rest and/or stress (exercise or pharmacologic) and/or redistribution and/or rest reinjection"
+            },
+            {
+              "code": "78451",
+              "display": "Myocardial perfusion imaging, tomographic (SPECT) (including attenuation correction, qualitative or quantitative wall motion, ejection fraction by first pass or gated technique, additional quantification, when performed); single study, at rest or stress (exercise or pharmacologic)"
+            },
+            {
+              "code": "78071",
+              "display": "Parathyroid planar imaging (including subtraction, when performed); with tomographic (SPECT)"
+            },
+            {
+              "code": "78072",
+              "display": "Parathyroid planar imaging (including subtraction, when performed); with tomographic (SPECT), and concurrently acquired computed tomography (CT) for anatomical localization"
+            },
+            {
+              "code": "78830",
+              "display": "Radiopharmaceutical localization of tumor, inflammatory process or distribution of radiopharmaceutical agent(s) (includes vascular flow and blood pool imaging, when performed); tomographic (SPECT) with concurrently acquired computed tomography (CT) transmission scan for anatomical review, localization and determination/detection of pathology, single area (eg, head, neck, chest, pelvis), single day imaging"
+            },
+            {
+              "code": "78832",
+              "display": "Radiopharmaceutical localization of tumor, inflammatory process or distribution of radiopharmaceutical agent(s) (includes vascular flow and blood pool imaging, when performed); tomographic (SPECT) with concurrently acquired computed tomography (CT) transmission scan for anatomical review, localization and determination/detection of pathology, minimum 2 areas (eg, pelvis and knees, abdomen and pelvis), single day imaging, or single area imaging over 2 or more days"
+            },
+            {
+              "code": "78831",
+              "display": "Radiopharmaceutical localization of tumor, inflammatory process or distribution of radiopharmaceutical agent(s) (includes vascular flow and blood pool imaging, when performed); tomographic (SPECT), minimum 2 areas (eg, pelvis and knees, abdomen and pelvis), single day imaging, or single area imaging over 2 or more days"
+            },
+            {
+              "code": "78803",
+              "display": "Radiopharmaceutical localization of tumor, inflammatory process or distribution of radiopharmaceutical agent(s) (includes vascular flow and blood pool imaging, when performed); tomographic (SPECT), single area (eg, head, neck, chest, pelvis), single day imaging"
+            },
+            {
+              "code": "78267",
+              "display": "Urea breath test, C-14 (isotopic); acquisition for analysis"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "41805-3",
+              "display": "Deprecated Bone SPECT"
+            },
+            {
+              "code": "39622-6",
+              "display": "Guidance for localization of abscess^W radionuclide IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "39621-8",
+              "display": "Guidance for localization of abscess^W radionuclide IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "39762-0",
+              "display": "Guidance for localization of tumor^W radionuclide IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "89631-6",
+              "display": "Guidance for localization of tumor^W Radionuclide IV:Find:Pt:Whole body:Doc:NM.SPECT+CT"
+            },
+            {
+              "code": "46366-1",
+              "display": "Guidance for percutaneous biopsy^W radionuclide IV:Find:Pt:XXX>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "46373-7",
+              "display": "Guidance for placement of tube^W radionuclide IV:Find:Pt:Chest:Doc:NM.SPECT"
+            },
+            {
+              "code": "46384-4",
+              "display": "Guidance for superficial biopsy^W radionuclide IV:Find:Pt:XXX>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "39759-6",
+              "display": "Guidance limited for localization of tumor^W radionuclide IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "39881-8",
+              "display": "Multisection 3 phase^W radionuclide IV:Find:Pt:Whole body>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "39862-8",
+              "display": "Multisection blood pool^at rest+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39684-6",
+              "display": "Multisection for abscess^W Ga-67 IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "39811-5",
+              "display": "Multisection for abscess^W radionuclide IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "43655-0",
+              "display": "Multisection for blood flow^W radionuclide IV:Find:Pt:Abdomen>Liver:Doc:NM.SPECT"
+            },
+            {
+              "code": "43652-7",
+              "display": "Multisection for blood flow^W radionuclide IV:Find:Pt:Abdomen>Liver+Spleen:Doc:NM.SPECT"
+            },
+            {
+              "code": "43670-9",
+              "display": "Multisection for blood flow^W radionuclide IV:Find:Pt:Abdomen>Spleen:Doc:NM.SPECT"
+            },
+            {
+              "code": "43673-3",
+              "display": "Multisection for blood flow^W radionuclide IV:Find:Pt:Neck>Thyroid gland:Doc:NM.SPECT"
+            },
+            {
+              "code": "69235-0",
+              "display": "Multisection for blood flow^W radionuclide IV:Find:Pt:Pelvis>Scrotum+Testicle:Doc:NM.SPECT"
+            },
+            {
+              "code": "81613-2",
+              "display": "Multisection for hemangioma^W radionuclide IV:Find:Pt:Abdomen>Liver:Doc:NM.SPECT"
+            },
+            {
+              "code": "39656-4",
+              "display": "Multisection for infarct^W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39655-6",
+              "display": "Multisection for infarct^W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "81556-3",
+              "display": "Multisection for infection or inflammation^W radionuclide IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "39675-4",
+              "display": "Multisection for infection^W Ga-67 IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "39678-8",
+              "display": "Multisection for tumor^W Ga-67 IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "39748-9",
+              "display": "Multisection for tumor^W Tc-99m Sestamibi IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "42292-3",
+              "display": "Multisection for tumor^W Tl-201 IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "46396-8",
+              "display": "Multisection gated^at rest+W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39916-2",
+              "display": "Multisection gated^W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39930-3",
+              "display": "Multisection gated^W stress+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "46395-0",
+              "display": "Multisection gated+ejection fraction^at rest+W stress+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39913-9",
+              "display": "Multisection gated+ejection fraction^W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39681-2",
+              "display": "Multisection limited^W Ga-67 IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "39821-4",
+              "display": "Multisection limited^W radionuclide IV:Find:Pt:XXX>Bone marrow:Doc:NM.SPECT"
+            },
+            {
+              "code": "39813-1",
+              "display": "Multisection limited^W radionuclide IV:Find:Pt:XXX>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "39906-3",
+              "display": "Multisection multiple areas^W radionuclide IV:Find:Pt:XXX>Bone marrow:Doc:NM.SPECT"
+            },
+            {
+              "code": "39905-5",
+              "display": "Multisection multiple areas^W radionuclide IV:Find:Pt:XXX>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "43659-2",
+              "display": "Multisection perfusion qualitative^at rest+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39725-7",
+              "display": "Multisection perfusion^at rest+W adenosine+W Tl-201 IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39718-2",
+              "display": "Multisection perfusion^at rest+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39723-2",
+              "display": "Multisection perfusion^at rest+W stress+W Tl-201 IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "49568-9",
+              "display": "Multisection perfusion^at rest+W stress+W Tl-201 IV+W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39729-9",
+              "display": "Multisection perfusion^at rest+W Tl-201 IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39700-0",
+              "display": "Multisection perfusion^W adenosine+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "49567-1",
+              "display": "Multisection perfusion^W adenosine+W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39712-5",
+              "display": "Multisection perfusion^W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39710-9",
+              "display": "Multisection perfusion^W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39711-7",
+              "display": "Multisection perfusion^W Tl-201 IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "49569-7",
+              "display": "Multisection perfusion+wall motion^at rest+W stress+W Tl-201 IV+W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39898-2",
+              "display": "Multisection ventilation^W radionuclide aerosol IH:Find:Pt:Chest>Lung:Doc:NM.SPECT"
+            },
+            {
+              "code": "39838-8",
+              "display": "Multisection ventilation+perfusion^W radionuclide IH+W radionuclide IV:Find:Pt:Chest>Lung:Doc:NM.SPECT"
+            },
+            {
+              "code": "39872-7",
+              "display": "Multisection wall motion^W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39658-0",
+              "display": "Multisection^at rest+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39662-2",
+              "display": "Multisection^at rest+W stress+W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "49566-3",
+              "display": "Multisection^at rest+W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "69238-4",
+              "display": "Multisection^W contrast intra bladder+during voiding:Find:Pt:Pelvis>Urinary bladder+Urethra:Doc:NM.SPECT"
+            },
+            {
+              "code": "39648-1",
+              "display": "Multisection^W dipyridamole IV+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "44154-3",
+              "display": "Multisection^W dipyridamole IV+W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "81557-1",
+              "display": "Multisection^W florbetapir IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            },
+            {
+              "code": "39680-4",
+              "display": "Multisection^W Ga-67 IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "39682-0",
+              "display": "Multisection^W Ga-67 IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "39638-2",
+              "display": "Multisection^W I-123 IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            },
+            {
+              "code": "39755-4",
+              "display": "Multisection^W I-131 IV:Find:Pt:Neck>Thyroid gland:Doc:NM.SPECT"
+            },
+            {
+              "code": "81560-5",
+              "display": "Multisection^W In-111 capromab pendetide IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "81547-2",
+              "display": "Multisection^W In-111 pentetreotide IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "41838-4",
+              "display": "Multisection^W In-111 Satumomab IV:Find:Pt:Pelvis>Prostate:Doc:NM.SPECT"
+            },
+            {
+              "code": "39844-6",
+              "display": "Multisection^W In-111 Satumomab IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "41772-5",
+              "display": "Multisection^W In-111 tagged WBC IV:Find:Pt:XXX>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "81561-3",
+              "display": "Multisection^W multiple states of exercise+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39770-3",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Abdomen+Pelvis>Gastrointestinal tract:Doc:NM.SPECT"
+            },
+            {
+              "code": "39852-9",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Abdomen>Kidney.bilateral:Doc:NM.SPECT"
+            },
+            {
+              "code": "42310-3",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Abdomen>Kidney:Doc:NM.SPECT"
+            },
+            {
+              "code": "39692-9",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Abdomen>Liver:Doc:NM.SPECT"
+            },
+            {
+              "code": "39876-8",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Abdomen>Liver+Spleen:Doc:NM.SPECT"
+            },
+            {
+              "code": "39644-0",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Breast:Doc:NM.SPECT"
+            },
+            {
+              "code": "39649-9",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39632-5",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            },
+            {
+              "code": "39740-6",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Neck>Parathyroid gland:Doc:NM.SPECT"
+            },
+            {
+              "code": "81550-6",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Neck>Parathyroid gland:Doc:NM.SPECT+CT"
+            },
+            {
+              "code": "46297-8",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "89842-9",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Whole body:Doc:NM.SPECT+CT"
+            },
+            {
+              "code": "39825-5",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Whole body>Bone marrow:Doc:NM.SPECT"
+            },
+            {
+              "code": "39816-4",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Whole body>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "90312-0",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Whole body>Skeletal system:Doc:NM.SPECT+CT"
+            },
+            {
+              "code": "43526-3",
+              "display": "Multisection^W radionuclide IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "39823-0",
+              "display": "Multisection^W radionuclide IV:Find:Pt:XXX>Bone marrow:Doc:NM.SPECT"
+            },
+            {
+              "code": "39879-2",
+              "display": "Multisection^W radionuclide IV:Find:Pt:XXX>Bone:Doc:NM.SPECT"
+            },
+            {
+              "code": "24578-7",
+              "display": "Multisection^W radionuclide IV:Find:Pt:XXX>Bones:Doc:NM.SPECT"
+            },
+            {
+              "code": "39938-6",
+              "display": "Multisection^W radionuclide IV:Find:Pt:XXX>Joint:Doc:NM.SPECT"
+            },
+            {
+              "code": "81549-8",
+              "display": "Multisection^W radionuclide IV:Find:Pt:XXX>Lymph node:Doc:NM.SPECT+CT"
+            },
+            {
+              "code": "81562-1",
+              "display": "Multisection^W single state of exercise+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39668-9",
+              "display": "Multisection^W stress+W radionuclide IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "81548-0",
+              "display": "Multisection^W tagged WBC IV:Find:Pt:XXX:Doc:NM.SPECT"
+            },
+            {
+              "code": "41837-6",
+              "display": "Multisection^W Tc-99m Arcitumomab IV:Find:Pt:Whole body:Doc:NM.SPECT"
+            },
+            {
+              "code": "39743-0",
+              "display": "Multisection^W Tc-99m capromab pendatide IV:Find:Pt:Pelvis>Prostate:Doc:NM.SPECT"
+            },
+            {
+              "code": "39640-8",
+              "display": "Multisection^W Tc-99m DTPA IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            },
+            {
+              "code": "39641-6",
+              "display": "Multisection^W Tc-99m glucoheptonate IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            },
+            {
+              "code": "39631-7",
+              "display": "Multisection^W Tc-99m HMPAO IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            },
+            {
+              "code": "24817-9",
+              "display": "Multisection^W Tc-99m IV:Find:Pt:Abdomen>Liver:Doc:NM.SPECT"
+            },
+            {
+              "code": "81558-9",
+              "display": "Multisection^W Tc-99m IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            },
+            {
+              "code": "39851-1",
+              "display": "Multisection^W Tc-99m Mertiatide IV:Find:Pt:Abdomen>Kidney.bilateral:Doc:NM.SPECT"
+            },
+            {
+              "code": "69229-3",
+              "display": "Multisection^W Tc-99m SC IV:Find:Pt:Abdomen>Liver:Doc:NM.SPECT"
+            },
+            {
+              "code": "44151-9",
+              "display": "Multisection^W Tc-99m Sestamibi IV:Find:Pt:Chest>Heart:Doc:NM.SPECT"
+            },
+            {
+              "code": "39691-1",
+              "display": "Multisection^W Tc-99m tagged RBC IV:Find:Pt:Abdomen>Liver:Doc:NM.SPECT"
+            },
+            {
+              "code": "39639-0",
+              "display": "Multisection^W Tl-201 IV:Find:Pt:Head>Brain:Doc:NM.SPECT"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "patientSummaryEntityClassId": "aiPatientSummary",
+  "cutDateEntityClassId": "oncologyOutpatientVisit",
+  "cutDatePath": "$.date",
+  "reportsTitlePaths": [
+    "$.attributes.title",
+    "$.attributes.reportContent.title"
+  ],
+  "reportsPreferredTypes": [
+    "dischargeSummaryNote",
+    "genomicReport",
+    "imagingReport",
+    "labReport",
+    "oncologyMDTReport",
+    "oncologyOutpatientNote",
+    "pathologyReport",
+    "radiotherapySummaryNote",
+    "document"
+  ],
+  "monitoringTtlSeconds": 2592000,
+  "scheduledTriggeringRule": "0 12 * * ? *",
+  "monitoredListUpdateRule": "0 * * * ? *"
+}

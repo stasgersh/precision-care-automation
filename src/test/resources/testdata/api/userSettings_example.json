@@ -1,0 +1,12 @@
+{
+  "showNlpResults": false,
+  "timelineDirection": 0,
+  "swimlaneOrder": [
+    "encounters",
+    "radiology",
+    "pathology",
+    "biomarkers",
+    "treatmentAndPlan",
+    "fallbackGroup"
+  ]
+}

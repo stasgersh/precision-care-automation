@@ -1,0 +1,71 @@
+{
+  "id": "25670a8d-db18-45d9-a096-8c05df4703d7",
+  "resourceType": "Procedure",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "433761009",
+        "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+      }
+    ],
+    "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "display": "peritoneal cancer diagnosed in 2015, response to chemotherapy but no surgery, CORRECTED: 12 monthly follow up scan please"
+        }
+      ],
+      "text": "peritoneal cancer diagnosed in 2015, response to chemotherapy but no surgery, CORRECTED: 12 monthly follow up scan please"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/83a2a278-ff45-e749-4968-bd121b0100c6"
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "818981001",
+          "display": "Cross-sectional abdomen"
+        }
+      ],
+      "text": "Cross-sectional abdomen"
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "816092008",
+          "display": "Cross-sectional pelvis"
+        }
+      ],
+      "text": "Cross-sectional pelvis"
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "816094009",
+          "display": "Cross-sectional thorax"
+        }
+      ],
+      "text": "Cross-sectional thorax"
+    }
+  ],
+  "report": [
+    {
+      "reference": "DiagnosticReport/32a62287-2838-4374-92d1-d1bd7dd7b2e0"
+    }
+  ],
+  "performedDateTime": "2016-03-11"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "lab-report-category-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "lab-report-category-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "concept": [
+            {
+              "code": "LAB",
+              "display": "Laboratory"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "11502-2",
+              "display": "Laboratory report"
+            },
+            {
+              "code": "26436-6",
+              "display": "Laboratory studies (set)"
+            }
+          ]
+        },
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+          "concept": [
+            {
+              "code": "Lab",
+              "display": "Lab"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "108252007",
+              "display": "Laboratory procedure"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

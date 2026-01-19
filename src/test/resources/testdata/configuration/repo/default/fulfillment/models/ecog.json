@@ -1,0 +1,143 @@
+{
+  "configType": "entity",
+  "classId": "ecog",
+  "description": "",
+  "definitions": [
+    {
+      "resourceType": "Observation",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "include": "ecog-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.effectivePeriod"
+          },
+          "processor": "periodDateText"
+        },
+        {
+          "source": {
+            "path": "$.effectiveDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.issued"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "value",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.valueQuantity"
+              },
+              "processor": "quantityText"
+            },
+            {
+              "source": {
+                "path": "$.valueInteger"
+              }
+            }
+          ]
+        },
+        {
+          "key": "trendKey",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$"
+              },
+              "processor": "trendKey"
+            }
+          ]
+        },
+        {
+          "key": "referenceRange",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.referenceRange[*]"
+              }
+            }
+          ]
+        },
+        {
+          "key": "valueQuantity",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$",
+                "attributes": [
+                  {
+                    "key": "unit",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.unit"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "system",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.system"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "code",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.code"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "value",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.value"
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$.valueInteger"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

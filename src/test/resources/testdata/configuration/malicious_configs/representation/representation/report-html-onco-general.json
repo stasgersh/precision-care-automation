@@ -1,0 +1,88 @@
+{
+  "id": "reportHtml.onco.general",
+  "items": [
+    {
+      "group": "<IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\"\\>\n",
+      "elements": [
+        {
+          "value": { "path": "$.report.attributes.title" },
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "group": "date",
+      "elements": [
+        {
+          "value": { "path": "$.report.date" },
+          "type": "datetime"
+        }
+      ]
+    },
+    {
+      "group": "subTitle",
+      "elements": [
+        {
+          "type": "list",
+          "value": {
+            "elements": [
+              [
+                {
+                  "type": "datetime",
+                  "value": { "path": "$.report.date" }
+                },
+                {
+                  "type": "text",
+                  "value": { "constant": "Date Unknown" }
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": {
+                    "path": "$.report.attributes.author[*].name[*]",
+                    "processor": { "name": "humanName" }
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "path": "$.report.attributes.organization[*].name"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": { "constant": "No author" }
+                }
+              ],
+              [
+                { "type": "text", "value": { "path": "$.report.attributes.status" } },
+                {
+                  "type": "text",
+                  "value": { "constant": "No status" }
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "reportContent",
+      "elements": [
+        {
+          "value": {
+            "path": "$.report.attributes.reportContent[*]",
+            "elements": {
+              "value": { "path": "$.content" },
+              "key": { "path": "$.title" },
+              "type": "html"
+            }
+          },
+          "type": "array"
+        }
+      ]
+    }
+  ],
+  "layout": [{ "id": "title" }, { "id": "date" }, { "id": "reportContent" }]
+}

@@ -1,0 +1,55 @@
+{
+  "resourceType": "Observation",
+  "id": "6ad92729-d217-4add-822f-8680bb65d1b8",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "vital-signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "29463-7",
+        "display": "Body Weight"
+      }
+    ],
+    "text": "Body Weight"
+  },
+  "performer": [
+    {
+      "display": "Dr. Prosper Pearle"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/83a2a278-ff45-e749-4968-bd121b0100c6"
+  },
+  "encounter": {
+    "reference": "Encounter/d8ebe751-5a38-cd78-c3b7-3e49ecb7f7f3"
+  },
+  "effectiveDateTime": "2016-02-25T10:53:12+01:00",
+  "issued": "2016-02-25T10:53:12.075+01:00",
+  "valueQuantity": {
+    "value": 91.4,
+    "unit": "kg",
+    "system": "http://unitsofmeasure.org",
+    "code": "kg"
+  },
+  "note": [
+    {
+      "authorString": "Dr. Prosper Pearle",
+      "time": "2016-02-25T10:55:31.700+02:00",
+      "text": "Body Weight 91.4 kg"
+    },
+    {
+      "text": "Looks normal"
+    }
+  ]
+}

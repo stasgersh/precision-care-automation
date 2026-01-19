@@ -1,0 +1,38 @@
+{
+  "name": "progesterone-receptor-status-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "progesterone-receptor-status-vs",
+    "description": "Progesterone receptor status valueset.",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "445029000",
+              "display": "Status of progesterone receptors of neoplasm"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "16113-3",
+              "display": "Progesterone receptor [Interpretation] in Tissue"
+            },
+            {
+              "code": "40557-1",
+              "display": "Progesterone receptor Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "85339-0",
+              "display": "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

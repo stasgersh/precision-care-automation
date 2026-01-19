@@ -1,0 +1,215 @@
+{
+  "name": "stage-group-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "stage-group-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "LA4391-4,Recurrent, unstaged, unknown, Stage X"
+            },
+            {
+              "code": "LA4744-4",
+              "display": "Occult"
+            },
+            {
+              "code": "LA4489-6",
+              "display": "Unknown"
+            },
+            {
+              "code": "LA4323-7",
+              "display": "Stage 0"
+            },
+            {
+              "code": "LA4322-9",
+              "display": "Stage 0A"
+            },
+            {
+              "code": "LA4321-1",
+              "display": "Stage 0is"
+            },
+            {
+              "code": "LA21792-9",
+              "display": "Stage 2A1"
+            },
+            {
+              "code": "LA21793-7",
+              "display": "Stage 2A2"
+            },
+            {
+              "code": "LA21795-2",
+              "display": "Stage 3C1"
+            },
+            {
+              "code": "LA21796-0",
+              "display": "Stage 3C2"
+            },
+            {
+              "code": "LA3664-5",
+              "display": "Stage I"
+            },
+            {
+              "code": "LA3663-7",
+              "display": "Stage IA"
+            },
+            {
+              "code": "LA4320-3",
+              "display": "Stage IA1"
+            },
+            {
+              "code": "LA4319-5",
+              "display": "Stage IA2"
+            },
+            {
+              "code": "LA3662-9",
+              "display": "Stage IB"
+            },
+            {
+              "code": "LA4318-7",
+              "display": "Stage IB1"
+            },
+            {
+              "code": "LA4317-9",
+              "display": "Stage IB2"
+            },
+            {
+              "code": "LA4316-1",
+              "display": "Stage IC"
+            },
+            {
+              "code": "LA4316-1",
+              "display": "Stage IC"
+            },
+            {
+              "code": "LA21791-1",
+              "display": "Stage IE"
+            },
+            {
+              "code": "LA3661-1",
+              "display": "Stage II"
+            },
+            {
+              "code": "LA3660-3",
+              "display": "Stage IIA"
+            },
+            {
+              "code": "LA21844-8",
+              "display": "Stage IIA1"
+            },
+            {
+              "code": "LA21845-5",
+              "display": "Stage IIA2"
+            },
+            {
+              "code": "LA3659-5",
+              "display": "Stage IIB"
+            },
+            {
+              "code": "LA3658-7",
+              "display": "Stage IIC"
+            },
+            {
+              "code": "LA21794-5",
+              "display": "Stage IIE"
+            },
+            {
+              "code": "LA3657-9",
+              "display": "Stage III"
+            },
+            {
+              "code": "LA3656-1",
+              "display": "Stage IIIA"
+            },
+            {
+              "code": "LA3655-3",
+              "display": "Stage IIIB"
+            },
+            {
+              "code": "LA3654-6",
+              "display": "Stage IIIC"
+            },
+            {
+              "code": "LA21848-9",
+              "display": "Stage IIIC1"
+            },
+            {
+              "code": "LA21871-1",
+              "display": "Stage IIIC2"
+            },
+            {
+              "code": "LA3652-0",
+              "display": "Stage IIIE"
+            },
+            {
+              "code": "LA21800-0",
+              "display": "Stage IIIS"
+            },
+            {
+              "code": "LA21847-1",
+              "display": "Stage IIS"
+            },
+            {
+              "code": "LA4315-3",
+              "display": "Stage IS"
+            },
+            {
+              "code": "LA3651-2",
+              "display": "Stage IV"
+            },
+            {
+              "code": "LA3650-4",
+              "display": "Stage IVA"
+            },
+            {
+              "code": "LA21872-9",
+              "display": "Stage IVA1"
+            },
+            {
+              "code": "LA21850-5",
+              "display": "Stage IVA2"
+            },
+            {
+              "code": "LA3649-6",
+              "display": "Stage IVB"
+            },
+            {
+              "code": "LA4314-6",
+              "display": "Stage IVC"
+            },
+            {
+              "code": "LA21802-6",
+              "display": "Stage IVE"
+            },
+            {
+              "code": "LA3648-8",
+              "display": "Stage IVS"
+            },
+            {
+              "code": "LA4401-1",
+              "display": "Stage T1A1"
+            },
+            {
+              "code": "LA4284-1",
+              "display": "Stage T1A2"
+            },
+            {
+              "code": "LA4371-6",
+              "display": "Stage T1B"
+            },
+            {
+              "code": "LA4485-4",
+              "display": "Stage T1B1"
+            },
+            {
+              "code": "LA4484-7",
+              "display": "Stage T1B2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

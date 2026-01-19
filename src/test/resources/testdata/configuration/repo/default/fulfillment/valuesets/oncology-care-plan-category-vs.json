@@ -1,0 +1,37 @@
+{
+  "name": "oncology-care-plan-category-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-care-plan-category-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "736252007",
+              "display": "Cancer care plan"
+            },
+            {
+              "code": "395082007",
+              "display": "Cancer care plan"
+            },
+            {
+              "code": "736401008",
+              "display": "Chemotherapy care plan"
+            }
+          ]
+        },
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.726668.10",
+          "concept": [
+            {
+              "code": "10",
+              "display": "ONCOLOGY TREATMENT"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

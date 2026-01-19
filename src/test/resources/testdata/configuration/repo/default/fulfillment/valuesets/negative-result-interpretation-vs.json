@@ -1,0 +1,28 @@
+{
+  "name": "negative-result-interpretation-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "negative-result-interpretation-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+          "concept": [
+            {
+              "code": "N",
+              "display": "Normal"
+            },
+            {
+              "code": "NEG",
+              "display": "Negative"
+            },
+            {
+              "code": "ND",
+              "display": "Not detected"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

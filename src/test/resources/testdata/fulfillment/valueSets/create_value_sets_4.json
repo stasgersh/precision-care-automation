@@ -1,0 +1,21 @@
+{
+  "valueset": {
+    "url": "www.some.url.com",
+    "description": "value set 4",
+    "compose": {
+      "include": [
+        {
+          "system": "www.loinc.co.il",
+          "concept": [
+            {
+              "code": "c-234",
+              "display": "code display"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "version_1"
+  },
+  "name": "vs_4"
+}

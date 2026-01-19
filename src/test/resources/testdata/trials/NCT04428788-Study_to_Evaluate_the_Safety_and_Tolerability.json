@@ -1,0 +1,235 @@
+{
+  "id": "NCT04428788",
+  "type": "trial",
+  "status": "Recruiting",
+  "studyCompletion": "2026-12-27",
+  "name": "Study to Evaluate the Safety and Tolerability of CC-94676 in Participants With Metastatic Castration-Resistant Prostate Cancer",
+  "description": "The purpose of this study is to assess the safety, tolerability and preliminary efficacy of CC-94676 in men with progressive metastatic castration resistant prostate cancer.",
+  "phase": "1",
+  "link": "https://clinicaltrials.gov/study/NCT04428788?a=23",
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    },
+    {
+      "id": "ecog",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ECOG",
+              "query": {
+                "from": "ecog",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's ecog",
+      "usingAi": false
+    },
+    {
+      "id": "comorbidity",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ComorbidityAlias",
+              "query": {
+                "show": [
+                  "attributes.date"
+                ],
+                "from": "comorbidity",
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "Thromboembolism"
+                      }
+                    }
+                  ]
+                },
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's comorbidity",
+      "usingAi": false
+    },
+    {
+      "id": "primary_cancer_type",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "primaryCancerDiseaseAlias",
+              "query": {
+                "from": "primaryCancerDisease"
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's primary cancer types",
+      "usingAi": false
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_female",
+      "type": "inclusion",
+      "title": "Gender is female",
+      "allowMissingVariables": null,
+      "dependency": [
+        "gender"
+      ],
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is male",
+          "description": "Gender is female",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `female`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "dependency": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ECOG_value",
+      "type": "inclusion",
+      "title": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0 or 1",
+      "allowMissingVariables": [
+        "ecog"
+      ],
+      "dependency": [
+        "ecog"
+      ],
+      "expression": "EcogStatus",
+      "subCriteria": [
+        {
+          "id": "EcogStatus",
+          "title": "ECOG status is 0 or 1",
+          "description": "ECOG status is 0 or 1",
+          "expression": "variables.ecog.value[].attributes.value|[0]==`null`",
+          "explainability": {
+            "displayValue": "variables.ecog.value[].attributes.value|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_only_prostate_primary_cancer",
+      "type": "exclusion",
+      "title": "Concurrent Malignancy (present during screening) requiring treatment or history of prior malignancy active within 1 year prior to the first dose of IP",
+      "allowMissingVariables": [
+        "primary_cancer_type"
+      ],
+      "dependency": [
+        "primary_cancer_type"
+      ],
+      "expression": "OnlyPrimaryProstateCancer",
+      "subCriteria": [
+        {
+          "id": "OnlyPrimaryProstateCancer",
+          "title": "Patient  doesn't have additional primary cancer diseases",
+          "description": "Patient  doesn't have additional primary cancer diseases",
+          "expression": "variables.primary_cancer_type.value[].attributes.code.coding[]|length([?! contains(display, `prostate`)])==`0`",
+          "explainability": {
+            "displayValue": "variables.primary_cancer_type.value[].attributes.code.coding[].display|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_Comorbidity",
+      "type": "exclusion",
+      "title": "Clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+      "allowMissingVariables": null,
+      "dependency": [
+        "comorbidity"
+      ],
+      "expression": "notThromboembolism",
+      "subCriteria": [
+        {
+          "id": "notThromboembolism",
+          "title": "No clinically significant venous thromboembolism",
+          "description": "No clinically significant venous thromboembolism",
+          "expression": "variables.comorbidity.value[]|[-1:].attributes.date|[0]| @ == `null` || abs_date_diff(@, `2024-09-04`,`years`)>`0` || (abs_date_diff(@, `2024-09-04`,`years`)==`0` && abs_date_diff(@, `2024-09-04`,`months`)>`3`)",
+          "explainability": {
+            "displayValue": "variables.comorbidity.value[]|[-1:].attributes.date|[0]"
+          }
+        }
+      ]
+    }
+  ]
+}

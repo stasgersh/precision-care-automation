@@ -1,0 +1,25 @@
+{
+  "name": "comorbidity-status-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "comorbidity-status-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "concept": [
+            {
+              "code": "active"
+            },
+            {
+              "code": "recurrence"
+            },
+            {
+              "code": "relapse"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

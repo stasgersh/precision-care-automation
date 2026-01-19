@@ -1,0 +1,2 @@
+| Eligibility_Key | Expected_Matched_Keywords |
+| Any significant medical condition, such as uncontrolled infection, laboratory abnormality, or psychiatric illness | medical, infection, psychiatric,uncontrolled,CT,infection|

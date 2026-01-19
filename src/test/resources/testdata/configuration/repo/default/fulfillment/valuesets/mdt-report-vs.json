@@ -1,0 +1,37 @@
+{
+  "name": "mdt-report-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "mdt-report-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "444804000",
+              "display": "Multidisciplinary care conference report"
+            },
+            {
+              "code": "762391000000107",
+              "display": "Cancer multidisciplinary team report (record artifact)"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "85231-9",
+              "display": "Tumor board Note"
+            },
+            {
+              "code": "85232-7",
+              "display": "Tumor board Consult note"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

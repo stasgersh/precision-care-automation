@@ -1,0 +1,14 @@
+{
+  "dedup": "True",
+  "size": 8,
+  "filter": {
+    "must": [
+      {
+        "attributes.maritalStatus.$coding.display":
+        {
+          "eq": "Married"
+        }
+      }
+    ]
+  }
+}

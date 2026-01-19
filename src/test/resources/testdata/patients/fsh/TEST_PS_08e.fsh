@@ -1,0 +1,282 @@
+Alias: $loinc = http://loinc.org
+Alias: $sct = http://snomed.info/sct
+Alias: $us-core-documentreference-category = http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category
+Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $codesystem-service-type.html = http://hl7.org/fhir/R4/codesystem-service-type.html
+
+Instance: QDvEOlUwS6BO
+InstanceOf: Patient
+Usage: #inline
+* name.use = #official
+* name.family = "TEST_PS"
+* name.given = "08e"
+* gender = #male
+* birthDate = "1970-11-11"
+
+/*
+DiagnosticReport
+*/
+Instance: 1P67sfsSTacJ
+InstanceOf: DiagnosticReport
+Usage: #inline
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+* status = #final
+* category = $loinc#LP29684-5 "Radiology"
+* category.text = "Radiology"
+* subject = Reference(QDvEOlUwS6BO)
+* effectiveDateTime = "2007-05-06T13:33:31.000Z"
+* performer = Reference(Practitioner/oB5eYSINJa30) "Dr. Bianca Matrey"
+* conclusion = "STABLE"
+* presentedForm.contentType = #text/plain
+* presentedForm.data = "TWVkaWNhbCBOb3RlCgoKRXhhbWluYXRpb24gb2YgSm9pbnQgVW5kZXIgSW1hZ2UgSW50ZW5zaWZpZXI6CgpKb2ludDogUmlnaHQgS25lZQoKSW5kaWNhdGlvbnM6IFRoZSBwYXRpZW50IHdhcyByZWZlcnJlZCBmb3IgYW4gZXhhbWluYXRpb24gdW5kZXIgaW1hZ2UgaW50ZW5zaWZpZXIgdG8gZXZhbHVhdGUgdGhlIHJpZ2h0IGtuZWUgZm9yIHN1c3BlY3RlZCBvc3Rlb2FydGhyaXRpcyBhbmQgdG8gYXNzZXNzIHRoZSBpbnRlZ3JpdHkgb2YgdGhlIGxpZ2FtZW50cyBhbmQgdGVuZG9ucy4KClByb2NlZHVyZToKClRoZSBwYXRpZW50IHdhcyBwb3NpdGlvbmVkIG9uIHRoZSBpbWFnZSBpbnRlbnNpZmllciB0YWJsZSBpbiB0aGUgYW50ZXJvcG9zdGVyaW9yIChBUCkgcG9zaXRpb24uIFRoZSByaWdodCBrbmVlIHdhcyBleGFtaW5lZCB1c2luZyB0aGUgaW1hZ2UgaW50ZW5zaWZpZXIgdG8gdmlzdWFsaXplIHRoZSBqb2ludCBzcGFjZSwgbGlnYW1lbnRzLCBhbmQgdGVuZG9ucy4gVGhlIGV4YW1pbmF0aW9uIHdhcyBwZXJmb3JtZWQgd2l0aCB0aGUgcGF0aWVudCdzIGtuZWUgaW4gYSByZWxheGVkIHBvc2l0aW9uIGFuZCB0aGVuIGluIHZhcmlvdXMgcG9zaXRpb25zIG9mIGZsZXhpb24gYW5kIGV4dGVuc2lvbi4KCkZpbmRpbmdzOgoKVGhlIGpvaW50IHNwYWNlIHdhcyBuYXJyb3dlZCwgd2l0aCBldmlkZW5jZSBvZiBqb2ludCBzcGFjZSBuYXJyb3dpbmcgYW5kIHNjbGVyb3NpcyBvbiB0aGUgbWVkaWFsIGNvbXBhcnRtZW50LgpUaGUgbWVkaWFsIGNvbGxhdGVyYWwgbGlnYW1lbnQgd2FzIGludGFjdCwgYnV0IHRoZXJlIHdhcyBldmlkZW5jZSBvZiBtaWxkIGxheGl0eS4KVGhlIGxhdGVyYWwgY29sbGF0ZXJhbCBsaWdhbWVudCB3YXMgaW50YWN0LCBidXQgdGhlcmUgd2FzIGV2aWRlbmNlIG9mIG1pbGQgbGF4aXR5LgpUaGUgYW50ZXJpb3IgY3J1Y2lhdGUgbGlnYW1lbnQgd2FzIGludGFjdCwgYnV0IHRoZXJlIHdhcyBldmlkZW5jZSBvZiBtaWxkIGxheGl0eS4KVGhlIHBvc3RlcmlvciBjcnVjaWF0ZSBsaWdhbWVudCB3YXMgaW50YWN0LgpUaGUgcGF0ZWxsb2ZlbW9yYWwgam9pbnQgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBjaG9uZHJvbWFsYWNpYSBvciBwYXRlbGxhciBzdWJsdXhhdGlvbi4KVGhlIHF1YWRyaWNlcHMgYW5kIGhhbXN0cmluZyB0ZW5kb25zIHdlcmUgaW50YWN0LCBidXQgdGhlcmUgd2FzIGV2aWRlbmNlIG9mIG1pbGQgdGVuZGlub3Npcy4KVGhlIGpvaW50IGFsaWdubWVudCB3YXMgbm9ybWFsLCB3aXRoIG5vIGV2aWRlbmNlIG9mIHN1Ymx1eGF0aW9uIG9yIGRpc2xvY2F0aW9uLgpSYWRpb2dyYXBoaWMgRmluZGluZ3M6CgpUaGUgcmFkaW9ncmFwaHMgb2YgdGhlIHJpZ2h0IGtuZWUgcmV2ZWFsZWQgbWlsZCBkZWdlbmVyYXRpdmUgY2hhbmdlcywgaW5jbHVkaW5nIGpvaW50IHNwYWNlIG5hcnJvd2luZyBhbmQgb3N0ZW9waHl0ZSBmb3JtYXRpb24gb24gdGhlIG1lZGlhbCBjb21wYXJ0bWVudC4KSW1wcmVzc2lvbjoKCkJhc2VkIG9uIHRoZSBleGFtaW5hdGlvbiB1bmRlciBpbWFnZSBpbnRlbnNpZmllciBhbmQgcmFkaW9ncmFwaGljIGZpbmRpbmdzLCB0aGUgcGF0aWVudCdzIHJpZ2h0IGtuZWUgYXBwZWFycyB0byBoYXZlIGRlZ2VuZXJhdGl2ZSBqb2ludCBkaXNlYXNlIHdpdGggbWlsZCBvc3Rlb2FydGhyaXRpcywgcGFydGljdWxhcmx5IGluIHRoZSBtZWRpYWwgY29tcGFydG1lbnQuIFRoZSBsaWdhbWVudHMgYW5kIHRlbmRvbnMgYXBwZWFyIHRvIGJlIGludGFjdCwgYnV0IHRoZXJlIGlzIGV2aWRlbmNlIG9mIG1pbGQgbGF4aXR5LiBUaGUgcGF0aWVudCdzIHN5bXB0b21zIGFyZSBsaWtlbHkgcmVsYXRlZCB0byB0aGUgZGVnZW5lcmF0aXZlIGNoYW5nZXMgYW5kIG1heSBiZW5lZml0IGZyb20gcGh5c2ljYWwgdGhlcmFweSBhbmQgcGFpbiBtYW5hZ2VtZW50LiBGdXJ0aGVyIGV2YWx1YXRpb24gYW5kIHRyZWF0bWVudCB3aWxsIGJlIG5lY2Vzc2FyeSB0byBkZXRlcm1pbmUgdGhlIHVuZGVybHlpbmcgY2F1c2Ugb2YgdGhlIHBhdGllbnQncyBzeW1wdG9tcyBhbmQgdG8gZGV2ZWxvcCBhIGNvbXByZWhlbnNpdmUgdHJlYXRtZW50IHBsYW4uCgpSZWNvbW1lbmRhdGlvbnM6CgpUaGUgcGF0aWVudCB3aWxsIGJlIHJlZmVycmVkIHRvIHBoeXNpY2FsIHRoZXJhcHkgZm9yIGEgY29tcHJlaGVuc2l2ZSBldmFsdWF0aW9uIGFuZCB0cmVhdG1lbnQgcGxhbiB0byBhZGRyZXNzIHRoZSBwYXRpZW50J3Mga25lZSBwYWluIGFuZCBzdGlmZm5lc3MuClRoZSBwYXRpZW50IHdpbGwgYmUgcHJlc2NyaWJlZCBhIGNvdXJzZSBvZiBwYWluIG1lZGljYXRpb24gdG8gbWFuYWdlIHRoZSBwYXRpZW50J3Mgc3ltcHRvbXMuClRoZSBwYXRpZW50IHdpbGwgYmUgc2NoZWR1bGVkIGZvciBmb2xsb3ctdXAgYXBwb2ludG1lbnRzIHRvIG1vbml0b3IgdGhlIHBhdGllbnQncyBwcm9ncmVzcyBhbmQgdG8gcmVhc3Nlc3MgdGhlIHBhdGllbnQncyBzeW1wdG9tcy4KU2lnbmF0dXJlOgoKRHIuIFggeQ=="
+* code = $sct#179929004 "Examination of joint under image intensifier (procedure)"
+* code.text = "Examination of joint under image intensifier (procedure)"
+
+Instance: 8aWbfB65CiET
+InstanceOf: DiagnosticReport
+Usage: #inline
+* status = #final
+* category = $loinc#LP29684-5 "Radiology"
+* category.text = "Radiology"
+* subject = Reference(QDvEOlUwS6BO)
+* effectiveDateTime = "2007-08-08T16:31:51.000Z"
+* conclusion = "STABLE"
+* presentedForm.contentType = #text/plain
+* presentedForm.data = "Q1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3QKCkluZGljYXRpb246IFRoZSBwYXRpZW50IHByZXNlbnRlZCB3aXRoIHN5bXB0b21zIG9mIGNoZXN0IHBhaW4gYW5kIHNob3J0bmVzcyBvZiBicmVhdGguIEEgQ1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3Qgd2FzIG9yZGVyZWQgdG8gZXZhbHVhdGUgZm9yIHBvc3NpYmxlIHB1bG1vbmFyeSBlbWJvbGlzbSwgcG5ldW1vbmlhLCBhbmQvb3IgYWJkb21pbmFsIHBhdGhvbG9neS4KClByb2NlZHVyZTogVGhlIHBhdGllbnQgd2FzIGFkbWluaXN0ZXJlZCAxMjAgbUwgb2Ygbm9uLWlvbmljIGNvbnRyYXN0IGFnZW50IGludHJhdmVub3VzbHkgYW5kIHVuZGVyd2VudCBhIENUIHNjYW4gb2YgdGhlIHRob3JheCwgYWJkb21lbiwgYW5kIHBlbHZpcyB1c2luZyBhIDY0LXNsaWNlIENUIHNjYW5uZXIuCgpGaW5kaW5nczoKClRoZSBDVCBzY2FuIHJldmVhbGVkIHRoZSBmb2xsb3dpbmcgZmluZGluZ3M6CgpUaGUgdGhvcmF4OiBObyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20gb3IgcG5ldW1vbmlhIHdhcyBzZWVuLiBUaGUgbHVuZ3Mgd2VyZSBjbGVhciwgd2l0aCBubyBldmlkZW5jZSBvZiBjb25zb2xpZGF0aW9uIG9yIGVmZnVzaW9uLgpUaGUgYWJkb21lbjogVGhlIGxpdmVyLCBzcGxlZW4sIGFuZCBraWRuZXlzIHdlcmUgbm9ybWFsIGluIHNpemUgYW5kIHNoYXBlLiBUaGUgcGFuY3JlYXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBwYW5jcmVhdGl0aXMgb3IgcGFuY3JlYXRpYyBtYXNzLiBUaGUgc21hbGwgYm93ZWwgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvYnN0cnVjdGlvbiBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4gVGhlIGxhcmdlIGJvd2VsIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgZGl2ZXJ0aWN1bGl0aXMgb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuClRoZSBwZWx2aXM6IFRoZSBwZWx2aXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBmcmFjdHVyZSBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4KQ29udHJhc3QgRW5oYW5jZW1lbnQ6CgpUaGUgY29udHJhc3QgYWdlbnQgZW5oYW5jZWQgdGhlIHZpc3VhbGl6YXRpb24gb2YgdGhlIHZhc2N1bGFyIHN0cnVjdHVyZXMsIGluY2x1ZGluZyB0aGUgYW9ydGEsIHB1bG1vbmFyeSBhcnRlcmllcywgYW5kIHJlbmFsIGFydGVyaWVzLiBObyBldmlkZW5jZSBvZiB0aHJvbWJ1cyBvciBlbWJvbHVzIHdhcyBzZWVuIGluIHRoZSBwdWxtb25hcnkgYXJ0ZXJpZXMuCgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIENUIFRob3JheCBBYmRvbWVuIFBlbHZpcyB3aXRoIENvbnRyYXN0LCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBubyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20sIHBuZXVtb25pYSwgb3IgYWJkb21pbmFsIHBhdGhvbG9neS4gVGhlIHBhdGllbnQncyBzeW1wdG9tcyBhcmUgbGlrZWx5IGR1ZSB0byBhbm90aGVyIGNhdXNlLCBhbmQgZnVydGhlciBldmFsdWF0aW9uIGlzIG5lZWRlZCB0byBkZXRlcm1pbmUgdGhlIHVuZGVybHlpbmcgZGlhZ25vc2lzLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIG1hbmFnZW1lbnQgYXMgZGlyZWN0ZWQgYnkgdGhlIHBhdGllbnQncyBwcmltYXJ5IGNhcmUgcGh5c2ljaWFuLgpDb25zaWRlciBmdXJ0aGVyIGltYWdpbmcgc3R1ZGllcywgc3VjaCBhcyBhIHZlbnRpbGF0aW9uLXBlcmZ1c2lvbiBzY2FuIG9yIGEgcHVsbW9uYXJ5IGZ1bmN0aW9uIHRlc3QsIHRvIGZ1cnRoZXIgZXZhbHVhdGUgZm9yIHB1bG1vbmFyeSBlbWJvbGlzbS4KU2lnbmF0dXJlOgoKRHIgWSBY"
+* code = $sct#433761009 "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+* code.text = "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+
+/*
+DocumentReference refers to an Encounter
+*/
+Instance: cpJGkANMkyHn
+InstanceOf: DocumentReference
+Usage: #inline
+* status = #current
+* type.coding[0] = $loinc#34117-2 "History and physical note - test1"
+* category = $us-core-documentreference-category#clinical-note "Clinical Note"
+* subject = Reference(QDvEOlUwS6BO)
+* date = "2007-09-09T17:31:51.000Z"
+* author = Reference(Practitioner/oB5eYSINJa30) "Dr. Bianca Matrey"
+* content.attachment.contentType = #text/plain
+* content.attachment.language = #en-US
+* content.attachment.data = "Q2xpbmljYWwgYW5kIFRyZWF0bWVudCBTdW1tYXJ5XG5cbk1ldCBjb2xvbiBhZGVub2NhcmNpbm9hbSB3aXRoIHNvbGl0YXJ5IG9tZW50YWwgbWV0IC0gYWxsIHZpc2libGUgZGlzZWFzZSByZXNlY3RlZCBNU1MgUkFTL1JBRiBXVCBzL3AgcHJvcGh5bGFjdGljIEhJUEVDIG9uIDEzLzMvMTggKG9uIHRyaWFsKVxuXG5cblxuSGlzdG9yeSwgRXhhbWluYXRpb24gYW5kIEludmVzdGlnYXRpb25zXG5cblVuZGVyd2VudCBwcm9waHlsYWN0aWMgSElQRUMgKHRyaWFsKSBvbiAxMy8zLzE4IER1ZSAjNiBYZWxveCAjNCBhbmQgNSBkb3NlIGRlbGF5IDIgd2Vla3MgZHVlIHRvIGxvdyBQTHQgYW5kIGxvdyBBTkMsIGdpdmVuIDJkYXlzIHMvYyBHQ1NGIChwcmlvciB0byAjNCBidXQgbm90ICM1KSBIaXN0bzogRElBR05PU0lTIChBKSBMZWZ0IHBlbHZpYyBwZXJpdG9uZXVtOyBleGNpc2lvbiBiaW9wc3k6IEZhdCBuZWNyb3NpcywgaW5mbGFtbWF0aW9uLCBmaWJyb3NpcyBhbmQgZm9yZWlnbiBib2R5LXR5cGUgbXVsdGludWNsZWF0ZSBnaWFudCBjZWxsIHJlYWN0aW9uOyAtIG5lZ2F0aXZlIGZvciBtYWxpZ25hbmN5LiAoQikgT21lbnR1bTsgb21lbnRlY3RvbXk6IE5vbi1zcGVjaWZpYyByZWFjdGl2ZSBjaGFuZ2VzOyAtIHR3byBiZW5pZ24gbHltcGggbm9kZXMgKDAvMiksIC0gbmVnYXRpdmUgZm9yIG1hbGlnbmFuY3kuIEJsZHMgdG9kYXkgQU5DIDAuOTYgUEx0IDEyMWsgQ0VBIDYuNCBmcm9tIDQgQ1QgVEFQIDkvNy8xODogQ29uY2x1c2lvbiBTaW5jZSAxMyBBcHIgMjAxOCwgMS4gU3RhdHVzIHBvc3QgaGlnaCBhbnRlcmlvciByZXNlY3Rpb24gd2l0aCBubyBldmlkZW5jZSBvZiBsb2NhbCByZWN1cnJlbmNlIG9yIGludGVydmFsIGNoYW5nZS4gMi4gVGhlIHB1bG1vbmFyeSBub2R1bGVzLCBzdXNwaWNpb3VzIG9mIG1ldGFzdGFzZXMsIGFyZSBzbWFsbGVyLiBUaGUgcmlnaHQgbG93ZXIgbG9iZSBub2R1bGUgaGFzIG5lYXJseSByZXNvbHZlZC4gMy4gVGhlIGNpcmN1bWZlcmVudGlhbCBtdXJhbCB0aGlja2VuaW5nIGluIHRoZSByZWN0dW0gaXMgbGVzcyBwcm9taW5lbnQgYW5kIHJlbWFpbnMgaW5kZXRlcm1pbmF0ZS4gNC4gTm8gbmV3IGRpc3RhbnQgbWV0YXN0YXNpcy4gU1VCSkVDVElWRSBUb2xlcmF0ZWQgd2VsbCBHMSBuZXVyb3BhdGh5IGluIGZpbmdlcnMgYW5kIHRvZXMgRWF0IGFuZCBCTyByZWd1bGFybHksIHdlbGwgTm8gUFIgYmxlZWQgRHJ5IHNraW4sIG5vIFBQRSwgbm90IHVzaW5nIG1vaXN0dXJpc2VycyBPQkVKQ1RJVkUgRUNPRyAxIC0gbGltcHMgYnV0IHRoaXMgaXMgYmFzZWxpZW4gZnJvbSBwcmV2aW91cyBhY2NpZGVudCBIdCAxNzFjbSBXdCA2MC45a2cgZnJvbSA2MC44a2cgZnJvbSA1Ny44a2cgZnJvbSA1Ni44a2cgZnJvbSA1NS40a2cgZnJvbSA1NWtnIGZyb20gNTQuNGtnIEgtUzFTMiBMIC0gTm8gY3JlcHMgQSAtIFNvZnQgTm9udGVuZGVyIFQgMzYuNCBIUiAxMzEvODYgU3BPMiAxMDAlIG9uIFJBIEhSIDcxIEhvbWUgQlAgbW9uaXRvcmluZyBTQlAgMTIwLTE1MG1tSEcgb24gYW1sb2RpcGluZSAyLjVtZyBPTSBJbXA6IE1ldCBjb2xvbiBhZGVub2NhcmNpbm9hbSB3aXRoIHNvbGl0YXJ5IG9tZW50YWwgbWV0IC0gYWxsIHZpc2libGUgZGlzZWFzZSByZXNlY3RlZCBNU1MgUkFTL1JBRiBXVCBzL3AgcHJvcGh5bGFjdGljIEhJUEVDIG9uIDEzLzMvMTggKG9uIHRyaWFsKSBQT3N0LW9wIENUIC0gaW5jcmVhc2UgaW4gb25lIGx1bmcgbW9kdWxlID9tZXQgLSByZXNwb25kaW5nIHRvIFhlbG94XG5cblxuTWFuYWdlbWVudCBGb3IgVGhpcyBWaXNpdFxuXG5QcmNvZWVkIHdpdGggIzYgWGVsb3ggb24gMy85LzE4IEZCQyBPQSBUQ1UgbWUgNCB3ZWVrcyBCbGRzIE9BIENUIFRBUCBiZWZvcmUgVENVIENvbnR0IGFtbG9kaXBpbmUgYXQgMi41bWcgT00sIGFkdmlzZWQgaG9tZSBCUCBtb25pdG9yaW5nLCBLSVYgZnVydGhlciBpbmNyZWFzZSB0byA1bWcgT00gQWR2aXNlZCB0byByZXR1cm4gZWFybHkgaWYgZmV2ZXIvdW53ZWxsIHdoaWxlIG9uIGNoZW1vIFMvVCBUb2xlcmF0aW5nIGNoZW1vIHdlbGwsIHdlIHdvdWxkIGNvbnRpbnVlIFhlbG94IExBc3QgQ1Qgc2hvd3MgbHVuZyBsZXNpb25zIGFyZSBzbWFsbGVyLCBsaWtlbHkgbHVuZyBtZXRzIGFuZCBzdGFnZSA0IGRpc2Vhc2UgV2Ugd291bGQgcmV2aWV3IENUIHJlc3VsdHMgYWdhaW4gd2l0aCByZXBlYXQgQ1QgYWZ0ZXIgdGhpcyBjeWNsZSBUaGV5IHVuZGVyc3RhbmQsIGFncmVlYWJsZSBBbGwgcXVlc3Rpb25zIGFuc3dlcmVkXG5cblxuTWFuYWdlbWVudCBGb3IgVGhpcyBWaXNpdFxuXG5QcmNvZWVkIHdpdGggIzYgWGVsb3ggb24gMy85LzE4IEZCQyBPQSBUQ1UgbWUgNCB3ZWVrcyBCbGRzIE9BIENUIFRBUCBiZWZvcmUgVENVIC0gcG9zdHBvbmUgY3VycmVudCBDVCBhcHB0IHRvIDE3LzkvMTggQ29udHQgYW1sb2RpcGluZSBhdCAyLjVtZyBPTSwgYWR2aXNlZCBob21lIEJQIG1vbml0b3JpbmcsIEtJViBmdXJ0aGVyIGluY3JlYXNlIHRvIDVtZyBPTSBBZHZpc2VkIHRvIHJldHVybiBlYXJseSBpZiBmZXZlci91bndlbGwgd2hpbGUgb24gY2hlbW8gUy9UIFRvbGVyYXRpbmcgY2hlbW8gd2VsbCwgd2Ugd291bGQgY29udGludWUgWGVsb3ggTEFzdCBDVCBzaG93cyBsdW5nIGxlc2lvbnMgYXJlIHNtYWxsZXIsIGxpa2VseSBsdW5nIG1ldHMgYW5kIHN0YWdlIDQgZGlzZWFzZSBXZSB3b3VsZCByZXZpZXcgQ1QgcmVzdWx0cyBhZ2FpbiB3aXRoIHJlcGVhdCBDVCBhZnRlciB0aGlzIGN5Y2xlIFRoZXkgdW5kZXJzdGFuZCwgYWdyZWVhYmxlIEFsbCBxdWVzdGlvbnMgYW5zd2VyZWQ="
+* content.attachment.title = "Test attachment 1"
+* context.encounter = Reference(ATq3xtzOCAz4)
+
+Instance: ATq3xtzOCAz4
+InstanceOf: Encounter
+Usage: #inline
+* status = #finished
+* class = $v3-ActCode#AMB
+* type = $sct#162673000 "General examination of patient (procedure)"
+* type.text = "General examination of patient (procedure)"
+* subject = Reference(QDvEOlUwS6BO)
+* participant.type = $v3-ParticipationType#PPRF "primary performer"
+* participant.type.text = "primary performer"
+* participant.period.start = "2007-09-09T17:31:51.000Z"
+* participant.period.end = "2007-09-09T17:51:51.000Z"
+* participant.individual = Reference(Practitioner/oB5eYSINJa30) "Dr. Bianca Matrey"
+* period.start = "2007-09-09T17:31:51.000Z"
+* period.end = "2007-09-09T17:51:51.000Z"
+
+
+/*
+DiagnosticReport
+*/
+Instance: cPSO38IS2yaa
+InstanceOf: DiagnosticReport
+Usage: #inline
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+* status = #final
+* category = $loinc#LP29684-5 "Radiology"
+* category.text = "Radiology"
+* subject = Reference(QDvEOlUwS6BO)
+* effectiveDateTime = "2007-10-11T11:22:22.000Z"
+* conclusion = "STABLE"
+* presentedForm.contentType = #text/plain
+* presentedForm.data = "RXhhbWluYXRpb24gb2YgSm9pbnQgdW5kZXIgSW1hZ2UgSW50ZW5zaWZpZXI6CgpQcm9jZWR1cmU6IEV4YW1pbmF0aW9uIG9mIHRoZSBsZWZ0IHNob3VsZGVyIGpvaW50IHVuZGVyIGltYWdlIGludGVuc2lmaWVyIChYLXJheSkgd2FzIHBlcmZvcm1lZCB0byBldmFsdWF0ZSB0aGUgc3VzcGVjdGVkIHJvdGF0b3IgY3VmZiB0ZWFyLgoKRmluZGluZ3M6CgpUaGUgZXhhbWluYXRpb24gcmV2ZWFsZWQgdGhlIGZvbGxvd2luZyBmaW5kaW5nczoKClRoZSBqb2ludCBzcGFjZSB3YXMgbWFpbnRhaW5lZCwgd2l0aCBubyBldmlkZW5jZSBvZiBzaWduaWZpY2FudCBqb2ludCBlZmZ1c2lvbiBvciBzd2VsbGluZy4KVGhlIGh1bWVyYWwgaGVhZCBhbmQgZ2xlbm9pZCBjYXZpdHkgd2VyZSB2aXN1YWxpemVkLCBzaG93aW5nIGEgc21hbGwgZnJhY3R1cmUgb2YgdGhlIGdyZWF0ZXIgdHViZXJvc2l0eSBjb25zaXN0ZW50IHdpdGggYSByZWNlbnQgdHJhdW1hLgpUaGUgcm90YXRvciBjdWZmIHRlbmRvbnMgd2VyZSB2aXN1YWxpemVkLCBzaG93aW5nIHNpZ25zIG9mIGRlZ2VuZXJhdGl2ZSBjaGFuZ2VzIGFuZCBwYXJ0aWFsIHRlYXIgb2YgdGhlIHN1cHJhc3BpbmF0dXMgdGVuZG9uLgpUaGUgYWNyb21pb24gYW5kIGNvcmFjb2lkIHByb2Nlc3NlcyB3ZXJlIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBzaWduaWZpY2FudCBkZWdlbmVyYXRpdmUgY2hhbmdlcyBvciBmcmFjdHVyZXMuClRoZSBib25lIGRlbnNpdHkgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvc3Rlb3Bvcm9zaXMgb3Igb3RoZXIgYm9ueSBhYm5vcm1hbGl0aWVzLgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIGV4YW1pbmF0aW9uIHVuZGVyIGltYWdlIGludGVuc2lmaWVyLCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBhIHBhcnRpYWwgdGVhciBvZiB0aGUgc3VwcmFzcGluYXR1cyB0ZW5kb24gYW5kIGEgc21hbGwgZnJhY3R1cmUgb2YgdGhlIGdyZWF0ZXIgdHViZXJvc2l0eSBvZiB0aGUgaHVtZXJ1cywgbGlrZWx5IGR1ZSB0byBhIHJlY2VudCB0cmF1bWEuIFRoZSBkZWdlbmVyYXRpdmUgY2hhbmdlcyBpbiB0aGUgcm90YXRvciBjdWZmIHRlbmRvbnMgYXJlIGNvbnNpc3RlbnQgd2l0aCBhZ2UtcmVsYXRlZCB3ZWFyIGFuZCB0ZWFyLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBwaHlzaWNhbCB0aGVyYXB5IHRvIGltcHJvdmUgcmFuZ2Ugb2YgbW90aW9uIGFuZCBzdHJlbmd0aCBpbiB0aGUgbGVmdCBzaG91bGRlci4KQ29uc2lkZXIgZnVydGhlciBpbWFnaW5nIHN0dWRpZXMsIHN1Y2ggYXMgYW4gTVJJIG9yIENUIHNjYW4sIHRvIGZ1cnRoZXIgZXZhbHVhdGUgdGhlIGV4dGVudCBvZiB0aGUgcm90YXRvciBjdWZmIHRlYXIgYW5kIHRoZSBmcmFjdHVyZS4KQ29uc2lkZXIgcmVmZXJyYWwgdG8gYW4gb3J0aG9wZWRpYyBzcGVjaWFsaXN0IGZvciBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIHRyZWF0bWVudC4KU2lnbmF0dXJlOgoKRHIgWAo="
+* code = $sct#179929004 "Examination of joint under image intensifier (procedure)"
+* code.text = "Examination of joint under image intensifier (procedure)"
+
+Instance: 8JXaTa1YF0IX
+InstanceOf: DocumentReference
+Usage: #inline
+* status = #current
+* category = $us-core-documentreference-category#clinical-note "Clinical Note"
+* category.text = "Clinical Note"
+* type = $loinc#LP18648-3 "Pathology Report"
+* type.text = "Pathology Report"
+* content.attachment.contentType = #text/plain
+* content.attachment.data = "UHlsb3JpYyBzdHJpY3R1cmV+ICBiZW5pZ24gID9nYXN0cmljIHBvbHlwfiBmdW5kaWM/ICBOb2R1bGFyIGFwcGVhcmVuY2UgaW4gZGlzdGFsIG9lc29waGFndXM/IEEuIEJpb3BzeSB4IDIuICAgQi4gUHlsb3J1cyB4IDYuICBDLiBPZXNvcGhhZ3VzOiBCaW9wc3kgeCA0LiAgUHJlLWNhc3NldHRlZC4gWzNdbnIgQS4gU3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2EgYmlvcHN5IHNob3dpbmcgbm9ybWFsIGFwcGVhcmFuY2VzIHdpdGggbm8gZXZpZGVuY2Ugb2YgYWN0aXZlIGluZmxhbW1hdGlvbjsgZ3JhbnVsb21hczsgYXRyb3BoeTsgaW50ZXN0aW5hbCBtZXRhcGxhc2lhOyBkeXNwbGFzaWEgbm9yIG1hbGlnbmFuY3kuIEhlbGljb2JhY3RlciBweWxvcmktbGlrZSBvcmdhbmlzbXMgYXJlIGFic2VudCBvbiByb3V0aW5lIHN0YWluaW5nLiBEaWFnbm9zdGljIGZlYXR1cmVzIG9mIGZ1bmRpYyBnbGFuZCBwb2x5cCBhcmUgYWJzZW50LiAgICBCLiBOb24tc3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2FsIGJpb3BzaWVzIHNob3dpbmcgbW9kZXJhdGVseSBkaWZmZXJlbnRpYXRlZCBjYXJjaW5vbWEgd2l0aCBvY2Nhc2lvbmFsIHR1bW91ciBuZXN0cyB3aXRoaW4gdGhlIGxhbWluYSBwcm9wcmlhIGRpc3BsYXlpbmcgYSBtaWNyb3BhcGlsbGFyeSBhcmNoaXRlY3R1cmUuIEltbXVub3N0YWluaW5nIHJldmVhbHMgdHVtb3VyIGNlbGwgZXhwcmVzc2lvbiBvZiBDQS0xMjUgYW5kIFdULTEgKG9jY2FzaW9uYWwgY2VsbHMpIHdpdGggbmVnYXRpdmUgc3RhaW5pbmcgZm9yIENEWC0yLiBUaGVzZSBmZWF0dXJlcyBhcmUgaW4ga2VlcGluZyB3aXRoIG1ldGFzdGF0aWMgb3ZhcmlhbiBzZXJvdXMgcGFwaWxsYXJ5IGNhcmNpbm9tYS4gICAgIEMuIEJpb3BzaWVzIHNob3dpbmcgYSBwYXJ0aWFsbHkgY29sbGFwc2VkIG9lc29waGFnZWFsIGN5c3Qgd2l0aCBhIGJpbGF5ZXJlZCBsaW5pbmcuIFRoZXJlIGlzIGFsc28gYSBmcmFnbWVudCBvZiB1bGNlciBzbG91Z2ggbWF0ZXJpYWwuIEEuIEdBU1RSSUMgQklPUFNZOiBOTyBESUFHTk9TVElDIEZFQVRVUkVTIE9GIEZVTkRJQyBHTEFORCBQT0xZUCAgICBCLiBQWUxPUlVTIEJJT1BTSUVTOiBGRUFUVVJFUyBJTiBLRUVQSU5HIFdJVEggTUVUQVNUQVRJQyBPVkFSSUFOIFNFUk9VUyBQQVBJTExBUlkgQ0FSQ0lOT01BICAgIEMuIE9FU09QSEFHRUFMIEJJT1BTSUVTOiBPRVNPUEhBR0VBTCBDWVNUIFdJVEggRVZJREVOQ0UgT0YgVUxDRVJBVElPTg=="
+* subject = Reference(QDvEOlUwS6BO)
+* date = "2008-02-03T10:55:12.000Z"
+
+Instance: 8GD0ihYy5ahC
+InstanceOf: DocumentReference
+Usage: #inline
+* status = #current
+* category = $us-core-documentreference-category#clinical-note "Clinical Note"
+* category.text = "Clinical Note"
+* type = $loinc#LP18648-3 "Pathology Report"
+* type.text = "Pathology Report"
+* content.attachment.contentType = #text/plain
+* content.attachment.data = "U2hvcnQgcmVwb3J0IC0gdGhlcmUgd2lsbCBiZSBubyBBSSBmaW5kaW5n"
+* subject = Reference(QDvEOlUwS6BO)
+* date = "2008-04-10T10:55:12.000Z"
+
+Instance: yJDh6snbUS2z
+InstanceOf: DocumentReference
+Usage: #inline
+* identifier[0].system = "urn:oid:1.2.840.114350.1.13.0.1.7.2.727879"
+* identifier[=].value = "127883"
+* identifier[+].system = "urn:oid:1.2.840.114350.1.72.3.15"
+* identifier[=].value = "1.2.840.114350.1.13.0.1.7.2.727879_127883"
+* status = #current
+* docStatus = #final
+* type.coding[0] = urn:oid:1.2.840.114350.1.13.0.1.7.4.737880.5010#1 "Progress Notes"
+* type.coding[+] = urn:oid:1.2.840.114350.1.72.727879.69848980#1 "Progress Notes"
+* type.coding[+] = $loinc#11506-3 "Progress note"
+* type.coding[=].userSelected = true
+* type.text = "Progress Notes"
+* category = $us-core-documentreference-category#clinical-note "Clinical Note"
+* category.text = "Clinical Note"
+* subject = Reference(QDvEOlUwS6BO)
+* date = "2008-05-19T11:51:12.000Z"
+* securityLabel = $v3-ActCode#NOPAT "no disclosure to patient, family or caregivers without attending provider's authorization"
+* securityLabel.text = "no disclosure to patient, family or caregivers without attending provider's authorization"
+* content.attachment.contentType = #text/plain
+* content.attachment.data = "U2hvcnQgcmVwb3J0IC0gdGhlcmUgd2lsbCBiZSBubyBBSSBmaW5kaW5n"
+* context.extension.valueCodeableConcept = urn:oid:1.2.840.114350.1.13.0.1.7.4.836982.1040#1 "Physician"
+* context.extension.valueCodeableConcept.text = "Physician"
+* context.extension.url = "http://open.epic.com/FHIR/StructureDefinition/extension/clinical-note-author-provider-type"
+* context.period.start = "2008-05-19T11:51:12.000Z"
+
+Instance: W60OqtBq8imS
+InstanceOf: DocumentReference
+Usage: #inline
+* status = #current
+* docStatus = #final
+* type = $loinc#85231-9 "Tumor board Note"
+* type.text = "Tumor board Note"
+* category = $us-core-documentreference-category#clinical-note "Clinical Note"
+* category.text = "Clinical Note"
+* subject = Reference(QDvEOlUwS6BO)
+* date = "2008-07-07T11:51:12.000Z"
+* author = Reference(Practitioner/oB5eYSINJa30) "Dr. Bianca Matrey"
+* author.type = "Practitioner"
+* content.attachment.contentType = #text/plain
+* content.attachment.data = "UGxlYXNlIHdyaXRlIHdpdGggcmVzdWx0cyBhbmQgYXJyYW5nZSBmdXJ0aGVyIGNoZW1vdGhlcmFweS4gSURTIFJBRkMgMTMuMi4xNTogQXQgZW5kIG9mIG9wIG5vIGFzc2Vzc2FibGUgZGlzZWFzZS4gSGlzdG9sb2d5OiByZXNpZHVhbCBoaWdoIGdyYWRlIGRpc2Vhc2UuIFRyZWF0bWVudCBwbGFuOiBOZWVkcyBGVSBhcHBvaW50bWVudCBmb3IgZnVydGhlciBjaGVtb3RoZXJhcHkuCg=="
+
+Instance: 1EgxCRNLz40P
+InstanceOf: DocumentReference
+Usage: #inline
+* status = #current
+* docStatus = #final
+* type = $loinc#68602-2 "Radiation oncology Summary note"
+* type.text = "Radiation oncology Summary note"
+* category = $us-core-documentreference-category#clinical-note "Clinical Note"
+* category.text = "Clinical Note"
+* subject = Reference(QDvEOlUwS6BO)
+* date = "2009-10-07T11:09:00Z"
+* author = Reference(Practitioner/oB5eYSINJa30) "Dr. Bianca Matrey"
+* author.type = "Practitioner"
+* content.attachment.contentType = #text/plain
+* content.attachment.data = "RGVzY3JpcHRpb24gb2YgdHJlYXRtZW50IHByb2Nlc3MuCkRvc2VzIGRlbGl2ZXJlZC4KQXNzZXNzbWVudCBvZiB0b2xlcmFuY2Ugb2YgdHJlYXRtZW50LgpQcm9ncmVzcyB0b3dhcmQgdHJlYXRtZW50IGdvYWxzIChlZywgY29tcGxldGlvbiBvZiBjdXJhdGl2ZSBjb3Vyc2Ugb2YgdHJlYXRtZW50IG9yIHN5bXB0b21hdGljIGltcHJvdmVtZW50IGR1cmluZyBwYWxsaWF0aXZlIGNvdXJzZSBvZiB0cmVhdG1lbnQpLgpTdWJzZXF1ZW50IGNhcmUgcGxhbnMuCg=="
+
+Instance: Ok1wf2cy2S8Z
+InstanceOf: DiagnosticReport
+Usage: #inline
+* status = #final
+* category = $loinc#LP29684-5 "Radiology"
+* category.text = "Radiology"
+* subject = Reference(Patient/QDvEOlUwS6BO)
+* effectiveDateTime = "2008-03-15T10:09:00Z"
+* conclusion = "STABLE"
+* presentedForm.contentType = #text/plain
+* presentedForm.data = "b3ZhcmlhbiBjYW5jZXIgd2l0aCBwZXJpdG9uZWFsIGRpc2Vhc2UuIGZhZWNhbCB2b21pdGluZywgZW1wdHkgcmVjdHVtLiA/ZGlzZWFzZSBwcm9ncmVzc2lvbiA/c3ViYWN1dGUgYm93ZWwgb2JzdHJ1Y3Rpb24gdW5lbmhhbmNlZCBpbWFnZXMgYWNxdWlyZWQgZHVlIHRvIHBvb3IgcmVuYWwgZnVuY3Rpb24uIGNvbXBhcmlzb24gbWFkZSB3aXRoIHByZXZpb3VzIGN0IGRhdGVkIDI0IDExIDE0LiBubyBzaWduaWZpY2FudCBpbnRlcnZhbCBjaGFuZ2UgaW4gdGhlIGxvY3VsYXRlZCBhc2NpdGVzIHdpdGhpbiB0aGUgcGVsdmlzLiByaWdodCBoeWRyb25lcGhyb3NpcyB1bmNoYW5nZWQuIGN5c3RzIHdpdGhpbiB0aGUgbGl2ZXIgYW5kIGxlZnQga2lkbmV5IG5vdGVkLiB0aGVyZSBoYXMgYmVlbiBubyBzaWduaWZpY2FudCBpbnRlcnZhbCBjaGFuZ2UgaW4gdGhlIHBlcml0b25lYWwgZGlzZWFzZSBzZWVuIHRocm91Z2hvdXQgdGhlIGFiZG9tZW4gYW5kIHBlbHZpcy4gMTAgbW0gYW9ydG9jYXZhbCBseW1waCBub2RlIGlzIHVuY2hhbmdlZC4gbm8gb3RoZXIgbmV3IGVubGFyZ2VkIGFiZG9taW5hbCBvciBwZWx2aWMgbHltcGggbm9kZXMuIHRoZSBzdG9tYWNoIGlzIGZsdWlkLS1maWxsZWQgYW5kIHNsaWdodGx5IGRpc3RvcnRlZC4gcGFydGlhbGx5IGNhbGNpZmllZCBzZXJvc2FsIGRpc2Vhc2UgaXMgc2VlbiB3aXRoaW4gdGhlIGxlc3NlciBzYWMuIHRoZSBweWxvcnVzIGFwcGVhcnMgYnVsa3ksIHdoaWNoIHh4eCByZXByZXNlbnQgZnVydGhlciBzZXJvc2FsIGRpc2Vhc2UgYXQgdGhpcyBzaXRlLCBidXQgdGhpcyBpcyBhZ2FpbiB1bmNoYW5nZWQgc2luY2Ugbm92ZW1iZXIuIHRoZSBzbWFsbCBhbmQgbGFyZ2UgYm93ZWwgYXJlIG9mIG5vcm1hbCBjYWxpYnJlLiBtaW5vciBhdGVsZWN0YXNpcyBpbiB0aGUgbHVuZyBiYXNlcy4gbm8gcGxldXJhbCBlZmZ1c2lvbi4gbm8gc3VzcGljaW91cyBmb2NhbCBib25lIGxlc2lvbi4gQ09OQ0xVU0lPTiAgc3RhYmxlIGRpc2Vhc2UuIGZsdWlkLS1maWxsZWQgc3RvbWFjaCB3aXRoIHNlcm9zYWwgZGlzZWFzZS4gdGhpY2tlbmVkIHB5bG9ydXMgeHh4IHJlcHJlc2VudCBmdXJ0aGVyIGRpc2Vhc2UgYXQgdGhpcyBzaXRlLiBubyBzbWFsbC0tYm93ZWwgb2JzdHJ1Y3Rpb24u"
+* code = $loinc#16457501000119102 "CT ABDOMEN AND PELVIS"
+* code.text = "CT ABDOMEN AND PELVIS"
+* imagingStudy = Reference(xUxDEwF8ctOP)
+* result = Reference(CHEcFw8R55Wn)
+/*** Imaging study for DiagnosticReport Ok1wf2cy2S8Z ***/
+Instance: xUxDEwF8ctOP
+InstanceOf: ImagingStudy
+Usage: #inline
+* identifier.use = #usual
+* identifier.type = $v2-0203#ACSN
+* identifier.value = "11567660_img"
+* status = #available
+* reasonCode.text = "Ovarian cancer with peritoneal disease. Faecal vomiting, empty rectum. ?Disease progression ?subacute bowel obstruction"
+* subject = Reference(Patient/QDvEOlUwS6BO)
+/*** Observation for DiagnosticReport Ok1wf2cy2S8Z ***/
+Instance: CHEcFw8R55Wn
+InstanceOf: Observation
+Usage: #inline
+* status = #final
+* code = $loinc#18782-3 "Radiology Study observation (narrative)"
+* code.text = "Findings"
+* subject = Reference(Patient/QDvEOlUwS6BO)
+* bodySite = $sct#818983003/277113001//// "Multisection^WO contrast:Find:Pt:Abdomen+Pelvis:Doc:CT/Abdomen�/Pelvis�////"
+* valueString = "STABLE"
+
+Instance: oya6SdDhLnFJ
+InstanceOf: DiagnosticReport
+Usage: #inline
+* status = #final
+* category = $loinc#LP29684-5 "Radiology"
+* category.text = "Radiology"
+* subject = Reference(Patient/QDvEOlUwS6BO)
+* effectiveDateTime = "2008-04-15T10:09:00Z"
+* conclusion = "STABLE"
+* code = $loinc#16457501000119102 "CT ABDOMEN AND PELVIS 2"
+* code.text = "CT ABDOMEN AND PELVIS 2"
+
+
+/*** Future events: should not be displayed in table "Since last oncology encounter" */
+
+Instance: 90Sxlxln2Ehw
+InstanceOf: ServiceRequest
+Usage: #inline
+* status = #active
+* intent = #order
+* category = $sct#409063005 "Counselling"
+* code = $codesystem-service-type.html#214 "Radiation Oncology"
+* subject = Reference(Patient/QDvEOlUwS6BO)
+* occurrenceDateTime = "2035-06-15T11:11:11.000Z"
+
+Instance: eI7Mze7warB1
+InstanceOf: ServiceRequest
+Usage: #inline
+* status = #active
+* intent = #order
+* category = $sct#108252007 "Laboratory procedure"
+* code = $sct#63476009 "Prostate specific antigen measurement"
+* code.text = "PSA measurement"
+* subject = Reference(Patient/QDvEOlUwS6BO)
+* occurrenceDateTime = "2035-06-15T11:11:11.000Z"
+
+/***********************************************************************************************************/
+
+/*
+Practitioner
+*/
+Instance: oB5eYSINJa30
+InstanceOf: Practitioner
+Usage: #inline
+* active = true
+* name.family = "Matrey"
+* name.given = "Bianca"
+* name.prefix = "Dr."
+* telecom.system = #email
+* telecom.value = "Bianca.Matrey@testhopsital.com"
+* address.line = "421 MERRIMACK ST"
+* address.city = "METHUEN"
+* address.state = "MA"
+* address.postalCode = "01844-5865"
+* address.country = "US"
+* gender = #female

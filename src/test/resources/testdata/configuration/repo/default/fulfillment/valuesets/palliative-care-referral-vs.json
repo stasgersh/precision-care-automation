@@ -1,0 +1,24 @@
+{
+  "name": "palliative-care-referral-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "palliative-care-referral-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "306237005",
+              "display": "Referral to palliative care service"
+            },
+            {
+              "code": "306288008",
+              "display": "Referral to palliative care physician"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

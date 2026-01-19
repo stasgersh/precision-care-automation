@@ -1,0 +1,28 @@
+{
+  "name": "tnm-staging-group-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "tnm-staging-group-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "399390009",
+              "display": "TNM stage grouping"
+            },
+            {
+              "code": "399537006",
+              "display": "Clinical TNM stage grouping (observable entity)"
+            },
+            {
+              "code": "399588009",
+              "display": "Pathologic TNM stage grouping (observable entity)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

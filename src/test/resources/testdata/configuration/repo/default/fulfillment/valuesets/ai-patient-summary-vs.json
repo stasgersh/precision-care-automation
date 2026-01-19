@@ -1,0 +1,20 @@
+{
+  "name": "ai-patient-summary-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "ai-patient-summary-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "60591-5",
+              "display": "Patient Summary Document"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

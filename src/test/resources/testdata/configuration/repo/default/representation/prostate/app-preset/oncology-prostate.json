@@ -1,0 +1,45 @@
+{
+  "id": "oncology.prostate",
+  "banner": {
+    "representationId": "patientBanner.onco.prostate",
+    "querySetId": "patientProfile.onco.prostate"
+  },
+  "dashboards": {
+    "timeline": {
+      "representationId": "timeline.onco.prostate",
+      "querySetId": "timeline.onco.prostate"
+    },
+    "summary": {
+      "main": {
+        "representationId": "summary.onco.prostate",
+        "querySetId": "summary.onco.prostate"
+      },
+      "recentEvents": {
+        "representationId": "recentEvents.onco.general",
+        "querySetId": "recentEvents.onco.general"
+      }
+    },
+    "medicalHistory": {
+      "representationId": "medicalHistory.onco.general",
+      "querySetId": "medicalHistory.onco.general"
+    },
+    "trends": {
+      "representationId": "trend.onco.prostate",
+      "querySetId": "trend.onco.prostate"
+    },
+    "treatmentResponse": {
+      "imagingSelector": {
+        "representationId": "imagingStudy.onco.general",
+        "querySetId": "imagingReports.onco.general"
+      },
+      "main": {
+        "representationId": "treatmentResponse.onco.general",
+        "querySetId": "treatmentResponse.onco.prostate"
+      },
+      "charts": {
+        "representationId": "treatmentResponseChartMarkers.onco.general",
+        "querySetId": "treatmentResponse.onco.prostate"
+      }
+    }
+  }
+}

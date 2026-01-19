@@ -1,0 +1,897 @@
+{
+  "name": "biopsy-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "biopsy-procedure-vs",
+    "description": "Snomed: all concepts which is-a 86273004|Biopsy (procedure)",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "86273004",
+              "display": "Biopsy (procedure)"
+            },
+            {
+              "code": "240007",
+              "display": "Biopsy of scent gland (procedure)"
+            },
+            {
+              "code": "3748003",
+              "display": "Biopsy of perirenal tissue (procedure)"
+            },
+            {
+              "code": "5337005",
+              "display": "Trocar biopsy (procedure)"
+            },
+            {
+              "code": "7246002",
+              "display": "Kidney biopsy (procedure)"
+            },
+            {
+              "code": "8736003",
+              "display": "Biopsy of hoof (procedure)"
+            },
+            {
+              "code": "8889005",
+              "display": "Excisional biopsy (procedure)"
+            },
+            {
+              "code": "12125008",
+              "display": "Vaginal biopsy (procedure)"
+            },
+            {
+              "code": "12324002",
+              "display": "Exploratory laparotomy with biopsy (procedure)"
+            },
+            {
+              "code": "13861005",
+              "display": "Biopsy of bone (procedure)"
+            },
+            {
+              "code": "14316006",
+              "display": "Biopsy of skin of forefoot (procedure)"
+            },
+            {
+              "code": "15955009",
+              "display": "Intrauterine biopsy of fetus (procedure)"
+            },
+            {
+              "code": "16091007",
+              "display": "Biopsy of forelimb (procedure)"
+            },
+            {
+              "code": "16299004",
+              "display": "Pharyngeal biopsy (procedure)"
+            },
+            {
+              "code": "21331002",
+              "display": "Arthrotomy of knee with joint exploration and biopsy (procedure)"
+            },
+            {
+              "code": "24788003",
+              "display": "Biopsy of thyroid (procedure)"
+            },
+            {
+              "code": "25302008",
+              "display": "Biopsy of iris (procedure)"
+            },
+            {
+              "code": "25732003",
+              "display": "Fiberoptic colonoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "26058004",
+              "display": "Thoracoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "29481005",
+              "display": "Biopsy of peritoneum (procedure)"
+            },
+            {
+              "code": "29532006",
+              "display": "Proctoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "31232000",
+              "display": "Biopsy of trachea (procedure)"
+            },
+            {
+              "code": "31343006",
+              "display": "Biopsy of salivary gland (procedure)"
+            },
+            {
+              "code": "32218000",
+              "display": "Biopsy of esophagus (procedure)"
+            },
+            {
+              "code": "32534001",
+              "display": "Biopsy of spleen (procedure)"
+            },
+            {
+              "code": "32578005",
+              "display": "Biopsy of appendix (procedure)"
+            },
+            {
+              "code": "32774009",
+              "display": "Biopsy of pancreas (procedure)"
+            },
+            {
+              "code": "34633002",
+              "display": "Biopsy of blood vessel (procedure)"
+            },
+            {
+              "code": "36503003",
+              "display": "Biopsy of bladder (procedure)"
+            },
+            {
+              "code": "40794008",
+              "display": "Biopsy of muzzle (procedure)"
+            },
+            {
+              "code": "41041000",
+              "display": "Diagnostic arthroscopy of wrist with synovial biopsy (procedure)"
+            },
+            {
+              "code": "44479004",
+              "display": "Biopsy of skin of hindfoot (procedure)"
+            },
+            {
+              "code": "44716001",
+              "display": "Biopsy of cornea (procedure)"
+            },
+            {
+              "code": "45334006",
+              "display": "Mediastinoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "45603003",
+              "display": "Biopsy of perianal tissue (procedure)"
+            },
+            {
+              "code": "45681003",
+              "display": "Staging operation involving incision, exploration and biopsy (procedure)"
+            },
+            {
+              "code": "48508003",
+              "display": "Biopsy of bile ducts (procedure)"
+            },
+            {
+              "code": "48635004",
+              "display": "Fine needle biopsy (procedure)"
+            },
+            {
+              "code": "49397006",
+              "display": "Biopsy of claw (procedure)"
+            },
+            {
+              "code": "50369003",
+              "display": "Transconjunctival biopsy of orbit (procedure)"
+            },
+            {
+              "code": "50590007",
+              "display": "Trephine biopsy (procedure)"
+            },
+            {
+              "code": "53767003",
+              "display": "Endoscopic biopsy (procedure)"
+            },
+            {
+              "code": "55071005",
+              "display": "Biopsy of intestine (procedure)"
+            },
+            {
+              "code": "55198006",
+              "display": "Bronchoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "55221000",
+              "display": "Deep biopsy of muscle (procedure)"
+            },
+            {
+              "code": "56031009",
+              "display": "Biopsy of gallbladder (procedure)"
+            },
+            {
+              "code": "56241004",
+              "display": "Bone marrow biopsy, needle or trocar (procedure)"
+            },
+            {
+              "code": "56402004",
+              "display": "Biopsy of mucous membrane (procedure)"
+            },
+            {
+              "code": "58587002",
+              "display": "Diagnostic culdoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "59046001",
+              "display": "Laryngotracheobronchoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "59734008",
+              "display": "Biopsy of eyeball and orbit (procedure)"
+            },
+            {
+              "code": "60060005",
+              "display": "Biopsy of extraocular tendon (procedure)"
+            },
+            {
+              "code": "61339001",
+              "display": "Catheterization with bronchial brush biopsy (procedure)"
+            },
+            {
+              "code": "63185002",
+              "display": "Laparoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "65575008",
+              "display": "Biopsy of prostate (procedure)"
+            },
+            {
+              "code": "65597005",
+              "display": "Biopsy of snout (procedure)"
+            },
+            {
+              "code": "66300009",
+              "display": "Biopsy of thymus (procedure)"
+            },
+            {
+              "code": "67949002",
+              "display": "Maxillary sinus endoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "68660007",
+              "display": "Punch biopsy (procedure)"
+            },
+            {
+              "code": "70871006",
+              "display": "Incisional biopsy (procedure)"
+            },
+            {
+              "code": "72342005",
+              "display": "Shave biopsy (procedure)"
+            },
+            {
+              "code": "75016008",
+              "display": "Biopsy of soft tissue (procedure)"
+            },
+            {
+              "code": "75593005",
+              "display": "Laparoscopy with guided transhepatic cholangiography and biopsy (procedure)"
+            },
+            {
+              "code": "77067007",
+              "display": "Biopsy of external auditory canal (procedure)"
+            },
+            {
+              "code": "77337009",
+              "display": "Stereotactic biopsy by aspiration of intracranial lesion (procedure)"
+            },
+            {
+              "code": "78603008",
+              "display": "Biopsy of lung (procedure)"
+            },
+            {
+              "code": "80368003",
+              "display": "Sphenoid sinusotomy with biopsy (procedure)"
+            },
+            {
+              "code": "81179008",
+              "display": "Fiberoptic ileoscopy through stoma with biopsy (procedure)"
+            },
+            {
+              "code": "83328003",
+              "display": "Biopsy of umbilicus (procedure)"
+            },
+            {
+              "code": "83686007",
+              "display": "Proctosigmoidoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "84594003",
+              "display": "Gas endarterectomy of aorta (procedure)"
+            },
+            {
+              "code": "84668001",
+              "display": "Biopsy of abdominal wall (procedure)"
+            },
+            {
+              "code": "84985001",
+              "display": "Biopsy of perineum (procedure)"
+            },
+            {
+              "code": "86259008",
+              "display": "Biopsy of liver (procedure)"
+            },
+            {
+              "code": "86302006",
+              "display": "Biopsy of cloaca (procedure)"
+            },
+            {
+              "code": "87007003",
+              "display": "Indirect laryngoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "87387006",
+              "display": "Fiberoptic bronchoscopy with biopsy of bronchus (procedure)"
+            },
+            {
+              "code": "87451000",
+              "display": "Biopsy of parathyroid gland (procedure)"
+            },
+            {
+              "code": "88346007",
+              "display": "Biopsy of hindlimb (procedure)"
+            },
+            {
+              "code": "88701008",
+              "display": "Diagnostic arthroscopy of elbow with synovial biopsy (procedure)"
+            },
+            {
+              "code": "90807000",
+              "display": "Biopsy of lymphatic structure (procedure)"
+            },
+            {
+              "code": "112703008",
+              "display": "Superficial biopsy of muscle (procedure)"
+            },
+            {
+              "code": "116025006",
+              "display": "Biopsy of pleura (procedure)"
+            },
+            {
+              "code": "119283008",
+              "display": "Open biopsy (procedure)"
+            },
+            {
+              "code": "119285001",
+              "display": "Biopsy of uterus (procedure)"
+            },
+            {
+              "code": "119290003",
+              "display": "Biopsy of gastrointestinal tract (procedure)"
+            },
+            {
+              "code": "122478003",
+              "display": "Synovial biopsy (procedure)"
+            },
+            {
+              "code": "122547000",
+              "display": "Biopsy of upper aerodigestive tract (procedure)"
+            },
+            {
+              "code": "122548005",
+              "display": "Biopsy of breast (procedure)"
+            },
+            {
+              "code": "125675003",
+              "display": "Patella excision (procedure)"
+            },
+            {
+              "code": "128393005",
+              "display": "Biopsy of ear (procedure)"
+            },
+            {
+              "code": "128413008",
+              "display": "Biopsy of male genital system (procedure)"
+            },
+            {
+              "code": "128414002",
+              "display": "Biopsy of female genital system (procedure)"
+            },
+            {
+              "code": "129110009",
+              "display": "Exploration of retroperitoneal area with biopsy (procedure)"
+            },
+            {
+              "code": "129249002",
+              "display": "Needle biopsy (procedure)"
+            },
+            {
+              "code": "171612001",
+              "display": "Biopsy of nerve (procedure)"
+            },
+            {
+              "code": "171958003",
+              "display": "Biopsy of lesion of pituitary gland (procedure)"
+            },
+            {
+              "code": "171983003",
+              "display": "Biopsy of lesion of thyroglossal tract (procedure)"
+            },
+            {
+              "code": "172171003",
+              "display": "Biopsy of orbital lesion (procedure)"
+            },
+            {
+              "code": "172277007",
+              "display": "Biopsy of lesion of eyelid (procedure)"
+            },
+            {
+              "code": "172288001",
+              "display": "Biopsy of lesion of lacrimal gland (procedure)"
+            },
+            {
+              "code": "172299004",
+              "display": "Biopsy of lesion of lacrimal sac (procedure)"
+            },
+            {
+              "code": "172497000",
+              "display": "Biopsy of lesion of iris (procedure)"
+            },
+            {
+              "code": "172547002",
+              "display": "Biopsy of lesion of lens (procedure)"
+            },
+            {
+              "code": "172705004",
+              "display": "Biopsy of lesion of middle ear (procedure)"
+            },
+            {
+              "code": "172783009",
+              "display": "Biopsy of lesion of external nose (procedure)"
+            },
+            {
+              "code": "172792007",
+              "display": "Biopsy of lesion of nasal septum (procedure)"
+            },
+            {
+              "code": "172804008",
+              "display": "Biopsy of lesion of nasal turbinate (procedure)"
+            },
+            {
+              "code": "172972009",
+              "display": "Diagnostic endoscopic examination and biopsy of nasopharynx (procedure)"
+            },
+            {
+              "code": "172974005",
+              "display": "Diagnostic endoscopic examination and biopsy of oropharynx (procedure)"
+            },
+            {
+              "code": "172976007",
+              "display": "Endoscopic examination and biopsy of hypopharynx (procedure)"
+            },
+            {
+              "code": "173345004",
+              "display": "Biopsy of lesion of gingiva (procedure)"
+            },
+            {
+              "code": "173820007",
+              "display": "Fiberoptic endoscopic examination of upper gastrointestinal tract and biopsy of lesion of upper gastrointestinal tract (procedure)"
+            },
+            {
+              "code": "175189006",
+              "display": "Pericardial biopsy (procedure)"
+            },
+            {
+              "code": "175962002",
+              "display": "Nephroscopy and biopsy of renal lesion (procedure)"
+            },
+            {
+              "code": "176044002",
+              "display": "Open biopsy of ureteric lesion (procedure)"
+            },
+            {
+              "code": "176347000",
+              "display": "Open biopsy of urethral lesion (procedure)"
+            },
+            {
+              "code": "176365001",
+              "display": "Diagnostic urethroscopy and biopsy (procedure)"
+            },
+            {
+              "code": "178025000",
+              "display": "Biopsy of abdominal mass (procedure)"
+            },
+            {
+              "code": "178026004",
+              "display": "Biopsy of pelvic mass (procedure)"
+            },
+            {
+              "code": "178085002",
+              "display": "Biopsy of lesion of fascia (procedure)"
+            },
+            {
+              "code": "178121006",
+              "display": "Biopsy of lesion of bursa (procedure)"
+            },
+            {
+              "code": "178204006",
+              "display": "Biopsy of lesion of tendon sheath (procedure)"
+            },
+            {
+              "code": "178263003",
+              "display": "Biopsy of muscle (procedure)"
+            },
+            {
+              "code": "178264009",
+              "display": "Biopsy of neuromuscular junction (procedure)"
+            },
+            {
+              "code": "179814000",
+              "display": "Biopsy of lesion of ligament (procedure)"
+            },
+            {
+              "code": "184153002",
+              "display": "Biopsy of inner ear (procedure)"
+            },
+            {
+              "code": "193845004",
+              "display": "Excisional biopsy of conjunctiva (procedure)"
+            },
+            {
+              "code": "194930002",
+              "display": "Transurethral excisional biopsy of ureter (procedure)"
+            },
+            {
+              "code": "195801001",
+              "display": "Cystourethroscopy with biopsy of ureter (procedure)"
+            },
+            {
+              "code": "196308007",
+              "display": "Biopsy of eyelid (procedure)"
+            },
+            {
+              "code": "197076005",
+              "display": "Excisional biopsy of lacrimal gland (procedure)"
+            },
+            {
+              "code": "197922007",
+              "display": "Biopsy of lacrimal gland (procedure)"
+            },
+            {
+              "code": "198658004",
+              "display": "Biopsy of nail bed (procedure)"
+            },
+            {
+              "code": "202568006",
+              "display": "Biopsy of lacrimal sac (procedure)"
+            },
+            {
+              "code": "213079008",
+              "display": "Biopsy of thorax (procedure)"
+            },
+            {
+              "code": "214084009",
+              "display": "Excisional biopsy of skull (procedure)"
+            },
+            {
+              "code": "215103005",
+              "display": "Biopsy of skull (procedure)"
+            },
+            {
+              "code": "217136007",
+              "display": "Biopsy of urethra (procedure)"
+            },
+            {
+              "code": "222287008",
+              "display": "Excisional biopsy of muscle (procedure)"
+            },
+            {
+              "code": "228054008",
+              "display": "Excisional biopsy of joint structure (procedure)"
+            },
+            {
+              "code": "229013007",
+              "display": "Biopsy of joint structure (procedure)"
+            },
+            {
+              "code": "230842002",
+              "display": "Biopsy of brain tissue (procedure)"
+            },
+            {
+              "code": "230889000",
+              "display": "Biopsy of lesion of ventricle of brain (procedure)"
+            },
+            {
+              "code": "231559005",
+              "display": "Biopsy of lesion of globe (procedure)"
+            },
+            {
+              "code": "231702007",
+              "display": "Biopsy of eye muscle (procedure)"
+            },
+            {
+              "code": "231754002",
+              "display": "Biopsy of vitreous (procedure)"
+            },
+            {
+              "code": "231787003",
+              "display": "Biopsy of lesion of choroid (procedure)"
+            },
+            {
+              "code": "232495003",
+              "display": "Biopsy of lesion of internal nose (procedure)"
+            },
+            {
+              "code": "232571002",
+              "display": "Biopsy of lesion of larynx (procedure)"
+            },
+            {
+              "code": "233463008",
+              "display": "Biopsy of vein (procedure)"
+            },
+            {
+              "code": "235413000",
+              "display": "Biopsy using mesh-covered balloon (procedure)"
+            },
+            {
+              "code": "235577006",
+              "display": "Brush biopsy of bile and pancreatic ducts (procedure)"
+            },
+            {
+              "code": "237375003",
+              "display": "Breast biopsy and related procedures (procedure)"
+            },
+            {
+              "code": "237388000",
+              "display": "Biopsy of mastectomy scar (procedure)"
+            },
+            {
+              "code": "238305001",
+              "display": "Biopsy of lesion of peritoneal cavity (procedure)"
+            },
+            {
+              "code": "238362000",
+              "display": "Biopsy of mass in the neck (procedure)"
+            },
+            {
+              "code": "239224008",
+              "display": "Biopsy of lesion of ganglion (procedure)"
+            },
+            {
+              "code": "239544001",
+              "display": "Biopsy of intervertebral disc (procedure)"
+            },
+            {
+              "code": "240977001",
+              "display": "Biopsy of skin (procedure)"
+            },
+            {
+              "code": "244604004",
+              "display": "Biopsy of nail (procedure)"
+            },
+            {
+              "code": "274312009",
+              "display": "Non-surgical biopsy (procedure)"
+            },
+            {
+              "code": "274315006",
+              "display": "Biopsy by superficial smear (procedure)"
+            },
+            {
+              "code": "274317003",
+              "display": "Laryngoscopic biopsy larynx (procedure)"
+            },
+            {
+              "code": "274330002",
+              "display": "Surgical biopsy (procedure)"
+            },
+            {
+              "code": "274335007",
+              "display": "Surgical biopsy of nervous system (procedure)"
+            },
+            {
+              "code": "274369008",
+              "display": "Endocrine surgical biopsy (procedure)"
+            },
+            {
+              "code": "274371008",
+              "display": "Biopsy of adrenal gland (procedure)"
+            },
+            {
+              "code": "274373006",
+              "display": "Biopsy of artery (procedure)"
+            },
+            {
+              "code": "274942001",
+              "display": "Biopsy of vulva (procedure)"
+            },
+            {
+              "code": "276191006",
+              "display": "Biopsy of chest wall (procedure)"
+            },
+            {
+              "code": "277590007",
+              "display": "Imaging guided biopsy (procedure)"
+            },
+            {
+              "code": "284065000",
+              "display": "Biopsy of lesion of cheek (procedure)"
+            },
+            {
+              "code": "287486001",
+              "display": "Endoscopic ureter biopsy (procedure)"
+            },
+            {
+              "code": "287953005",
+              "display": "Intrauterine fetal biopsy (procedure)"
+            },
+            {
+              "code": "301793006",
+              "display": "Biopsy of lump of axilla (procedure)"
+            },
+            {
+              "code": "302331006",
+              "display": "Biopsy of brain meninges (procedure)"
+            },
+            {
+              "code": "302332004",
+              "display": "Biopsy of spinal cord tissue (procedure)"
+            },
+            {
+              "code": "302381002",
+              "display": "Placental biopsy (procedure)"
+            },
+            {
+              "code": "302464005",
+              "display": "Biopsy of lesion of tendon (procedure)"
+            },
+            {
+              "code": "303636000",
+              "display": "Conjunctival biopsy (procedure)"
+            },
+            {
+              "code": "303644000",
+              "display": "Biopsy of meninges of spinal cord (procedure)"
+            },
+            {
+              "code": "304502009",
+              "display": "Biopsy of mouth (procedure)"
+            },
+            {
+              "code": "307099006",
+              "display": "Biopsy of spine (procedure)"
+            },
+            {
+              "code": "307822008",
+              "display": "Endoscopic trachea biopsy (procedure)"
+            },
+            {
+              "code": "308442009",
+              "display": "Intranasal antrostomy and biopsy of maxillary antrum (procedure)"
+            },
+            {
+              "code": "309871009",
+              "display": "Ureterorenoscopy and biopsy (procedure)"
+            },
+            {
+              "code": "311547000",
+              "display": "Biopsy of joint structure of shoulder (procedure)"
+            },
+            {
+              "code": "312849006",
+              "display": "Biopsy of bronchus (procedure)"
+            },
+            {
+              "code": "362994003",
+              "display": "Biopsy of immune system structure (procedure)"
+            },
+            {
+              "code": "362995002",
+              "display": "Biopsy of urinary tract (procedure)"
+            },
+            {
+              "code": "363208009",
+              "display": "Musculoskeletal system biopsy (procedure)"
+            },
+            {
+              "code": "372267008",
+              "display": "Biopsy of extrahepatic bile duct (procedure)"
+            },
+            {
+              "code": "396225009",
+              "display": "Sigmoidoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "410479002",
+              "display": "Chorioretinal biopsy (procedure)"
+            },
+            {
+              "code": "413650000",
+              "display": "Biopsy of nose (procedure)"
+            },
+            {
+              "code": "417983008",
+              "display": "Fluoroscopy and biopsy of thorax (procedure)"
+            },
+            {
+              "code": "419341002",
+              "display": "Computed tomography and biopsy of pelvis (procedure)"
+            },
+            {
+              "code": "419352008",
+              "display": "Fluoroscopy and drainage of thorax (procedure)"
+            },
+            {
+              "code": "419552007",
+              "display": "Fluoroscopy and biopsy of pelvis (procedure)"
+            },
+            {
+              "code": "419940006",
+              "display": "Computed tomography and biopsy of abdomen (procedure)"
+            },
+            {
+              "code": "420036006",
+              "display": "Computed tomography and biopsy of neck (procedure)"
+            },
+            {
+              "code": "420041003",
+              "display": "Ultrasound scan and biopsy of pelvis (procedure)"
+            },
+            {
+              "code": "420043000",
+              "display": "Fluoroscopy and biopsy of abdomen (procedure)"
+            },
+            {
+              "code": "420199004",
+              "display": "Computed tomography and biopsy of upper abdomen (procedure)"
+            },
+            {
+              "code": "427337008",
+              "display": "Biopsy of tendon (procedure)"
+            },
+            {
+              "code": "429883000",
+              "display": "Biopsy of cartilage (procedure)"
+            },
+            {
+              "code": "429893007",
+              "display": "Biopsy of ligament (procedure)"
+            },
+            {
+              "code": "430112000",
+              "display": "Biopsy of meninges (procedure)"
+            },
+            {
+              "code": "430123001",
+              "display": "Biopsy of fetus (procedure)"
+            },
+            {
+              "code": "430203005",
+              "display": "Biopsy of eye region (procedure)"
+            },
+            {
+              "code": "430215009",
+              "display": "Biopsy of head and neck structure (procedure)"
+            },
+            {
+              "code": "430223006",
+              "display": "Biopsy of upper limb (procedure)"
+            },
+            {
+              "code": "430230000",
+              "display": "Biopsy of trunk (procedure)"
+            },
+            {
+              "code": "430233003",
+              "display": "Biopsy of lower limb (procedure)"
+            },
+            {
+              "code": "431708009",
+              "display": "Biopsy of unspecified body site (procedure)"
+            },
+            {
+              "code": "439336003",
+              "display": "Brush biopsy (procedure)"
+            },
+            {
+              "code": "445772004",
+              "display": "Biopsy of skin and/or subcutaneous tissue (procedure)"
+            },
+            {
+              "code": "446500004",
+              "display": "Biopsy of ulcer (procedure)"
+            },
+            {
+              "code": "709583005",
+              "display": "Biopsy of limb (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

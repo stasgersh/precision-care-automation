@@ -1,0 +1,39 @@
+{
+    "resourceType": "DocumentReference",
+    "id": "f672ba07-405d-4146-890a-50906a1f5d45",
+    "status": "current",
+    "category": [
+      {
+        "coding": [
+          {
+            "code": "clinical-note",
+            "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+            "display": "Clinical Note"
+          }
+        ],
+        "text": "Clinical Note"
+      }
+    ],
+    "type": {
+      "coding": [
+        {
+          "code": "LP18648-3",
+          "system": "http://loinc.org",
+          "display": "Pathology Report"
+        }
+      ],
+      "text": "Pathology Report"
+    },
+    "content": [
+      {
+        "attachment": {
+          "contentType": "text/plain",
+          "data": "UHlsb3JpYyBzdHJpY3R1cmV+ICBiZW5pZ24gID9nYXN0cmljIHBvbHlwfiBmdW5kaWM/ICBOb2R1bGFyIGFwcGVhcmVuY2UgaW4gZGlzdGFsIG9lc29waGFndXM/IEEuIEJpb3BzeSB4IDIuICAgQi4gUHlsb3J1cyB4IDYuICBDLiBPZXNvcGhhZ3VzOiBCaW9wc3kgeCA0LiAgUHJlLWNhc3NldHRlZC4gWzNdbnIgQS4gU3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2EgYmlvcHN5IHNob3dpbmcgbm9ybWFsIGFwcGVhcmFuY2VzIHdpdGggbm8gZXZpZGVuY2Ugb2YgYWN0aXZlIGluZmxhbW1hdGlvbjsgZ3JhbnVsb21hczsgYXRyb3BoeTsgaW50ZXN0aW5hbCBtZXRhcGxhc2lhOyBkeXNwbGFzaWEgbm9yIG1hbGlnbmFuY3kuIEhlbGljb2JhY3RlciBweWxvcmktbGlrZSBvcmdhbmlzbXMgYXJlIGFic2VudCBvbiByb3V0aW5lIHN0YWluaW5nLiBEaWFnbm9zdGljIGZlYXR1cmVzIG9mIGZ1bmRpYyBnbGFuZCBwb2x5cCBhcmUgYWJzZW50LiAgICBCLiBOb24tc3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2FsIGJpb3BzaWVzIHNob3dpbmcgbW9kZXJhdGVseSBkaWZmZXJlbnRpYXRlZCBjYXJjaW5vbWEgd2l0aCBvY2Nhc2lvbmFsIHR1bW91ciBuZXN0cyB3aXRoaW4gdGhlIGxhbWluYSBwcm9wcmlhIGRpc3BsYXlpbmcgYSBtaWNyb3BhcGlsbGFyeSBhcmNoaXRlY3R1cmUuIEltbXVub3N0YWluaW5nIHJldmVhbHMgdHVtb3VyIGNlbGwgZXhwcmVzc2lvbiBvZiBDQS0xMjUgYW5kIFdULTEgKG9jY2FzaW9uYWwgY2VsbHMpIHdpdGggbmVnYXRpdmUgc3RhaW5pbmcgZm9yIENEWC0yLiBUaGVzZSBmZWF0dXJlcyBhcmUgaW4ga2VlcGluZyB3aXRoIG1ldGFzdGF0aWMgb3ZhcmlhbiBzZXJvdXMgcGFwaWxsYXJ5IGNhcmNpbm9tYS4gICAgIEMuIEJpb3BzaWVzIHNob3dpbmcgYSBwYXJ0aWFsbHkgY29sbGFwc2VkIG9lc29waGFnZWFsIGN5c3Qgd2l0aCBhIGJpbGF5ZXJlZCBsaW5pbmcuIFRoZXJlIGlzIGFsc28gYSBmcmFnbWVudCBvZiB1bGNlciBzbG91Z2ggbWF0ZXJpYWwuIEEuIEdBU1RSSUMgQklPUFNZOiBOTyBESUFHTk9TVElDIEZFQVRVUkVTIE9GIEZVTkRJQyBHTEFORCBQT0xZUCAgICBCLiBQWUxPUlVTIEJJT1BTSUVTOiBGRUFUVVJFUyBJTiBLRUVQSU5HIFdJVEggTUVUQVNUQVRJQyBPVkFSSUFOIFNFUk9VUyBQQVBJTExBUlkgQ0FSQ0lOT01BICAgIEMuIE9FU09QSEFHRUFMIEJJT1BTSUVTOiBPRVNPUEhBR0VBTCBDWVNUIFdJVEggRVZJREVOQ0UgT0YgVUxDRVJBVElPTg=="
+        }
+      }
+    ],
+    "subject": {
+      "reference": "Patient/95e74bbb-be19-4d1d-a10b-b5d2d84eb602"
+    },
+    "date": "2003-10-05T10:23:23.000Z"
+  }

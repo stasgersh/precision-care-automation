@@ -1,0 +1,50 @@
+{
+  "id": "trend.onco.extended",
+  "items": [
+    {
+      "group": "trends",
+      "elements": [
+        {
+          "type": "chart",
+          "value": {
+            "path": ""
+          }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "id": "TumorMarkerTestResult",
+      "label": "General Tumor Marker Test Result"
+    },
+    {
+      "id": "prostateTumorMarkerTestResult",
+      "label": "Prostate Tumor Marker Test Result"
+    },
+    {
+      "id": "labWbcResult",
+      "label": "Lab Wbc Result"
+    },
+    {
+      "id": "labPlateletsResult",
+      "label": "Lab Platelets Result"
+    },
+    {
+      "id": "testosterone",
+      "label": "Testosterone"
+    },
+    {
+      "id": "",
+      "label": ""
+    },
+    {
+      "id": "labCreatinineResult",
+      "label": "Lab Creatinine Result"
+    },
+    {
+      "id": "labHemoglobinResult",
+      "label": "Lab Hemoglobin Result"
+    }
+  ]
+}

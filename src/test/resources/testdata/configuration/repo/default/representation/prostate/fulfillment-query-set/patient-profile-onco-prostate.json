@@ -1,0 +1,329 @@
+{
+  "id": "patientProfile.onco.prostate",
+  "items": [
+    [
+      {
+        "key": "patient",
+        "query": {
+          "from": "patient",
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "patient_version": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentECOG",
+        "query": {
+          "from": "ecog",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentNlpEcogDocument",
+        "query": {
+          "from": ["dischargeSummaryNote", "oncologyOutpatientNote", "oncologyMDTReport"],
+          "filter": {
+            "must": [
+              {
+                "attributes.$clpFindings.findings.PerformanceStatus_array.Performance_Name_str": {
+                  "eq": "ECOG"
+                }
+              },
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "desc" }],
+          "limit": 1
+        }
+      },
+      {
+        "key": "earliestGroupedDiagnosis",
+        "query": {
+          "from": "primaryCancerDisease",
+          "dedup": true,
+          "sort": [{ "date": "asc" }]
+        },
+        "postProcessing": [{ "processor": { "name": "earliestGrouped" } }]
+      },
+      {
+        "key": "earliestNlpStageDocument",
+        "query": {
+          "from": ["imagingReport", "pathologyReport", "oncologyMDTReport"],
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Staging_object.Stage_Group_str": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "asc" }]
+        },
+        "postProcessing": [
+          { "processor": { "name": "earliestGrouped" } },
+          { "processor": { "name": "first" } }
+        ]
+      },
+      {
+        "key": "lastTx",
+        "query": {
+          "from": [
+            "surgicalProcedure",
+            "radiotherapyProcedure",
+            "radiotherapyCourseSummary",
+            "medication"
+          ],
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  {
+                    "must": [{ "type": { "eq": "medication" } }, { "subtypes": { "eq": "chemo" } }]
+                  },
+                  { "type": { "eq": "surgicalProcedure" } },
+                  { "type": { "eq": "radiotherapyProcedure" } },
+                  { "type": { "eq": "radiotherapyCourseSummary" } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentWeight",
+        "query": {
+          "from": "weight",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentNlpHistologicTypeDocument",
+        "query": {
+          "from": "pathologyReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Histologic_Type_str": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "desc" }],
+          "limit": 1
+        }
+      },
+      {
+        "key": "mostRecentBMI",
+        "query": {
+          "from": "bmi",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentBSA",
+        "query": {
+          "from": "bsa",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentMolecularProfile",
+        "query": {
+          "from": ["genomicMarkerTestResult", "immunologyMarkerTestResult"],
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentPSA",
+        "query": {
+          "from": "prostateTumorMarkerTestResult",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentGleasonScore",
+        "query": {
+          "from": "gleasonScore",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,1421 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/AllergyIntolerance/91c2d1d5-ca09-4839-820c-44fac863a9f4"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/AllergyIntolerance/91c2d1d5-ca09-4839-820c-44fac863a9f4",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "91c2d1d5-ca09-4839-820c-44fac863a9f4",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "version": "4.0.0",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "version": "4.0.0",
+              "code": "unconfirmed",
+              "display": "Unconfirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1631000175102",
+              "display": "Patient not asked"
+            }
+          ],
+          "text": "Not on File"
+        },
+        "patient": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/eOCME6XUbCLYmFlVf2l1G0w3"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/eOCME6XUbCLYmFlVf2l1G0w3",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "eOCME6XUbCLYmFlVf2l1G0w3",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "version": "4.0.0",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "version": "4.0.0",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "severity": {
+          "text": "Medium"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.90",
+              "code": "J45.40"
+            },
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.96",
+              "code": "427295004"
+            }
+          ],
+          "text": "Moderate persistent asthma"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "onsetPeriod": {
+          "start": "1999-03-08",
+          "end": "1999-03-08"
+        },
+        "recordedDate": "2019-05-24"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/etZVq9vWdHQ4q0Y6INaFhig3"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Condition/etZVq9vWdHQ4q0Y6INaFhig3",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "etZVq9vWdHQ4q0Y6INaFhig3",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "version": "4.0.0",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "version": "4.0.0",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ],
+            "text": "Problem List Item"
+          }
+        ],
+        "severity": {
+          "text": "High"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.90",
+              "code": "J20.9"
+            },
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.90",
+              "code": "J45.909"
+            },
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.96",
+              "code": "405944004"
+            }
+          ],
+          "text": "Bronchitis with asthma, acute"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "onsetPeriod": {
+          "start": "2019-05-24",
+          "end": "2019-05-24"
+        },
+        "recordedDate": "2019-05-24"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/eJmY5nskkrXCicFfxHis9DeNZSC4BviY3Rzqxr.7CYXU3"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/eJmY5nskkrXCicFfxHis9DeNZSC4BviY3Rzqxr.7CYXU3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "eJmY5nskkrXCicFfxHis9DeNZSC4BviY3Rzqxr.7CYXU3",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status NHIS"
+            }
+          ],
+          "text": "Smoking History"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "issued": "2021-07-01T12:31:12Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "266927001",
+              "display": "Tobacco smoking consumption unknown"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/f546eb54-b468-4e10-b3fe-dd58a951775e"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/f546eb54-b468-4e10-b3fe-dd58a951775e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f546eb54-b468-4e10-b3fe-dd58a951775e",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "5",
+              "display": "BP"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "tBdNYepLeojPG60x7nUx9kQ0",
+              "display": "BP"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8462-4"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8480-6"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4",
+              "display": "Blood pressure systolic and diastolic"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            }
+          ],
+          "text": "BP"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:42:00Z",
+        "issued": "2019-05-24T20:43:05Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ],
+              "text": "Systolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 125,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ],
+              "text": "Diastolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 60,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/c64246a4-6847-4220-8625-9b372bd937b6"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/c64246a4-6847-4220-8625-9b372bd937b6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c64246a4-6847-4220-8625-9b372bd937b6",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "5",
+              "display": "BP"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "tBdNYepLeojPG60x7nUx9kQ0",
+              "display": "BP"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8462-4"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8480-6"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4",
+              "display": "Blood pressure systolic and diastolic"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            }
+          ],
+          "text": "BP"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:38:00Z",
+        "issued": "2019-05-24T20:38:47Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ],
+              "text": "Systolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 121,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ],
+              "text": "Diastolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 59,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/a71610cc-bfe8-4a0e-9bd7-9ed9e9382620"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/a71610cc-bfe8-4a0e-9bd7-9ed9e9382620",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a71610cc-bfe8-4a0e-9bd7-9ed9e9382620",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "5",
+              "display": "BP"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "tBdNYepLeojPG60x7nUx9kQ0",
+              "display": "BP"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8462-4"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8480-6"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4",
+              "display": "Blood pressure systolic and diastolic"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel with all children optional"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            }
+          ],
+          "text": "BP"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:33:00Z",
+        "issued": "2019-05-24T20:34:06Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ],
+              "text": "Systolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 120,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ],
+              "text": "Diastolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 60,
+              "unit": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/eb55730a-c731-4f1e-b960-835ed4b4ce27"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/eb55730a-c731-4f1e-b960-835ed4b4ce27",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "eb55730a-c731-4f1e-b960-835ed4b4ce27",
+        "extension": [
+          {
+            "valueQuantity": {
+              "value": 102,
+              "unit": "[degF]",
+              "system": "http://unitsofmeasure.org",
+              "code": "[degF]"
+            },
+            "url": "http://open.epic.com/FHIR/STU3/StructureDefinition/temperature-in-fahrenheit"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "6",
+              "display": "Temp"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "tvdinindxnlKvaoAecyilRA0",
+              "display": "Temp"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8310-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            }
+          ],
+          "text": "Temp"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:42:00Z",
+        "issued": "2019-05-24T20:43:05Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "valueQuantity": {
+          "value": 38.9,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/4927dc45-eac1-44bd-8b68-49877a34c243"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/4927dc45-eac1-44bd-8b68-49877a34c243",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "4927dc45-eac1-44bd-8b68-49877a34c243",
+        "extension": [
+          {
+            "valueQuantity": {
+              "value": 99.9,
+              "unit": "[degF]",
+              "system": "http://unitsofmeasure.org",
+              "code": "[degF]"
+            },
+            "url": "http://open.epic.com/FHIR/STU3/StructureDefinition/temperature-in-fahrenheit"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "6",
+              "display": "Temp"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "tvdinindxnlKvaoAecyilRA0",
+              "display": "Temp"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8310-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            }
+          ],
+          "text": "Temp"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:38:00Z",
+        "issued": "2019-05-24T20:38:47Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "valueQuantity": {
+          "value": 37.7,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/92491e72-b8ff-4fda-9522-be6043d638b9"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/92491e72-b8ff-4fda-9522-be6043d638b9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "92491e72-b8ff-4fda-9522-be6043d638b9",
+        "extension": [
+          {
+            "valueQuantity": {
+              "value": 100.1,
+              "unit": "[degF]",
+              "system": "http://unitsofmeasure.org",
+              "code": "[degF]"
+            },
+            "url": "http://open.epic.com/FHIR/STU3/StructureDefinition/temperature-in-fahrenheit"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "6",
+              "display": "Temp"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "tvdinindxnlKvaoAecyilRA0",
+              "display": "Temp"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8310-5"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            }
+          ],
+          "text": "Temp"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:33:00Z",
+        "issued": "2019-05-24T20:34:06Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "valueQuantity": {
+          "value": 37.8,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/51ac43d0-accf-4b58-807b-9f24f175c614"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/51ac43d0-accf-4b58-807b-9f24f175c614",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "51ac43d0-accf-4b58-807b-9f24f175c614",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "8",
+              "display": "Pulse"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "t0nle2B9NVDaJJUDo0FtQrA0",
+              "display": "Pulse"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8867-4"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Pulse"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:42:00Z",
+        "issued": "2019-05-24T20:43:05Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "valueQuantity": {
+          "value": 90,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/1191ca4b-18ac-46da-a3a4-350bd8be3f7d"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/1191ca4b-18ac-46da-a3a4-350bd8be3f7d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1191ca4b-18ac-46da-a3a4-350bd8be3f7d",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "8",
+              "display": "Pulse"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "t0nle2B9NVDaJJUDo0FtQrA0",
+              "display": "Pulse"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8867-4"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Pulse"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:38:00Z",
+        "issued": "2019-05-24T20:38:47Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "valueQuantity": {
+          "value": 86,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/445e8bd3-0ba4-41eb-9cae-b475d4b90b27"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Observation/445e8bd3-0ba4-41eb-9cae-b475d4b90b27",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "445e8bd3-0ba4-41eb-9cae-b475d4b90b27",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.707679",
+              "code": "8",
+              "display": "Pulse"
+            },
+            {
+              "system": "http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id",
+              "code": "t0nle2B9NVDaJJUDo0FtQrA0",
+              "display": "Pulse"
+            },
+            {
+              "system": "urn:oid:1.2.246.537.6.96",
+              "code": "8867-4"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8716-3",
+              "display": "Vital signs"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Pulse"
+        },
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "encounter": {
+          "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+        },
+        "effectiveDateTime": "2019-05-24T20:33:00Z",
+        "issued": "2019-05-24T20:34:06Z",
+        "performer": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Project Team Inpatient, MD"
+          }
+        ],
+        "valueQuantity": {
+          "value": 82,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DocumentReference/ef7BMm4gk0LDKIGdTRfJO-Q3"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/DocumentReference/ef7BMm4gk0LDKIGdTRfJO-Q3",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "ef7BMm4gk0LDKIGdTRfJO-Q3",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.727879",
+            "value": "195420"
+          }
+        ],
+        "status": "current",
+        "docStatus": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18842-5",
+              "display": "Discharge Documentation"
+            },
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.737880.5010",
+              "code": "5",
+              "display": "Discharge Summary"
+            }
+          ],
+          "text": "Discharge Documentation"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/eIXesllypH3M9tAA5WdJftQ3",
+          "display": "Ross, Linda Jane"
+        },
+        "date": "2019-05-24T20:43:54Z",
+        "author": [
+          {
+            "reference": "Practitioner/eJukOp-92bJmlEhVqi9fEvA3",
+            "display": "Inpatient, Project Team, MD"
+          }
+        ],
+        "custodian": {
+          "display": "Epic USCDI on FHIR"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/html",
+              "url": "Binary/eX8jAu9.SkE.Kd7P0q7owAg3"
+            },
+            "format": {
+              "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+              "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+              "display": "mimeType Sufficient"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/e2tX.zRRuP1elysuhOHkiqg3"
+            }
+          ],
+          "period": {
+            "start": "2019-05-24T20:43:54Z"
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "link": [
+        {
+          "relation": "self",
+          "url": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Patient/eIXesllypH3M9tAA5WdJftQ3"
+        }
+      ],
+      "fullUrl": "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4/Patient/eIXesllypH3M9tAA5WdJftQ3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "eIXesllypH3M9tAA5WdJftQ3",
+        "extension": [
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                },
+                "url": "ombCategory"
+              },
+              {
+                "valueString": "White",
+                "url": "text"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "UNK",
+                  "display": "Unknown"
+                },
+                "url": "ombCategory"
+              },
+              {
+                "valueString": "Unknown",
+                "url": "text"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "valueCode": "F",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:2.16.840.1.113883.4.1",
+            "value": "000-00-0000"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "EPIC"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.0",
+            "value": "E4006"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "EXTERNAL"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.698084",
+            "value": "Z6128"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "FHIR"
+            },
+            "system": "http://open.epic.com/FHIR/StructureDefinition/patient-dstu2-fhir-id",
+            "value": "TK.0eRuHlZqVxF9Zvim6V5.9w9Flff3iUfwyDbQCnq3UB"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "FHIR STU3"
+            },
+            "system": "http://open.epic.com/FHIR/StructureDefinition/patient-fhir-id",
+            "value": "eIXesllypH3M9tAA5WdJftQ3"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "INTERNAL"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.698084",
+            "value": "     Z6128"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "text": "EPI"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.14",
+            "value": "203712"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "old",
+            "text": "ROSS,LINDA"
+          },
+          {
+            "use": "official",
+            "text": "Dr. Linda Jane Ross",
+            "family": "Ross",
+            "given": [
+              "Linda",
+              "Jane"
+            ],
+            "prefix": [
+              "DR."
+            ]
+          },
+          {
+            "use": "usual",
+            "text": "Dr. Linda Jane Ross",
+            "family": "Ross",
+            "given": [
+              "Linda",
+              "Jane"
+            ],
+            "prefix": [
+              "DR."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "231-555-5555",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "231-666-6666",
+            "use": "mobile"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1969-04-27",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "old",
+            "line": [
+              "912 Highway 14"
+            ],
+            "city": "CADILLAC",
+            "district": "WEXFORD",
+            "state": "MI",
+            "postalCode": "49601",
+            "country": "US"
+          },
+          {
+            "use": "home",
+            "line": [
+              "912 Highway 14"
+            ],
+            "city": "CADILLAC",
+            "district": "WEXFORD",
+            "state": "MI",
+            "postalCode": "49601",
+            "country": "US",
+            "period": {
+              "start": "2019-05-24"
+            }
+          }
+        ],
+        "maritalStatus": {
+          "text": "Divorced"
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            },
+            "preferred": true
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/enRyWnSP963FYDpoks4NHOA3",
+          "display": "Epic Hospital System"
+        }
+      }
+    }
+  ],
+  "total": 15
+}

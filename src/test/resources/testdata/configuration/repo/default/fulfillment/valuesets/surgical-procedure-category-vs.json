@@ -1,0 +1,21 @@
+{
+  "name": "surgical-procedure-category-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "surgical-procedure-category-vs",
+    "description": "",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "387713003",
+              "display": "Surgical procedure (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

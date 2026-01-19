@@ -1,0 +1,87 @@
+{
+  "configType": "entity",
+  "classId": "patient",
+  "description": "",
+  "definitions": [
+    {
+      "resourceType": "Patient",
+      "date": [
+        {
+          "source": {
+            "path": "$.birthDate"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "id",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.id"
+              }
+            }
+          ]
+        },
+        {
+          "key": "identifier",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.identifier"
+              }
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.gender"
+              }
+            }
+          ]
+        },
+        {
+          "key": "dob",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.birthDate"
+              }
+            }
+          ]
+        },
+        {
+          "key": "name",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.name"
+              }
+            }
+          ]
+        },
+        {
+          "key": "maritalStatus",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.maritalStatus"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

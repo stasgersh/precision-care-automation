@@ -1,0 +1,20 @@
+{
+  "name": "research-referral-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "research-referral-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "702475000",
+              "display": "Referral to clinical trial (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

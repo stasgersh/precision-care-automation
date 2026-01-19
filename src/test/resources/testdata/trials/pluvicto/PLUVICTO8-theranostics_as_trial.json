@@ -1,0 +1,62 @@
+{
+  "id": "PLUVICTO8",
+  "type": "trial",
+  "studyCompletion": "2026-11",
+  "name": "(ConfigType=trial) A prescription medicine used to treat men with PSMA+ metastatic castration-resistant prostate cancer (mCRPC).",
+  "description": "PLUVICTO is a radioligand therapy (RLT). RLT is a different type of radiation therapy that is injected and that targets a biomarker called PSMA, which is present on many prostate cancer cells and also some healthy cells. This means it is designed to find and attack PSMA+ cells, including cancer cells.",
+  "link": "https://us.pluvicto.com/support/faqs",
+  "patientsFilter": {
+    "filter": {
+      "must": [
+        {
+          "attributes.gender": {
+            "eq": "male"
+          }
+        }
+      ]
+    }
+  },
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_male",
+      "type": "inclusion",
+      "title": "Gender is male",
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is male",
+          "description": "Gender is male",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    }
+  ]
+}
+

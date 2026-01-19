@@ -1,0 +1,57 @@
+{
+  "Procedure": {
+    "fields": {
+      "elements": {
+        "datetime":{
+          "retrievalOptions": [
+            {
+              "parsingKeys": ["performedDateTime"]
+            },
+            {
+              "parsingKeys": ["performedPeriod","start"]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [ "subject","reference"]
+            }
+          ]
+        },
+        "notes": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": ["note",0,"text"]
+            }
+          ]
+        },
+        "body_site": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": ["bodySite",0,"text"]
+            },
+            {
+              "parsingKeys": ["bodySite",0,"coding",0,"display"]
+            }
+          ]
+        },
+        "procedure":{
+          "retrievalOptions": [
+            {
+              "parsingKeys": ["code","text2"]
+            },
+            {
+              "parsingKeys": ["code","coding",0,"display"]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "On {datetime}, {procedure} was performed [on {body_site}.][ Notes about procedure is {notes}]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "configType": "entity",
+  "classId": "activityData",
+  "description": "",
+  "definitions": [
+    {
+      "resourceType": "Observation",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.category",
+              "include": "activity-observation-category-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.effectivePeriod"
+          },
+          "processor": "periodDateText"
+        },
+        {
+          "source": {
+            "path": "$.effectiveDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.issued"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "value",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$"
+              },
+              "processor": "observationValueText"
+            }
+          ]
+        },
+        {
+          "key": "trendKey",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$"
+              },
+              "processor": "trendKey"
+            }
+          ]
+        },
+        {
+          "key": "referenceRange",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.referenceRange[*]"
+              }
+            }
+          ]
+        },
+        {
+          "key": "valueQuantity",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$",
+                "attributes": [
+                  {
+                    "key": "unit",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.unit"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "system",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.system"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "code",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.code"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "value",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.value"
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$.valueInteger"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "components",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.component[*]",
+                "attributes": [
+                  {
+                    "key": "code",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.code"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "trendKey",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$"
+                        },
+                        "processor": "trendKey"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "referenceRange",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.referenceRange[*]"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "valueQuantity",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "attributes": [
+                            {
+                              "key": "unit",
+                              "valueExtraction": [
+                                {
+                                  "source": {
+                                    "path": "$.valueQuantity.unit"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "key": "system",
+                              "valueExtraction": [
+                                {
+                                  "source": {
+                                    "path": "$.valueQuantity.system"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "key": "code",
+                              "valueExtraction": [
+                                {
+                                  "source": {
+                                    "path": "$.valueQuantity.code"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "key": "value",
+                              "valueExtraction": [
+                                {
+                                  "source": {
+                                    "path": "$.valueQuantity.value"
+                                  }
+                                },
+                                {
+                                  "source": {
+                                    "path": "$.valueInteger"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

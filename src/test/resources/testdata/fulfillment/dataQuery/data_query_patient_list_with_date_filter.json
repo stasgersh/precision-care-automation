@@ -1,0 +1,290 @@
+{
+  "entries": [
+    {
+      "date": "1970-01-01",
+      "provenance": [
+        "Patient/12742400"
+      ],
+      "latest_patient_version": 1727079023884,
+      "patient_id": "12742400",
+      "sync_status": "success",
+      "attributes": {
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.3.787.0.0",
+            "use": "usual",
+            "_value": {
+              "extension": [
+                {
+                  "valueString": "9006144000",
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                }
+              ]
+            },
+            "id": "CI-490117329-0",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+                  "code": "2",
+                  "userSelected": true,
+                  "display": "Community Medical Record Number"
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "userSelected": false,
+                  "display": "Medical record number"
+                }
+              ],
+              "text": "Community Medical Record Number"
+            },
+            "value": "9006144000"
+          },
+          {
+            "period": {
+              "start": "2019-12-26T15:17:05.000Z"
+            },
+            "system": "urn:oid:2.16.840.1.113883.6.1000",
+            "use": "usual",
+            "_value": {
+              "extension": [
+                {
+                  "valueString": "00490052523",
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                }
+              ]
+            },
+            "id": "CI-490052523-1",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+                  "code": "10",
+                  "userSelected": true,
+                  "display": "MRN"
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "userSelected": false,
+                  "display": "Medical record number"
+                }
+              ],
+              "text": "MRN"
+            },
+            "value": "490052523"
+          },
+          {
+            "period": {
+              "start": "2020-08-10T16:43:27.000Z"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.42.10001.100001.12",
+            "use": "usual",
+            "_value": {
+              "extension": [
+                {
+                  "valueString": "10050007028",
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                }
+              ]
+            },
+            "id": "CI-490068437-3",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+                  "code": "22",
+                  "userSelected": true,
+                  "display": "Military Id"
+                }
+              ],
+              "text": "Military Id"
+            },
+            "value": "10050007028"
+          },
+          {
+            "period": {
+              "start": "2020-07-09T14:11:59.000Z"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.13.8",
+            "use": "usual",
+            "_value": {
+              "extension": [
+                {
+                  "valueString": "F9F53787ABE84CACB45D61AD39AF0549",
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                }
+              ]
+            },
+            "id": "CI-490060074-4",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+                  "code": "670843",
+                  "userSelected": true,
+                  "display": "Messaging"
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "U",
+                  "userSelected": false,
+                  "display": "Unspecified identifier"
+                }
+              ],
+              "text": "Messaging"
+            },
+            "value": "F9F53787ABE84CACB45D61AD39AF0549"
+          },
+          {
+            "period": {
+              "start": "2020-08-10T17:01:45.000Z"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.13.6",
+            "use": "usual",
+            "_value": {
+              "extension": [
+                {
+                  "valueString": "URN:CERNER:IDENTITY-FEDERATION:REALM:EC2458F2-1E24-41C8-B71B-0E701AF7583D-CH:PRINCIPAL:8B5T66NS92U6WG6R",
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                }
+              ]
+            },
+            "id": "CI-490068491-5",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+                  "code": "2553236771",
+                  "userSelected": true,
+                  "display": "Federated Person Principal"
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "AN",
+                  "userSelected": false,
+                  "display": "Account number"
+                }
+              ],
+              "text": "Federated Person Principal"
+            },
+            "value": "URN:CERNER:IDENTITY-FEDERATION:REALM:EC2458F2-1E24-41C8-B71B-0E701AF7583D-CH:PRINCIPAL:8B5T66NS92U6WG6R"
+          },
+          {
+            "period": {
+              "start": "2020-07-09T14:11:57.000Z"
+            },
+            "system": "urn:oid:2.16.840.1.113883.3.13.6",
+            "use": "usual",
+            "_value": {
+              "extension": [
+                {
+                  "valueString": "URN:CERNER:IDENTITY-FEDERATION:REALM:E8A84236-C258-4952-98B7-A6FF8A9C587A-CH:PRINCIPAL:8B5T66NS92U6WG6R",
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                }
+              ]
+            },
+            "id": "CI-490060070-6",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+                  "code": "2553236771",
+                  "userSelected": true,
+                  "display": "Federated Person Principal"
+                },
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "AN",
+                  "userSelected": false,
+                  "display": "Account number"
+                }
+              ],
+              "text": "Federated Person Principal"
+            },
+            "value": "URN:CERNER:IDENTITY-FEDERATION:REALM:E8A84236-C258-4952-98B7-A6FF8A9C587A-CH:PRINCIPAL:8B5T66NS92U6WG6R"
+          },
+          {
+            "_system": {
+              "extension": [
+                {
+                  "valueCode": "unknown",
+                  "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+                }
+              ]
+            },
+            "period": {
+              "start": "2020-12-18T19:15:13.000Z"
+            },
+            "use": "usual",
+            "_value": {
+              "extension": [
+                {
+                  "valueString": "13429",
+                  "url": "http://hl7.org/fhir/StructureDefinition/rendered-value"
+                }
+              ]
+            },
+            "id": "CI-490154914-7",
+            "type": {
+              "coding": [
+                {
+                  "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/4",
+                  "code": "2553236785",
+                  "userSelected": true,
+                  "display": "MIllennium Person Identifier"
+                }
+              ],
+              "text": "MIllennium Person Identifier"
+            },
+            "value": "13429"
+          }
+        ],
+        "gender": "male",
+        "dob": "1970-01-01",
+        "name": [
+          {
+            "given": [
+              "TIM",
+              "A"
+            ],
+            "period": {
+              "start": "2019-12-26T15:17:05.000Z"
+            },
+            "use": "official",
+            "id": "CI-12742400-0",
+            "text": "OncoTestPatient, TIM A",
+            "family": "OncoTestPatient"
+          }
+        ],
+        "id": "12742400",
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "https://fhir.cerner.com/ec2458f2-1e24-41c8-b71b-0e701af7583d/codeSet/38",
+              "code": "309237",
+              "userSelected": true,
+              "display": "Married"
+            },
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "userSelected": false,
+              "display": "Married"
+            }
+          ],
+          "text": "Married"
+        }
+      },
+      "id": "patient:12742400",
+      "type": "patient",
+      "sync_timestamp": 1727259776974,
+      "patient_version": 1727074340990,
+      "subtypes": [
+        "oncoContext"
+      ]
+    }
+  ],
+  "nextPageToken": null
+}

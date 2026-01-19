@@ -1,0 +1,144 @@
+{
+  "patientSummaryQuery": {
+    "filter": {
+      "must": [
+        {
+          "attributes.result": {
+            "neq": null
+          }
+        }
+      ]
+    },
+    "limit": 1,
+    "show": [
+      "attributes.result"
+    ],
+    "from": "aiPatientSummary",
+    "sort": [
+      {
+        "date": "desc"
+      },
+      {
+        "patient_version": "desc"
+      }
+    ]
+  },
+  "patientSummaryPath": "$.attributes.result",
+  "cutDateQuery": {
+    "filter": {
+      "must": [
+        {
+          "date": {
+            "range": {
+              "lt": "now/d"
+            }
+          }
+        }
+      ]
+    },
+    "limit": 1,
+    "show": [
+      "date"
+    ],
+    "from": "oncologyOutpatientVisit",
+    "sort": [
+      {
+        "date": "desc"
+      },
+      {
+        "patient_version": "desc"
+      }
+    ]
+  },
+  "cutDatePath": "$.date",
+  "patientQuery": {
+    "limit": 1,
+    "show": [
+      "latest_patient_version"
+    ],
+    "from": "patient"
+  },
+  "patientPath": "$.latest_patient_version",
+  "updatedEntitiesQuery": {
+    "filter": {
+      "must": [
+        {
+          "patient_version": {
+            "range": {
+              "gt": 0
+            }
+          }
+        },
+        {
+          "type": {
+            "neq": "aiPatientSummary"
+          }
+        },
+        {
+          "type": {
+            "neq": "patient"
+          }
+        },
+        {
+          "type": {
+            "neq": "testPatient"
+          }
+        }
+      ]
+    },
+    "aggregations": {
+      "updatedEntitiesAggregation": {
+        "terms": {
+          "field": "type",
+          "size": 100
+        }
+      }
+    },
+    "from": "*"
+  },
+  "updatedEntitiesQueryVersionPath": "$.filter.must[*].patient_version.range.gt",
+  "updatedEntitiesQueryResultPath": "$.updatedEntitiesAggregation.buckets",
+  "reportsQuery": {
+    "show": [
+      "patient_version",
+      "provenance",
+      "id",
+      "type",
+      "date",
+      "attributes.status",
+      "attributes.author",
+      "attributes.title",
+      "attributes.attachment.title",
+      "attributes.attachment.contentType"
+    ],
+    "from": [
+      "dischargeSummaryNote",
+      "genomicReport",
+      "imagingReport",
+      "labReport",
+      "oncologyMDTReport",
+      "oncologyOutpatientNote",
+      "pathologyReport",
+      "radiotherapySummaryNote",
+      "document"
+    ],
+    "sort": [
+      {
+        "date": "desc"
+      },
+      {
+        "patient_version": "desc"
+      }
+    ],
+    "dedup": true
+  },
+  "reportsTitlePaths": [
+    "$.attributes.title",
+    "$.attributes.attachment.title"
+  ],
+  "monitoringTtlSeconds": 172800,
+  "scheduledTriggeringRule": "0 12 * * ? *",
+  "monitoredListUpdateRule": "0 * * * ? *",
+  "retriableSummarizationErrorCodes": [],
+  "onDemandHandling": "MONITORING"
+}

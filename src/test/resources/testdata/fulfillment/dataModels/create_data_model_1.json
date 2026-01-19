@@ -1,0 +1,76 @@
+{
+  "configType": "entity",
+  "classId": "create_data_model_1",
+  "description":"original create_data_model_1 data model used for testing",
+  "definitions": [{
+    "resourceType": "Patient",
+    "filters": [
+      {
+        "type": "terminology",
+        "conditions": [
+          {
+            "path": "$.code",
+            "include": "vs_4"
+          }
+        ]
+      }
+    ],
+    "date": [{
+      "source": {
+        "path": "$.birthDate"
+      }
+    }
+    ],
+    "attributes": [{
+      "key": "id",
+      "valueExtraction": [{
+        "source": {
+          "path": "$.id"
+        }
+      }
+      ]
+    }, {
+      "key": "identifier",
+      "valueExtraction": [{
+        "source": {
+          "path": "$.identifier"
+        }
+      }
+      ]
+    }, {
+      "key": "gender",
+      "valueExtraction": [{
+        "source": {
+          "path": "$.gender"
+        }
+      }
+      ]
+    }, {
+      "key": "dob",
+      "valueExtraction": [{
+        "source": {
+          "path": "$.birthDate"
+        }
+      }
+      ]
+    }, {
+      "key": "name",
+      "valueExtraction": [{
+        "source": {
+          "path": "$.name"
+        }
+      }
+      ]
+    }, {
+      "key": "maritalStatus",
+      "valueExtraction": [{
+        "source": {
+          "path": "$.maritalStatus"
+        }
+      }
+      ]
+    }
+    ]
+  }
+  ]
+}

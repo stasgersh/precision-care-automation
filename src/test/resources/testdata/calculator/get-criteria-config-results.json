@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "id": "ec12471a-1c32-4e77-9f3b-580ead46b148",
+      "metadata": {
+        "name": "Valid Custom Config file - Prostate MRI and Pylarify PSMA PET/CT",
+        "phase": "1",
+        "link": "https://clinicaltrials.gov/study/NCT04428788?a=23",
+        "description": "This is a voluntary research study to find out how using technology including advanced magnetic resonance imaging (MRI) and prostate-specific membrane antigen - positron emission tomography (PSMA-PET) scan imaging",
+        "usingAi": false,
+        "status": "Recruiting"
+      },
+      "is_global": "False"
+    },
+    {
+      "id": "f297fa68-ec0c-4eba-81ce-3061ec5aae02",
+      "metadata": {
+        "name": "Valid Custom Config file - Prostate MRI and Pylarify PSMA PET/CT",
+        "phase": "1",
+        "link": "https://clinicaltrials.gov/study/NCT04428788?a=23",
+        "description": "This is a voluntary research study to find out how using technology including advanced magnetic resonance imaging (MRI) and prostate-specific membrane antigen - positron emission tomography (PSMA-PET) scan imaging",
+        "usingAi": false,
+        "status": "Recruiting"
+      },
+      "is_global": "False"
+    }
+  ]
+}

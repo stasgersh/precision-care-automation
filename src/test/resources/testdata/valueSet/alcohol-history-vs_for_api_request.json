@@ -1,0 +1,42 @@
+{
+  "valueset": {
+    "url": "alcohol-history-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "80439-3"
+            },
+            {
+              "code": "74013-4"
+            },
+            {
+              "code": "80450-0"
+            },
+            {
+              "code": "80479-9"
+            },
+            {
+              "code": "80478-1"
+            },
+            {
+              "code": "81032-5"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "228276006"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "1.1"
+  },
+  "valuesetName": "alcohol-history-vs"
+}

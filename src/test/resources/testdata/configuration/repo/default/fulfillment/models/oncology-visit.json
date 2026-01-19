@@ -1,0 +1,409 @@
+{
+  "configType": "entity",
+  "classId": "oncologyVisit",
+  "definitions": [
+    {
+      "resourceType": "ServiceRequest",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "include": "oncology-service-type-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.occurrenceDateTime"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.status"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note[*]",
+                "attributes": [
+                  {
+                    "key": "text",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.text"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "time",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.time"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "author",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.authorString"
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$.authorReference"
+                        },
+                        "processor": "referenceText"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Encounter",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.type",
+              "include": "oncology-service-type-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.period"
+          },
+          "processor": "periodDateText"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "type",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.type"
+              }
+            }
+          ]
+        },
+        {
+          "key": "serviceType",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.serviceType"
+              }
+            }
+          ]
+        },
+        {
+          "key": "class",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.class"
+              }
+            }
+          ]
+        },
+        {
+          "key": "reason",
+          "valueListExtraction": [
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.reasonCode"
+                  }
+                }
+              ]
+            },
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.reasonReference",
+                    "refersTo": {
+                      "resourceType": "Condition",
+                      "source": {
+                        "path": "$.code"
+                      }
+                    }
+                  }
+                },
+                {
+                  "source": {
+                    "path": "$.reasonReference",
+                    "refersTo": {
+                      "resourceType": "Observation",
+                      "source": {
+                        "path": "$.code"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "diagnosis",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.diagnosis[*].condition",
+                "refersTo": {
+                  "resourceType": "Condition",
+                  "source": {
+                    "path": "$.code"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "key": "dischargeDisposition",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.hospitalization.dischargeDisposition"
+              }
+            }
+          ]
+        },
+        {
+          "key": "participants",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.participant[*].individual",
+                "attributes": [
+                  {
+                    "key": "name",
+                    "required": true,
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.practitioner",
+                              "refersTo": {
+                                "resourceType": "Practitioner",
+                                "source": {
+                                  "path": "$.name"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "Practitioner",
+                            "source": {
+                              "path": "$.name"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "role",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.code"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "specialty",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.specialty"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "organization",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.organization",
+                              "refersTo": {
+                                "resourceType": "Organization",
+                                "attributes": [
+                                  {
+                                    "key": "fhirId",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.id"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "name",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.name"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "identifier",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.identifier"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "organization",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.serviceProvider",
+                "refersTo": {
+                  "resourceType": "Organization",
+                  "attributes": [
+                    {
+                      "key": "fhirId",
+                      "valueExtraction": [
+                        {
+                          "source": {
+                            "path": "$.id"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "key": "name",
+                      "valueExtraction": [
+                        {
+                          "source": {
+                            "path": "$.name"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "key": "identifier",
+                      "valueExtraction": [
+                        {
+                          "source": {
+                            "path": "$.identifier"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

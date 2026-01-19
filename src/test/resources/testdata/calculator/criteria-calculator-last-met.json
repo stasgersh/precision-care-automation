@@ -1,0 +1,322 @@
+{
+  "id": "${id}",
+  "type": "${type}",
+  "metadata": {
+    "name": "Simple configuration with patient date of birth and gender",
+    "description": "Simple configuration with patient date of birth and gender - The purpose of this study is to assess the safety, tolerability and preliminary efficacy of CC-94676 in men with progressive metastatic castration resistant prostate cancer.",
+    "status": "Recruiting",
+    "phase": "1",
+    "link": "https://clinicaltrials.gov/study/NCT04428788?a=23",
+    "usingAi": false
+  },
+  "constants": null,
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's date of birth",
+      "value": null
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's gender",
+      "value": null
+    },
+    {
+      "id": "comorbidity",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ComorbidityAlias",
+              "query": {
+                "show": [
+                  "attributes.date"
+                ],
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "Thromboembolism"
+                      }
+                    }
+                  ]
+                },
+                "from": "comorbidity"
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's comorbidity",
+      "value": null
+    }
+  ],
+  "outputs": [
+    {
+      "id": "criteria_age",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "dob"
+        ]
+      },
+      "display": "Age >= 18 years",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "dob",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.dob) == `false`",
+              "metadata": {
+                "description": "dob is missing",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[]|[0]"
+              }
+            }
+          ],
+          "expression": "dob"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isAgeGt25",
+              "display": "Age is grater than 25",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`) >= `25`",
+              "metadata": {
+                "description": "Age is grater than 25",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)",
+                "sourceDob":  "\nvariables.dob.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n",
+                "sourceTitle": "variables.dob.class_name"
+              }
+            }
+          ],
+          "expression": "isAgeGt25"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isAgeLt25",
+              "display": "[NOT_MET]: Age is less than 25",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`) < `25`",
+              "metadata": {
+                "description": "Age is less than 25",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)",
+                "sourcesDob": "\nvariables.dob.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n"
+              }
+            }
+          ],
+          "expression": "!(isAgeLt25)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_male",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "gender"
+        ]
+      },
+      "display": "Gender is male",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "gender",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.gender) == `false`",
+              "metadata": {
+                "description": "gender is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]"
+              }
+            }
+          ],
+          "expression": "gender"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "Gender is male",
+              "value": null,
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.gender.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "gender"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "Gender is female",
+              "value": null,
+              "expression": "variables.gender.value[].attributes.gender|[0]== `female`",
+              "metadata": {
+                "description": "Gender is female",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.gender.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "!(gender)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_Comorbidity",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "exclusion",
+        "dependency": [
+          "comorbidity"
+        ]
+      },
+      "display": "Clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "notThromboembolism",
+              "display": "No clinically significant venous thromboembolism",
+              "value": null,
+              "expression": "variables.comorbidity.value[]|[-1:].attributes.date|[0]| @ == `null` || abs_date_diff(@, `2024-09-04`,`years`)>`0` || (abs_date_diff(@, `2024-09-04`,`years`)==`0` && abs_date_diff(@, `2024-09-04`,`months`)>`3`)",
+              "metadata": {
+                "description": "No clinically significant venous thromboembolism",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.comorbidity.value[]|[-1:].attributes.date|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.comorbidity.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "notThromboembolism"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "notThromboembolism",
+              "display": "[NOT_MET]: No clinically significant venous thromboembolism",
+              "value": null,
+              "expression": "variables.comorbidity.value[]|[-1:].attributes.date|[0]| @ == `null` || abs_date_diff(@, `2024-09-04`,`years`)>`0` || (abs_date_diff(@, `2024-09-04`,`years`)==`0` && abs_date_diff(@, `2024-09-04`,`months`)>`3`)",
+              "metadata": {
+                "description": "No clinically significant venous thromboembolism",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.comorbidity.value[]|[-1:].attributes.date|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.comorbidity.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "!(notThromboembolism)"
+        }
+      ]
+    }
+  ]
+}

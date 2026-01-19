@@ -1,0 +1,470 @@
+{
+  "id": "${id}",
+  "type": "${type}",
+  "metadata": {
+    "name": "Valid Custom Config file - Prostate MRI and Pylarify PSMA PET/CT",
+    "description": "This is a voluntary research study to find out how using technology including advanced magnetic resonance imaging (MRI) and prostate-specific membrane antigen - positron emission tomography (PSMA-PET) scan imaging",
+    "status": "Recruiting",
+    "phase": "1",
+    "link": "https://clinicaltrials.gov/study/NCT04428788?a=23",
+    "usingAi": false
+  },
+  "constants": null,
+  "variables": [
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's gender",
+      "value": null
+    },
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's date of birth",
+      "value": null
+    },
+    {
+      "id": "ADT",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ADT",
+              "query": {
+                "from": "medication",
+                "show": [
+                  "attributes.code"
+                ],
+                "dedup": true,
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "leuprolide"
+                      }
+                    }
+                  ]
+                },
+                "limit": 1
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's ADT med",
+      "value": null
+    },
+    {
+      "id": "psa",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA Criteria",
+      "value": null
+    },
+    {
+      "id": "comorbidity",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ComorbidityAlias",
+              "query": {
+                "show": [
+                  "attributes.date"
+                ],
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "Thromboembolism"
+                      }
+                    }
+                  ]
+                },
+                "from": "comorbidity"
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's comorbidity",
+      "value": null
+    }
+  ],
+  "outputs": [
+    {
+      "id": "criteria_male",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "gender"
+        ]
+      },
+      "display": "Gender is male",
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "Gender is male",
+              "value": null,
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]"
+              }
+            }
+          ],
+          "expression": "gender"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "[NOT_MET]: Gender is male",
+              "value": null,
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]"
+              }
+            }
+          ],
+          "expression": "!(gender)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "dob"
+        ]
+      },
+      "display": "Age >= 18 years",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "dob",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.dob) == `false`",
+              "metadata": {
+                "description": "dob is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[]|[0]"
+              }
+            }
+          ],
+          "expression": "dob"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isAgeGt18",
+              "display": "Age is greater than 18",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+              "metadata": {
+                "description": "Age is greater than 18",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)"
+              }
+            }
+          ],
+          "expression": "isAgeGt18"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isAgeGt18",
+              "display": "[NOT_MET]: Age is greater than 18",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+              "metadata": {
+                "description": "Age is greater than 18",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)"
+              }
+            }
+          ],
+          "expression": "!(isAgeGt18)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_ADT",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "ADT"
+        ]
+      },
+      "display": "Progressed on androgen deprivation therapy (ADT) and at least one prior secondary hormonal therapy approved for castration-resistant prostate cancer (CRPC)",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "ADT",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.ADT) == `false`",
+              "metadata": {
+                "description": "ADT is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ADT.value[]|[0]"
+              }
+            }
+          ],
+          "expression": "ADT"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "ADT",
+              "display": "Progressed on androgen deprivation therapy",
+              "value": null,
+              "expression": "variables.ADT.value[].attributes.code.coding[]|length(@)>`0`",
+              "metadata": {
+                "description": "Progressed on androgen deprivation therapy",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ADT.value[].attributes.code.coding[].display|[0]"
+              }
+            }
+          ],
+          "expression": "ADT"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "ADT",
+              "display": "[NOT_MET]: Progressed on androgen deprivation therapy",
+              "value": null,
+              "expression": "variables.ADT.value[].attributes.code.coding[]|length(@)>`0`",
+              "metadata": {
+                "description": "Progressed on androgen deprivation therapy",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ADT.value[].attributes.code.coding[].display|[0]"
+              }
+            }
+          ],
+          "expression": "!(ADT)"
+        }
+      ]
+    },
+    {
+      "id": "psa",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa"
+        ]
+      },
+      "display": "PSA General Tumor Marker Test Result greater then 30 and less then 60",
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "value": null,
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`",
+              "metadata": {
+                "description": "PSA greater then 30ng/mL",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.psa.value[].attributes.value|[0]"
+
+              }
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`",
+              "value": null,
+              "metadata": {
+                "description": "PSA greater then 30ng/mL",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.psa.value[].attributes.value|[0]"
+              }
+            }
+          ],
+          "expression": "(isPsaGt30 && isPsaLt60)"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaLt30",
+              "display": "PSA less then 30ng/mL",
+              "value": null,
+              "expression": "variables.psa.value[].attributes.value|[0] < `30`",
+              "metadata": {
+                "description": "PSA less then 30ng/mL",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.psa.value[].attributes.value|[0]"
+              }
+            },
+            {
+              "id": "isPsaGt60",
+              "display": "PSA greater then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] > `60`",
+              "value": null,
+              "metadata": {
+                "description": "PSA greater then 60ng/mL",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.psa.value[].attributes.value|[0]"
+              }
+            }
+          ],
+          "expression": "!(isPsaLt30 && isPsaGt60)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_Comorbidity",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "exclusion",
+        "dependency": [
+          "comorbidity"
+        ]
+      },
+      "display": "Clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "notThromboembolism",
+              "display": "No clinically significant venous thromboembolism",
+              "value": null,
+              "expression": "variables.comorbidity.value[]|[-1:].attributes.date|[0]| @ == `null` || abs_date_diff(@, `2024-09-04`,`years`)>`0` || (abs_date_diff(@, `2024-09-04`,`years`)==`0` && abs_date_diff(@, `2024-09-04`,`months`)>`3`)",
+              "metadata": {
+                "description": "No clinically significant venous thromboembolism",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.comorbidity.value[]|[-1:].attributes.date|[0]"
+              }
+            }
+          ],
+          "expression": "notThromboembolism"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "notThromboembolism",
+              "display": "[NOT_MET]: No clinically significant venous thromboembolism",
+              "value": null,
+              "expression": "variables.comorbidity.value[]|[-1:].attributes.date|[0]| @ == `null` || abs_date_diff(@, `2024-09-04`,`years`)>`0` || (abs_date_diff(@, `2024-09-04`,`years`)==`0` && abs_date_diff(@, `2024-09-04`,`months`)>`3`)",
+              "metadata": {
+                "description": "No clinically significant venous thromboembolism",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.comorbidity.value[]|[-1:].attributes.date|[0]"
+              }
+            }
+          ],
+          "expression": "!(notThromboembolism)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "gleason-systems-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "gleason-systems-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "106241006",
+              "display": "Gleason grading system for prostatic cancer"
+            },
+            {
+              "code": "897202005",
+              "display": "Gleason scoring system for malignant neoplasm of prostate"
+            },
+            {
+              "code": "385377005",
+              "display": "Gleason grade finding for prostatic cancer (finding)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

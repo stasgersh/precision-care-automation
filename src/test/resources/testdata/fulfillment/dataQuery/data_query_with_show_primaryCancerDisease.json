@@ -1,0 +1,47 @@
+{
+  "patient": "testPatientIdAmit",
+  "version": 1725280811749,
+  "results": [
+    {
+      "alias": "primaryCancerDisease",
+      "entries": [
+        {
+          "attributes": {
+            "stage": [
+              {
+                "summary": {
+                  "text": "T2aN0M0"
+                },
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "385379008",
+                      "display": "TNM tumor staging finding"
+                    }
+                  ],
+                  "text": "TNM"
+                }
+              }
+            ],
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active",
+                  "display": "Active",
+                  "version": "4.0.0"
+                }
+              ],
+              "text": "Active"
+            }
+          }
+        }
+      ],
+      "name": [
+        "entities-testprimarycancerdisease-78d653eb-824a-4b4b-9fa2-f7e946624a00"
+      ],
+      "nextPageToken": null
+    }
+  ]
+}

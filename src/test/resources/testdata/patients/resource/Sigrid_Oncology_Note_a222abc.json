@@ -1,0 +1,79 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "a2222abc-1de7-4521-bb97-1012a59d05c4",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:16ab53b1-4e41-4077-aa25-896f6fcb9c4f"
+    }
+  ],
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "34117-2",
+        "display": "History and physical note"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "51847-2",
+        "display": "Evaluation+Plan note"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "code": "clinical-note",
+          "display": "Clinical Note"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/7cfe48ab-eb05-9ee1-84a4-f59c8a84e05a"
+  },
+  "date": "2020-03-30T01:33:57.251-04:00",
+  "author": [
+    {
+      "reference": "Practitioner/e18b0cbf-c2aa-30c3-be0d-e23b26dc0fd7",
+      "display": "Dr. Marvin195 Borer986"
+    }
+  ],
+  "custodian": {
+    "reference": "Organization/c44f361c-2efb-3050-8f97-0354a12e2920",
+    "display": "SIGNATURE HEALTHCARE BROCKTON HOSPITAL"
+  },
+  "content": [
+    {
+      "attachment": {
+        "contentType": "text/plain",
+        "data": "CjIwMjAtMDMtMzAKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgojIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxuZXNzCkVsZWFub3I0NzAgaXMgYSA2OSB5ZWFyLW9sZCBub24taGlzcGFuaWMgd2hpdGUgZmVtYWxlLiBQYXRpZW50IGhhcyBhIGhpc3Rvcnkgb2Ygc3RyZXB0b2NvY2NhbCBzb3JlIHRocm9hdCAoZGlzb3JkZXIpLCBhY3V0ZSBicm9uY2hpdGlzIChkaXNvcmRlciksIHZpcmFsIHNpbnVzaXRpcyAoZGlzb3JkZXIpLCBzcHJhaW4gb2YgYW5rbGUsIGxhY2VyYXRpb24gb2YgZm9yZWFybS4KCiMgU29jaWFsIEhpc3RvcnkKUGF0aWVudCBpcyBtYXJyaWVkLiBQYXRpZW50IGlzIGFuIGFjdGl2ZSBzbW9rZXIgYW5kIGlzIGFuIGFsY29ob2xpYy4gUGF0aWVudCBpZGVudGlmaWVzIGFzIGhldGVyb3NleHVhbC4KClBhdGllbnQgY29tZXMgZnJvbSBhIGhpZ2ggc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kLiBQYXRpZW50IGhhcyBjb21wbGV0ZWQgc29tZSBjb2xsZWdlIGNvdXJzZXMuIFBhdGllbnQgY3VycmVudGx5IGhhcyBNZWRpY2FyZS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKYWNldGFtaW5vcGhlbiAzMjUgbWcgb3JhbCB0YWJsZXQ7IHBlbmljaWxsaW4gdiBwb3Rhc3NpdW0gNTAwIG1nIG9yYWwgdGFibGV0OyByaWJvY2ljbGliIDIwMCBtZyBvcmFsIHRhYmxldDsgYWNldGFtaW5vcGhlbiA2NTAgbWcgLyBkZXh0cm9tZXRob3JwaGFuIGhiciAzMCBtZyAvIGRveHlsYW1pbmUgc3VjY2luYXRlIDEyLjUgbWcgaW4gMzAgbWwgb3JhbCBzb2x1dGlvbjsgdGFtb3hpZmVuIGNpdHJhdGUgMTAgbWcgb3JhbCB0YWJsZXQ7IDEwMCBtbCBlcGlydWJpY2luIGh5ZHJvY2hsb3JpZGUgMiBtZy9tbCBpbmplY3Rpb247IHBhY2xpdGF4ZWwgMTAwIG1nIGluamVjdGlvbgoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuCgoKIyMgUGxhbgoK"
+      },
+      "format": {
+        "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+        "display": "mimeType Sufficient"
+      }
+    }
+  ],
+  "context": {
+    "encounter": [
+      {
+        "reference": "Encounter/f885b82c-1eca-4888-abdf-6e39c57819a1"
+      }
+    ],
+    "period": {
+      "start": "2020-03-30T01:33:57-04:00",
+      "end": "2020-03-30T01:48:57-04:00"
+    }
+  }
+}

@@ -1,0 +1,823 @@
+{
+	"id": "NCT05950945",
+	"status": "RECRUITING",
+	"studyCompletion": "2027-10-01",
+	"name": "Trastuzumab Deruxtecan (T-DXd) in Patients Who Have Hormone Receptor-negative and Hormone Receptor-positive HER2-low or HER2 IHC 0 Metastatic Breast Cancer",
+	"description": "This study will evaluate the safety and efficacy of trastuzumab deruxtecan (T-DXd) in participants with human epidermal growth factor receptor 2 (HER2)-low or HER2 immunohistochemistry (IHC) 0 (who are both hormone receptor [HR]-negative and HR-positive) unresectable and/or metastatic breast cancer.",
+	"phase": "3",
+	"link": "https://clinicaltrials.gov/study/NCT05950945",
+	"variables": [
+		{
+			"id": "SignAndDateTheMainInformedConsentForm",
+			"definition": {
+				"ai": {
+					"criteria": "Sign and date the main informed consent form"
+				}
+			},
+			"display": "Sign and date the main informed consent form",
+			"usingAi": true
+		},
+		{
+			"id": "ProvideANewlyObtainedOrArchivalBaselineBiopsy",
+			"definition": {
+				"ai": {
+					"criteria": "Must agree to provide a newly obtained or archival baseline biopsy from primary and/or metastatic lesion."
+				}
+			},
+			"display": "Provide a newly obtained or archival baseline biopsy",
+			"usingAi": true
+		},
+		{
+			"id": "PathologicallyDocumentedBreastCancerBcTumor",
+			"definition": {
+				"ai": {
+					"criteria": "Pathologically documented Breast Cancer (BC) tumor that is unresectable and/or metastatic, is hormone receptor-negative or hormone receptor-positive, and has confirmed HER2 IHC 1+ or IHC 2+/ISH- (HER2-low) status or HER2 IHC 0 status as determined according to ASCO CAP 2018 guidelines based on sample collected during Tissue Screening."
+				}
+			},
+			"display": "Pathologically documented Breast Cancer (BC) tumor",
+			"usingAi": true
+		},
+		{
+			"id": "PriorLinesOfTherapyInTheMetastaticSetting",
+			"definition": {
+				"ai": {
+					"criteria": "Has had at least one and up to two prior lines of therapy in the metastatic setting."
+				}
+			},
+			"display": "Prior lines of therapy in the metastatic setting",
+			"usingAi": true
+		},
+		{
+			"id": "PresenceOfMeasurableLesion",
+			"definition": {
+				"ai": {
+					"criteria": "Presence of at least one measurable lesion based on computed tomography or magnetic resonance imaging."
+				}
+			},
+			"display": "Presence of measurable lesion",
+			"usingAi": true
+		},
+		{
+			"id": "ParticipantsWithBrainMetastases",
+			"definition": {
+				"ai": {
+					"criteria": "Participants with brain metastases are allowed in the study if the brain lesion(s) are small (<2 cm), untreated, asymptomatic, not requiring urgent medical intervention, and are asymptomatic and clinically stable."
+				}
+			},
+			"display": "Participants with brain metastases",
+			"usingAi": true
+		},
+		{
+			"id": "EasternCooperativeOncologyGroupPerformanceStatus",
+			"definition": {
+				"ai": {
+					"criteria": "Has an Eastern Cooperative Oncology Group performance status of 0 or 1."
+				}
+			},
+			"display": "Eastern Cooperative Oncology Group performance status",
+			"usingAi": true
+		},
+		{
+			"id": "MinimumLifeExpectancy",
+			"definition": {
+				"ai": {
+					"criteria": "Has a minimum life expectancy of 12 weeks at Screening."
+				}
+			},
+			"display": "Minimum life expectancy",
+			"usingAi": true
+		},
+		{
+			"id": "LeftVentricularEjectionFraction",
+			"definition": {
+				"ai": {
+					"criteria": "Has a left ventricular ejection fraction =>50% within 28 days before enrollment."
+				}
+			},
+			"display": "Left ventricular ejection fraction",
+			"usingAi": true
+		},
+		{
+			"id": "AdequateOrganAndBoneMarrowFunction",
+			"definition": {
+				"ai": {
+					"criteria": "Has adequate organ and bone marrow function within 28 days before enrollment."
+				}
+			},
+			"display": "Adequate organ and bone marrow function",
+			"usingAi": true
+		},
+		{
+			"id": "AdequateTreatmentWashoutPeriod",
+			"definition": {
+				"ai": {
+					"criteria": "Has adequate treatment washout period before enrollment."
+				}
+			},
+			"display": "Adequate treatment washout period",
+			"usingAi": true
+		},
+		{
+			"id": "ContraceptionAgreement",
+			"definition": {
+				"ai": {
+					"criteria": "Male and female subjects of reproductive/childbearing potential must agree to use a highly effective form of contraception."
+				}
+			},
+			"display": "Contraception agreement",
+			"usingAi": true
+		},
+		{
+			"id": "PriorTreatmentWithAnAntibodyDrugConjugateAdc",
+			"definition": {
+				"ai": {
+					"criteria": "Prior treatment with an antibody drug conjugate (ADC)."
+				}
+			},
+			"display": "Prior treatment with an antibody drug conjugate (ADC)",
+			"usingAi": true
+		},
+		{
+			"id": "UncontrolledOrSignificantCardiovascularDisease",
+			"definition": {
+				"ai": {
+					"criteria": "Uncontrolled or significant cardiovascular disease."
+				}
+			},
+			"display": "Uncontrolled or significant cardiovascular disease",
+			"usingAi": true
+		},
+		{
+			"id": "CorrectedQtIntervalProlongation",
+			"definition": {
+				"ai": {
+					"criteria": "Has a corrected QT interval prolongation."
+				}
+			},
+			"display": "Corrected QT interval prolongation",
+			"usingAi": true
+		},
+		{
+			"id": "HistoryOfInterstitialLungDiseaseIldPneumonitis",
+			"definition": {
+				"ai": {
+					"criteria": "Has a history of (non-infectious) interstitial lung disease (ILD)/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening."
+				}
+			},
+			"display": "History of interstitial lung disease (ILD)/pneumonitis",
+			"usingAi": true
+		},
+		{
+			"id": "SpinalCordCompressionOrActiveCnsMetastases",
+			"definition": {
+				"ai": {
+					"criteria": "Has spinal cord compression or clinically active central nervous system metastases."
+				}
+			},
+			"display": "Spinal cord compression or active CNS metastases",
+			"usingAi": true
+		},
+		{
+			"id": "MultiplePrimaryMalignancies",
+			"definition": {
+				"ai": {
+					"criteria": "Has multiple primary malignancies within 3 years, except adequately resected non-melanoma skin cancer, curatively treated in situ disease, other solid tumors curatively treated, or contralateral BC."
+				}
+			},
+			"display": "Multiple primary malignancies",
+			"usingAi": true
+		},
+		{
+			"id": "SevereHypersensitivityReactions",
+			"definition": {
+				"ai": {
+					"criteria": "Has a history of severe hypersensitivity reactions to either the drug substances or inactive ingredients in the drug product or to other monoclonal antibodies."
+				}
+			},
+			"display": "Severe hypersensitivity reactions",
+			"usingAi": true
+		},
+		{
+			"id": "UncontrolledInfection",
+			"definition": {
+				"ai": {
+					"criteria": "Has an uncontrolled infection requiring intravenous (IV) antibiotics, antivirals, or antifungals."
+				}
+			},
+			"display": "Uncontrolled infection",
+			"usingAi": true
+		},
+		{
+			"id": "ActivePrimaryImmunodeficiencyOrInfections",
+			"definition": {
+				"ai": {
+					"criteria": "Active primary immunodeficiency, known uncontrolled active human immunodeficiency virus (HIV) infection, or active hepatitis B or C infection."
+				}
+			},
+			"display": "Active primary immunodeficiency or infections",
+			"usingAi": true
+		},
+		{
+			"id": "LiveAttenuatedVaccine",
+			"definition": {
+				"ai": {
+					"criteria": "Has history of receiving a live, attenuated vaccine within 30 days prior to the first exposure to study drug."
+				}
+			},
+			"display": "Live, attenuated vaccine",
+			"usingAi": true
+		},
+		{
+			"id": "UnresolvedToxicitiesFromPreviousAnticancerTherapy",
+			"definition": {
+				"ai": {
+					"criteria": "Has unresolved toxicities from previous anticancer therapy, defined as toxicities (other than alopecia) not yet resolved to Grade <=1 or baseline."
+				}
+			},
+			"display": "Unresolved toxicities from previous anticancer therapy",
+			"usingAi": true
+		},
+		{
+			"id": "PregnancyOrBreastfeeding",
+			"definition": {
+				"ai": {
+					"criteria": "Is pregnant or breastfeeding or planning to become pregnant."
+				}
+			},
+			"display": "Pregnancy or breastfeeding",
+			"usingAi": true
+		},
+		{
+			"id": "LungSpecificIntercurrentIllnesses",
+			"definition": {
+				"ai": {
+					"criteria": "Lung-specific intercurrent clinically significant illnesses."
+				}
+			},
+			"display": "Lung-specific intercurrent illnesses",
+			"usingAi": true
+		},
+		{
+			"id": "AutoimmuneConnectiveTissueOrInflammatoryDisorders",
+			"definition": {
+				"ai": {
+					"criteria": "Any autoimmune, connective tissue, or inflammatory disorders."
+				}
+			},
+			"display": "Autoimmune, connective tissue, or inflammatory disorders",
+			"usingAi": true
+		},
+		{
+			"id": "PriorCompletePneumonectomy",
+			"definition": {
+				"ai": {
+					"criteria": "Prior complete pneumonectomy."
+				}
+			},
+			"display": "Prior complete pneumonectomy",
+			"usingAi": true
+		}
+	],
+	"criteria": [
+		{
+			"id": "SignAndDateTheMainInformedConsentForm",
+			"type": "inclusion",
+			"title": "Sign and date the main informed consent form",
+			"expression": "SignAndDateTheMainInformedConsentForm",
+			"allowMissingVariables": [
+				"SignAndDateTheMainInformedConsentForm"
+			],
+			"subCriteria": [
+				{
+					"id": "SignAndDateTheMainInformedConsentForm",
+					"title": "Sign and date the main informed consent form",
+					"description": "Sign and date the main informed consent form",
+					"expression": "variables.SignAndDateTheMainInformedConsentForm.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.SignAndDateTheMainInformedConsentForm.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "ProvideANewlyObtainedOrArchivalBaselineBiopsy",
+			"type": "inclusion",
+			"title": "Must agree to provide a newly obtained or archival baseline biopsy from primary and/or metastatic lesion.",
+			"expression": "ProvideANewlyObtainedOrArchivalBaselineBiopsy",
+			"allowMissingVariables": [
+				"ProvideANewlyObtainedOrArchivalBaselineBiopsy"
+			],
+			"subCriteria": [
+				{
+					"id": "ProvideANewlyObtainedOrArchivalBaselineBiopsy",
+					"title": "Provide a newly obtained or archival baseline biopsy",
+					"description": "Must agree to provide a newly obtained or archival baseline biopsy from primary and/or metastatic lesion.",
+					"expression": "variables.ProvideANewlyObtainedOrArchivalBaselineBiopsy.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.ProvideANewlyObtainedOrArchivalBaselineBiopsy.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "PathologicallyDocumentedBreastCancerBcTumor",
+			"type": "inclusion",
+			"title": "Pathologically documented Breast Cancer (BC) tumor that is unresectable and/or metastatic, is hormone receptor-negative or hormone receptor-positive, and has confirmed HER2 IHC 1+ or IHC 2+/ISH- (HER2-low) status or HER2 IHC 0 status as determined according to ASCO CAP 2018 guidelines based on sample collected during Tissue Screening.",
+			"expression": "PathologicallyDocumentedBreastCancerBcTumor",
+			"allowMissingVariables": [
+				"PathologicallyDocumentedBreastCancerBcTumor"
+			],
+			"subCriteria": [
+				{
+					"id": "PathologicallyDocumentedBreastCancerBcTumor",
+					"title": "Pathologically documented Breast Cancer (BC) tumor",
+					"description": "Pathologically documented Breast Cancer (BC) tumor that is unresectable and/or metastatic, is hormone receptor-negative or hormone receptor-positive, and has confirmed HER2 IHC 1+ or IHC 2+/ISH- (HER2-low) status or HER2 IHC 0 status as determined according to ASCO CAP 2018 guidelines based on sample collected during Tissue Screening.",
+					"expression": "variables.PathologicallyDocumentedBreastCancerBcTumor.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.PathologicallyDocumentedBreastCancerBcTumor.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "PriorLinesOfTherapyInTheMetastaticSetting",
+			"type": "inclusion",
+			"title": "Has had at least one and up to two prior lines of therapy in the metastatic setting.",
+			"expression": "PriorLinesOfTherapyInTheMetastaticSetting",
+			"allowMissingVariables": [
+				"PriorLinesOfTherapyInTheMetastaticSetting"
+			],
+			"subCriteria": [
+				{
+					"id": "PriorLinesOfTherapyInTheMetastaticSetting",
+					"title": "Prior lines of therapy in the metastatic setting",
+					"description": "Has had at least one and up to two prior lines of therapy in the metastatic setting.",
+					"expression": "variables.PriorLinesOfTherapyInTheMetastaticSetting.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.PriorLinesOfTherapyInTheMetastaticSetting.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "PresenceOfMeasurableLesion",
+			"type": "inclusion",
+			"title": "Presence of at least one measurable lesion based on computed tomography or magnetic resonance imaging.",
+			"expression": "PresenceOfMeasurableLesion",
+			"allowMissingVariables": [
+				"PresenceOfMeasurableLesion"
+			],
+			"subCriteria": [
+				{
+					"id": "PresenceOfMeasurableLesion",
+					"title": "Presence of measurable lesion",
+					"description": "Presence of at least one measurable lesion based on computed tomography or magnetic resonance imaging.",
+					"expression": "variables.PresenceOfMeasurableLesion.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.PresenceOfMeasurableLesion.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "ParticipantsWithBrainMetastases",
+			"type": "inclusion",
+			"title": "Participants with brain metastases are allowed in the study if the brain lesion(s) are small (<2 cm), untreated, asymptomatic, not requiring urgent medical intervention, and are asymptomatic and clinically stable.",
+			"expression": "ParticipantsWithBrainMetastases",
+			"allowMissingVariables": [
+				"ParticipantsWithBrainMetastases"
+			],
+			"subCriteria": [
+				{
+					"id": "ParticipantsWithBrainMetastases",
+					"title": "Participants with brain metastases",
+					"description": "Participants with brain metastases are allowed in the study if the brain lesion(s) are small (<2 cm), untreated, asymptomatic, not requiring urgent medical intervention, and are asymptomatic and clinically stable.",
+					"expression": "variables.ParticipantsWithBrainMetastases.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.ParticipantsWithBrainMetastases.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "EasternCooperativeOncologyGroupPerformanceStatus",
+			"type": "inclusion",
+			"title": "Has an Eastern Cooperative Oncology Group performance status of 0 or 1.",
+			"expression": "EasternCooperativeOncologyGroupPerformanceStatus",
+			"allowMissingVariables": [
+				"EasternCooperativeOncologyGroupPerformanceStatus"
+			],
+			"subCriteria": [
+				{
+					"id": "EasternCooperativeOncologyGroupPerformanceStatus",
+					"title": "Eastern Cooperative Oncology Group performance status",
+					"description": "Has an Eastern Cooperative Oncology Group performance status of 0 or 1.",
+					"expression": "variables.EasternCooperativeOncologyGroupPerformanceStatus.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.EasternCooperativeOncologyGroupPerformanceStatus.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "MinimumLifeExpectancy",
+			"type": "inclusion",
+			"title": "Has a minimum life expectancy of 12 weeks at Screening.",
+			"expression": "MinimumLifeExpectancy",
+			"allowMissingVariables": [
+				"MinimumLifeExpectancy"
+			],
+			"subCriteria": [
+				{
+					"id": "MinimumLifeExpectancy",
+					"title": "Minimum life expectancy",
+					"description": "Has a minimum life expectancy of 12 weeks at Screening.",
+					"expression": "variables.MinimumLifeExpectancy.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.MinimumLifeExpectancy.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "LeftVentricularEjectionFraction",
+			"type": "inclusion",
+			"title": "Has a left ventricular ejection fraction =>50% within 28 days before enrollment.",
+			"expression": "LeftVentricularEjectionFraction",
+			"allowMissingVariables": [
+				"LeftVentricularEjectionFraction"
+			],
+			"subCriteria": [
+				{
+					"id": "LeftVentricularEjectionFraction",
+					"title": "Left ventricular ejection fraction",
+					"description": "Has a left ventricular ejection fraction =>50% within 28 days before enrollment.",
+					"expression": "variables.LeftVentricularEjectionFraction.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.LeftVentricularEjectionFraction.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "AdequateOrganAndBoneMarrowFunction",
+			"type": "inclusion",
+			"title": "Has adequate organ and bone marrow function within 28 days before enrollment.",
+			"expression": "AdequateOrganAndBoneMarrowFunction",
+			"allowMissingVariables": [
+				"AdequateOrganAndBoneMarrowFunction"
+			],
+			"subCriteria": [
+				{
+					"id": "AdequateOrganAndBoneMarrowFunction",
+					"title": "Adequate organ and bone marrow function",
+					"description": "Has adequate organ and bone marrow function within 28 days before enrollment.",
+					"expression": "variables.AdequateOrganAndBoneMarrowFunction.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.AdequateOrganAndBoneMarrowFunction.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "AdequateTreatmentWashoutPeriod",
+			"type": "inclusion",
+			"title": "Has adequate treatment washout period before enrollment.",
+			"expression": "AdequateTreatmentWashoutPeriod",
+			"allowMissingVariables": [
+				"AdequateTreatmentWashoutPeriod"
+			],
+			"subCriteria": [
+				{
+					"id": "AdequateTreatmentWashoutPeriod",
+					"title": "Adequate treatment washout period",
+					"description": "Has adequate treatment washout period before enrollment.",
+					"expression": "variables.AdequateTreatmentWashoutPeriod.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.AdequateTreatmentWashoutPeriod.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "ContraceptionAgreement",
+			"type": "inclusion",
+			"title": "Male and female subjects of reproductive/childbearing potential must agree to use a highly effective form of contraception.",
+			"expression": "ContraceptionAgreement",
+			"allowMissingVariables": [
+				"ContraceptionAgreement"
+			],
+			"subCriteria": [
+				{
+					"id": "ContraceptionAgreement",
+					"title": "Contraception agreement",
+					"description": "Male and female subjects of reproductive/childbearing potential must agree to use a highly effective form of contraception.",
+					"expression": "variables.ContraceptionAgreement.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.ContraceptionAgreement.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "PriorTreatmentWithAnAntibodyDrugConjugateAdc",
+			"type": "exclusion",
+			"title": "Prior treatment with an antibody drug conjugate (ADC).",
+			"expression": "PriorTreatmentWithAnAntibodyDrugConjugateAdc",
+			"allowMissingVariables": [
+				"PriorTreatmentWithAnAntibodyDrugConjugateAdc"
+			],
+			"subCriteria": [
+				{
+					"id": "PriorTreatmentWithAnAntibodyDrugConjugateAdc",
+					"title": "Prior treatment with an antibody drug conjugate (ADC)",
+					"description": "Prior treatment with an antibody drug conjugate (ADC).",
+					"expression": "variables.PriorTreatmentWithAnAntibodyDrugConjugateAdc.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.PriorTreatmentWithAnAntibodyDrugConjugateAdc.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "UncontrolledOrSignificantCardiovascularDisease",
+			"type": "exclusion",
+			"title": "Uncontrolled or significant cardiovascular disease.",
+			"expression": "UncontrolledOrSignificantCardiovascularDisease",
+			"allowMissingVariables": [
+				"UncontrolledOrSignificantCardiovascularDisease"
+			],
+			"subCriteria": [
+				{
+					"id": "UncontrolledOrSignificantCardiovascularDisease",
+					"title": "Uncontrolled or significant cardiovascular disease",
+					"description": "Uncontrolled or significant cardiovascular disease.",
+					"expression": "variables.UncontrolledOrSignificantCardiovascularDisease.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.UncontrolledOrSignificantCardiovascularDisease.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "CorrectedQtIntervalProlongation",
+			"type": "exclusion",
+			"title": "Has a corrected QT interval prolongation.",
+			"expression": "CorrectedQtIntervalProlongation",
+			"allowMissingVariables": [
+				"CorrectedQtIntervalProlongation"
+			],
+			"subCriteria": [
+				{
+					"id": "CorrectedQtIntervalProlongation",
+					"title": "Corrected QT interval prolongation",
+					"description": "Has a corrected QT interval prolongation.",
+					"expression": "variables.CorrectedQtIntervalProlongation.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.CorrectedQtIntervalProlongation.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "HistoryOfInterstitialLungDiseaseIldPneumonitis",
+			"type": "exclusion",
+			"title": "Has a history of (non-infectious) interstitial lung disease (ILD)/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening.",
+			"expression": "HistoryOfInterstitialLungDiseaseIldPneumonitis",
+			"allowMissingVariables": [
+				"HistoryOfInterstitialLungDiseaseIldPneumonitis"
+			],
+			"subCriteria": [
+				{
+					"id": "HistoryOfInterstitialLungDiseaseIldPneumonitis",
+					"title": "History of interstitial lung disease (ILD)/pneumonitis",
+					"description": "Has a history of (non-infectious) interstitial lung disease (ILD)/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening.",
+					"expression": "variables.HistoryOfInterstitialLungDiseaseIldPneumonitis.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.HistoryOfInterstitialLungDiseaseIldPneumonitis.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "SpinalCordCompressionOrActiveCnsMetastases",
+			"type": "exclusion",
+			"title": "Has spinal cord compression or clinically active central nervous system metastases.",
+			"expression": "SpinalCordCompressionOrActiveCnsMetastases",
+			"allowMissingVariables": [
+				"SpinalCordCompressionOrActiveCnsMetastases"
+			],
+			"subCriteria": [
+				{
+					"id": "SpinalCordCompressionOrActiveCnsMetastases",
+					"title": "Spinal cord compression or active CNS metastases",
+					"description": "Has spinal cord compression or clinically active central nervous system metastases.",
+					"expression": "variables.SpinalCordCompressionOrActiveCnsMetastases.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.SpinalCordCompressionOrActiveCnsMetastases.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "MultiplePrimaryMalignancies",
+			"type": "exclusion",
+			"title": "Has multiple primary malignancies within 3 years, except adequately resected non-melanoma skin cancer, curatively treated in situ disease, other solid tumors curatively treated, or contralateral BC.",
+			"expression": "MultiplePrimaryMalignancies",
+			"allowMissingVariables": [
+				"MultiplePrimaryMalignancies"
+			],
+			"subCriteria": [
+				{
+					"id": "MultiplePrimaryMalignancies",
+					"title": "Multiple primary malignancies",
+					"description": "Has multiple primary malignancies within 3 years, except adequately resected non-melanoma skin cancer, curatively treated in situ disease, other solid tumors curatively treated, or contralateral BC.",
+					"expression": "variables.MultiplePrimaryMalignancies.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.MultiplePrimaryMalignancies.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "SevereHypersensitivityReactions",
+			"type": "exclusion",
+			"title": "Has a history of severe hypersensitivity reactions to either the drug substances or inactive ingredients in the drug product or to other monoclonal antibodies.",
+			"expression": "SevereHypersensitivityReactions",
+			"allowMissingVariables": [
+				"SevereHypersensitivityReactions"
+			],
+			"subCriteria": [
+				{
+					"id": "SevereHypersensitivityReactions",
+					"title": "Severe hypersensitivity reactions",
+					"description": "Has a history of severe hypersensitivity reactions to either the drug substances or inactive ingredients in the drug product or to other monoclonal antibodies.",
+					"expression": "variables.SevereHypersensitivityReactions.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.SevereHypersensitivityReactions.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "UncontrolledInfection",
+			"type": "exclusion",
+			"title": "Has an uncontrolled infection requiring intravenous (IV) antibiotics, antivirals, or antifungals.",
+			"expression": "UncontrolledInfection",
+			"allowMissingVariables": [
+				"UncontrolledInfection"
+			],
+			"subCriteria": [
+				{
+					"id": "UncontrolledInfection",
+					"title": "Uncontrolled infection",
+					"description": "Has an uncontrolled infection requiring intravenous (IV) antibiotics, antivirals, or antifungals.",
+					"expression": "variables.UncontrolledInfection.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.UncontrolledInfection.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "ActivePrimaryImmunodeficiencyOrInfections",
+			"type": "exclusion",
+			"title": "Active primary immunodeficiency, known uncontrolled active human immunodeficiency virus (HIV) infection, or active hepatitis B or C infection.",
+			"expression": "ActivePrimaryImmunodeficiencyOrInfections",
+			"allowMissingVariables": [
+				"ActivePrimaryImmunodeficiencyOrInfections"
+			],
+			"subCriteria": [
+				{
+					"id": "ActivePrimaryImmunodeficiencyOrInfections",
+					"title": "Active primary immunodeficiency or infections",
+					"description": "Active primary immunodeficiency, known uncontrolled active human immunodeficiency virus (HIV) infection, or active hepatitis B or C infection.",
+					"expression": "variables.ActivePrimaryImmunodeficiencyOrInfections.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.ActivePrimaryImmunodeficiencyOrInfections.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "LiveAttenuatedVaccine",
+			"type": "exclusion",
+			"title": "Has history of receiving a live, attenuated vaccine within 30 days prior to the first exposure to study drug.",
+			"expression": "LiveAttenuatedVaccine",
+			"allowMissingVariables": [
+				"LiveAttenuatedVaccine"
+			],
+			"subCriteria": [
+				{
+					"id": "LiveAttenuatedVaccine",
+					"title": "Live, attenuated vaccine",
+					"description": "Has history of receiving a live, attenuated vaccine within 30 days prior to the first exposure to study drug.",
+					"expression": "variables.LiveAttenuatedVaccine.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.LiveAttenuatedVaccine.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "UnresolvedToxicitiesFromPreviousAnticancerTherapy",
+			"type": "exclusion",
+			"title": "Has unresolved toxicities from previous anticancer therapy, defined as toxicities (other than alopecia) not yet resolved to Grade <=1 or baseline.",
+			"expression": "UnresolvedToxicitiesFromPreviousAnticancerTherapy",
+			"allowMissingVariables": [
+				"UnresolvedToxicitiesFromPreviousAnticancerTherapy"
+			],
+			"subCriteria": [
+				{
+					"id": "UnresolvedToxicitiesFromPreviousAnticancerTherapy",
+					"title": "Unresolved toxicities from previous anticancer therapy",
+					"description": "Has unresolved toxicities from previous anticancer therapy, defined as toxicities (other than alopecia) not yet resolved to Grade <=1 or baseline.",
+					"expression": "variables.UnresolvedToxicitiesFromPreviousAnticancerTherapy.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.UnresolvedToxicitiesFromPreviousAnticancerTherapy.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "PregnancyOrBreastfeeding",
+			"type": "exclusion",
+			"title": "Is pregnant or breastfeeding or planning to become pregnant.",
+			"expression": "PregnancyOrBreastfeeding",
+			"allowMissingVariables": [
+				"PregnancyOrBreastfeeding"
+			],
+			"subCriteria": [
+				{
+					"id": "PregnancyOrBreastfeeding",
+					"title": "Pregnancy or breastfeeding",
+					"description": "Is pregnant or breastfeeding or planning to become pregnant.",
+					"expression": "variables.PregnancyOrBreastfeeding.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.PregnancyOrBreastfeeding.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "LungSpecificIntercurrentIllnesses",
+			"type": "exclusion",
+			"title": "Lung-specific intercurrent clinically significant illnesses.",
+			"expression": "LungSpecificIntercurrentIllnesses",
+			"allowMissingVariables": [
+				"LungSpecificIntercurrentIllnesses"
+			],
+			"subCriteria": [
+				{
+					"id": "LungSpecificIntercurrentIllnesses",
+					"title": "Lung-specific intercurrent illnesses",
+					"description": "Lung-specific intercurrent clinically significant illnesses.",
+					"expression": "variables.LungSpecificIntercurrentIllnesses.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.LungSpecificIntercurrentIllnesses.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "AutoimmuneConnectiveTissueOrInflammatoryDisorders",
+			"type": "exclusion",
+			"title": "Any autoimmune, connective tissue, or inflammatory disorders.",
+			"expression": "AutoimmuneConnectiveTissueOrInflammatoryDisorders",
+			"allowMissingVariables": [
+				"AutoimmuneConnectiveTissueOrInflammatoryDisorders"
+			],
+			"subCriteria": [
+				{
+					"id": "AutoimmuneConnectiveTissueOrInflammatoryDisorders",
+					"title": "Autoimmune, connective tissue, or inflammatory disorders",
+					"description": "Any autoimmune, connective tissue, or inflammatory disorders.",
+					"expression": "variables.AutoimmuneConnectiveTissueOrInflammatoryDisorders.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.AutoimmuneConnectiveTissueOrInflammatoryDisorders.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "PriorCompletePneumonectomy",
+			"type": "exclusion",
+			"title": "Prior complete pneumonectomy.",
+			"expression": "PriorCompletePneumonectomy",
+			"allowMissingVariables": [
+				"PriorCompletePneumonectomy"
+			],
+			"subCriteria": [
+				{
+					"id": "PriorCompletePneumonectomy",
+					"title": "Prior complete pneumonectomy",
+					"description": "Prior complete pneumonectomy.",
+					"expression": "variables.PriorCompletePneumonectomy.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.PriorCompletePneumonectomy.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		}
+	]
+}

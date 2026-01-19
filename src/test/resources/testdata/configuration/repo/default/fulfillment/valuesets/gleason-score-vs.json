@@ -1,0 +1,29 @@
+{
+  "name": "gleason-score-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "gleason-score-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "897202005",
+              "display": "Gleason scoring system for malignant neoplasm of prostate"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "35266-6",
+              "display": "Gleason score in Specimen Qualitative"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

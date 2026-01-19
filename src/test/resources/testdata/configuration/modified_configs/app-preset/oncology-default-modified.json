@@ -1,0 +1,37 @@
+{
+  "id": "oncology.default",
+  "banner": {
+    "representationId": "patientBanner.onco.extended",
+    "querySetId": "patientProfile.onco.extended"
+  },
+  "dashboards": {
+    "timeline": {
+      "representationId": "timeline.onco.extended",
+      "querySetId": "timeline.onco.extended"
+    },
+    "summary": {
+      "main": {
+        "representationId": "summary.onco.extended",
+        "querySetId": "summary.onco.extended"
+      },
+      "recentEvents": {
+        "representationId": "recentEvents.onco.general",
+        "querySetId": "recentEvents.onco.general"
+      }
+    },
+    "treatmentResponse": {
+      "imagingSelector": {
+        "representationId": "imagingStudy.onco.general",
+        "querySetId": "imagingReports.onco.general"
+      },
+      "main": {
+        "representationId": "treatmentResponse.onco.general",
+        "querySetId": "treatmentResponse.onco.extended"
+      },
+      "charts": {
+        "representationId": "treatmentResponseChartMarkers.onco.general",
+        "querySetId": "treatmentResponse.onco.extended"
+      }
+    }
+  }
+}

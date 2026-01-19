@@ -1,0 +1,1316 @@
+{
+	"id": "NCT05929768",
+	"type": "trial",
+	"name": "Shorter Chemo-Immunotherapy Without Anthracycline Drugs for Early-Stage Triple Negative Breast Cancer (TNBC)",
+	"usingAi": true,
+	"studyCompletion": "2033-04",
+	"description": "This phase III trial compares the effects of shorter chemotherapy (chemo)-immunotherapy without anthracyclines to usual chemo-immunotherapy for the treatment of early-stage triple negative breast cancer.\nPaclitaxel is in a class of medications called anti-microtubule agents.\nIt stops cancer cells from growing and dividing and may kill them.\nCarboplatin is in a class of medications known as platinum-containing compounds.\nIt works in a way similar to the anticancer drug cisplatin, but may be better tolerated than cisplatin.\nCarboplatin works by killing, stopping or slowing the growth of cancer cells.\nCyclophosphamide is in a class of medications called alkylating agents.\nIt works by damaging the cell's deoxyribonucleic acid (DNA) and may kill cancer cells.\nIt may also lower the body's immune response.\nDocetaxel is in a class of medications called taxanes.\nIt stops cancer cells from growing and dividing and may kill them.\nDoxorubicin is an anthracycline chemotherapy drug that damages DNA and may kill cancer cells.\nPembrolizumab may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth.\nShorter treatment without anthracycline chemotherapy may work the same as the usual anthracycline chemotherapy treatment for early-stage triple negative breast cancer.",
+	"status": "Recruiting",
+	"phase": "3",
+	"link": "https://clinicaltrials.gov/study/NCT05929768",
+	"constants": null,
+	"variables": [
+		{
+			"id": "dob",
+			"definition": {
+				"fulfillment": {
+					"queries": [
+						{
+							"alias": "PATIENT",
+							"query": {
+								"from": "patient",
+								"show": [
+									"attributes.dob"
+								],
+								"dedup": true
+							}
+						}
+					]
+				}
+			},
+			"display": "Patient's date of birth",
+			"usingAi": false
+		},
+		{
+			"id": "IsERPRHER2Negative",
+			"definition": {
+				"ai": {
+					"criteria": "Histologically confirmed ER-negative (ER < 5%), PR-negative (PR < 5%), and HER2-negative breast cancer"
+				}
+			},
+			"display": "ER, PR, HER2 status",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsAJCCStageEligible",
+			"definition": {
+				"ai": {
+					"criteria": "American Joint Committee on Cancer (AJCC) 8 anatomic tumor clinical stage either (T2-T4, N0, M0) or (T1-T3, N1-2, M0)"
+				}
+			},
+			"display": "AJCC 8 anatomic tumor stage",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasBreastAxillaryImaging",
+			"definition": {
+				"ai": {
+					"criteria": "Breast and axillary imaging with mammogram and/or ultrasound and/or MRI within 49 days prior to randomization"
+				}
+			},
+			"display": "Breast and axillary imaging",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsT4N3OrInflammatoryBreastCancerExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Any of the following: T4/N+, any N3, or inflammatory breast cancer"
+				}
+			},
+			"display": "T4/N+, N3, or inflammatory breast cancer exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsMetastaticDiseaseExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Has metastatic disease (M1)"
+				}
+			},
+			"display": "Metastatic disease",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsPriorSystemicOrRadiationTherapyExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Prior systemic or radiation therapy with curative intent for the current breast cancer"
+				}
+			},
+			"display": "Prior systemic or radiation therapy",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsPreviousIpsilateralBreastSurgeryExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Previous definitive ipsilateral breast surgery for the current breast cancer"
+				}
+			},
+			"display": "Previous ipsilateral breast surgery",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsUseOfInvestigationalAgentsExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Current or anticipated use of other investigational agents"
+				}
+			},
+			"display": "Use of investigational agents",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsAllergicReactionsToStudyAgentsExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "History of allergic reactions attributed to compounds of similar chemical or biologic composition as study agents"
+				}
+			},
+			"display": "Allergic reactions to study agents exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsSevereHypersensitivityToPembrolizumabExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Severe hypersensitivity (>= grade 3) to pembrolizumab or any of its excipients"
+				}
+			},
+			"display": "Severe hypersensitivity to pembrolizumab exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsPriorTherapyWithSpecificAgentsExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor"
+				}
+			},
+			"display": "Prior therapy with specific agents exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsParticipationInOtherStudiesExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Currently participating in or have participated in a study of an investigational agent or used an investigational device within 28 days prior to randomization"
+				}
+			},
+			"display": "Participation in other studies exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasZubrodPerformanceStatus",
+			"definition": {
+				"ai": {
+					"criteria": "Zubrod performance status of 0-2"
+				}
+			},
+			"display": "Zubrod performance status",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasPeripheralNeuropathyGrade1",
+			"definition": {
+				"ai": {
+					"criteria": "Has evidence of peripheral neuropathy and must have it at =< grade 1, by Common Terminology Criteria for Adverse Events (CTCAE) version (v.) 5.0, within 28 days prior to randomization"
+				}
+			},
+			"display": "Peripheral neuropathy grade",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasCompleteMedicalHistory",
+			"definition": {
+				"ai": {
+					"criteria": "Has a complete medical history and physical exam within 28 days prior to randomization"
+				}
+			},
+			"display": "Complete medical history",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasHemoglobinLevel",
+			"definition": {
+				"ai": {
+					"criteria": "Hemoglobin >= 9.0 g/dL or >= 5.6 mol/L (within 28 days prior to randomization).  Must be met without erythropoietin dependency and without packed red blood cell transfusion within last 2 weeks."
+				}
+			},
+			"display": "Hemoglobin level",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasLeukocytesCount",
+			"definition": {
+				"ai": {
+					"criteria": "Leukocytes >= 3 x 10^3/uL (within 28 days prior to randomization)"
+				}
+			},
+			"display": "Leukocytes count",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasAbsoluteNeutrophilCount",
+			"definition": {
+				"ai": {
+					"criteria": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to randomization)"
+				}
+			},
+			"display": "Absolute neutrophil count",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasPlateletsCount",
+			"definition": {
+				"ai": {
+					"criteria": "Platelets >= 100 x 10^3/uL (within 28 days prior to randomization)"
+				}
+			},
+			"display": "Platelets count",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasBilirubinLevels1",
+			"definition": {
+				"ai": {
+					"criteria": "Total bilirubin =< 1.5 x institutional upper limit of normal (IULN) within 28 days prior to randomization"
+				}
+			},
+			"display": "Bilirubin levels 1",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasBilirubinLevels2",
+			"definition": {
+				"ai": {
+					"criteria": "Direct bilirubin =< IULN with total bilirubin > 1.5 x IULN within 28 days prior to randomization"
+				}
+			},
+			"display": "Bilirubin levels 2",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasASTLevels",
+			"definition": {
+				"ai": {
+					"criteria": "Aspartate aminotransferase (AST) =< 3 x institutional upper limit of normal (ULN) (within 28 days prior to randomization)"
+				}
+			},
+			"display": "AST levels",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasALTLevels",
+			"definition": {
+				"ai": {
+					"criteria": "Alanine aminotransferase (ALT) =< 3 x institutional upper limit of normal (ULN) (within 28 days prior to randomization)"
+				}
+			},
+			"display": "ALT levels",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasSerumCreatinine",
+			"definition": {
+				"ai": {
+					"criteria": "Serum creatinine <= the IULN. This specimen must have been drawn and processed within 28 days prior to registration."
+				}
+			},
+			"display": "Serum creatinine",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasCalculatedClearance",
+			"definition": {
+				"ai": {
+					"criteria": "Calculated creatinine clearance >= 50 mL/min/1.73m^2 using the Cockcroft-Gault Formula. Serum creatinine <= the IULN. This specimen must have been drawn and processed within 28 days prior to registration."
+				}
+			},
+			"display": "Calculated Creatinine clearance",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasAdequateCardiacFunction",
+			"definition": {
+				"ai": {
+					"criteria": "Adequate cardiac function with left ventricular ejection fraction >= 50% as assessed by ECHO or MUGA"
+				}
+			},
+			"display": "Cardiac function",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasCardiacDisease",
+			"definition": {
+				"ai": {
+					"criteria": "Has a known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, has a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification and must be class 2B or better"
+				}
+			},
+			"display": "History or current symptoms of cardiac diseasen",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsHIVInfectionControlled",
+			"definition": {
+				"ai": {
+					"criteria": "HIV-infection: On effective anti-retroviral therapy at randomization and undetectable viral load test within 6 months prior to randomization"
+				}
+			},
+			"display": "HIV infection control",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsHBVInfectionControlled",
+			"definition": {
+				"ai": {
+					"criteria": "Chronic HBV infection: Undetectable HBV viral load while on suppressive therapy within 6 months prior to randomization"
+				}
+			},
+			"display": "HBV infection control",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsHCVInfectionControlled",
+			"definition": {
+				"ai": {
+					"criteria": "History of HCV infection: Treated and cured or undetectable HCV viral load test within 6 months prior to randomization"
+				}
+			},
+			"display": "HCV infection control",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsUncontrolledDiabetesExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Uncontrolled diabetes in the opinion of the treating investigator"
+				}
+			},
+			"display": "Uncontrolled diabetes exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "HasPhysicalSlideFromBiopsy",
+			"definition": {
+				"ai": {
+					"criteria": "One physical 4-5-micron single H&E slide from the archival pretreatment diagnostic biopsy available for submission"
+				}
+			},
+			"display": "Physical slide from biopsy",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsPregnancyOrNursingExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Pregnancy or nursing"
+				}
+			},
+			"display": "Pregnancy or nursing exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsMajorSurgeryWithin14DaysExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Major surgery within 14 days prior to randomization"
+				}
+			},
+			"display": "Major surgery within 14 days exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsSevereOrActiveInfectionsExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Severe or active infections within 14 days prior to Randomization"
+				}
+			},
+			"display": "Severe or active infections exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsDiagnosisOfImmunodeficiencyExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Diagnosis of immunodeficiency and receiving chronic systemic steroid therapy"
+				}
+			},
+			"display": "Diagnosis of immunodeficiency exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsActiveAutoimmuneDiseaseExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Active autoimmune disease that has required systemic treatment in 2 years prior to randomization"
+				}
+			},
+			"display": "Active autoimmune disease exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsHistoryOfPneumonitisExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "History of (non-infectious) pneumonitis that required steroids"
+				}
+			},
+			"display": "History of pneumonitis exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsLiveVaccineWithin30DaysExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Received a live vaccine within 30 days prior to randomization"
+				}
+			},
+			"display": "Live vaccine within 30 days exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsPriorOrConcurrentMalignancyExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the treatment regimen"
+				}
+			},
+			"display": "Prior or concurrent malignancy exclusion",
+			"value": null,
+			"usingAi": true
+		},
+		{
+			"id": "IsUncontrolledHypertensionExcluded",
+			"definition": {
+				"ai": {
+					"criteria": "Uncontrolled hypertension in the opinion of the treating investigator"
+				}
+			},
+			"display": "Uncontrolled hypertension exclusion",
+			"value": null,
+			"usingAi": true
+		}
+	],
+	"criteria": [
+		{
+			"id": "criteria_age",
+			"type": "inclusion",
+			"title": "Age >= 18 years",
+			"allowMissingVariables": [
+				"dob"
+			],
+			"dependency": [
+				"dob"
+			],
+			"expression": "isAgeGt18",
+			"subCriteria": [
+				{
+					"id": "isAgeGt18",
+					"title": "Age is greater than 18",
+					"description": "Age is greater than 18",
+					"expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-07-30`,`years`,`int`) >= `18`",
+					"explainability": {
+						"displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-07-30`,`years`,`int`)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants must have histologically confirmed estrogen receptor (ER)-negative, progesterone receptor (PR)-negative, and HER2-negative breast cancer (TNBC)",
+			"expression": "IsERPRHER2Negative",
+			"id": "IsERPRHER2Negative",
+			"allowMissingVariables": [
+				"IsERPRHER2Negative"
+			],
+			"dependency": [
+				"IsERPRHER2Negative"
+			],
+			"subCriteria": [
+				{
+					"id": "IsERPRHER2Negative",
+					"title": "ER, PR, HER2 status",
+					"description": "Histologically confirmed ER-negative (ER < 5%), PR-negative (PR < 5%), and HER2-negative breast cancer",
+					"expression": "variables.IsERPRHER2Negative.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsERPRHER2Negative.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants must have AJCC 8 anatomic tumor clinical stage either (T2-T4, N0, M0) or (T1-T3, N1-2, M0)",
+			"expression": "IsAJCCStageEligible",
+			"id": "IsAJCCStageEligible",
+			"allowMissingVariables": [
+				"IsAJCCStageEligible"
+			],
+			"dependency": [
+				"IsAJCCStageEligible"
+			],
+			"subCriteria": [
+				{
+					"id": "IsAJCCStageEligible",
+					"title": "AJCC 8 anatomic tumor stage",
+					"description": "American Joint Committee on Cancer (AJCC) 8 anatomic tumor clinical stage either (T2-T4, N0, M0) or (T1-T3, N1-2, M0)",
+					"expression": "variables.IsAJCCStageEligible.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsAJCCStageEligible.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants must have breast and axillary imaging with mammogram and/or ultrasound and/or magnetic resonance imaging (MRI) within 49 days prior to randomization\n",
+			"expression": "HasBreastAxillaryImaging",
+			"id": "HasBreastAxillaryImaging",
+			"allowMissingVariables": [
+				"HasBreastAxillaryImaging"
+			],
+			"dependency": [
+				"HasBreastAxillaryImaging"
+			],
+			"subCriteria": [
+				{
+					"id": "HasBreastAxillaryImaging",
+					"title": "Breast and axillary imaging",
+					"description": "Breast and axillary imaging with mammogram and/or ultrasound and/or MRI within 49 days prior to randomization",
+					"expression": "variables.HasBreastAxillaryImaging.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasBreastAxillaryImaging.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have any of the following : T4/N+, any N3, or inflammatory breast cancer",
+			"expression": "IsT4N3OrInflammatoryBreastCancerExcluded",
+			"id": "IsT4N3OrInflammatoryBreastCancerExcluded",
+			"allowMissingVariables": [
+				"IsT4N3OrInflammatoryBreastCancerExcluded"
+			],
+			"dependency": [
+				"IsT4N3OrInflammatoryBreastCancerExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsT4N3OrInflammatoryBreastCancerExcluded",
+					"title": "T4/N+, N3, or inflammatory breast cancer exclusion",
+					"description": "T4/N+, any N3, or inflammatory breast cancer",
+					"expression": "variables.IsT4N3OrInflammatoryBreastCancerExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsT4N3OrInflammatoryBreastCancerExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have metastatic disease (M1)",
+			"expression": "IsMetastaticDiseaseExcluded",
+			"id": "IsMetastaticDiseaseExcluded",
+			"allowMissingVariables": [
+				"IsMetastaticDiseaseExcluded"
+			],
+			"dependency": [
+				"IsMetastaticDiseaseExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsMetastaticDiseaseExcluded",
+					"title": "Has metastatic disease (M1)",
+					"description": "Metastatic disease (M1)",
+					"expression": "variables.IsMetastaticDiseaseExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsMetastaticDiseaseExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have received prior systemic therapy or radiation therapy with curative intent for the current breast cancer",
+			"expression": "IsPriorSystemicOrRadiationTherapyExcluded",
+			"id": "IsPriorSystemicOrRadiationTherapyExcluded",
+			"allowMissingVariables": [
+				"IsPriorSystemicOrRadiationTherapyExcluded"
+			],
+			"dependency": [
+				"IsPriorSystemicOrRadiationTherapyExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsPriorSystemicOrRadiationTherapyExcluded",
+					"title": "Prior systemic or radiation therapy exclusion",
+					"description": "Prior systemic or radiation therapy with curative intent for the current breast cancer",
+					"expression": "variables.IsPriorSystemicOrRadiationTherapyExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsPriorSystemicOrRadiationTherapyExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have had previous definitive ipsilateral breast surgery for the current breast cancer",
+			"expression": "IsPreviousIpsilateralBreastSurgeryExcluded",
+			"id": "IsPreviousIpsilateralBreastSurgeryExcluded",
+			"allowMissingVariables": [
+				"IsPreviousIpsilateralBreastSurgeryExcluded"
+			],
+			"dependency": [
+				"IsPreviousIpsilateralBreastSurgeryExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsPreviousIpsilateralBreastSurgeryExcluded",
+					"title": "Previous ipsilateral breast surgery exclusion",
+					"description": "Previous definitive ipsilateral breast surgery for the current breast cancer",
+					"expression": "variables.IsPreviousIpsilateralBreastSurgeryExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsPreviousIpsilateralBreastSurgeryExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have current or anticipated use of other investigational agents while participating in this study",
+			"expression": "IsUseOfInvestigationalAgentsExcluded",
+			"id": "IsUseOfInvestigationalAgentsExcluded",
+			"allowMissingVariables": [
+				"IsUseOfInvestigationalAgentsExcluded"
+			],
+			"dependency": [
+				"IsUseOfInvestigationalAgentsExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsUseOfInvestigationalAgentsExcluded",
+					"title": "Use of investigational agents exclusion",
+					"description": "Current or anticipated use of other investigational agents",
+					"expression": "variables.IsUseOfInvestigationalAgentsExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsUseOfInvestigationalAgentsExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have history of allergic reactions attributed to compounds of similar chemical or biologic composition as study agents",
+			"expression": "IsAllergicReactionsToStudyAgentsExcluded",
+			"id": "IsAllergicReactionsToStudyAgentsExcluded",
+			"allowMissingVariables": [
+				"IsAllergicReactionsToStudyAgentsExcluded"
+			],
+			"dependency": [
+				"IsAllergicReactionsToStudyAgentsExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsAllergicReactionsToStudyAgentsExcluded",
+					"title": "Allergic reactions to study agents exclusion",
+					"description": "History of allergic reactions attributed to compounds of similar chemical or biologic composition as study agents",
+					"expression": "variables.IsAllergicReactionsToStudyAgentsExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsAllergicReactionsToStudyAgentsExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have severe hypersensitivity (>= grade 3) to pembrolizumab or any of its excipients",
+			"expression": "IsSevereHypersensitivityToPembrolizumabExcluded",
+			"id": "IsSevereHypersensitivityToPembrolizumabExcluded",
+			"allowMissingVariables": [
+				"IsSevereHypersensitivityToPembrolizumabExcluded"
+			],
+			"dependency": [
+				"IsSevereHypersensitivityToPembrolizumabExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsSevereHypersensitivityToPembrolizumabExcluded",
+					"title": "Severe hypersensitivity to pembrolizumab exclusion",
+					"description": "Severe hypersensitivity (>= grade 3) to pembrolizumab or any of its excipients",
+					"expression": "variables.IsSevereHypersensitivityToPembrolizumabExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsSevereHypersensitivityToPembrolizumabExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not have received prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor",
+			"expression": "IsPriorTherapyWithSpecificAgentsExcluded",
+			"id": "IsPriorTherapyWithSpecificAgentsExcluded",
+			"allowMissingVariables": [
+				"IsPriorTherapyWithSpecificAgentsExcluded"
+			],
+			"dependency": [
+				"IsPriorTherapyWithSpecificAgentsExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsPriorTherapyWithSpecificAgentsExcluded",
+					"title": "Prior therapy with specific agents exclusion",
+					"description": "Prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor",
+					"expression": "variables.IsPriorTherapyWithSpecificAgentsExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsPriorTherapyWithSpecificAgentsExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not be currently participating in or have participated in a study of an investigational agent or used an investigational device within 28 days prior to randomization.",
+			"expression": "IsParticipationInOtherStudiesExcluded",
+			"id": "IsParticipationInOtherStudiesExcluded",
+			"allowMissingVariables": [
+				"IsParticipationInOtherStudiesExcluded"
+			],
+			"dependency": [
+				"IsParticipationInOtherStudiesExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsParticipationInOtherStudiesExcluded",
+					"title": "Participation in other studies exclusion",
+					"description": "Currently participating in or have participated in a study of an investigational agent or used an investigational device within 28 days prior to randomization",
+					"expression": "variables.IsParticipationInOtherStudiesExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsParticipationInOtherStudiesExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants must have Zubrod performance status of 0-2",
+			"expression": "HasZubrodPerformanceStatus",
+			"id": "HasZubrodPerformanceStatus",
+			"allowMissingVariables": [
+				"HasZubrodPerformanceStatus"
+			],
+			"dependency": [
+				"HasZubrodPerformanceStatus"
+			],
+			"subCriteria": [
+				{
+					"id": "HasZubrodPerformanceStatus",
+					"title": "Zubrod performance status",
+					"description": "Zubrod performance status of 0-2",
+					"expression": "variables.HasZubrodPerformanceStatus.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasZubrodPerformanceStatus.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants with evidence of peripheral neuropathy must have it at =< grade 1, by Common Terminology Criteria for Adverse Events (CTCAE) version (v.) 5.0, within 28 days prior to randomization",
+			"expression": "HasPeripheralNeuropathyGrade1",
+			"id": "HasPeripheralNeuropathyGrade1",
+			"allowMissingVariables": [
+				"HasPeripheralNeuropathyGrade1"
+			],
+			"dependency": [
+				"HasPeripheralNeuropathyGrade1"
+			],
+			"subCriteria": [
+				{
+					"id": "HasPeripheralNeuropathyGrade1",
+					"title": "Peripheral neuropathy grade",
+					"description": "Peripheral neuropathy <= grade 1, by CTCAE v. 5.0, within 28 days prior to randomization",
+					"expression": "variables.HasPeripheralNeuropathyGrade1.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasPeripheralNeuropathyGrade1.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants must have a complete medical history and physical exam within 28 days prior to randomization",
+			"expression": "HasCompleteMedicalHistory",
+			"id": "HasCompleteMedicalHistory",
+			"allowMissingVariables": [
+				"HasCompleteMedicalHistory"
+			],
+			"dependency": [
+				"HasCompleteMedicalHistory"
+			],
+			"subCriteria": [
+				{
+					"id": "HasCompleteMedicalHistory",
+					"title": "Complete medical history",
+					"description": "Complete medical history and physical exam within 28 days prior to randomization",
+					"expression": "variables.HasCompleteMedicalHistory.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasCompleteMedicalHistory.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Hemoglobin >= 9.0 g/dL or >= 5.6 mol/L (within 28 days prior to randomization)",
+			"expression": "HasHemoglobinLevel",
+			"id": "HasHemoglobinLevel",
+			"allowMissingVariables": [
+				"HasHemoglobinLevel"
+			],
+			"dependency": [
+				"HasHemoglobinLevel"
+			],
+			"subCriteria": [
+				{
+					"id": "HasHemoglobinLevel",
+					"title": "Hemoglobin level",
+					"description": "Hemoglobin >= 9.0 g/dL or >= 5.6 mol/L (within 28 days prior to randomization)",
+					"expression": "variables.HasHemoglobinLevel.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasHemoglobinLevel.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Leukocytes >= 3 x 10^3/uL (within 28 days prior to randomization)",
+			"expression": "HasLeukocytesCount",
+			"id": "HasLeukocytesCount",
+			"allowMissingVariables": [
+				"HasLeukocytesCount"
+			],
+			"dependency": [
+				"HasLeukocytesCount"
+			],
+			"subCriteria": [
+				{
+					"id": "HasLeukocytesCount",
+					"title": "Leukocytes count",
+					"description": "Leukocytes >= 3 x 10^3/uL (within 28 days prior to randomization)",
+					"expression": "variables.HasLeukocytesCount.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasLeukocytesCount.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to randomization)",
+			"expression": "HasAbsoluteNeutrophilCount",
+			"id": "HasAbsoluteNeutrophilCount",
+			"allowMissingVariables": [
+				"HasAbsoluteNeutrophilCount"
+			],
+			"dependency": [
+				"HasAbsoluteNeutrophilCount"
+			],
+			"subCriteria": [
+				{
+					"id": "HasAbsoluteNeutrophilCount",
+					"title": "Absolute neutrophil count",
+					"description": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to randomization)",
+					"expression": "variables.HasAbsoluteNeutrophilCount.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasAbsoluteNeutrophilCount.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Platelets >= 100 x 10^3/uL (within 28 days prior to randomization)",
+			"expression": "HasPlateletsCount",
+			"id": "HasPlateletsCount",
+			"allowMissingVariables": [
+				"HasPlateletsCount"
+			],
+			"dependency": [
+				"HasPlateletsCount"
+			],
+			"subCriteria": [
+				{
+					"id": "HasPlateletsCount",
+					"title": "Platelets count",
+					"description": "Platelets >= 100 x 10^3/uL (within 28 days prior to randomization)",
+					"expression": "variables.HasPlateletsCount.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasPlateletsCount.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants with history of Gilbert's disease must have total bilirubin =< 5 x institutional IULN",
+			"expression": "HasBilirubinLevels1 || HasBilirubinLevels2",
+			"id": "HasBilirubinLevels",
+			"allowMissingVariables": [
+				"HasBilirubinLevels1",
+				"HasBilirubinLevels2"
+			],
+			"dependency": [
+				"HasBilirubinLevels1",
+				"HasBilirubinLevels2"
+			],
+			"subCriteria": [
+				{
+					"id": "HasBilirubinLevels1",
+					"title": "Bilirubin levels 1",
+					"description": "Total bilirubin =< 1.5 x institutional upper limit of normal (IULN) within 28 days prior to randomization",
+					"expression": "variables.HasBilirubinLevels1.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasBilirubinLevels1.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "HasBilirubinLevels2",
+					"title": "Bilirubin levels 2",
+					"description": "Direct bilirubin =< IULN with total bilirubin > 1.5 x IULN within 28 days prior to randomization",
+					"expression": "variables.HasBilirubinLevels2.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasBilirubinLevels2.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Aspartate aminotransferase (AST) =< 3 x institutional upper limit of normal (ULN) and Aspartate aminotransferase (AST) =< 3 x institutional upper limit of normal (ULN)",
+			"expression": "HasASTLevels && HasALTLevels",
+			"id": "HasASTALTLevels",
+			"allowMissingVariables": [
+				"HasASTLevels",
+				"HasALTLevels"
+			],
+			"dependency": [
+				"HasASTLevels",
+				"HasALTLevels"
+			],
+			"subCriteria": [
+				{
+					"id": "HasASTLevels",
+					"title": "AST levels",
+					"description": "Aspartate aminotransferase (AST) =< 3 x institutional upper limit of normal (ULN) (within 28 days prior to randomization)",
+					"expression": "variables.HasASTLevels.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasASTLevels.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "HasALTLevels",
+					"title": "ALT levels",
+					"description": "Alanine aminotransferase (ALT) =< 3 x institutional upper limit of normal (ULN) (within 28 days prior to randomization)",
+					"expression": "variables.HasALTLevels.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasALTLevels.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Serum creatinine and Calculated Creatinine clearance specimens must have been drawn and processed within 28 days prior to registration",
+			"expression": "HasSerumCreatinine || HasCalculatedClearance",
+			"id": "HasSerumCreatinineOrHasSerumCreatinine",
+			"allowMissingVariables": [
+				"HasSerumCreatinine",
+				"HasCalculatedClearance"
+			],
+			"dependency": [
+				"HasSerumCreatinine",
+				"HasCalculatedClearance"
+			],
+			"subCriteria": [
+				{
+					"id": "HasSerumCreatinine",
+					"title": "Serum creatinine",
+					"description": "Serum creatinine <= the IULN. This specimen must have been drawn and processed within 28 days prior to registration.",
+					"expression": "variables.HasSerumCreatinine.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasSerumCreatinine.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "HasCalculatedClearance",
+					"title": "Calculated Creatinine clearance",
+					"description": "Calculated creatinine clearance >= 50 mL/min/1.73m^2 using the Cockcroft-Gault Formula. Serum creatinine <= the IULN. This specimen must have been drawn and processed within 28 days prior to registration.",
+					"expression": "variables.HasCalculatedClearance.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasCalculatedClearance.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Adequate cardiac function with left ventricular ejection fraction >= 50% as assessed by ECHO or MUGA",
+			"expression": "HasAdequateCardiacFunction",
+			"id": "HasAdequateCardiacFunction",
+			"allowMissingVariables": [
+				"HasAdequateCardiacFunction"
+			],
+			"dependency": [
+				"HasAdequateCardiacFunction"
+			],
+			"subCriteria": [
+				{
+					"id": "HasAdequateCardiacFunction",
+					"title": "Cardiac function",
+					"description": "Adequate cardiac function with left ventricular ejection fraction >= 50% as assessed by ECHO or MUGA",
+					"expression": "variables.HasAdequateCardiacFunction.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasAdequateCardiacFunction.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants with known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, must have a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification and must be class 2B or better.",
+			"expression": "HasCardiacDisease",
+			"id": "HasCardiacDisease",
+			"dependency": [
+				"HasCardiacDisease"
+			],
+			"subCriteria": [
+				{
+					"id": "HasCardiacDisease",
+					"title": "Cardiac Disease",
+					"description": "Has a known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, has a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification and must be class 2B or better",
+					"expression": "variables.HasCardiacDisease.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasCardiacDisease.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants with known human immunodeficiency virus (HIV)-infection must be on effective anti-retroviral therapy at randomization and have undetectable viral load test on the most recent test results obtained within 6 months prior to randomization.",
+			"expression": "IsHIVInfectionControlled",
+			"id": "IsHIVInfectionControlled",
+			"allowMissingVariables": [
+				"IsHIVInfectionControlled"
+			],
+			"dependency": [
+				"IsHIVInfectionControlled"
+			],
+			"subCriteria": [
+				{
+					"id": "IsHIVInfectionControlled",
+					"title": "HIV infection control",
+					"description": "HIV-infection: On effective anti-retroviral therapy at randomization and undetectable viral load test within 6 months prior to randomization",
+					"expression": "variables.IsHIVInfectionControlled.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsHIVInfectionControlled.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants with evidence of chronic hepatitis B virus (HBV) infection must have undetectable HBV viral load while on suppressive therapy on the most recent test results obtained within 6 months prior to randomization, if indicated.",
+			"expression": "IsHBVInfectionControlled",
+			"id": "IsHBVInfectionControlled",
+			"allowMissingVariables": [
+				"IsHBVInfectionControlled"
+			],
+			"dependency": [
+				"IsHBVInfectionControlled"
+			],
+			"subCriteria": [
+				{
+					"id": "IsHBVInfectionControlled",
+					"title": "HBV infection control",
+					"description": "Chronic HBV infection: Undetectable HBV viral load while on suppressive therapy within 6 months prior to randomization",
+					"expression": "variables.IsHBVInfectionControlled.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsHBVInfectionControlled.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Participants currently being treated for HCV infection must have undetectable HCV viral load test on the most recent test results obtained within 6 months prior to randomization, if indicated.",
+			"expression": "IsHCVInfectionControlled",
+			"id": "IsHCVInfectionControlled",
+			"allowMissingVariables": [
+				"IsHCVInfectionControlled"
+			],
+			"dependency": [
+				"IsHCVInfectionControlled"
+			],
+			"subCriteria": [
+				{
+					"id": "IsHCVInfectionControlled",
+					"title": "HCV infection control",
+					"description": "History of HCV infection: Treated and cured or undetectable HCV viral load test within 6 months prior to randomization",
+					"expression": "variables.IsHCVInfectionControlled.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsHCVInfectionControlled.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants with history of diabetes must not have uncontrolled diabetes in the opinion of the treating investigator",
+			"expression": "IsUncontrolledDiabetesExcluded",
+			"id": "IsUncontrolledDiabetesExcluded",
+			"dependency": [
+				"IsUncontrolledDiabetesExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsUncontrolledDiabetesExcluded",
+					"title": "Uncontrolled diabetes exclusion",
+					"description": "Uncontrolled diabetes in the opinion of the treating investigator",
+					"expression": "variables.IsUncontrolledDiabetesExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsUncontrolledDiabetesExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "inclusion",
+			"title": "Patient must have a physical 4-5-micron single H&E slide from the archival pretreatment diagnostic biopsy available for submission",
+			"expression": "HasPhysicalSlideFromBiopsy",
+			"id": "HasPhysicalSlideFromBiopsy",
+			"allowMissingVariables": [
+				"HasPhysicalSlideFromBiopsy"
+			],
+			"dependency": [
+				"HasPhysicalSlideFromBiopsy"
+			],
+			"subCriteria": [
+				{
+					"id": "HasPhysicalSlideFromBiopsy",
+					"title": "Physical slide from biopsy",
+					"description": "One physical 4-5-micron single H&E slide from the archival pretreatment diagnostic biopsy available for submission",
+					"expression": "variables.HasPhysicalSlideFromBiopsy.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.HasPhysicalSlideFromBiopsy.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"type": "exclusion",
+			"title": "Participants must not",
+			"expression": "IsPregnancyOrNursingExcluded || IsMajorSurgeryWithin14DaysExcluded || IsSevereOrActiveInfectionsExcluded || IsDiagnosisOfImmunodeficiencyExcluded || IsActiveAutoimmuneDiseaseExcluded || IsHistoryOfPneumonitisExcluded || IsLiveVaccineWithin30DaysExcluded || IsPriorOrConcurrentMalignancyExcluded || IsUncontrolledHypertensionExcluded",
+			"id": "ListExcluded",
+			"allowMissingVariables": [
+				"IsPregnancyOrNursingExcluded",
+				"IsMajorSurgeryWithin14DaysExcluded",
+				"IsSevereOrActiveInfectionsExcluded",
+				"IsDiagnosisOfImmunodeficiencyExcluded",
+				"IsActiveAutoimmuneDiseaseExcluded",
+				"IsHistoryOfPneumonitisExcluded",
+				"IsLiveVaccineWithin30DaysExcluded",
+				"IsPriorOrConcurrentMalignancyExcluded",
+				"IsUncontrolledHypertensionExcluded"
+			],
+			"dependency": [
+				"IsPregnancyOrNursingExcluded",
+				"IsMajorSurgeryWithin14DaysExcluded",
+				"IsSevereOrActiveInfectionsExcluded",
+				"IsDiagnosisOfImmunodeficiencyExcluded",
+				"IsActiveAutoimmuneDiseaseExcluded",
+				"IsHistoryOfPneumonitisExcluded",
+				"IsLiveVaccineWithin30DaysExcluded",
+				"IsPriorOrConcurrentMalignancyExcluded",
+				"IsUncontrolledHypertensionExcluded"
+			],
+			"subCriteria": [
+				{
+					"id": "IsPregnancyOrNursingExcluded",
+					"title": "Pregnancy or nursing exclusion",
+					"description": "Pregnancy or nursing",
+					"expression": "variables.IsPregnancyOrNursingExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsPregnancyOrNursingExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsMajorSurgeryWithin14DaysExcluded",
+					"title": "Major surgery within 14 days prior to randomization",
+					"description": "Major surgery within 14 days",
+					"expression": "variables.IsMajorSurgeryWithin14DaysExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsMajorSurgeryWithin14DaysExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsSevereOrActiveInfectionsExcluded",
+					"title": "Severe or active infections",
+					"description": "Severe or active infections within 14 days prior to Randomization",
+					"expression": "variables.IsSevereOrActiveInfectionsExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsSevereOrActiveInfectionsExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsDiagnosisOfImmunodeficiencyExcluded",
+					"title": "Diagnosis of immunodeficiency",
+					"description": "Diagnosis of immunodeficiency and receiving chronic systemic steroid therapy",
+					"expression": "variables.IsDiagnosisOfImmunodeficiencyExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsDiagnosisOfImmunodeficiencyExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsActiveAutoimmuneDiseaseExcluded",
+					"title": "Active autoimmune disease",
+					"description": "Active autoimmune disease that has required systemic treatment in 2 years prior to randomization",
+					"expression": "variables.IsActiveAutoimmuneDiseaseExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsActiveAutoimmuneDiseaseExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsHistoryOfPneumonitisExcluded",
+					"title": "History of pneumonitis that required steroids",
+					"description": "History of (non-infectious) pneumonitis that required steroids",
+					"expression": "variables.IsHistoryOfPneumonitisExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsHistoryOfPneumonitisExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsLiveVaccineWithin30DaysExcluded",
+					"title": "Received a live vaccine",
+					"description": "Received a live vaccine within 30 days prior to randomization",
+					"expression": "variables.IsLiveVaccineWithin30DaysExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsLiveVaccineWithin30DaysExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsPriorOrConcurrentMalignancyExcluded",
+					"title": "Prior or concurrent malignancy",
+					"description": "Prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the treatment regimen",
+					"expression": "variables.IsPriorOrConcurrentMalignancyExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsPriorOrConcurrentMalignancyExcluded.value.reasoning.join(' ', @)"
+					}
+				},
+				{
+					"id": "IsUncontrolledHypertensionExcluded",
+					"title": "Uncontrolled hypertension",
+					"description": "Uncontrolled hypertension in the opinion of the treating investigator",
+					"expression": "variables.IsUncontrolledHypertensionExcluded.value.response == 'ELIGIBLE'",
+					"explainability": {
+						"displayValue": "variables.IsUncontrolledHypertensionExcluded.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		}
+	]
+}

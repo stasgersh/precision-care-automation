@@ -1,0 +1,51 @@
+{
+  "id": "${id}",
+  "type": "${type}",
+  "metadata": {
+    "name": "Valid Custom Config file - Prostate MRI and Pylarify PSMA PET/CT",
+    "description": "This is a voluntary research study to find out how using technology including advanced magnetic resonance imaging (MRI) and prostate-specific membrane antigen - positron emission tomography (PSMA-PET) scan imaging",
+    "status": "NOT YET RECRUITING",
+    "phase": "4",
+    "link": "https://clinicaltrials.gov/study/NCT05568537?cond=Prostate%20Cancer&titles=radiotherapy&aggFilters=phase:4,sex:m,status:rec%20not&rank=1"
+  },
+  "variables": [
+    {
+      "id": "psa",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA Criteria",
+      "value": null
+    }
+  ],
+  "outputs": [
+    {
+      "id": "psa_criteria",
+      "display": "PSA General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "type": "exclusion"
+      }
+    },
+    {
+      "id": "imaging_criteria",
+      "display": "Staging 68Ga PMSA-11 PET -CT or -MRI performed within 90 days of registration",
+      "metadata": {
+        "type": "inclusion"
+      }
+    }
+  ]
+}

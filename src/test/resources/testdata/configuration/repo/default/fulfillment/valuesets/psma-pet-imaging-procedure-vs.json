@@ -1,0 +1,20 @@
+{
+    "name": "psma-pet-imaging-procedure-vs",
+    "valueset": {
+      "version": "1.0",
+      "url": "psma-pet-imaging-procedure-vs",
+      "compose": {
+        "include": [
+          {
+            "system": "http://gehealtcare.precision-insights/demo",
+            "concept": [
+              {
+                "code": "82542-0",
+                "display": "PSMA-PET scan"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

@@ -1,0 +1,787 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "62812e9a-96ae-4b59-85fe-43872df6bd78",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "Franklin"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "888-987-1234",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1961-11-29",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "3183bf4a-93a5-43b9-bcf5-865071cd80f8",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433761009",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "performedDateTime": "1975-09-28T17:31:51.000Z",
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "display": "Stage 4 ovarian cancer, no surgery. Currently on PARPi, rising CA125 and new abdominal pain"
+              }
+            ],
+            "text": "Stage 4 ovarian cancer, no surgery. Currently on PARPi, rising CA125 and new abdominal pain"
+          }
+        ],
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "818981001",
+                "display": "Cross-sectional abdomen"
+              }
+            ],
+            "text": "Cross-sectional abdomen"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "816092008",
+                "display": "Cross-sectional pelvis"
+              }
+            ],
+            "text": "Cross-sectional pelvis"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "816094009",
+                "display": "Cross-sectional thorax"
+              }
+            ],
+            "text": "Cross-sectional thorax"
+          }
+        ],
+        "report": [
+          {
+            "reference": "DiagnosticReport/4aeddf73-0851-4d79-b9ed-8dbb48487915"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "4aeddf73-0851-4d79-b9ed-8dbb48487915",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433761009",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "1975-09-28T17:31:51.000Z",
+        "conclusion": "PROGRESSIVE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Y3QgdGhvcmF4IGFiZG9tZW4gcGVsdmlzIHdpdGggY29udHJhc3QgY2xpbmljYWwgaW5kaWNhdGlvbiAgIHN0YWdlIDQgb3ZhcmlhbiBjYW5jZXIsIG5vIHN1cmdlcnkuIGN1cnJlbnRseSBvbiBwYXJwaSwgcmlzaW5nIGNhMTI1IGFuZCBuZXcgYWJkb21pbmFsIHBhaW4gaW1hZ2VzIGFjcXVpcmVkIGZvbGxvd2luZyBvcmFsIGFuZCBpdiBjb250cmFzdCBtZWRpYS4gY29tcGFyaXNvbiBtYWRlIHdpdGggcHJldmlvdXMgc3R1ZHkgZGF0ZWQgMDMgMDQgMjEuIGNoZXN0ICBseW1waCBub2RlcyAgbm8gZW5sYXJnZWQgdGhvcmFjaWMgbHltcGggbm9kZXMuIGx1bmdzICBjbGVhciBwbGV1cmEgcGVyaWNhcmRpdW0gIG5vIGVmZnVzaW9uIHBlICBubyBjZW50cmFsIHBlIG90aGVyID8gYWJkb21lbiBwZWx2aXMgIHBlbHZpYyBvcmdhbnMgIHByZXZpb3VzIGh5c3RlcmVjdG9teS4gYXNjaXRlcyAgbm9uZSBwZXJpdG9uZWFsIGRpc2Vhc2UgKGluY2x1ZGUgbWVhc3VyZW1lbnQgb2YgbGFyZ2VzdCBsZXNpb24pICBpbmNyZWFzZWQgcGVyaXRvbmVhbCBkaXNlYXNlICB0aGUgc29saWQgbGVzaW9uIGF0IHRoZSB2YWdpbmEgdmF1bHQgbWVhc3VyZXMgNDIgeCAzMCBtbSwgcHJldmlvdXNseSAzNyB4IDI3IG1tIChzZXJpZXMgNSBpbWFnZSAyNTkpIHRoZSBtdWx0aWxvY3VsYXRlZCBjeXN0aWMgbGVzaW9uIGFsb25nIHRoZSByaWdodCBwZWx2aWMgc2lkZXdhbGwgaXMgdW5jaGFuZ2VkIG1lYXN1cmluZyA1NiB4IDI4IG1tIChzZXJpZXMgNSBpbWFnZSAyNTMpIHRoZSBkZXBvc2l0IGFkamFjZW50IHRvIHRoZSBjYWVjdW0gaGFzIGZ1cnRoZXIgc2xpZ2h0bHkgaW5jcmVhc2VkIGluIHNpemUgbWVhc3VyaW5nIDIyIG1tLCBwcmV2aW91c2x5IDE5IG1tIChzZXJpZXMgNSBpbWFnZSAxODIpIHN1YmRpYXBocmFnbWF0aWMgZGVwb3NpdHMgaGF2ZSBpbmNyZWFzZWQgZS5nLiBhdCB0aGUgZG9tZSAxOCBtbSwgcHJldmlvdXNseSAxNSBtbSAoc2VyaWVzIDUgaW1hZ2UgMjApIGx5bXBoIG5vZGVzICBubyBlbmxhcmdlZCBhYmRvbWluYWwgb3IgcGVsdmljIGx5bXBoIG5vZGVzLiBzb2xpZCBvcmdhbnMgIHRoZSBzb2xpZCBvcmdhbnMgZW5oYW5jZSBob21vZ2VuZW91c2x5LiBubyBoeWRyb25lcGhyb3Npcy4gb3RoZXIgIGZhZWNhbCBsb2FkaW5nIHRocm91Z2hvdXQgdGhlIGNvbG9uLiBtc2sgIG5vIHN1c3BpY2lvdXMgZm9jYWwgYm9uZSBsZXNpb24uIHZ4biBDT05DTFVTSU9OICBmdXJ0aGVyIHByb2dyZXNzaXZlIGRpc2Vhc2UsIGFzIGRlc2NyaWJlZC4="
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "326cc3b0-fabc-4e86-a9f8-0683b68e7efb",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "68604-8",
+              "display": "Radiology Diagnostic study note"
+            }
+          ],
+          "text": "Radiology report 1"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "date": "2006-10-23T14:35:53.632-01:00",
+        "content": [
+          {
+            "attachment": {
+              "id": "17866dff-0927-48ac-b706-e279affe9cd3",
+              "contentType": "text/plain",
+              "data": "VGhpcyBpcyBhIHRlc3QgcmVwb3J0",
+              "title": "HP",
+              "creation": "2006-10-23"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "347fc281-03db-49a7-bb13-268358f51ff6",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "68604-8",
+              "display": "Radiology Diagnostic study note"
+            }
+          ],
+          "text": "Radiology report 2"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "date": "2004-03-23T14:35:53.632-01:00",
+        "content": [
+          {
+            "attachment": {
+              "id": "17866dff-0927-48ac-b706-e279affe9cd3",
+              "contentType": "text/plain",
+              "data": "VGhpcyBpcyBhIHRlc3QgcmVwb3J0",
+              "title": "HP",
+              "creation": "2004-03-23"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "50222011-5c80-4a0b-b3f0-b8a434e61481",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "1991-05-22T10:53:12+01:00",
+        "issued": "1991-05-22T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 41,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 41 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "08ae8b8d-9c3f-4317-9db2-e268d71bcd1c",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "1996-04-23T10:53:12+01:00",
+        "issued": "1996-04-23T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 35,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 35 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "92fdfa40-a68f-423b-9c3a-18dfbbfc7742",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2001-08-26T10:53:12+01:00",
+        "issued": "2001-08-26T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 43,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 43 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "126320b3-0d2b-407e-9da4-9205481b9c71",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2002-04-11T10:53:12+01:00",
+        "issued": "2002-04-11T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 38,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 38 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a181fcde-d356-4669-a332-5ec84a215215",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2002-07-15T10:53:12+01:00",
+        "issued": "2002-07-15T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 44,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 44 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "dd4e5141-fc1c-4da0-80e7-9fa5098ea8c5",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2006-10-23T10:53:12+01:00",
+        "issued": "2006-10-23T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 31,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 31 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "272e57a1-96b1-46f1-9d8e-e4bd7a60696f",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2011-08-13T10:53:12+01:00",
+        "issued": "2011-08-13T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 39,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 39 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "6f2ce02e-78b8-4055-ac92-bd7edf5d09e7",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem-list-item"
+              }
+            ],
+            "text": "Problem"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C56",
+              "display": "Primary malignant neoplasm of ovary Converted from co~morbidity database"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "363443007",
+              "display": "Primary malignant neoplasm of ovary Converted from co~morbidity database"
+            }
+          ],
+          "text": "Primary malignant neoplasm of ovary Converted from co~morbidity database"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "onsetDateTime": "1974-09-27T05:00:00Z"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "569a000b-e124-4e75-941b-7e771487befb",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LP18648-3",
+              "display": "Pathology Report"
+            }
+          ],
+          "text": "Pathology Report"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "date": "1974-09-27T05:00:00Z",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3RhZ2UgNCBIRyBzZXJvdXMgb3ZhcmlhbiBjYW5jZXIgYWZ0ZXIgdHJlYXRtZW50IHdpdGggQ2FyYm90YXggYW5kIEVDWCBBLiAgT21lbnR1bSAtIDMgZnJhZ21lbnRzIG9mIGZpYnJvZmF0dHkgdGlzc3VlIHdpdGggcG9zc2libGUgdHVtb3VyLiAgSW4gYWdncmVnYXRlIHRoZSBmcmFnbWVudHMgbWVhc3VyZSAzNW1tIHggMzBtbS4gICAgIFtBMS1BMiBvbWVudHVtXW5yLiAgICAgQi4gIFV0ZXJ1cyBhbmQgY2Vydml4IC0gc3BlY2ltZW4gbWVhc3VyZXMgNjBtbSBTSSB4IDI1bW0gQVAgeCA0MG1tIHRyYW5zdmVyc2UuICBUaGVyZSBhcmUgYXR0YWNoZWQgRmFsbG9waWFuIHR1YmVzIGFuZCBvdmFyaWVzIHdoaWNoIGFwcGVhciB0byBiZSBjb3ZlcmVkIGJ5IGEgZmlicmlub3VzIGV4dWRhdGUgYW5kIHBvc3NpYmxlIHR1bW91ciBkZXBvc2l0cy4gIFRoZSB0dW1vdXIgZGVwb3NpdHMgYWxzbyBhcHBlYXIgdG8gaW52b2x2ZSB0aGUgc3VyZmFjZSBvZiB0aGUgdXRlcnVzLiAgSXQgaXMgZGlmZmljdWx0IHRvIG9yaWVudGF0ZSB0aGUgc3BlY2ltZW4gZHVlIHRvIGNvbnNpZGVyYWJsZSBkaXN0b3J0aW9uLiAgT25lIEZhbGxvcGlhbiB0dWJlIGFuZCBvdmFyeSBpZGVudGlmaWVkIHdpdGggZmltYnJpYWwgZW5kLiAgVGhlIG92YXJ5IG1lYXN1cmVzIDMwbW0geCAyMG1tIHggMTVtbS4gIEZhbGxvcGlhbiB0dWJlIG1lYXN1cmVzIDQ1bW0gaW4gbGVuZ3RoLiAgVGhlIG90aGVyIEZhbGxvcGlhbiB0dWJlIGFuZCBvdmFyeSBpZGVudGlmaWVkIHdpdGggb3ZhcnkgbWVhc3VyaW5nIDMwbW0geCAxNW1tIHggMThtbSB3aXRoIEZhbGxvcGlhbiB0dWJlIGluY2x1ZGluZyBmaW1icmlhbCBlbmQgdXAgdG8gNDVtbS4gIFRoZSBlbmRvbWV0cmlhbCBjYXZpdHkgaXMgbm9ybWFsIHdpdGggYSB0aGluIGF0cm9waGljIGVuZG9tZXRyaXVtIGxlc3MgdGhhbiBhIG1pbGxpbWV0cmUgaW4gdGhpY2tuZXNzLiAgVW5kZXJseWluZyBteW9tZXRyaXVtIHVwIHRvIDEwbW0gaW4gdGhpY2tuZXNzLiAgICBbQjEgb3ZhcnkgMTsgQjIgb3ZhcnkgMjsgQjMgY2Vydml4OyBCNCBlbmRvbXlvOyBCNSBMICsgUiBwYXJhbWV0cmlhbCB0aXNzdWU7IEI2IGVuZG9teW8gd2l0aCBzZXJvc2Fdci4gQSAtIE9NRU5UVU0gIFNlY3Rpb25zIG9mIG9tZW50dW0gc2hvdyBpbmZpbHRyYXRpb24gYnkgaGlnaCBncmFkZSBzZXJvdXMgY2FyY2lub21hIHdpdGggb2NjYXNpb25hbCBwc2FtbW9tYSBib2RpZXMuICAgIEIgLSBVVEVSVVN+IENFUlZJWH4gRkFMTE9QSUFOIFRVQkVTIEFORCBPVkFSSUVTICBCb3RoIG92YXJpZXM7IHBhcmEgb3ZhcmlhbiB0aXNzdWU7IHBhcmFtZXRyaXVtIGFuZCB1dGVyaW5lIHNlcm9zYSBzaG93IGludm9sdmVtZW50IGJ5IGhpZ2ggZ3JhZGUgc2Vyb3VzIGNhcmNpbm9tYS4gVGhlIGZhbGxvcGlhbiB0dWJlIHNob3dzIG5vIGV2aWRlbmNlIG9mIGR5c3BsYXNpYSBvciBtYWxpZ25hbmN5LiBFbmRvbWV0cml1bSBpcyBpbmFjdGl2ZS4gVGhlIG15b21ldHJpdW0gY29udGFpbnMgYSBiZW5pZ24gbGVpb215b21hLiBUaGUgY2Vydml4IGlzIHVucmVtYXJrYWJsZSB3aXRoIG5vIGV2aWRlbmNlIG9mIGR5c3BsYXNpYSBvciBtYWxpZ25hbmN5LiBBIC0gT21lbnR1bSAtIEhpZ2ggZ3JhZGUgc2Vyb3VzIGNhcmNpbm9tYSAgQiAtIFV0ZXJ1czsgY2Vydml4OyBmYWxsb3BpYW4gdHViZXMgYW5kIG92YXJpZXMgLSBIaWdoIGdyYWRlIHNlcm91cyBjYXJjaW5vbWEgaW52b2x2aW5nIGJvdGggb3ZhcmllczsgcGFyb3ZhcmlhbiB0aXNzdWU7IHBhcmFtZXRyaXVtIGFuZCB1dGVyaW5lIHNlcm9zYS4="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "449a001b-e124-4e75-941b-3e771487beac",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LP18648-3",
+              "display": "Pathology Report"
+            }
+          ],
+          "text": "Pathology Report 3"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "date": "2004-03-23T14:35:53.632-01:00",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3RhZ2UgNCBIRyBzZXJvdXMgb3ZhcmlhbiBjYW5jZXIgYWZ0ZXIgdHJlYXRtZW50IHdpdGggQ2FyYm90YXggYW5kIEVDWCBBLiAgT21lbnR1bSAtIDMgZnJhZ21lbnRzIG9mIGZpYnJvZmF0dHkgdGlzc3VlIHdpdGggcG9zc2libGUgdHVtb3VyLiAgSW4gYWdncmVnYXRlIHRoZSBmcmFnbWVudHMgbWVhc3VyZSAzNW1tIHggMzBtbS4gICAgIFtBMS1BMiBvbWVudHVtXW5yLiAgICAgQi4gIFV0ZXJ1cyBhbmQgY2Vydml4IC0gc3BlY2ltZW4gbWVhc3VyZXMgNjBtbSBTSSB4IDI1bW0gQVAgeCA0MG1tIHRyYW5zdmVyc2UuICBUaGVyZSBhcmUgYXR0YWNoZWQgRmFsbG9waWFuIHR1YmVzIGFuZCBvdmFyaWVzIHdoaWNoIGFwcGVhciB0byBiZSBjb3ZlcmVkIGJ5IGEgZmlicmlub3VzIGV4dWRhdGUgYW5kIHBvc3NpYmxlIHR1bW91ciBkZXBvc2l0cy4gIFRoZSB0dW1vdXIgZGVwb3NpdHMgYWxzbyBhcHBlYXIgdG8gaW52b2x2ZSB0aGUgc3VyZmFjZSBvZiB0aGUgdXRlcnVzLiAgSXQgaXMgZGlmZmljdWx0IHRvIG9yaWVudGF0ZSB0aGUgc3BlY2ltZW4gZHVlIHRvIGNvbnNpZGVyYWJsZSBkaXN0b3J0aW9uLiAgT25lIEZhbGxvcGlhbiB0dWJlIGFuZCBvdmFyeSBpZGVudGlmaWVkIHdpdGggZmltYnJpYWwgZW5kLiAgVGhlIG92YXJ5IG1lYXN1cmVzIDMwbW0geCAyMG1tIHggMTVtbS4gIEZhbGxvcGlhbiB0dWJlIG1lYXN1cmVzIDQ1bW0gaW4gbGVuZ3RoLiAgVGhlIG90aGVyIEZhbGxvcGlhbiB0dWJlIGFuZCBvdmFyeSBpZGVudGlmaWVkIHdpdGggb3ZhcnkgbWVhc3VyaW5nIDMwbW0geCAxNW1tIHggMThtbSB3aXRoIEZhbGxvcGlhbiB0dWJlIGluY2x1ZGluZyBmaW1icmlhbCBlbmQgdXAgdG8gNDVtbS4gIFRoZSBlbmRvbWV0cmlhbCBjYXZpdHkgaXMgbm9ybWFsIHdpdGggYSB0aGluIGF0cm9waGljIGVuZG9tZXRyaXVtIGxlc3MgdGhhbiBhIG1pbGxpbWV0cmUgaW4gdGhpY2tuZXNzLiAgVW5kZXJseWluZyBteW9tZXRyaXVtIHVwIHRvIDEwbW0gaW4gdGhpY2tuZXNzLiAgICBbQjEgb3ZhcnkgMTsgQjIgb3ZhcnkgMjsgQjMgY2Vydml4OyBCNCBlbmRvbXlvOyBCNSBMICsgUiBwYXJhbWV0cmlhbCB0aXNzdWU7IEI2IGVuZG9teW8gd2l0aCBzZXJvc2Fdci4gQSAtIE9NRU5UVU0gIFNlY3Rpb25zIG9mIG9tZW50dW0gc2hvdyBpbmZpbHRyYXRpb24gYnkgaGlnaCBncmFkZSBzZXJvdXMgY2FyY2lub21hIHdpdGggb2NjYXNpb25hbCBwc2FtbW9tYSBib2RpZXMuICAgIEIgLSBVVEVSVVN+IENFUlZJWH4gRkFMTE9QSUFOIFRVQkVTIEFORCBPVkFSSUVTICBCb3RoIG92YXJpZXM7IHBhcmEgb3ZhcmlhbiB0aXNzdWU7IHBhcmFtZXRyaXVtIGFuZCB1dGVyaW5lIHNlcm9zYSBzaG93IGludm9sdmVtZW50IGJ5IGhpZ2ggZ3JhZGUgc2Vyb3VzIGNhcmNpbm9tYS4gVGhlIGZhbGxvcGlhbiB0dWJlIHNob3dzIG5vIGV2aWRlbmNlIG9mIGR5c3BsYXNpYSBvciBtYWxpZ25hbmN5LiBFbmRvbWV0cml1bSBpcyBpbmFjdGl2ZS4gVGhlIG15b21ldHJpdW0gY29udGFpbnMgYSBiZW5pZ24gbGVpb215b21hLiBUaGUgY2Vydml4IGlzIHVucmVtYXJrYWJsZSB3aXRoIG5vIGV2aWRlbmNlIG9mIGR5c3BsYXNpYSBvciBtYWxpZ25hbmN5LiBBIC0gT21lbnR1bSAtIEhpZ2ggZ3JhZGUgc2Vyb3VzIGNhcmNpbm9tYSAgQiAtIFV0ZXJ1czsgY2Vydml4OyBmYWxsb3BpYW4gdHViZXMgYW5kIG92YXJpZXMgLSBIaWdoIGdyYWRlIHNlcm91cyBjYXJjaW5vbWEgaW52b2x2aW5nIGJvdGggb3ZhcmllczsgcGFyb3ZhcmlhbiB0aXNzdWU7IHBhcmFtZXRyaXVtIGFuZCB1dGVyaW5lIHNlcm9zYS4="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "56dbb41b-c653-434b-9ba8-febb13d6d138",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "LP18648-3",
+              "display": "Pathology Report"
+            }
+          ],
+          "text": "Pathology Report"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "date": "1974-09-27T05:00:00Z",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UHlsb3JpYyBzdHJpY3R1cmV+ICBiZW5pZ24gID9nYXN0cmljIHBvbHlwfiBmdW5kaWM/ICBOb2R1bGFyIGFwcGVhcmVuY2UgaW4gZGlzdGFsIG9lc29waGFndXM/ICBBLiBTcGVjaWFsaXNlZCBnYXN0cmljIG11Y29zYSBiaW9wc3kgc2hvd2luZyBub3JtYWwgYXBwZWFyYW5jZXMgd2l0aCBubyBldmlkZW5jZSBvZiBhY3RpdmUgaW5mbGFtbWF0aW9ufiBncmFudWxvbWFzfiBhdHJvcGh5fiBpbnRlc3RpbmFsIG1ldGFwbGFzaWF+IGR5c3BsYXNpYSBub3IgbWFsaWduYW5jeS4gSGVsaWNvYmFjdGVyIHB5bG9yaX5saWtlIG9yZ2FuaXNtcyBhcmUgYWJzZW50IG9uIHJvdXRpbmUgc3RhaW5pbmcuIERpYWdub3N0aWMgZmVhdHVyZXMgb2YgZnVuZGljIGdsYW5kIHBvbHlwIGFyZSBhYnNlbnQuICAgIEIuIE5vbn5zcGVjaWFsaXNlZCBnYXN0cmljIG11Y29zYWwgYmlvcHNpZXMgc2hvd2luZyBtb2RlcmF0ZWx5IGRpZmZlcmVudGlhdGVkIGNhcmNpbm9tYSB3aXRoIG9jY2FzaW9uYWwgdHVtb3VyIG5lc3RzIHdpdGhpbiB0aGUgbGFtaW5hIHByb3ByaWEgZGlzcGxheWluZyBhIG1pY3JvcGFwaWxsYXJ5IGFyY2hpdGVjdHVyZS4gSW1tdW5vc3RhaW5pbmcgcmV2ZWFscyB0dW1vdXIgY2VsbCBleHByZXNzaW9uIG9mIENBfjEyNSBhbmQgV1R+MSAob2NjYXNpb25hbCBjZWxscykgd2l0aCBuZWdhdGl2ZSBzdGFpbmluZyBmb3IgQ0RYfjIuIFRoZXNlIGZlYXR1cmVzIGFyZSBpbiBrZWVwaW5nIHdpdGggbWV0YXN0YXRpYyBvdmFyaWFuIHNlcm91cyBwYXBpbGxhcnkgY2FyY2lub21hLiAgICAgQy4gQmlvcHNpZXMgc2hvd2luZyBhIHBhcnRpYWxseSBjb2xsYXBzZWQgb2Vzb3BoYWdlYWwgY3lzdCB3aXRoIGEgYmlsYXllcmVkIGxpbmluZy4gVGhlcmUgaXMgYWxzbyBhIGZyYWdtZW50IG9mIHVsY2VyIHNsb3VnaCBtYXRlcmlhbC4gIEEuIEdBU1RSSUMgQklPUFNZICBOTyBESUFHTk9TVElDIEZFQVRVUkVTIE9GIEZVTkRJQyBHTEFORCBQT0xZUCAgICBCLiBQWUxPUlVTIEJJT1BTSUVTICBGRUFUVVJFUyBJTiBLRUVQSU5HIFdJVEggTUVUQVNUQVRJQyBPVkFSSUFOIFNFUk9VUyBQQVBJTExBUlkgQ0FSQ0lOT01BICAgIEMuIE9FU09QSEFHRUFMIEJJT1BTSUVTICBPRVNPUEhBR0VBTCBDWVNUIFdJVEggRVZJREVOQ0UgT0YgVUxDRVJBVElPTg=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "199bd08e-431e-4132-b603-fb230f05d93f",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem-list-item"
+              }
+            ],
+            "text": "Problem"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "C78.6",
+              "display": "Secondary malignant neoplasm of retroperitoneum and peritoneum Converted from co~morbidity database"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "188445006",
+              "display": "Secondary malignant neoplasm of retroperitoneum and peritoneum Converted from co~morbidity database"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of retroperitoneum and peritoneum Converted from co~morbidity database"
+        },
+        "subject": {
+          "reference": "Patient/62812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "onsetDateTime": "1974-09-27T05:00:00Z"
+      }
+    }
+  ]
+}

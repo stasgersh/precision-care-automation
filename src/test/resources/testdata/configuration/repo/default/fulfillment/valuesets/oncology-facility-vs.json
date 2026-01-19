@@ -1,0 +1,20 @@
+{
+  "name": "oncology-facility-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-facility-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "89972002",
+              "display": "Hospital outpatient oncology clinic"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

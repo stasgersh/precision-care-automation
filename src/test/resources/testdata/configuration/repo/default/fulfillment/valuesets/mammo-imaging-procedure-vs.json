@@ -1,0 +1,149 @@
+{
+  "name": "mammo-imaging-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "mammo-imaging-procedure-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "concept": [
+            {
+              "code": "77066",
+              "display": "Diagnostic mammography, including computer-aided detection (CAD) when performed; bilateral"
+            },
+            {
+              "code": "77065",
+              "display": "Diagnostic mammography, including computer-aided detection (CAD) when performed; unilateral"
+            },
+            {
+              "code": "77067",
+              "display": "Screening mammography, bilateral (2-view study of each breast), including computer-aided detection (CAD) when performed"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "43204002",
+              "display": "Bilateral mammography"
+            },
+            {
+              "code": "71651007",
+              "display": "Mammography"
+            },
+            {
+              "code": "418074003",
+              "display": "Mammography and aspiration"
+            },
+            {
+              "code": "6791000087107",
+              "display": "Mammography and aspiration of bilateral breasts"
+            },
+            {
+              "code": "5971000087103",
+              "display": "Mammography and aspiration of left breast"
+            },
+            {
+              "code": "5981000087101",
+              "display": "Mammography and aspiration of right breast"
+            },
+            {
+              "code": "418378007",
+              "display": "Mammography and biopsy"
+            },
+            {
+              "code": "6031000087108",
+              "display": "Mammography and biopsy of left breast"
+            },
+            {
+              "code": "6041000087102",
+              "display": "Mammography and biopsy of right breast"
+            },
+            {
+              "code": "785800009",
+              "display": "Mammography guided biopsy of bilateral breasts"
+            },
+            {
+              "code": "866232001",
+              "display": "Mammography guided core needle biopsy of multiple lesions of breast"
+            },
+            {
+              "code": "866235004",
+              "display": "Mammography of bilateral breast implants"
+            },
+            {
+              "code": "14141000087107",
+              "display": "Mammography of bilateral breast specimens"
+            },
+            {
+              "code": "866234000",
+              "display": "Mammography of breast implant"
+            },
+            {
+              "code": "572701000119102",
+              "display": "Mammography of left breast"
+            },
+            {
+              "code": "866236003",
+              "display": "Mammography of left breast implant"
+            },
+            {
+              "code": "12821000087102",
+              "display": "Mammography of left breast specimen"
+            },
+            {
+              "code": "566571000119105",
+              "display": "Mammography of right breast"
+            },
+            {
+              "code": "866237007",
+              "display": "Mammography of right breast implant"
+            },
+            {
+              "code": "12831000087100",
+              "display": "Mammography of right breast specimen"
+            },
+            {
+              "code": "24623002",
+              "display": "Screening mammography"
+            },
+            {
+              "code": "384151000119104",
+              "display": "Screening mammography of bilateral breasts"
+            },
+            {
+              "code": "392531000119105",
+              "display": "Screening mammography of left breast"
+            },
+            {
+              "code": "392521000119107",
+              "display": "Screening mammography of right breast"
+            },
+            {
+              "code": "80865008",
+              "display": "Specimen mammography"
+            },
+            {
+              "code": "258172002",
+              "display": "Stereotactic mammography"
+            },
+            {
+              "code": "12389009",
+              "display": "Xeromammography"
+            },
+            {
+              "code": "833310007",
+              "display": "Contrast enhanced dual energy spectral mammography"
+            },
+            {
+              "code": "726551006",
+              "display": "Contrast enhanced spectral mammography"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

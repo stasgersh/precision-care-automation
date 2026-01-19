@@ -1,0 +1,20 @@
+{
+  "name": "er-visit-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "er-visit-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "concept": [
+            {
+              "code": "EMER",
+              "display": "emergency"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+have received chemotherapy
+The inclusion criterion requires the patient to have chemotherapy-induced amenorrhea or ovarian
+have Stage I, II, or III hormone receptor positive breast cancer
+taking or planning to take oral estrogen- or progesterone-containing treatments during study participation.
+The inclusion criterion requires the patient to have ovarian function
+The inclusion criterion requires the patient to have a complete medical history within 60 days
+The inclusion criterion requires evidence of serum or plasma estradiol
+The inclusion criterion requires the patient to be able to complete Patient-Reported Outcome (PRO)
+The inclusion criterion requires the patient to have started initial treatment with standard of care oral
+The provided medical history does not contain any information about the patient's
+The inclusion criterion requires the patient to have had a menstrual period within the 12 months before
+The exclusion criterion specifies that the patient must not have received prior aromatase inhibitor therapy for treatment
+The inclusion criterion requires the patient to have completed surgery for treatment of breast cancer at least 14 days
+The exclusion criterion specifies that the patient must not start or plan to start tamoxifen during study
+The exclusion criterion specifies that the patient should not be receiving additional anti-cancer treatments as part of another clinical trial
+The exclusion criterion specifies that the patient must have distant metastatic breast cancer to be excluded
+The exclusion criterion specifies that the patient must have a non-breast malignancy for which they are currently receiving treatment

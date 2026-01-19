@@ -1,0 +1,697 @@
+{
+  "id": "medicalHistory.onco.general",
+  "items": [
+    {
+      "group": "comorbidities",
+      "elements": [
+        {
+          "type": "table",
+          "value": {
+            "path": "$.comorbidities[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Name",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Effective date",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "comorbidities"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "desc",
+            "sortBy": "Effective date"
+          }
+        }
+      ]
+    },
+    {
+      "group": "medications",
+      "elements": [
+        {
+          "type": "table",
+          "value": {
+            "path": "$.activeMedications[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Medication name",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Dosage",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.dosage[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "dosageText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Route",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.dosage[*].route",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Frequency",
+                  "elements": [
+                    [
+                      {
+                        "type": "frequency",
+                        "value": {
+                          "path": "$.attributes.dosage[*].patientInstruction"
+                        }
+                      },
+                      {
+                        "type": "frequency",
+                        "value": {
+                          "path": "$.attributes.dosage[*].timing",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "frequencyText"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "header": "Notes",
+                  "elements": [
+                    {
+                      "type": "indicator",
+                      "value": {
+                        "paletteColor": {
+                          "string": "5"
+                        },
+                        "message": {
+                          "path": "$.attributes.status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.note",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "annotationText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Prescribed",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "medications.notCompleted"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "desc",
+            "sortBy": "Prescribed"
+          }
+        },
+        {
+          "type": "table",
+          "value": {
+            "path": "$.completedMedications[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Medication name",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Dosage",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.dosage[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "dosageText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Route",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.dosage[*].route",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Frequency",
+                  "elements": [
+                    [
+                      {
+                        "type": "frequency",
+                        "value": {
+                          "path": "$.attributes.dosage[*].patientInstruction"
+                        }
+                      },
+                      {
+                        "type": "frequency",
+                        "value": {
+                          "path": "$.attributes.dosage[*].timing",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "frequencyText"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "header": "Notes",
+                  "elements": [
+                    {
+                      "type": "indicator",
+                      "value": {
+                        "paletteColor": {
+                          "string": "5"
+                        },
+                        "message": {
+                          "path": "$.attributes.status"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.note",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "annotationText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Prescribed",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "medications.completed"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "desc",
+            "sortBy": "Prescribed"
+          }
+        }
+      ]
+    },
+    {
+      "group": "allergies",
+      "elements": [
+        {
+          "type": "table",
+          "value": {
+            "path": "$.allergies[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Name",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Type",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.category"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Observation date",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "allergies"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "desc",
+            "sortBy": "Observation date"
+          }
+        }
+      ]
+    },
+    {
+      "group": "patientHistory",
+      "elements": [
+        {
+          "type": "table",
+          "value": {
+            "path": "$.surgicalProcedures[?(@.attributes.status && @.attributes.status == 'completed')]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Surgery name",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Date",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "Surgical history"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "desc",
+            "sortBy": "Date",
+            "title": "Surgical history"
+          }
+        },
+        {
+          "type": "table",
+          "value": {
+            "path": "$.familyMemberHistories[?(!@.subtypes || !@.subtypes.includes('childHistory'))]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Relationship",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.relationship",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Sex",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.sex",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Age",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.age"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Deceased",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.deceased"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Condition",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.condition[*].code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "Family history"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "asc",
+            "sortBy": "Relationship",
+            "title": "Family history"
+          }
+        },
+        {
+          "type": "table",
+          "value": {
+            "path": "$.socialHistories[?(!@.subtypes || !@.subtypes.includes('substanceHistory'))]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Name",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Value",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.value"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Date",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "Social history"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "desc",
+            "sortBy": "Date",
+            "title": "Social history"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "path": "$.patient[0].attributes.maritalStatus",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "key": {
+            "string": "Marital status"
+          }
+        },
+        {
+          "type": "table",
+          "value": {
+            "path": "$.socialHistories[?(!@.subtypes || @.subtypes.includes('substanceHistory'))]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Substance",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Value",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.value"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Date",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "key": {
+            "string": "Substance history"
+          },
+          "meta": {
+            "sortable": true,
+            "sortDirection": "desc",
+            "sortBy": "Date",
+            "title": "Substance history"
+          }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "id": "patientHistory",
+      "label": "Patient history"
+    },
+    {
+      "id": "medications",
+      "label": "Medications"
+    },
+    {
+      "id": "allergies",
+      "label": "Allergies and intolerances"
+    }
+  ]
+}

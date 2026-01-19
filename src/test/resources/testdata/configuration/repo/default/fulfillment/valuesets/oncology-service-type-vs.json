@@ -1,0 +1,55 @@
+{
+  "name": "oncology-service-type-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-service-type-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://hl7.org/fhir/R4/codesystem-service-type.html",
+          "concept": [
+            {
+              "code": "175",
+              "display": "Medical Oncology"
+            },
+            {
+              "code": "185",
+              "display": "Gynaecological Oncology"
+            },
+            {
+              "code": "199",
+              "display": "Paediatric Medical Oncology"
+            },
+            {
+              "code": "214",
+              "display": "Radiation Oncology"
+            }
+          ]
+        },
+        {
+          "system": "urn:oncoflow:cambridge:servicetype",
+          "concept": [
+            {
+              "code": "Gynaecological Oncology"
+            },
+            {
+              "code": "Clinical Oncology"
+            },
+            {
+              "code": "Medical Oncology"
+            }
+          ]
+        },
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.18886",
+          "concept": [
+            {
+              "code": "118",
+              "display": "Oncology"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

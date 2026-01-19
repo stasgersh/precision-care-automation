@@ -1,0 +1,7 @@
+{
+  "eventType": "DATA_FABRIC_DELETE",
+  "parameters": {
+    "patientId": "resourceId"
+  },
+  "x-correlation-id": "f0955be5-bd4e-4b1d-88a5-cfc83a198620"
+}

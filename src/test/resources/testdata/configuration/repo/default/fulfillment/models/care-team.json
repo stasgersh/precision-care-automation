@@ -1,0 +1,1278 @@
+{
+  "configType": "entity",
+  "classId": "careTeam",
+  "description": "",
+  "definitions": [
+    {
+      "resourceType": "CareTeam",
+      "date": [
+        {
+          "source": {
+            "path": "$.period"
+          },
+          "processor": "periodText"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "name",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.name"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "reason",
+          "valueListExtraction": [
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.reasonCode"
+                  }
+                }
+              ]
+            },
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.reasonReference",
+                    "refersTo": {
+                      "resourceType": "Condition",
+                      "source": {
+                        "path": "$.code"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "members",
+          "valueListExtraction": [
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.participant[*].member",
+                    "attributes": [
+                      {
+                        "key": "name",
+                        "required": true,
+                        "valueExtraction": [
+                          {
+                            "source": {
+                              "path": "$",
+                              "refersTo": {
+                                "resourceType": "PractitionerRole",
+                                "source": {
+                                  "path": "$.practitioner",
+                                  "refersTo": {
+                                    "resourceType": "Practitioner",
+                                    "source": {
+                                      "path": "$.name"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "source": {
+                              "path": "$",
+                              "refersTo": {
+                                "resourceType": "Practitioner",
+                                "source": {
+                                  "path": "$.name"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "key": "role",
+                        "valueExtraction": [
+                          {
+                            "source": {
+                              "path": "$",
+                              "refersTo": {
+                                "resourceType": "PractitionerRole",
+                                "source": {
+                                  "path": "$.code"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "key": "specialty",
+                        "valueExtraction": [
+                          {
+                            "source": {
+                              "path": "$",
+                              "refersTo": {
+                                "resourceType": "PractitionerRole",
+                                "source": {
+                                  "path": "$.specialty"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "key": "organization",
+                        "valueExtraction": [
+                          {
+                            "source": {
+                              "path": "$",
+                              "refersTo": {
+                                "resourceType": "PractitionerRole",
+                                "source": {
+                                  "path": "$.organization",
+                                  "refersTo": {
+                                    "resourceType": "Organization",
+                                    "attributes": [
+                                      {
+                                        "key": "fhirId",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.id"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "name",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.name"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "identifier",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.identifier"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "organization",
+          "valueListExtraction": [
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.managingOrganization",
+                    "refersTo": {
+                      "resourceType": "Organization",
+                      "attributes": [
+                        {
+                          "key": "fhirId",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.id"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "key": "name",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.name"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "key": "identifier",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.identifier"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.participant[*].member",
+                    "refersTo": {
+                      "resourceType": "Organization",
+                      "attributes": [
+                        {
+                          "key": "fhirId",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.id"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "key": "name",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.name"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "key": "identifier",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.identifier"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "valueExtraction": [
+                {
+                  "source": {
+                    "path": "$.participant[*].onBehalfOf",
+                    "refersTo": {
+                      "resourceType": "Organization",
+                      "attributes": [
+                        {
+                          "key": "fhirId",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.id"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "key": "name",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.name"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "key": "identifier",
+                          "valueExtraction": [
+                            {
+                              "source": {
+                                "path": "$.identifier"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "context",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$",
+                "attributes": [
+                  {
+                    "key": "serviceRequest",
+                    "valueListExtraction": [
+                      {
+                        "valueExtraction": [
+                          {
+                            "source": {
+                              "path": "$.encounter",
+                              "refersTo": {
+                                "resourceType": "Encounter",
+                                "source": {
+                                  "path": "$.basedOn",
+                                  "refersTo": {
+                                    "resourceType": "ServiceRequest",
+                                    "attributes": [
+                                      {
+                                        "key": "fhirId",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.id"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "reason",
+                                        "valueListExtraction": [
+                                          {
+                                            "valueExtraction": [
+                                              {
+                                                "source": {
+                                                  "path": "$.reasonCode"
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "valueExtraction": [
+                                              {
+                                                "source": {
+                                                  "path": "$.reasonReference",
+                                                  "refersTo": {
+                                                    "resourceType": "Condition",
+                                                    "source": {
+                                                      "path": "$.code"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "organization",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.requester",
+                                              "refersTo": {
+                                                "resourceType": "Organization",
+                                                "attributes": [
+                                                  {
+                                                    "key": "fhirId",
+                                                    "valueExtraction": [
+                                                      {
+                                                        "source": {
+                                                          "path": "$.id"
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "key": "name",
+                                                    "valueExtraction": [
+                                                      {
+                                                        "source": {
+                                                          "path": "$.name"
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "key": "identifier",
+                                                    "valueExtraction": [
+                                                      {
+                                                        "source": {
+                                                          "path": "$.identifier"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "requester",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.requester",
+                                              "attributes": [
+                                                {
+                                                  "key": "name",
+                                                  "required": true,
+                                                  "valueExtraction": [
+                                                    {
+                                                      "source": {
+                                                        "path": "$",
+                                                        "refersTo": {
+                                                          "resourceType": "PractitionerRole",
+                                                          "source": {
+                                                            "path": "$.practitioner",
+                                                            "refersTo": {
+                                                              "resourceType": "Practitioner",
+                                                              "source": {
+                                                                "path": "$.name"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    {
+                                                      "source": {
+                                                        "path": "$",
+                                                        "refersTo": {
+                                                          "resourceType": "Practitioner",
+                                                          "source": {
+                                                            "path": "$.name"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "key": "role",
+                                                  "valueExtraction": [
+                                                    {
+                                                      "source": {
+                                                        "path": "$",
+                                                        "refersTo": {
+                                                          "resourceType": "PractitionerRole",
+                                                          "source": {
+                                                            "path": "$.code"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "key": "specialty",
+                                                  "valueExtraction": [
+                                                    {
+                                                      "source": {
+                                                        "path": "$",
+                                                        "refersTo": {
+                                                          "resourceType": "PractitionerRole",
+                                                          "source": {
+                                                            "path": "$.specialty"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "key": "organization",
+                                                  "valueExtraction": [
+                                                    {
+                                                      "source": {
+                                                        "path": "$",
+                                                        "refersTo": {
+                                                          "resourceType": "PractitionerRole",
+                                                          "source": {
+                                                            "path": "$.organization",
+                                                            "refersTo": {
+                                                              "resourceType": "Organization",
+                                                              "attributes": [
+                                                                {
+                                                                  "key": "fhirId",
+                                                                  "valueExtraction": [
+                                                                    {
+                                                                      "source": {
+                                                                        "path": "$.id"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "key": "name",
+                                                                  "valueExtraction": [
+                                                                    {
+                                                                      "source": {
+                                                                        "path": "$.name"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "key": "identifier",
+                                                                  "valueExtraction": [
+                                                                    {
+                                                                      "source": {
+                                                                        "path": "$.identifier"
+                                                                      }
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "key": "encounter",
+                    "valueListExtraction": [
+                      {
+                        "valueExtraction": [
+                          {
+                            "source": {
+                              "path": "$.encounter",
+                              "refersTo": {
+                                "resourceType": "Encounter",
+                                "attributes": [
+                                  {
+                                    "key": "fhirId",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.id"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "type",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.type"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "serviceType",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.serviceType"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "reason",
+                                    "valueListExtraction": [
+                                      {
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.reasonCode"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.reasonReference",
+                                              "refersTo": {
+                                                "resourceType": "Condition",
+                                                "source": {
+                                                  "path": "$.code"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "source": {
+                                              "path": "$.reasonReference",
+                                              "refersTo": {
+                                                "resourceType": "Observation",
+                                                "source": {
+                                                  "path": "$.code"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "diagnosis",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.diagnosis[*].condition",
+                                          "refersTo": {
+                                            "resourceType": "Condition",
+                                            "source": {
+                                              "path": "$.code"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "organization",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.serviceProvider",
+                                          "refersTo": {
+                                            "resourceType": "Organization",
+                                            "attributes": [
+                                              {
+                                                "key": "fhirId",
+                                                "valueExtraction": [
+                                                  {
+                                                    "source": {
+                                                      "path": "$.id"
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "key": "name",
+                                                "valueExtraction": [
+                                                  {
+                                                    "source": {
+                                                      "path": "$.name"
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "key": "identifier",
+                                                "valueExtraction": [
+                                                  {
+                                                    "source": {
+                                                      "path": "$.identifier"
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "class",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.class"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "participants",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.participant[*].individual",
+                                          "attributes": [
+                                            {
+                                              "key": "name",
+                                              "required": true,
+                                              "valueExtraction": [
+                                                {
+                                                  "source": {
+                                                    "path": "$",
+                                                    "refersTo": {
+                                                      "resourceType": "PractitionerRole",
+                                                      "source": {
+                                                        "path": "$.practitioner",
+                                                        "refersTo": {
+                                                          "resourceType": "Practitioner",
+                                                          "source": {
+                                                            "path": "$.name"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                {
+                                                  "source": {
+                                                    "path": "$",
+                                                    "refersTo": {
+                                                      "resourceType": "Practitioner",
+                                                      "source": {
+                                                        "path": "$.name"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "key": "role",
+                                              "valueExtraction": [
+                                                {
+                                                  "source": {
+                                                    "path": "$",
+                                                    "refersTo": {
+                                                      "resourceType": "PractitionerRole",
+                                                      "source": {
+                                                        "path": "$.code"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "key": "specialty",
+                                              "valueExtraction": [
+                                                {
+                                                  "source": {
+                                                    "path": "$",
+                                                    "refersTo": {
+                                                      "resourceType": "PractitionerRole",
+                                                      "source": {
+                                                        "path": "$.specialty"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "key": "organization",
+                                              "valueExtraction": [
+                                                {
+                                                  "source": {
+                                                    "path": "$",
+                                                    "refersTo": {
+                                                      "resourceType": "PractitionerRole",
+                                                      "source": {
+                                                        "path": "$.organization",
+                                                        "refersTo": {
+                                                          "resourceType": "Organization",
+                                                          "attributes": [
+                                                            {
+                                                              "key": "fhirId",
+                                                              "valueExtraction": [
+                                                                {
+                                                                  "source": {
+                                                                    "path": "$.id"
+                                                                  }
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "key": "name",
+                                                              "valueExtraction": [
+                                                                {
+                                                                  "source": {
+                                                                    "path": "$.name"
+                                                                  }
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "key": "identifier",
+                                                              "valueExtraction": [
+                                                                {
+                                                                  "source": {
+                                                                    "path": "$.identifier"
+                                                                  }
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "key": "episodeOfCare",
+                    "valueListExtraction": [
+                      {
+                        "valueExtraction": [
+                          {
+                            "source": {
+                              "path": "$.encounter",
+                              "refersTo": {
+                                "resourceType": "Encounter",
+                                "source": {
+                                  "path": "$.episodeOfCare",
+                                  "refersTo": {
+                                    "resourceType": "EpisodeOfCare",
+                                    "attributes": [
+                                      {
+                                        "key": "fhirId",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.id"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "type",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.type"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "diagnosis",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.diagnosis[*].condition",
+                                              "refersTo": {
+                                                "resourceType": "Condition",
+                                                "source": {
+                                                  "path": "$.code"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "key": "organization",
+                                        "valueExtraction": [
+                                          {
+                                            "source": {
+                                              "path": "$.managingOrganization",
+                                              "refersTo": {
+                                                "resourceType": "Organization",
+                                                "attributes": [
+                                                  {
+                                                    "key": "fhirId",
+                                                    "valueExtraction": [
+                                                      {
+                                                        "source": {
+                                                          "path": "$.id"
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "key": "name",
+                                                    "valueExtraction": [
+                                                      {
+                                                        "source": {
+                                                          "path": "$.name"
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "key": "identifier",
+                                                    "valueExtraction": [
+                                                      {
+                                                        "source": {
+                                                          "path": "$.identifier"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": [
+          {
+            "type": "custom",
+            "conditions": [
+              {
+                "path": "$.organization[*].identifier[*]",
+                "processor": "isOncologyDepartment"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.category",
+                "include": "oncology-care-team-category-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.reason",
+                "include": "oncology-related-finding-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.reason",
+                "include": "primary-cancer-disease-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.reason",
+                "include": "secondary-cancer-disorder-vs"
+              }
+            ]
+          },
+          {
+            "type": "custom",
+            "conditions": [
+              {
+                "path": "$.members[*].organization[*].identifier[*]",
+                "processor": "isOncologyDepartment"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.members[*].role[*]",
+                "include": "oncology-role-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.members[*].specialty[*]",
+                "include": "oncology-specialty-vs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subclassId": "oncoContext",
+        "filters": [
+          {
+            "type": "custom",
+            "conditions": [
+              {
+                "path": "$.context.serviceRequest[*].organization[*].identifier[*]",
+                "processor": "isOncologyDepartment"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.serviceRequest[*].reason[*]",
+                "include": "oncology-related-finding-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.serviceRequest[*].reason[*]",
+                "include": "primary-cancer-disease-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.serviceRequest[*].reason[*]",
+                "include": "secondary-cancer-disorder-vs"
+              }
+            ]
+          },
+          {
+            "type": "custom",
+            "conditions": [
+              {
+                "path": "$.context.serviceRequest[*].requester[*].organization[*].identifier[*]",
+                "processor": "isOncologyDepartment"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.serviceRequest[*].requester[*].role[*]",
+                "include": "oncology-role-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.serviceRequest[*].requester[*].specialty[*]",
+                "include": "oncology-specialty-vs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subclassId": "oncoContext",
+        "filters": [
+          {
+            "type": "custom",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].organization[*].identifier[*]",
+                "processor": "isOncologyDepartment"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].type[*]",
+                "include": "oncology-encounter-type-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].serviceType[*]",
+                "include": "oncology-service-type-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].reason[*]",
+                "include": "oncology-related-finding-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].reason[*]",
+                "include": "primary-cancer-disease-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].reason[*]",
+                "include": "secondary-cancer-disorder-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].diagnosis[*]",
+                "include": "primary-cancer-disease-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].diagnosis[*]",
+                "include": "secondary-cancer-disorder-vs"
+              }
+            ]
+          },
+          {
+            "type": "custom",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].participants[*].organization[*].identifier[*]",
+                "processor": "isOncologyDepartment"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].participants[*].role[*]",
+                "include": "oncology-role-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.encounter[*].participants[*].specialty[*]",
+                "include": "oncology-specialty-vs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subclassId": "oncoContext",
+        "filters": [
+          {
+            "type": "custom",
+            "conditions": [
+              {
+                "path": "$.context.episodeOfCare[*].organization[*].identifier[*]",
+                "processor": "isOncologyDepartment"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.episodeOfCare[*].type[*]",
+                "include": "oncology-care-episode-type-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.episodeOfCare[*].diagnosis[*]",
+                "include": "primary-cancer-disease-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.episodeOfCare[*].diagnosis[*]",
+                "include": "secondary-cancer-disorder-vs"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

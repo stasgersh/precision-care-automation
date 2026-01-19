@@ -1,0 +1,25 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "d17b645f-a88d-4d51-b89a-e28acdcc2e17",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "66121-5",
+        "display": "Diagnostic Report Test Changed"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/83a2a278-ff45-e749-4968-bd121b0100c6"
+  },
+  "effectiveDateTime": "2015-05-11T00:00:00+00:00",
+  "conclusion": "Conclusion of L2 details - version 1",
+  "presentedForm": [
+    {
+      "contentType": "text/plain; charset=utf-8",
+      "data": "VGVzdCB0ZXh0IGZvciBMMyBkYXRhLiBHb29kIGNoYW5jZSB0byByZWNvdmVyLg=="
+    }
+  ]
+}

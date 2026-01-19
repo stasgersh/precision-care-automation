@@ -1,0 +1,24 @@
+{
+  "name": "oncology-care-episode-type-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-care-episode-type-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.726668",
+          "concept": [
+            {
+              "code": "10",
+              "display": "ONCOLOGY TREATMENT"
+            },
+            {
+              "code": "11",
+              "display": "ONCOLOGY SUPPORTIVE CARE"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "patient": "testPatientIdAmit",
+  "version": 1725280742042,
+  "results": [
+    {
+      "alias": "",
+      "entries": [
+        {
+          "attributes": {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "94381002",
+                  "display": "Secondary malignant neoplasm of liver"
+                }
+              ],
+              "text": "Secondary malignant neoplasm of liver"
+            },
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "attributes": {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                  "code": "C79.31",
+                  "display": "Secondary malignant neoplasm of brain"
+                }
+              ],
+              "text": "Secondary malignant neoplasm of brain"
+            },
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "name": [
+        "entities-testmetastasis-263eb8a5-b439-4d88-8039-d5d80fd30e79"
+      ],
+      "nextPageToken": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "summaryLayout": [
+      [
+        {
+          "id": "mostRecentImaging",
+          "visible": true
+        },
+        {
+          "id": "careTeam",
+          "visible": true
+        }
+      ],
+      [
+        {
+          "id": "mostRecentComments",
+          "visible": true
+        },
+        {
+          "id": "treatments",
+          "visible": true
+        },
+        {
+          "id": "mostRecentOncologyNote",
+          "visible": false
+        },
+        {
+          "id": "labs",
+          "visible": true
+        }
+      ],
+      [
+        {
+          "id": "mostRecentErVisit",
+          "visible": true
+        },
+        {
+          "id": "diagnosis",
+          "visible": true
+        },
+        {
+          "id": "molecularProfile",
+          "visible": false
+        },
+        {
+          "id": "mostRecentMdtReport",
+          "visible": false
+        },
+        {
+          "id": "medicalHistory",
+          "visible": true
+        }
+      ]
+    ]
+  }
+}

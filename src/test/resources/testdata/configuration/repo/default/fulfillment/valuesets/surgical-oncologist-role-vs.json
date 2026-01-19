@@ -1,0 +1,24 @@
+{
+  "name": "surgical-oncologist-role-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "surgical-oncologist-role-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "416186861000087101",
+              "display": "Surgical oncologist"
+            },
+            {
+              "code": "304292004",
+              "display": "Surgeon"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

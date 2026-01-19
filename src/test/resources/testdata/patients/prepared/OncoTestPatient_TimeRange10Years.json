@@ -1,0 +1,228 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "a0b79f8d-ad96-4a16-919f-de32c61f8767",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "TimeRange10Years"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "123-555-5567",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-02-24",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "4fd1608a-cc22-41fa-a9f7-0fef40f48b8e",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report today"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767"
+        },
+        "effectiveDateTime": "<TODAY>T00:10:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "fddaed59-b089-436a-8b28-ae540a8e8869",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 30 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767"
+        },
+        "effectiveDateTime": "<30_DAYS_AGO>T22:01:16.450+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ed1f21db-7ee9-4276-b322-6c208080ea74",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 32 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767"
+        },
+        "effectiveDateTime": "<32_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f0e3a908-5c61-4a02-bd88-0870d194b4c1",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 90 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767"
+        },
+        "effectiveDateTime": "<90_DAYS_AGO>T22:01:16.450+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "aba46a02-8c0e-47e8-811e-f32a64b4dbd6",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 92 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767"
+        },
+        "effectiveDateTime": "<92_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "1a8735b8-93d9-4d81-9122-e39a184c5c70",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 265 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767"
+        },
+        "effectiveDateTime": "<265_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "bba429c9-5663-41b0-b462-b8ecbd56c659",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 10 years ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a0b79f8d-ad96-4a16-919f-de32c61f8767"
+        },
+        "effectiveDateTime": "<3650_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    }
+  ]
+}

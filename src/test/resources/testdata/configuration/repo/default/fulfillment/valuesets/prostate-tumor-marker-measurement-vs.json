@@ -1,0 +1,20 @@
+{
+    "name": "prostate-tumor-marker-measurement-vs",
+    "valueset": {
+      "version": "1.0",
+      "url": "prostate-tumor-marker-measurement-vs",
+      "compose": {
+        "include": [
+          {
+            "system": "http://snomed.info/sct",
+            "concept": [
+              {
+                "code": "63476009",
+                "display": "Prostate specific antigen measurement"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

@@ -1,0 +1,20 @@
+{
+    "name": "rectal-spacing-procedure-vs",
+    "valueset": {
+      "version": "1.0",
+      "url": "rectal-spacing-procedure-vs",
+      "compose": {
+        "include": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "concept": [
+              {
+                "code": "55874",
+                "display": "Radiationtherapy Spacer insertion"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

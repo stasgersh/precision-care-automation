@@ -1,0 +1,152 @@
+{
+  "name": "Test treatment with multiple protocols",
+  "protocols": [
+    {
+      "name": "A Multicenter, Open-Label Study to Evaluate the Long-Term Safety and Efficacy of [Drug Name] in Patients with Moderate to Severe Plaque Psoriasis",
+      "events": [
+        {
+          "id": "ARD-test1",
+          "name": "Androgen Receptor Degrader Test1",
+          "relativeTiming": {
+            "days": 0
+          },
+          "toleranceBefore": {
+            "days": -2
+          },
+          "toleranceAfter": {
+            "days": 2
+          },
+          "scheduleQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "treatmentAndPlan"
+        }
+      ]
+    },
+    {
+      "name": "Phase 2/3 Adaptive Trial of [Vaccine Name] for the Prevention of Influenza in Adults Aged 65 and Older",
+      "events": [
+        {
+          "id": "ARD-test2",
+          "name": "Androgen Receptor Degrader Test2",
+          "relativeTiming": {
+            "days": 0
+          },
+          "toleranceBefore": {
+            "days": -2
+          },
+          "toleranceAfter": {
+            "days": 2
+          },
+          "scheduleQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "treatmentAndPlan"
+        }
+      ]
+    },
+    {
+      "name": "A Phase 1/2 Study of [Gene Therapy] in Pediatric Patients with Spinal Muscular Atrophy",
+      "events": [
+        {
+          "id": "ARD-test3",
+          "name": "Androgen Receptor Degrader Test2",
+          "relativeTiming": {
+            "days": 0
+          },
+          "toleranceBefore": {
+            "days": -2
+          },
+          "toleranceAfter": {
+            "days": 2
+          },
+          "scheduleQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "treatmentAndPlan"
+        }
+      ]
+    }
+  ]
+}

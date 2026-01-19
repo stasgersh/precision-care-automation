@@ -1,0 +1,36 @@
+{
+  "name": "genomic-report-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "genomic-report-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "55233-1",
+              "display": "Genetic analysis master panel"
+            },
+            {
+              "code": "55232-3",
+              "display": "Genetic analysis summary panel"
+            },
+            {
+              "code": "51969-4",
+              "display": "Genetic analysis report"
+            },
+            {
+              "code": "51956-1",
+              "display": "DNA region analysis test coverage panel"
+            },
+            {
+              "code": "53041-0",
+              "display": "DNA region of interest panel"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

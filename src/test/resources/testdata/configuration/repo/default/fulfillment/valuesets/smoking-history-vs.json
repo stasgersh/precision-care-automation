@@ -1,0 +1,19 @@
+{
+  "name": "smoking-history-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "smoking-history-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "72166-2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

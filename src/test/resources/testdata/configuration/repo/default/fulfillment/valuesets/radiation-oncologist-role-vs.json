@@ -1,0 +1,20 @@
+{
+  "name": "radiation-oncologist-role-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "radiation-oncologist-role-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "763292005",
+              "display": "Radiation oncologist"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

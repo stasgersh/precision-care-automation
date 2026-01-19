@@ -1,0 +1,4 @@
+| author (firstname lastname) | date_and_time | content                     | badge            | has_view_on_timeline_link |
+| [DEFAULT-TEST-USER]         | <ANY_VALUE>   | This is an event comment 2  | Timeline comment | yes                       |
+| [DEFAULT-TEST-USER]         | <ANY_VALUE>   | This is an event comment 1  | Timeline comment | yes                       |
+| [DEFAULT-TEST-USER]         | <ANY_VALUE>   | this is a patient comment 3 | <N/A>            | <N/A>                     |

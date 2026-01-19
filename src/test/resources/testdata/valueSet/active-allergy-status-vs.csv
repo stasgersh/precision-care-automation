@@ -1,0 +1,4 @@
+***valuesetid,valueSetVersion,valueSetDescription,
+active-allergy-status-vs,1.0,
+***system,code,display,
+http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical,active,,

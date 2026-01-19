@@ -1,0 +1,22 @@
+include:
+  - project: ${CI_CD_PROJECT}
+    ref: ${CI_CD_VERSION}
+    file: 'models.yml'
+
+fullfilment_valuesets:
+  stage: publish
+  variables:
+    SOURCE_DATA: "default/fulfillment/valuesets/"
+    EXCLUDE: ""
+    ARTIFACT: "fullfilment-valuesets"
+  extends:
+    - .artifactory_zip
+
+fullfilment_models:
+  stage: publish
+  variables:
+    SOURCE_DATA: "default/fulfillment/models/"
+    EXCLUDE: ""
+    ARTIFACT: "fullfilment-model"
+  extends:
+    - .artifactory_zip

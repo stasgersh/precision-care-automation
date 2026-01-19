@@ -1,0 +1,49 @@
+{
+  "name": "breast-tumor-marker-test-ca-15-3-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "breast-tumor-marker-test-ca-15-3-vs",
+    "description": "Breast tumor marker set for Cancer Ag 15-3.",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "2007-3",
+              "display": "Cancer Ag 15-3 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "29153-4",
+              "display": "Cancer Ag 15-3 [Units/volume] in Body fluid"
+            },
+            {
+              "code": "50776-4",
+              "display": "Cancer Ag 15-3 [Units/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "50777-2",
+              "display": "Cancer Ag 15-3 [Units/volume] in Pericardial fluid"
+            },
+            {
+              "code": "50778-0",
+              "display": "Cancer Ag 15-3 [Units/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "6875-9",
+              "display": "Cancer Ag 15-3 [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "83083-6",
+              "display": "Cancer Ag 15-3 [Units/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "97749-6",
+              "display": "Cancer Ag 15-3 [Units/volume] in Aspirate"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

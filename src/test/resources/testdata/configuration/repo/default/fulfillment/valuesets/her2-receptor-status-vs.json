@@ -1,0 +1,37 @@
+{
+  "name": "her2-receptor-status-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "her2-receptor-status-vs",
+    "description": "HER2 receptor status valueset.",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "74885-5",
+              "display": "ERBB2 gene (HER2) duplication associated observations panel - Tissue by FISH"
+            },
+            {
+              "code": "48676-1",
+              "display": "HER2 [Interpretation] in Tissue"
+            },
+            {
+              "code": "51981-9",
+              "display": "HER2 [Presence] in Serum by Immunoassay"
+            },
+            {
+              "code": "72383-3",
+              "display": "HER2 [Presence] in Tissue by Immunoassay"
+            },
+            {
+              "code": "85319-2",
+              "display": "HER2 [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

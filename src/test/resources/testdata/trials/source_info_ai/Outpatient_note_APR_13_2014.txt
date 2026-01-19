@@ -1,0 +1,43 @@
+<h3><strong>Oncology Clinic Visit</strong></h3><div class="report-plain-text">[INSTITUTION]$$$ MR#**ID-NUM ClinicvisitnoteOncologyClinicFollow-upPatient
+
+------------------------------------------------------------------------------------------------------------------------
+
+Date of services: **DATE[Apr 13 2014] 13:35 DIAGNOSIS: Metastatic prostate cancer diagnosed **DATE[Jan 28 14] (bone, probable rectal
+involvement) - LHRH agonist (casodex bridge) **DATE[Mar 09 14] - present - palliative XRT to the right inferior pubic ramus
+INTERVAL HISTORY: Mr. **NAME[AAA] returns today for follow-up for his prostate cancer. Overall he is doing very well. His
+pain has improved significantly. He did have some pain with bowel movements toward the end of treatment, but this has
+essentially resolved. No new complaints. REVIEW OF SYSTEMS: CONSTITUTIONAL: no fevers/chills, + night sweats, no
+significant changes in weight, no fatigue NEUROLOGIC: no headaches, no syncope, no focal weakness or sensory loss, no
+gait disturbance EYES: no acute vision changes, no diploplia ENT: no acute hearing changes, no dizziness or vertigo
+PULMONARY: no cough, no breathlessness, no wheezing, CARDIOVASCULAR: no chest pain or pressure, no dyspnea on exertion
+or at rest, no PND, no orthopnea, no LE edema, no palpitations, GI: no abdominal pain, no nausea, no vomiting, no
+diarrhea, noconstipation, no melena, no hematachezia, no dysphagia GU: no dysuria, no hematuria, no frequency, no
+hesitancy, no incontinence, no erectile dysfunction MSK/RHEUMATOLOGIC: + arthralgias, no myalgias, no joint swelling
+DERM: no rashes, no worr[ID***]mole changes ENDOCRINE: no polyuria, no polydipsia, no temperature intolerance
+HEMATOLOGIC: no unexplained/easy bruising, no enlarging lymph nodes PSYCHIATRIC: no depression, no sleep disturbance, no
+anhedonia, no excessive guilt feelings, no decreased energy, no concentration problems, no appetite changes MEDICATIONS:
+- hydrocodone-acetaminophen 10-325mg 1 tab by mouth daily as needed PAST MEDICAL/ SOCIAL HISTORY: Reviewed and unchanged
+from prior visit PHYSICAL EXAM: P: 64 BP: 122/81 SaO2: 100 %, on room air Temp: 36.72 deg C Ht: 179 cm (**DATE[Mar 02 14]) Wt:
+98.0 Kg BMI: 30.6 BSA: 2.17 PS(ECOG): 1 General: Alert, active, no acute distress, appropriate affect Skin: No rash, no
+lesions, no ulcers HEENT: Normocephalic, atraumatic, PERRLA, EOMI, conjunctiva clear, anicteric, OP: moist mucous
+membranes, benign Lymph Nodes: No adenopathy in the cervical, supraclavicular, inguinal axillary areas Respiratory:
+Lungs clear to A &amp; P Cardiovascular: RRR, no rub, no murmur, no gallop, peripheral pulses intact GI: Soft, nontender, no
+masses, no organomegaly. BS normal. Musculoskeltal: No clubbing, no cyanosis no edema, no arthritic abnormalities
+Neurologic: No focal abnormality noted, CNs grossly intact, muscle strength normal DATA REVIEW$$$/14 15:15:
+BasicMetab:eGFR: &gt; 60 eGFRAA: &gt; 60 RespirCare:rcSpO2: 100 **DATE[Apr 13 14] 14:04: CBC:WBC: 6.6 Hgb: 13.5 PCV: 39 MPV: 7.8
+Plt-Ct: 218 RBC: 4.62 MCV: 84 MCH: 29.2 MCHC: 34.8 RDWSD: 38.3 RDW: 12.8 Differentl:NTAuto: 4.36 NEUTRE: 66.6 LYMPRE:
+19.5 MONORE: 8.7 EOSIM: 3.8 BASORE: 1.4 NEUTAB: 4.36 LYMPAB: 1.28 MONOAB: 0.57 EOSIA: 0.25 BASOAB: 0.09 BasicMetab:Na:
+139 K: 4.2 Cl: 102 CO2: 27 BUN: 14 Creat: 0.70 eGFR: &gt; 60 eGFRAA: &gt; 60 Gluc: 86 Ca: 9.6 AN-GAP: 10 CompMetab:TProSe: 7.2
+Alb: 4.5 TBil: 0.4 AlkP: 53 AST: 23 ALT: 24 TumorMarkers:PSA: &lt;0.10 PSA-Fr: &lt;0.1 PSA-T%: Unable to calc. IMPRESSION AND
+PLAN: Metastatic castrate-sensitive prostate cancer currently on LHRH agonist. Overall he is doing well and has achieved
+an undetectable PSA. We discussed the CHAARTED trial and the possibility of chemotherapy. He has low volume disease by
+the study definition with the exception of possible rectal invasion. This was not proven as a colonoscopy was negative
+for tumor infiltration into the bowel. Given this, his good response to ADT, and the lack of significant benefit seen in
+patients with low-volume disease, I have recommended we proceed with ADT alone. The patient and his wife expressed
+understanding and agreement. - RTC in 2 months w/ CBC, CMP, PSA and for his next triptorelin 50% of this 30 minute
+consultation time was spent in patient's disease and treatment counseling. ___________________________________ **NAME[ZZZ]
+**NAME[YYY], M.D. CC: **NAME[XXX, WWW VVV]
+
+------------------------------------------------------------------------------------------------------------------------
+
+ElectronicallySignedBy: **NAME[YYY,ZZZ],attendingphysician</div>

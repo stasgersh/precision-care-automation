@@ -1,0 +1,21 @@
+{
+  "valueset": {
+    "url": "www.some.url.com",
+    "description": "backup and restore vs",
+    "compose": {
+      "include": [
+        {
+          "system": "www.loinc.co.il",
+          "concept": [
+            {
+              "code": "80439-3",
+              "display": "code display"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "version_1"
+  },
+  "name": "backup_and_restore_vs"
+}

@@ -1,0 +1,149 @@
+{
+  "id": "labReportResults.onco.general",
+  "items": [
+    {
+      "group": "title",
+      "elements": [
+        {
+          "value": { "path": "$.report.attributes.title" },
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "group": "date",
+      "elements": [
+        {
+          "value": { "path": "$.report.date" },
+          "type": "<IMG \"\"\"><SCRIPT>alert(\"XSS\")</SCRIPT>\"\\>"
+        }
+      ]
+    },
+    {
+      "group": "subTitle",
+      "elements": [
+        {
+          "type": "list",
+          "value": {
+            "elements": [
+              { "type": "datetime", "value": { "path": "$.report.date" } },
+              [
+                {
+                  "type": "text",
+                  "value": {
+                    "path": "$.report.attributes.author[*].name[*]",
+                    "processor": { "name": "humanName" }
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "path": "$.report.attributes.organization[*].name"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": { "constant": "No author" }
+                }
+              ],
+              [
+                { "type": "text", "value": { "path": "$.report.attributes.status" } },
+                {
+                  "type": "text",
+                  "value": { "constant": "No status" }
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "reportContent",
+      "elements": [
+        {
+          "key": { "constant": "Results" },
+          "value": {
+            "path": "$.report.attributes.results[*]",
+            "config": {
+              "highlightFilters": [
+                {
+                  "type": "terminology",
+                  "conditions": [
+                    {
+                      "path": "$.interpretation",
+                      "exclude": "negative-result-interpretation-vs"
+                    }
+                  ]
+                }
+              ],
+              "row": {
+                "showHighlight": true
+              },
+              "cells": [
+                {
+                  "header": "Test name",
+                  "showHighlight": true,
+                  "elements": [
+                    {
+                      "value": { "path": "$.code", "processor": { "name": "codeableConceptText" } },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Result",
+                  "showHighlight": true,
+                  "elements": [
+                    {
+                      "value": { "path": "$.value" },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Unit",
+                  "showHighlight": true,
+                  "elements": [
+                    {
+                      "value": { "path": "$.unit" },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Flag",
+                  "showHighlight": true,
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.interpretation",
+                        "processor": { "name": "codeableConceptText" }
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Reference range",
+                  "showHighlight": false,
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.referenceRange",
+                        "processor": { "name": "observationReferenceRangeText" }
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table"
+        }
+      ]
+    }
+  ],
+  "layout": [{ "id": "title" }, { "id": "date" }, { "id": "reportContent" }]
+}

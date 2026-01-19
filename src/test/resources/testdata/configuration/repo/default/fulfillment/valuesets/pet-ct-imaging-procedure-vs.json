@@ -1,0 +1,20 @@
+{
+  "name": "pet-ct-imaging-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "pet-ct-imaging-procedure-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "concept": [
+            {
+              "code": "480621000119104",
+              "display": "PET CT of whole body"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

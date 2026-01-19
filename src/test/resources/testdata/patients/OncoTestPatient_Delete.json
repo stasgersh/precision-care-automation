@@ -1,0 +1,487 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "66812e9a-96ae-4b59-85fe-43872df6bd78",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "Delete"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "888-987-1234",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1961-11-29",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "id": "4aeddf73-0851-4d79-b9ed-8dbb48487922",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "1975-09-28T17:31:51.000Z",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Y2xpbmljYWwgaW5kaWNhdGlvbiByZWxhcHNlZCBoZ3Mgb3ZhcmFpbiBjYW5jZXIuIGFzc2Vzc21lbnQgYWZ0ZXIgeDMgY3ljbGVzIG9mIGNoZW1vIGN0IHRob3JheCBhYmRvbWVuIHBlbHZpcyB3aXRoIGNvbnRyYXN0IGltYWdlcyBhY3F1aXJlZCBmb2xsb3dpbmcgb3JhbCBhbmQgaXYgY29udHJhc3QgbWVkaWEuIGNvbXBhcmlzb24gbWFkZSB3aXRoIHByZXZpb3VzIHN0dWR5IGRhdGVkIDE0IDAxIHh4LiBjaGVzdCAgbHltcGggbm9kZXMgIG5vIGVubGFyZ2VkIHRob3JhY2ljIG5vZGVzLiBsdW5ncyAgbWlsZCBiYXNhbCBkZXBlbmRlbnQgY2hhbmdlcywgb3RoZXJ3aXNlIHRoZSBsdW5ncyBhcmUgY2xlYXIuIG5vIGZvY2FsIGx1bmcgbGVzaW9ucy4gcGxldXJhIHBlcmljYXJkaXVtICBubyBwbGV1cmFsIG9yIHBlcmljYXJkaWFsIGVmZnVzaW9uLiBwZSAgbm8gY2VudHJhbCBwZS4gb3RoZXIgPyBhYmRvbWVuIHBlbHZpcyAgcGVsdmljIG9yZ2FucyAgcHJldmlvdXMgdGFoIGFuZCBic28uIGFzY2l0ZXMgIG5vbmUgcGVyaXRvbmVhbCBkaXNlYXNlIChpbmNsdWRlIG1lYXN1cmVtZW50IG9mIGxhcmdlc3QgbGVzaW9uKSAgLS0gdGhlcmUgaXMgYSBzdGFibGUgMjIgeCA1OSBtbSBmb2NhbCBhcmVhIG9mIGN5c3RpYyBwZXJpdG9uZWFsIGRpc2Vhc2Ugbm90ZWQgd2l0aGluIHRoZSByaWdodCBhZG5leGEsIHdoaWNoIGFwcGVhcnMgdG8gYmUgY29tbXVuaWNhdGluZyB3aXRoIHRoZSByaWdodCB2YWdpbmEgdmF1bHQuIGluIHJldHJvc3BlY3QgdGhpcyB3YXMgcHJlc2VudCBvbiBzdWJzZXF1ZW50IGN0cyB3aXRoIGEgcG9zc2libGUgc29mdCB0aXNzdWUgbWFzcyBhdCB0aGUgdmFnaW5hbCB2YXVsdC4gdGhpcyBzb2Z0IHRpc3N1ZSBsZXNpb24gaXMgdmVyeSBkaWZmaWN1bHQgdG8gZGlzdGluZ3Vpc2ggZnJvbSB0aGUgYWRqYWNlbnQgYm93ZWwgbG9vcHMgYnV0IGFwcGVhcnMgdG8gaGF2ZSByZWR1Y2VkIGluIHNpemUgZnJvbSBwcmV2aW91cyBjdCBtZWFzdXJpbmcgMjkgeCAzOSBtbSwgcHJldmlvdXNseSA1OCB4IDMxIG1tLiAtLSBpbnRlcnZhbCBkZWNyZWFzZSBpbiBzaXplIGlzIDEyIHggOCBtbSBzb2Z0IHRpc3N1ZSBub2R1bGUgYWRqYWNlbnQgdG8gdGhlIGNhZWN1bSwgd2l0aGluIHRoZSByaWdodCBwYXJhY29saWMgZ3V0dGVyIChwcmV2aW91c2x5IDIwIHggMTggbW0pLiAtLSBubyBuZXcgYXJlYXMgb2YgcGVyaXRvbmVhbCBkaXNlYXNlLiBseW1waCBub2RlcyAgbm9uZSBlbmxhcmdlZC4gc29saWQgb3JnYW5zICBub3JtYWwgYXBwZWFyYW5jZXMgb2YgdGhlIGxpdmVyLCBzcGxlZW4sIGFkcmVuYWwgZ2xhbmRzLCBwYW5jcmVhcyBhbmQga2lkbmV5cy4gbm8gaHlkcm9uZXBocm9zaXMuIG1zayAgbm8gc3VzcGljaW91cyBib25lIGxlc2lvbnMuIENPTkNMVVNJT04gIGludGVydmFsIGRlY3JlYXNlIGluIHNpemUgb2YgdGhlIGZvc3NhIHdpdGhpbiB0aGUgcmlnaHQgcGFyYWNvbGljIGd1dHRlciBhbmQgcG9zc2libGUgdmFnaW5hbCB2YXVsdCBzb2Z0IHRpc3N1ZSBsZXNpb24gc3RhYmxlIGFwcGVhcmFuY2VzIG9mIGN5c3RpYyBwYXJhY2VudHJhbCBjeXN0IGF0IHRoZSByaWdodCB2YWdpbmFsIHZhdWx0LiBmaW5kaW5ncyBhcmUgaW4ga2VlcGluZyB3aXRoIHBhcnRpYWwgcmVzcG9uc2Uu"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433761009",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "606cc3b0-fabc-4e86-a9f8-0683b68e7efb",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "68604-8",
+              "display": "Radiology Diagnostic study note"
+            }
+          ],
+          "text": "Radiology report 1"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "date": "2006-10-23T10:43:54Z",
+        "content": [
+          {
+            "attachment": {
+              "id": "17866dff-0927-48ac-b706-e279affe9cd3",
+              "contentType": "text/plain",
+              "data": "VGhpcyBpcyBhIHRlc3QgcmVwb3J0",
+              "title": "HP",
+              "creation": "2006-10-23"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "667fc281-03db-49a7-bb13-268358f51ff6",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "68604-8",
+              "display": "Radiology Diagnostic study note"
+            }
+          ],
+          "text": "Radiology report 2"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "date": "2004-03-23T10:43:54Z",
+        "content": [
+          {
+            "attachment": {
+              "id": "17866dff-0927-48ac-b706-e279affe9cd3",
+              "contentType": "text/plain",
+              "data": "VGhpcyBpcyBhIHRlc3QgcmVwb3J0",
+              "title": "HP",
+              "creation": "2004-03-23"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "66222011-5c80-4a0b-b3f0-b8a434e61481",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "1991-05-22T10:53:12+01:00",
+        "issued": "1991-05-22T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 41,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 41 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "66ae8b8d-9c3f-4317-9db2-e268d71bcd1c",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "1996-04-23T10:53:12+01:00",
+        "issued": "1996-04-23T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 35,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 35 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "66fdfa40-a68f-423b-9c3a-18dfbbfc7742",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2001-08-26T10:53:12+01:00",
+        "issued": "2001-08-26T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 43,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 43 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "666320b3-0d2b-407e-9da4-9205481b9c71",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2002-04-11T10:53:12+01:00",
+        "issued": "2002-04-11T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 38,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 38 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a661fcde-d356-4669-a332-5ec84a215215",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2002-07-15T10:53:12+01:00",
+        "issued": "2002-07-15T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 44,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 44 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "dd4e5141-fc1c-4da0-66e7-9fa5098ea8c5",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2006-10-23T10:53:12+01:00",
+        "issued": "2006-10-23T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 31,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 31 kg"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "662e57a1-96b1-46f1-9d8e-e4bd7a60696f",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/66812e9a-96ae-4b59-85fe-43872df6bd78"
+        },
+        "effectiveDateTime": "2011-08-13T10:53:12+01:00",
+        "issued": "2011-08-13T10:53:12.075+01:00",
+        "valueQuantity": {
+          "value": 39,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 39 kg"
+          }
+        ]
+      }
+    }
+  ]
+}

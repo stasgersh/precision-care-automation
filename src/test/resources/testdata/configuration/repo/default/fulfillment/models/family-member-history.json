@@ -1,0 +1,175 @@
+{
+  "configType": "entity",
+  "classId": "familyMemberHistory",
+  "description": "",
+  "definitions": [
+    {
+      "resourceType": "FamilyMemberHistory",
+      "date": [
+        {
+          "source": {
+            "path": "$.date"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "identifier",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.identifier"
+              }
+            }
+          ]
+        },
+        {
+          "key": "status",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.status"
+              }
+            }
+          ]
+        },
+        {
+          "key": "relationship",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.relationship"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sex",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.sex"
+              }
+            }
+          ]
+        },
+        {
+          "key": "born",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.bornDate"
+              }
+            },
+            {
+              "source": {
+                "path": "$.bornPeriod"
+              },
+              "processor": "periodDateText"
+            },
+            {
+              "source": {
+                "path": "$.bornString"
+              }
+            }
+          ]
+        },
+        {
+          "key": "age",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.ageDate"
+              }
+            },
+            {
+              "source": {
+                "path": "$.agePeriod"
+              },
+              "processor": "periodDateText"
+            },
+            {
+              "source": {
+                "path": "$.ageString"
+              }
+            }
+          ]
+        },
+        {
+          "key": "deceased",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.deceasedBoolean"
+              }
+            },
+            {
+              "source": {
+                "path": "$.deceasedAge"
+              },
+              "processor": "ageText"
+            },
+            {
+              "source": {
+                "path": "$.deceasedRange"
+              },
+              "processor": "rangeText"
+            },
+            {
+              "source": {
+                "path": "$.deceasedDate"
+              }
+            },
+            {
+              "source": {
+                "path": "$.deceasedString"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note"
+              }
+            }
+          ]
+        },
+        {
+          "key": "condition",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.condition"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "childHistory",
+        "filters": [
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.relationship",
+                "include": "child-relationship-vs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

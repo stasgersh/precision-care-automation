@@ -1,0 +1,123 @@
+{
+  "configType": "entity",
+  "classId": "testPrimaryCancerDisease",
+  "description": "original primaryCancerDisease data model used for testing",
+  "definitions": [
+    {
+      "resourceType": "Condition",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "include": "primary-cancer-disease-vs"
+            },
+            {
+              "path": "$.category",
+              "include": "problem-list-item-category-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.onsetPeriod"
+          },
+          "processor": "periodDateText"
+        },
+        {
+          "source": {
+            "path": "$.onsetDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.recordedDate"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "clinicalStatus",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.clinicalStatus"
+              }
+            }
+          ]
+        },
+        {
+          "key": "verificationStatus",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.verificationStatus"
+              }
+            }
+          ]
+        },
+        {
+          "key": "severity",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.severity"
+              }
+            }
+          ]
+        },
+        {
+          "key": "stage",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.stage"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "body-surface-area-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "body-surface-area-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "8277-6",
+              "display": "Body surface area"
+            },
+            {
+              "code": "3139-3",
+              "display": "Body surface area Measured"
+            },
+            {
+              "code": "3140-1",
+              "display": "Body surface area Derived from formula"
+            }
+          ]
+        },
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+          "concept": [
+            {
+              "code": "1180011056",
+              "display": "BSA"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

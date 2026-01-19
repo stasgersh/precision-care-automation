@@ -1,0 +1,73 @@
+{
+  "name": "pathology-report-category-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "pathology-report-category-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "27898-6",
+              "display": "Pathology studies (set)"
+            },
+            {
+              "code": "34122-2",
+              "display": "Pathology procedure note"
+            }
+          ]
+        },
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "concept": [
+            {
+              "code": "BG",
+              "display": "Blood Gases"
+            },
+            {
+              "code": "CH",
+              "display": "Chemistry"
+            },
+            {
+              "code": "CP",
+              "display": "Cytopathology"
+            },
+            {
+              "code": "HM",
+              "display": "Hematology"
+            },
+            {
+              "code": "MB",
+              "display": "Microbiology"
+            },
+            {
+              "code": "MCB",
+              "display": "Mycobacteriology"
+            },
+            {
+              "code": "MYC",
+              "display": "Mycology"
+            },
+            {
+              "code": "SP",
+              "display": "Surgical Pathology"
+            },
+            {
+              "code": "SR",
+              "display": "Serology"
+            },
+            {
+              "code": "TX",
+              "display": "Toxicology"
+            },
+            {
+              "code": "VR",
+              "display": "Virology"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "id": "NCT06044857",
+  "type": "trial",
+  "status": "Recruiting",
+  "studyCompletion": "2026-11",
+  "name": "PSMA PET Response Guided SabR in High Risk Pca",
+  "description": "Sequential cohort evaluation of ideal timing of imaging and treatment spacing to discern maximal PSMA (Prostate specific membrane antigen) PET (Positron Emission Tomography) response (PSMA-11 68Ga, Illucix) for adaptation of dominant intra-prostatic lesion tumor boost dose.",
+  "phase": "1",
+  "link": "https://clinicaltrials.gov/study/NCT06044857",
+  "patientsFilter":{
+    "filter": {
+      "must": [
+        {
+          "attributes.gender": {
+            "eq": "male"
+          }
+        }
+      ]
+    }
+  },
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    },
+    {
+      "id": "histologically",
+      "definition": {
+        "ai": {
+          "criteria": "Pathologically confirmed adenocarcinoma of the prostate (within 180 days of registration) of high risk by national comprehensive cancer network (NCCN) criteria as determined by >=cT3a stage (AJCC 8th edition) OR PSA>20ng/mL OR ISUP Grade Group 4-5 (Gleason Grade 8-10)."
+        }
+      },
+      "display": "Patient's histologic type"
+    },
+    {
+      "id": "comorbidity",
+      "definition": {
+        "ai": {
+          "criteria": "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that, in the opinion of the investigator, would limit compliance with study requirements."
+        }
+      },
+      "display": "Patient's comorbidity"
+    },
+    {
+      "id": "imaging_pet_ct_dates",
+      "definition": {
+        "ai": {
+          "criteria": "Staging 68Ga PMSA-11 PET -CT performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment."
+        }
+      },
+      "display": "Patient imging date"
+    },
+    {
+      "id": "imaging_pet_mri_dates",
+      "definition": {
+        "ai": {
+          "criteria": "Staging 68Ga PMSA-11 PET -MRI performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment."
+        }
+      },
+      "display": "Patient imging date"
+    },
+    {
+      "id": "SabR_ADT",
+      "definition": {
+        "ai": {
+          "criteria": "Planned for definitive intent stereotactic ablative radiotherapy (SabR) with integrated dose boost to intra-prostatic tumor and androgen deprivation therapy (ADT) with baseline AUA IPSS <=18 and prostate size <=100cc"
+        }
+      },
+      "display": "Patient's planned SabR"
+    },
+    {
+      "id": "PSMA_pet_ct",
+      "definition": {
+        "ai": {
+          "criteria": "Staging 68Ga PSMA-11 PET -CT demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost."
+        }
+      },
+      "display": "PSMA"
+    },
+    {
+      "id": "PSMA_pet_mri",
+      "definition": {
+        "ai": {
+          "criteria": "Staging 68Ga PSMA-11 PET -MRI demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost."
+        }
+      },
+      "display": "PSMA"
+    },
+    {
+      "id": "pelvic_radiotherapy",
+      "definition": {
+        "ai": {
+          "criteria": "Prior pelvic radiotherapy other than cutaneous/superficial treatments."
+        }
+      },
+      "display": "pelvic_radiotherapy"
+    },
+    {
+      "id": "agreement",
+      "definition": {
+        "ai": {
+          "criteria": "All men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of standard of care SabR and for a period of time of 6 months thereafter as per standard guidelines. Should a man's partner become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately."
+        }
+      },
+      "display": "Patient's agreement"
+    },
+    {
+      "id": "qualifications",
+      "definition": {
+        "ai": {
+          "criteria": "Ability to understand and the willingness to sign a written informed consent."
+        }
+      },
+      "display": "Patient's qualifications"
+    },
+    {
+      "id": "ADT",
+      "definition": {
+        "ai": {
+          "criteria": "Prior curative intent local therapy (e.g. prostatectomy, radiotherapy, focal ablative therapy) for prostate cancer is not allowed, with following exceptions regarding androgen deprivation therapy (ADT)/anti-androgen therapy (AAT): Prior androgen deprivation therapy (ADT) allowed if <3 month total duration and stopped >=3 months prior to registration with demonstration of non-castrate testosterone recovery (>50ng/dL) and meeting all other inclusion criteria. Ongoing androgen deprivation therapy (ADT) is allowed if <=60 days total duration AND meeting following criteria:If GnRH agonist used (e.g. leuprolide), bicalutamide must have been used for at least 30 days +/-14 days from start of GnRH agonist."
+        }
+      },
+      "display": "ADT"
+    },
+    {
+      "id": "investigational_agents",
+      "definition": {
+        "ai": {
+          "criteria": "Subjects may not be receiving any other investigational agents for the treatment of the cancer under study."
+        }
+      },
+      "display": "may not be receiving any other investigational agents"
+    },
+    {
+      "id": "allergy",
+      "definition": {
+        "ai": {
+          "criteria": "History of allergic reactions to PMSA-11 68Ga imaging agent."
+        }
+      },
+      "display": "allergy"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_male",
+      "type": "inclusion",
+      "title": "Gender is male",
+      "allowMissingVariables": [
+        "gender"
+      ],
+      "dependency": [
+        "gender"
+      ],
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is male",
+          "description": "Gender is male",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": ["dob"],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-07-30`,`years`,`int`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-07-30`,`years`,`int`)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_histologic_type",
+      "type": "inclusion",
+      "title": "Pathologically confirmed adenocarcinoma of the prostate (within 180 days of registration) of high risk by national comprehensive cancer network (NCCN) criteria as determined by >=cT3a stage (AJCC 8th edition) OR PSA>20ng/mL OR ISUP Grade Group 4-5 (Gleason Grade 8-10).",
+      "allowMissingVariables": [
+        "histologically"
+      ],
+      "dependency": [
+        "histologically"
+      ],
+      "expression": "histologically",
+      "subCriteria": [
+        {
+          "id": "histologically",
+          "title": "Pathologically confirmed adenocarcinoma of the prostate (within 180 days of registration) of high risk by national comprehensive cancer network (NCCN) criteria as determined by >=cT3a stage (AJCC 8th edition) OR PSA>20ng/mL OR ISUP Grade Group 4-5 (Gleason Grade 8-10).",
+          "description": "Pathologically confirmed adenocarcinoma of the prostate (within 180 days of registration) of high risk by national comprehensive cancer network (NCCN) criteria as determined by >=cT3a stage (AJCC 8th edition) OR PSA>20ng/mL OR ISUP Grade Group 4-5 (Gleason Grade 8-10).",
+          "expression": "variables.histologically.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.histologically.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_SabR_ADT",
+      "type": "inclusion",
+      "title": "Planned for definitive intent stereotactic ablative radiotherapy (SabR) with integrated dose boost to intra-prostatic tumor and androgen deprivation therapy (ADT) with baseline AUA IPSS <=18 and prostate size <=100cc",
+      "allowMissingVariables": [
+        "SabR_ADT"
+      ],
+      "dependency": [
+        "SabR_ADT"
+      ],
+      "expression": "SabR_ADT",
+      "subCriteria": [
+        {
+          "id": "SabR_ADT",
+          "title": "Planned for definitive intent stereotactic ablative radiotherapy (SabR) with integrated dose boost to intra-prostatic tumor and androgen deprivation therapy (ADT) with baseline AUA IPSS <=18 and prostate size <=100cc",
+          "description": "Planned for definitive intent stereotactic ablative radiotherapy (SabR) with integrated dose boost to intra-prostatic tumor and androgen deprivation therapy (ADT) with baseline AUA IPSS <=18 and prostate size <=100cc",
+          "expression": "variables.SabR_ADT.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.SabR_ADT.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_imaging_dates",
+      "type": "inclusion",
+      "title": "Staging 68Ga PMSA-11 PET -CT or -MRI performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment.",
+      "dependency": [
+        "imaging_pet_ct_dates",
+        "imaging_pet_mri_dates"
+      ],
+      "expression": "imaging_pet_ct_dates || imaging_pet_mri_dates",
+      "subCriteria": [
+        {
+          "id": "imaging_pet_ct_dates",
+          "title": "Staging 68Ga PMSA-11 PET-CT date",
+          "description": "Staging 68Ga PMSA-11 PET -CT performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment.",
+          "expression": "variables.imaging_pet_ct_dates.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.imaging_pet_ct_dates.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "imaging_pet_mri_dates",
+          "title": "Staging 68Ga PMSA-11 PET-MRI date",
+          "description": "Staging 68Ga PMSA-11 PET -MRI performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment.",
+          "expression": "variables.imaging_pet_mri_dates.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.imaging_pet_mri_dates.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_PSMA",
+      "type": "inclusion",
+      "title": "Staging 68Ga PSMA-11 PET -CT or -MRI demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost",
+      "expression": "PSMA_pet_ct || PSMA_pet_mri",
+      "subCriteria": [
+        {
+          "id": "PSMA_pet_ct",
+          "title": "Staging 68Ga PSMA-11 PET-CT",
+          "description": "Staging 68Ga PSMA-11 PET -CT demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost",
+          "expression": "variables.PSMA_pet_ct.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.PSMA_pet_ct.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "PSMA_pet_mri",
+          "title": "Staging 68Ga PSMA-11 PET-MRI",
+          "description": "Staging 68Ga PSMA-11 PET -MRI demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost",
+          "expression": "variables.PSMA_pet_mri.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.PSMA_pet_mri.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_agreement",
+      "type": "inclusion",
+      "title": "All men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of standard of care SabR and for a period of time of 6 months thereafter as per standard guidelines. Should a man's partner become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately.",
+      "allowMissingVariables": [
+        "agreement"
+      ],
+      "dependency": [
+        "agreement"
+      ],
+      "expression": "agreement",
+      "subCriteria": [
+        {
+          "id": "agreement",
+          "title": "All men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of standard of care SabR and for a period of time of 6 months thereafter as per standard guidelines. Should a man's partner become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately.",
+          "description": "All men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of standard of care SabR and for a period of time of 6 months thereafter as per standard guidelines. Should a man's partner become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately.",
+          "expression": "variables.agreement.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.agreement.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_qualifications",
+      "type": "inclusion",
+      "title": "Ability to understand and the willingness to sign a written informed consent.",
+      "dependency": [
+        "qualifications"
+      ],
+      "expression": "qualifications",
+      "subCriteria": [
+        {
+          "id": "qualifications",
+          "title": "Ability to understand and the willingness to sign a written informed consent.",
+          "description": "Ability to understand and the willingness to sign a written informed consent.",
+          "expression": "variables.qualifications.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.qualifications.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_ADT",
+      "type": "exclusion",
+      "title": "Prior curative intent local therapy (e.g. prostatectomy, radiotherapy, focal ablative therapy) for prostate cancer is not allowed, with following exceptions regarding androgen deprivation therapy (ADT)/anti-androgen therapy (AAT): Prior androgen deprivation therapy (ADT) allowed if <3 month total duration and stopped >=3 months prior to registration with demonstration of non-castrate testosterone recovery (>50ng/dL) and meeting all other inclusion criteria. Ongoing androgen deprivation therapy (ADT) is allowed if <=60 days total duration AND meeting following criteria:If GnRH agonist used (e.g. leuprolide), bicalutamide must have been used for at least 30 days +/-14 days from start of GnRH agonist.",
+      "allowMissingVariables": [
+        "ADT"
+      ],
+      "dependency": [
+        "ADT"
+      ],
+      "expression": "ADT",
+      "subCriteria": [
+        {
+          "id": "ADT",
+          "title": "Prior curative intent local therapy (e.g. prostatectomy, radiotherapy, focal ablative therapy) for prostate cancer is not allowed, with following exceptions regarding androgen deprivation therapy (ADT)/anti-androgen therapy (AAT): Prior androgen deprivation therapy (ADT) allowed if <3 month total duration and stopped >=3 months prior to registration with demonstration of non-castrate testosterone recovery (>50ng/dL) and meeting all other inclusion criteria. Ongoing androgen deprivation therapy (ADT) is allowed if <=60 days total duration AND meeting following criteria:If GnRH agonist used (e.g. leuprolide), bicalutamide must have been used for at least 30 days +/-14 days from start of GnRH agonist.",
+          "description": "",
+          "expression": "variables.ADT.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.ADT.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_investigational_agents",
+      "type": "exclusion",
+      "title": "Subjects may not be receiving any other investigational agents for the treatment of the cancer under study.",
+      "dependency": [
+        "investigational_agents"
+      ],
+      "expression": "investigational_agents",
+      "subCriteria": [
+        {
+          "id": "investigational_agents",
+          "title": "Subjects may not be receiving any other investigational agents for the treatment of the cancer under study.",
+          "description": "",
+          "expression": "variables.investigational_agents.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.investigational_agents.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_allergy",
+      "type": "exclusion",
+      "title": "History of allergic reactions to PMSA-11 68Ga imaging agent",
+      "allowMissingVariables": [
+        "allergy"
+      ],
+      "dependency": [
+        "allergy"
+      ],
+      "expression": "allergy",
+      "subCriteria": [
+        {
+          "id": "allergy",
+          "title": "History of allergic reactions to PMSA-11 68Ga imaging agent",
+          "description": "",
+          "expression": "variables.allergy.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.allergy.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_comorbidity",
+      "type": "exclusion",
+      "title": "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that, in the opinion of the investigator, would limit compliance with study requirements.",
+      "expression": "comorbidity",
+      "dependency": [
+        "comorbidity"
+      ],
+      "subCriteria": [
+        {
+          "id": "comorbidity",
+          "title": "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that, in the opinion of the investigator, would limit compliance with study requirements.",
+          "description": "",
+          "expression": "variables.comorbidity.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.comorbidity.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_pelvic_radiotherapy",
+      "type": "exclusion",
+      "title": "Prior pelvic radiotherapy other than cutaneous/superficial treatments.",
+      "allowMissingVariables": [
+        "pelvic_radiotherapy"
+      ],
+      "dependency": [
+        "pelvic_radiotherapy"
+      ],
+      "expression": "pelvic_radiotherapy",
+      "subCriteria": [
+        {
+          "id": "pelvic_radiotherapy",
+          "title": "Prior pelvic radiotherapy other than cutaneous/superficial treatments.",
+          "description": "",
+          "expression": "variables.pelvic_radiotherapy.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.pelvic_radiotherapy.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    }
+  ]
+}

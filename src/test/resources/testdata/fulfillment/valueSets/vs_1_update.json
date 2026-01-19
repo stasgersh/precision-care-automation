@@ -1,0 +1,21 @@
+{
+  "valueset": {
+    "url": "www.some.url.com",
+    "description": "value set 1 update",
+    "compose": {
+      "include": [
+        {
+          "system": "www.loinc.co.il",
+          "concept": [
+            {
+              "code": "c-500",
+              "display": "code display"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "version_2"
+  },
+  "name": "vs_1"
+}

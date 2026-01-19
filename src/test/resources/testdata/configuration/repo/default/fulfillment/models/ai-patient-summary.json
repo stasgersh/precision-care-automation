@@ -1,0 +1,50 @@
+{
+  "classId": "aiPatientSummary",
+  "configType": "entity",
+  "description": "Collects reports of progressive summarization",
+  "definitions": [
+    {
+      "resourceType": "DocumentReference",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.type",
+              "include": "ai-patient-summary-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.meta.lastUpdated"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.type"
+              }
+            }
+          ]
+        },
+        {
+          "key": "result",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.extension[?(@.url == 'http://gehealthcare.com/eda/1.0/fhir/extensions/progressivesummary/onco' & @.extension)].extension[?(@.url == 'content.attachment.data' & @.valueString =~ '\"tillCutDate\"')].valueString"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

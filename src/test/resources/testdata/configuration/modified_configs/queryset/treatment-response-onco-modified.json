@@ -1,0 +1,386 @@
+{
+  "id": "treatmentResponse.onco.extended",
+  "items": [
+    [
+      {
+        "key": "imagingReports",
+        "query": {
+          "from": "imagingReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  { "attributes.status": { "eq": "in-progress | completed | final | amended | corrected | appended" } },
+                  { "attributes.status": { "eq": null } }
+                ]
+              }
+            ]
+          },
+          "show": [
+            "attributes.aiSummary",
+            "attributes.clpFindings",
+            "attributes.code",
+            "attributes.conclusion",
+            "attributes.conclusionCode",
+            "attributes.context",
+            "attributes.identifier",
+            "attributes.imagingStudy",
+            "attributes.attachment.contentType",
+            "attributes.attachment.title",
+            "attributes.attachment.s3Url",
+            "attributes.results",
+            "attributes.resultsInterpreter",
+            "attributes.status",
+            "attributes.title",
+            "attributes.url",
+            "date",
+            "id",
+            "patient_id",
+            "patient_version",
+            "provenance",
+            "subtypes",
+            "type"
+          ],
+          "dedup": true,
+          "size": 200
+        }
+      }
+    ],
+    [
+      {
+        "key": "systemicTherapies",
+        "query": {
+          "from": "medication",
+          "dedup": true,
+          "size": 1000,
+          "filter": {
+            "must": [
+              {
+                "should": [{ "subtypes": { "eq": "chemo" } }]
+              },
+              {
+                "date": { "range": { "lte": "now/d" } }
+              },
+              {
+                "should": [{ "attributes.intent": { "neq": "proposal" } }]
+              },
+              {
+                "should": [{ "attributes.status": { "eq": "active | completed" } }]
+              }
+            ]
+          }
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "lastChemoMedications"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "leastRecentRadiotherapyProcedure",
+        "query": {
+          "from": "radiotherapyProcedure",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  { "attributes.status": { "eq": "in-progress | completed | active" } },
+                  { "attributes.status": { "eq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [
+            {
+              "date": "asc"
+            }
+          ]
+        }
+      },
+      {
+        "key": "surgicalProcedures",
+        "query": {
+          "from": "surgicalProcedure",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  { "attributes.status": { "eq": "in-progress | completed" } },
+                  { "attributes.status": { "eq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "tumorReports",
+        "query": {
+          "from": [
+            "imagingReport",
+            "pathologyReport",
+            "oncologyMDTReport",
+            "oncologyOutpatientNote",
+            "dischargeSummaryNote"
+          ],
+          "show": [
+            "date",
+            "id",
+            "patient_id",
+            "patient_version",
+            "provenance",
+            "subtypes",
+            "type",
+            "attributes.clpFindings"
+          ],
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "neq": null
+                }
+              },
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Measurements_object.Volume_float": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "attributes.$clpFindings.findings.OtherBodyParts_array.Measurements_object.Volume_float": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "attributes.$clpFindings.findings.Metastases_object.Tumors_array.Measurements_object.Volume_float": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "attributes.$clpFindings.findings.Metastases_object.LymphNodes_array.Measurements_object.Volume_float": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  { "attributes.status": { "eq": "in-progress | completed | final | amended | corrected | appended | current" } },
+                  { "attributes.status": { "eq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [
+            {
+              "date": "asc"
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "key": "mostRecentRadiotherapyProcedure",
+        "query": {
+          "from": "radiotherapyProcedure",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  { "attributes.status": { "eq": "in-progress | completed | active" } },
+                  { "attributes.status": { "eq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ]
+        }
+      },
+      {
+        "key": "mostRecentOncologyNote",
+        "query": {
+          "from": "oncologyOutpatientNote",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  { "attributes.status": { "eq": "current" } },
+                  { "attributes.status": { "eq": null } }
+                ]
+              },
+              {
+                "should": [
+                  { "attributes.docStatus": { "eq": "final | amended" } },
+                  { "attributes.docStatus": { "eq": null } }
+                ]
+              }
+            ]
+          },
+          "show": [
+            "attributes.aiSummary",
+            "attributes.author",
+            "attributes.clpFindings",
+            "attributes.code",
+            "attributes.creationDate",
+            "attributes.docStatus",
+            "attributes.encounter",
+            "attributes.encounterDisplay",
+            "attributes.organization",
+            "attributes.period",
+            "attributes.practiceSetting",
+            "attributes.providerType",
+            "attributes.attachment.contentType",
+            "attributes.attachment.title",
+            "attributes.attachment.s3Url",
+            "attributes.status",
+            "attributes.title",
+            "attributes.url",
+            "date",
+            "id",
+            "patient_id",
+            "patient_version",
+            "provenance",
+            "subtypes",
+            "type"
+          ],
+          "dedup": true,
+          "limit": 1,
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "key": "trendableEntities",
+        "query": {
+          "from": [
+            "generalTumorMarkerTestResult",
+            "prostateTumorMarkerTestResult",
+            "breastTumorMarkerTestResultCa153",
+            "breastTumorMarkerTestResultCa125",
+            "breastTumorMarkerTestResultCa2729",
+            "weight"
+          ],
+          "filter": {
+            "must": [
+              {
+                "must": [
+                  {
+                    "date": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "date": {
+                      "range": {
+                        "lte": "now/d"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.code.$coding": {
+                  "neq": null
+                }
+              },
+              {
+                "attributes.trendKey": {
+                  "neq": null
+                }
+              },
+              {
+                "attributes.valueQuantity.value": {
+                  "neq": null
+                }
+              },
+              {
+                "should": [
+                  { "attributes.status": { "eq": "final | amended | corrected" } },
+                  { "attributes.status": { "eq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000,
+          "show": [
+            "date",
+            "id",
+            "patient_id",
+            "patient_version",
+            "provenance",
+            "subtypes",
+            "type",
+            "attributes.code",
+            "attributes.trendKey",
+            "attributes.referenceRange",
+            "attributes.valueQuantity"
+          ]
+        }
+      }
+    ]
+  ]
+}

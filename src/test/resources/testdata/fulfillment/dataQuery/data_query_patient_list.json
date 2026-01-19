@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "date": "1971-11-13",
+      "provenance": [
+        "Patient/01eJnyvPgxpydSE"
+      ],
+      "latest_patient_version": 1733163638603,
+      "patient_id": "01eJnyvPgxpydSE",
+      "sync_status": "success",
+      "attributes": {
+        "identifier": null,
+        "gender": "male",
+        "dob": "1971-11-13",
+        "name": [
+          {
+            "given": [
+              "PS01e2"
+            ],
+            "use": "official",
+            "family": "TESTTamas"
+          }
+        ],
+        "id": "01eJnyvPgxpydSE",
+        "maritalStatus": null
+      },
+      "id": "patient:01eJnyvPgxpydSE",
+      "type": "patient",
+      "sync_timestamp": 1733163696492,
+      "patient_version": 1733146870084,
+      "subtypes": [
+        "oncoContext"
+      ]
+    }
+  ],
+  "nextPageToken": null
+}

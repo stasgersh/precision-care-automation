@@ -1,0 +1,157 @@
+{
+  "name": "enzyme-activity-tumor-marker-test-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "enzyme-activity-tumor-marker-test-vs",
+    "description": "Enzyme activity tumor marker set. LOINC: curated subset of the mCODE tumor marker test valueset (http://hl7.org/fhir/us/mcode/ValueSet-mcode-tumor-marker-test-vs.html)",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "11053-6",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Red Blood Cells"
+            },
+            {
+              "code": "14403-0",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Gastric fluid"
+            },
+            {
+              "code": "14803-1",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Body fluid by Lactate to pyruvate reaction"
+            },
+            {
+              "code": "14804-9",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction"
+            },
+            {
+              "code": "14805-6",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Pyruvate to lactate reaction"
+            },
+            {
+              "code": "17041-5",
+              "display": "Lactate dehydrogenase [Presence] in Urine"
+            },
+            {
+              "code": "2527-0",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Amniotic fluid"
+            },
+            {
+              "code": "2528-8",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "2529-6",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Body fluid"
+            },
+            {
+              "code": "2530-4",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Pleural fluid"
+            },
+            {
+              "code": "2531-2",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "2532-0",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma"
+            },
+            {
+              "code": "2533-8",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Synovial fluid"
+            },
+            {
+              "code": "2534-6",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Urine"
+            },
+            {
+              "code": "32324-6",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Specimen"
+            },
+            {
+              "code": "33367-4",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Pericardial fluid"
+            },
+            {
+              "code": "47678-8",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in 24 hour Urine"
+            },
+            {
+              "code": "47863-6",
+              "display": "Lactate dehydrogenase [Enzymatic activity/time] in 24 hour Urine"
+            },
+            {
+              "code": "57664-5",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Semen"
+            },
+            {
+              "code": "5921-2",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Dialysis fluid"
+            },
+            {
+              "code": "60017-1",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Body fluid by Pyruvate to lactate reaction"
+            },
+            {
+              "code": "60018-9",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Pericardial fluid by Pyruvate to lactate reaction"
+            },
+            {
+              "code": "60019-7",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Pericardial fluid by Lactate to pyruvate reaction"
+            },
+            {
+              "code": "60020-5",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Peritoneal fluid by Pyruvate to lactate reaction"
+            },
+            {
+              "code": "60021-3",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Pleural fluid by Pyruvate to lactate reaction"
+            },
+            {
+              "code": "60022-1",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Pleural fluid by Lactate to pyruvate reaction"
+            },
+            {
+              "code": "60023-9",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Cerebral spinal fluid by Pyruvate to lactate reaction"
+            },
+            {
+              "code": "60024-7",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Cerebral spinal fluid by Lactate to pyruvate reaction"
+            },
+            {
+              "code": "68387-0",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Peritoneal fluid by Lactate to pyruvate reaction"
+            },
+            {
+              "code": "68452-2",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Synovial fluid by Pyruvate to lactate reaction"
+            },
+            {
+              "code": "68453-0",
+              "display": "Lactate dehydrogenase [Enzymatic activity/volume] in Synovial fluid by Lactate to pyruvate reaction"
+            },
+            {
+              "code": "2506-4",
+              "display": "Isocitrate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma"
+            },
+            {
+              "code": "91141-2",
+              "display": "TPMT activity in RBC by production of 6-MMP"
+            },
+            {
+              "code": "91142-0",
+              "display": "TPMT activity in RBC by production of 6-MMP riboside"
+            },
+            {
+              "code": "91143-8",
+              "display": "TPMT activity in RBC by production of 6-MTG riboside"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

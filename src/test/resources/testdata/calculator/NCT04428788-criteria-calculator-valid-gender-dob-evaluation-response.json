@@ -1,0 +1,85 @@
+{
+  "id": "NCT04428788",
+  "timestamp": 1728466992,
+  "metadata": {
+    "name": "Simple configuration with patient date of birth and gender",
+    "description": "Simple configuration with patient date of birth and gender - The purpose of this study is to assess the safety, tolerability and preliminary efficacy of CC-94676 in men with progressive metastatic castration resistant prostate cancer.",
+    "status": "Recruiting",
+    "phase": "1",
+    "link": "https://clinicaltrials.gov/study/NCT04428788?a=23",
+    "usingAi": false
+  },
+  "patient_id": "83a2a278-ff45-e749-4968-4321Mbappe",
+  "attributes": {
+    "criteria_age": {
+      "value": "MET",
+      "display": "Age >= 18 years",
+      "expression": "isAgeGt18",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "dob"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "isAgeGt18",
+          "display": "Age is grater than 18",
+          "value": true,
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+          "metadata": {
+            "description": "Age is grater than 18",
+            "usingAi": false
+          },
+          "extension": {
+            "displayValue": "25.58",
+            "sourceAuthor": null,
+            "sourceDate": null,
+            "sourceTitle": "patient-c8c3ec9c-4946-4214-a8f5-d7bc896e76f9",
+            "sourceSummary": null,
+            "sourceFull": null,
+            "sourceEntityId": null,
+            "sourceEntityType": null,
+            "sourceVersion": null
+          }
+        }
+      ]
+    },
+    "criteria_male": {
+      "value": "MET",
+      "display": "Gender is male",
+      "expression": "gender",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "gender"
+        ]
+      },
+      "criteria": [
+        {
+          "id": "gender",
+          "display": "Gender is male",
+          "value": true,
+          "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+          "metadata": {
+            "description": "Gender is male",
+            "usingAi": false
+          },
+          "extension": {
+            "displayValue": "male",
+            "sourceAuthor": null,
+            "sourceDate": null,
+            "sourceTitle": "patient-c8c3ec9c-4946-4214-a8f5-d7bc896e76f9",
+            "sourceSummary": null,
+            "sourceFull": null,
+            "sourceEntityId": null,
+            "sourceEntityType": null,
+            "sourceVersion": null
+          }
+        }
+      ]
+    }
+  }
+}

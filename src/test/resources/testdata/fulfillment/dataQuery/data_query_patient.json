@@ -1,0 +1,49 @@
+{
+  "patient": "testPatientIdAmit",
+  "version": 1733043464613,
+  "results": [
+    {
+      "alias": "testPatient",
+      "entries": [
+        {
+          "id": "testPatient:testPatientIdAmit",
+          "patient_id": "testPatientIdAmit",
+          "patient_version": 1733043222080,
+          "type": "testPatient",
+          "date": "1939-12-14",
+          "attributes": {
+            "id": "testPatientIdAmit",
+            "identifier": [
+              {
+                "system": "https://ge.com/oncoflow/omop/person_id",
+                "value": "cf90fbf6"
+              }
+            ],
+            "gender": "male",
+            "dob": "1939-12-14",
+            "name": [
+              {
+                "use": "official",
+                "family": "OncoTestPatient",
+                "given": [
+                  "AmitNakesh"
+                ]
+              }
+            ],
+            "maritalStatus": null
+          },
+          "provenance": [
+            "Patient/testPatientIdAmit"
+          ],
+          "subtypes": [
+            "oncoContext"
+          ]
+        }
+      ],
+      "name": [
+        "entities-testpatient-3c1c4da2-689d-41de-91e1-1a9670d8b2bc"
+      ],
+      "nextPageToken": null
+    }
+  ]
+}

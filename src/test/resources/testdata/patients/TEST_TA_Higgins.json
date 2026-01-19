@@ -1,0 +1,774 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "Encounter/d39ded02-ef1a-4998-ba5a-9d80e7325c93",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "d39ded02-ef1a-4998-ba5a-9d80e7325c93",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "214",
+                "system": "http://hl7.org/fhir/R4/codesystem-service-type.html",
+                "display": "Radiation Oncology"
+              }
+            ],
+            "text": "Oncology Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "period": {
+          "start": "2025-04-12T17:00:00+02:00",
+          "end": "2025-04-12T18:00:00+02:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/23de8b4c-81c2-44c9-bef9-84164338df4c",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "23de8b4c-81c2-44c9-bef9-84164338df4c",
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "409063005",
+                "system": "http://snomed.info/sct",
+                "display": "Counselling"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "214",
+              "system": "http://hl7.org/fhir/R4/codesystem-service-type.html",
+              "display": "Radiation Oncology"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "occurrenceDateTime": "2025-11-15T09:25:00.000Z"
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/69d6db20-bcae-4b02-9fdc-1f454e8e6e44",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "69d6db20-bcae-4b02-9fdc-1f454e8e6e44",
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "363679005",
+                "system": "http://snomed.info/sct",
+                "display": "Imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "82542-0",
+              "system": "http://gehealtcare.precision-insights/demo",
+              "display": "PSMA-PET scan"
+            }
+          ],
+          "text": "PSMA-PET scan"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "occurrenceDateTime": "2025-11-12T09:25:00.000Z"
+      }
+    },
+    {
+      "fullUrl": "Encounter/4d3b71dc-4b45-423f-97d6-7fe6e5abbece",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "4d3b71dc-4b45-423f-97d6-7fe6e5abbece",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/visit_occurrence_id",
+            "value": "14193695"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "period": {
+          "start": "2017-06-11T10:16:00.000Z",
+          "end": "2017-06-11T23:59:00.000Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/7a5adbe4-bc2f-4e13-9be0-503f12fa7726",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "7a5adbe4-bc2f-4e13-9be0-503f12fa7726",
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "363679005",
+                "system": "http://snomed.info/sct",
+                "display": "Imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "82542-0",
+              "system": "http://gehealtcare.precision-insights/demo",
+              "display": "PSMA-PET scan"
+            }
+          ],
+          "text": "PSMA-PET scan"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "occurrenceDateTime": "2025-05-12T09:25:00.000Z"
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/d2319370-b4e8-4cf1-8537-16d0044fb9fb",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "d2319370-b4e8-4cf1-8537-16d0044fb9fb",
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "108252007",
+                "system": "http://snomed.info/sct",
+                "display": "Laboratory procedure"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "63476009",
+              "system": "http://snomed.info/sct",
+              "display": "Prostate specific antigen measurement"
+            }
+          ],
+          "text": "PSA measurement"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "occurrenceDateTime": "2025-09-12T09:25:00.000Z"
+      }
+    },
+    {
+      "fullUrl": "Observation/d1729548-1795-4068-a0d8-df5575c7d68f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d1729548-1795-4068-a0d8-df5575c7d68f",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/measurement_id",
+            "value": "836919506"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "2857-1",
+              "system": "http://loinc.org",
+              "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "effectiveDateTime": "2024-10-23T10:04:00.000Z",
+        "valueQuantity": {
+          "value": 196.19,
+          "code": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "code": "ng/mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 0,
+              "code": "ng/mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/b6814260-63cc-4ca9-aee4-a1d2a9ff047c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b6814260-63cc-4ca9-aee4-a1d2a9ff047c",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/measurement_id",
+            "value": "836919506"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "2857-1",
+              "system": "http://loinc.org",
+              "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "effectiveDateTime": "2025-04-25T08:00:00.000Z",
+        "valueQuantity": {
+          "value": 2.43,
+          "code": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "code": "ng/mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 0,
+              "code": "ng/mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/a2d9077d-9446-44a3-8ce2-fd057178058b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a2d9077d-9446-44a3-8ce2-fd057178058b",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/measurement_id",
+            "value": "855743555"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "vital-signs",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "29463-7",
+              "system": "http://loinc.org",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "encounter": {
+          "reference": "Encounter/4d3b71dc-4b45-423f-97d6-7fe6e5abbece"
+        },
+        "effectiveDateTime": "2017-06-11T10:30:00.000Z",
+        "valueQuantity": {
+          "value": 101.15,
+          "code": "kg",
+          "system": "http://unitsofmeasure.org",
+          "unit": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "code": "kg",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg"
+            },
+            "high": {
+              "value": 24000,
+              "code": "kg",
+              "system": "http://unitsofmeasure.org",
+              "unit": "kg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/1acc994e-8e0d-4dcf-a04d-bd69ddfa995b",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "1acc994e-8e0d-4dcf-a04d-bd69ddfa995b",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "LAB",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "24324-6",
+              "system": "http://loinc.org",
+              "display": "Hepatic function panel - Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "effectiveDateTime": "2017-04-06T00:00:00.000Z",
+        "issued": "2017-04-06T00:00:00.000Z",
+        "result": [
+          {
+            "reference": "Observation/cd7c73f6-92e9-4a36-adc4-157b032f6e20",
+            "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/dab8a2dc-ba8e-4170-9087-0bdcee48ea0e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "dab8a2dc-ba8e-4170-9087-0bdcee48ea0e",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/measurement_id",
+            "value": "1373400479"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "2857-1",
+              "system": "http://loinc.org",
+              "display": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "effectiveDateTime": "2017-08-13T12:18:00.000Z",
+        "valueQuantity": {
+          "value": 0.22,
+          "code": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "code": "ng/mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 0,
+              "code": "ng/mL",
+              "system": "http://unitsofmeasure.org",
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "MedicationAdministration/1117bd59-214c-435e-8401-0ac7c2f03a4d",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "1117bd59-214c-435e-8401-0ac7c2f03a4d",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "CC-94676",
+              "display": "Androgen Receptor Degrade"
+            }
+          ],
+          "text": "Androgen Receptor Degrade"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "effectiveDateTime": "2024-11-07T11:30:00.000Z",
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/reason-medication-given",
+                "code": "b",
+                "display": "Given as Ordered"
+              }
+            ]
+          }
+        ],
+        "dosage": {
+          "text": "50mg x 1 days x 3 months",
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "26643006",
+                "display": "Oral route"
+              }
+            ]
+          },
+          "dose": {
+            "value": 50,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/cd7c73f6-92e9-4a36-adc4-157b032f6e20",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "cd7c73f6-92e9-4a36-adc4-157b032f6e20",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/measurement_id",
+            "value": "1281293844"
+          }
+        ],
+        "status": "registered",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1742-6",
+              "system": "http://loinc.org",
+              "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+            }
+          ],
+          "text": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "effectiveDateTime": "2017-04-06T10:35:00.000Z",
+        "valueQuantity": {
+          "value": 32,
+          "code": "[U]/L",
+          "system": "http://unitsofmeasure.org",
+          "unit": "[U]/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4,
+              "code": "[U]/L",
+              "system": "http://unitsofmeasure.org",
+              "unit": "[U]/L"
+            },
+            "high": {
+              "value": 40,
+              "code": "[U]/L",
+              "system": "http://unitsofmeasure.org",
+              "unit": "[U]/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Procedure/a41b2a5a-1183-4123-a6ba-c3556f15f8cb",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "a41b2a5a-1183-4123-a6ba-c3556f15f8cb",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-procedure-intent",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "373808002",
+                  "system": "http://snomed.info/sct",
+                  "display": "Curative - procedure intent"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "168528006",
+                      "system": "http://snomed.info/sct",
+                      "display": "Palliative course of radiotherapy"
+                    }
+                  ],
+                  "text": "Palliative radiation to right inferior pubic ramus"
+                }
+              },
+              {
+                "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "1156530009",
+                      "system": "http://snomed.info/sct",
+                      "display": "Volumetric Modulated Arc Therapy (procedure)"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume",
+            "extension": [
+              {
+                "url": "totalDoseDelivered",
+                "valueQuantity": {
+                  "value": 2500,
+                  "code": "cGy",
+                  "system": "http://unitsofmeasure.org"
+                }
+              },
+              {
+                "url": "fractionsDelivered",
+                "valueUnsignedInt": 14
+              }
+            ]
+          }
+        ],
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "code": "108290001",
+              "system": "http://snomed.info/sct",
+              "display": "Radiation oncology AND/OR radiotherapy (procedure)"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "1217123003",
+              "system": "http://snomed.info/sct",
+              "display": "Radiotherapy course of treatment"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "performedPeriod": {
+          "start": "2014-03-10T15:32:12.778Z",
+          "end": "2014-03-30T15:32:12.778Z"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "93974005",
+                "system": "http://snomed.info/sct",
+                "display": "Primary malignant neoplasm of prostate"
+              }
+            ]
+          }
+        ],
+        "bodySite": [
+          {
+            "coding": [
+              {
+                "code": "78904004",
+                "system": "http://snomed.info/sct",
+                "display": "Pelvic structure (body structure)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "MedicationStatement/a968e1fd-6ea4-5fa6-b30a-84c56ee9f735",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "a968e1fd-6ea4-5fa6-b30a-84c56ee9f735",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/drug_exposure_id",
+            "value": "509303904"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "code": "72962",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "docetaxel"
+            }
+          ],
+          "text": "docetaxel"
+        },
+        "subject": {
+          "reference": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a"
+        },
+        "effectiveDateTime": "2018-01-14T16:06:00.000Z",
+        "dosage": [
+          {
+            "route": {
+              "coding": [
+                {
+                  "code": "47625008",
+                  "system": "http://snomed.info/sct",
+                  "display": "Intravenous route"
+                }
+              ],
+              "text": "Intravenous route"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Patient/2d5d2b8e-24ba-4241-3f80-65e8d678298a",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "2d5d2b8e-24ba-4241-3f80-65e8d678298a",
+        "name": [
+          {
+            "use": "official",
+            "family": "TEST_TA",
+            "given": [
+              "Higgins"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1958-05-28"
+      }
+    }
+  ]
+}

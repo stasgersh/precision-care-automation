@@ -1,0 +1,252 @@
+{
+  "configType": "entity",
+  "classId": "rectalSpacingProcedure",
+  "definitions": [
+    {
+      "resourceType": "ServiceRequest",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "include": "rectal-spacing-procedure-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.occurrenceDateTime"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.status"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note[*]",
+                "attributes": [
+                  {
+                    "key": "text",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.text"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "time",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.time"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "author",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.authorString"
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$.authorReference"
+                        },
+                        "processor": "referenceText"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Procedure",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "include": "rectal-spacing-procedure-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.performedDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.performedPeriod"
+          },
+          "processor": "periodDateText"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.status"
+              }
+            }
+          ]
+        },
+        {
+          "key": "statusReason",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.statusReason"
+              }
+            }
+          ]
+        },
+        {
+          "key": "performedPeriod",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.performedPeriod"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "outcome",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.outcome"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note[*]",
+                "attributes": [
+                  {
+                    "key": "text",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.text"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "time",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.time"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "author",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.authorString"
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$.authorReference"
+                        },
+                        "processor": "referenceText"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

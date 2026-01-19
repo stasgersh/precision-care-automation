@@ -1,0 +1,13 @@
+{
+  "dedup": "True",
+  "filter": {
+    "must": [
+      {
+        "attributes.$identifier.type.$coding.code":
+        {
+          "eq": "DL"
+        }
+      }
+    ]
+  }
+}

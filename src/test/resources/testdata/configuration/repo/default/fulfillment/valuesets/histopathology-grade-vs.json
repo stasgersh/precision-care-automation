@@ -1,0 +1,40 @@
+{
+  "name": "histopathology-grade-value-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "histopathology-grade-value-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "LA15454-4",
+              "display": "Grade cannot be assessed (GX)"
+            },
+            {
+              "code": "LA15453-6",
+              "display": "Well differentiated (G1)"
+            },
+            {
+              "code": "LA15452-8",
+              "display": "Moderately differentiated (G2)"
+            },
+            {
+              "code": "LA15450-2",
+              "display": "Poorly differentiated (G3)"
+            },
+            {
+              "code": "LA15451-0",
+              "display": "Undifferentiated (G4)"
+            },
+            {
+              "code": "LA4489-6",
+              "display": "Unknown"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

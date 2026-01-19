@@ -1,0 +1,20 @@
+{
+  "name": "physical-therapy-referral-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "physical-therapy-referral-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "710005006",
+              "display": "Referral to physical training instructor"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

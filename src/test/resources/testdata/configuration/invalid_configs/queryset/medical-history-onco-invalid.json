@@ -1,0 +1,163 @@
+{
+  "id": "medicalHistory.onco.general",
+  "items": [
+    [
+      {
+        "key": "comorbidities",
+        "query": {
+          "from": "comorbidity",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        }
+      }
+    ],
+    [
+      {
+        "key": "medications",
+        "query": {
+          "from": "medication",
+          "dedup": true,
+          "size": 1000,
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "entered-in-error"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "date": {
+                      "range": {
+                        "lte": "now/d"
+                      }
+                    }
+                  },
+                  {
+                    "date": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "key": "allergies",
+        "query": {
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "surgicalProcedures",
+        "query": {
+          "from": "surgicalProcedure",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "familyMemberHistories",
+        "query": {
+          "from": "familyMemberHistory",
+          "filter": {
+            "should": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "date": {
+                  "eq": null
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "socialHistories",
+        "query": {
+          "from": "socialHistory",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "patient",
+        "query": {
+          "from": "patient",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1
+        }
+      }
+    ]
+  ]
+}

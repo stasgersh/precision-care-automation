@@ -1,0 +1,169 @@
+{
+  "id": "NCT05929768",
+  "criteria": [
+    {
+      "statement": "Histologically confirmed ER-negative (ER < 5%), PR-negative (PR < 5%), and HER2-negative breast cancer",
+      "type": "inclusion"
+    },
+    {
+      "statement": "American Joint Committee on Cancer (AJCC) 8 anatomic tumor clinical stage either (T2-T4, N0, M0) or (T1-T3, N1-2, M0)",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Breast and axillary imaging with mammogram and/or ultrasound and/or MRI within 49 days prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Any of the following: T4/N+, any N3, or inflammatory breast cancer",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Has metastatic disease (M1)",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Prior systemic or radiation therapy with curative intent for the current breast cancer",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Previous definitive ipsilateral breast surgery for the current breast cancer",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Current or anticipated use of other investigational agents",
+      "type": "exclusion"
+    },
+    {
+      "statement": "History of allergic reactions attributed to compounds of similar chemical or biologic composition as study agents",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Severe hypersensitivity (>= grade 3) to pembrolizumab or any of its excipients",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Prior therapy with an anti-PD-1, anti-PD-L1, or anti-PD-L2 agent or with an agent directed to another stimulatory or co-inhibitory T-cell receptor",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Currently participating in or have participated in a study of an investigational agent or used an investigational device within 28 days prior to randomization",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Zubrod performance status of 0-2",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Has evidence of peripheral neuropathy and must have it at =< grade 1, by Common Terminology Criteria for Adverse Events (CTCAE) version (v.) 5.0, within 28 days prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Has a complete medical history and physical exam within 28 days prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Hemoglobin >= 9.0 g/dL or >= 5.6 mol/L (within 28 days prior to randomization).  Must be met without erythropoietin dependency and without packed red blood cell transfusion within last 2 weeks.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Leukocytes >= 3 x 10^3/uL (within 28 days prior to randomization)",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Absolute neutrophil count >= 1.5 x 10^3/uL (within 28 days prior to randomization)",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Platelets >= 100 x 10^3/uL (within 28 days prior to randomization)",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Total bilirubin =< 1.5 x institutional upper limit of normal (IULN) within 28 days prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Direct bilirubin =< IULN with total bilirubin > 1.5 x IULN within 28 days prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Aspartate aminotransferase (AST) =< 3 x institutional upper limit of normal (ULN) (within 28 days prior to randomization)",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Alanine aminotransferase (ALT) =< 3 x institutional upper limit of normal (ULN) (within 28 days prior to randomization)",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Serum creatinine <= the IULN. This specimen must have been drawn and processed within 28 days prior to registration.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Calculated creatinine clearance >= 50 mL/min/1.73m^2 using the Cockcroft-Gault Formula. Serum creatinine <= the IULN. This specimen must have been drawn and processed within 28 days prior to registration.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Adequate cardiac function with left ventricular ejection fraction >= 50% as assessed by ECHO or MUGA",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Has a known history or current symptoms of cardiac disease, or history of treatment with cardiotoxic agents, has a clinical risk assessment of cardiac function using the New York Heart Association Functional Classification and must be class 2B or better",
+      "type": "inclusion"
+    },
+    {
+      "statement": "HIV-infection: On effective anti-retroviral therapy at randomization and undetectable viral load test within 6 months prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Chronic HBV infection: Undetectable HBV viral load while on suppressive therapy within 6 months prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "History of HCV infection: Treated and cured or undetectable HCV viral load test within 6 months prior to randomization",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Uncontrolled diabetes in the opinion of the treating investigator",
+      "type": "exclusion"
+    },
+    {
+      "statement": "One physical 4-5-micron single H&E slide from the archival pretreatment diagnostic biopsy available for submission",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Pregnancy or nursing",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Major surgery within 14 days prior to randomization",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Severe or active infections within 14 days prior to Randomization",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Diagnosis of immunodeficiency and receiving chronic systemic steroid therapy",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Active autoimmune disease that has required systemic treatment in 2 years prior to randomization",
+      "type": "exclusion"
+    },
+    {
+      "statement": "History of (non-infectious) pneumonitis that required steroids",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Received a live vaccine within 30 days prior to randomization",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Prior or concurrent malignancy whose natural history or treatment has the potential to interfere with the safety or efficacy assessment of the treatment regimen",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Uncontrolled hypertension in the opinion of the treating investigator",
+      "type": "exclusion"
+    }
+  ]
+}

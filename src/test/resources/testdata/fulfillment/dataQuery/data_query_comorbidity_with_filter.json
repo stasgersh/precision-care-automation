@@ -1,0 +1,68 @@
+{
+  "patient": "testPatientIdAmit",
+  "version": 1727077920447,
+  "results": [
+    {
+      "alias": "comorbidity",
+      "entries": [
+        {
+          "date": "2021-06-16T00:00:00.000Z",
+          "provenance": [
+            "Condition/condition2"
+          ],
+          "attributes": {
+            "severity": null,
+            "note": null,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "699214007",
+                  "display": "Pressure ulcer of hip"
+                }
+              ],
+              "text": "Pressure ulcer of hip"
+            },
+            "verificationStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                  "code": "provisional",
+                  "display": "Provisional"
+                }
+              ],
+              "text": "Provisional"
+            },
+            "category": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "encounter-diagnosis",
+                    "display": "Encounter Diagnosis"
+                  }
+                ]
+              }
+            ],
+            "clinicalStatus": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                  "code": "active"
+                }
+              ]
+            }
+          },
+          "id": "comorbidity:condition2",
+          "type": "comorbidity",
+          "patient_version": 1727074210780,
+          "subtypes": [
+            "oncoContext"
+          ]
+        }
+      ],
+      "name": ["entities-comorbidity-c1344cd8-0215-49db-94ee-44da194997bd"],
+      "nextPageToken": null
+    }
+  ]
+}

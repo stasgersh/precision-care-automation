@@ -1,0 +1,24 @@
+{
+  "name": "pain-assessment-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "pain-assessment-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "72514-3",
+              "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+            },
+            {
+              "code": "38208-5",
+              "display": "Pain severity - Reported"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

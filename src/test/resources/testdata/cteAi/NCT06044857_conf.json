@@ -1,0 +1,65 @@
+{
+  "id": "NCT06044857",
+  "criteria": [
+    {
+      "statement": "Age >= 18 years.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "gender is male.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Pathologically confirmed adenocarcinoma of the prostate (within 180 days of registration) of high risk by national comprehensive cancer network (NCCN) criteria as determined by >=cT3a stage (AJCC 8th edition) OR PSA>20ng/mL OR ISUP Grade Group 4-5 (Gleason Grade 8-10).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that, in the opinion of the investigator, would limit compliance with study requirements.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Staging 68Ga PMSA-11 PET -CT performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Staging 68Ga PMSA-11 PET -MRI performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Planned for definitive intent stereotactic ablative radiotherapy (SabR) with integrated dose boost to intra-prostatic tumor and androgen deprivation therapy (ADT) with baseline AUA IPSS <=18 and prostate size <=100cc",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Staging 68Ga PSMA-11 PET -CT demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Staging 68Ga PSMA-11 PET -MRI demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Prior pelvic radiotherapy other than cutaneous/superficial treatments.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "All men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of standard of care SabR and for a period of time of 6 months thereafter as per standard guidelines. Should a man's partner become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Ability to understand and the willingness to sign a written informed consent.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Prior curative intent local therapy (e.g. prostatectomy, radiotherapy, focal ablative therapy) for prostate cancer is not allowed, with following exceptions regarding androgen deprivation therapy (ADT)/anti-androgen therapy (AAT): Prior androgen deprivation therapy (ADT) allowed if <3 month total duration and stopped >=3 months prior to registration with demonstration of non-castrate testosterone recovery (>50ng/dL) and meeting all other inclusion criteria. Ongoing androgen deprivation therapy (ADT) is allowed if <=60 days total duration AND meeting following criteria:If GnRH agonist used (e.g. leuprolide), bicalutamide must have been used for at least 30 days +/-14 days from start of GnRH agonist.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Subjects may not be receiving any other investigational agents for the treatment of the cancer under study.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "History of allergic reactions to PMSA-11 68Ga imaging agent.",
+      "type": "exclusion"
+    }
+  ]
+}

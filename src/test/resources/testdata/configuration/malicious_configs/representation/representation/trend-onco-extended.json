@@ -1,0 +1,76 @@
+{
+  "id": "trend.onco.extended",
+  "items": [
+    {
+      "group": "trends",
+      "elements": [
+        {
+          "type": "chart",
+          "value": { "path": "$.trendableEntities" }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "id": "weight",
+      "label": "Weight"
+    },
+    {
+      "id": "generalTumorMarkerTestResult",
+      "label": "General Tumor Marker Test Result"
+    },
+    {
+      "id": "prostateTumorMarkerTestResult",
+      "label": "Prostate Tumor Marker Test Result"
+    },
+    {
+      "id": "breastTumorMarkerTestResultCa153",
+      "label": "Breast Tumor Marker Test Result Ca153"
+    },
+    {
+      "id": "breastTumorMarkerTestResultCa125",
+      "label": "Breast Tumor Marker Test Result Ca125"
+    },
+    {
+      "id": "breastTumorMarkerTestResultCa2729",
+      "label": "Breast Tumor Marker Test Result Ca2729"
+    },
+    {
+      "id": "estrogenReceptorStatus",
+      "label": "Estrogen Receptor Status"
+    },
+    {
+      "id": "her2ReceptorStatus",
+      "label": "HER2 Receptor Status"
+    },
+    {
+      "id": "progesteroneReceptorStatus",
+      "label": "Progesterone Receptor Status"
+    },
+    {
+      "id": "labWbcResult",
+      "label": "Lab Wbc Result"
+    },
+    {
+      "id": "labHemoglobinResult",
+      "label": "Lab Hemoglobin Result"
+    },
+    {
+      "id": "labPlateletsResult",
+      "label": "Lab Platelets Result"
+    },
+    {
+      "id": "labCreatinineResult",
+      "label": "Lab Creatinine Result"
+    },
+    {
+      "id": "perl -e 'print \"<IMG SRC=java\\0script:alert(\\\"XSS\\\")>\";' > out\n",
+      "label": "Lab Total Bilirubin Result"
+    },
+    {
+      "id": "testosterone",
+      "label": "Testosterone"
+    }
+  ]
+}

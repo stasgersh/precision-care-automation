@@ -1,0 +1,362 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [
+    {
+      "fullUrl": "Patient/YudaId",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "YudaId",
+        "meta": {
+          "versionId": "76",
+          "lastUpdated": "2025-01-12T01:39:24.585976896Z",
+          "source": "default"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/person_id",
+            "value": "a5d9208e-a574-4b61-a919-b2d70887b5c0"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "Yuda"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1951-01-29"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/YudaId"
+      }
+    },
+    {
+      "fullUrl": "Condition/bbbbb",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "bbbbb",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/model",
+                  "valueString": "gpt-4o"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/apiversion",
+                  "valueString": "2023-12-01-preview"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/status",
+                  "valueString": "failed"
+                }
+              ]
+            },
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/version",
+                  "valueString": "1.0"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/status",
+                  "valueString": "COMPLETED"
+                }
+              ]
+            },
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/model",
+                  "valueString": "gpt-4o"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/apiversion",
+                  "valueString": "2023-12-01-preview"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/status",
+                  "valueString": "success"
+                }
+              ]
+            },
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/version",
+                  "valueString": "1.0"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/status",
+                  "valueString": "COMPLETED"
+                }
+              ]
+            }
+          ],
+          "versionId": "2",
+          "lastUpdated": "2024-10-10T13:53:44.423278527Z",
+          "source": "default"
+        },
+        "extension": [
+          {
+            "url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+            "extension": [
+              {
+                "url": "no_url",
+                "valueString": "Attributes found, but no text found to produce CLP report"
+              }
+            ]
+          },
+          {
+            "url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+            "extension": [
+              {
+                "url": "content[0].attachment.data",
+                "valueString": "{\"message\": \"No Content to Summarize\", \"code\": \"SUM_RES_NO_CONTENT\"}"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+            "value": "70254290"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "C79.52",
+              "display": "Secondary malignant neoplasm of bone marrow"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of bone marrow"
+        },
+        "subject": {
+          "reference": "Patient/aaaaa"
+        },
+        "encounter": {
+          "reference": "Encounter/503b2a49-d6a9-4730-afe4-10ca7f5a1506"
+        },
+        "onsetDateTime": "2019-08-01T08:01:00.000Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/bbbbbbbbbbb"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "DiagnosticReportA",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/model",
+                  "valueString": "gpt-4o"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/apiversion",
+                  "valueString": "2023-12-01-preview"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/status",
+                  "valueString": "success"
+                }
+              ]
+            },
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/version",
+                  "valueString": "1.0"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/status",
+                  "valueString": "COMPLETED"
+                }
+              ]
+            },
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/model",
+                  "valueString": "gpt-4o"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/apiversion",
+                  "valueString": "2023-12-01-preview"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/clp/status",
+                  "valueString": "success"
+                }
+              ]
+            },
+            {
+              "url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+              "extension": [
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/version",
+                  "valueString": "1.0"
+                },
+                {
+                  "url": "https://gehealthcare.com/pdsc/postprocessing/summarization/status",
+                  "valueString": "COMPLETED"
+                }
+              ]
+            }
+          ],
+          "lastUpdated": "2024-08-19T11:23:05.951696391Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+            "extension": [
+              {
+                "url": "presentedForm[0].data",
+                "valueString": "{\n   \"PrimaryCancer\": [\n      {\n         \"Tumor_Description\": null,\n         \"ContrastAgentsUsed\": [\n            {\n               \"Contrast_Agent\": \"non-ionic contrast agent\"\n            }\n         ],\n         \"Primary_Site\": null,\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null,\n         \"Measurements\": [\n            {\n               \"Dimension1\": null,\n               \"Dimension2\": null,\n               \"Dimension3\": null,\n               \"Largest_Dimension\": null,\n               \"Dim_Unit\": null,\n               \"Volume\": null,\n               \"Volume_unit\": null\n            }\n         ]\n      }\n   ],\n   \"Tumors\": [\n      {\n         \"TumorID\": null,\n         \"Tumor_Description\": null,\n         \"Body_Part\": null,\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null,\n         \"Measurements\": [\n            {\n               \"Dimension1\": null,\n               \"Dimension2\": null,\n               \"Dimension3\": null,\n               \"Largest_Dimension\": null,\n               \"Dim_Unit\": null,\n               \"Volume\": null,\n               \"Volume_unit\": null\n            }\n         ]\n      }\n   ],\n   \"LymphNodes\": [\n      {\n         \"LymphNodeID\": null,\n         \"Body_Part\": null,\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null,\n         \"Measurements\": [\n            {\n               \"Dimension1\": null,\n               \"Dimension2\": null,\n               \"Dimension3\": null,\n               \"Dim_Unit\": null,\n               \"Volume\": null,\n               \"Volume_unit\": null\n            }\n         ]\n      }\n   ],\n   \"NormalFinding\": [\n      {\n         \"NormID\": \"1\",\n         \"Body_Part\": \"lungs\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      },\n      {\n         \"NormID\": \"2\",\n         \"Body_Part\": \"liver\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      },\n      {\n         \"NormID\": \"3\",\n         \"Body_Part\": \"spleen\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      },\n      {\n         \"NormID\": \"4\",\n         \"Body_Part\": \"kidneys\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      },\n      {\n         \"NormID\": \"5\",\n         \"Body_Part\": \"pancreas\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      },\n      {\n         \"NormID\": \"6\",\n         \"Body_Part\": \"small bowel\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      },\n      {\n         \"NormID\": \"7\",\n         \"Body_Part\": \"large bowel\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      },\n      {\n         \"NormID\": \"8\",\n         \"Body_Part\": \"pelvis\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null\n      }\n   ],\n   \"OtherBodyParts\": [\n      {\n         \"bodyPartID\": \"1\",\n         \"Body_Part\": \"aorta\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null,\n         \"Measurements\": [\n            {\n               \"Dimension1\": null,\n               \"Dimension2\": null,\n               \"Dimension3\": null,\n               \"Dim_Unit\": null,\n               \"Volume\": null,\n               \"Volume_unit\": null\n            }\n         ]\n      },\n      {\n         \"bodyPartID\": \"2\",\n         \"Body_Part\": \"pulmonary arteries\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null,\n         \"Measurements\": [\n            {\n               \"Dimension1\": null,\n               \"Dimension2\": null,\n               \"Dimension3\": null,\n               \"Dim_Unit\": null,\n               \"Volume\": null,\n               \"Volume_unit\": null\n            }\n         ]\n      },\n      {\n         \"bodyPartID\": \"3\",\n         \"Body_Part\": \"renal arteries\",\n         \"Anatomical_Descriptor\": null,\n         \"Direction\": null,\n         \"Measurements\": [\n            {\n               \"Dimension1\": null,\n               \"Dimension2\": null,\n               \"Dimension3\": null,\n               \"Dim_Unit\": null,\n               \"Volume\": null,\n               \"Volume_unit\": null\n            }\n         ]\n      }\n   ],\n   \"CancerTreatment\": [\n      {\n         \"Treatment_Type\": null,\n         \"Cancer_Treatment_Response\": null,\n         \"Treatment_Response_Evidence\": null\n      }\n   ]\n}"
+              }
+            ]
+          },
+          {
+            "url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+            "extension": [
+              {
+                "url": "content[0].attachment.data",
+                "valueString": "{\"sourceChecksum\": \"6eb5eac876a41e501e7f2c7c7b7160754f1c5b0e9de62d76f37a000c07d6eced\", \"levels\": {\"l1\": {\"summaryText\": \"No evidence of pulmonary embolism or abdominal pathology.\", \"generatedTime\": \"2024-09-30 14:13:15.924374\", \"metadata\": {\"model\": \"gpt-4o\", \"modelVersion\": \"2023-12-01-preview\", \"promptId\": \"ONCO_RES_SUMMARY_L1_PROMPT\", \"promptVersion\": \"1\"}}, \"l2\": {\"summaryText\": \"The patient underwent a CT Thorax Abdomen Pelvis with Contrast due to symptoms of chest pain and shortness of breath. The CT scan showed no evidence of pulmonary embolism, pneumonia, or any abdominal pathology. The lungs were clear, and the liver, spleen, kidneys, pancreas, small bowel, and large bowel were all normal. The pelvis also showed no abnormalities. Contrast enhancement improved visualization of vascular structures, with no thrombus or embolus detected in the pulmonary arteries. The impression is that the patient's symptoms are not due to pulmonary embolism, pneumonia, or abdominal issues, suggesting the need for further evaluation to determine the underlying cause. Recommendations include continued evaluation and possibly further imaging studies like a ventilation-perfusion scan or pulmonary function test.\", \"generatedTime\": \"2024-09-30 14:13:15.924374\", \"metadata\": {\"model\": \"gpt-4o\", \"modelVersion\": \"2023-12-01-preview\", \"promptId\": \"ONCO_RES_SUMMARY_L2_PROMPT\", \"promptVersion\": \"1\"}}}}"
+              }
+            ]
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433761009",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        },
+        "subject": {
+          "reference": "Patient/YudaId"
+        },
+        "effectiveDateTime": "2011-09-28",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Q1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3QKCkluZGljYXRpb246IFRoZSBwYXRpZW50IHByZXNlbnRlZCB3aXRoIHN5bXB0b21zIG9mIGNoZXN0IHBhaW4gYW5kIHNob3J0bmVzcyBvZiBicmVhdGguIEEgQ1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3Qgd2FzIG9yZGVyZWQgdG8gZXZhbHVhdGUgZm9yIHBvc3NpYmxlIHB1bG1vbmFyeSBlbWJvbGlzbSwgcG5ldW1vbmlhLCBhbmQvb3IgYWJkb21pbmFsIHBhdGhvbG9neS4KClByb2NlZHVyZTogVGhlIHBhdGllbnQgd2FzIGFkbWluaXN0ZXJlZCAxMjAgbUwgb2Ygbm9uLWlvbmljIGNvbnRyYXN0IGFnZW50IGludHJhdmVub3VzbHkgYW5kIHVuZGVyd2VudCBhIENUIHNjYW4gb2YgdGhlIHRob3JheCwgYWJkb21lbiwgYW5kIHBlbHZpcyB1c2luZyBhIDY0LXNsaWNlIENUIHNjYW5uZXIuCgpGaW5kaW5nczoKClRoZSBDVCBzY2FuIHJldmVhbGVkIHRoZSBmb2xsb3dpbmcgZmluZGluZ3M6CgpUaGUgdGhvcmF4OiBObyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20gb3IgcG5ldW1vbmlhIHdhcyBzZWVuLiBUaGUgbHVuZ3Mgd2VyZSBjbGVhciwgd2l0aCBubyBldmlkZW5jZSBvZiBjb25zb2xpZGF0aW9uIG9yIGVmZnVzaW9uLgpUaGUgYWJkb21lbjogVGhlIGxpdmVyLCBzcGxlZW4sIGFuZCBraWRuZXlzIHdlcmUgbm9ybWFsIGluIHNpemUgYW5kIHNoYXBlLiBUaGUgcGFuY3JlYXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBwYW5jcmVhdGl0aXMgb3IgcGFuY3JlYXRpYyBtYXNzLiBUaGUgc21hbGwgYm93ZWwgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvYnN0cnVjdGlvbiBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4gVGhlIGxhcmdlIGJvd2VsIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgZGl2ZXJ0aWN1bGl0aXMgb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuClRoZSBwZWx2aXM6IFRoZSBwZWx2aXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBmcmFjdHVyZSBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4KQ29udHJhc3QgRW5oYW5jZW1lbnQ6CgpUaGUgY29udHJhc3QgYWdlbnQgZW5oYW5jZWQgdGhlIHZpc3VhbGl6YXRpb24gb2YgdGhlIHZhc2N1bGFyIHN0cnVjdHVyZXMsIGluY2x1ZGluZyB0aGUgYW9ydGEsIHB1bG1vbmFyeSBhcnRlcmllcywgYW5kIHJlbmFsIGFydGVyaWVzLiBObyBldmlkZW5jZSBvZiB0aHJvbWJ1cyBvciBlbWJvbHVzIHdhcyBzZWVuIGluIHRoZSBwdWxtb25hcnkgYXJ0ZXJpZXMuCgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIENUIFRob3JheCBBYmRvbWVuIFBlbHZpcyB3aXRoIENvbnRyYXN0LCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBubyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20sIHBuZXVtb25pYSwgb3IgYWJkb21pbmFsIHBhdGhvbG9neS4gVGhlIHBhdGllbnQncyBzeW1wdG9tcyBhcmUgbGlrZWx5IGR1ZSB0byBhbm90aGVyIGNhdXNlLCBhbmQgZnVydGhlciBldmFsdWF0aW9uIGlzIG5lZWRlZCB0byBkZXRlcm1pbmUgdGhlIHVuZGVybHlpbmcgZGlhZ25vc2lzLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIG1hbmFnZW1lbnQgYXMgZGlyZWN0ZWQgYnkgdGhlIHBhdGllbnQncyBwcmltYXJ5IGNhcmUgcGh5c2ljaWFuLgpDb25zaWRlciBmdXJ0aGVyIGltYWdpbmcgc3R1ZGllcywgc3VjaCBhcyBhIHZlbnRpbGF0aW9uLXBlcmZ1c2lvbiBzY2FuIG9yIGEgcHVsbW9uYXJ5IGZ1bmN0aW9uIHRlc3QsIHRvIGZ1cnRoZXIgZXZhbHVhdGUgZm9yIHB1bG1vbmFyeSBlbWJvbGlzbS4KU2lnbmF0dXJlOgoKRHIgWSBY"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/DiagnosticReportA"
+      }
+    }
+  ]
+}

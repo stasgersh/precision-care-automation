@@ -1,0 +1,45 @@
+{
+  "name": "tnm-staging-method-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "tnm-staging-method-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "444256004",
+              "display": "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+            },
+            {
+              "code": "443830009",
+              "display": "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+            },
+            {
+              "code": "897275008",
+              "display": "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition tumor staging system"
+            },
+            {
+              "code": "1269566009",
+              "display": "American Joint Commission on Cancer, Cancer Staging Manual, 9th version neoplasm staging system"
+            }
+          ]
+        },
+        {
+          "system": "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+          "concept": [
+            {
+              "code": "USCRS-34955",
+              "display": "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
+            },
+            {
+              "code": "USCRS-34956",
+              "display": "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

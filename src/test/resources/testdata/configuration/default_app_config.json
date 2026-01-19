@@ -1,0 +1,39 @@
+{
+  "patientIdentifier": {
+    "displayName": "MRN",
+    "type": {
+      "code": "MR",
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+    },
+    "system": "urn:oid:1.2.840.114350.1.13.0.1.7.5.737384.14"
+  },
+  "defaultPreset": "oncology.default",
+  "cacheConfig": {
+    "cacheTtlSeconds": 43200,
+    "proactiveCacheEnabled": false,
+    "cacheOptimizationMode": "cost",
+    "patientSummaryCacheDisabled": false,
+    "treatmentAdherenceCacheDisabled": false,
+    "fulfillmentCacheDisabled": false,
+    "statusTtlSeconds": 1800,
+    "timelineRepresentationCacheDisabled": false,
+    "eligibilityCacheDisabled": false
+  },
+  "dicomViewerUrl": "https://d16vr74iv12cb5.cloudfront.net/stone-webviewer/index.html?study={acsn}",
+  "ffQueryRetryConfig": {
+    "sizeMultiplier": 0.5,
+    "errorStatusCodes": [
+      502
+    ],
+    "maxRetryCount": 3,
+    "defaultPageSize": 100
+  },
+  "nameDisplay": {
+    "usePriority": [
+      "usual",
+      "official"
+    ],
+    "includePrefix": true,
+    "textFirst": false
+  }
+}

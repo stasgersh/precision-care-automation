@@ -1,0 +1,6336 @@
+{
+  "id": "timeline.onco.extended",
+  "items": [
+    {
+      "group": "biomarkers",
+      "sources": "$.genomicMarkerTestResults[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        }
+      ]
+    },
+    {
+      "group": "biomarkers",
+      "sources": "$.prostateTumorMarkerTestResults[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "trendKey",
+          "value": {
+            "string": "{{!type}}|{{subtype}}|{{!trendKey}}",
+            "params": {
+              "type": {
+                "path": "$.type"
+              },
+              "subtype": {
+                "path": "$.subtypes[0]"
+              },
+              "trendKey": {
+                "path": "$.attributes.trendKey"
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "biomarkers",
+      "sources": "$.breastTumorMarkerTestResults[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "trendKey",
+          "value": {
+            "string": "{{!type}}|{{subtype}}|{{!trendKey}}",
+            "params": {
+              "type": {
+                "path": "$.type"
+              },
+              "subtype": {
+                "path": "$.subtypes[0]"
+              },
+              "trendKey": {
+                "path": "$.attributes.trendKey"
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "biomarkers",
+      "sources": "$.breastReceptorTumorMarkerTestResult[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "trendKey",
+          "value": {
+            "string": "{{!type}}|{{subtype}}|{{!trendKey}}",
+            "params": {
+              "type": {
+                "path": "$.type"
+              },
+              "subtype": {
+                "path": "$.subtypes[0]"
+              },
+              "trendKey": {
+                "path": "$.attributes.trendKey"
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "biomarkers",
+      "sources": "$.testosterones[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "trendKey",
+          "value": {
+            "string": "{{!type}}|{{subtype}}|{{!trendKey}}",
+            "params": {
+              "type": {
+                "path": "$.type"
+              },
+              "subtype": {
+                "path": "$.subtypes[0]"
+              },
+              "trendKey": {
+                "path": "$.attributes.trendKey"
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "biomarkers",
+      "sources": "$.immunologyMarkerTestResults[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        }
+      ]
+    },
+    {
+      "group": "biomarkers",
+      "sources": "$.generalTumorMarkerTestResults[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "trendKey",
+          "value": {
+            "string": "{{!type}}|{{subtype}}|{{!trendKey}}",
+            "params": {
+              "type": {
+                "path": "$.type"
+              },
+              "subtype": {
+                "path": "$.subtypes[0]"
+              },
+              "trendKey": {
+                "path": "$.attributes.trendKey"
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "biomarkers",
+      "sources": "$.genomicReports[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "path": "$.attributes.conclusionCode",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l1"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Conclusion"
+          },
+          "value": {
+            "path": "$.attributes.conclusion"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Results interpreter"
+          },
+          "value": {
+            "path": "$.attributes.resultsInterpreter"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "key": {
+            "string": "Results"
+          },
+          "value": {
+            "path": "$.attributes.results[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Test",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Gene name",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.gene",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Outcome",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.outcome"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.oncologyOutpatientNotes[*]",
+      "elements": [
+        [
+          {
+            "type": "text",
+            "value": {
+              "path": "$.attributes.encounterDisplay"
+            },
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l1"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Document Status"
+          },
+          "value": {
+            "path": "$.attributes.docStatus"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "key": {
+            "string": "Provider Type"
+          },
+          "value": {
+            "path": "$.attributes.providerType[*].valueCodeableConcept",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.oncologyMDTReports[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l1"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.docStatus"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.dischargeSummaryNotes[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l1"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.docStatus"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "key": {
+            "string": "Reason"
+          },
+          "value": {
+            "path": "$.attributes.encounter[*].reason[*]",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Diagnosis"
+          },
+          "value": {
+            "path": "$.attributes.encounter[*].diagnosis[*]",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Disposition"
+          },
+          "value": {
+            "path": "$.attributes.dischargeDisposition",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.erVisits[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.serviceType",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.type",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.class",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codingText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "key": {
+            "string": "Chief complaint"
+          },
+          "value": {
+            "path": "$.attributes.reason",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Diagnosis"
+          },
+          "value": {
+            "path": "$.attributes.diagnosis",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Discharged"
+          },
+          "value": {
+            "path": "$.attributes.dischargeDisposition"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.oncologyVisit[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.serviceType",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.type",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.class",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codingText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "key": {
+            "string": "Chief complaint"
+          },
+          "value": {
+            "path": "$.attributes.reason",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Diagnosis"
+          },
+          "value": {
+            "path": "$.attributes.diagnosis",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Discharged"
+          },
+          "value": {
+            "path": "$.attributes.dischargeDisposition"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.oncologyVisitRequest[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.category",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.painAssessments[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "trendKey",
+          "value": {
+            "string": "{{!type}}|{{subtype}}|{{!trendKey}}",
+            "params": {
+              "type": {
+                "path": "$.type"
+              },
+              "subtype": {
+                "path": "$.subtypes[0]"
+              },
+              "trendKey": {
+                "path": "$.attributes.trendKey"
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "encounters",
+      "sources": "$.weights[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.value"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "trendKey",
+          "value": {
+            "string": "{{!type}}|{{subtype}}|{{!trendKey}}",
+            "params": {
+              "type": {
+                "path": "$.type"
+              },
+              "subtype": {
+                "path": "$.subtypes[0]"
+              },
+              "trendKey": {
+                "path": "$.attributes.trendKey"
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatmentAndPlan",
+      "sources": "$.chemoMedications[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "icon": {
+              "string": "ico-intra-van"
+            },
+            "paletteColor": {
+              "string": "5"
+            },
+            "message": {
+              "path": "$.attributes.cycle"
+            }
+          },
+          "type": "indicator",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "icon": {
+              "string": "ico-minus-plus"
+            },
+            "paletteColor": {
+              "string": "11"
+            },
+            "message": {
+              "path": "$.attributes.doseChange"
+            }
+          },
+          "type": "indicator",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Drug"
+          },
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Dosage"
+          },
+          "value": {
+            "path": "$.attributes.dosage[*]",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "orderedDosageText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "icon": {
+              "string": "ico-minus-plus"
+            },
+            "paletteColor": {
+              "string": "11"
+            },
+            "message": {
+              "path": "$.attributes.doseChange"
+            }
+          },
+          "type": "indicator",
+          "meta": {
+            "levelOfDetail": 2,
+            "append": true
+          }
+        },
+        {
+          "key": {
+            "string": "Route"
+          },
+          "value": {
+            "path": "$.attributes.dosage[0].route",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Intent"
+          },
+          "value": {
+            "path": "$.attributes.intent"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "icon": "ico-export",
+            "label": {
+              "string": "View all medications"
+            },
+            "url": {
+              "string": "/medical-history#medications"
+            },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "group": "treatmentAndPlan",
+      "sources": "$.surgicalProcedures[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Outcome"
+          },
+          "value": {
+            "path": "$.attributes.outcome",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Note"
+          },
+          "value": {
+            "path": "$.attributes.note[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Text",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.text"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Time",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.time"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Author",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.author"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatmentAndPlan",
+      "sources": "$.radiotherapyProcedures[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Outcome"
+          },
+          "value": {
+            "path": "$.attributes.outcome",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Note"
+          },
+          "value": {
+            "path": "$.attributes.note[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Text",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.text"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Time",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.time"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Author",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.author"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatmentAndPlan",
+      "sources": "$.radiotherapyCourseSummaries[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Site of therapy"
+          },
+          "value": {
+            "path": "$.attributes.bodySite",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Number of sessions"
+          },
+          "value": {
+            "path": "$.attributes.numberOfSessions"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Phases"
+          },
+          "value": {
+            "path": "$.attributes.phases.length"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Modalities"
+          },
+          "value": {
+            "path": "$.attributes.modalities",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "type": "table",
+          "value": {
+            "path": "$.attributes.phases",
+            "config": {
+              "cells": [
+                {
+                  "header": "Body Site",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.bodyStructure.description"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Fractions",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.numberOfFractions"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Dose Delivered",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.totalDose",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "quantityText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Start of therapy"
+          },
+          "value": {
+            "path": "$.attributes.performedPeriod.start"
+          },
+          "type": "datetime",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "End of therapy"
+          },
+          "value": {
+            "path": "$.attributes.performedPeriod.end"
+          },
+          "type": "datetime",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatmentAndPlan",
+      "sources": "$.radiotherapySummaryNotes[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l1"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.docStatus"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "pathology",
+      "sources": "$.pathologyReports[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "path": "$.attributes.conclusionCode",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l1"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Conclusion"
+          },
+          "value": {
+            "path": "$.attributes.conclusion"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Results interpreter"
+          },
+          "value": {
+            "path": "$.attributes.resultsInterpreter"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Thumbnail"
+          },
+          "value": {
+            "path": "$.attributes.mediaImageContent"
+          },
+          "type": "image",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Status reason"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].statusReason",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Reason"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].reason",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Performer"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].performer[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Function",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.function"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Actor",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.actor"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Body site"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].bodySite[*]",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Note"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].note[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Text",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.text"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Time",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.time"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Author",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.author"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "pathology",
+      "sources": "$.labReports[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "path": "$.attributes.conclusionCode",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Conclusion"
+          },
+          "value": {
+            "path": "$.attributes.conclusion"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "type": "fishbone",
+            "subType": "7-cells",
+            "key": {
+              "string": "Chemistry"
+            },
+            "meta": {
+              "levelOfDetail": 2
+            },
+            "value": {
+              "date": {
+                "path": "$.date"
+              },
+              "path": "$.attributes.results[?(@root.subtypes && @root.subtypes.includes('chemistry-panel'))]",
+              "config": {
+                "segments": {
+                  "s1": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "2951-2"
+                                }
+                              ]
+                            },
+                            {
+                              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+                              "concept": [
+                                {
+                                  "code": "1534098"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "Na"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labSodiumResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s2": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "2075-0"
+                                }
+                              ]
+                            },
+                            {
+                              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+                              "concept": [
+                                {
+                                  "code": "1534101"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "Cl"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labChlorideResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s3": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "3094-0"
+                                }
+                              ]
+                            },
+                            {
+                              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+                              "concept": [
+                                {
+                                  "code": "1526068"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "BUN"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labBunResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s4": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "2345-7"
+                                }
+                              ]
+                            },
+                            {
+                              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+                              "concept": [
+                                {
+                                  "code": "1510655"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "Glu"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labGlucoseResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s5": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "38483-4"
+                                },
+                                {
+                                  "code": "59826-8"
+                                },
+                                {
+                                  "code": "21232-4"
+                                },
+                                {
+                                  "code": "2160-0"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "Cr"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labCreatinineResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s6": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "2028-9"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "CO₂"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labCo2Result|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s7": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "2823-3"
+                                }
+                              ]
+                            },
+                            {
+                              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+                              "concept": [
+                                {
+                                  "code": "1534081"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "K"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labPotassiumResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "fishbone",
+            "subType": "4-cells",
+            "key": {
+              "string": "Hematology"
+            },
+            "meta": {
+              "levelOfDetail": 2
+            },
+            "value": {
+              "date": {
+                "path": "$.date"
+              },
+              "path": "$.attributes.results[?(@root.subtypes && @root.subtypes.includes('hematology-panel'))]",
+              "config": {
+                "segments": {
+                  "s1": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "26464-8"
+                                },
+                                {
+                                  "code": "49498-9"
+                                },
+                                {
+                                  "code": "6690-2"
+                                },
+                                {
+                                  "code": "804-5"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "WBC"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labWbcResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s2": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "59260-0"
+                                },
+                                {
+                                  "code": "718-7"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "Hb"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labHemoglobinResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s3": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "26515-7"
+                                },
+                                {
+                                  "code": "49497-1"
+                                },
+                                {
+                                  "code": "5907-1"
+                                },
+                                {
+                                  "code": "777-3"
+                                },
+                                {
+                                  "code": "778-1"
+                                },
+                                {
+                                  "code": "97995-5"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "Plt"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labPlateletsResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "s4": {
+                    "filter": {
+                      "type": "terminology",
+                      "conditions": [
+                        {
+                          "path": "$.code.coding",
+                          "includeInline": [
+                            {
+                              "system": "http://loinc.org",
+                              "concept": [
+                                {
+                                  "code": "4544-3"
+                                }
+                              ]
+                            },
+                            {
+                              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+                              "concept": [
+                                {
+                                  "code": "1552602"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "value": {
+                      "path": "$.value"
+                    },
+                    "unit": {
+                      "path": "$.unit"
+                    },
+                    "name": {
+                      "path": "$.code",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    },
+                    "shortName": {
+                      "string": "HCT"
+                    },
+                    "referenceRange": {
+                      "path": "$"
+                    },
+                    "trendKey": {
+                      "string": "labResult|labHematocritResult|{{!trendKey}}",
+                      "params": {
+                        "trendKey": {
+                          "path": "$.trendKey"
+                        }
+                      }
+                    },
+                    "interpretation": {
+                      "path": "$.interpretation",
+                      "postProcessing": [
+                        {
+                          "processor": {
+                            "name": "terminologyFilter",
+                            "args": {
+                              "filter": {
+                                "type": "terminology",
+                                "conditions": [
+                                  {
+                                    "path": "$",
+                                    "excludeInline": [
+                                      {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                                        "concept": [
+                                          {
+                                            "code": "N"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "key": {
+              "string": "Results"
+            },
+            "value": {
+              "path": "$.attributes.results[*]",
+              "config": {
+                "highlightFilters": [
+                  {
+                    "type": "terminology",
+                    "conditions": [
+                      {
+                        "path": "$.interpretation",
+                        "exclude": "negative-result-interpretation-vs"
+                      }
+                    ]
+                  }
+                ],
+                "row": {
+                  "showHighlight": true
+                },
+                "cells": [
+                  {
+                    "header": "Test name",
+                    "showHighlight": true,
+                    "elements": [
+                      {
+                        "value": {
+                          "path": "$.code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "header": "Result",
+                    "showHighlight": true,
+                    "elements": [
+                      {
+                        "value": {
+                          "path": "$.value"
+                        },
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "header": "Unit",
+                    "showHighlight": true,
+                    "elements": [
+                      {
+                        "value": {
+                          "path": "$.unit"
+                        },
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "header": "Flag",
+                    "showHighlight": true,
+                    "elements": [
+                      {
+                        "value": {
+                          "path": "$.interpretation",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  {
+                    "header": "Reference range",
+                    "showHighlight": false,
+                    "elements": [
+                      {
+                        "value": {
+                          "path": "$.referenceRange",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "observationReferenceRangeText"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "type": "table",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "radiology",
+      "sources": "$.imagingReports[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "value": {
+            "path": "$.attributes.conclusionCode",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l1"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "key": {
+            "string": "Conclusion"
+          },
+          "value": {
+            "path": "$.attributes.conclusion"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Results interpreter"
+          },
+          "value": {
+            "path": "$.attributes.resultsInterpreter"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        [
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.author[*].name[*]",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "humanName"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          },
+          {
+            "key": {
+              "string": "Author"
+            },
+            "value": {
+              "path": "$.attributes.organization[*].name"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 2
+            }
+          }
+        ],
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "icon": "ico-notes",
+            "label": {
+              "string": "Open complete report"
+            },
+            "target": "internal",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.url",
+            "elements": {
+              "value": {
+                "label": {
+                  "string": "Open external content"
+                },
+                "url": {
+                  "path": "$"
+                },
+                "target": "external"
+              },
+              "type": "link",
+              "meta": {
+                "levelOfDetail": 2
+              }
+            }
+          },
+          "type": "array"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^(?!(^text\\/(html|plain)))/))]"
+          },
+          "value": {
+            "target": "download",
+            "label": {
+              "string": "Download report"
+            },
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportDownloadable.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            }
+          },
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "icon": "ico-ct",
+            "label": {
+              "string": "Open images"
+            },
+            "url": {
+              "string": "{{url}}",
+              "params": {
+                "url": [
+                  {
+                    "path": "$.attributes.imagingStudy[0].identifier",
+                    "postProcessing": [
+                      {
+                        "processor": {
+                          "name": "dicomViewerUrl",
+                          "args": {
+                            "imagingParameters": [
+                              {
+                                "name": "acsn",
+                                "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "$.attributes.identifier",
+                    "postProcessing": [
+                      {
+                        "processor": {
+                          "name": "dicomViewerUrl",
+                          "args": {
+                            "imagingParameters": [
+                              {
+                                "name": "acsn",
+                                "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "target": "iFrame"
+          },
+          "type": "link",
+          "meta": {
+            "levelOfDetail": 2,
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": "$.date"
+                    }
+                  }
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        },
+        {
+          "key": {
+            "string": "Status reason"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].statusReason",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Reason"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].reason",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Performer"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].performer[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Function",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.function"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Actor",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.actor"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Body site"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].bodySite[*]",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Note"
+          },
+          "value": {
+            "path": "$.attributes.context.procedure[*].note[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Text",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.text"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Time",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.time"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Author",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.author"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "radiology",
+      "sources": "$.imagingStudy[*]",
+      "elements": [
+        [
+          {
+            "value": {
+              "path": "$.attributes.code.text"
+            },
+            "type": "text",
+            "meta": {
+              "levelOfDetail": 1
+            }
+          }
+        ],
+        {
+          "key": {
+            "string": "Status"
+          },
+          "value": {
+            "path": "$.attributes.status"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Note"
+          },
+          "value": {
+            "path": "$.attributes.note[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "Text",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.text"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Time",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.time"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "Author",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.author"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    },
+    {
+      "group": "fallbackGroup",
+      "sources": "$.uncategorized[*]",
+      "elements": [
+        {
+          "value": {
+            "path": "$.attributes.code",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.attributes.type",
+            "postProcessing": [
+              {
+                "processor": {
+                  "name": "codeableConceptText"
+                }
+              }
+            ]
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "value": {
+            "path": "$.resourceTrace.rootResource"
+          },
+          "type": "text",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "value": {
+            "path": "$.class",
+            "config": {
+              "cells": [
+                {
+                  "header": "system",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.system"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "code",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.code"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "display",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.display"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Code"
+          },
+          "value": {
+            "path": "$.attributes.code.coding[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "system",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.system"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "code",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.code"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "display",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.display"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Category"
+          },
+          "value": {
+            "path": "$.attributes.category.coding[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "system",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.system"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "code",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.code"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "display",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.display"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        },
+        {
+          "key": {
+            "string": "Type"
+          },
+          "value": {
+            "path": "$.attributes.type.coding[*]",
+            "config": {
+              "cells": [
+                {
+                  "header": "system",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.system"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "code",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.code"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "header": "display",
+                  "elements": [
+                    {
+                      "value": {
+                        "path": "$.display"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2
+          }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "id": "biomarkers",
+      "label": "Biomarkers"
+    },
+    {
+      "id": "radiology",
+      "label": "Imaging"
+    },
+    {
+      "id": "encounters",
+      "label": "Encounters"
+    },
+    {
+      "id": "fallbackGroup",
+      "label": "Miscellaneous"
+    },
+    {
+      "id": "treatmentAndPlan",
+      "label": "Therapy strategy"
+    }
+  ]
+}

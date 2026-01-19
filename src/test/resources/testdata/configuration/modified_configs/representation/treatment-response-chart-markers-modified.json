@@ -1,0 +1,256 @@
+{
+  "id": "treatmentResponseChartMarkers.onco.general",
+  "items": [
+    {
+      "group": "vertical-marker",
+      "elements": [
+        {
+          "key": { "constant": "marker" },
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "A"
+            },
+            "paletteColor": {
+              "constant": "dataviz-aqua-200"
+            }
+          }
+        },
+        {
+          "key": { "constant": "date" },
+          "value": { "path": "$.imagingReportA.date" },
+          "type": "datetime"
+        },
+        {
+          "value": { "path": "$.imagingReportA.date" },
+          "type": "datetime"
+        },
+        {
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "A"
+            },
+            "paletteColor": {
+              "constant": "dataviz-aqua-200"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "vertical-marker",
+      "elements": [
+        {
+          "key": { "constant": "marker" },
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "B"
+            },
+            "paletteColor": {
+              "constant": "dataviz-dt-orange-200"
+            }
+          }
+        },
+        {
+          "key": { "constant": "date" },
+          "value": { "path": "$.imagingReportB.date" },
+          "type": "datetime"
+        },
+        {
+          "value": { "path": "$.imagingReportB.date" },
+          "type": "datetime"
+        },
+        {
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "B"
+            },
+            "paletteColor": {
+              "constant": "dataviz-dt-orange-200"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "vertical-marker",
+      "elements": [
+        {
+          "key": { "constant": "marker" },
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "ico-intra-van"
+            },
+            "paletteColor": {
+              "constant": "19"
+            }
+          }
+        },
+        {
+          "key": { "constant": "date" },
+          "type": "datetime",
+          "value": { "path": "$.systemicTherapies[0].date" }
+        },
+        {
+          "type": "datetime",
+          "value": { "path": "$.systemicTherapies[0].date" },
+          "dependsOn": {
+            "path": "$.systemicTherapies[0].attributes.regimen.period.start",
+            "inverse": true
+          }
+        },
+        {
+          "type": "twoColumn",
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": { "constant": "Start of therapy: " }
+            },
+            "rightColumn": {
+              "type": "datetime",
+              "value": {
+                "path": "$.systemicTherapies[0].attributes.regimen.period.start"
+              }
+            }
+          }
+        },
+        {
+          "type": "twoColumn",
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": { "constant": "End of therapy: " }
+            },
+            "rightColumn": {
+              "type": "datetime",
+              "value": { "path": "$.systemicTherapies[0].attributes.regimen.period.end" }
+            }
+          }
+        },
+        {
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "ico-intra-van"
+            },
+            "paletteColor": {
+              "constant": "19"
+            },
+            "message": {
+              "constant": "Systemic Tx"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "vertical-marker",
+      "elements": [
+        {
+          "key": { "constant": "marker" },
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "ico-radiation"
+            },
+            "paletteColor": {
+              "constant": "17"
+            }
+          }
+        },
+        {
+          "key": { "constant": "date" },
+          "type": "datetime",
+          "value": { "path": "$.mostRecentRadiotherapyProcedure[0].date" }
+        },
+        {
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": { "constant": "Therapy start:" }
+            },
+            "rightColumn": {
+              "value": { "path": "$.leastRecentRadiotherapyProcedure[0].date" },
+              "type": "datetime"
+            }
+          },
+          "type": "twoColumn"
+        },
+        {
+          "key": { "constant": "endDate" },
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": { "constant": "Newest therapy:" }
+            },
+            "rightColumn": {
+              "value": { "path": "$.mostRecentRadiotherapyProcedure[0].date" },
+              "type": "datetime"
+            }
+          },
+          "type": "twoColumn"
+        },
+        {
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "ico-radiation"
+            },
+            "paletteColor": {
+              "constant": "17"
+            },
+            "message": {
+              "constant": "Radiation"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sources": "$.surgicalProcedures[*]",
+      "group": "vertical-marker",
+      "elements": [
+        {
+          "key": { "constant": "marker" },
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "ico-scalpel"
+            },
+            "paletteColor": {
+              "constant": "18"
+            }
+          }
+        },
+        {
+          "key": { "constant": "date" },
+          "value": { "path": "$.date" },
+          "type": "datetime"
+        },
+        {
+          "value": { "path": "$.date" },
+          "type": "datetime"
+        },
+        {
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "ico-scalpel"
+            },
+            "paletteColor": {
+              "constant": "18"
+            },
+            "message": {
+              "constant": "Surgery"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "layout": []
+}

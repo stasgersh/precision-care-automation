@@ -1,0 +1,8 @@
+{
+  "epicClientId": "EPIC_CLIENT_ID",
+  "epicClientSecret": "EPIC_CLIENT_SECRET",
+  "allowedIssuers": [
+    "EPIC_ISSUER"
+  ],
+  "idamOrganizationEndpoint": "IDAM_ORG_ENDPOINT"
+}

@@ -1,0 +1,233 @@
+{
+  "name": "immunology-tumor-marker-test-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "immunology-tumor-marker-test-vs",
+    "description": "Immunology tumor marker set. LOINC: curated subset of the mCODE tumor marker test valueset (http://hl7.org/fhir/us/mcode/ValueSet-mcode-tumor-marker-test-vs.html)",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "62320-7",
+              "display": "T-cell receptor excision circle [#/volume] in DBS by NAA with probe detection"
+            },
+            {
+              "code": "92006-6",
+              "display": "T-cell receptor excision circle [Cycle Threshold #] in DBS"
+            },
+            {
+              "code": "92007-4",
+              "display": "T-cell receptor excision circle [Z-score] in DBS"
+            },
+            {
+              "code": "92008-2",
+              "display": "T-cell receptor excision circle [Multiple of the median] in DBS"
+            },
+            {
+              "code": "21015-3",
+              "display": "CD33 cells [#/volume] in Blood"
+            },
+            {
+              "code": "74837-6",
+              "display": "CD20 cells [#/volume] in Specimen"
+            },
+            {
+              "code": "9558-8",
+              "display": "CD20 cells [#/volume] in Blood"
+            },
+            {
+              "code": "21013-8",
+              "display": "CD22 cells [#/volume] in Blood"
+            },
+            {
+              "code": "80717-2",
+              "display": "B-cell CD27 and IgD subsets panel - Blood"
+            },
+            {
+              "code": "10432-3",
+              "display": "CD30 Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "14967-4",
+              "display": "CD33 Abnormal blood cells/Abnormal blood cells.total in Blood"
+            },
+            {
+              "code": "20601-1",
+              "display": "CD33 cells/100 cells in Unspecified specimen"
+            },
+            {
+              "code": "51155-0",
+              "display": "CD33 blasts/100 blasts in Bone marrow"
+            },
+            {
+              "code": "51156-8",
+              "display": "CD33 blasts/100 blasts in Unspecified specimen"
+            },
+            {
+              "code": "51157-6",
+              "display": "CD33 blasts [Units/volume] in Bone marrow"
+            },
+            {
+              "code": "51158-4",
+              "display": "CD33 blasts [Units/volume] in Blood"
+            },
+            {
+              "code": "51159-2",
+              "display": "CD33 blasts [Units/volume] in Unspecified specimen"
+            },
+            {
+              "code": "51291-3",
+              "display": "CD33 cells/100 cells in Tissue"
+            },
+            {
+              "code": "51292-1",
+              "display": "CD33 cells/100 cells in Cerebral spinal fluid"
+            },
+            {
+              "code": "51293-9",
+              "display": "CD33 cells/100 cells in Bone marrow"
+            },
+            {
+              "code": "51294-7",
+              "display": "CD33 cells/100 cells in Body fluid"
+            },
+            {
+              "code": "8102-6",
+              "display": "CD33 cells/100 cells in Blood"
+            },
+            {
+              "code": "10438-0",
+              "display": "CD20 Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "13842-0",
+              "display": "CD20 blasts/100 blasts in Blood"
+            },
+            {
+              "code": "14966-6",
+              "display": "CD20 Abnormal blood cells/Abnormal blood cells.total in Blood"
+            },
+            {
+              "code": "20595-5",
+              "display": "CD20 cells/100 cells in Unspecified specimen"
+            },
+            {
+              "code": "51115-4",
+              "display": "CD20 blasts/100 blasts in Bone marrow"
+            },
+            {
+              "code": "51116-2",
+              "display": "CD20 blasts/100 blasts in Unspecified specimen"
+            },
+            {
+              "code": "57418-6",
+              "display": "CD20 cells/100 cells in Body fluid"
+            },
+            {
+              "code": "8119-0",
+              "display": "CD20 cells/100 cells in Blood"
+            },
+            {
+              "code": "29596-4",
+              "display": "CD25 Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "14017-8",
+              "display": "CD22 cells/100 cells in Blood"
+            },
+            {
+              "code": "20596-3",
+              "display": "CD22 cells/100 cells in Unspecified specimen"
+            },
+            {
+              "code": "42875-5",
+              "display": "CD22 cells/100 cells in Body fluid"
+            },
+            {
+              "code": "51124-6",
+              "display": "CD22 blasts/100 blasts in Bone marrow"
+            },
+            {
+              "code": "51125-3",
+              "display": "CD22 blasts/100 blasts in Blood"
+            },
+            {
+              "code": "51126-1",
+              "display": "CD22 blasts/100 blasts in Unspecified specimen"
+            },
+            {
+              "code": "51127-9",
+              "display": "CD22 blasts [Units/volume] in Bone marrow"
+            },
+            {
+              "code": "51128-7",
+              "display": "CD22 blasts [Units/volume] in Blood"
+            },
+            {
+              "code": "51129-5",
+              "display": "CD22 blasts [Units/volume] in Unspecified specimen"
+            },
+            {
+              "code": "40552-2",
+              "display": "CD117 Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "51183-2",
+              "display": "CD117 Ag [Presence] in Bone marrow by Immune stain"
+            },
+            {
+              "code": "51184-0",
+              "display": "CD117 Ag [Presence] in Blood by Immune stain"
+            },
+            {
+              "code": "51185-7",
+              "display": "CD117 Ag [Presence] in Unspecified specimen by Immune stain"
+            },
+            {
+              "code": "80706-5",
+              "display": "CD27+IgD- cells/100 CD19+CD20+ cells in Blood"
+            },
+            {
+              "code": "83052-1",
+              "display": "PD-L1 by clone 22C3 [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "83053-9",
+              "display": "Cells.programmed cell death ligand 1/100 viable tumor cells in Tissue by Immune stain"
+            },
+            {
+              "code": "83054-7",
+              "display": "PD-L1 by clone 22C3 [Interpretation] in Tissue by Immune stain Narrative"
+            },
+            {
+              "code": "83055-4",
+              "display": "PD-L1 by clone 28-8 [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "83056-2",
+              "display": "PD-L1 by clone 28-8 [Interpretation] in Tissue by Immune stain Narrative"
+            },
+            {
+              "code": "83057-0",
+              "display": "PD-L1 by clone SP142 [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "85147-7",
+              "display": "PD-L1 by clone 22C3 in Tissue by Immune stain Report"
+            },
+            {
+              "code": "85148-5",
+              "display": "PD-L1 by clone 28-8 in Tissue by Immune stain Report"
+            },
+            {
+              "code": "85149-3",
+              "display": "PD-L1 by clone SP142 in Tissue by Immune stain Report"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

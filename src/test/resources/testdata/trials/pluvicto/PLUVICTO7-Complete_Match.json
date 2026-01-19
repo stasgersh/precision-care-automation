@@ -1,0 +1,187 @@
+{
+  "id": "PLUVICTO7",
+  "type": "treatment",
+  "studyCompletion": "2027-03",
+  "name": "Complete match - test",
+  "description": "PLUVICTO is a radioligand therapy (RLT). RLT is a different type of radiation therapy that is injected and that targets a biomarker called PSMA, which is present on many prostate cancer cells and also some healthy cells. This means it is designed to find and attack PSMA+ cells, including cancer cells.",
+  "usingAi": true,
+  "link": "https://us.pluvicto.com/support/faqs",
+  "patientsFilter": {
+    "filter": {
+      "must": [
+        {
+          "attributes.gender": {
+            "eq": "male"
+          }
+        }
+      ]
+    }
+  },
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    },
+    {
+      "id": "EcogStatus",
+      "definition": {
+        "ai": {
+          "criteria": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) > 3"
+        }
+      },
+      "display": "EcogStatus"
+    },
+    {
+      "id": "ecog",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ECOG",
+              "query": {
+                "from": "ecog",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's ecog",
+      "usingAi": false
+    },
+    {
+      "id": "mCRPC",
+      "definition": {
+        "ai": {
+          "criteria": "Diagnosis of metastatic castration-resistant prostate cancer (mCRPC)"
+        }
+      },
+      "display": "mCRPC"
+    },
+    {
+      "id": "ARPI",
+      "definition": {
+        "ai": {
+          "criteria": "Previously treated with androgen receptor pathway inhibitor (ARPI) therapy"
+        }
+      },
+      "display": "ARPI"
+    },
+    {
+      "id": "taxaneDelay",
+      "definition": {
+        "ai": {
+          "criteria": "Patient is considered appropriate to delay taxane-based chemotherapy"
+        }
+      },
+      "display": "taxaneDelay"
+    },
+    {
+      "id": "taxane",
+      "definition": {
+        "ai": {
+          "criteria": "Previous treatment with taxane-based chemotherapy"
+        }
+      },
+      "display": "taxane"
+    },
+    {
+      "id": "CrCl",
+      "definition": {
+        "ai": {
+          "criteria": "CrCl <= 29 mL/min"
+        }
+      },
+      "display": "CrCl"
+    },
+    {
+      "id": "ESRD",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has ESRD"
+        }
+      },
+      "display": "ESRD"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_male",
+      "type": "inclusion",
+      "title": "Gender is male",
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is male",
+          "description": "Gender is male",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-06-30`,`years`,`int`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-06-30`,`years`,`int`)"
+          }
+        }
+      ]
+    }
+  ]
+}

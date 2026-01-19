@@ -1,0 +1,50 @@
+{
+  "id": "trend.onco.extended",
+  "items": [
+    [
+      {
+        "key": "trendableEntities",
+        "query": {
+          "from": ["vitalSigns", "labResult"],
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  { "subtypes": { "eq": "labCreatinineResult" } },
+                  { "subtypes": { "eq": "labHemoglobinResult" } },
+                  { "subtypes": { "eq": "labTotalBilirubinResult" } },
+                  { "subtypes": { "eq": "labWbcResult" } },
+                  { "subtypes": { "eq": "testosterone" } },
+                  { "subtypes": { "eq": "estrogenReceptorStatus" } },
+                  { "subtypes": { "eq": "her2ReceptorStatus" } },
+                  { "subtypes": { "eq": "progesteroneReceptorStatus" } },
+                  { "subtypes": { "eq": "generalTumorMarkerTestResult" } },
+                  { "subtypes": { "eq": "prostateTumorMarkerTestResult" } },
+                  { "subtypes": { "eq": "breastTumorMarkerTestResultCa153" } },
+                  { "subtypes": { "eq": "breastTumorMarkerTestResultCa125" } },
+                  { "subtypes": { "eq": "breastTumorMarkerTestResultCa2729" } }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": { "eq": "final | amended | corrected" }
+                  },
+                  { "attributes.status": { "eq": null } }
+                ]
+              },
+              {
+                "should": [
+                  { "attributes.trendKey": { "neq": null } },
+                  { "attributes.$components.trendKey": { "neq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "asc" }]
+        }
+      }
+    ]
+  ]
+}

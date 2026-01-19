@@ -1,0 +1,20 @@
+{
+  "name": "surgical-oncology-specialty-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "surgical-oncology-specialty-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "419321007",
+              "display": "Surgical oncology"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

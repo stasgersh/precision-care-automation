@@ -1,0 +1,633 @@
+{
+  "name": "tnm-staging-t-value-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "tnm-staging-t-value-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "LA3601-7",
+              "display": "TX"
+            },
+            {
+              "code": "LA3606-6",
+              "display": "Tispu"
+            },
+            {
+              "code": "LA3607-4",
+              "display": "Tispd"
+            },
+            {
+              "code": "LA3608-2",
+              "display": "Tis"
+            },
+            {
+              "code": "LA3615-7",
+              "display": "Ta"
+            },
+            {
+              "code": "LA3616-5",
+              "display": "T4d"
+            },
+            {
+              "code": "LA3617-3",
+              "display": "T4c"
+            },
+            {
+              "code": "LA3618-1",
+              "display": "T4b"
+            },
+            {
+              "code": "LA3619-9",
+              "display": "T4a"
+            },
+            {
+              "code": "LA3620-7",
+              "display": "T4"
+            },
+            {
+              "code": "LA3621-5",
+              "display": "T3c"
+            },
+            {
+              "code": "LA3622-3",
+              "display": "T3b"
+            },
+            {
+              "code": "LA3623-1",
+              "display": "T3a"
+            },
+            {
+              "code": "LA3624-9",
+              "display": "T3"
+            },
+            {
+              "code": "LA3625-6",
+              "display": "T2c"
+            },
+            {
+              "code": "LA3626-4",
+              "display": "T2b"
+            },
+            {
+              "code": "LA3627-2",
+              "display": "T2a"
+            },
+            {
+              "code": "LA3628-0",
+              "display": "T2"
+            },
+            {
+              "code": "LA3629-8",
+              "display": "T1mic"
+            },
+            {
+              "code": "LA3630-6",
+              "display": "T1c"
+            },
+            {
+              "code": "LA3631-4",
+              "display": "T1b2"
+            },
+            {
+              "code": "LA3632-2",
+              "display": "T1b1"
+            },
+            {
+              "code": "LA3633-0",
+              "display": "T1b"
+            },
+            {
+              "code": "LA3634-8",
+              "display": "T1a2"
+            },
+            {
+              "code": "LA3635-5",
+              "display": "T1a1"
+            },
+            {
+              "code": "LA3636-3",
+              "display": "T1a"
+            },
+            {
+              "code": "LA3637-1",
+              "display": "T1"
+            },
+            {
+              "code": "LA3638-9",
+              "display": "T0"
+            },
+            {
+              "code": "LA4703-0",
+              "display": "Not applicable (no AJCC staging scheme)"
+            },
+            {
+              "code": "LA21805-9",
+              "display": "T1d"
+            },
+            {
+              "code": "LA21806-7",
+              "display": "T2a1"
+            },
+            {
+              "code": "LA21807-5",
+              "display": "T2a2"
+            },
+            {
+              "code": "LA21808-3",
+              "display": "T2d"
+            },
+            {
+              "code": "LA21810-9",
+              "display": "T3d"
+            },
+            {
+              "code": "LA21811-7",
+              "display": "T4e"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "1222604002",
+              "display": "American Joint Committee on Cancer cTX (qualifier value)"
+            },
+            {
+              "code": "1228882005",
+              "display": "American Joint Committee on Cancer cT0 (qualifier value)"
+            },
+            {
+              "code": "1228883000",
+              "display": "American Joint Committee on Cancer cTa (qualifier value)"
+            },
+            {
+              "code": "1228884006",
+              "display": "cTis"
+            },
+            {
+              "code": "1228885007",
+              "display": "cTis(DCIS)"
+            },
+            {
+              "code": "1228887004",
+              "display": "American Joint Committee on Cancer cTis(LAMN) (qualifier value)"
+            },
+            {
+              "code": "1228888009",
+              "display": "American Joint Committee on Cancer cTis(Paget)"
+            },
+            {
+              "code": "1228889001",
+              "display": "American Joint Committee on Cancer cT1"
+            },
+            {
+              "code": "1228891009",
+              "display": "cT1mi"
+            },
+            {
+              "code": "1228892002",
+              "display": "cT1a"
+            },
+            {
+              "code": "1228893007",
+              "display": "American Joint Committee on Cancer cT1a1"
+            },
+            {
+              "code": "1228894001",
+              "display": "American Joint Committee on Cancer cT1a2 (qualifier value)"
+            },
+            {
+              "code": "1228895000",
+              "display": "cT1b"
+            },
+            {
+              "code": "1228896004",
+              "display": "American Joint Committee on Cancer cT1b1 (qualifier value)"
+            },
+            {
+              "code": "1228898003",
+              "display": "American Joint Committee on Cancer cT1b2"
+            },
+            {
+              "code": "1228899006",
+              "display": "American Joint Committee on Cancer cT1c"
+            },
+            {
+              "code": "1228900001",
+              "display": "cT1c1"
+            },
+            {
+              "code": "1228901002",
+              "display": "American Joint Committee on Cancer cT1c2 (qualifier value)"
+            },
+            {
+              "code": "1228902009",
+              "display": "cT1c3"
+            },
+            {
+              "code": "1228928007",
+              "display": "American Joint Committee on Cancer cT1d"
+            },
+            {
+              "code": "1228929004",
+              "display": "cT2"
+            },
+            {
+              "code": "1228931008",
+              "display": "cT2a"
+            },
+            {
+              "code": "1228932001",
+              "display": "American Joint Committee on Cancer cT2a1"
+            },
+            {
+              "code": "1228933006",
+              "display": "cT2a2"
+            },
+            {
+              "code": "1228934000",
+              "display": "American Joint Committee on Cancer cT2b"
+            },
+            {
+              "code": "1228936003",
+              "display": "American Joint Committee on Cancer cT2c (qualifier value)"
+            },
+            {
+              "code": "1228937007",
+              "display": "American Joint Committee on Cancer cT2d (qualifier value)"
+            },
+            {
+              "code": "1228938002",
+              "display": "American Joint Committee on Cancer cT3 (qualifier value)"
+            },
+            {
+              "code": "1228939005",
+              "display": "American Joint Committee on Cancer cT3a (qualifier value)"
+            },
+            {
+              "code": "1228940007",
+              "display": "American Joint Committee on Cancer cT3b"
+            },
+            {
+              "code": "1228941006",
+              "display": "American Joint Committee on Cancer cT3c (qualifier value)"
+            },
+            {
+              "code": "1228942004",
+              "display": "American Joint Committee on Cancer cT3d (qualifier value)"
+            },
+            {
+              "code": "1228943009",
+              "display": "cT3e"
+            },
+            {
+              "code": "1228944003",
+              "display": "American Joint Committee on Cancer cT4"
+            },
+            {
+              "code": "1228945002",
+              "display": "American Joint Committee on Cancer cT4a"
+            },
+            {
+              "code": "1228946001",
+              "display": "cT4b"
+            },
+            {
+              "code": "1228947005",
+              "display": "American Joint Committee on Cancer cT4c"
+            },
+            {
+              "code": "1228948000",
+              "display": "American Joint Committee on Cancer cT4d"
+            },
+            {
+              "code": "1228949008",
+              "display": "American Joint Committee on Cancer cT4e (qualifier value)"
+            },
+            {
+              "code": "1285094009",
+              "display": "AJCC (American Joint Committee on Cancer) cT1b3"
+            },
+            {
+              "code": "1228950008",
+              "display": "pTX"
+            },
+            {
+              "code": "1228951007",
+              "display": "American Joint Committee on Cancer pT0"
+            },
+            {
+              "code": "1228952000",
+              "display": "American Joint Committee on Cancer pTa"
+            },
+            {
+              "code": "1228953005",
+              "display": "American Joint Committee on Cancer pTis (qualifier value)"
+            },
+            {
+              "code": "1228954004",
+              "display": "American Joint Committee on Cancer pTis(DCIS) (qualifier value)"
+            },
+            {
+              "code": "1228955003",
+              "display": "pTis(LAMN)"
+            },
+            {
+              "code": "1228956002",
+              "display": "pTis(Paget)"
+            },
+            {
+              "code": "1228957006",
+              "display": "American Joint Committee on Cancer pT1"
+            },
+            {
+              "code": "1228958001",
+              "display": "American Joint Committee on Cancer pT1mi"
+            },
+            {
+              "code": "1228959009",
+              "display": "pT1a"
+            },
+            {
+              "code": "1228960004",
+              "display": "pT1a1"
+            },
+            {
+              "code": "1228961000",
+              "display": "American Joint Committee on Cancer pT1a2 (qualifier value)"
+            },
+            {
+              "code": "1228962007",
+              "display": "American Joint Committee on Cancer pT1b (qualifier value)"
+            },
+            {
+              "code": "1229844006",
+              "display": "American Joint Committee on Cancer pT1b1"
+            },
+            {
+              "code": "1229845007",
+              "display": "American Joint Committee on Cancer pT1b2"
+            },
+            {
+              "code": "1229846008",
+              "display": "American Joint Committee on Cancer pT1c (qualifier value)"
+            },
+            {
+              "code": "1229848009",
+              "display": "American Joint Committee on Cancer pT1c1 (qualifier value)"
+            },
+            {
+              "code": "1229849001",
+              "display": "American Joint Committee on Cancer pT1c2"
+            },
+            {
+              "code": "1229850001",
+              "display": "American Joint Committee on Cancer pT1c3 (qualifier value)"
+            },
+            {
+              "code": "1229851002",
+              "display": "pT1d"
+            },
+            {
+              "code": "1229852009",
+              "display": "American Joint Committee on Cancer pT2 (qualifier value)"
+            },
+            {
+              "code": "1229853004",
+              "display": "American Joint Committee on Cancer pT2a"
+            },
+            {
+              "code": "1229854005",
+              "display": "American Joint Committee on Cancer pT2a1 (qualifier value)"
+            },
+            {
+              "code": "1229855006",
+              "display": "pT2a2"
+            },
+            {
+              "code": "1229856007",
+              "display": "pT2b"
+            },
+            {
+              "code": "1229857003",
+              "display": "American Joint Committee on Cancer pT2c (qualifier value)"
+            },
+            {
+              "code": "1229858008",
+              "display": "American Joint Committee on Cancer pT2d (qualifier value)"
+            },
+            {
+              "code": "1229859000",
+              "display": "American Joint Committee on Cancer pT3"
+            },
+            {
+              "code": "1229860005",
+              "display": "American Joint Committee on Cancer pT3a (qualifier value)"
+            },
+            {
+              "code": "1229861009",
+              "display": "American Joint Committee on Cancer pT3b (qualifier value)"
+            },
+            {
+              "code": "1229862002",
+              "display": "pT3c"
+            },
+            {
+              "code": "1229863007",
+              "display": "American Joint Committee on Cancer pT3d (qualifier value)"
+            },
+            {
+              "code": "1229864001",
+              "display": "American Joint Committee on Cancer pT4"
+            },
+            {
+              "code": "1229865000",
+              "display": "American Joint Committee on Cancer pT4a"
+            },
+            {
+              "code": "1229866004",
+              "display": "American Joint Committee on Cancer pT4b"
+            },
+            {
+              "code": "1229867008",
+              "display": "American Joint Committee on Cancer pT4c"
+            },
+            {
+              "code": "1229868003",
+              "display": "American Joint Committee on Cancer pT4d (qualifier value)"
+            },
+            {
+              "code": "1229869006",
+              "display": "American Joint Committee on Cancer pT4e (qualifier value)"
+            },
+            {
+              "code": "1285095005",
+              "display": "pT1b3"
+            },
+            {
+              "code": "1228862006",
+              "display": "American Joint Committee on Cancer ypTX"
+            },
+            {
+              "code": "1228863001",
+              "display": "American Joint Committee on Cancer ypT0 (qualifier value)"
+            },
+            {
+              "code": "1228864007",
+              "display": "American Joint Committee on Cancer ypTa"
+            },
+            {
+              "code": "1228865008",
+              "display": "ypTis"
+            },
+            {
+              "code": "1228866009",
+              "display": "American Joint Committee on Cancer ypTis(DCIS) (qualifier value)"
+            },
+            {
+              "code": "1228867000",
+              "display": "American Joint Committee on Cancer ypTis(LAMN) (qualifier value)"
+            },
+            {
+              "code": "1228868005",
+              "display": "American Joint Committee on Cancer ypTis(Paget)"
+            },
+            {
+              "code": "1228869002",
+              "display": "ypT1"
+            },
+            {
+              "code": "1228870001",
+              "display": "American Joint Committee on Cancer ypT1mi (qualifier value)"
+            },
+            {
+              "code": "1228872009",
+              "display": "American Joint Committee on Cancer ypT1a (qualifier value)"
+            },
+            {
+              "code": "1228873004",
+              "display": "American Joint Committee on Cancer ypT1a1"
+            },
+            {
+              "code": "1228874005",
+              "display": "American Joint Committee on Cancer ypT1a2"
+            },
+            {
+              "code": "1228897008",
+              "display": "American Joint Committee on Cancer ypT1b (qualifier value)"
+            },
+            {
+              "code": "1228903004",
+              "display": "American Joint Committee on Cancer ypT1b1 (qualifier value)"
+            },
+            {
+              "code": "1228904005",
+              "display": "American Joint Committee on Cancer ypT1b2 (qualifier value)"
+            },
+            {
+              "code": "1228905006",
+              "display": "ypT1c"
+            },
+            {
+              "code": "1228906007",
+              "display": "American Joint Committee on Cancer ypT1c1 (qualifier value)"
+            },
+            {
+              "code": "1228907003",
+              "display": "American Joint Committee on Cancer ypT1c2 (qualifier value)"
+            },
+            {
+              "code": "1228908008",
+              "display": "American Joint Committee on Cancer ypT1c3 (qualifier value)"
+            },
+            {
+              "code": "1228909000",
+              "display": "American Joint Committee on Cancer ypT1d (qualifier value)"
+            },
+            {
+              "code": "1228910005",
+              "display": "ypT2"
+            },
+            {
+              "code": "1228911009",
+              "display": "American Joint Committee on Cancer ypT2a"
+            },
+            {
+              "code": "1228912002",
+              "display": "American Joint Committee on Cancer ypT2a1 (qualifier value)"
+            },
+            {
+              "code": "1228913007",
+              "display": "American Joint Committee on Cancer ypT2a2 (qualifier value)"
+            },
+            {
+              "code": "1228914001",
+              "display": "American Joint Committee on Cancer ypT2b (qualifier value)"
+            },
+            {
+              "code": "1228915000",
+              "display": "ypT2c"
+            },
+            {
+              "code": "1228916004",
+              "display": "ypT2d"
+            },
+            {
+              "code": "1228917008",
+              "display": "American Joint Committee on Cancer ypT3"
+            },
+            {
+              "code": "1228918003",
+              "display": "ypT3a"
+            },
+            {
+              "code": "1228919006",
+              "display": "American Joint Committee on Cancer ypT3b (qualifier value)"
+            },
+            {
+              "code": "1228920000",
+              "display": "American Joint Committee on Cancer ypT3c"
+            },
+            {
+              "code": "1228921001",
+              "display": "ypT3d"
+            },
+            {
+              "code": "1228922008",
+              "display": "ypT4"
+            },
+            {
+              "code": "1228923003",
+              "display": "American Joint Committee on Cancer ypT4a (qualifier value)"
+            },
+            {
+              "code": "1228924009",
+              "display": "American Joint Committee on Cancer ypT4b"
+            },
+            {
+              "code": "1228925005",
+              "display": "American Joint Committee on Cancer ypT4c (qualifier value)"
+            },
+            {
+              "code": "1228926006",
+              "display": "ypT4d"
+            },
+            {
+              "code": "1228927002",
+              "display": "American Joint Committee on Cancer ypT4e (qualifier value)"
+            },
+            {
+              "code": "1285096006",
+              "display": "American Joint Committee on Cancer ypT1b3 (qualifier value)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

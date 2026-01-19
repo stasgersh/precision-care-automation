@@ -1,0 +1,92 @@
+[
+  {
+    "criteria_text":"Pathologically confirmed adenocarcinoma of the prostate (within 180 days of registration) of high risk by national comprehensive cancer network (NCCN) criteria as determined by >=cT3a stage (AJCC 8th edition) OR PSA>20ng/mL OR ISUP Grade Group 4-5 (Gleason Grade 8-10).",
+    "criterion":"039848cd532b2f3ab16bd093a75d7c9e949da318f3d44c5de5d26361622fa910",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Ability to understand and the willingness to sign a written informed consent.",
+    "criterion":"2a56326c8ca17f65290c89bbb7ff9bf42839362a9b1140f9de915aaab9f8a02c",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Age ≥ 18 years.",
+    "criterion":"2f789ffce633c59ba25f70929bdf9a1587ddd463b08db1ed0a86e2be5cb74028",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"gender is male.",
+    "criterion":"602b896124b93710e81dc453029f4af0f0d3face9c931adfa1a84af4a4cdc35f",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"All men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry, for the duration of standard of care SabR and for a period of time of 6 months thereafter as per standard guidelines. Should a man's partner become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately.",
+    "criterion":"6e295b4393a87fc440b181c9f69651550f86fcb555671e91ce84ac8174ef62e7",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Staging 68Ga PMSA-11 PET -MRI performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment.",
+    "criterion":"84977766178f62065a74fadfd50532e210254a7211639df7ae1e6b5e2080abf5",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Staging 68Ga PSMA-11 PET -CT demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost.",
+    "criterion":"86c92d86e8bf8a494b7f144380620618fb3285bd9046daa710389ab0c0d5f434",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Staging 68Ga PMSA-11 PET -CT performed within 90 days of registration and before initiation of anti-androgen or androgen deprivation therapy and demonstrating no evidence of distant metastases by (PMSA avid or non-avid nodes <=1.5cm short axis allowed). Conventional imaging (CT, bone scan, MRI) may also be used in addition to PMSA-PET, and definitive findings of distant extra-pelvic metastases on these scans are not allowed for enrollment.",
+    "criterion":"8fefd0a12de6dd752733492ff868f08cff622bb5a82fbd32d3e9defce640a6d9",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Staging 68Ga PSMA-11 PET -MRI demonstrating a PSMA-avid primary intra-prostatic target lesion amenable at investigator discretion to dose boost.",
+    "criterion":"a10bb7cb96df3d81485fd91077e239411a5b5a7e148b343f8285eea9b10af155",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Uncontrolled intercurrent illness including, but not limited to, ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that, in the opinion of the investigator, would limit compliance with study requirements.",
+    "criterion":"b030b74034fa99ae7f8f86e7dad82d75fda3874dc70fb0b422932dc0df457d72",
+    "criteria_type":"EXCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Planned for definitive intent stereotactic ablative radiotherapy (SabR) with integrated dose boost to intra-prostatic tumor and androgen deprivation therapy (ADT) with baseline AUA IPSS <=18 and prostate size <=100cc",
+    "criterion":"b2178390c55e02b44c0e222a0c5870b6cdb387b64d14c086d0d995a5f27d5da5",
+    "criteria_type":"INCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"History of allergic reactions to PMSA-11 68Ga imaging agent.",
+    "criterion":"c7fb9eecb8074f8956d20193ce9091b03f9c1f482eb7d345490699556c100e0f",
+    "criteria_type":"EXCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Prior pelvic radiotherapy other than cutaneous/superficial treatments.",
+    "criterion":"d2545da9ee7fce75ab335d9d0d3127f2fe21bc68881991535bb08678e6908c01",
+    "criteria_type":"EXCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Prior curative intent local therapy (e.g. prostatectomy, radiotherapy, focal ablative therapy) for prostate cancer is not allowed, with following exceptions regarding androgen deprivation therapy (ADT)/anti-androgen therapy (AAT): Prior androgen deprivation therapy (ADT) allowed if <3 month total duration and stopped >=3 months prior to registration with demonstration of non-castrate testosterone recovery (>50ng/dL) and meeting all other inclusion criteria. Ongoing androgen deprivation therapy (ADT) is allowed if <=60 days total duration AND meeting following criteria:If GnRH agonist used (e.g. leuprolide), bicalutamide must have been used for at least 30 days +/-14 days from start of GnRH agonist.",
+    "criterion":"dce9b356977f321b4b3de7eb4d390476e6b93f2ee7d56102ff8089a6cc8c1a1e",
+    "criteria_type":"EXCLUSION",
+    "configId":"NCT06044900"
+  },
+  {
+    "criteria_text":"Subjects may not be receiving any other investigational agents for the treatment of the cancer under study.",
+    "criterion":"fc77c88e202941fa56ca797ae34df9c5cf19f50e45cb580b7b1a0963191bcb56",
+    "criteria_type":"EXCLUSION",
+    "configId":"NCT06044900"
+  }
+]

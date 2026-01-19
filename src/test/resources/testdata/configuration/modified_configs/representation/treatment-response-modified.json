@@ -1,0 +1,1471 @@
+{
+  "id": "treatmentResponse.onco.general",
+  "items": [
+    {
+      "group": "studyA",
+      "sources": "$.imagingReportA",
+      "elements": [
+        {
+          "value": {
+            "path": "$.date"
+          },
+          "type": "datetime"
+        },
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp"
+        },
+        {
+          "type": "list",
+          "value": {
+            "elements": [
+              [
+                {
+                  "type": "link",
+                  "dependsOn": {
+                    "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+                  },
+                  "value": {
+                    "icon": "ico-notes",
+                    "label": {
+                      "string": "Open complete report"
+                    },
+                    "url": {
+                      "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+                      "params": {
+                        "patientId": {
+                          "path": "$.patientId"
+                        },
+                        "entityType": {
+                          "path": "$.type"
+                        },
+                        "entityId": {
+                          "path": "$.id"
+                        }
+                      }
+                    },
+                    "target": "internal"
+                  },
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.attributes.code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText",
+                                "args": {
+                                  "omitCode": true
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.attachment[*].title",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].text",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].coding[*].display",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.context.procedure[*].code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          [
+                            {
+                              "type": "datetime",
+                              "value": {
+                                "path": "$.date"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "string": "No date"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.author[*].name[*]",
+                                "postProcessing": [
+                                  {
+                                    "processor": {
+                                      "name": "humanName"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "string": "No author"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.status"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "string": "No status"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "link",
+                  "value": {
+                    "icon": "ico-notes",
+                    "label": {
+                      "string": "Open complete report"
+                    },
+                    "url": {
+                      "string": "#"
+                    },
+                    "target": "internal"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": {
+                    "label": {
+                      "string": "Open images"
+                    },
+                    "icon": "ico-ct",
+                    "url": {
+                      "string": "{{url}}",
+                      "params": {
+                        "url": [
+                          {
+                            "path": "$.attributes.imagingStudy[0].identifier",
+                            "postProcessing": [
+                              {
+                                "processor": {
+                                  "name": "dicomViewerUrl",
+                                  "args": {
+                                    "imagingParameters": [
+                                      {
+                                        "name": "acsn",
+                                        "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "path": "$.attributes.identifier",
+                            "postProcessing": [
+                              {
+                                "processor": {
+                                  "name": "dicomViewerUrl",
+                                  "args": {
+                                    "imagingParameters": [
+                                      {
+                                        "name": "acsn",
+                                        "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link",
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.attributes.code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText",
+                                "args": {
+                                  "omitCode": true
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.attachment[*].title",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].text",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].coding[*].display",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.context.procedure[*].code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "date": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  }
+                },
+                {
+                  "value": {
+                    "label": {
+                      "string": "Open images"
+                    },
+                    "icon": "ico-ct",
+                    "url": {
+                      "string": "#"
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "studyB",
+      "sources": "$.imagingReportB",
+      "elements": [
+        {
+          "value": {
+            "path": "$.date"
+          },
+          "type": "datetime"
+        },
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp"
+        },
+        {
+          "type": "list",
+          "value": {
+            "elements": [
+              [
+                {
+                  "type": "link",
+                  "dependsOn": {
+                    "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+                  },
+                  "value": {
+                    "label": {
+                      "string": "Click here to open the complete report"
+                    },
+                    "icon": "ico-notes",
+                    "url": {
+                      "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+                      "params": {
+                        "patientId": {
+                          "path": "$.patientId"
+                        },
+                        "entityType": {
+                          "path": "$.type"
+                        },
+                        "entityId": {
+                          "path": "$.id"
+                        }
+                      }
+                    },
+                    "target": "internal"
+                  },
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.attributes.code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText",
+                                "args": {
+                                  "omitCode": true
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.attachment[*].title",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].text",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].coding[*].display",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.context.procedure[*].code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          [
+                            {
+                              "type": "datetime",
+                              "value": {
+                                "path": "$.date"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "string": "No date"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.author[*].name[*]",
+                                "postProcessing": [
+                                  {
+                                    "processor": {
+                                      "name": "humanName"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "string": "No author"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.attributes.status"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "string": "No status"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "link",
+                  "value": {
+                    "label": {
+                      "string": "Open complete report"
+                    },
+                    "icon": "ico-notes",
+                    "url": {
+                      "string": "#"
+                    },
+                    "target": "internal"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": {
+                    "label": {
+                      "string": "Open images"
+                    },
+                    "icon": "ico-ct",
+                    "url": {
+                      "string": "{{url}}",
+                      "params": {
+                        "url": [
+                          {
+                            "path": "$.attributes.imagingStudy[0].identifier",
+                            "postProcessing": [
+                              {
+                                "processor": {
+                                  "name": "dicomViewerUrl",
+                                  "args": {
+                                    "imagingParameters": [
+                                      {
+                                        "name": "acsn",
+                                        "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "path": "$.attributes.identifier",
+                            "postProcessing": [
+                              {
+                                "processor": {
+                                  "name": "dicomViewerUrl",
+                                  "args": {
+                                    "imagingParameters": [
+                                      {
+                                        "name": "acsn",
+                                        "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link",
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.attributes.code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText",
+                                "args": {
+                                  "omitCode": true
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.attachment[*].title",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].text",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.category[*].coding[*].display",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "first"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.attributes.context.procedure[*].code",
+                          "postProcessing": [
+                            {
+                              "processor": {
+                                "name": "codeableConceptText"
+                              }
+                            }
+                          ]
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": {
+                              "path": "$.date"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "date": {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  }
+                },
+                {
+                  "value": {
+                    "label": {
+                      "string": "Open images"
+                    },
+                    "icon": "ico-ct",
+                    "url": {
+                      "string": "#"
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatment",
+      "elements": [
+        {
+          "key": {
+            "string": "systemicTherapyTitle"
+          },
+          "value": {
+            "string": "Systemic therapy"
+          },
+          "meta": {
+            "title": true,
+            "emptyValue": "systemic therapy"
+          },
+          "type": "text"
+        },
+        {
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "string": "ico-intra-van"
+            },
+            "paletteColor": {
+              "string": "5"
+            },
+            "message": {
+              "path": "$.systemicTherapies[0].attributes.cycle"
+            }
+          },
+          "meta": {
+            "levelOfDetail": 1
+          }
+        },
+        {
+          "type": "datetime",
+          "value": {
+            "path": "$.systemicTherapies[0].date"
+          }
+        },
+        {
+          "type": "twoColumn",
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": {
+                "string": "Start of therapy"
+              }
+            },
+            "rightColumn": {
+              "type": "datetime",
+              "value": {
+                "path": "$.systemicTherapies[0].attributes.regimen.period.start"
+              }
+            }
+          }
+        },
+        {
+          "type": "twoColumn",
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": {
+                "string": "End of therapy"
+              }
+            },
+            "rightColumn": {
+              "type": "datetime",
+              "value": {
+                "path": "$.systemicTherapies[0].attributes.regimen.period.end"
+              }
+            }
+          }
+        },
+        {
+          "type": "table",
+          "value": {
+            "path": "$.systemicTherapies",
+            "config": {
+              "cells": [
+                {
+                  "header": "Drug",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "codeableConceptText"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Dose",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.dosage[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "orderedDosageText"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "indicator",
+                      "value": {
+                        "icon": {
+                          "string": "ico-minus-plus"
+                        },
+                        "paletteColor": {
+                          "string": "11"
+                        },
+                        "message": {
+                          "path": "$.attributes.doseChange"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatment",
+      "elements": [
+        {
+          "key": {
+            "string": "radiationTherapyTitle"
+          },
+          "value": {
+            "string": "Radiation therapy"
+          },
+          "meta": {
+            "title": true,
+            "emptyValue": "radiation therapy"
+          },
+          "type": "text"
+        },
+        {
+          "value": {
+            "path": "$.mostRecentRadiotherapyProcedure[0].date"
+          },
+          "type": "datetime"
+        },
+        {
+          "value": {
+            "string": "Procedure - most recent"
+          },
+          "type": "text",
+          "dependsOn": {
+            "path": "$.mostRecentRadiotherapyProcedure[0]"
+          }
+        },
+        {
+          "value": {
+            "leftColumn": {
+              "value": {
+                "path": "$.mostRecentRadiotherapyProcedure[0].attributes.code",
+                "postProcessing": [
+                  {
+                    "processor": {
+                      "name": "codeableConceptText"
+                    }
+                  }
+                ]
+              },
+              "type": "text"
+            },
+            "rightColumn": {
+              "value": {
+                "path": "$.mostRecentRadiotherapyProcedure[0].date"
+              },
+              "type": "datetime"
+            }
+          },
+          "type": "twoColumn"
+        },
+        {
+          "value": {
+            "string": "Start of therapy"
+          },
+          "type": "text",
+          "dependsOn": {
+            "path": "$.leastRecentRadiotherapyProcedure[0]"
+          }
+        },
+        {
+          "value": {
+            "leftColumn": {
+              "value": {
+                "path": "$.leastRecentRadiotherapyProcedure[0].attributes.code",
+                "postProcessing": [
+                  {
+                    "processor": {
+                      "name": "codeableConceptText"
+                    }
+                  }
+                ]
+              },
+              "type": "text"
+            },
+            "rightColumn": {
+              "value": {
+                "path": "$.leastRecentRadiotherapyProcedure[0].date"
+              },
+              "type": "datetime"
+            }
+          },
+          "type": "twoColumn"
+        }
+      ]
+    },
+    {
+      "group": "treatment",
+      "elements": [
+        {
+          "dependsOn": {
+            "path": "$.mostRecentOncologyNote[0]",
+            "inverse": true
+          },
+          "key": {
+            "string": "oncologyNotesTitle"
+          },
+          "value": {
+            "string": "Most recent Oncology note details"
+          },
+          "meta": {
+            "title": true,
+            "emptyValue": "oncology note"
+          },
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "group": "treatment",
+      "sources": "$.mostRecentOncologyNote[0]",
+      "elements": [
+        {
+          "key": {
+            "string": "oncologyNotesTitle"
+          },
+          "value": {
+            "string": "Most recent Oncology note details"
+          },
+          "meta": {
+            "title": true,
+            "emptyValue": "oncology note"
+          },
+          "type": "text"
+        },
+        {
+          "value": {
+            "path": "$.date"
+          },
+          "type": "datetime"
+        },
+        [
+          {
+            "value": {
+              "path": "$.attributes.code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText",
+                    "args": {
+                      "omitCode": true
+                    }
+                  }
+                }
+              ]
+            },
+            "type": "text"
+          },
+          {
+            "value": {
+              "path": "$.attributes.attachment[*].title",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text"
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].text",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text"
+          },
+          {
+            "value": {
+              "path": "$.attributes.category[*].coding[*].display",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "first"
+                  }
+                }
+              ]
+            },
+            "type": "text"
+          },
+          {
+            "value": {
+              "path": "$.attributes.context.procedure[*].code",
+              "postProcessing": [
+                {
+                  "processor": {
+                    "name": "codeableConceptText"
+                  }
+                }
+              ]
+            },
+            "type": "text"
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": {
+              "path": "$"
+            },
+            "clpFindings": {
+              "path": "$.attributes.aiSummary.l2"
+            }
+          },
+          "type": "nlp"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.attributes.attachment[?(@.contentType && @.contentType.match(/^text\\/(html|plain)/))]"
+          },
+          "value": {
+            "label": {
+              "string": "Open complete report"
+            },
+            "icon": "ico-notes",
+            "url": {
+              "string": "/patients/{{!patientId}}/reports/{{!entityType}}/{{!entityId}}?representation=reportHtml.onco.general",
+              "params": {
+                "patientId": {
+                  "path": "$.patientId"
+                },
+                "entityType": {
+                  "path": "$.type"
+                },
+                "entityId": {
+                  "path": "$.id"
+                }
+              }
+            },
+            "target": "internal"
+          },
+          "meta": {
+            "title": [
+              {
+                "value": {
+                  "path": "$.attributes.code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText",
+                        "args": {
+                          "omitCode": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.attachment[*].title",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].text",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.category[*].coding[*].display",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "first"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              },
+              {
+                "value": {
+                  "path": "$.attributes.context.procedure[*].code",
+                  "postProcessing": [
+                    {
+                      "processor": {
+                        "name": "codeableConceptText"
+                      }
+                    }
+                  ]
+                },
+                "type": "text"
+              }
+            ],
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No date"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.author[*].name[*]",
+                        "postProcessing": [
+                          {
+                            "processor": {
+                              "name": "humanName"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No author"
+                      }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "string": "No status"
+                      }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "type": "datetime",
+              "value": {
+                "path": "$.date"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "charts",
+      "elements": [
+        {
+          "type": "chart",
+          "value": {
+            "path": "$.trendableEntities",
+            "defaults": [
+              "weight",
+              "generalTumorMarkerTestResult",
+              "prostateTumorMarkerTestResult",
+              "breastTumorMarkerTestResultCa153",
+              "breastTumorMarkerTestResultCa125",
+              "breastTumorMarkerTestResultCa2729"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    [
+      {
+        "id": "treatment",
+        "label": "Treatment",
+        "status": "Most recent"
+      }
+    ],
+    [
+      {
+        "id": "response",
+        "label": "Response"
+      }
+    ]
+  ]
+}

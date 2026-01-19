@@ -1,0 +1,63 @@
+{
+  "id": "adherence.onco.prostate",
+  "items": [
+    {
+      "group": "adherenceEvaluation",
+      "sources": "$.adherenceEvaluation[*]",
+      "elements": [
+        {
+          "type": "indicator",
+          "meta": {
+            "levelOfDetail": 1
+          },
+          "value": {
+            "message": {
+              "path": "$.indicator.display"
+            },
+            "icon": {
+              "path": "$.indicator.icon"
+            },
+            "paletteColor": {
+              "path": "$.indicator.paletteColor"
+            }
+          }
+        },
+        {
+          "type": "table",
+          "meta": {
+            "levelOfDetail": 2,
+            "informationBox": true
+          },
+          "value": {
+            "path": "$.dates[*]",
+            "config": {
+              "cells": [
+                {
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.type"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "layout": []
+}

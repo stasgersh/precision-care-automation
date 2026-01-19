@@ -1,0 +1,610 @@
+{
+  "id": "summary.onco.breast",
+  "items": [
+    [
+      {
+        "key": "patient",
+        "query": {
+          "from": "patient",
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "patient_version": "desc" }]
+        }
+      },
+      {
+        "key": "earliestGroupedPrimaryDiagnosis",
+        "query": {
+          "from": "primaryCancerDisease",
+          "dedup": true,
+          "sort": [{ "date": "asc" }]
+        },
+        "postProcessing": [{ "processor": { "name": "earliestGrouped" } }]
+      },
+      {
+        "key": "earliestGroupedMetastasis",
+        "query": {
+          "from": "metastasis",
+          "dedup": true,
+          "sort": [{ "date": "asc" }]
+        },
+        "postProcessing": [{ "processor": { "name": "earliestGrouped" } }]
+      },
+      {
+        "key": "earliestNlpStageDocument",
+        "query": {
+          "from": ["imagingReport", "pathologyReport", "oncologyMDTReport"],
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Staging_object.Stage_Group_str": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "asc" }]
+        },
+        "postProcessing": [
+          { "processor": { "name": "earliestGrouped" } },
+          { "processor": { "name": "first" } }
+        ]
+      },
+      {
+        "key": "mostRecentNlpTnmDocument",
+        "query": {
+          "from": ["imagingReport", "pathologyReport", "oncologyMDTReport"],
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Staging_object.T_Stage_str": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Staging_object.N_Stage_str": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Staging_object.M_Stage_str": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "sort": [{ "date": "desc" }],
+          "dedup": true,
+          "limit": 1
+        },
+        "postProcessing": [{ "processor": { "name": "first" } }]
+      },
+      {
+        "key": "cancerDiagnosisKeyEvents",
+        "query": {
+          "from": ["pathologyReport", "surgicalProcedure"],
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "genomicAndImmunologyMarkers",
+        "query": {
+          "from": ["genomicMarkerTestResult", "immunologyMarkerTestResult"],
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ]
+        }
+      },
+      {
+        "key": "breastReceptorTumorMarkerTestResult",
+        "query": {
+          "from": [
+            "estrogenReceptorStatus",
+            "her2ReceptorStatus",
+            "progesteroneReceptorStatus"
+          ],
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ]
+        }
+      },
+      {
+        "key": "mostRecentNlpMammaPrintIndexResult",
+        "query": {
+          "from": ["imagingReport", "oncologyOutpatientNote", "pathologyReport"],
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  {
+                    "type": {
+                      "eq": "imagingReport"
+                    }
+                  },
+                  {
+                    "type": {
+                      "eq": "oncologyOutpatientNote"
+                    }
+                  },
+                  {
+                    "type": {
+                      "eq": "pathologyReport"
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_object.MammaPrint_Index_str": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.MammaPrint_Index_str": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ],
+          "limit": 1
+        }
+      },
+      {
+        "key": "mostRecentNlpOncoTypeResult",
+        "query": {
+          "from": ["imagingReport", "oncologyOutpatientNote", "pathologyReport"],
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  {
+                    "type": {
+                      "eq": "imagingReport"
+                    }
+                  },
+                  {
+                    "type": {
+                      "eq": "oncologyOutpatientNote"
+                    }
+                  },
+                  {
+                    "type": {
+                      "eq": "pathologyReport"
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_object.Oncotype_Dx_str": {
+                      "neq": null
+                    }
+                  },
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Oncotype_Dx_str": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ],
+          "limit": 1
+        }
+      },
+      {
+        "key": "careTeamMembers",
+        "query": {
+          "from": "careTeam",
+          "dedup": true
+        },
+        "postProcessing": [
+          { "processor": { "name": "oncologyCareTeamMembers" } }
+        ]
+      },
+      {
+        "key": "imagingReportsFromLastThreeMonths",
+        "query": {
+          "from": "imagingReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [{ "processor": { "name": "fromLastThreeMonths" } }]
+      },
+      {
+        "key": "mostRecentImaging",
+        "query": {
+          "from": "imagingReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentERVisit",
+        "query": {
+          "from": "emergencyVisit",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentMDTReport",
+        "query": {
+          "from": "oncologyMDTReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "systemicTherapies",
+        "query": {
+          "from": "medication",
+          "dedup": true,
+          "sort": [{ "date": "desc" }],
+          "filter": {
+            "should": [{ "subtypes": { "eq": "chemo" } }]
+          }
+        },
+        "postProcessing": [{ "processor": { "name": "lastChemoMedications" } }]
+      },
+      {
+        "key": "leastRecentRadioTherapyProcedure",
+        "query": {
+          "from": "radiotherapyProcedure",
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "asc" }]
+        }
+      },
+      {
+        "key": "mostRecentRadioTherapyProcedure",
+        "query": {
+          "from": "radiotherapyProcedure",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "mostRecentTestosterone",
+        "query": {
+          "from": "testosterone",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "desc" }]
+        },
+        "postProcessing": [{ "processor": { "name": "uniqueTrendKey" } }]
+      },
+      {
+        "key": "mostRecentBreastTumorMarkerTestResults",
+        "query": {
+          "from": "breastTumorMarkerTestResult",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "desc" }]
+        },
+        "postProcessing": [{ "processor": { "name": "uniqueTrendKey" } }]
+      },
+      {
+        "key": "labReportsFromLastThreeMonths",
+        "query": {
+          "from": "labReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "desc" }]
+        },
+        "postProcessing": [{ "processor": { "name": "fromLastThreeMonths" } }]
+      },
+      {
+        "key": "mostRecentOncologyNote",
+        "query": {
+          "from": "oncologyOutpatientNote",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "limit": 1,
+          "sort": [{ "date": "desc" }]
+        }
+      },
+      {
+        "key": "radiotherapyCourseSummary",
+        "query": {
+          "from": "radiotherapyCourseSummary",
+          "dedup": true
+        }
+      },
+      {
+        "key": "mostRecentNlpNottinghamScore",
+        "query": {
+          "from": "pathologyReport",
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Grading_object.Nottingham_Grade_str": {
+                      "neq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "desc" }],
+          "limit": 1
+        }
+      },
+      {
+        "key": "mostRecentNlpKi67",
+        "query": {
+          "from": ["imagingReport", "pathologyReport", "oncologyMDTReport"],
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.$clpFindings.findings.PrimaryCancer_array.Biomarkers_array.Biomarker_Name_str": {
+                      "eq": "Ki-67"
+                    }
+                  }
+                ]
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ],
+          "limit": 1
+        }
+      }
+    ]
+  ]
+}

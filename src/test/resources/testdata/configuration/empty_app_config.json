@@ -1,0 +1,39 @@
+{
+  "dicomViewerUrl": "",
+  "patientIdentifier": {
+    "displayName": "",
+    "system": "",
+    "type": {
+      "code": "",
+      "system": ""
+    }
+  },
+  "defaultPreset": "oncology.default",
+  "cacheConfig": {
+    "fulfillmentCacheDisabled": false,
+    "timelineRepresentationCacheDisabled": false,
+    "eligibilityCacheDisabled": false,
+    "treatmentAdherenceCacheDisabled": false,
+    "patientSummaryCacheDisabled": false,
+    "cacheOptimizationMode": "cost",
+    "proactiveCacheEnabled": false,
+    "statusTtlSeconds": 1800,
+    "cacheTtlSeconds": 43200
+  },
+  "ffQueryRetryConfig": {
+    "sizeMultiplier": 0.5,
+    "errorStatusCodes": [
+      502
+    ],
+    "maxRetryCount": 3,
+    "defaultPageSize": 100
+  },
+  "nameDisplay": {
+    "usePriority": [
+      "usual",
+      "official"
+    ],
+    "includePrefix": true,
+    "textFirst": false
+  }
+}

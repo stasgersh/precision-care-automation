@@ -1,0 +1,403 @@
+{
+  "id": "NCT05568903",
+  "type": "trial",
+  "name": "Data for CTE AI eligibility evaluation based on DocumentReference resource",
+  "usingAi": true,
+  "studyCompletion": "2027-05-01",
+  "description": "Data for CTE AI eligibility evaluation based on DocumentReference resource - This phase III trial compares the effect of active symptom monitoring and patient education to patient education alone in helping young women with stage I-III breast cancer stay on their hormone therapy medicines.\nThe patient education tool contains interactive weblinks which provide patients with education material about breast cancer and side effects of therapy.\nSymptom monitoring is a weblink via email or text message with questions asking about symptoms.\nHormone therapy for breast cancer can cause side effects, and may cause some women to stop treatment early.\nAsking about symptoms more often may help women keep taking hormone therapy medicines.",
+  "patientsFilter": {
+    "filter": {
+      "must": [
+        {
+          "attributes.gender": {
+            "eq": "female"
+          }
+        }
+      ]
+    }
+  },
+  "status": "Recruiting",
+  "phase": "NA",
+  "link": "https://clinicaltrials.gov/study/NCT05568903",
+  "constants": null,
+  "variables": [
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    },
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "IsStageI_IIIHRPositive",
+      "definition": {
+        "ai": {
+          "criteria": "Has Stage I, II, or III hormone receptor positive breast cancer based on clinical or pathologic evaluation."
+        }
+      },
+      "display": "Female with Stage I-III HR+ breast cancer",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "BreastCalcificationSeenOnMammogram_txt_html",
+      "definition": {
+        "ai": {
+          "criteria": "Breast calcification seen on mammogram"
+        }
+      },
+      "display": "Indications were confirmed, contraindications were excluded. Risk, benefits and alternatives to stereotactic guided, vacuum assisted core biopsy of left breast were<br>explained to the patient",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "Constipation_Finding_of_nocturia_text_plain",
+      "definition": {
+        "ai": {
+          "criteria": "Hydrochlorothiazide 25 mg once daily AM - occuvite daily - calcium carbonate 500 mg (1,250 mg)-vitamin D3 400 unit"
+        }
+      },
+      "display": "This is a **AGE[in 70s] year-old male with high risk prostate cancers/p resection in 2016 followed by salvage radiotherapy.",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "Cholestrol_6_3_Triglyceride_1_3_PDF",
+      "definition": {
+        "ai": {
+          "criteria": "Triglyceride mmol/L 1.3 <2.0, Cholestrol mmol/L 6.3 <4.5"
+        }
+      },
+      "display": "Lipid Report for ABC issued 9-July 2020 14:26.",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "Document_patient_is_fine_text_RTF",
+      "definition": {
+        "ai": {
+          "criteria": "Patient is fine rtf"
+        }
+      },
+      "display": "Patient is fine RTF",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPrePeriMenopausalAtDiagnosis",
+      "definition": {
+        "ai": {
+          "criteria": "Had a menstrual period (by self-report) within the 12 months before breast cancer diagnosis."
+        }
+      },
+      "display": "Pre- or peri-menopausal at diagnosis",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPrePeriMenopausaEstradiol",
+      "definition": {
+        "ai": {
+          "criteria": "Had a serum or plasma estradiol and/or follicle stimulating hormone (FSH) concentration consistent with premenopausal status (based on institutional standards) within the 12 months before breast cancer diagnosis or when checked after breast cancer diagnosis."
+        }
+      },
+      "display": "Pre- or peri-menopausal at diagnosis",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "HasCompleteMedicalHistory",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has a complete medical history within 60 days prior to randomization."
+        }
+      },
+      "display": "Complete medical history",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "NoNonBreastMalignancyTreatment",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has a non-breast malignancy for which they are currently receiving treatment."
+        }
+      },
+      "display": "Non-breast malignancy treatment",
+      "value": null,
+      "usingAi": true
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_male",
+      "type": "inclusion",
+      "title": "Gender is male",
+      "dependency": [
+        "gender"
+      ],
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is male",
+          "description": "Gender is male",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must be female and have stage I-III HR+ breast cancer",
+      "expression": "IsStageI_IIIHRPositive",
+      "id": "IsStageI_IIIHRPositive",
+      "allowMissingVariables": [
+        "IsStageI_IIIHRPositive"
+      ],
+      "dependency": [
+        "IsStageI_IIIHRPositive"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsStageI_IIIHRPositive",
+          "title": "Stage I-III HR+ breast cancer",
+          "description": "Has Stage I, II, or III hormone receptor positive breast cancer based on clinical or pathologic evaluation",
+          "expression": "variables.IsStageI_IIIHRPositive.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.IsStageI_IIIHRPositive.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Breast Calcification Seen On Mammogram txt html",
+      "expression": "BreastCalcificationSeenOnMammogram_txt_html",
+      "id": "BreastCalcificationSeenOnMammogram_txt_html",
+      "allowMissingVariables": [
+        "BreastCalcificationSeenOnMammogram_txt_html"
+      ],
+      "dependency": [
+        "BreastCalcificationSeenOnMammogram_txt_html"
+      ],
+      "subCriteria": [
+        {
+          "id": "BreastCalcificationSeenOnMammogram_txt_html",
+          "title": "Breast calcification seen on mammogram txt/html",
+          "description": "Indications were confirmed, contraindications were excluded. Risk, benefits and alternatives to stereotactic guided, vacuum assisted core biopsy of left breast were<br>explained to the patient. Risks discussed included, but were not limited to, risk of pain, bleeding, infection, inability to target the lesion with image guided biopsy, and need<br>for other future procedure or followup. Patient expressed understanding. Consent was obtained. ",
+          "expression": "variables.BreastCalcificationSeenOnMammogram_txt_html.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.BreastCalcificationSeenOnMammogram_txt_html.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Constipation Finding of nocturia Text/Plain",
+      "expression": "Constipation_Finding_of_nocturia_text_plain",
+      "id": "Constipation_Finding_of_nocturia_text_plain",
+      "allowMissingVariables": [
+        "Constipation_Finding_of_nocturia_text_plain"
+      ],
+      "dependency": [
+        "Constipation_Finding_of_nocturia_text_plain"
+      ],
+      "subCriteria": [
+        {
+          "id": "Constipation_Finding_of_nocturia_text_plain",
+          "title": "Constipation Finding f nocturia text plain",
+          "description": "The patient was seen and evaluated with Dr.**NAME[ZZZ], attending radiation oncologist, who supervised the development of this patient's treatment plan. PATIENT NAME: **NAME[AAA, BBB CCC] REFERRING & REFERRAL PHYSICIAN(S): Primary care: {**NAME[YYY, XXX M]} Surgery: **NAME[WWW] DIAGNOSIS: high risk prostate cancer status post resection and salvage radiotherapy PREVIOUS TREATMENT: 7020 cGy in 39 fractions completed **DATE[May 06 2016] INTERVAL SINCE LAST FOLLOW-UP: 2 months CLINICAL STATUS: symptomatically well, will have PSA today KPS: 80 IDENTIFICATION: This is a **AGE[in 70s] year-old male with s/p RALP/BPLND **DATE[Sep 19 15] with +margins, pT3a N0 (0/9 LNs+) that showed GS 3+4 with tertiary pattern of 5, with PSA 0.31 on **DATE[Nov 06 15]. He had a CT and bone scan which were both negative for metastatic disease in **DATE[Nov] of 2016. **DATE[Jan 15 2016] NaF PET scan was also negative. He was considering salvage radiation at that time, but ultimately deferred. HIs PSA then increased to 0.98 in **DATE[Jan 2016] and he was started on firmagon. __________________________________________ INTERVAL CLINICAL HISTORY: Since his last evaluation in **INSTITUTION, **NAME[BBB AAA] has been doing well. He denies any diarrhea or increased urinary problems. He had a recent shingles outbreak this has resolved. He continues on his Lupron therapy with shot today, he will also have his PSA drawn today. No recent labs or imaging. The patient reports no recent constitutional illnesses, no fevers, no significant headaches, no neurological disturbances, no chest pain, no breathing difficulties, no GI disturbances, no problems passing urine or stool, no focal joint swelling, and no skin rashes. ",
+          "expression": "variables.Constipation_Finding_of_nocturia_text_plain.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.Constipation_Finding_of_nocturia_text_plain.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Cholestrol 6.3 Triglyceride 1.3 - PDF",
+      "expression": "Cholestrol_6_3_Triglyceride_1_3_PDF",
+      "id": "Cholestrol_6_3_Triglyceride_1_3_PDF",
+      "allowMissingVariables": [
+        "Cholestrol_6_3_Triglyceride_1_3_PDF"
+      ],
+      "dependency": [
+        "Cholestrol_6_3_Triglyceride_1_3_PDF"
+      ],
+      "subCriteria": [
+        {
+          "id": "Cholestrol_6_3_Triglyceride_1_3_PDF",
+          "title": "Lipid Report for ABC issued 9-July 2020 14:26",
+          "description": "Cholestrol mmol/L 6.3 <4.5 , Triglyceride mmol/L 1.3 <2.0",
+          "expression": "variables.Cholestrol_6_3_Triglyceride_1_3_PDF.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.Cholestrol_6_3_Triglyceride_1_3_PDF.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Document patient is fine text/RTF",
+      "expression": "Document_patient_is_fine_text_RTF",
+      "id": "Document_patient_is_fine_text_RTF",
+      "allowMissingVariables": [
+        "Document_patient_is_fine_text_RTF"
+      ],
+      "dependency": [
+        "Document_patient_is_fine_text_RTF"
+      ],
+      "subCriteria": [
+        {
+          "id": "Document_patient_is_fine_text_RTF",
+          "title": "Document patient is fine text/RTF",
+          "description": "Document patient is fine text/RTF",
+          "expression": "variables.Document_patient_is_fine_text_RTF.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.Document_patient_is_fine_text_RTF.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have been pre- or peri-menopausal at the time of breast cancer diagnosis by satisfying one of the following: had a menstrual period (by self-report) within the 12 months before breast cancer diagnosis, or had a serum or plasma estradiol and/or follicle stimulating hormone (FSH) concentration consistent with premenopausal status (based on institutional standards) within the 12 months before breast cancer diagnosis or when checked after breast cancer diagnosis",
+      "expression": "IsPrePeriMenopausalAtDiagnosis || IsPrePeriMenopausaEstradiol",
+      "id": "IsPrePeriMenopausalAtDiagnosis_Or_IsPrePeriMenopausaEstradiol",
+      "allowMissingVariables": [
+        "IsPrePeriMenopausalAtDiagnosis",
+        "IsPrePeriMenopausaEstradiol"
+      ],
+      "dependency": [
+        "IsPrePeriMenopausalAtDiagnosis",
+        "IsPrePeriMenopausaEstradiol"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsPrePeriMenopausalAtDiagnosis",
+          "title": "Pre- or peri-menopausal at diagnosis",
+          "description": "Had a menstrual period (by self-report) within the 12 months before breast cancer diagnosis",
+          "expression": "variables.IsPrePeriMenopausalAtDiagnosis.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.IsPrePeriMenopausalAtDiagnosis.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsPrePeriMenopausaEstradiol",
+          "title": "Serum or plasma estradiol and/or follicle stimulating hormone",
+          "description": "Had a serum or plasma estradiol and/or follicle stimulating hormone (FSH) concentration consistent with premenopausal status (based on institutional standards) within the 12 months before breast cancer diagnosis or when checked after breast cancer diagnosis",
+          "expression": "variables.IsPrePeriMenopausaEstradiol.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.IsPrePeriMenopausaEstradiol.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "dependency": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-03-10`,`years`,`int`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-03-10`,`years`,`int`)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have a complete medical history within 60 days prior to randomization.",
+      "expression": "HasCompleteMedicalHistory",
+      "id": "HasCompleteMedicalHistory",
+      "allowMissingVariables": [
+        "HasCompleteMedicalHistory"
+      ],
+      "dependency": [
+        "HasCompleteMedicalHistory"
+      ],
+      "subCriteria": [
+        {
+          "id": "HasCompleteMedicalHistory",
+          "title": "Complete medical history",
+          "description": "Complete medical history",
+          "expression": "variables.HasCompleteMedicalHistory.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.HasCompleteMedicalHistory.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patient does not have a non-breast malignancy for which they are currently receiving treatment.",
+      "expression": "NoNonBreastMalignancyTreatment",
+      "id": "NoNonBreastMalignancyTreatment",
+      "dependency": [
+        "NoNonBreastMalignancyTreatment"
+      ],
+      "subCriteria": [
+        {
+          "id": "NoNonBreastMalignancyTreatment",
+          "title": "Non-breast malignancy treatment",
+          "description": "Patient has a non-breast malignancy for which they are currently receiving treatment.",
+          "expression": "variables.NoNonBreastMalignancyTreatment.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.NoNonBreastMalignancyTreatment.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    }
+  ]
+}

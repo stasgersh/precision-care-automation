@@ -1,0 +1,24 @@
+{
+  "name": "lab-hemoglobin-result-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "lab-hemoglobin-result-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "59260-0",
+              "display": "Hemoglobin [Moles/volume] in Blood"
+            },
+            {
+              "code": "718-7",
+              "display": "Hemoglobin [Mass/volume] in Blood"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

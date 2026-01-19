@@ -1,0 +1,21 @@
+{
+  "valueset": {
+    "url": "www.some.url.com",
+    "description": "input validation vs",
+    "compose": {
+      "include": [
+        {
+          "system": "www.loinc.co.il?param=%3Cjavascript%3Aalert(document.cookie%3E)",
+          "concept": [
+            {
+              "code": "c-234",
+              "display": "code display"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "version_1"
+  },
+  "name": "iv_vs3"
+}

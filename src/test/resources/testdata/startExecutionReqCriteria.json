@@ -1,0 +1,6 @@
+{
+    "patientId": "resourceId",
+    "eventType": "DATA_FABRIC_DELETE",
+    "message_id": "0fa888ce-6e9d-4828-9815-945e333c04fa",
+    "x-correlation-id": "0fa888ce-6e9d-4828-9815-945e333c04fb"
+}

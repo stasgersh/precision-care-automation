@@ -1,0 +1,162 @@
+{
+  "configType": "entity",
+  "classId": "testImagingStudyRequest",
+  "description": "original testImagingStudyRequest data model used for testing",
+  "definitions": [
+    {
+      "resourceType": "ServiceRequest",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "include": "imaging-procedure-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.occurrenceDateTime"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "status",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.status"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note[*]",
+                "attributes": [
+                  {
+                    "key": "text",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.text"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "time",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.time"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "author",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.authorString"
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$.authorReference"
+                        },
+                        "processor": "referenceText"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "psmaPetStudy",
+        "filters": [
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.code",
+                "include": "psma-pet-imaging-procedure-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.procedure[*].code",
+                "include": "psma-pet-imaging-procedure-vs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subclassId": "mriImagingStudy",
+        "filters": [
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.code",
+                "include": "mri-imaging-procedure-vs"
+              }
+            ]
+          },
+          {
+            "type": "terminology",
+            "conditions": [
+              {
+                "path": "$.context.procedure[*].code",
+                "include": "mri-imaging-procedure-vs"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

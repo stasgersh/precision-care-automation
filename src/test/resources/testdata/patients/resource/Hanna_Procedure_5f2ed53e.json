@@ -1,0 +1,53 @@
+{
+  "resourceType": "Procedure",
+  "id": "5f2ed53e-ed02-4018-ab45-b1eaa21ec35c",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "117015009",
+        "display": "Throat culture (procedure)"
+      }
+    ],
+    "text": "Throat culture (procedure)"
+  },
+  "subject": {
+    "reference": "Patient/83a2a278-ff45-e749-4968-bd121b0100c6"
+  },
+  "performedPeriod": {
+    "start": "2020-06-05T14:23:05+02:00",
+    "end": "2020-06-05T14:38:05+02:00"
+  },
+  "location": {
+    "reference": "Location/c108baa4-f8d9-ccfa-da28-2de16c47ed18",
+    "display": "METROWEST MEDICAL CENTER"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/99b1c1a5-0c04-4953-b19d-309754d8a27b",
+      "display": "Acute viral pharyngitis (disorder)"
+    }
+  ],
+  "note": [
+    {
+      "text": "Test note",
+      "time": "2020-06-05"
+    }
+  ],
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "387713003",
+        "display": "Surgical procedure"
+      }
+    ],
+    "text": "Surgical procedure"
+  }
+}

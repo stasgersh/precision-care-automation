@@ -1,0 +1,20 @@
+{
+  "name": "systemic-therapy-cycle-number-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "systemic-therapy-cycle-number-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "399042005",
+              "display": "Chemotherapy cycle"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

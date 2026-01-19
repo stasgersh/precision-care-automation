@@ -1,0 +1,3 @@
+[INFO icon]
+AI is turned off
+Content cannot be generated because AI summarization is turned off.

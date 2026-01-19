@@ -1,0 +1,20 @@
+{
+  "name": "lab-testosterone-result-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "lab-testosterone-result-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "2986-8",
+              "display": "Testosterone [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "genetic-counselor-referral-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "genetic-counselor-referral-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "306250006",
+              "display": "Referral to genetic counselor (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

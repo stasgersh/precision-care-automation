@@ -1,0 +1,37 @@
+Not for clinical use
+OncoTestPatient, Torvald
+PIDcee5f972-9531-4cd4-b1e4-5...DOBMar 21, 1989 (34y)GenderfemaleECOGNo known ECOGDiagnosisNo known diagnosisStageNo known stageWeightNo known weightHeightNo known heightBMINo known BMIBSANo known BSAMolecular profileNo known molecular profile
+Expand
+Summary
+Timeline
+Medical history
+Trends
+Comments
+0
+Comorbidities
+Medications
+Allergies and intolerances
+Patient history
+Comorbidities
+No known Comorbidities
+Medications
+Route
+Medicine name
+Dosage
+Duration
+Notes
+Prescribed
+Intravenous use PACLITAXEL (TAXOL) IN 0.9% NACL CHEMO INFUSION 43 MG
+active
+again, The patient need this drug again Jun 19, 2018
+Oral use Acetaminophen 300 MG / Codeine Phosphate 15 MG Oral Tablet Every four hours (qualifier value) Feb 20, 2018 - Feb 23, 2018
+active
+Note test 2, this is from MedicationRequest Feb 21, 2018
+Completed medications
+2
+Expand
+Allergies and intolerances
+No known Allergies and intolerances
+Patient history
+Marital status
+M

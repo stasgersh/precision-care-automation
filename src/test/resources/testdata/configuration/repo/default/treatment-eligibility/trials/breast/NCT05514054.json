@@ -1,0 +1,462 @@
+{
+	"id": "NCT05514054",
+	"type": "trial",
+	"status": "Recruiting",
+	"studyCompletion": "2027-10-01",
+	"name": "A Study of Imlunestrant Versus Standard Endocrine Therapy in Participants With Early Breast Cancer",
+	"description": "The main purpose of this study is to measure how well imlunestrant works compared to standard hormone therapy in participants with early breast cancer that is estrogen receptor positive (ER+) and human epidermal receptor 2 negative (HER2-). Participants must have already taken endocrine therapy for two to five years and must have a higher-than-average risk for their cancer to return. Study participation could last up to 10 years.",
+	"phase": "3",
+	"link": "https://clinicaltrials.gov/study/NCT05514054",
+	"variables": [
+		{
+			"id": "HER_ER",
+			"definition": {
+				"ai": {
+					"criteria": "Have a diagnosis of ER+, HER2- early-stage, resected, invasive breast cancer without evidence of distant metastasis."
+				}
+			},
+			"display": "Have a diagnosis of ER+, HER2- early-stage, resected, invasive breast cancer without evidence of distant metastasis."
+		},
+		{
+			"id": "ET",
+			"definition": {
+				"ai": {
+					"criteria": "Participants must have received at least 24 months but not more than 60 months of any adjuvant ET, from time of adjuvant ET initiation."
+				}
+			},
+			"display": "Participants must have received at least 24 months but not more than 60 months of any adjuvant ET, from time of adjuvant ET initiation."
+		},
+		{
+			"id": "therapy",
+			"definition": {
+				"ai": {
+					"criteria": "Participants may have received (neo) adjuvant chemotherapy and/or targeted therapy with a CDK4/6- or PARP- inhibitor."
+				}
+			},
+			"display": "Participants may have received (neo) adjuvant chemotherapy and/or targeted therapy with a CDK4/6- or PARP- inhibitor."
+		},
+		{
+			"id": "disease_recurrence_risk",
+			"definition": {
+				"ai": {
+					"criteria": "Must have an increased risk of disease recurrence based on clinical-pathological risk features."
+				}
+			},
+			"display": "Must have an increased risk of disease recurrence based on clinical-pathological risk features."
+		},
+		{
+			"id": "ECOG",
+			"definition": {
+				"ai": {
+					"criteria": "Have a Performance Status of 0 or 1 on the Eastern Cooperative Oncology Group scale."
+				}
+			},
+			"display": "Have a Performance Status of 0 or 1 on the Eastern Cooperative Oncology Group scale."
+		},
+		{
+			"id": "have_adequate",
+			"definition": {
+				"ai": {
+					"criteria": "Have adequate organ function."
+				}
+			},
+			"display": "Have adequate organ function."
+		},
+		{
+			"id": "metastatic",
+			"definition": {
+				"ai": {
+					"criteria": "Have any evidence of metastatic disease (including contralateral ALN) or inflammatory breast cancer at primary breast cancer diagnosis."
+				}
+			},
+			"display": "Have any evidence of metastatic disease (including contralateral ALN) or inflammatory breast cancer at primary breast cancer diagnosis."
+		},
+		{
+			"id": "six_month_gap",
+			"definition": {
+				"ai": {
+					"criteria": "Participants with more than a 6-month consecutive gap in therapy during the course of prior adjuvant ET."
+				}
+			},
+			"display": "Participants with more than a 6-month consecutive gap in therapy during the course of prior adjuvant ET."
+		},
+		{
+			"id": "ET_complete",
+			"definition": {
+				"ai": {
+					"criteria": "Participants who have completed or discontinued prior adjuvant ET >6 months prior to screening."
+				}
+			},
+			"display": "Participants who have completed or discontinued prior adjuvant ET >6 months prior to screening."
+		},
+		{
+			"id": "previous_breast_cancer",
+			"definition": {
+				"ai": {
+					"criteria": "Participants with a history of previous breast cancer are excluded, with the exception of ipsilateral DCIS treated by locoregional therapy alone >=5 years ago."
+				}
+			},
+			"display": "Participants with a history of previous breast cancer are excluded, with the exception of ipsilateral DCIS treated by locoregional therapy alone >=5 years ago."
+		},
+		{
+			"id": "pregnant_breastfeeding",
+			"definition": {
+				"ai": {
+					"criteria": "Pregnant, breastfeeding, or expecting to conceive or father children within the projected duration of the trial, starting with the screening visit through 180 days after the last dose of study intervention."
+				}
+			},
+			"display": "Pregnant, breastfeeding, or expecting to conceive or father children within the projected duration of the trial, starting with the screening visit through 180 days after the last dose of study intervention."
+		},
+		{
+			"id": "previously_received_ET",
+			"definition": {
+				"ai": {
+					"criteria": "Participant has previously received ET of any duration for breast cancer prevention (tamoxifen or AIs) or raloxifene."
+				}
+			},
+			"display": "Participant has previously received ET of any duration for breast cancer prevention (tamoxifen or AIs) or raloxifene."
+		},
+		{
+			"id": "other_cancer",
+			"definition": {
+				"ai": {
+					"criteria": "Participants with a history of any other cancer."
+				}
+			},
+			"display": "Participants with a history of any other cancer."
+		},
+		{
+			"id": "judgment",
+			"definition": {
+				"ai": {
+					"criteria": "Have serious preexisting medical conditions that, in the judgment of the investigator, would preclude participation in this study."
+				}
+			},
+			"display": "Have serious preexisting medical conditions that, in the judgment of the investigator, would preclude participation in this study."
+		}
+	],
+	"criteria": [
+		{
+			"id": "criteria_HER_ER",
+			"type": "inclusion",
+			"title": "Have a diagnosis of ER+, HER2- early-stage, resected, invasive breast cancer without evidence of distant metastasis.",
+			"allowMissingVariables": [
+				"HER_ER"
+			],
+			"dependency": [
+				"HER_ER"
+			],
+			"expression": "HER_ER",
+			"subCriteria": [
+				{
+					"id": "HER_ER",
+					"title": "Have a diagnosis of ER+, HER2- early-stage, resected, invasive breast cancer without evidence of distant metastasis.",
+					"description": "Have a diagnosis of ER+, HER2- early-stage, resected, invasive breast cancer without evidence of distant metastasis.",
+					"expression": "variables.HER_ER.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.HER_ER.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_ET",
+			"type": "inclusion",
+			"title": "Participants must have received at least 24 months but not more than 60 months of any adjuvant ET, from time of adjuvant ET initiation.",
+			"allowMissingVariables": [
+				"ET"
+			],
+			"dependency": [
+				"ET"
+			],
+			"expression": "ET",
+			"subCriteria": [
+				{
+					"id": "ET",
+					"title": "Participants must have received at least 24 months but not more than 60 months of any adjuvant ET, from time of adjuvant ET initiation.",
+					"description": "Participants must have received at least 24 months but not more than 60 months of any adjuvant ET, from time of adjuvant ET initiation.",
+					"expression": "variables.ET.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.ET.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_therapy",
+			"type": "inclusion",
+			"title": "Participants may have received (neo) adjuvant chemotherapy and/or targeted therapy with a CDK4/6- or PARP- inhibitor.",
+			"allowMissingVariables": [
+				"therapy"
+			],
+			"dependency": [
+				"therapy"
+			],
+			"expression": "therapy",
+			"subCriteria": [
+				{
+					"id": "therapy",
+					"title": "Participants may have received (neo) adjuvant chemotherapy and/or targeted therapy with a CDK4/6- or PARP- inhibitor.",
+					"description": "Participants may have received (neo) adjuvant chemotherapy and/or targeted therapy with a CDK4/6- or PARP- inhibitor.",
+					"expression": "variables.therapy.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.therapy.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_disease_recurrence_risk",
+			"type": "inclusion",
+			"title": "Must have an increased risk of disease recurrence based on clinical-pathological risk features.",
+			"allowMissingVariables": [
+				"disease_recurrence_risk"
+			],
+			"dependency": [
+				"disease_recurrence_risk"
+			],
+			"expression": "disease_recurrence_risk",
+			"subCriteria": [
+				{
+					"id": "disease_recurrence_risk",
+					"title": "Must have an increased risk of disease recurrence based on clinical-pathological risk features.",
+					"description": "Must have an increased risk of disease recurrence based on clinical-pathological risk features.",
+					"expression": "variables.disease_recurrence_risk.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.disease_recurrence_risk.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_ECOG",
+			"type": "inclusion",
+			"title": "Have a Performance Status of 0 or 1 on the Eastern Cooperative Oncology Group scale.",
+			"allowMissingVariables": [
+				"ECOG"
+			],
+			"dependency": [
+				"ECOG"
+			],
+			"expression": "ECOG",
+			"subCriteria": [
+				{
+					"id": "ECOG",
+					"title": "Have a Performance Status of 0 or 1 on the Eastern Cooperative Oncology Group scale.",
+					"description": "Have a Performance Status of 0 or 1 on the Eastern Cooperative Oncology Group scale.",
+					"expression": "variables.ECOG.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.ECOG.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_have_adequate",
+			"type": "inclusion",
+			"title": "Have adequate organ function.",
+			"allowMissingVariables": [
+				"have_adequate"
+			],
+			"dependency": [
+				"have_adequate"
+			],
+			"expression": "have_adequate",
+			"subCriteria": [
+				{
+					"id": "have_adequate",
+					"title": "Have adequate organ function.",
+					"description": "Have adequate organ function.",
+					"expression": "variables.have_adequate.value.response == `ELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.have_adequate.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_metastatic",
+			"type": "exclusion",
+			"title": "Have any evidence of metastatic disease (including contralateral ALN) or inflammatory breast cancer at primary breast cancer diagnosis.",
+			"allowMissingVariables": [
+				"metastatic"
+			],
+			"dependency": [
+				"metastatic"
+			],
+			"expression": "metastatic",
+			"subCriteria": [
+				{
+					"id": "metastatic",
+					"title": "Have any evidence of metastatic disease (including contralateral ALN) or inflammatory breast cancer at primary breast cancer diagnosis.",
+					"description": "Have any evidence of metastatic disease (including contralateral ALN) or inflammatory breast cancer at primary breast cancer diagnosis.",
+					"expression": "variables.metastatic.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.metastatic.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_6_month_gap",
+			"type": "exclusion",
+			"title": "Participants with more than a 6-month consecutive gap in therapy during the course of prior adjuvant ET.",
+			"allowMissingVariables": [
+				"six_month_gap"
+			],
+			"dependency": [
+				"six_month_gap"
+			],
+			"expression": "six_month_gap",
+			"subCriteria": [
+				{
+					"id": "six_month_gap",
+					"title": "Participants with more than a 6-month consecutive gap in therapy during the course of prior adjuvant ET.",
+					"description": "Participants with more than a 6-month consecutive gap in therapy during the course of prior adjuvant ET.",
+					"expression": "variables.six_month_gap.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.six_month_gap.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_ET_complete",
+			"type": "exclusion",
+			"title": "Participants who have completed or discontinued prior adjuvant ET >6 months prior to screening.",
+			"allowMissingVariables": [
+				"ET_complete"
+			],
+			"dependency": [
+				"ET_complete"
+			],
+			"expression": "ET_complete",
+			"subCriteria": [
+				{
+					"id": "ET_complete",
+					"title": "Participants who have completed or discontinued prior adjuvant ET >6 months prior to screening.",
+					"description": "Participants who have completed or discontinued prior adjuvant ET >6 months prior to screening.",
+					"expression": "variables.ET_complete.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.ET_complete.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_previous_breast_cancer",
+			"type": "exclusion",
+			"title": "Participants with a history of previous breast cancer are excluded, with the exception of ipsilateral DCIS treated by locoregional therapy alone >= 5 years ago.",
+			"allowMissingVariables": [
+				"previous_breast_cancer"
+			],
+			"dependency": [
+				"previous_breast_cancer"
+			],
+			"expression": "previous_breast_cancer",
+			"subCriteria": [
+				{
+					"id": "previous_breast_cancer",
+					"title": "Participants with a history of previous breast cancer are excluded, with the exception of ipsilateral DCIS treated by locoregional therapy alone >=5 years ago.",
+					"description": "Participants with a history of previous breast cancer are excluded, with the exception of ipsilateral DCIS treated by locoregional therapy alone >= 5 years ago.",
+					"expression": "variables.previous_breast_cancer.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.previous_breast_cancer.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_pregnant_breastfeeding",
+			"type": "exclusion",
+			"title": "Pregnant, breastfeeding, or expecting to conceive or father children within the projected duration of the trial, starting with the screening visit through 180 days after the last dose of study intervention.",
+			"allowMissingVariables": [
+				"pregnant_breastfeeding"
+			],
+			"dependency": [
+				"pregnant_breastfeeding"
+			],
+			"expression": "pregnant_breastfeeding",
+			"subCriteria": [
+				{
+					"id": "pregnant_breastfeeding",
+					"title": "Pregnant, breastfeeding, or expecting to conceive or father children within the projected duration of the trial, starting with the screening visit through 180 days after the last dose of study intervention.",
+					"description": "Pregnant, breastfeeding, or expecting to conceive or father children within the projected duration of the trial, starting with the screening visit through 180 days after the last dose of study intervention.",
+					"expression": "variables.pregnant_breastfeeding.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.pregnant_breastfeeding.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_previously_received_ET",
+			"type": "exclusion",
+			"title": "Participant has previously received ET of any duration for breast cancer prevention (tamoxifen or AIs) or raloxifene.",
+			"allowMissingVariables": [
+				"previously_received_ET"
+			],
+			"dependency": [
+				"previously_received_ET"
+			],
+			"expression": "previously_received_ET",
+			"subCriteria": [
+				{
+					"id": "previously_received_ET",
+					"title": "Participant has previously received ET of any duration for breast cancer prevention (tamoxifen or AIs) or raloxifene.",
+					"description": "Participant has previously received ET of any duration for breast cancer prevention (tamoxifen or AIs) or raloxifene.",
+					"expression": "variables.previously_received_ET.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.previously_received_ET.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_other_cancer",
+			"type": "exclusion",
+			"title": "Participants with a history of any other cancer.",
+			"allowMissingVariables": [
+				"other_cancer"
+			],
+			"dependency": [
+				"other_cancer"
+			],
+			"expression": "other_cancer",
+			"subCriteria": [
+				{
+					"id": "other_cancer",
+					"title": "Participants with a history of any other cancer.",
+					"description": "Participants with a history of any other cancer.",
+					"expression": "variables.other_cancer.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.other_cancer.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		},
+		{
+			"id": "criteria_judgment",
+			"type": "exclusion",
+			"title": "Have serious preexisting medical conditions that, in the judgment of the investigator, would preclude participation in this study.",
+			"allowMissingVariables": [
+				"judgment"
+			],
+			"dependency": [
+				"judgment"
+			],
+			"expression": "judgment",
+			"subCriteria": [
+				{
+					"id": "judgment",
+					"title": "Have serious preexisting medical conditions that, in the judgment of the investigator, would preclude participation in this study.",
+					"description": "Have serious preexisting medical conditions that, in the judgment of the investigator, would preclude participation in this study.",
+					"expression": "variables.judgment.value.response == `INELIGIBLE`",
+					"explainability": {
+						"displayValue": "variables.judgment.value.reasoning.join(' ', @)"
+					}
+				}
+			]
+		}
+	]
+}

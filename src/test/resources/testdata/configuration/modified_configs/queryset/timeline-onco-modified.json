@@ -1,0 +1,956 @@
+{
+  "id": "timeline.onco.extended",
+  "items": [
+    [
+      {
+        "key": "surgicalProcedures",
+        "query": {
+          "from": "surgicalProcedure",
+          "filter": {
+            "should": [
+              {
+                "attributes.status": {
+                  "eq": "in-progress | completed"
+                }
+              },
+              {
+                "attributes.status": {
+                  "eq": null
+                }
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "radiotherapyProcedures",
+        "query": {
+          "from": "radiotherapyProcedure",
+          "filter": {
+            "should": [
+              {
+                "attributes.status": {
+                  "eq": "in-progress | completed | active"
+                }
+              },
+              {
+                "attributes.status": {
+                  "eq": null
+                }
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "radiotherapyCourseSummaries",
+        "query": {
+          "from": "radiotherapyCourseSummary",
+          "filter": {
+            "should": [
+              {
+                "attributes.status": {
+                  "eq": "in-progress | completed"
+                }
+              },
+              {
+                "attributes.status": {
+                  "eq": null
+                }
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "radiotherapySummaryNotes",
+        "query": {
+          "from": "clinicalNote",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "radiotherapySummaryNote"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "current"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.docStatus": {
+                      "eq": "final | amended"
+                    }
+                  },
+                  {
+                    "attributes.docStatus": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "oncologyVisit",
+        "query": {
+          "from": "patientVisit",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "oncologyVisit"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "oncologyVisitRequest",
+        "query": {
+          "from": "oncologyVisitRequest",
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "painAssessments",
+        "query": {
+          "from": "vitalSigns",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "painAssessment"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "genomicReports",
+        "query": {
+          "from": "genomicReport",
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected | appended | current"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.docStatus": {
+                      "eq": "final | amended"
+                    }
+                  },
+                  {
+                    "attributes.docStatus": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "genomicMarkerTestResults",
+        "query": {
+          "from": "labResult",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "genomicMarkerTestResult"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "immunologyMarkerTestResults",
+        "query": {
+          "from": "labResult",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "immunologyMarkerTestResult"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "generalTumorMarkerTestResults",
+        "query": {
+          "from": "labResult",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "generalTumorMarkerTestResult"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "prostateTumorMarkerTestResults",
+        "query": {
+          "from": "labResult",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "prostateTumorMarkerTestResult"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "breastReceptorTumorMarkerTestResult",
+        "query": {
+          "from": "labResult",
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "estrogenReceptorStatus"
+                    }
+                  },
+                  {
+                    "subtypes": {
+                      "eq": "her2ReceptorStatus"
+                    }
+                  },
+                  {
+                    "subtypes": {
+                      "eq": "progesteroneReceptorStatus"
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "testosterones",
+        "query": {
+          "from": "labResult",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "testosterone"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "breastTumorMarkerTestResults",
+        "query": {
+          "from": "labResult",
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "breastTumorMarkerTestResultCa153"
+                    }
+                  },
+                  {
+                    "subtypes": {
+                      "eq": "breastTumorMarkerTestResultCa125"
+                    }
+                  },
+                  {
+                    "subtypes": {
+                      "eq": "breastTumorMarkerTestResultCa2729"
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "pathologyReports",
+        "query": {
+          "from": "pathologyReport",
+          "filter": {
+            "should": [
+              {
+                "attributes.status": {
+                  "eq": "in-progress | completed | final | amended | corrected | appended | current"
+                }
+              },
+              {
+                "attributes.status": {
+                  "eq": null
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 500
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "labReports",
+        "query": {
+          "from": "labReport",
+          "filter": {
+            "must": [
+              {
+                "attributes.reportTitle": {
+                  "eq": null
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "final | amended | corrected | appended | active"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 750
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "oncologyOutpatientNotes",
+        "query": {
+          "from": "clinicalNote",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "oncologyOutpatientNote"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "current"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.docStatus": {
+                      "eq": "final | amended"
+                    }
+                  },
+                  {
+                    "attributes.docStatus": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 500
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "oncologyMDTReports",
+        "query": {
+          "from": "clinicalNote",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "oncologyMDTReport"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "current"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.docStatus": {
+                      "eq": "final | amended"
+                    }
+                  },
+                  {
+                    "attributes.docStatus": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      },
+      {
+        "key": "erVisits",
+        "query": {
+          "from": "patientVisit",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "emergencyVisit"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "dischargeSummaryNotes",
+        "query": {
+          "from": "clinicalNote",
+          "filter": {
+            "must": [
+              {
+                "subtypes": {
+                  "eq": "dischargeSummaryNote"
+                }
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "current"
+                    }
+                  },
+                  {
+                    "attributes.status": {
+                      "eq": null
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.docStatus": {
+                      "eq": "final | amended"
+                    }
+                  },
+                  {
+                    "attributes.docStatus": {
+                      "eq": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 500
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "imagingStudy",
+        "query": {
+          "from": "imagingStudyRequest",
+          "dedup": true
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "imagingReports",
+        "query": {
+          "from": "imagingReport",
+          "filter": {
+            "should": [
+              {
+                "attributes.status": {
+                  "eq": "in-progress | completed | final | amended | corrected | appended"
+                }
+              },
+              {
+                "attributes.status": {
+                  "eq": null
+                }
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 500
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "chemoMedications",
+        "query": {
+          "from": "medication",
+          "filter": {
+            "must": [
+              {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "chemo"
+                    }
+                  },
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.intent": {
+                      "neq": "proposal"
+                    }
+                  }
+                ]
+              },
+              {
+                "should": [
+                  {
+                    "attributes.status": {
+                      "eq": "active | completed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          },
+          {
+            "processor": {
+              "name": "doseChanges"
+            }
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "key": "uncategorized",
+        "query": {
+          "from": "uncategorized",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": false,
+          "size": 1000
+        },
+        "postProcessing": [
+          {
+            "processor": {
+              "name": "exactDate"
+            }
+          }
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "lab-creatinine-result-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "lab-creatinine-result-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "38483-4",
+              "display": "Creatinine [Mass/volume] in Blood"
+            },
+            {
+              "code": "59826-8",
+              "display": "Creatinine [Moles/volume] in Blood"
+            },
+            {
+              "code": "21232-4",
+              "display": "Creatinine [Mass/volume] in Arterial blood"
+            },
+            {
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

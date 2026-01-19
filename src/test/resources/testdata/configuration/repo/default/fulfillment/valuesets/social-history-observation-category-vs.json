@@ -1,0 +1,19 @@
+{
+  "name": "social-history-observation-category-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "social-history-observation-category-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "concept": [
+            {
+              "code": "social-history"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

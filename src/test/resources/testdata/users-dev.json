@@ -1,0 +1,58 @@
+[
+  {
+    "alias": "DEFAULT-TEST-USER",
+    "username": "onchron-e2e-user-0",
+    "password": "User!321",
+    "familyName": "Onchron",
+    "givenName": "User",
+    "organizationName": "onchrontest.org"
+  },
+  {
+    "alias": "TEST-USER-1",
+    "username": "onchron-e2e-user-1",
+    "password": "User!321",
+    "familyName": "Onchron",
+    "givenName": "User",
+    "organizationName": "onchrontest.org"
+  },
+  {
+    "alias": "TEST-USER-2",
+    "username": "onchron-e2e-user-2",
+    "password": "User!321",
+    "familyName": "Onchron",
+    "givenName": "User",
+    "organizationName": "onchrontest.org"
+  },
+  {
+    "alias": "TEST-USER-3",
+    "username": "onchron-e2e-user-3",
+    "password": "User!321",
+    "familyName": "Onchron",
+    "givenName": "User",
+    "organizationName": "onchrontest.org"
+  },
+  {
+    "alias": "TEST-USER-4",
+    "username": "onchron-e2e-user-4",
+    "password": "User!321",
+    "familyName": "Onchron",
+    "givenName": "User",
+    "organizationName": "onchrontest.org"
+  },
+  {
+    "alias": "TEST-USER-5",
+    "username": "onchron-e2e-user-5",
+    "password": "User!321",
+    "familyName": "Onchron",
+    "givenName": "User",
+    "organizationName": "onchrontest.org"
+  },
+  {
+    "alias":"MY-USER",
+    "username":"stanislav.gershman",
+    "password":"@LfgxH4qEptnrrF",
+    "familyName":"Gershman",
+    "givenName":"Stanislav",
+    "organizationName":"onchrontest.org"
+  }
+]

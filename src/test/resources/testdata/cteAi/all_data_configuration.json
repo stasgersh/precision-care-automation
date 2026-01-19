@@ -1,0 +1,1321 @@
+{
+  "Observation": {
+    "prerequisite": true,
+    "fields": {
+      "elements": {
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        },
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "effectiveDateTime"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "valueQuantity",
+                "value"
+              ]
+            }
+          ]
+        },
+        "unit": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "valueQuantity",
+                "unit"
+              ],
+              "transformationFunction": "transform_unit"
+            }
+          ]
+        },
+        "category": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "category",
+                0,
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "measurement_type": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "code",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "code",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "medicalInterpretation": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "interpretation",
+                0,
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "interpretation",
+                0,
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "body_site": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "bodySite",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "bodySite",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "notes": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "note",
+                0,
+                "text"
+              ]
+            }
+          ]
+        },
+        "lowValue": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "referenceRange",
+                0,
+                "low",
+                "value"
+              ]
+            }
+          ]
+        },
+        "highValue": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "referenceRange",
+                0,
+                "high",
+                "value"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "On {datetime}, {measurement_type} was observed with value of {value} {unit}",
+        "{measurement_type} was observed with value of {value} {unit}"
+      ]
+    },
+    "groupKey": "measurement_type",
+    "aggregation": {
+      "enableAggregation": true,
+      "groupBy": "measurement_type",
+      "batchSize": 5,
+      "singularFields": [
+        "patient_id"
+      ],
+      "joinFields": [
+        "id"
+      ],
+      "batchStringTemplate": {
+        "prefixTemplate": [
+          "{measurement_type} measurements:\n"
+        ],
+        "segmentTemplate": [
+          "-{datetime}: [Observed Body Part {body_site}] [Interpretation {medicalInterpretation}] [Notes {notes}] {value} ({unit}) [Reference Range {lowValue}-{highValue} ({unit})]"
+        ],
+        "suffixTemplate": []
+      }
+    }
+  },
+  "Medication": {
+    "patientIdKey": false,
+    "prerequisite": true,
+    "includeData": false,
+    "fields": {
+      "elements": {
+        "medication": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "code",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "code",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Condition": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "onsetDateTime"
+              ]
+            }
+          ]
+        },
+        "status": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "clinicalStatus",
+                "coding",
+                0,
+                "code"
+              ],
+              "transformationFunction": "filter_resource:entered-in-error"
+            }
+          ]
+        },
+        "condition": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "code",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "code",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "verification_status": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "verificationStatus",
+                "text"
+              ],
+              "transformationFunction": "filter_resource:Entered in Error"
+            },
+            {
+              "parsingKeys": [
+                "verificationStatus",
+                "coding",
+                0,
+                "code"
+              ],
+              "transformationFunction": "filter_resource:entered-in-error"
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        }
+      },
+      "generatedFields": {
+        "status_sentence": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "status"
+              ],
+              "mapping": {
+                "active": "experiencing the symptoms of, or there is evidence of, {condition}",
+                "recurrence": "experiencing a re-occurrence or repeating of previously resolved {condition}",
+                "relapse": "experiencing a return of {condition}, or shows signs and symptoms after a period of improvement or remission",
+                "inactive": "no longer experiencing the symptoms of {condition} or there is no longer evidence",
+                "remission": "no longer experiencing the symptoms of {condition}, but there is a risk of the symptoms returning",
+                "resolved": "no longer experiencing the symptoms of {condition} and there is a negligible perceived risk of the symptoms returning"
+              },
+              "transformationFunction": "construct_string_with_resource_info"
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "As of {datetime}, the patient is {status_sentence}"
+      ]
+    },
+    "aggregation": {
+      "enableAggregation": true,
+      "groupBy": "condition",
+      "batchSize": 5,
+      "singularFields": [
+        "patient_id"
+      ],
+      "joinFields": [
+        "id"
+      ],
+      "batchStringTemplate": {
+        "prefixTemplate": [
+          "Timeline Status on Condition\n {condition}:"
+        ],
+        "segmentTemplate": [
+          "-{datetime}: the patient is {status_sentence} and its verification status is {verification_status}"
+        ],
+        "suffixTemplate": []
+      }
+    }
+  },
+  "MedicationStatement": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "effectiveDateTime"
+              ]
+            }
+          ]
+        },
+        "route": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosage",
+                0,
+                "route",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        },
+        "status": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "status"
+              ]
+            }
+          ]
+        },
+        "medication": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "medicationCodeableConcept",
+                "coding",
+                0,
+                "display"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "medicationReference",
+                "reference"
+              ],
+              "lookUp": {
+                "lookupResourceType": "Medication",
+                "extractField": "medication"
+              }
+            }
+          ]
+        },
+        "notes": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "note",
+                0,
+                "text"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "On {datetime}, {medication} was administered"
+      ]
+    },
+    "aggregation": {
+      "enableAggregation": true,
+      "groupBy": "medication",
+      "batchSize": 5,
+      "singularFields": [
+        "patient_id"
+      ],
+      "joinFields": [
+        "id"
+      ],
+      "batchStringTemplate": {
+        "prefixTemplate": [
+          "Medication {medication} administered:"
+        ],
+        "segmentTemplate": [
+          "- {datetime} Status {status}[, Route {route}][, Additional Notes {notes}]"
+        ],
+        "suffixTemplate": []
+      }
+    }
+  },
+  "Procedure": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "performedDateTime"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "performedPeriod",
+                "start"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        },
+        "notes": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "note",
+                0,
+                "text"
+              ]
+            }
+          ]
+        },
+        "body_site": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "bodySite",
+                0,
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "bodySite",
+                0,
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "procedure": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "code",
+                "text2"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "code",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "On {datetime}, {procedure} was performed [on {body_site}.][ Notes about procedure is {notes}]"
+      ]
+    }
+  },
+  "DocumentReference": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "date"
+              ]
+            }
+          ]
+        },
+        "document_code": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "category",
+                0,
+                "coding",
+                0,
+                "code"
+              ],
+              "transformationFunction": "filter_resource:60591-5"
+            }
+          ]
+        },
+        "note_type": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "category",
+                0,
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "medicalReports": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "content",
+                "[all]",
+                "attachment"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        }
+      },
+      "generatedFields": {
+        "combinedMedicalReport": {
+          "retrievalOptions": [
+            {
+              "type": "attachment",
+              "parsingKeys": [
+                "medicalReports"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "A {note_type} from {datetime}:\n{combinedMedicalReport}"
+      ]
+    }
+  },
+  "AllergyIntolerance": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "recordedDate"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "patient",
+                "reference"
+              ]
+            }
+          ]
+        },
+        "category": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "category",
+                0
+              ]
+            }
+          ]
+        },
+        "allergyCode": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "code",
+                "text"
+              ]
+            }
+          ]
+        },
+        "criticality": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "criticality"
+              ]
+            }
+          ]
+        },
+        "note": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "note",
+                0,
+                "text"
+              ]
+            }
+          ]
+        },
+        "reactionDescription": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "reaction",
+                0,
+                "description"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "An allergic reaction was observed in {category} to {allergyCode} with its criticality classified as {criticality}. [Additional notes available about the allergy is {note}.][Adverse reaction to the allergy was {reactionDescription}]"
+      ]
+    }
+  },
+  "MedicationRequest": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "authoredOn"
+              ]
+            }
+          ]
+        },
+        "status": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "status"
+              ]
+            }
+          ]
+        },
+        "medication": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "medicationReference",
+                "display"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "medicationCodeableConcept",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "medicationCodeableConcept",
+                "coding",
+                0,
+                "display"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "medicationReference",
+                "reference"
+              ],
+              "lookUp": {
+                "lookupResourceType": "Medication",
+                "extractField": "medication"
+              }
+            }
+          ]
+        },
+        "notes": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "note",
+                0,
+                "text"
+              ]
+            }
+          ]
+        },
+        "dose": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosageInstruction",
+                0,
+                "text"
+              ]
+            }
+          ]
+        },
+        "doseValue": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosageInstruction",
+                0,
+                "doseAndRate",
+                0,
+                "doseQuantity",
+                "value"
+              ]
+            }
+          ]
+        },
+        "doseUnit": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosageInstruction",
+                0,
+                "doseAndRate",
+                0,
+                "doseQuantity",
+                "unit"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        }
+      },
+      "generatedFields": {
+        "dosage": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dose"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "doseValue"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "On {datetime}, {medication} was administered"
+      ]
+    },
+    "aggregation": {
+      "enableAggregation": true,
+      "groupBy": "medication",
+      "batchSize": 5,
+      "singularFields": [
+        "patient_id"
+      ],
+      "joinFields": [
+        "id"
+      ],
+      "batchStringTemplate": {
+        "prefixTemplate": [
+          "An order or request to administer Medication {medication}:"
+        ],
+        "segmentTemplate": [
+          "- {datetime} Dosage: {dose}, request status : {status} [Additional Notes {note}]",
+          "- {datetime} Dosage: {doseValue} {doseUnit}, request status : {status} [Additional Notes {notes}]"
+        ],
+        "suffixTemplate": []
+      }
+    }
+  },
+  "MedicationAdministration": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "effectiveDateTime"
+              ]
+            }
+          ]
+        },
+        "status": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "status"
+              ]
+            }
+          ]
+        },
+        "medication": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "medicationReference",
+                "display"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "medicationCodeableConcept",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "medicationCodeableConcept",
+                "coding",
+                0,
+                "display"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "medicationReference",
+                "reference"
+              ],
+              "lookUp": {
+                "lookupResourceType": "Medication",
+                "extractField": "medication"
+              }
+            }
+          ]
+        },
+        "notes": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "note",
+                0,
+                "text"
+              ]
+            }
+          ]
+        },
+        "dose": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosage",
+                "text"
+              ]
+            }
+          ]
+        },
+        "doseValue": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosage",
+                "dose",
+                "value"
+              ]
+            }
+          ]
+        },
+        "doseUnit": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosage",
+                "dose",
+                "unit"
+              ]
+            }
+          ]
+        },
+        "route": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dosage",
+                "route",
+                "coding",
+                0,
+                "display"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "dosage",
+                "route",
+                "text"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        }
+      },
+      "generatedFields": {
+        "dosage": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "dose"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "doseValue"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "On {datetime}, {medication} was administered"
+      ]
+    },
+    "aggregation": {
+      "enableAggregation": true,
+      "groupBy": "medication",
+      "batchSize": 5,
+      "singularFields": [
+        "patient_id"
+      ],
+      "joinFields": [
+        "id"
+      ],
+      "batchStringTemplate": {
+        "prefixTemplate": [
+          "Medication {medication} administered:"
+        ],
+        "segmentTemplate": [
+          "- {datetime} Dosage: {dose}, administration status: {status} [, Route {route}] [, Additional Notes {notes}]",
+          "- {datetime} Dosage: {doseValue}, {doseUnit} administration status: {status} [, Route {route}] [, Additional Notes {notes}]"
+        ],
+        "suffixTemplate": []
+      }
+    }
+  },
+  "DiagnosticReport": {
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "effectiveDateTime"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "subject",
+                "reference"
+              ]
+            }
+          ]
+        },
+        "observation_ids": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "result",
+                "[all]",
+                "reference"
+              ]
+            }
+          ]
+        },
+        "report_type": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "code",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "code",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        },
+        "status": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "status"
+              ]
+            }
+          ]
+        },
+        "medicalReport": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "presentedForm",
+                "[all]"
+              ]
+            }
+          ]
+        }
+      },
+      "generatedFields": {
+        "toggle": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "medicalReport"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "observation_ids"
+              ]
+            }
+          ]
+        },
+        "combinedMedicalReport": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "type": "attachment",
+              "parsingKeys": [
+                "medicalReport"
+              ]
+            }
+          ]
+        },
+        "observationSubstring": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "observation_ids"
+              ],
+              "aggregate": {
+                "aggregateResourceType": "Observation",
+                "stringTemplate": [
+                  "- {measurement_type}: {value} {unit}"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "{report_type} was measured on {datetime}, [yielding the following measurements:\n {observationSubstring}] [\n Notes: {combinedMedicalReport}]"
+      ]
+    }
+  },
+  "Patient": {
+    "patientIdKey": "_id",
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "meta",
+                "lastUpdated"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "gender": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "gender"
+              ]
+            }
+          ]
+        },
+        "birthDate": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "birthDate"
+              ]
+            }
+          ]
+        },
+        "communication": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "communication",
+                0,
+                "language",
+                "coding",
+                0,
+                "display"
+              ]
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "{gender} patient born on {birthDate} [,communication language {communication}]"
+      ]
+    }
+  },
+  "AdverseEvent": {
+    "patientIdKey": "subject",
+    "fields": {
+      "elements": {
+        "datetime": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "date"
+              ]
+            }
+          ]
+        },
+        "patient_id": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "id"
+              ]
+            }
+          ]
+        },
+        "actuality": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "actuality"
+              ]
+            }
+          ]
+        },
+        "category": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "category",
+                0,
+                "coding",
+                "0",
+                "display"
+              ]
+            }
+          ]
+        },
+        "event": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "event",
+                "text"
+              ]
+            },
+            {
+              "parsingKeys": [
+                "event",
+                "coding",
+                "0",
+                "display"
+              ]
+            }
+          ]
+        },
+        "seriousness": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "seriousness",
+                "coding",
+                "0",
+                "display"
+              ]
+            }
+          ]
+        },
+        "severity": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "severity",
+                "coding",
+                "0",
+                "display"
+              ]
+            }
+          ]
+        },
+        "outcome": {
+          "optional": true,
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "outcome",
+                "coding",
+                "0",
+                "display"
+              ]
+            }
+          ]
+        }
+      },
+      "generatedFields": {
+        "actuality_sentence": {
+          "retrievalOptions": [
+            {
+              "parsingKeys": [
+                "actuality"
+              ],
+              "mapping": {
+                "actual": "actually experienced adverse event",
+                "potential": "had the potential to experience event"
+              }
+            }
+          ]
+        }
+      },
+      "resourceStringTemplate": [
+        "On {datetime} patient {actuality_sentence} of type {category}, exact event: {event}.[ event seriousness: {seriousness}.][ event severity: {severity}.][ outcome from the adverse event: {outcome}]"
+      ]
+    }
+  }
+}

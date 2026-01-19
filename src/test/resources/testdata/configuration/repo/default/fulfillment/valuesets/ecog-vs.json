@@ -1,0 +1,19 @@
+{
+  "name": "ecog-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "ecog-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "89247-1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "receptor-tumor-marker-test-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "receptor-tumor-marker-test-vs",
+    "description": "Receptor tumor marker set. LOINC: curated subset of the mCODE tumor marker test valueset (http://hl7.org/fhir/us/mcode/ValueSet-mcode-tumor-marker-test-vs.html)",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "10861-3",
+              "display": "Progesterone receptor [Mass/mass] in Tissue"
+            },
+            {
+              "code": "31207-4",
+              "display": "Progesterone receptor [Moles/mass] in Tissue"
+            },
+            {
+              "code": "13659-8",
+              "display": "Epidermal growth factor receptor [Mass/mass] in Tissue"
+            },
+            {
+              "code": "14050-9",
+              "display": "Epidermal growth factor receptor [Moles/mass] in Tissue"
+            },
+            {
+              "code": "14130-9",
+              "display": "Estrogen receptor [Moles/mass] in Tissue"
+            },
+            {
+              "code": "32996-1",
+              "display": "HER2 [Mass/volume] in Serum"
+            },
+            {
+              "code": "42914-2",
+              "display": "HER2 [Mass/volume] in Serum by Immunoassay"
+            },
+            {
+              "code": "72382-5",
+              "display": "HER2 [Units/volume] in Tissue by Immunoassay"
+            },
+            {
+              "code": "14230-7",
+              "display": "Cells.progesterone receptor/100 cells in Tissue by Immune stain"
+            },
+            {
+              "code": "85325-9",
+              "display": "Cells.progesterone receptor/100 cells in Breast cancer specimen by Immune stain"
+            },
+            {
+              "code": "85331-7",
+              "display": "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+            },
+            {
+              "code": "32581-1",
+              "display": "Epidermal growth factor receptor Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "39004-7",
+              "display": "Epidermal growth factor receptor Ag [Presence] in Tissue"
+            },
+            {
+              "code": "42782-3",
+              "display": "Epidermal growth factor receptor.phosphorylated Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "14228-1",
+              "display": "Cells.estrogen receptor/100 cells in Tissue by Immune stain"
+            },
+            {
+              "code": "85310-1",
+              "display": "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+            },
+            {
+              "code": "85329-1",
+              "display": "Cells.estrogen receptor/100 cells in Breast cancer specimen by Immune stain"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

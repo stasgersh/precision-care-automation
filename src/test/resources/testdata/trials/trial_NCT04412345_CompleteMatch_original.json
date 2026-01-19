@@ -1,0 +1,100 @@
+{
+  "id": "NCT04412345",
+  "type": "trial",
+  "status": "Recruiting",
+  "studyCompletion": "2026-12-27",
+  "name": "Complete Match Status Trial simulation title",
+  "description": "The purpose of this study is to assess the safety, tolerability and preliminary efficacy of CC-94676 in men with progressive metastatic castration resistant prostate cancer.",
+  "phase": "1",
+  "link": "https://clinicaltrials.gov/study/NCT04428711?a=23",
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_female",
+      "type": "inclusion",
+      "title": "Gender is female",
+      "allowMissingVariables": null,
+      "dependency": [
+        "gender"
+      ],
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is female",
+          "description": "Gender is female",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `female`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "dependency": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)"
+          }
+        }
+      ]
+    }
+  ]
+}

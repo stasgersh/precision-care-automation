@@ -1,0 +1,29 @@
+{
+  "name": "biopsy-report-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "biopsy-report-vs",
+    "description": "Snomed: all concepts which is-a 726566009|Pathology biopsy report (record artifact), 721631001|Bone marrow pathology biopsy report (record artifact)",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "726566009",
+              "display": "Pathology biopsy report (record artifact)"
+            },
+            {
+              "code": "721631001",
+              "display": "Bone marrow pathology biopsy report (record artifact)"
+            },
+            {
+              "code": "721967005",
+              "display": "Tissue pathology biopsy report (record artifact)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/f5f5ed34-8716-4f57-ae04-f296f3350454",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "f5f5ed34-8716-4f57-ae04-f296f3350454",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "MacroNavYear"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "111-987-0003",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1999-11-11",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "86646c6d-1113-4d51-9a95-1ddebd706ee3",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report today"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f5f5ed34-8716-4f57-ae04-f296f3350454"
+        },
+        "effectiveDateTime": "<TODAY>T00:10:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/a542116c-bf15-4ed6-84d0-026f950f38ba"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "bdf89baf-6222-49b5-b6e9-e09c25c4834b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 5 years ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f5f5ed34-8716-4f57-ae04-f296f3350454"
+        },
+        "effectiveDateTime": "<1825_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: report, 5 years ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/c1f8f30d-df42-4fa4-9ba2-511caa311173"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "5c2280f3-bf2e-415f-9b9e-301ca733810b",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 6 years ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f5f5ed34-8716-4f57-ae04-f296f3350454"
+        },
+        "effectiveDateTime": "<2190_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: report, 6 years ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/d22ac9d0-91c6-4e7e-8a64-c841eaa82741"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "88228b54-6ebf-42a5-bc9a-c74d7b644666",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 10 years ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f5f5ed34-8716-4f57-ae04-f296f3350454"
+        },
+        "effectiveDateTime": "<3650_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: report, 10 years ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/2868e12e-8ca5-415b-93f0-c675f5a3dcbc"
+          }
+        ]
+      }
+    }
+  ]
+}

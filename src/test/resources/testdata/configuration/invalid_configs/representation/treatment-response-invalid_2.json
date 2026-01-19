@@ -1,0 +1,854 @@
+{
+  "id": "treatmentResponse.onco.general",
+  "items": [
+    {
+      "group": "studyA",
+      "elements": [
+        {
+          "value": { "path": "$.imagingReportA.date" },
+          "type": "datetime"
+        },
+        [
+          {
+            "value": { "path": "$.imagingReportA.attributes.title" },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.imagingReportA.attributes.context.procedure[*].code",
+              "processor": { "name": "codeableConceptText" }
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": { "path": "$.imagingReportA" },
+            "clpFindings": { "path": "$.attributes.aiSummary.l2" }
+          },
+          "type": "nlp"
+        },
+        {
+          "type": "list",
+          "dependsOn": {
+            "path": "$.imagingReportA"
+          },
+          "value": {
+            "elements": [
+              [
+                {
+                  "type": "link",
+                  "dependsOn": {
+                    "path": "$.imagingReportA.attributes.reportContent[0]"
+                  },
+                  "value": {
+                    "icon": "ico-notes",
+                    "label": [{ "constant": "Open complete report" }],
+                    "url": {
+                      "path": "$.imagingReportA",
+                      "processor": {
+                        "name": "reportLink",
+                        "args": { "representation": "reportHtml.onco.general" }
+                      }
+                    },
+                    "target": "internal"
+                  },
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.imagingReportA.attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.imagingReportA.attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.imagingReportA.date" }
+                          },
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.imagingReportA.attributes.author[*].name[*]",
+                                "processor": { "name": "humanName" }
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.imagingReportA.attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No author" }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.imagingReportA.attributes.status"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No status" }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.imagingReportA.date" },
+                      "type": "datetime"
+                    }
+                  }
+                },
+                {
+                  "type": "link",
+                  "value": {
+                    "icon": "ico-notes",
+                    "label": [{ "constant": "Open complete report" }],
+                    "url": {
+                      "constant": "#"
+                    },
+                    "target": "internal"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": {
+                    "label": [{ "constant": "Open images" }],
+                    "icon": "ico-ct",
+                    "url": {
+                      "path": "$.imagingReportA.attributes.imagingStudy[0].identifier",
+                      "processor": {
+                        "name": "dicomViewerUrl",
+                        "args": {
+                          "imagingParameters": [
+                            {
+                              "name": "acsn",
+                              "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                            },
+                            {
+                              "name": "studyId",
+                              "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                              "processor": { "name": "dicomId" }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link",
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.imagingReportA.attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.imagingReportA.attributes.context.procedure[*].code",
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.imagingReportA.date" }
+                          }
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.imagingReportA.date" },
+                      "type": "datetime"
+                    }
+                  }
+                },
+                {
+                  "value": {
+                    "label": [{ "constant": "Open images" }],
+                    "icon": "ico-ct",
+                    "url": {
+                      "path": "$.imagingReportA.attributes.identifier",
+                      "processor": {
+                        "name": "dicomViewerUrl",
+                        "args": {
+                          "imagingParameters": [
+                            {
+                              "name": "acsn",
+                              "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                            },
+                            {
+                              "name": "studyId",
+                              "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                              "processor": { "name": "dicomId" }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link",
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.imagingReportA.attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.imagingReportA.attributes.context.procedure[*].code",
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.imagingReportA.date" }
+                          }
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.imagingReportA.date" },
+                      "type": "datetime"
+                    }
+                  }
+                },
+                {
+                  "value": {
+                    "label": [{ "constant": "Open images" }],
+                    "icon": "ico-ct",
+                    "url": {
+                      "constant": "#"
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "studyB",
+      "elements": [
+        {
+          "value": { "path": "$.imagingReportB.date" },
+          "type": "datetime"
+        },
+        [
+          {
+            "value": { "path": "$.imagingReportB.attributes.title" },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          },
+          {
+            "value": {
+              "path": "$.imagingReportB.attributes.context.procedure[*].code",
+              "processor": { "name": "codeableConceptText" }
+            },
+            "type": "text",
+            "meta": {
+              "title": true
+            }
+          }
+        ],
+        {
+          "value": {
+            "sourceDocument": { "path": "$.imagingReportB" },
+            "clpFindings": { "path": "$.attributes.aiSummary.l2" }
+          },
+          "type": "nlp"
+        },
+        {
+          "type": "list",
+          "dependsOn": {
+            "path": "$.imagingReportB"
+          },
+          "value": {
+            "elements": [
+              [
+                {
+                  "type": "link",
+                  "dependsOn": {
+                    "path": "$.imagingReportB.attributes.reportContent[0]"
+                  },
+                  "value": {
+                    "label": [{ "constant": "Open complete report" }],
+                    "icon": "ico-notes",
+                    "url": {
+                      "path": "$.imagingReportB",
+                      "processor": {
+                        "name": "reportLink",
+                        "args": { "representation": "reportHtml.onco.general" }
+                      }
+                    },
+                    "target": "internal"
+                  },
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.imagingReportB.attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.imagingReportB.attributes.context.procedure[*].code",
+                          "processor": { "name": "codeableConceptText" }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.imagingReportB.date" }
+                          },
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.imagingReportB.attributes.author[*].name[*]",
+                                "processor": { "name": "humanName" }
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.imagingReportB.attributes.organization[*].name"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No author" }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "text",
+                              "value": {
+                                "path": "$.imagingReportB.attributes.status"
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "value": { "constant": "No status" }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.imagingReportB.date" },
+                      "type": "datetime"
+                    }
+                  }
+                },
+                {
+                  "type": "link",
+                  "value": {
+                    "label": [{ "constant": "Open complete report" }],
+                    "icon": "ico-notes",
+                    "url": {
+                      "constant": "#"
+                    },
+                    "target": "internal"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": {
+                    "label": [{ "constant": "Open images" }],
+                    "icon": "ico-ct",
+                    "url": {
+                      "path": "$.imagingReportB.attributes.imagingStudy[0].identifier",
+                      "processor": {
+                        "name": "dicomViewerUrl",
+                        "args": {
+                          "imagingParameters": [
+                            {
+                              "name": "acsn",
+                              "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                            },
+                            {
+                              "name": "studyId",
+                              "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                              "processor": { "name": "dicomId" }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link",
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.imagingReportB.attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.imagingReportB.attributes.context.procedure[*].code",
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.imagingReportB.date" }
+                          }
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.imagingReportB.date" },
+                      "type": "datetime"
+                    }
+                  }
+                },
+                {
+                  "value": {
+                    "label": [{ "constant": "Open images" }],
+                    "icon": "ico-ct",
+                    "url": {
+                      "path": "$.imagingReportB.attributes.identifier",
+                      "processor": {
+                        "name": "dicomViewerUrl",
+                        "args": {
+                          "imagingParameters": [
+                            {
+                              "name": "acsn",
+                              "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                            },
+                            {
+                              "name": "studyId",
+                              "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                              "processor": { "name": "dicomId" }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link",
+                  "meta": {
+                    "title": [
+                      {
+                        "value": {
+                          "path": "$.imagingReportB.attributes.title"
+                        },
+                        "type": "text"
+                      },
+                      {
+                        "value": {
+                          "path": "$.imagingReportB.attributes.context.procedure[*].code",
+                          "processor": {
+                            "name": "codeableConceptText"
+                          }
+                        },
+                        "type": "text"
+                      }
+                    ],
+                    "subTitle": {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          {
+                            "type": "datetime",
+                            "value": { "path": "$.imagingReportB.date" }
+                          }
+                        ]
+                      }
+                    },
+                    "date": {
+                      "value": { "path": "$.imagingReportB.date" },
+                      "type": "datetime"
+                    }
+                  }
+                },
+                {
+                  "value": {
+                    "label": [{ "constant": "Open images" }],
+                    "icon": "ico-ct",
+                    "url": {
+                      "constant": "#"
+                    },
+                    "target": "iFrame"
+                  },
+                  "type": "link"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatment",
+      "elements": [
+        {
+          "key": { "constant": "systemicTherapyTitle" },
+          "value": { "constant": "Systemic therapy" },
+          "meta": {
+            "title": true,
+            "emptyValue": "systemic therapy"
+          },
+          "type": "text"
+        },
+        {
+          "type": "indicator",
+          "value": {
+            "icon": {
+              "constant": "ico-intra-van"
+            },
+            "paletteColor": {
+              "constant": "5"
+            },
+            "message": {
+              "path": "$.systemicTherapies[0].attributes.cycle"
+            }
+          },
+          "meta": { "levelOfDetail": 1 }
+        },
+        {
+          "type": "datetime",
+          "value": {
+            "path": "$.systemicTherapies[0].date"
+          }
+        },
+        {
+          "type": "twoColumn",
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": { "constant": "Start of therapy" }
+            },
+            "rightColumn": {
+              "type": "datetime",
+              "value": {
+                "path": "$.systemicTherapies[0].attributes.regimen.period.start"
+              }
+            }
+          }
+        },
+        {
+          "type": "twoColumn",
+          "value": {
+            "leftColumn": {
+              "type": "text",
+              "value": { "constant": "End of therapy" }
+            },
+            "rightColumn": {
+              "type": "datetime",
+              "value": {
+                "path": "$.systemicTherapies[0].attributes.regimen.period.end"
+              }
+            }
+          }
+        },
+        {
+          "type": "table",
+          "value": {
+            "path": "$.systemicTherapies",
+            "config": {
+              "cells": [
+                {
+                  "header": "Drug",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "processor": { "name": "codeableConceptText" }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Dose",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.dosage[*]",
+                        "processor": { "name": "orderedDosageText" }
+                      }
+                    },
+                    {
+                      "type": "indicator",
+                      "value": {
+                        "icon": {
+                          "constant": "ico-minus-plus"
+                        },
+                        "paletteColor": {
+                          "constant": "11"
+                        },
+                        "message": {
+                          "path": "$.attributes.doseChange"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "group": "treatment",
+      "elements": [
+        {
+          "key": { "constant": "radiationTherapyTitle" },
+          "value": { "constant": "Radiation therapy" },
+          "meta": {
+            "title": true,
+            "emptyValue": "radiation therapy"
+          },
+          "type": "text"
+        },
+        {
+          "value": {
+            "path": "$.mostRecentRadiotherapyProcedure[0].date"
+          },
+          "type": "datetime"
+        },
+        {
+          "value": { "constant": "Procedure - most recent" },
+          "type": "text",
+          "dependsOn": {
+            "path": "$.mostRecentRadiotherapyProcedure[0]"
+          }
+        },
+        {
+          "value": {
+            "leftColumn": {
+              "value": {
+                "path": "$.mostRecentRadiotherapyProcedure[0].attributes.code",
+                "processor": { "name": "codeableConceptText" }
+              },
+              "type": "text"
+            },
+            "rightColumn": {
+              "value": { "path": "$.mostRecentRadiotherapyProcedure[0].date" },
+              "type": "datetime"
+            }
+          },
+          "type": "twoColumn"
+        },
+        {
+          "value": { "constant": "Start of therapy" },
+          "type": "text",
+          "dependsOn": {
+            "path": "$.leastRecentRadiotherapyProcedure[0]"
+          }
+        },
+        {
+          "value": {
+            "leftColumn": {
+              "value": {
+                "path": "$.leastRecentRadiotherapyProcedure[0].attributes.code",
+                "processor": { "name": "codeableConceptText" }
+              },
+              "type": "text"
+            },
+            "rightColumn": {
+              "value": {
+                "path": "$.leastRecentRadiotherapyProcedure[0].date"
+              },
+              "type": "datetime"
+            }
+          },
+          "type": "twoColumn"
+        }
+      ]
+    },
+    {
+      "group": "treatment",
+      "elements": [
+        {
+          "key": { "constant": "oncologyNotesTitle" },
+          "value": { "constant": "Oncology note - most recent" },
+          "meta": {
+            "title": true,
+            "emptyValue": "oncology note"
+          },
+          "type": "text"
+        },
+        {
+          "value": {
+            "path": "$.mostRecentOncologyNote[0].date"
+          },
+          "type": "date"
+        },
+        {
+          "value": { "path": "$.mostRecentOncologyNote[0].attributes.title" },
+          "type": "text"
+        },
+        {
+          "value": {
+            "sourceDocument": { "path": "$.mostRecentOncologyNote[0]" },
+            "clpFindings": { "path": "$.attributes.aiSummary.l2" }
+          },
+          "type": "nlp"
+        },
+        {
+          "type": "link",
+          "dependsOn": {
+            "path": "$.mostRecentOncologyNote[0].attributes.reportContent[0]"
+          },
+          "value": {
+            "label": [{ "constant": "Open complete report" }],
+            "icon": "ico-notes",
+            "url": {
+              "path": "$.mostRecentOncologyNote[0]",
+              "processor": {
+                "name": "reportLink",
+                "args": { "representation": "reportHtml.onco.general" }
+              }
+            },
+            "target": "internal"
+          },
+          "meta": {
+            "title": {
+              "value": {
+                "path": ""
+              },
+              "type": "text"
+            },
+            "subTitle": {
+              "type": "list",
+              "value": {
+                "elements": [
+                  {
+                    "type": "datetime",
+                    "value": {
+                      "path": ""
+                    }
+                  },
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.mostRecentOncologyNote[0].attributes.author[*].name[*]",
+                        "processor": { "name": "humanName" }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.mostRecentOncologyNote[0].attributes.organization[*].name"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": { "constant": "No author" }
+                    }
+                  ],
+                  [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.mostRecentOncologyNote[0].attributes.status"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": { "constant": "No status" }
+                    }
+                  ]
+                ]
+              }
+            },
+            "date": {
+              "value": { "path": "$.mostRecentOncologyNote[0].date" },
+              "type": "datetime"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    [
+      {
+        "id": "response",
+        "label": "Response"
+      }
+    ],
+    [
+      {
+        "id": "treatment",
+        "label": "Treatment",
+        "status": "Most recent"
+      }
+    ]
+  ]
+}

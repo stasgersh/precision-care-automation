@@ -1,0 +1,229 @@
+{
+	"resourceType": "Bundle",
+	"type": "batch",
+	"entry": [
+		{
+			"fullUrl": "Patient/aaaaa",
+			"resource": {
+				"resourceType": "Patient",
+				"id": "aaaaa",
+				"meta": {
+					"versionId": "76",
+					"lastUpdated": "2025-01-12T01:39:24.585976896Z",
+					"source": "default"
+				},
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+						"valueCode": "M"
+					},
+					{
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+						"extension": [
+							{
+								"url": "ombCategory",
+								"valueCoding": {
+									"system": "urn:oid:2.16.840.1.113883.6.238",
+									"code": "2186-5",
+									"display": "Not Hispanic or Latino"
+								}
+							},
+							{
+								"url": "text",
+								"valueString": "Not Hispanic or Latino"
+							}
+						]
+					},
+					{
+						"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+						"extension": [
+							{
+								"url": "ombCategory",
+								"valueCoding": {
+									"system": "urn:oid:2.16.840.1.113883.6.238",
+									"code": "2106-3",
+									"display": "White"
+								}
+							},
+							{
+								"url": "text",
+								"valueString": "White"
+							}
+						]
+					}
+				],
+				"identifier": [
+					{
+						"system": "https://ge.com/oncoflow/omop/person_id",
+						"value": "a5d9208e-a574-4b61-a919-b2d70887b5c0"
+					}
+				],
+				"name": [
+					{
+						"use": "official",
+						"family": "OncoTestPatien",
+						"given": [
+							"BadReq"
+						]
+					}
+				],
+				"gender": "male",
+				"birthDate": "1951-01-29"
+			},
+			"request": {
+				"method": "PUT",
+				"url": "Patient/bbbbb"
+			}
+		},
+		{
+			"fullUrl": "Condition/bbbbb",
+			"resource": {
+				"resourceType": "Condition",
+				"id": "bbbbb",
+				"meta": {
+					"extension": [
+						{
+							"url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+							"extension": [
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/clp/model",
+									"valueString": "gpt-4o"
+								},
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/clp/apiversion",
+									"valueString": "2023-12-01-preview"
+								},
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/clp/status",
+									"valueString": "failed"
+								}
+							]
+						},
+						{
+							"url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+							"extension": [
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/summarization/version",
+									"valueString": "1.0"
+								},
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/summarization/status",
+									"valueString": "COMPLETED"
+								}
+							]
+						},
+						{
+							"url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+							"extension": [
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/clp/model",
+									"valueString": "gpt-4o"
+								},
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/clp/apiversion",
+									"valueString": "2023-12-01-preview"
+								},
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/clp/status",
+									"valueString": "success"
+								}
+							]
+						},
+						{
+							"url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+							"extension": [
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/summarization/version",
+									"valueString": "1.0"
+								},
+								{
+									"url": "https://gehealthcare.com/pdsc/postprocessing/summarization/status",
+									"valueString": "COMPLETED"
+								}
+							]
+						}
+					],
+					"versionId": "2",
+					"lastUpdated": "2024-10-10T13:53:44.423278527Z",
+					"source": "default"
+				},
+				"extension": [
+					{
+						"url": "https://gehealthcare.com/pdsc/postprocessing/clp",
+						"extension": [
+							{
+								"url": "no_url",
+								"valueString": "Attributes found, but no text found to produce CLP report"
+							}
+						]
+					},
+					{
+						"url": "https://gehealthcare.com/pdsc/postprocessing/summarization",
+						"extension": [
+							{
+								"url": "content[0].attachment.data",
+								"valueString": "{\"message\": \"No Content to Summarize\", \"code\": \"SUM_RES_NO_CONTENT\"}"
+							}
+						]
+					}
+				],
+				"identifier": [
+					{
+						"system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+						"value": "70254290"
+					}
+				],
+				"clinicalStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+							"code": "active"
+						}
+					]
+				},
+				"verificationStatus": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+							"code": "confirmed",
+							"display": "Confirmed"
+						}
+					],
+					"text": "Confirmed"
+				},
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://terminology.hl7.org/CodeSystem/condition-category",
+								"code": "encounter-diagnosis",
+								"display": "Encounter Diagnosis"
+							}
+						]
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/sid/icd-10-cm",
+							"code": "C79.52",
+							"display": "Secondary malignant neoplasm of bone marrow"
+						}
+					],
+					"text": "Secondary malignant neoplasm of bone marrow"
+				},
+				"subject": {
+					"reference": "Patient/aaaaa"
+				},
+				"encounter": {
+					"reference": "Encounter/503b2a49-d6a9-4730-afe4-10ca7f5a1506"
+				},
+				"onsetDateTime": "2019-08-01T08:01:00.000Z"
+			},
+			"request": {
+				"method": "PUT",
+				"url": "Condition/bbbbbbbbbbb"
+			}
+		}
+	]
+}

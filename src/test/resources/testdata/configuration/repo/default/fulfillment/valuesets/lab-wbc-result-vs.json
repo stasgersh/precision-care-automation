@@ -1,0 +1,32 @@
+{
+  "name": "lab-wbc-result-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "lab-wbc-result-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "26464-8",
+              "display": "Leukocytes [#/volume] in Blood"
+            },
+            {
+              "code": "49498-9",
+              "display": "Leukocytes [#/volume] in Blood by Estimate"
+            },
+            {
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood by Automated count"
+            },
+            {
+              "code": "804-5",
+              "display": "Leukocytes [#/volume] in Blood by Manual count"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

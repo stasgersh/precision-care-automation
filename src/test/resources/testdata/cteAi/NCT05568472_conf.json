@@ -1,0 +1,73 @@
+{
+  "id": "NCT05568472",
+  "criteria": [
+    {
+      "statement": "Has Stage I, II, or III hormone receptor positive breast cancer based on clinical or pathologic evaluation.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Had a menstrual period (by self-report) within the 12 months before breast cancer diagnosis.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Had a serum or plasma estradiol and/or follicle stimulating hormone (FSH) concentration consistent with premenopausal status (based on institutional standards) within the 12 months before breast cancer diagnosis or when checked after breast cancer diagnosis.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient has started initial treatment with standard of care oral endocrine therapy (ET) (i.e., tamoxifen, anastrozole, exemestane, or letrozole; within 14 days prior to randomization or be planning to start initial treatment with standard of care oral ET within 14 days after randomization.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient has ovarian function (estradiol above the postmenopausal range) must be planning to undergo ovarian suppression or ablation concomitantly with oral ET medication, starting before or at the same time as oral ET initiation. Participants with chemotherapy-induced amenorrhea or ovarian failure at time of registration must be planning to start ovarian suppression or ablation if they have recurrence of ovarian function during study participation (circulating estradiol concentration in the premenopausal range or recurrence of menses).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient has a chemotherapy-induced amenorrhea or ovarian failure at time of registration must be planning to start ovarian suppression or ablation if they have recurrence of ovarian function during study participation (circulating estradiol concentration in the premenopausal range or recurrence of menses).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient must have completed surgery for treatment of breast cancer at least 14 days prior to randomization. NOTE: Concomitant radiotherapy at the time of randomization and/or during study participation is allowed.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient that received chemotherapy and have finished it at least 14 days prior to randomization. NOTE: Concomitant maintenance targeted or biologic therapy (e.g., human epidermal growth factor receptor 2 [anti-HER2] therapy, poly-ADP ribose polymerase [PARP] inhibitor therapy, CDK4/6 inhibitor therapy, osteoclast inhibitor therapy) at the time of randomization and/or during study participation is allowed.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient has a complete medical history within 60 days prior to randomization.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient is able to complete Patient-Reported Outcome (PRO) instruments in English or Spanish.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient has a distant metastatic breast cancer.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient has started or plan to start treatment with tamoxifen during study participation and havn't received prior tamoxifen for treatment or prevention of breast cancer.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient has started or plan to start treatment with an aromatase inhibitor during study participation must not have received prior aromatase inhibitor therapy for treatment or prevention of breast cancer.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient is taking or planning to take oral estrogen-or progesterone-containing treatments during study participation.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient receives additional anti-cancer treatments (i.e., experimental therapy, immunotherapy, biologics, etc.) as part of another clinical trial.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient has a non-breast malignancy for which they are currently receiving treatment.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient is planning to become pregnant during the 80 weeks of study participation.",
+      "type": "exclusion"
+    }
+  ]
+}

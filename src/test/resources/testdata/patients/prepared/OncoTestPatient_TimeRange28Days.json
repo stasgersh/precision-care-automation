@@ -1,0 +1,150 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/b2300a34-159c-45ee-aef0-53e154fdd9db",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "b2300a34-159c-45ee-aef0-53e154fdd9db",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "TimeRange28Days"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "123-555-5567",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-02-24",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ab7004c3-5994-417f-8f64-a1290780ef3d",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report today"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/b2300a34-159c-45ee-aef0-53e154fdd9db"
+        },
+        "effectiveDateTime": "<TODAY>T00:10:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "43cb4361-451f-4b01-b394-01b17a2f5dd1",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 3 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/b2300a34-159c-45ee-aef0-53e154fdd9db"
+        },
+        "effectiveDateTime": "<3_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "b04a7522-d18d-4ec9-8e7f-4d4925e4ed07",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 11 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/b2300a34-159c-45ee-aef0-53e154fdd9db"
+        },
+        "effectiveDateTime": "<11_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "fca9123a-3e8e-449e-a7bb-53c1cbb86e0d",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 28 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/b2300a34-159c-45ee-aef0-53e154fdd9db"
+        },
+        "effectiveDateTime": "<28_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    }
+  ]
+}

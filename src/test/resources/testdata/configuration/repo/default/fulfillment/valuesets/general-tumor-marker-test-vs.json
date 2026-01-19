@@ -1,0 +1,533 @@
+{
+  "name": "general-tumor-marker-test-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "general-tumor-marker-test-vs",
+    "description": "General tumor marker set. LOINC: curated subset of the mCODE tumor marker test valueset (http://hl7.org/fhir/us/mcode/ValueSet-mcode-tumor-marker-test-vs.html)",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "19163-5",
+              "display": "Cancer Ag 19-9 [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "2009-9",
+              "display": "Cancer Ag 19-9 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "24108-3",
+              "display": "Cancer Ag 19-9 [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "26924-1",
+              "display": "Cancer Ag 19-9 [Units/volume] in Body fluid"
+            },
+            {
+              "code": "50779-8",
+              "display": "Cancer Ag 19-9 [Units/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "50780-6",
+              "display": "Cancer Ag 19-9 [Units/volume] in Pericardial fluid"
+            },
+            {
+              "code": "50781-4",
+              "display": "Cancer Ag 19-9 [Units/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "83084-4",
+              "display": "Cancer Ag 19-9 [Units/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "97750-4",
+              "display": "Cancer Ag 19-9 [Units/volume] in Aspirate"
+            },
+            {
+              "code": "14041-8",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "19174-2",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Amniotic fluid"
+            },
+            {
+              "code": "19175-9",
+              "display": "Choriogonadotropin.beta subunit [Moles/volume] in Amniotic fluid"
+            },
+            {
+              "code": "20415-6",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma by Immunoassay (EIA) 3rd IS"
+            },
+            {
+              "code": "2111-3",
+              "display": "Choriogonadotropin.beta subunit [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "2113-9",
+              "display": "Choriogonadotropin.beta subunit [Mass/time] in 24 hour Urine"
+            },
+            {
+              "code": "2114-7",
+              "display": "Choriogonadotropin.beta subunit [Moles/volume] in Urine"
+            },
+            {
+              "code": "21198-7",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "29154-2",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Body fluid"
+            },
+            {
+              "code": "43799-6",
+              "display": "Choriogonadotropin.beta subunit [Presence] in Specimen"
+            },
+            {
+              "code": "43800-2",
+              "display": "Choriogonadotropin.beta subunit [Presence] in Cerebral spinal fluid"
+            },
+            {
+              "code": "55868-4",
+              "display": "Choriogonadotropin.beta subunit [Multiple of the median] in Serum or Plasma"
+            },
+            {
+              "code": "55869-2",
+              "display": "Choriogonadotropin.beta subunit [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "56497-1",
+              "display": "Choriogonadotropin.beta subunit [Units] in 24 hour Urine"
+            },
+            {
+              "code": "66762-6",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "66763-4",
+              "display": "Choriogonadotropin.beta subunit [Units/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "15035-9",
+              "display": "Calcitonin [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "1992-7",
+              "display": "Calcitonin [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "47369-4",
+              "display": "Calcitonin [Mass/volume] in Body fluid"
+            },
+            {
+              "code": "75709-6",
+              "display": "Calcitonin [Mass/volume] in Lymph node fine needle aspirate"
+            },
+            {
+              "code": "25587-7",
+              "display": "Chromogranin A [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "30169-7",
+              "display": "Chromogranin A [Units/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "53047-7",
+              "display": "Chromogranin A [Mass/volume] in Body fluid"
+            },
+            {
+              "code": "59220-4",
+              "display": "Chromogranin A [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "59226-1",
+              "display": "Chromogranin A [Units/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "59227-9",
+              "display": "Chromogranin A [Units/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "59241-0",
+              "display": "Chromogranin A [Units/volume] in Body fluid"
+            },
+            {
+              "code": "9811-1",
+              "display": "Chromogranin A [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "15060-7",
+              "display": "Enolase.neuron specific [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19193-2",
+              "display": "Enolase.neuron specific [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19194-0",
+              "display": "Enolase.neuron specific [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "2225-1",
+              "display": "Enolase.neuron specific [Enzymatic activity/volume] in Serum or Plasma"
+            },
+            {
+              "code": "44802-7",
+              "display": "Enolase.neuron specific [Mass/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "47053-4",
+              "display": "Enolase.neuron specific [Mass/volume] in Cerebral spinal fluid by Immunoassay"
+            },
+            {
+              "code": "48138-2",
+              "display": "Enolase.neuron specific [Mass/volume] in Serum or Plasma by Radioimmunoassay (RIA)"
+            },
+            {
+              "code": "48164-8",
+              "display": "Enolase.neuron specific [Mass/volume] in Body fluid"
+            },
+            {
+              "code": "57371-7",
+              "display": "Enolase.neuron specific [Mass/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "68939-8",
+              "display": "Enolase.neuron specific [Mass/volume] in Pleural fluid"
+            },
+            {
+              "code": "68952-1",
+              "display": "Enolase.neuron specific [Mass/volume] in Pericardial fluid"
+            },
+            {
+              "code": "69560-1",
+              "display": "Enolase.neuron specific [Mass/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "97744-7",
+              "display": "Enolase.neuron specific [Mass/volume] in Aspirate"
+            },
+            {
+              "code": "15072-2",
+              "display": "Gastrin [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "2333-3",
+              "display": "Gastrin [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "2960-3",
+              "display": "Somatostatin [Presence] in Plasma"
+            },
+            {
+              "code": "2961-1",
+              "display": "Somatostatin [Mass/volume] in Plasma"
+            },
+            {
+              "code": "49792-5",
+              "display": "Somatostatin [Moles/volume] in Plasma"
+            },
+            {
+              "code": "14918-7",
+              "display": "Thyroglobulin [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "3013-0",
+              "display": "Thyroglobulin [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "53920-5",
+              "display": "Thyroglobulin [Mass/volume] in Lymph node fine needle aspirate"
+            },
+            {
+              "code": "53922-1",
+              "display": "Thyroglobulin [Mass/volume] in Tissue fine needle aspirate"
+            },
+            {
+              "code": "97640-7",
+              "display": "Thyroglobulin [Moles/volume] in Tissue fine needle aspirate"
+            },
+            {
+              "code": "10873-8",
+              "display": "Beta-2-Microglobulin [Mass/time] in 24 hour Urine"
+            },
+            {
+              "code": "14626-6",
+              "display": "Beta-2-Microglobulin [Moles/volume] in Serum"
+            },
+            {
+              "code": "1951-3",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "1952-1",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "1953-9",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Urine"
+            },
+            {
+              "code": "32301-4",
+              "display": "Beta-2-Microglobulin [Moles/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "32302-2",
+              "display": "Beta-2-Microglobulin [Moles/volume] in Urine"
+            },
+            {
+              "code": "39458-5",
+              "display": "Beta-2-Microglobulin [Moles/volume] in Body fluid"
+            },
+            {
+              "code": "43818-4",
+              "display": "Beta-2-Microglobulin [Presence] in Serum"
+            },
+            {
+              "code": "43819-2",
+              "display": "Beta-2-Microglobulin [Presence] in Urine"
+            },
+            {
+              "code": "43919-0",
+              "display": "Beta-2-Microglobulin [Presence] in Cerebral spinal fluid"
+            },
+            {
+              "code": "48166-3",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Body fluid"
+            },
+            {
+              "code": "49081-3",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Dialysis fluid"
+            },
+            {
+              "code": "50824-2",
+              "display": "Beta-2-Microglobulin [Moles/volume] in 24 hour Urine"
+            },
+            {
+              "code": "54356-1",
+              "display": "Beta-2-Microglobulin [Mass/volume] in 24 hour Urine"
+            },
+            {
+              "code": "56662-0",
+              "display": "Beta-2-Microglobulin [Moles/time] in 24 hour Urine"
+            },
+            {
+              "code": "59217-0",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "59218-8",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Pleural fluid"
+            },
+            {
+              "code": "76484-5",
+              "display": "Beta-2-Microglobulin [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "83076-0",
+              "display": "Beta-2-Microglobulin [Units/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "83077-8",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Urine by Immunoassay"
+            },
+            {
+              "code": "83078-6",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "83079-4",
+              "display": "Beta-2-Microglobulin [Units/volume] in Urine by Immunoassay"
+            },
+            {
+              "code": "88711-7",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Peritoneal dialysis fluid"
+            },
+            {
+              "code": "2011-5",
+              "display": "Cancer Ag 242 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "2013-1",
+              "display": "Cancer Ag 50 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "34256-8",
+              "display": "Cancer Ag 50 [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19189-0",
+              "display": "Cancer Ag 549 [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19190-8",
+              "display": "Cancer Ag 549 [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "2014-9",
+              "display": "Cancer Ag 549 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "17843-4",
+              "display": "Cancer Ag 72-4 [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19164-3",
+              "display": "Cancer Ag 72-4 [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "2015-6",
+              "display": "Cancer Ag 72-4 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "34161-0",
+              "display": "Cancer Ag 72-4 [Units/volume] in Body fluid"
+            },
+            {
+              "code": "47012-0",
+              "display": "Cancer Ag 72-4 [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "68924-0",
+              "display": "Cancer Ag 72-4 [Units/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "68925-7",
+              "display": "Cancer Ag 72-4 [Units/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "68926-5",
+              "display": "Cancer Ag 72-4 [Units/volume] in Pericardial fluid"
+            },
+            {
+              "code": "13127-6",
+              "display": "Cancer Ag DM/70K [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "28078-4",
+              "display": "Bladder tumor Ag [Presence] in Urine by Immunoassay"
+            },
+            {
+              "code": "28551-0",
+              "display": "Bladder tumor Ag [Units/volume] in Urine by Immunoassay"
+            },
+            {
+              "code": "31729-7",
+              "display": "Bladder tumor Ag [Presence] in Urine"
+            },
+            {
+              "code": "31730-5",
+              "display": "Bladder tumor Ag [Units/volume] in Urine"
+            },
+            {
+              "code": "80386-6",
+              "display": "Bladder tumor Ag [Presence] in Urine by Rapid immunoassay"
+            },
+            {
+              "code": "31134-0",
+              "display": "Nuclear matrix protein 22 [Units/volume] in Urine"
+            },
+            {
+              "code": "50666-7",
+              "display": "Nuclear matrix protein 22 [Presence] in Urine"
+            },
+            {
+              "code": "34444-0",
+              "display": "Acarboxyprothrombin [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "93768-0",
+              "display": "Acarboxyprothrombin [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "41292-4",
+              "display": "Soluble mesothelin related proteins [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "10560-1",
+              "display": "Carcinoembryonic Ag [Units/volume] in Semen"
+            },
+            {
+              "code": "12515-3",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Body fluid"
+            },
+            {
+              "code": "19166-8",
+              "display": "Carcinoembryonic Ag [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19167-6",
+              "display": "Carcinoembryonic Ag [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19168-4",
+              "display": "Carcinoembryonic Ag [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "19169-2",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Pleural fluid"
+            },
+            {
+              "code": "19170-0",
+              "display": "Carcinoembryonic Ag [Moles/volume] in Pleural fluid"
+            },
+            {
+              "code": "2037-0",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "2038-8",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Semen"
+            },
+            {
+              "code": "2039-6",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "40621-5",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Pericardial fluid"
+            },
+            {
+              "code": "40622-3",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "83085-1",
+              "display": "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "13485-8",
+              "display": "Beta-2-Microglobulin/Creatinine [Mass Ratio] in Urine"
+            },
+            {
+              "code": "39773-7",
+              "display": "Beta-2-Microglobulin/Creatinine [Molar ratio] in Urine"
+            },
+            {
+              "code": "44303-6",
+              "display": "Beta-2-Microglobulin/Creatinine [Mass Ratio] in 24 hour Urine"
+            },
+            {
+              "code": "56786-7",
+              "display": "Beta-2-Microglobulin.tumor marker [Mass/volume] in Serum"
+            },
+            {
+              "code": "59177-6",
+              "display": "Beta-2-Microglobulin/Creatinine [Ratio] in Urine"
+            },
+            {
+              "code": "87708-4",
+              "display": "Beta-2-Microglobulin [Mass/volume] in Serum or Plasma --post dialysis"
+            },
+            {
+              "code": "93729-2",
+              "display": "Beta-2-Microglobulin/Creatinine [Ratio] in 24 hour Urine"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

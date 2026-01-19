@@ -1,0 +1,13 @@
+{
+  "dedup": "True",
+  "filter": {
+    "must": [
+      {
+        "range": {
+          "lt": ""
+        }
+      }
+    ]
+  },
+  "sort": 10
+}

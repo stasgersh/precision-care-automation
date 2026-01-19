@@ -1,0 +1,24 @@
+{
+  "name": "blood-pressure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "blood-pressure-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "85354-9",
+              "display": "Blood Pressure"
+            },
+            {
+              "code": "55284-4",
+              "display": "Blood pressure systolic and diastolic"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

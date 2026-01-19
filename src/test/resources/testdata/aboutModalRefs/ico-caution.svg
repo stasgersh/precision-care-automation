@@ -1,0 +1,16 @@
+<!--
+-GE CONFIDENTIAL-
+Type: Source Code
+
+Copyright (c) 2023, 2023, GE HealthCare
+All Rights Reserved
+
+This unpublished material is proprietary to GE HealthCare. The methods and
+techniques described herein are considered trade secrets and/or
+confidential. Reproduction or distribution, in whole or in part, is
+forbidden except by express written permission of GE HealthCare.
+GE is a trademark of General Electric Company used under trademark license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <path d="M15.89 3L30.28 28.38H1.72L15.89 3ZM15.89 1L0 29.35H32L15.89 1ZM15.89 26.88H16.21L16.32 26.77H16.54L16.64 26.67H16.75L16.86 26.56H17V26.45H17.1V26.34H17.21V26.23H17.32V26.13L17.42 26.02V25.91L17.53 25.81V25.59H17.64V24.73L17.53 24.62V24.41H17.42V24.19H17.32V24.09L16.89 23.66H16.78V23.55H16.46V23.44H16.24L16.14 23.34H15.6V23.44H15.39L15.28 23.55H15L14.68 23.87H14.6V24H14.5V24.11L14.28 24.32V24.43L14.17 24.54V25.7L14.28 25.81V26H14.39V26.11L14.71 26.43H14.82V26.54H14.93V26.65H15.14V26.75H15.46L15.57 26.86L15.89 26.88ZM14.82 21.83H16.82V7.83H14.82V21.83Z"/>
+</svg>

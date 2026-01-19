@@ -1,0 +1,21 @@
+{
+  "name": "radiotherapy-summary-note-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "radiotherapy-summary-note-vs",
+    "description": "Radiotherapy summary note codes",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "68602-2",
+              "display": "Radiation oncology Summary note"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

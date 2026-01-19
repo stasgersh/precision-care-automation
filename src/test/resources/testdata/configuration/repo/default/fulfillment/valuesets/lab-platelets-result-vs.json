@@ -1,0 +1,40 @@
+{
+  "name": "lab-platelets-result-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "lab-platelets-result-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "26515-7",
+              "display": "Platelets [#/volume] in Blood"
+            },
+            {
+              "code": "49497-1",
+              "display": "Platelets [#/volume] in Blood by Estimate"
+            },
+            {
+              "code": "5907-1",
+              "display": "Deprecated Platelets [#/volume] in Blood by Automated count"
+            },
+            {
+              "code": "777-3",
+              "display": "Platelets [#/volume] in Blood by Automated count"
+            },
+            {
+              "code": "778-1",
+              "display": "Platelets [#/volume] in Blood by Manual count"
+            },
+            {
+              "code": "97995-5",
+              "display": "Platelets [#/volume] in Blood by Automated count.optical"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

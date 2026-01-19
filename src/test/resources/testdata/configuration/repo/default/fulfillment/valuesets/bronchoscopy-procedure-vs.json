@@ -1,0 +1,189 @@
+{
+  "name": "bronchoscopy-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "bronchoscopy-procedure-vs",
+    "description": "Snomed: all concepts which is-a 10847001|Bronchoscopy",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "10847001",
+              "display": "Bronchoscopy"
+            },
+            {
+              "code": "19102008",
+              "display": "Tracheobronchoscopy through established tracheostomy incision (procedure)"
+            },
+            {
+              "code": "39459007",
+              "display": "Bronchoscopy with excision of tumor (procedure)"
+            },
+            {
+              "code": "47806007",
+              "display": "Bronchoscopy with drainage of lung abscess (procedure)"
+            },
+            {
+              "code": "48616004",
+              "display": "Endoscopy with excision of lesion from bronchus (procedure)"
+            },
+            {
+              "code": "53630002",
+              "display": "Bronchoscopy with removal of foreign body (procedure)"
+            },
+            {
+              "code": "54057009",
+              "display": "Laryngotracheobronchoscopy (procedure)"
+            },
+            {
+              "code": "55198006",
+              "display": "Bronchoscopy with biopsy (procedure)"
+            },
+            {
+              "code": "58205009",
+              "display": "Removal of intraluminal foreign body from bronchus by bronchoscopy (procedure)"
+            },
+            {
+              "code": "64732008",
+              "display": "Catheterization of bronchus with lavage (procedure)"
+            },
+            {
+              "code": "65737005",
+              "display": "Bronchoscopy with cell washing (procedure)"
+            },
+            {
+              "code": "81545004",
+              "display": "Bronchoscopy with closed reduction of fracture (procedure)"
+            },
+            {
+              "code": "84041000",
+              "display": "Bronchoscopy with bronchial dilation (procedure)"
+            },
+            {
+              "code": "85765000",
+              "display": "Fiberoptic bronchoscopy (procedure)"
+            },
+            {
+              "code": "90397003",
+              "display": "Endoscopic biopsy of trachea (procedure)"
+            },
+            {
+              "code": "128326008",
+              "display": "Bronchoscopy with surgical procedure (procedure)"
+            },
+            {
+              "code": "173110000",
+              "display": "Rigid therapeutic bronchoscopy (procedure)"
+            },
+            {
+              "code": "173137003",
+              "display": "Therapeutic fiberoptic endoscopic operations on trachea (procedure)"
+            },
+            {
+              "code": "173158009",
+              "display": "Other specified therapeutic fiberoptic bronchoscopy (procedure)"
+            },
+            {
+              "code": "173159001",
+              "display": "Therapeutic fiberoptic bronchoscopy NOS (procedure)"
+            },
+            {
+              "code": "232580002",
+              "display": "Microlaryngoscopy and bronchoscopy (procedure)"
+            },
+            {
+              "code": "232581003",
+              "display": "Fiberoptic bronchoscopy NEC (procedure)"
+            },
+            {
+              "code": "232583000",
+              "display": "Tracheoscopy NEC (procedure)"
+            },
+            {
+              "code": "232584006",
+              "display": "Tracheobronchoscopy NEC (procedure)"
+            },
+            {
+              "code": "232585007",
+              "display": "Bronchoscopy NEC (procedure)"
+            },
+            {
+              "code": "232590005",
+              "display": "Diagnostic tracheobronchial endoscopy (procedure)"
+            },
+            {
+              "code": "232591009",
+              "display": "Bronchoscopy with lobar gas sampling (procedure)"
+            },
+            {
+              "code": "232592002",
+              "display": "Bronchoscopic sampling of secretions (procedure)"
+            },
+            {
+              "code": "232593007",
+              "display": "Bronchoscopic arrest of hemorrhage (procedure)"
+            },
+            {
+              "code": "232594001",
+              "display": "Bronchoscopic aspiration of secretions (procedure)"
+            },
+            {
+              "code": "232595000",
+              "display": "Bronchoscopic irrigation (procedure)"
+            },
+            {
+              "code": "232596004",
+              "display": "Bronchoscopic destruction of lesion (procedure)"
+            },
+            {
+              "code": "232600009",
+              "display": "Bronchoscopic resection of lesion (procedure)"
+            },
+            {
+              "code": "232602001",
+              "display": "Bronchoscopic placement of stent (procedure)"
+            },
+            {
+              "code": "232603006",
+              "display": "Bronchoscopic closure of fistula (procedure)"
+            },
+            {
+              "code": "265043000",
+              "display": "Therapeutic endoscopic operations below trachea using fiberoptic bronchoscope (procedure)"
+            },
+            {
+              "code": "271409006",
+              "display": "Therapeutic endoscopic operations on trachea using rigid bronchoscope (procedure)"
+            },
+            {
+              "code": "287528001",
+              "display": "Bronchoscopy via tracheostomy (procedure)"
+            },
+            {
+              "code": "307770005",
+              "display": "Diagnostic bronchoscopy (procedure)"
+            },
+            {
+              "code": "397397002",
+              "display": "Bronchoscopy and bronchoalveolar lavage (procedure)"
+            },
+            {
+              "code": "397782002",
+              "display": "Rigid bronchoscopy (procedure)"
+            },
+            {
+              "code": "440108009",
+              "display": "Bronchoscopy and insertion of intracavitary radioactive isotope using catheter (procedure)"
+            },
+            {
+              "code": "448173000",
+              "display": "Autofluorescence bronchoscopy (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+    "configType": "entity",
+    "classId": "uncategorized",
+    "uncategorized": true,
+    "definitions": [
+      {
+        "resourceType": "Procedure",
+        "date": [
+          {
+            "source": {
+              "path": "$.performedPeriod"
+            },
+            "processor": "periodDateText"
+          },
+          {
+            "source": {
+              "path": "$.performedDateTime"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "key": "code",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.code"
+                }
+              }
+            ]
+          },
+          {
+            "key": "category",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.category"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "resourceType": "DiagnosticReport",
+        "date": [
+          {
+            "source": {
+              "path": "$.effectivePeriod"
+            },
+            "processor": "periodDateText"
+          },
+          {
+            "source": {
+              "path": "$.effectiveDateTime"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "key": "code",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.code"
+                }
+              }
+            ]
+          },
+          {
+            "key": "category",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.category"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "resourceType": "DocumentReference",
+        "date": [
+          {
+            "source": {
+              "path": "$.date"
+            }
+          },
+          {
+            "source": {
+              "path": "$.context.period"
+            },
+            "processor": "periodDateText"
+          }
+        ],
+        "attributes": [
+          {
+            "key": "type",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.type"
+                }
+              }
+            ]
+          },
+          {
+            "key": "category",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.category"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "resourceType": "Observation",
+        "date": [
+          {
+            "source": {
+              "path": "$.effectivePeriod"
+            },
+            "processor": "periodDateText"
+          },
+          {
+            "source": {
+              "path": "$.effectiveDateTime"
+            }
+          },
+          {
+            "source": {
+              "path": "$.issued"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "key": "code",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.code"
+                }
+              }
+            ]
+          },
+          {
+            "key": "category",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.category"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "resourceType": "Encounter",
+        "date": [
+          {
+            "source": {
+              "path": "$.period"
+            },
+            "processor": "periodDateText"
+          }
+        ],
+        "attributes": [
+          {
+            "key": "type",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.type"
+                }
+              }
+            ]
+          },
+          {
+            "key": "class",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.class"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "resourceType": "MedicationStatement",
+        "date": [
+          {
+            "source": {
+              "path": "$.dateAsserted"
+            }
+          },
+          {
+            "source": {
+              "path": "$.effectivePeriod"
+            },
+            "processor": "periodDateText"
+          },
+          {
+            "source": {
+              "path": "$.effectiveDateTime"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "key": "code",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.medicationCodeableConcept"
+                }
+              }
+            ]
+          },
+          {
+            "key": "category",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.category"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "resourceType": "MedicationAdministration",
+        "date": [
+          {
+            "source": {
+              "path": "$.effectivePeriod"
+            },
+            "processor": "periodDateText"
+          },
+          {
+            "source": {
+              "path": "$.effectiveDateTime"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "key": "code",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.medicationCodeableConcept"
+                }
+              }
+            ]
+          },
+          {
+            "key": "category",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.category"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "resourceType": "MedicationRequest",
+        "date": [
+          {
+            "source": {
+              "path": "$.authoredOn"
+            }
+          }
+        ],
+        "attributes": [
+          {
+            "key": "code",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.medicationCodeableConcept"
+                }
+              }
+            ]
+          },
+          {
+            "key": "category",
+            "valueExtraction": [
+              {
+                "source": {
+                  "path": "$.category"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

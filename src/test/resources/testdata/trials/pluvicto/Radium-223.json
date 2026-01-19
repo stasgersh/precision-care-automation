@@ -1,0 +1,331 @@
+{
+  "id": "Radium-223",
+  "type": "treatment",
+  "studyCompletion": "2026-11",
+  "name": "Approved for mCRPC with symptomatic bone metastases and no visceral disease. It emits alpha particles and is bone-targeting 2.",
+  "description": "Radium-223 (Xofigo) is a radioligand therapy (RLT). RLT is a different type of radiation therapy that is injected and that targets a biomarker called PSMA, which is present on many prostate cancer cells and also some healthy cells. This means it is designed to find and attack PSMA+ cells, including cancer cells.",
+  "link": "https://us.pluvicto.com/support/faqs",
+  "patientsFilter": {
+    "filter": {
+      "must": [
+        {
+          "attributes.gender": {
+            "eq": "male"
+          }
+        }
+      ]
+    }
+  },
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's gender",
+      "usingAi": false
+    },
+    {
+      "id": "EcogStatus",
+      "definition": {
+        "ai": {
+          "criteria": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) < 3"
+        }
+      },
+      "display": "EcogStatus"
+    },
+    {
+      "id": "ecog",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ECOG",
+              "query": {
+                "from": "ecog",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's ecog",
+      "usingAi": false
+    },
+    {
+      "id": "mCRPC",
+      "definition": {
+        "ai": {
+          "criteria": "Diagnosis of metastatic castration-resistant prostate cancer (mCRPC)"
+        }
+      },
+      "display": "mCRPC"
+    },
+    {
+      "id": "PSMA",
+      "definition": {
+        "ai": {
+          "criteria": "Disease is prostate-specific membrane antigen (PSMA)-positive, as confirmed on positive emission tomography (PET) or computed tomography (CT) scan"
+        }
+      },
+      "display": "PSMA"
+    },
+    {
+      "id": "ARPI",
+      "definition": {
+        "ai": {
+          "criteria": "Previously treated with androgen receptor pathway inhibitor (ARPI) therapy"
+        }
+      },
+      "display": "ARPI"
+    },
+    {
+      "id": "taxaneDelay",
+      "definition": {
+        "ai": {
+          "criteria": "Patient is considered appropriate to delay taxane-based chemotherapy"
+        }
+      },
+      "display": "taxaneDelay"
+    },
+    {
+      "id": "taxane",
+      "definition": {
+        "ai": {
+          "criteria": "Previous treatment with taxane-based chemotherapy"
+        }
+      },
+      "display": "taxane"
+    },
+    {
+      "id": "CrCl",
+      "definition": {
+        "ai": {
+          "criteria": "CrCl <= 29 mL/min"
+        }
+      },
+      "display": "CrCl"
+    },
+    {
+      "id": "ESRD",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has ESRD"
+        }
+      },
+      "display": "ESRD"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_male",
+      "type": "inclusion",
+      "title": "Gender is male",
+      "expression": "gender",
+      "subCriteria": [
+        {
+          "id": "gender",
+          "title": "Gender is male",
+          "description": "Gender is male",
+          "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+          "explainability": {
+            "displayValue": "variables.gender.value[].attributes.gender|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-06-30`,`years`,`int`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-06-30`,`years`,`int`)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EcogStatus",
+      "type": "inclusion",
+      "title": "Member has a current Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+      "allowMissingVariables": [
+        "ecog"
+      ],
+      "expression": "EcogStatus",
+      "subCriteria": [
+        {
+          "id": "EcogStatus",
+          "title": "Member has a current Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+          "description": "Member has a current Eastern Cooperative Oncology Group (ECOG) performance status of 0 to 2",
+          "expression": "variables.ecog.value[].attributes.value|[0]<=`1`",
+          "explainability": {
+            "displayValue": "variables.ecog.value[].attributes.value|[0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mCRPC",
+      "type": "inclusion",
+      "title": "Diagnosis of metastatic castration-resistant prostate cancer (mCRPC)",
+      "allowMissingVariables": [
+        "mCRPC"
+      ],
+      "expression": "mCRPC",
+      "subCriteria": [
+        {
+          "id": "mCRPC",
+          "title": "Diagnosis of metastatic castration-resistant prostate cancer (mCRPC)",
+          "description": "Diagnosis of metastatic castration-resistant prostate cancer (mCRPC)",
+          "expression": "variables.mCRPC.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.mCRPC.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_imaging_dates",
+      "type": "inclusion",
+      "title": "Disease is prostate-specific membrane antigen (PSMA)-positive, as confirmed on positive emission tomography (PET) or computed tomography (CT) scan",
+      "allowMissingVariables": [
+        "PSMA"
+      ],
+      "expression": "PSMA",
+      "subCriteria": [
+        {
+          "id": "PSMA",
+          "title": "Disease is prostate-specific membrane antigen (PSMA)-positive, as confirmed on positive emission tomography (PET) or computed tomography (CT) scan",
+          "description": "Disease is prostate-specific membrane antigen (PSMA)-positive, as confirmed on positive emission tomography (PET) or computed tomography (CT) scan",
+          "expression": "variables.PSMA.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.PSMA.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_ARPI",
+      "type": "inclusion",
+      "title": "Previously treated with androgen receptor pathway inhibitor (ARPI) therapy",
+      "allowMissingVariables": [
+        "ARPI"
+      ],
+      "expression": "ARPI",
+      "subCriteria": [
+        {
+          "id": "ARPI",
+          "title": "Previously treated with androgen receptor pathway inhibitor (ARPI) therapy",
+          "description": "Previously treated with androgen receptor pathway inhibitor (ARPI) therapy",
+          "expression": "variables.ARPI.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.ARPI.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "criteria_PSMA",
+      "type": "inclusion",
+      "title": "Patient meets ONE of the following:",
+      "expression": "taxaneDelay || taxane",
+      "subCriteria": [
+        {
+          "id": "taxaneDelay",
+          "title": "Patient is considered appropriate to delay taxane-based chemotherapy",
+          "description": "Patient is considered appropriate to delay taxane-based chemotherapy",
+          "expression": "variables.taxaneDelay.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.taxaneDelay.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "taxane",
+          "title": "Previous treatment with taxane-based chemotherapy",
+          "description": "Previous treatment with taxane-based chemotherapy",
+          "expression": "variables.taxane.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.taxane.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "CrCl_ESRD",
+      "type": "exclusion",
+      "title": "Member does not have severe renal impairment (CrCl 29 mL/min or less) or end-stage renal disease (ESRD)",
+      "allowMissingVariables": [
+        "CrCl",
+        "ESRD"
+      ],
+      "expression": "CrCl && ESRD",
+      "subCriteria": [
+        {
+          "id": "CrCl",
+          "title": "CrCl <= 29 mL/min",
+          "description": "CrCl <= 29 mL/min",
+          "expression": "variables.CrCl.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.CrCl.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "ESRD",
+          "title": "Patient has ESRD",
+          "description": "Patient has ESRD",
+          "expression": "variables.ESRD.value.response == `ELIGIBLE`",
+          "explainability": {
+            "displayValue": "variables.ESRD.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    }
+  ]
+}

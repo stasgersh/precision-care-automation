@@ -1,0 +1,324 @@
+{
+  "id": "${id}",
+  "type": "${type}",
+  "metadata": {
+    "name": "Simple configuration with patient date of birth and gender",
+    "description": "Simple configuration with patient date of birth and gender - The purpose of this study is to assess the safety, tolerability and preliminary efficacy of CC-94676 in men with progressive metastatic castration resistant prostate cancer.",
+    "status": "Recruiting",
+    "phase": "1",
+    "link": "https://clinicaltrials.gov/study/NCT04428788?a=23",
+    "usingAi": false
+  },
+  "constants": null,
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's date of birth",
+      "value": null,
+      "usingAi": false
+    },
+    {
+      "id": "ecog",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ECOG",
+              "query": {
+                "from": "ecog",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's ecog",
+      "value": null,
+      "usingAi": false
+    },
+    {
+      "id": "ADT",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ADT",
+              "query": {
+                "show": [
+                  "attributes.code"
+                ],
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "leuprolide"
+                      }
+                    }
+                  ]
+                },
+                "from": "medication",
+                "limit": 1
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's ADT med",
+      "value": null,
+      "usingAi": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "criteria_age",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "dob"
+        ]
+      },
+      "display": "Age >= 18 years",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "dob",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.dob) == `false`",
+              "metadata": {
+                "description": "dob is missing",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[]|[0]"
+              }
+            }
+          ],
+          "expression": "dob"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isAgeGt18",
+              "display": "Age is grater than 18",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`) >= `18`",
+              "metadata": {
+                "description": "Age is grater than 18",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)",
+                "sourceDob":  "\nvariables.dob.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n",
+                "sourceTitle": "variables.dob.class_name"
+              }
+            }
+          ],
+          "expression": "isAgeGt18"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isAgeGt18",
+              "display": "[NOT_MET]: Age is less than 18",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`) >= `18`",
+              "metadata": {
+                "description": "Age is less than 18",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)",
+                "sourcesDob": "\nvariables.dob.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n"
+              }
+            }
+          ],
+          "expression": "!(isAgeGt18)"
+        }
+      ]
+    },
+    {
+      "id": "ECOG_value",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "ecog"
+        ]
+      },
+      "display": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0 or 1",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "ecog",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.ecog) == `false`",
+              "metadata": {
+                "description": "ecog is missing",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[]|[0]"
+              }
+            }
+          ],
+          "expression": "ecog"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "EcogStatus",
+              "display": "ECOG status is 0 or 2",
+              "value": null,
+              "expression": "variables.ecog.value[].attributes.value|[0]<=`2`",
+              "metadata": {
+                "description": "ECOG status is 0 or 2",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[].attributes.value|[0]",
+                "sourcesEcog": "\nvariables.ecog.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n"
+              }
+            }
+          ],
+          "expression": "EcogStatus"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "EcogStatus",
+              "display": "[NOT_MET]: ECOG status is 0 or 1",
+              "value": null,
+              "expression": "variables.ecog.value[].attributes.value|[0]<=`1`",
+              "metadata": {
+                "description": "ECOG status is 0 or 1",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[].attributes.value|[0]",
+                "sourcesEcog": "\nvariables.ecog.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n"
+              }
+            }
+          ],
+          "expression": "!(EcogStatus)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_ADT",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "ADT"
+        ]
+      },
+      "display": "Progressed on androgen deprivation therapy (ADT) and at least one prior secondary hormonal therapy approved for castration-resistant prostate cancer (CRPC)",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "ADT",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.ADT) == `false`",
+              "metadata": {
+                "description": "ADT is missing",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.ADT.value[]|[0]"
+              }
+            }
+          ],
+          "expression": "ADT"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "ADT",
+              "display": "Progressed on androgen deprivation therapy",
+              "value": null,
+              "expression": "variables.ADT.value[].attributes.code.coding[]|length(@)>`0`",
+              "metadata": {
+                "description": "Progressed on androgen deprivation therapy",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.ADT.value[].attributes.code.coding[].display|[0]",
+                "sourcesAdt": "\nvariables.ADT.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n"
+              }
+            }
+          ],
+          "expression": "ADT"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "ADT",
+              "display": "[NOT_MET]: Progressed on androgen deprivation therapy",
+              "value": null,
+              "expression": "variables.ADT.value[].attributes.code.coding[]|length(@)>`0`",
+              "metadata": {
+                "description": "Progressed on androgen deprivation therapy",
+                "usingAi": false,
+                "missingState": true
+              },
+              "extension": {
+                "displayValue": "variables.ADT.value[].attributes.code.coding[].display|[0]",
+                "sourcesAdt": "\nvariables.ADT.value[].{\nauthor:attributes.author,\ndate:date,\ntitle:[attributes.code.coding[].display|[0],attributes.code.text][?@]|[0],\nstatus:attributes.status,\nusingAi:`false`,\nentityType :type,\nentityId :id,\nversion:patient_version\n}\n"
+              }
+            }
+          ],
+          "expression": "!(ADT)"
+        }
+      ]
+    }
+  ]
+}

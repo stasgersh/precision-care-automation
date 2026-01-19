@@ -1,0 +1,49 @@
+{
+  "patient": "MaryChrisID",
+  "version": 1747289561002,
+  "results": [
+    {
+      "alias": "",
+      "entries": [
+        {
+          "id": "testPatient:MaryChrisID",
+          "patient_id": "MaryChrisID",
+          "patient_version": 1747288611484,
+          "type": "testPatient",
+          "date": "1939-12-14",
+          "attributes": {
+            "id": "MaryChrisID",
+            "identifier": [
+              {
+                "system": "https://ge.com/oncoflow/omop/person_id",
+                "value": "cf90fbf6-0ef8-4f32-a5e9-f2528484f40c"
+              }
+            ],
+            "gender": "male",
+            "dob": "1939-12-14",
+            "name": [
+              {
+                "use": "official",
+                "family": "OncoTestPatient",
+                "given": [
+                  "MaryChris"
+                ]
+              }
+            ],
+            "maritalStatus": null
+          },
+          "provenance": [
+            "Patient/MaryChrisID"
+          ],
+          "subtypes": [
+            "oncoContext"
+          ]
+        }
+      ],
+      "name": [
+        "entities-testpatient-c7f91c6f-1247-4184-bea0-58479c11ded1"
+      ],
+      "nextPageToken": null
+    }
+  ]
+}

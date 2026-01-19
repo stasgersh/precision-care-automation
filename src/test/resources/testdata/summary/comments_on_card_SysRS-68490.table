@@ -1,0 +1,2 @@
+| author (firstname lastname) | date_and_time | content                       | badge | has_view_on_timeline_link |
+| [DEFAULT-TEST-USER]         | <ANY_VALUE>   | comments card remains visible | <N/A> | <N/A>                     |

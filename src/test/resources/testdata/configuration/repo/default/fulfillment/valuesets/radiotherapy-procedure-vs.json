@@ -1,0 +1,193 @@
+{
+  "name": "radiotherapy-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "radiotherapy-procedure-vs",
+    "description": "Radiotherapy procedure codes",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "10492003",
+              "display": "Radionuclide therapy for glandular suppression (procedure)"
+            },
+            {
+              "code": "108290001",
+              "display": "Radiation oncology AND/OR radiotherapy (procedure)"
+            },
+            {
+              "code": "113117004",
+              "display": "External beam radiation therapy particulate radiation (procedure)"
+            },
+            {
+              "code": "168520004",
+              "display": "Radiotherapy for immunosuppression (procedure)"
+            },
+            {
+              "code": "168521000",
+              "display": "Radiotherapy for hemopoietic irradiation (procedure)"
+            },
+            {
+              "code": "168522007",
+              "display": "Radiotherapy for lymphatic irradiation (procedure)"
+            },
+            {
+              "code": "168523002",
+              "display": "Preoperative course of radiotherapy (procedure)"
+            },
+            {
+              "code": "168524008",
+              "display": "Radiotherapy - intraoperative control (procedure)"
+            },
+            {
+              "code": "168525009",
+              "display": "Postoperative course of radiotherapy (procedure)"
+            },
+            {
+              "code": "168526005",
+              "display": "Radiotherapy for analgesia (procedure)"
+            },
+            {
+              "code": "168527001",
+              "display": "Radiotherapy for inflammation (procedure)"
+            },
+            {
+              "code": "168528006",
+              "display": "Palliative course of radiotherapy (procedure)"
+            },
+            {
+              "code": "169291001",
+              "display": "X-ray beam therapy (procedure)"
+            },
+            {
+              "code": "169315008",
+              "display": "Deuteron therapy (procedure)"
+            },
+            {
+              "code": "169316009",
+              "display": "Pi-meson therapy (procedure)"
+            },
+            {
+              "code": "171809001",
+              "display": "Radiotherapy to lesion of peripheral nerve (procedure)"
+            },
+            {
+              "code": "172286002",
+              "display": "Radiotherapy to lacrimal gland (procedure)"
+            },
+            {
+              "code": "172386004",
+              "display": "Radiotherapy of conjunctival lesion (procedure)"
+            },
+            {
+              "code": "172408001",
+              "display": "Radiotherapy of corneal lesion (procedure)"
+            },
+            {
+              "code": "228671005",
+              "display": "Linear accelerator electron external beam radiation therapy (procedure)"
+            },
+            {
+              "code": "228697004",
+              "display": "Yttrium 90 therapy (procedure)"
+            },
+            {
+              "code": "228698009",
+              "display": "Iodine 131 therapy (procedure)"
+            },
+            {
+              "code": "228699001",
+              "display": "Phosphorus 32 therapy (procedure)"
+            },
+            {
+              "code": "228700000",
+              "display": "Iodine 131 meta-iodobenzylguanidine therapy (procedure)"
+            },
+            {
+              "code": "228701001",
+              "display": "Strontium 89 therapy (procedure)"
+            },
+            {
+              "code": "228702008",
+              "display": "Gold 198 therapy (procedure)"
+            },
+            {
+              "code": "231544004",
+              "display": "Radiotherapy to orbital lesion (procedure)"
+            },
+            {
+              "code": "231568007",
+              "display": "Radiotherapy to lesion of medial canthus (procedure)"
+            },
+            {
+              "code": "231585009",
+              "display": "Radiotherapy to lesion of lateral canthus (procedure)"
+            },
+            {
+              "code": "231737005",
+              "display": "Radiotherapy to ciliary body (procedure)"
+            },
+            {
+              "code": "231764006",
+              "display": "Radiotherapy to retina (procedure)"
+            },
+            {
+              "code": "384692006",
+              "display": "Intracavitary brachytherapy (procedure)"
+            },
+            {
+              "code": "399315003",
+              "display": "Radionuclide therapy (procedure)"
+            },
+            {
+              "code": "420529003",
+              "display": "Radiotherapy using radioactive plaque on eye (procedure)"
+            },
+            {
+              "code": "441799006",
+              "display": "Intensity modulated radiation therapy (procedure)"
+            },
+            {
+              "code": "445232009",
+              "display": "Boost radiation therapy (procedure)"
+            },
+            {
+              "code": "448294009",
+              "display": "External radiation therapy using superficial radiation (procedure)"
+            },
+            {
+              "code": "448385000",
+              "display": "Megavoltage radiation therapy using photons (procedure)"
+            },
+            {
+              "code": "448461009",
+              "display": "Stereotactic radiation therapy using megavoltage radiation (procedure)"
+            },
+            {
+              "code": "449290006",
+              "display": "Megavoltage radiation therapy using photons and electrons (procedure)"
+            },
+            {
+              "code": "5304008",
+              "display": "Deep radiation therapy, 200-300 KVP (procedure)"
+            },
+            {
+              "code": "63506005",
+              "display": "Destruction of lesion of choroid by radiation therapy (procedure)"
+            },
+            {
+              "code": "703423002",
+              "display": "Combined chemotherapy and radiation therapy (procedure)"
+            },
+            {
+              "code": "85257004",
+              "display": "Destruction of chorioretinal lesion by radiation therapy (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

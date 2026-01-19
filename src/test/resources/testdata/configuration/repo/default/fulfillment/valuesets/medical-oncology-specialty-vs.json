@@ -1,0 +1,20 @@
+{
+  "name": "medical-oncology-specialty-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "medical-oncology-specialty-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "394593009",
+              "display": "Medical oncology"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

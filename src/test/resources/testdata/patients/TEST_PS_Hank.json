@@ -1,0 +1,533 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "Patient/RgBoq3dEISxh",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "RgBoq3dEISxh",
+        "name": [
+          {
+            "use": "official",
+            "family": "TEST_PS",
+            "given": [
+              "Hank"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-11-11"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/bHuJ6fadT9mX",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "bHuJ6fadT9mX",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "LP29684-5",
+                "system": "http://loinc.org",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "effectiveDateTime": "2007-08-08T16:31:51.000Z",
+        "performer": [
+          {
+            "reference": "Practitioner/oB5eYSINJa30",
+            "display": "Dr. Bianca Matrey"
+          }
+        ],
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Q1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3QKCkluZGljYXRpb246IFRoZSBwYXRpZW50IHByZXNlbnRlZCB3aXRoIHN5bXB0b21zIG9mIGNoZXN0IHBhaW4gYW5kIHNob3J0bmVzcyBvZiBicmVhdGguIEEgQ1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3Qgd2FzIG9yZGVyZWQgdG8gZXZhbHVhdGUgZm9yIHBvc3NpYmxlIHB1bG1vbmFyeSBlbWJvbGlzbSwgcG5ldW1vbmlhLCBhbmQvb3IgYWJkb21pbmFsIHBhdGhvbG9neS4KClByb2NlZHVyZTogVGhlIHBhdGllbnQgd2FzIGFkbWluaXN0ZXJlZCAxMjAgbUwgb2Ygbm9uLWlvbmljIGNvbnRyYXN0IGFnZW50IGludHJhdmVub3VzbHkgYW5kIHVuZGVyd2VudCBhIENUIHNjYW4gb2YgdGhlIHRob3JheCwgYWJkb21lbiwgYW5kIHBlbHZpcyB1c2luZyBhIDY0LXNsaWNlIENUIHNjYW5uZXIuCgpGaW5kaW5nczoKClRoZSBDVCBzY2FuIHJldmVhbGVkIHRoZSBmb2xsb3dpbmcgZmluZGluZ3M6CgpUaGUgdGhvcmF4OiBObyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20gb3IgcG5ldW1vbmlhIHdhcyBzZWVuLiBUaGUgbHVuZ3Mgd2VyZSBjbGVhciwgd2l0aCBubyBldmlkZW5jZSBvZiBjb25zb2xpZGF0aW9uIG9yIGVmZnVzaW9uLgpUaGUgYWJkb21lbjogVGhlIGxpdmVyLCBzcGxlZW4sIGFuZCBraWRuZXlzIHdlcmUgbm9ybWFsIGluIHNpemUgYW5kIHNoYXBlLiBUaGUgcGFuY3JlYXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBwYW5jcmVhdGl0aXMgb3IgcGFuY3JlYXRpYyBtYXNzLiBUaGUgc21hbGwgYm93ZWwgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvYnN0cnVjdGlvbiBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4gVGhlIGxhcmdlIGJvd2VsIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgZGl2ZXJ0aWN1bGl0aXMgb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuClRoZSBwZWx2aXM6IFRoZSBwZWx2aXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBmcmFjdHVyZSBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4KQ29udHJhc3QgRW5oYW5jZW1lbnQ6CgpUaGUgY29udHJhc3QgYWdlbnQgZW5oYW5jZWQgdGhlIHZpc3VhbGl6YXRpb24gb2YgdGhlIHZhc2N1bGFyIHN0cnVjdHVyZXMsIGluY2x1ZGluZyB0aGUgYW9ydGEsIHB1bG1vbmFyeSBhcnRlcmllcywgYW5kIHJlbmFsIGFydGVyaWVzLiBObyBldmlkZW5jZSBvZiB0aHJvbWJ1cyBvciBlbWJvbHVzIHdhcyBzZWVuIGluIHRoZSBwdWxtb25hcnkgYXJ0ZXJpZXMuCgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIENUIFRob3JheCBBYmRvbWVuIFBlbHZpcyB3aXRoIENvbnRyYXN0LCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBubyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20sIHBuZXVtb25pYSwgb3IgYWJkb21pbmFsIHBhdGhvbG9neS4gVGhlIHBhdGllbnQncyBzeW1wdG9tcyBhcmUgbGlrZWx5IGR1ZSB0byBhbm90aGVyIGNhdXNlLCBhbmQgZnVydGhlciBldmFsdWF0aW9uIGlzIG5lZWRlZCB0byBkZXRlcm1pbmUgdGhlIHVuZGVybHlpbmcgZGlhZ25vc2lzLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIG1hbmFnZW1lbnQgYXMgZGlyZWN0ZWQgYnkgdGhlIHBhdGllbnQncyBwcmltYXJ5IGNhcmUgcGh5c2ljaWFuLgpDb25zaWRlciBmdXJ0aGVyIGltYWdpbmcgc3R1ZGllcywgc3VjaCBhcyBhIHZlbnRpbGF0aW9uLXBlcmZ1c2lvbiBzY2FuIG9yIGEgcHVsbW9uYXJ5IGZ1bmN0aW9uIHRlc3QsIHRvIGZ1cnRoZXIgZXZhbHVhdGUgZm9yIHB1bG1vbmFyeSBlbWJvbGlzbS4KU2lnbmF0dXJlOgoKRHIgWSBY"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "433761009",
+              "system": "http://snomed.info/sct",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        }
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/O1HmMUzicaCt",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "O1HmMUzicaCt",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "34117-2",
+              "system": "http://loinc.org",
+              "display": "History and physical note - test1"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "clinical-note",
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "display": "Clinical Note"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "date": "2007-09-09T17:31:51.000Z",
+        "author": [
+          {
+            "reference": "Practitioner/oB5eYSINJa30",
+            "display": "Dr. Bianca Matrey"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "language": "en-US",
+              "data": "Q2xpbmljYWwgYW5kIFRyZWF0bWVudCBTdW1tYXJ5XG5cbk1ldCBjb2xvbiBhZGVub2NhcmNpbm9hbSB3aXRoIHNvbGl0YXJ5IG9tZW50YWwgbWV0IC0gYWxsIHZpc2libGUgZGlzZWFzZSByZXNlY3RlZCBNU1MgUkFTL1JBRiBXVCBzL3AgcHJvcGh5bGFjdGljIEhJUEVDIG9uIDEzLzMvMTggKG9uIHRyaWFsKVxuXG5cblxuSGlzdG9yeSwgRXhhbWluYXRpb24gYW5kIEludmVzdGlnYXRpb25zXG5cblVuZGVyd2VudCBwcm9waHlsYWN0aWMgSElQRUMgKHRyaWFsKSBvbiAxMy8zLzE4IER1ZSAjNiBYZWxveCAjNCBhbmQgNSBkb3NlIGRlbGF5IDIgd2Vla3MgZHVlIHRvIGxvdyBQTHQgYW5kIGxvdyBBTkMsIGdpdmVuIDJkYXlzIHMvYyBHQ1NGIChwcmlvciB0byAjNCBidXQgbm90ICM1KSBIaXN0bzogRElBR05PU0lTIChBKSBMZWZ0IHBlbHZpYyBwZXJpdG9uZXVtOyBleGNpc2lvbiBiaW9wc3k6IEZhdCBuZWNyb3NpcywgaW5mbGFtbWF0aW9uLCBmaWJyb3NpcyBhbmQgZm9yZWlnbiBib2R5LXR5cGUgbXVsdGludWNsZWF0ZSBnaWFudCBjZWxsIHJlYWN0aW9uOyAtIG5lZ2F0aXZlIGZvciBtYWxpZ25hbmN5LiAoQikgT21lbnR1bTsgb21lbnRlY3RvbXk6IE5vbi1zcGVjaWZpYyByZWFjdGl2ZSBjaGFuZ2VzOyAtIHR3byBiZW5pZ24gbHltcGggbm9kZXMgKDAvMiksIC0gbmVnYXRpdmUgZm9yIG1hbGlnbmFuY3kuIEJsZHMgdG9kYXkgQU5DIDAuOTYgUEx0IDEyMWsgQ0VBIDYuNCBmcm9tIDQgQ1QgVEFQIDkvNy8xODogQ29uY2x1c2lvbiBTaW5jZSAxMyBBcHIgMjAxOCwgMS4gU3RhdHVzIHBvc3QgaGlnaCBhbnRlcmlvciByZXNlY3Rpb24gd2l0aCBubyBldmlkZW5jZSBvZiBsb2NhbCByZWN1cnJlbmNlIG9yIGludGVydmFsIGNoYW5nZS4gMi4gVGhlIHB1bG1vbmFyeSBub2R1bGVzLCBzdXNwaWNpb3VzIG9mIG1ldGFzdGFzZXMsIGFyZSBzbWFsbGVyLiBUaGUgcmlnaHQgbG93ZXIgbG9iZSBub2R1bGUgaGFzIG5lYXJseSByZXNvbHZlZC4gMy4gVGhlIGNpcmN1bWZlcmVudGlhbCBtdXJhbCB0aGlja2VuaW5nIGluIHRoZSByZWN0dW0gaXMgbGVzcyBwcm9taW5lbnQgYW5kIHJlbWFpbnMgaW5kZXRlcm1pbmF0ZS4gNC4gTm8gbmV3IGRpc3RhbnQgbWV0YXN0YXNpcy4gU1VCSkVDVElWRSBUb2xlcmF0ZWQgd2VsbCBHMSBuZXVyb3BhdGh5IGluIGZpbmdlcnMgYW5kIHRvZXMgRWF0IGFuZCBCTyByZWd1bGFybHksIHdlbGwgTm8gUFIgYmxlZWQgRHJ5IHNraW4sIG5vIFBQRSwgbm90IHVzaW5nIG1vaXN0dXJpc2VycyBPQkVKQ1RJVkUgRUNPRyAxIC0gbGltcHMgYnV0IHRoaXMgaXMgYmFzZWxpZW4gZnJvbSBwcmV2aW91cyBhY2NpZGVudCBIdCAxNzFjbSBXdCA2MC45a2cgZnJvbSA2MC44a2cgZnJvbSA1Ny44a2cgZnJvbSA1Ni44a2cgZnJvbSA1NS40a2cgZnJvbSA1NWtnIGZyb20gNTQuNGtnIEgtUzFTMiBMIC0gTm8gY3JlcHMgQSAtIFNvZnQgTm9udGVuZGVyIFQgMzYuNCBIUiAxMzEvODYgU3BPMiAxMDAlIG9uIFJBIEhSIDcxIEhvbWUgQlAgbW9uaXRvcmluZyBTQlAgMTIwLTE1MG1tSEcgb24gYW1sb2RpcGluZSAyLjVtZyBPTSBJbXA6IE1ldCBjb2xvbiBhZGVub2NhcmNpbm9hbSB3aXRoIHNvbGl0YXJ5IG9tZW50YWwgbWV0IC0gYWxsIHZpc2libGUgZGlzZWFzZSByZXNlY3RlZCBNU1MgUkFTL1JBRiBXVCBzL3AgcHJvcGh5bGFjdGljIEhJUEVDIG9uIDEzLzMvMTggKG9uIHRyaWFsKSBQT3N0LW9wIENUIC0gaW5jcmVhc2UgaW4gb25lIGx1bmcgbW9kdWxlID9tZXQgLSByZXNwb25kaW5nIHRvIFhlbG94XG5cblxuTWFuYWdlbWVudCBGb3IgVGhpcyBWaXNpdFxuXG5QcmNvZWVkIHdpdGggIzYgWGVsb3ggb24gMy85LzE4IEZCQyBPQSBUQ1UgbWUgNCB3ZWVrcyBCbGRzIE9BIENUIFRBUCBiZWZvcmUgVENVIENvbnR0IGFtbG9kaXBpbmUgYXQgMi41bWcgT00sIGFkdmlzZWQgaG9tZSBCUCBtb25pdG9yaW5nLCBLSVYgZnVydGhlciBpbmNyZWFzZSB0byA1bWcgT00gQWR2aXNlZCB0byByZXR1cm4gZWFybHkgaWYgZmV2ZXIvdW53ZWxsIHdoaWxlIG9uIGNoZW1vIFMvVCBUb2xlcmF0aW5nIGNoZW1vIHdlbGwsIHdlIHdvdWxkIGNvbnRpbnVlIFhlbG94IExBc3QgQ1Qgc2hvd3MgbHVuZyBsZXNpb25zIGFyZSBzbWFsbGVyLCBsaWtlbHkgbHVuZyBtZXRzIGFuZCBzdGFnZSA0IGRpc2Vhc2UgV2Ugd291bGQgcmV2aWV3IENUIHJlc3VsdHMgYWdhaW4gd2l0aCByZXBlYXQgQ1QgYWZ0ZXIgdGhpcyBjeWNsZSBUaGV5IHVuZGVyc3RhbmQsIGFncmVlYWJsZSBBbGwgcXVlc3Rpb25zIGFuc3dlcmVkXG5cblxuTWFuYWdlbWVudCBGb3IgVGhpcyBWaXNpdFxuXG5QcmNvZWVkIHdpdGggIzYgWGVsb3ggb24gMy85LzE4IEZCQyBPQSBUQ1UgbWUgNCB3ZWVrcyBCbGRzIE9BIENUIFRBUCBiZWZvcmUgVENVIC0gcG9zdHBvbmUgY3VycmVudCBDVCBhcHB0IHRvIDE3LzkvMTggQ29udHQgYW1sb2RpcGluZSBhdCAyLjVtZyBPTSwgYWR2aXNlZCBob21lIEJQIG1vbml0b3JpbmcsIEtJViBmdXJ0aGVyIGluY3JlYXNlIHRvIDVtZyBPTSBBZHZpc2VkIHRvIHJldHVybiBlYXJseSBpZiBmZXZlci91bndlbGwgd2hpbGUgb24gY2hlbW8gUy9UIFRvbGVyYXRpbmcgY2hlbW8gd2VsbCwgd2Ugd291bGQgY29udGludWUgWGVsb3ggTEFzdCBDVCBzaG93cyBsdW5nIGxlc2lvbnMgYXJlIHNtYWxsZXIsIGxpa2VseSBsdW5nIG1ldHMgYW5kIHN0YWdlIDQgZGlzZWFzZSBXZSB3b3VsZCByZXZpZXcgQ1QgcmVzdWx0cyBhZ2FpbiB3aXRoIHJlcGVhdCBDVCBhZnRlciB0aGlzIGN5Y2xlIFRoZXkgdW5kZXJzdGFuZCwgYWdyZWVhYmxlIEFsbCBxdWVzdGlvbnMgYW5zd2VyZWQ=",
+              "title": "Test attachment 1"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/OmSP7wO0r3hL"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Encounter/OmSP7wO0r3hL",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "OmSP7wO0r3hL",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "162673000",
+                "system": "http://snomed.info/sct",
+                "display": "General examination of patient (procedure)"
+              }
+            ],
+            "text": "General examination of patient (procedure)"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "code": "PPRF",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "display": "primary performer"
+                  }
+                ],
+                "text": "primary performer"
+              }
+            ],
+            "period": {
+              "start": "2007-09-09T17:31:51.000Z",
+              "end": "2007-09-09T17:51:51.000Z"
+            },
+            "individual": {
+              "reference": "Practitioner/oB5eYSINJa30",
+              "display": "Dr. Bianca Matrey"
+            }
+          }
+        ],
+        "period": {
+          "start": "2007-09-09T17:31:51.000Z",
+          "end": "2007-09-09T17:51:51.000Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/4gwTtmTd8o04",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "4gwTtmTd8o04",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "LP29684-5",
+                "system": "http://loinc.org",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "effectiveDateTime": "2007-10-02T10:22:22.000Z",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "b3ZhcmlhbiBjYW5jZXIgd2l0aCBwZXJpdG9uZWFsIGRpc2Vhc2UuIGZhZWNhbCB2b21pdGluZywgZW1wdHkgcmVjdHVtLiA/ZGlzZWFzZSBwcm9ncmVzc2lvbiA/c3ViYWN1dGUgYm93ZWwgb2JzdHJ1Y3Rpb24gdW5lbmhhbmNlZCBpbWFnZXMgYWNxdWlyZWQgZHVlIHRvIHBvb3IgcmVuYWwgZnVuY3Rpb24uIGNvbXBhcmlzb24gbWFkZSB3aXRoIHByZXZpb3VzIGN0IGRhdGVkIDI0IDExIDE0LiBubyBzaWduaWZpY2FudCBpbnRlcnZhbCBjaGFuZ2UgaW4gdGhlIGxvY3VsYXRlZCBhc2NpdGVzIHdpdGhpbiB0aGUgcGVsdmlzLiByaWdodCBoeWRyb25lcGhyb3NpcyB1bmNoYW5nZWQuIGN5c3RzIHdpdGhpbiB0aGUgbGl2ZXIgYW5kIGxlZnQga2lkbmV5IG5vdGVkLiB0aGVyZSBoYXMgYmVlbiBubyBzaWduaWZpY2FudCBpbnRlcnZhbCBjaGFuZ2UgaW4gdGhlIHBlcml0b25lYWwgZGlzZWFzZSBzZWVuIHRocm91Z2hvdXQgdGhlIGFiZG9tZW4gYW5kIHBlbHZpcy4gMTAgbW0gYW9ydG9jYXZhbCBseW1waCBub2RlIGlzIHVuY2hhbmdlZC4gbm8gb3RoZXIgbmV3IGVubGFyZ2VkIGFiZG9taW5hbCBvciBwZWx2aWMgbHltcGggbm9kZXMuIHRoZSBzdG9tYWNoIGlzIGZsdWlkLS1maWxsZWQgYW5kIHNsaWdodGx5IGRpc3RvcnRlZC4gcGFydGlhbGx5IGNhbGNpZmllZCBzZXJvc2FsIGRpc2Vhc2UgaXMgc2VlbiB3aXRoaW4gdGhlIGxlc3NlciBzYWMuIHRoZSBweWxvcnVzIGFwcGVhcnMgYnVsa3ksIHdoaWNoIHh4eCByZXByZXNlbnQgZnVydGhlciBzZXJvc2FsIGRpc2Vhc2UgYXQgdGhpcyBzaXRlLCBidXQgdGhpcyBpcyBhZ2FpbiB1bmNoYW5nZWQgc2luY2Ugbm92ZW1iZXIuIHRoZSBzbWFsbCBhbmQgbGFyZ2UgYm93ZWwgYXJlIG9mIG5vcm1hbCBjYWxpYnJlLiBtaW5vciBhdGVsZWN0YXNpcyBpbiB0aGUgbHVuZyBiYXNlcy4gbm8gcGxldXJhbCBlZmZ1c2lvbi4gbm8gc3VzcGljaW91cyBmb2NhbCBib25lIGxlc2lvbi4gQ09OQ0xVU0lPTiAgc3RhYmxlIGRpc2Vhc2UuIGZsdWlkLS1maWxsZWQgc3RvbWFjaCB3aXRoIHNlcm9zYWwgZGlzZWFzZS4gdGhpY2tlbmVkIHB5bG9ydXMgeHh4IHJlcHJlc2VudCBmdXJ0aGVyIGRpc2Vhc2UgYXQgdGhpcyBzaXRlLiBubyBzbWFsbC0tYm93ZWwgb2JzdHJ1Y3Rpb24u"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "16457501000119102",
+              "system": "http://loinc.org",
+              "display": "CT ABDOMEN AND PELVIS"
+            }
+          ],
+          "text": "CT ABDOMEN AND PELVIS"
+        },
+        "imagingStudy": [
+          {
+            "reference": "ImagingStudy/bYraM1ZUkhSc"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/GC5deOZpWmqh"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "ImagingStudy/bYraM1ZUkhSc",
+      "resource": {
+        "resourceType": "ImagingStudy",
+        "id": "bYraM1ZUkhSc",
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "code": "ACSN",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "11567660_img"
+          }
+        ],
+        "status": "available",
+        "reasonCode": [
+          {
+            "text": "Ovarian cancer with peritoneal disease. Faecal vomiting, empty rectum. ?Disease progression ?subacute bowel obstruction"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/GC5deOZpWmqh",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "GC5deOZpWmqh",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "18782-3",
+              "system": "http://loinc.org",
+              "display": "Radiology Study observation (narrative)"
+            }
+          ],
+          "text": "Findings"
+        },
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "bodySite": {
+          "coding": [
+            {
+              "code": "818983003",
+              "system": "http://snomed.info/sct",
+              "display": "Abdomen+Pelvis:Doc:CT"
+            }
+          ]
+        },
+        "valueString": "STABLE"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/qMT3qMfZgXMx",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "qMT3qMfZgXMx",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "LP29684-5",
+                "system": "http://loinc.org",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "effectiveDateTime": "2007-10-11T11:22:22.000Z",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "RXhhbWluYXRpb24gb2YgSm9pbnQgdW5kZXIgSW1hZ2UgSW50ZW5zaWZpZXI6CgpQcm9jZWR1cmU6IEV4YW1pbmF0aW9uIG9mIHRoZSBsZWZ0IHNob3VsZGVyIGpvaW50IHVuZGVyIGltYWdlIGludGVuc2lmaWVyIChYLXJheSkgd2FzIHBlcmZvcm1lZCB0byBldmFsdWF0ZSB0aGUgc3VzcGVjdGVkIHJvdGF0b3IgY3VmZiB0ZWFyLgoKRmluZGluZ3M6CgpUaGUgZXhhbWluYXRpb24gcmV2ZWFsZWQgdGhlIGZvbGxvd2luZyBmaW5kaW5nczoKClRoZSBqb2ludCBzcGFjZSB3YXMgbWFpbnRhaW5lZCwgd2l0aCBubyBldmlkZW5jZSBvZiBzaWduaWZpY2FudCBqb2ludCBlZmZ1c2lvbiBvciBzd2VsbGluZy4KVGhlIGh1bWVyYWwgaGVhZCBhbmQgZ2xlbm9pZCBjYXZpdHkgd2VyZSB2aXN1YWxpemVkLCBzaG93aW5nIGEgc21hbGwgZnJhY3R1cmUgb2YgdGhlIGdyZWF0ZXIgdHViZXJvc2l0eSBjb25zaXN0ZW50IHdpdGggYSByZWNlbnQgdHJhdW1hLgpUaGUgcm90YXRvciBjdWZmIHRlbmRvbnMgd2VyZSB2aXN1YWxpemVkLCBzaG93aW5nIHNpZ25zIG9mIGRlZ2VuZXJhdGl2ZSBjaGFuZ2VzIGFuZCBwYXJ0aWFsIHRlYXIgb2YgdGhlIHN1cHJhc3BpbmF0dXMgdGVuZG9uLgpUaGUgYWNyb21pb24gYW5kIGNvcmFjb2lkIHByb2Nlc3NlcyB3ZXJlIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBzaWduaWZpY2FudCBkZWdlbmVyYXRpdmUgY2hhbmdlcyBvciBmcmFjdHVyZXMuClRoZSBib25lIGRlbnNpdHkgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvc3Rlb3Bvcm9zaXMgb3Igb3RoZXIgYm9ueSBhYm5vcm1hbGl0aWVzLgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIGV4YW1pbmF0aW9uIHVuZGVyIGltYWdlIGludGVuc2lmaWVyLCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBhIHBhcnRpYWwgdGVhciBvZiB0aGUgc3VwcmFzcGluYXR1cyB0ZW5kb24gYW5kIGEgc21hbGwgZnJhY3R1cmUgb2YgdGhlIGdyZWF0ZXIgdHViZXJvc2l0eSBvZiB0aGUgaHVtZXJ1cywgbGlrZWx5IGR1ZSB0byBhIHJlY2VudCB0cmF1bWEuIFRoZSBkZWdlbmVyYXRpdmUgY2hhbmdlcyBpbiB0aGUgcm90YXRvciBjdWZmIHRlbmRvbnMgYXJlIGNvbnNpc3RlbnQgd2l0aCBhZ2UtcmVsYXRlZCB3ZWFyIGFuZCB0ZWFyLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBwaHlzaWNhbCB0aGVyYXB5IHRvIGltcHJvdmUgcmFuZ2Ugb2YgbW90aW9uIGFuZCBzdHJlbmd0aCBpbiB0aGUgbGVmdCBzaG91bGRlci4KQ29uc2lkZXIgZnVydGhlciBpbWFnaW5nIHN0dWRpZXMsIHN1Y2ggYXMgYW4gTVJJIG9yIENUIHNjYW4sIHRvIGZ1cnRoZXIgZXZhbHVhdGUgdGhlIGV4dGVudCBvZiB0aGUgcm90YXRvciBjdWZmIHRlYXIgYW5kIHRoZSBmcmFjdHVyZS4KQ29uc2lkZXIgcmVmZXJyYWwgdG8gYW4gb3J0aG9wZWRpYyBzcGVjaWFsaXN0IGZvciBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIHRyZWF0bWVudC4KU2lnbmF0dXJlOgoKRHIgWAo="
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "179929004",
+              "system": "http://snomed.info/sct",
+              "display": "Examination of joint under image intensifier (procedure)"
+            }
+          ],
+          "text": "Examination of joint under image intensifier (procedure)"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/ObRapJkOL9nq",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ObRapJkOL9nq",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "vital-signs",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "29463-7",
+              "system": "http://loinc.org",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "effectiveDateTime": "2007-11-28T10:55:12.000Z",
+        "issued": "2007-11-28T10:55:12.000Z",
+        "valueQuantity": {
+          "value": 47.3,
+          "code": "kg",
+          "system": "http://unitsofmeasure.org",
+          "unit": "kg"
+        },
+        "note": [
+          {
+            "text": "Body Weight 47.3 kg"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/WLorIIO2sE7c",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "WLorIIO2sE7c",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "effectiveDateTime": "2008-02-04T10:55:12.000Z",
+        "conclusion": "Left axillary lymph node core biopsy: OK",
+        "code": {
+          "coding": [
+            {
+              "code": "66121-5",
+              "system": "http://loinc.org",
+              "display": "Tissue Pathology biopsy report"
+            }
+          ],
+          "text": "Tissue Pathology biopsy report"
+        }
+      }
+    },
+    {
+      "fullUrl": "Procedure/fxRPhVZonuyd",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "fxRPhVZonuyd",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "code": "288086009",
+              "system": "http://snomed.info/sct",
+              "display": "Suture open wound"
+            }
+          ],
+          "text": "Suture open wound"
+        },
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "performedPeriod": {
+          "start": "2008-04-08T14:18:42.000Z",
+          "end": "2008-04-08T14:54:42.000Z"
+        },
+        "note": [
+          {
+            "text": "Suture open wound"
+          }
+        ],
+        "category": {
+          "coding": [
+            {
+              "code": "387713003",
+              "system": "http://snomed.info/sct",
+              "display": "Surgical procedure"
+            }
+          ],
+          "text": "Surgical procedure"
+        }
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/H5f0WQ2IVqJH",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "H5f0WQ2IVqJH",
+        "status": "current",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "clinical-note",
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "LP18648-3",
+              "system": "http://loinc.org",
+              "display": "Pathology Report"
+            }
+          ],
+          "text": "Pathology Report"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UHlsb3JpYyBzdHJpY3R1cmV+ICBiZW5pZ24gID9nYXN0cmljIHBvbHlwfiBmdW5kaWM/ICBOb2R1bGFyIGFwcGVhcmVuY2UgaW4gZGlzdGFsIG9lc29waGFndXM/IEEuIEJpb3BzeSB4IDIuICAgQi4gUHlsb3J1cyB4IDYuICBDLiBPZXNvcGhhZ3VzOiBCaW9wc3kgeCA0LiAgUHJlLWNhc3NldHRlZC4gWzNdbnIgQS4gU3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2EgYmlvcHN5IHNob3dpbmcgbm9ybWFsIGFwcGVhcmFuY2VzIHdpdGggbm8gZXZpZGVuY2Ugb2YgYWN0aXZlIGluZmxhbW1hdGlvbjsgZ3JhbnVsb21hczsgYXRyb3BoeTsgaW50ZXN0aW5hbCBtZXRhcGxhc2lhOyBkeXNwbGFzaWEgbm9yIG1hbGlnbmFuY3kuIEhlbGljb2JhY3RlciBweWxvcmktbGlrZSBvcmdhbmlzbXMgYXJlIGFic2VudCBvbiByb3V0aW5lIHN0YWluaW5nLiBEaWFnbm9zdGljIGZlYXR1cmVzIG9mIGZ1bmRpYyBnbGFuZCBwb2x5cCBhcmUgYWJzZW50LiAgICBCLiBOb24tc3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2FsIGJpb3BzaWVzIHNob3dpbmcgbW9kZXJhdGVseSBkaWZmZXJlbnRpYXRlZCBjYXJjaW5vbWEgd2l0aCBvY2Nhc2lvbmFsIHR1bW91ciBuZXN0cyB3aXRoaW4gdGhlIGxhbWluYSBwcm9wcmlhIGRpc3BsYXlpbmcgYSBtaWNyb3BhcGlsbGFyeSBhcmNoaXRlY3R1cmUuIEltbXVub3N0YWluaW5nIHJldmVhbHMgdHVtb3VyIGNlbGwgZXhwcmVzc2lvbiBvZiBDQS0xMjUgYW5kIFdULTEgKG9jY2FzaW9uYWwgY2VsbHMpIHdpdGggbmVnYXRpdmUgc3RhaW5pbmcgZm9yIENEWC0yLiBUaGVzZSBmZWF0dXJlcyBhcmUgaW4ga2VlcGluZyB3aXRoIG1ldGFzdGF0aWMgb3ZhcmlhbiBzZXJvdXMgcGFwaWxsYXJ5IGNhcmNpbm9tYS4gICAgIEMuIEJpb3BzaWVzIHNob3dpbmcgYSBwYXJ0aWFsbHkgY29sbGFwc2VkIG9lc29waGFnZWFsIGN5c3Qgd2l0aCBhIGJpbGF5ZXJlZCBsaW5pbmcuIFRoZXJlIGlzIGFsc28gYSBmcmFnbWVudCBvZiB1bGNlciBzbG91Z2ggbWF0ZXJpYWwuIEEuIEdBU1RSSUMgQklPUFNZOiBOTyBESUFHTk9TVElDIEZFQVRVUkVTIE9GIEZVTkRJQyBHTEFORCBQT0xZUCAgICBCLiBQWUxPUlVTIEJJT1BTSUVTOiBGRUFUVVJFUyBJTiBLRUVQSU5HIFdJVEggTUVUQVNUQVRJQyBPVkFSSUFOIFNFUk9VUyBQQVBJTExBUlkgQ0FSQ0lOT01BICAgIEMuIE9FU09QSEFHRUFMIEJJT1BTSUVTOiBPRVNPUEhBR0VBTCBDWVNUIFdJVEggRVZJREVOQ0UgT0YgVUxDRVJBVElPTg=="
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "Practitioner/oB5eYSINJa30",
+            "display": "Dr. Bianca Matrey",
+            "type": "Practitioner"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/RgBoq3dEISxh"
+        },
+        "date": "2008-04-10T10:55:12.000Z"
+      }
+    },
+    {
+      "fullUrl": "Practitioner/oB5eYSINJa30",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "oB5eYSINJa30",
+        "active": true,
+        "name": [
+          {
+            "family": "Matrey",
+            "given": [
+              "Bianca"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Bianca.Matrey@testhopsital.com"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "421 MERRIMACK ST"
+            ],
+            "city": "METHUEN",
+            "state": "MA",
+            "postalCode": "01844-5865",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      }
+    }
+  ]
+}

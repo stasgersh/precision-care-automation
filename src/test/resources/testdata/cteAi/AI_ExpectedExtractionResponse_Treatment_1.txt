@@ -1,0 +1,2 @@
+| Eligibility_Key | Expected_Matched_Keywords |
+| Patient is considered appropriate to delay taxane-based chemotherapy | inclusion, criterion,not,Tumor,Board,Note,explicitly,taxane,chemotherapy,document,Cisplatin,Pemetrexed,surgery,no evidence,unknown |

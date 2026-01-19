@@ -1,0 +1,28 @@
+{
+  "name": "oxygen-saturation-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oxygen-saturation-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "2708-6",
+              "display": "Oxygen saturation in Arterial blood"
+            },
+            {
+              "code": "2710-2",
+              "display": "Oxygen saturation in Capillary blood by Oximetry"
+            },
+            {
+              "code": "59408-5",
+              "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

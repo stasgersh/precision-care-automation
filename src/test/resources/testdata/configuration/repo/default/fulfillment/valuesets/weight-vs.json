@@ -1,0 +1,37 @@
+{
+  "name": "weight-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "weight-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "29463-7"
+            },
+            {
+              "code": "3141-9"
+            },
+            {
+              "code": "3142-7"
+            },
+            {
+              "code": "75292-3"
+            },
+            {
+              "code": "79348-9"
+            },
+            {
+              "code": "8350-1"
+            },
+            {
+              "code": "8351-9"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

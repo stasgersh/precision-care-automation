@@ -1,0 +1,150 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/f8232ecd-7f0e-4197-91b5-1f583dc92c71",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "f8232ecd-7f0e-4197-91b5-1f583dc92c71",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "TimeRange85Days"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "123-555-5567",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-02-24",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "cc5a6e04-40e5-4941-a210-fe4a9345147f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report today"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f8232ecd-7f0e-4197-91b5-1f583dc92c71"
+        },
+        "effectiveDateTime": "<TODAY>T00:10:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "60fa0b8b-8e88-4fd3-9af7-983a5752bcc7",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 30 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f8232ecd-7f0e-4197-91b5-1f583dc92c71"
+        },
+        "effectiveDateTime": "<30_DAYS_AGO>T22:01:16.450+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "c392febf-eb35-4063-a777-e5b1e2b09a6f",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 32 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f8232ecd-7f0e-4197-91b5-1f583dc92c71"
+        },
+        "effectiveDateTime": "<32_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "9ecfdeac-a3cc-4d65-9386-52239c606e93",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 85 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/f8232ecd-7f0e-4197-91b5-1f583dc92c71"
+        },
+        "effectiveDateTime": "<85_DAYS_AGO>T17:01:16.450+02:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/96151d38-bda2-41ad-b451-b98201f8fde8"
+          }
+        ]
+      }
+    }
+  ]
+}

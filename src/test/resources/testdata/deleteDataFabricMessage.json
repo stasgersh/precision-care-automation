@@ -1,0 +1,7 @@
+{
+  "eventType": "DATA_FABRIC_DELETE",
+  "parameters": {
+    "patientId": "${patientId}"
+  },
+  "x-correlation-id": "${correlationId}"
+}

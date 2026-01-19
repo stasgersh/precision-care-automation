@@ -1,0 +1,19 @@
+{
+  "patientIdentifier": {
+    "type": {
+      "code": "",
+      "system": ""
+    },
+    "system": ""
+  },
+  "defaultPreset": "oncology.prostate",
+  "dicomViewerUrl": "https://d16vr74iv12cb5.cloudfront.net/stone-webviewer/index.html?redirect=https://test.com",
+  "oncologyDepartmentIdentifier": {
+    "type": {
+      "code": "",
+      "system": ""
+    },
+    "value": "",
+    "system": ""
+  }
+}

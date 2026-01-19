@@ -1,0 +1,914 @@
+{
+  "id": "${id}",
+  "type": "custom",
+  "metadata": {
+    "name": "Prostate MRI and Pylarify PSMA PET/CT",
+    "description": "Complex-criteria-17-AND-items-data-file-This is a voluntary research study to find out how using technology including advanced magnetic resonance imaging (MRI) and prostate-specific membrane antigen - positron emission tomography (PSMA-PET) scan imaging",
+    "status": "NOT YET RECRUITING",
+    "phase": "4",
+    "link": "https://clinicaltrials.gov/study/NCT05568537?cond=Prostate%20Cancer&titles=radiotherapy&aggFilters=phase:4,sex:m,status:rec%20not&rank=1"
+  },
+  "variables": [
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's gender",
+      "value": null
+    },
+    {
+      "id": "psa",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_1",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-1",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-1 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_2",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-2",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-2 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_3",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-3",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-3 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_4",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-4",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-4 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_5",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-5",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-5 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_6",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-6",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-6 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_7",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-7",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-7 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_8",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-8",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-8 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_9",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-9",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-9 Criteria",
+      "value": null
+    },
+    {
+      "id": "psa_10",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PSA-10",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.value"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's PSA-10 Criteria",
+      "value": null
+    }
+  ],
+  "outputs": [
+    {
+      "id": "criteria_male",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "gender"
+        ]
+      },
+      "display": "Gender is male",
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "Gender is male",
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.gender.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "gender"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "[NOT_MET]: Gender is male",
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.gender.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "!(gender)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria",
+      "display": "PSA(psa_criteria) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt51",
+              "display": "PSA less then 51ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `51`"
+            },
+            {
+              "id": "isPsaLt52",
+              "display": "PSA less then 52ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `52`"
+            },
+            {
+              "id": "isPsaLt53",
+              "display": "PSA less then 53ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `53`"
+            },
+            {
+              "id": "isPsaLt54",
+              "display": "PSA less then 54ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `54`"
+            },
+            {
+              "id": "isPsaLt55",
+              "display": "PSA less then 55ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `55`"
+            },
+            {
+              "id": "isPsaLt56",
+              "display": "PSA less then 56ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `56`"
+            },
+            {
+              "id": "isPsaLt57",
+              "display": "PSA less then 57ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `57`"
+            },
+            {
+              "id": "isPsaLt58",
+              "display": "PSA less then 58ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `58`"
+            },
+            {
+              "id": "isPsaLt59",
+              "display": "PSA less then 59ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `59`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            },
+            {
+              "id": "isPsaLt61",
+              "display": "PSA less then 61ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `61`"
+            },
+            {
+              "id": "isPsaLt62",
+              "display": "PSA less then 62ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `62`"
+            },
+            {
+              "id": "isPsaLt63",
+              "display": "PSA less then 63ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `63`"
+            },
+            {
+              "id": "isPsaLt64",
+              "display": "PSA less then 64ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `64`"
+            },
+            {
+              "id": "isPsaLt65",
+              "display": "PSA less then 65ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `65`"
+            },
+            {
+              "id": "isPsaLt66",
+              "display": "PSA less then 66ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `66`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt51 && isPsaLt52 && isPsaLt53 && isPsaLt54 && isPsaLt55 && isPsaLt56 && isPsaLt57 && isPsaLt58 && isPsaLt59 && isPsaLt60 && isPsaLt61 && isPsaLt62 && isPsaLt63 && isPsaLt64 && isPsaLt65 && isPsaLt66"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaLt30",
+              "display": "PSA less then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaGt60",
+              "display": "PSA grater then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaLt30 && isPsaGt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_1",
+      "display": "PSA(psa_criteria_1) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_1"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_2",
+      "display": "PSA(psa_criteria_2) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_2"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_3",
+      "display": "PSA(psa_criteria_3) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_3"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_4",
+      "display": "PSA(psa_criteria_4) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_4"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_5",
+      "display": "PSA(psa_criteria_5) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_5"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_6",
+      "display": "PSA(psa_criteria_6) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_6"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_7",
+      "display": "PSA(psa_criteria_7) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_7"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_8",
+      "display": "PSA(psa_criteria_8) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_8"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_9",
+      "display": "PSA(psa_criteria_9) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_9"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    },
+    {
+      "id": "psa_criteria_10",
+      "display": "PSA(psa_criteria_10) General Tumor Marker Test Result greater then 30 and less then 60",
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "psa_10"
+        ]
+      },
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] >= `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value|[0] <= `60`"
+            }
+          ],
+          "expression": "isPsaGt30 && isPsaLt60"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isPsaGt30",
+              "display": "PSA greater then 30ng/mL",
+              "expression": "variables.psa.value[].attributes.value < `30`"
+            },
+            {
+              "id": "isPsaLt60",
+              "display": "PSA less then 60ng/mL",
+              "expression": "variables.psa.value[].attributes.value > `60`"
+            }
+          ],
+          "expression": "!(isPsaGt30 && isPsaLt60)"
+        }
+      ]
+    }
+  ]
+}

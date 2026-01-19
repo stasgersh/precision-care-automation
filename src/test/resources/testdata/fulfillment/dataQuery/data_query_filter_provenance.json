@@ -1,0 +1,9 @@
+{
+  "must": [
+    {
+      "provenance": {
+        "eq": "Condition/condition2"
+      }
+    }
+  ]
+}

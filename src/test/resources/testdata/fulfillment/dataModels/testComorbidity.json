@@ -1,0 +1,118 @@
+{
+  "configType": "entity",
+  "classId": "testComorbidity",
+  "recordType": "DEFINITION",
+  "description": "original testComorbidity data model used for testing",
+  "definitions": [
+    {
+      "resourceType": "Condition",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "exclude": "secondary-cancer-disorder-vs"
+            },
+            {
+              "path": "$.code",
+              "exclude": "primary-cancer-disease-vs"
+            },
+            {
+              "path": "$.clinicalStatus",
+              "include": "comorbidity-status-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.onsetPeriod"
+          },
+          "processor": "periodDateText"
+        },
+        {
+          "source": {
+            "path": "$.onsetDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.recordedDate"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "category",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.category"
+              }
+            }
+          ]
+        },
+        {
+          "key": "clinicalStatus",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.clinicalStatus"
+              }
+            }
+          ]
+        },
+        {
+          "key": "verificationStatus",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.verificationStatus"
+              }
+            }
+          ]
+        },
+        {
+          "key": "severity",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.severity"
+              }
+            }
+          ]
+        },
+        {
+          "key": "note",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.note"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "18c9b2ac-0b07-4e57-a0be-b6297a552a69",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "Tobin"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "321-444-9999",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1981-07-22",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "8f670610-93d2-4f72-9d2c-300f30217238",
+        "identifier": [
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:db2ccb83-2813-4b72-8166-7b901cfeca4b"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18842-5",
+              "display": "Discharge summary"
+            }
+          ]
+        },
+        "content": [
+          {
+            "attachment": {
+              "id": "ad9b2624-1b1b-444b-83a4-ba7ae27905cf",
+              "contentType": "text/plain",
+              "data": "VGhpcyBpcyBhIHRlc3QgcmVwb3J0IGZvciBhbiBldmVudCB3aGljaCBoYXMgJ0lucGF0aWVudCB2aXNpdCcgY2xhc3NpZmljYXRpb24u",
+              "title": "Test Report",
+              "creation": "2017-04-21"
+            }
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "date": "2017-04-21T15:53:56.571+06:00",
+        "author": [
+          {
+            "reference": "Practitioner/6b327ef1-b84e-30b6-bb7b-4b9a63d59a98",
+            "display": "Dr. Charis952 Lockman863"
+          }
+        ],
+        "custodian": {
+          "reference": "Organization/2d30ad20-9d3b-3bb5-9560-9e7ab8adb3b0",
+          "display": "PCP190032"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/ea20c836-9096-4144-83ef-cb2e27eb429f"
+            }
+          ],
+          "period": {
+            "start": "2017-04-21T12:53:56-04:00",
+            "end": "2017-04-21T13:23:56-04:00"
+          }
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "ea20c836-9096-4144-83ef-cb2e27eb429f",
+        "meta": {
+          "extension": [
+            {
+              "url": "https://www.gehealthcare.com/fhir/pds-anti-virus",
+              "extension": [
+                {
+                  "url": "scan-status",
+                  "valueString": "safe"
+                },
+                {
+                  "url": "av-version",
+                  "valueString": "0.103.9-1.el7.x86_64"
+                }
+              ]
+            }
+          ],
+          "lastUpdated": "2023-03-19T15:52:50.198+00:00",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185347001",
+                "display": "Encounter for problem"
+              }
+            ],
+            "text": "Encounter for problem"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "period": {
+          "start": "2017-04-21T04:24:56-04:00",
+          "end": "2017-04-21T04:48:56-04:00"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "a6a2d930-d0bb-4dbb-8e48-19c7ea0b11c6",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/procedure_occurrence_id",
+            "value": "38678427"
+          }
+        ],
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1097661000000109",
+              "display": "PET MRI of whole body"
+            }
+          ],
+          "text": "PET MRI of whole body"
+        },
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "report": [
+          {
+            "reference": "DiagnosticReport/e3182891-aea7-4ba0-907d-bb7e548212f6",
+            "type": "DiagnosticReport"
+          }
+        ],
+        "performedDateTime": "2017-10-24T10:00:00+07:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "e3182891-aea7-4ba0-907d-bb7e548212f6",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology Note"
+              }
+            ],
+            "text": "Radiology report"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "462824008",
+              "display": "PET MRI of whole body"
+            }
+          ],
+          "text": "PET MRI of whole body"
+        },
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "effectiveDateTime": "2017-10-24T10:00:00+07:00",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "UmVwb3J0IG5vdGUgZm9yIHRlc3RpbmcgcHVycG9zZXMu"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "0a6d577a-9c14-456a-bb45-a39eec80b607",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/procedure_occurrence_id",
+            "value": "3384203"
+          }
+        ],
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "480621000119104",
+              "display": "PET CT of whole body"
+            }
+          ],
+          "text": "Positron emission tomography with computed tomography of whole body"
+        },
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "report": [
+          {
+            "reference": "DiagnosticReport/3ee03b18-b21b-438e-bfb7-617d8b795148"
+          }
+        ],
+        "performedDateTime": "2020-12-24T08:33:12+07:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "3ee03b18-b21b-438e-bfb7-617d8b795148",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology Note"
+              }
+            ],
+            "text": "Radiology report"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "480621000119104",
+              "display": "PET CT of whole body"
+            }
+          ],
+          "text": "PET with CT"
+        },
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "effectiveDateTime": "2020-12-24T08:33:12+07:00",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "QW5vdGhlciByZXBvcnQgbm90ZSBmb3IgdGVzdGluZyBwdXJwb3Nlcy4="
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "78266e21-b028-4a06-9ec6-75570dcb548c",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/procedure_occurrence_id",
+            "value": "52277106"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+          ],
+          "source": "default",
+          "lastUpdated": "2015-12-05T14:29:28.630Z"
+        },
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "status": "completed",
+        "performedDateTime": "2015-12-05T14:29:28.630Z",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "78803",
+              "display": "Radiopharmaceutical localization of tumor, inflammatory process or distribution of radiopharmaceutical agent(s) (includes vascular flow and blood pool imaging, when performed); tomographic (SPECT), single area (eg, head, neck, chest, pelvis), single day i"
+            }
+          ],
+          "text": "Radiopharmaceutical localization of tumor"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "11c7b19b-290f-4da4-bc45-81373e9247e5",
+        "meta": {
+          "lastUpdated": "2023-07-07T14:29:00Z",
+          "source": "default"
+        },
+        "status": "current",
+        "docStatus": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "68602-2",
+              "display": "Radiation oncology Summary note"
+            }
+          ],
+          "text": "Radiation oncology Summary note"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "code": "clinical-note",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "date": "2023-07-07T13:11:00Z",
+        "author": [
+          {
+            "reference": "Practitioner/eUXiD4IyBLJFoR2VHOjfTdg3",
+            "type": "Practitioner",
+            "display": "Physician Family Medicine, MD"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "RGVzY3JpcHRpb24gb2YgdHJlYXRtZW50IHByb2Nlc3MuCkRvc2VzIGRlbGl2ZXJlZC4KQXNzZXNzbWVudCBvZiB0b2xlcmFuY2Ugb2YgdHJlYXRtZW50LgpQcm9ncmVzcyB0b3dhcmQgdHJlYXRtZW50IGdvYWxzIChlZywgY29tcGxldGlvbiBvZiBjdXJhdGl2ZSBjb3Vyc2Ugb2YgdHJlYXRtZW50IG9yIHN5bXB0b21hdGljIGltcHJvdmVtZW50IGR1cmluZyBwYWxsaWF0aXZlIGNvdXJzZSBvZiB0cmVhdG1lbnQpLgpTdWJzZXF1ZW50IGNhcmUgcGxhbnMuCg=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "2ad58a1c-bbb8-4a7e-a658-c775cf804f5f",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/procedure_occurrence_id",
+            "value": "105212154"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+          ],
+          "source": "default",
+          "lastUpdated": "2023-05-02T14:33:56.283Z"
+        },
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "status": "completed",
+        "performedDateTime": "2023-05-02T14:33:56.283Z",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "78815",
+              "display": "Positron emission tomography (PET) with concurrently acquired computed tomography (CT) for attenuation correction and anatomical localization imaging; skull base to mid-thigh"
+            }
+          ],
+          "text": "Positron emission tomography (PET)"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "22d45d4a-8f0c-4e38-9ec3-bdd47d50ec29",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/procedure_occurrence_id",
+            "value": "105212154"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+          ],
+          "source": "default",
+          "lastUpdated": "2019-05-02T14:33:56.283Z"
+        },
+        "subject": {
+          "reference": "Patient/18c9b2ac-0b07-4e57-a0be-b6297a552a69"
+        },
+        "status": "completed",
+        "performedDateTime": "2019-05-02T14:33:56.283Z",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "78815",
+              "display": "Positron emission tomography (PET) with concurrently acquired computed tomography (CT) for attenuation correction and anatomical localization imaging; skull base to mid-thigh"
+            }
+          ],
+          "text": "PET 001"
+        }
+      }
+    }
+  ]
+}

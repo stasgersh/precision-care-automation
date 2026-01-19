@@ -1,0 +1,1436 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "cd472bba-8069-4b24-aa8e-89b43c3ee154",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "Dorrin"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "222-987-9988",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1976-06-30",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "6fc53925-1fbb-4c58-b81a-4eeb5cc3203c",
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "community",
+                "display": "Community"
+              }
+            ],
+            "text": "Community"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/7d831f7d-c411-46b7-975e-0fb11917b506",
+          "display": "cyclophosphamide (CYTOXAN) chemo tablet"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2015-12-09",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/30b7acc9-93eb-4be5-9fbb-887a5f5f5457",
+            "type": "CarePlan"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "text": "BSA: @BSA@\r\nDose basis: 50 mg/m2\r\nDose: 50 mg\r\nTake on Days 1, 8, 15, 22., Normal",
+            "patientInstruction": "BSA: @BSA@\r\nDose basis: 50 mg/m2\r\nDose: 50 mg\r\nTake on Days 1, 8, 15, 22.",
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2015-12-09"
+                }
+              }
+            }
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2015-12-09"
+          },
+          "numberOfRepeatsAllowed": 0,
+          "quantity": {
+            "value": 4,
+            "unit": "tablet"
+          },
+          "expectedSupplyDuration": {
+            "value": 22,
+            "unit": "Day",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "1a392d62-d507-4874-8869-1ba09284af9c",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "980292"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "Outpatient"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/8ad7b45a-ca9e-4b2f-9a02-17b793ef842a",
+          "display": "bortezomib (VELCADE) chemo injection"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2021-01-09T16:38:35Z",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/30b7acc9-93eb-4be5-9fbb-887a5f5f5457",
+            "type": "CarePlan",
+            "display": "OP MYELOMA CYBORDEX PO"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.92 mg (1 mg/m2 × 0.92 m2 Treatment Plan BSA from Recorded weight), Subcutaneous, Once, On Wed 12/9/15 at 1045, For 1 dose\nHAZARDOUS - Handle with care\n",
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2021-01-09T16:45:00Z",
+                  "end": "2021-01-09T16:45:00Z"
+                },
+                "count": 1
+              },
+              "code": {
+                "text": "Once"
+              }
+            },
+            "asNeededBoolean": false,
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                  "code": "18",
+                  "display": "Subcutaneous"
+                }
+              ],
+              "text": "Subcutaneous (part of 'First test regimen')"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "calculated",
+                      "display": "calculated"
+                    }
+                  ],
+                  "text": "calculated"
+                },
+                "doseQuantity": {
+                  "value": 1.25,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "admin-amount",
+                      "display": "admin-amount"
+                    }
+                  ],
+                  "text": "admin-amount"
+                },
+                "doseQuantity": {
+                  "value": 0.92,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "ordered"
+                    }
+                  ],
+                  "text": "ordered"
+                },
+                "doseQuantity": {
+                  "value": 2,
+                  "unit": "mg/m2",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/m2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "34847d54-3b8f-4eab-818a-d57ea91fd913",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "980292"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "Outpatient"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/8ad7b45a-ca9e-4b2f-9a02-17b793ef842a",
+          "display": "bortezomib (VELCADE) chemo injection"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2017-02-11T16:38:35Z",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/30b7acc9-93eb-4be5-9fbb-887a5f5f5457",
+            "type": "CarePlan",
+            "display": "OP MYELOMA CYBORDEX PO"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2017-02-11T16:45:00Z",
+                  "end": "2017-02-11T16:45:00Z"
+                },
+                "count": 1
+              },
+              "code": {
+                "text": "Once"
+              }
+            },
+            "asNeededBoolean": false,
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                  "code": "18",
+                  "display": "Subcutaneous"
+                }
+              ],
+              "text": "Subcutaneous (part of 'First test regimen')"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "ordered"
+                    }
+                  ],
+                  "text": "ordered"
+                },
+                "doseQuantity": {
+                  "value": 2.3,
+                  "unit": "mg/m2",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/m2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "e3557258-1984-4625-a90e-5768b99bfe60",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "980292"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "Outpatient"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/8ad7b45a-ca9e-4b2f-9a02-17b793ef842a",
+          "display": "bortezomib (VELCADE) chemo injection"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2018-01-09T16:38:35Z",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/30b7acc9-93eb-4be5-9fbb-887a5f5f5457",
+            "type": "CarePlan",
+            "display": "OP MYELOMA CYBORDEX PO"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2018-01-09T16:45:00Z",
+                  "end": "2018-01-09T16:45:00Z"
+                },
+                "count": 1
+              },
+              "code": {
+                "text": "Once"
+              }
+            },
+            "asNeededBoolean": false,
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                  "code": "18",
+                  "display": "Subcutaneous"
+                }
+              ],
+              "text": "Subcutaneous (part of 'First test regimen')"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "ordered"
+                    }
+                  ],
+                  "text": "ordered"
+                },
+                "doseQuantity": {
+                  "value": 2.3,
+                  "unit": "mg/m2",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/m2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0db78ac1-45ed-4ab8-85f7-f9c719c8f551",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "980292"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "Outpatient"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/8ad7b45a-ca9e-4b2f-9a02-17b793ef842a",
+          "display": "bortezomib (VELCADE) chemo injection"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2020-01-09T16:38:35Z",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/30b7acc9-93eb-4be5-9fbb-887a5f5f5457",
+            "type": "CarePlan",
+            "display": "OP MYELOMA CYBORDEX PO"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.92 mg (1 mg/m2 × 0.92 m2 Treatment Plan BSA from Recorded weight), Subcutaneous, Once, On Wed 12/9/15 at 1045, For 1 dose\nHAZARDOUS - Handle with care\n",
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2020-01-09T16:45:00Z",
+                  "end": "2020-01-09T16:45:00Z"
+                },
+                "count": 1
+              },
+              "code": {
+                "text": "Once"
+              }
+            },
+            "asNeededBoolean": false,
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                  "code": "18",
+                  "display": "Subcutaneous"
+                }
+              ],
+              "text": "Subcutaneous (part of 'First test regimen')"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "calculated",
+                      "display": "calculated"
+                    }
+                  ],
+                  "text": "calculated"
+                },
+                "doseQuantity": {
+                  "value": 0.92,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "admin-amount",
+                      "display": "admin-amount"
+                    }
+                  ],
+                  "text": "admin-amount"
+                },
+                "doseQuantity": {
+                  "value": 0.92,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "ordered"
+                    }
+                  ],
+                  "text": "ordered"
+                },
+                "doseQuantity": {
+                  "value": 1.5,
+                  "unit": "mg/m2",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/m2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "30b7acc9-93eb-4be5-9fbb-887a5f5f5457",
+        "status": "completed",
+        "intent": "plan",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.848076.32",
+                "code": "1",
+                "display": "Treatment Plan"
+              }
+            ],
+            "text": "Treatment Plan"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.96",
+                "code": "736378000",
+                "display": "Medication Management Plan"
+              }
+            ],
+            "text": "Medication Management Plan"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.726668.10",
+                "code": "10",
+                "display": "ONCOLOGY TREATMENT"
+              }
+            ],
+            "text": "ONCOLOGY TREATMENT"
+          }
+        ],
+        "title": "First test regimen",
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "period": {
+          "start": "2015-12-08",
+          "end": "2021-01-10T19:45:38Z"
+        },
+        "created": "2015-12-09T16:30:29Z",
+        "author": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "display": "Physician Beacon, MD"
+        },
+        "goal": [
+          {
+            "display": "Curative"
+          }
+        ],
+        "activity": [
+          {
+            "detail": {
+              "status": "completed",
+              "location": {
+                "reference": "Location/eS7LSyyrBE6gLo1oSPL9N8wb4habZuoP46GRJ7HmN1tM3",
+                "type": "Location",
+                "display": "EMC CHEMO INFUSION"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "311f69e4-05e2-4a03-ace0-4f139078ab5d",
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "community",
+                "display": "Community"
+              }
+            ],
+            "text": "Community"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/7d831f7d-c411-46b7-975e-0fb11917b506",
+          "display": "cyclophosphamide (CYTOXAN) chemo tablet"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2018-12-09",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/4321d03f-3ea3-4589-a4c7-40063d5f1783",
+            "type": "CarePlan"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "text": "BSA: @BSA@\r\nDose basis: 50 mg/m2\r\nDose: 50 mg\r\nTake on Days 1, 8, 15, 22., Normal",
+            "patientInstruction": "BSA: @BSA@\r\nDose basis: 50 mg/m2\r\nDose: 50 mg\r\nTake on Days 1, 8, 15, 22.",
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2018-12-09"
+                }
+              }
+            }
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2018-12-09"
+          },
+          "numberOfRepeatsAllowed": 0,
+          "quantity": {
+            "value": 4,
+            "unit": "tablet"
+          },
+          "expectedSupplyDuration": {
+            "value": 22,
+            "unit": "Day",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "d248af31-775f-4739-9643-d1aaf7793ca5",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "980292"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "Outpatient"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/8ad7b45a-ca9e-4b2f-9a02-17b793ef842a",
+          "display": "bortezomib (VELCADE) chemo injection"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2023-01-09T16:38:35Z",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/4321d03f-3ea3-4589-a4c7-40063d5f1783",
+            "type": "CarePlan",
+            "display": "OP MYELOMA CYBORDEX PO"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.92 mg (1 mg/m2 × 0.92 m2 Treatment Plan BSA from Recorded weight), Subcutaneous, Once, On Wed 12/9/15 at 1045, For 1 dose\nHAZARDOUS - Handle with care\n",
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2023-01-09T16:45:00Z",
+                  "end": "2023-01-09T16:45:00Z"
+                },
+                "count": 1
+              },
+              "code": {
+                "text": "Once"
+              }
+            },
+            "asNeededBoolean": false,
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                  "code": "18",
+                  "display": "Subcutaneous"
+                }
+              ],
+              "text": "Subcutaneous (part of 'Second test regimen'), epic.com system"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "calculated",
+                      "display": "calculated"
+                    }
+                  ],
+                  "text": "calculated"
+                },
+                "doseQuantity": {
+                  "value": 0.92,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "admin-amount",
+                      "display": "admin-amount"
+                    }
+                  ],
+                  "text": "admin-amount"
+                },
+                "doseQuantity": {
+                  "value": 0.92,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg"
+                }
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "ordered"
+                    }
+                  ],
+                  "text": "ordered"
+                },
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "mg/m2",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/m2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "c3893075-e4e5-429e-be0f-38b1f2c6e709",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "980292"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "Outpatient"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/8ad7b45a-ca9e-4b2f-9a02-17b793ef842a",
+          "display": "bortezomib (VELCADE) chemo injection"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2020-06-09T16:38:35Z",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/4321d03f-3ea3-4589-a4c7-40063d5f1783",
+            "type": "CarePlan",
+            "display": "OP MYELOMA CYBORDEX PO"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "text": "0.92 mg (1 mg/m2 × 0.92 m2 Treatment Plan BSA from Recorded weight), Subcutaneous, Once, On Wed 12/9/15 at 1045, For 1 dose\nHAZARDOUS - Handle with care\n",
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2020-06-09T16:45:00Z",
+                  "end": "2020-06-09T16:45:00Z"
+                },
+                "count": 1
+              },
+              "code": {
+                "text": "Once"
+              }
+            },
+            "asNeededBoolean": false,
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                  "code": "18",
+                  "display": "Subcutaneous"
+                }
+              ],
+              "text": "Subcutaneous (part of 'Second test regimen'), epic.com system"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://epic.com/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "ordered"
+                    }
+                  ],
+                  "text": "ordered"
+                },
+                "doseQuantity": {
+                  "value": 3,
+                  "unit": "mg/m2",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/m2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "64e31375-c69f-421f-86fe-201dc3e93f56",
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "980292"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ],
+            "text": "Outpatient"
+          }
+        ],
+        "medicationReference": {
+          "reference": "Medication/8ad7b45a-ca9e-4b2f-9a02-17b793ef842a",
+          "display": "bortezomib (VELCADE) chemo injection"
+        },
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "authoredOn": "2022-03-11T16:38:35Z",
+        "requester": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "recorder": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "type": "Practitioner",
+          "display": "Physician Beacon, MD"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "109989006",
+                "display": "Multiple myeloma (disorder)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+                "code": "203.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              },
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "C90.00",
+                "display": "Multiple myeloma (CMS/HCC)"
+              }
+            ],
+            "text": "Multiple myeloma (CMS/HCC)"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "CarePlan/4321d03f-3ea3-4589-a4c7-40063d5f1783",
+            "type": "CarePlan",
+            "display": "OP MYELOMA CYBORDEX PO"
+          }
+        ],
+        "courseOfTherapyType": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+              "code": "acute",
+              "display": "Short course (acute) therapy"
+            }
+          ],
+          "text": "Short course (acute) therapy"
+        },
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2022-03-11T16:45:00Z",
+                  "end": "2022-03-11T16:45:00Z"
+                },
+                "count": 1
+              },
+              "code": {
+                "text": "Once"
+              }
+            },
+            "asNeededBoolean": false,
+            "route": {
+              "coding": [
+                {
+                  "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.7025",
+                  "code": "18",
+                  "display": "Subcutaneous"
+                }
+              ],
+              "text": "Subcutaneous (part of 'Second test regimen'), hl7.org system"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "ordered"
+                    }
+                  ],
+                  "text": "ordered"
+                },
+                "doseQuantity": {
+                  "value": 6,
+                  "unit": "mg/m2",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/m2"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "4321d03f-3ea3-4589-a4c7-40063d5f1783",
+        "status": "completed",
+        "intent": "plan",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.848076.32",
+                "code": "1",
+                "display": "Treatment Plan"
+              }
+            ],
+            "text": "Treatment Plan"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.840.1.113883.6.96",
+                "code": "736378000",
+                "display": "Medication Management Plan"
+              }
+            ],
+            "text": "Medication Management Plan"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.4.726668.10",
+                "code": "10",
+                "display": "ONCOLOGY TREATMENT"
+              }
+            ],
+            "text": "ONCOLOGY TREATMENT"
+          }
+        ],
+        "title": "Second test regimen",
+        "subject": {
+          "reference": "Patient/cd472bba-8069-4b24-aa8e-89b43c3ee154",
+          "display": "OncoTestPatient, Dorrin"
+        },
+        "period": {
+          "start": "2019-10-08",
+          "end": "2023-04-10T19:45:38Z"
+        },
+        "created": "2019-10-08T16:30:29Z",
+        "author": {
+          "reference": "Practitioner/ec30Z4SAQpUQUkACxUZVihQ3",
+          "display": "Physician Beacon, MD"
+        },
+        "goal": [
+          {
+            "display": "Curative"
+          }
+        ],
+        "activity": [
+          {
+            "detail": {
+              "status": "completed",
+              "location": {
+                "reference": "Location/eS7LSyyrBE6gLo1oSPL9N8wb4habZuoP46GRJ7HmN1tM3",
+                "type": "Location",
+                "display": "EMC CHEMO INFUSION"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

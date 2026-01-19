@@ -1,0 +1,85 @@
+{
+  "name": "pathology-report-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "pathology-report-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "22637-3",
+              "display": "Pathology report final diagnosis Narrative"
+            },
+            {
+              "code": "66121-5",
+              "display": "Tissue Pathology biopsy report"
+            },
+            {
+              "code": "27898-6",
+              "display": "Pathology studies (set)"
+            },
+            {
+              "code": "60567-5",
+              "display": "Comprehensive pathology report panel"
+            },
+            {
+              "code": "60569-1",
+              "display": "Report addendum.synoptic Pathology Doc"
+            },
+            {
+              "code": "60568-3",
+              "display": "Pathology Synoptic report"
+            },
+            {
+              "code": "60571-7",
+              "display": "Pathology Consult note.synoptic"
+            },
+            {
+              "code": "60570-9",
+              "display": "Pathology Consult note"
+            },
+            {
+              "code": "11529-5",
+              "display": "Surgical pathology study"
+            },
+            {
+              "code": "35265-8",
+              "display": "Path Report.addendum Spec"
+            },
+            {
+              "code": "34122-2",
+              "display": "Pathology Procedure note"
+            },
+            {
+              "code": "34819-3",
+              "display": "Pathology Note"
+            },
+            {
+              "code": "84334-2",
+              "display": "Pathology Phone Note"
+            },
+            {
+              "code": "84336-7",
+              "display": "Pathology Letter"
+            },
+            {
+              "code": "LP18648-3",
+              "display": "Pathologist report"
+            }
+          ]
+        },
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.696580",
+          "concept": [
+            {
+              "code": "658",
+              "display": "CONVENTIONAL PAP SMEAR, SCREENING"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

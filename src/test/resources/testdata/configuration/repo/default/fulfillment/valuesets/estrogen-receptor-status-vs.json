@@ -1,0 +1,38 @@
+{
+  "name": "estrogen-receptor-status-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "estrogen-receptor-status-vs",
+    "description": "Estrogen receptor status valueset.",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "445028008",
+              "display": "Status of estrogen receptors of neoplasm"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "16112-5",
+              "display": "Estrogen receptor [Interpretation] in Tissue"
+            },
+            {
+              "code": "40556-3",
+              "display": "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "85337-4",
+              "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

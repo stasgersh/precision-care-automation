@@ -1,0 +1,69 @@
+{
+  "name": "breast-tumor-marker-test-ca-125-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "breast-tumor-marker-test-ca-125-vs",
+    "description": "Breast tumor marker set for Cancer Ag 125",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "10334-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "11210-2",
+              "display": "Cancer Ag 125 [Units/volume] in Body fluid"
+            },
+            {
+              "code": "15156-3",
+              "display": "Cancer Ag 125 [Units/volume] in Body fluid by Dilution"
+            },
+            {
+              "code": "15157-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma by Dilution"
+            },
+            {
+              "code": "19165-0",
+              "display": "Cancer Ag 125 [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "2006-5",
+              "display": "Cancer Ag 125 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "40618-1",
+              "display": "Cancer Ag 125 [Units/volume] in Peritoneal fluid"
+            },
+            {
+              "code": "48677-9",
+              "display": "Cancer Ag 125 [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "50775-6",
+              "display": "Cancer Ag 125 [Units/volume] in Cerebral spinal fluid"
+            },
+            {
+              "code": "59040-6",
+              "display": "Cancer Ag 125 [Units/volume] in Peritoneal dialysis fluid"
+            },
+            {
+              "code": "68923-2",
+              "display": "Cancer Ag 125 [Units/volume] in Pericardial fluid"
+            },
+            {
+              "code": "83082-8",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma by Immunoassay"
+            },
+            {
+              "code": "97743-9",
+              "display": "Cancer Ag 125 [Units/volume] in Aspirate"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

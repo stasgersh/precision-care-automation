@@ -1,0 +1,594 @@
+{
+  "name": "CC-94676 for Prostate Cancer Patient",
+  "protocols": [
+    {
+      "name": "CC94676 for Prostate Cancer Patient",
+      "events": [
+        {
+          "id": "ARD",
+          "name": "Androgen Receptor Degrader CC-94676",
+          "relativeTiming": {
+            "days": 0
+          },
+          "toleranceBefore": {
+            "days": -2
+          },
+          "toleranceAfter": {
+            "days": 2
+          },
+          "scheduleQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "ard",
+            "query": {
+              "from": "medication",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "ardMedication"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "treatmentAndPlan"
+        },
+        {
+          "id": "PSA-1",
+          "name": "PSA",
+          "dependsOn": "ARD",
+          "relativeTiming": {
+            "days": -21
+          },
+          "toleranceBefore": {
+            "days": -10
+          },
+          "toleranceAfter": {
+            "days": 10
+          },
+          "scheduleQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labReport",
+              "dedup": true,
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "psaMeasurement"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labResult",
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "prostateTumorMarkerTestResult"
+                    }
+                  },
+                  {
+                    "should": [
+                      {
+                        "attributes.code.$coding.code": {
+                          "eq": "2857-1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "category": "biomarkers",
+          "futureCategory": "pathology",
+          "futureName": "PSA measurement"
+        },
+        {
+          "id": "PSMA PET-1",
+          "name": "PSMA PET scan",
+          "dependsOn": "ARD",
+          "relativeTiming": {
+            "days": -21
+          },
+          "toleranceBefore": {
+            "days": -10
+          },
+          "toleranceAfter": {
+            "days": 10
+          },
+          "scheduleQuery": {
+            "alias": "psma",
+            "query": {
+              "from": "imagingStudyRequest",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "psmaPetStudy"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psma",
+            "query": {
+              "from": "imagingReport",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "psmaPetStudy"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "radiology"
+        },
+        {
+          "id": "PSA-2",
+          "name": "PSA",
+          "dependsOn": "ARD",
+          "relativeTiming": {
+            "months": 3,
+            "days": 2
+          },
+          "toleranceBefore": {
+            "days": -14
+          },
+          "toleranceAfter": {
+            "days": 14
+          },
+          "scheduleQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labReport",
+              "dedup": true,
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "psaMeasurement"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labResult",
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "prostateTumorMarkerTestResult"
+                    }
+                  },
+                  {
+                    "should": [
+                      {
+                        "attributes.code.$coding.code": {
+                          "eq": "2857-1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "category": "biomarkers",
+          "futureCategory": "pathology",
+          "futureName": "PSA measurement"
+        },
+        {
+          "id": "visit-1",
+          "name": "Oncology visit",
+          "dependsOn": "PSA-2",
+          "relativeTiming": {
+            "days": 3
+          },
+          "toleranceBefore": {
+            "days": -2
+          },
+          "toleranceAfter": {
+            "days": 2
+          },
+          "scheduleQuery": {
+            "alias": "visit",
+            "query": {
+              "from": "oncologyVisitRequest",
+              "filter": {
+                "must": [
+                  {
+                    "attributes.code.$coding.code": {
+                      "eq": "214"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "visit",
+            "query": {
+              "from": ["patientVisit", "oncologyVisitRequest"],
+              "filter": {
+                "should": [
+                  {
+                    "must": [
+                      {
+                        "subtypes": {
+                          "eq": "oncologyVisit"
+                        }
+                      },
+                      {
+                        "attributes.$type.$coding.code": {
+                          "eq": "214"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "attributes.code.$coding.code": {
+                      "eq": "214"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "encounters"
+        },
+        {
+          "id": "PSA-3",
+          "name": "PSA",
+          "dependsOn": "PSA-2",
+          "relativeTiming": {
+            "months": 3
+          },
+          "toleranceBefore": {
+            "days": -14
+          },
+          "toleranceAfter": {
+            "days": 14
+          },
+          "scheduleQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labReport",
+              "dedup": true,
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "psaMeasurement"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labResult",
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "prostateTumorMarkerTestResult"
+                    }
+                  },
+                  {
+                    "should": [
+                      {
+                        "attributes.code.$coding.code": {
+                          "eq": "2857-1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "category": "biomarkers",
+          "futureCategory": "pathology",
+          "futureName": "PSA measurement"
+        },
+        {
+          "id": "PSMA PET-2",
+          "name": "PSMA PET scan",
+          "dependsOn": "PSA-2",
+          "relativeTiming": {
+            "months": 3
+          },
+          "toleranceBefore": {
+            "days": -14
+          },
+          "toleranceAfter": {
+            "days": 14
+          },
+          "scheduleQuery": {
+            "alias": "psma",
+            "query": {
+              "from": "imagingStudyRequest",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "psmaPetStudy"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psma",
+            "query": {
+              "from": "imagingReport",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "psmaPetStudy"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "radiology"
+        },
+        {
+          "id": "PSA-4",
+          "name": "PSA",
+          "dependsOn": "PSA-3",
+          "relativeTiming": {
+            "months": 3
+          },
+          "toleranceBefore": {
+            "days": -14
+          },
+          "toleranceAfter": {
+            "days": 14
+          },
+          "scheduleQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labReport",
+              "dedup": true,
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "psaMeasurement"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labResult",
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "prostateTumorMarkerTestResult"
+                    }
+                  },
+                  {
+                    "should": [
+                      {
+                        "attributes.code.$coding.code": {
+                          "eq": "2857-1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "category": "biomarkers",
+          "futureCategory": "pathology",
+          "futureName": "PSA measurement"
+        },
+        {
+          "id": "PSA-5",
+          "name": "PSA",
+          "dependsOn": "PSA-4",
+          "relativeTiming": {
+            "months": 3
+          },
+          "toleranceBefore": {
+            "days": -14
+          },
+          "toleranceAfter": {
+            "days": 14
+          },
+          "scheduleQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labReport",
+              "dedup": true,
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "psaMeasurement"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psa",
+            "query": {
+              "from": "labResult",
+              "filter": {
+                "must": [
+                  {
+                    "subtypes": {
+                      "eq": "prostateTumorMarkerTestResult"
+                    }
+                  },
+                  {
+                    "should": [
+                      {
+                        "attributes.code.$coding.code": {
+                          "eq": "2857-1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "category": "biomarkers",
+          "futureCategory": "pathology",
+          "futureName": "PSA measurement"
+        },
+        {
+          "id": "PSMA PET-3",
+          "name": "PSMA PET scan",
+          "dependsOn": "PSA-4",
+          "relativeTiming": {
+            "months": 3
+          },
+          "toleranceBefore": {
+            "days": -14
+          },
+          "toleranceAfter": {
+            "days": 14
+          },
+          "scheduleQuery": {
+            "alias": "psma",
+            "query": {
+              "from": "imagingStudyRequest",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "psmaPetStudy"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "psma",
+            "query": {
+              "from": "imagingReport",
+              "filter": {
+                "should": [
+                  {
+                    "subtypes": {
+                      "eq": "psmaPetStudy"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "category": "radiology"
+        },
+        {
+          "id": "visit-2",
+          "name": "Oncology visit",
+          "dependsOn": "PSA-5",
+          "relativeTiming": {
+            "days": 5
+          },
+          "toleranceBefore": {
+            "days": -4
+          },
+          "toleranceAfter": {
+            "days": 3
+          },
+          "scheduleQuery": {
+            "alias": "visit",
+            "query": {
+              "from": "oncologyVisitRequest",
+              "filter": {
+                "must": [
+                  {
+                    "attributes.code.$coding.code": {
+                      "eq": "214"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "eventQuery": {
+            "alias": "visit",
+            "query": {
+              "from": ["patientVisit", "oncologyVisitRequest"],
+              "filter": {
+                "should": [
+                  {
+                    "must": [
+                      {
+                        "subtypes": {
+                          "eq": "oncologyVisit"
+                        }
+                      },
+                      {
+                        "attributes.$type.$coding.code": {
+                          "eq": "214"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "attributes.code.$coding.code": {
+                      "eq": "214"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "firstPostProtocolEvent": true,
+          "category": "encounters"
+        }
+      ]
+    }
+  ]
+}

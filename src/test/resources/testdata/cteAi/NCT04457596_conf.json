@@ -1,0 +1,209 @@
+{
+  "id": "NCT04457596",
+  "criteria": [
+    {
+      "statement": "HER2-positive status based on pretreatment biopsy material and defined as an immunohistochemistry (IHC) score of 3+ and/or positive by in situ hybridization (ISH) according to current ASCO/CAP guidelines.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Clinical stage T1-4, N0-3 disease at presentation and residual invasive disease postoperatively.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient has residual HR-negative, HER2 positive (+) disease in the breast and/or lymph nodes per the surgical pathology or patient has HR+ HER2+ cancer and has node-positive residual disease per the surgical pathology report. The presence of residual invasive disease in the breast is not mandatory for these patients.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patient has weakly ER-positive (1-10%) breast cancer (based on the pretreatment core biopsy) even if he has node-negative disease per the surgical pathology report.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has synchronous bilateral invasive disease or multifocal disease, with the largest biopsied breast tumor being HER2-positive.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patients has received neoadjuvant chemotherapy with one of the following regimens: docetaxel/trastuzumab/pertuzumab (THP), paclitaxel/methotrexate/cisplatin (TMP), doxorubicin/cyclophosphamide/paclitaxel/trastuzumab/pertuzumab (AC-TH(P)); docetaxel/carboplatin/trastuzumab/pertuzumab (TCH(P)); fluorouracil/doxorubicin/cyclophosphamide-docetaxel/trastuzumab/pertuzumab (FAC-TH(P)), or fluorouracil/epirubicin/cyclophosphamide-docetaxel/trastuzumab/pertuzumab (FEC-TH(P)). Note: apart from TCHP, where T is docetaxel, treatment with docetaxel or paclitaxel is acceptable.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has not received T-DM1 in the neoadjuvant setting. The patient has undergone at least 6 cycles of chemotherapy and HER2-directed therapy over a minimum of 12 weeks, including at least 9 weeks of preoperative taxane and trastuzumab, with or without pertuzumab. ",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received 9 weeks of preoperative taxane, pertuzumab, and margetuximab, with at least 6 cycles of systemic therapy.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have discontinued paclitaxel or docetaxel prematurely due to toxicity after completing at least nine doses of weekly paclitaxel or three doses of docetaxel.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received dose-dense chemotherapy regimens.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received nab-paclitaxel  (Abraxane) instead of paclitaxel or docetaxel.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received subcutaneous trastuzumab (Hylecta) and subcutaneous trastuzumab and pertuzumab (Phesgo).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient received neoadjuvant systemic therapy that included experimental HER2-targeted therapies, but did not receive a HER2-targeted antibody-drug conjugate (e.g., T-DM1, DS-8201a) or a HER2-targeted tyrosine kinase inhibitor (e.g., tucatinib, lapatinib, neratinib).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "The patient has received <= 1 cycle of T-DM1 in the adjuvant setting.The most recent cycle of T-DM1 has been administered <= 5 weeks prior to registration.An interval of no more than 12 weeks between the completion date of the last definitive treatment (e.g. postoperative chemotherapy or radiation, or if neither given, breast surgical date) and the date of registration.Concurrent radiation therapy is permitted while receiving study treatment.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Patients must be registered on study within =< 180 days of the date of the most recent definitive breast cancer surgery (not including reconstructive surgery).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "All systemic chemotherapy has been completed preoperatively unless the patient is participating in EA1181 (CompassHER2 pathologic complete response [pCR]) or the BIG DECRESCENDO Trial (which is very similar to CompassHER2 pCR in terms of study design, drugs, and eligibility).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Toxicities related to prior systemic treatment have been resolved or be at baseline, apart from alopecia and peripheral neuropathy <= grade 1.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Adequate excision: surgical removal of all clinically evident disease in the breast and lymph nodes as follows: total mastectomy with no gross residual disease at the margin of resection",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Adequate excision: surgical removal of all clinically evident disease in the breast and lymph nodes as follows: breast-conserving surgery with histologically negative margins of excision",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Absolute neutrophil count (ANC) >= 1,000/mm^3.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Hemoglobin >= 8 g/dL ( no packed red blood cells [PRBC] transfusion ).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Platelet count >= 100,000/mm^3.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Creatinine <= 1.5 x upper limit of normal (ULN).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Total bilirubin <= 1.0 x upper limit of normal (ULN) or direct bilirubin within the institutional normal range for patients with Gilbert's syndrome.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Aspartate aminotransferase (AST)/alanine aminotransferase (ALT) <= 2.5 x upper limit of normal (ULN).",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Screening left ventricular ejection fraction (LVEF) >= 50% on echocardiogram (ECHO) or multiple-gated acquisition (MUGA) after receiving neoadjuvant chemotherapy and no decrease in LVEF by more than 15% absolute percentage points from the pre-chemotherapy LVEF.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Screening left ventricular ejection fraction (LVEF) >= 50% on echocardiogram (ECHO) or multiple-gated acquisition (MUGA) if pre-chemotherapy LVEF was not assessed, the screening LVEF must be >= 55% after completion of neoadjuvant chemotherapy. Note: LVEF assessment may be repeated once up to 3 weeks following the initial screening assessment to assess eligibility.",
+      "type": "inclusion"
+    },
+    {
+      "statement": "Adjuvant treatment with any anti-cancer investigational drug within 28 days prior to registration.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "pregnant or nursing",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient has known active and/or untreated hepatitis B or hepatitis C or chronic liver disease are ineligible.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Stage IV (metastatic) breast cancer.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "History of any prior (ipsi- or contralateral) invasive breast cancer within 3 years of registration.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Patient has ER+ HER2+ residual invasive disease that is lymph node-negative per the surgical pathology report.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Evidence of recurrent disease following preoperative therapy and surgery.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Radiotherapy is contraindicated because of medical reasons (e.g., connective tissue disorder or prior ipsilateral breast radiation).",
+      "type": "exclusion"
+    },
+    {
+      "statement": "History of exposure to the following cumulative doses of anthracyclines: doxorubicin > 240 mg/m^2; epirubicin or liposomal doxorubicin-hydrochloride (Myocet) > 480 mg/m^2. For other anthracyclines, exposure equivalent to doxorubicin > 240 mg/m^2.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Current severe, uncontrolled systemic disease.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Major surgical procedure unrelated to breast cancer or significant traumatic injury within 28 days prior to registration or anticipation of the need for major surgery during the course of study treatment.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "History of intolerance, including grade 3 to 4 infusion reaction or hypersensitivity to trastuzumab or murine proteins or any components of the product.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Peripheral neuropathy of any etiology that exceeds grade 1.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Assessment by the investigator as being unable or unwilling to comply with the requirements of the protocol.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Cardiopulmonary dysfunction as defined by any of the following : History of National Cancer Institute (NCI) CTCAE version (v) 5.0 grade >= 3 symptomatic congestive heart failure (CHF) or New York Heart Association (NYHA) criteria class >= II",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Cardiopulmonary dysfunction as defined by any of the following : Angina pectoris requiring anti-anginal medication, serious cardiac arrhythmia not controlled by adequate medication, severe conduction abnormality, or clinically significant valvular disease",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Cardiopulmonary dysfunction as defined by any of the following : High-risk uncontrolled arrhythmias: i.e., atrial tachycardia with a heart rate > 100/min at rest, significant ventricular arrhythmia (ventricular tachycardia) or higher-grade atrioventricular block (AV)-block (second degree AV-block type 2 [Mobitz 2] or third degree AV-block)",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Cardiopulmonary dysfunction as defined by any of the following :Significant symptoms (grade >= 2) relating to left ventricular dysfunction, cardiac arrhythmia, or cardiac ischemia while or since receiving preoperative therapy ",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Cardiopulmonary dysfunction as defined by any of the following : History of a decrease in left ventricular ejection fraction (LVEF) to < 40% with prior trastuzumab treatment (e.g., during preoperative therapy)",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Cardiopulmonary dysfunction as defined by any of the following : Uncontrolled hypertension (systolic blood pressure > 180 mmHg and/or diastolic blood pressure > 100 mmHg) ",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Use of sensitive CYP3A substrates two weeks before registration and during study treatment.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "CYP3A4 or CYP2C8 inducers as concomitant medications within 5 days following discontinuation of tucatinib treatment.",
+      "type": "exclusion"
+    },
+    {
+      "statement": "Require medications that are known to be sensitive substrates of CYP3A4 with a narrow therapeutic window.",
+      "type": "exclusion"
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "id": "recentEvents.onco.general",
+  "items": [
+    {
+      "group": "recentEventsSummary",
+      "elements": [
+        {
+          "type": "text",
+          "value": {
+            "constant": "Since last oncology encounter"
+          },
+          "meta": {
+            "title": true,
+            "emptyValue": "new events"
+          }
+        },
+        {
+          "type": "datetime",
+          "value": {
+            "path": "$.cutDate"
+          }
+        },
+        {
+          "type": "table",
+          "key": {
+            "constant": "recentEvents"
+          },
+          "value": {
+            "path": "$.recentEvents",
+            "config": {
+              "cells": [
+                {
+                  "header": "Event",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "value": {
+                        "path": "$.attributes.code",
+                        "processor": { "name": "codeableConceptText" }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Date",
+                  "elements": [
+                    {
+                      "type": "datetime",
+                      "value": {
+                        "path": "$.date"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "header": "Options",
+                  "elements": [
+                    {
+                      "type": "list",
+                      "value": {
+                        "elements": [
+                          [
+                            {
+                              "type": "link",
+                              "dependsOn": {
+                                "path": "$.attributes.reportContent[0]"
+                              },
+                              "value": {
+                                "label": [
+                                  {
+                                    "constant": "#"
+                                  }
+                                ],
+                                "icon": "ico-summary-report",
+                                "target": "internal",
+                                "url": {
+                                  "path": "$",
+                                  "processor": {
+                                    "name": "reportLink",
+                                    "args": {
+                                      "representation": "reportHtml.onco.general"
+                                    }
+                                  }
+                                },
+                                "popup": {
+                                  "type": "popup",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "text",
+                                        "value": {
+                                          "constant": "Full report"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "meta": {
+                                "title": [
+                                  {
+                                    "value": { "path": "$.attributes.title" },
+                                    "type": "text"
+                                  },
+                                  {
+                                    "value": {
+                                      "path": "$.attributes.code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    },
+                                    "type": "text"
+                                  },
+                                  {
+                                    "value": {
+                                      "path": "$.attributes.context.procedure[*].code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    },
+                                    "type": "text"
+                                  }
+                                ],
+                                "subTitle": {
+                                  "type": "list",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "datetime",
+                                        "value": { "path": "$.date" }
+                                      },
+                                      [
+                                        {
+                                          "type": "text",
+                                          "value": {
+                                            "path": "$.attributes.author[*].name[*]",
+                                            "processor": { "name": "humanName" }
+                                          }
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": {
+                                            "path": "$.attributes.organization[*].name"
+                                          }
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": { "constant": "No author" }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "type": "text",
+                                          "value": {
+                                            "path": "$.attributes.status"
+                                          }
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": { "constant": "No status" }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                },
+                                "date": {
+                                  "value": { "path": "$.date" },
+                                  "type": "datetime"
+                                }
+                              }
+                            },
+                            {
+                              "type": "link",
+                              "value": {
+                                "label": [
+                                  {
+                                    "constant": "#"
+                                  }
+                                ],
+                                "icon": "ico-summary-report",
+                                "target": "internal",
+                                "url": {
+                                  "constant": "#"
+                                },
+                                "popup": {
+                                  "type": "popup",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "text",
+                                        "value": {
+                                          "constant": "Report could not be found. It may exist somewhere outside the application, like in another hospital or system this application is not connected to."
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "type": "link",
+                              "value": {
+                                "label": [
+                                  {
+                                    "constant": "#"
+                                  }
+                                ],
+                                "icon": "ico-ct",
+                                "url": {
+                                  "path": "$.attributes.imagingStudy[0].identifier",
+                                  "processor": {
+                                    "name": "dicomViewerUrl",
+                                    "args": {
+                                      "imagingParameters": [
+                                        {
+                                          "name": "acsn",
+                                          "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                        },
+                                        {
+                                          "name": "studyId",
+                                          "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                                          "processor": { "name": "dicomId" }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "target": "iFrame",
+                                "popup": {
+                                  "type": "popup",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "text",
+                                        "value": {
+                                          "constant": "Images"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "meta": {
+                                "title": [
+                                  {
+                                    "value": { "path": "$.attributes.title" },
+                                    "type": "text"
+                                  },
+                                  {
+                                    "value": {
+                                      "path": "$.attributes.code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    },
+                                    "type": "text"
+                                  },
+                                  {
+                                    "value": {
+                                      "path": "$.attributes.context.procedure[*].code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    },
+                                    "type": "text"
+                                  }
+                                ],
+                                "subTitle": {
+                                  "type": "list",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "datetime",
+                                        "value": { "path": "$.date" }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "date": {
+                                  "value": { "path": "$.date" },
+                                  "type": "datetime"
+                                }
+                              }
+                            },
+                            {
+                              "type": "link",
+                              "value": {
+                                "label": [
+                                  {
+                                    "constant": "#"
+                                  }
+                                ],
+                                "icon": "ico-ct",
+                                "url": {
+                                  "path": "$.attributes.identifier",
+                                  "processor": {
+                                    "name": "dicomViewerUrl",
+                                    "args": {
+                                      "imagingParameters": [
+                                        {
+                                          "name": "acsn",
+                                          "path": "$[*].type.coding[?(@.code === 'ACSN')]^^^.value"
+                                        },
+                                        {
+                                          "name": "studyId",
+                                          "path": "$[?(@.system === 'urn:dicom:uid' || @.system === 'urn:ietf:rfc:3986')].value",
+                                          "processor": { "name": "dicomId" }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
+                                "target": "iFrame",
+                                "popup": {
+                                  "type": "popup",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "text",
+                                        "value": {
+                                          "constant": "Images"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              "meta": {
+                                "title": [
+                                  {
+                                    "value": { "path": "$.attributes.title" },
+                                    "type": "text"
+                                  },
+                                  {
+                                    "value": {
+                                      "path": "$.attributes.code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    },
+                                    "type": "text"
+                                  },
+                                  {
+                                    "value": {
+                                      "path": "$.attributes.context.procedure[*].code",
+                                      "processor": {
+                                        "name": "codeableConceptText"
+                                      }
+                                    },
+                                    "type": "text"
+                                  }
+                                ],
+                                "subTitle": {
+                                  "type": "list",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "datetime",
+                                        "value": { "path": "$.date" }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "date": {
+                                  "value": { "path": "$.date" },
+                                  "type": "datetime"
+                                }
+                              }
+                            },
+                            {
+                              "type": "link",
+                              "value": {
+                                "label": [
+                                  {
+                                    "constant": "#"
+                                  }
+                                ],
+                                "icon": "ico-ct",
+                                "url": {
+                                  "constant": "#"
+                                },
+                                "target": "iFrame",
+                                "popup": {
+                                  "type": "popup",
+                                  "value": {
+                                    "elements": [
+                                      {
+                                        "type": "text",
+                                        "value": {
+                                          "constant": "Images could not be found. It may exist somewhere outside the application, like in another hospital or system this application is not connected to."
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "layout": [
+    [],
+    [
+      {
+        "id": "recentEventsSummary"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "oncology-encounter-type-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-encounter-type-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "310513006",
+              "display": "Discharge by medical oncologist (procedure)"
+            }
+          ]
+        },
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.10110",
+          "concept": [
+            {
+              "code": "114",
+              "display": "Radiation/Oncology Series"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

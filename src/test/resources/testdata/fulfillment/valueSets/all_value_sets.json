@@ -1,0 +1,19 @@
+{
+  "valuesets": [
+    {
+      "name": "vs_1",
+      "description": "value set 1",
+      "version": "version_1"
+    },
+    {
+      "name": "vs_2",
+      "description": "value set 2",
+      "version": "version_1"
+    },
+    {
+      "name": "vs_3",
+      "description": "value set 3",
+      "version": "version_1"
+    }
+  ]
+}

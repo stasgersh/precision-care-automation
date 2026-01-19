@@ -1,0 +1,32 @@
+{
+  "name": "social-work-referral-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "social-work-referral-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "308440001",
+              "display": "Referral to social worker"
+            },
+            {
+              "code": "110721000000103",
+              "display": "Referral to approved social worker "
+            },
+            {
+              "code": "306366006",
+              "display": "Referral to social services department social worker"
+            },
+            {
+              "code": "306367002",
+              "display": "Referral to social services department care manager (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

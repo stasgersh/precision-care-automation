@@ -1,0 +1,21 @@
+{
+  "name": "radiotherapy-procedure-category-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "radiotherapy-procedure-category-vs",
+    "description": "Radiotherapy procedure category codes",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "108290001",
+              "display": "Radiation oncology AND/OR radiotherapy (procedure)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

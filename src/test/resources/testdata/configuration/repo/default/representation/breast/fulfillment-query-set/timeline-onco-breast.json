@@ -1,0 +1,402 @@
+{
+  "id": "timeline.onco.breast",
+  "items": [
+    [
+      {
+        "key": "oncologyOutpatientNotes",
+        "query": {
+          "from": "oncologyOutpatientNote",
+          "dedup": true
+        }
+      },
+      {
+        "key": "oncologyMDTReports",
+        "query": {
+          "from": "oncologyMDTReport",
+          "dedup": true
+        }
+      },
+      {
+        "key": "dischargeSummaryNotes",
+        "query": {
+          "from": "dischargeSummaryNote",
+          "dedup": true
+        }
+      },
+      {
+        "key": "erVisits",
+        "query": {
+          "from": "emergencyVisit",
+          "dedup": true
+        }
+      },
+      {
+        "key": "chemoMedications",
+        "query": {
+          "from": "medication",
+          "filter": {
+            "should": [
+              { "subtypes": { "eq": "chemo" } },
+              { "subtypes": { "eq": "ardMedication" } }
+            ]
+          },
+          "dedup": true
+        },
+        "postProcessing": [{ "processor": { "name": "doseChanges" } }]
+      },
+      {
+        "key": "pathologyReports",
+        "query": {
+          "from": "pathologyReport",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "labReports",
+        "query": {
+          "from": "labReport",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "imagingReports",
+        "query": {
+          "from": "imagingReport",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "imagingStudy",
+        "query": {
+          "from": "imagingStudyRequest",
+          "dedup": true
+        }
+      },
+      {
+        "key": "surgicalProcedures",
+        "query": {
+          "from": "surgicalProcedure",
+          "dedup": true
+        }
+      },
+      {
+        "key": "radiotherapyProcedures",
+        "query": {
+          "from": "radiotherapyProcedure",
+          "dedup": true
+        }
+      },
+      {
+        "key": "radiotherapyCourseSummaries",
+        "query": {
+          "from": "radiotherapyCourseSummary",
+          "dedup": true
+        }
+      },
+      {
+        "key": "radiotherapySummaryNotes",
+        "query": {
+          "from": "radiotherapySummaryNote",
+          "dedup": true
+        }
+      },
+      {
+        "key": "activityData",
+        "query": {
+          "from": "activityData",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "bloodPressures",
+        "query": {
+          "from": "bloodPressure",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "bmis",
+        "query": {
+          "from": "bmi",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "bsas",
+        "query": {
+          "from": "bsa",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "oxygenSaturations",
+        "query": {
+          "from": "oxygenSaturation",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "oncologyVisit",
+        "query": {
+          "from": "oncologyVisit",
+          "dedup": true
+        }
+      },
+      {
+        "key": "painAssessments",
+        "query": {
+          "from": "painAssessment",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "respirations",
+        "query": {
+          "from": "respiration",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "weights",
+        "query": {
+          "from": "weight",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "genomicMarkerTestResults",
+        "query": {
+          "from": "genomicMarkerTestResult",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "immunologyMarkerTestResults",
+        "query": {
+          "from": "immunologyMarkerTestResult",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "generalTumorMarkerTestResults",
+        "query": {
+          "from": "generalTumorMarkerTestResult",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "breastTumorMarkerTestResults",
+        "query": {
+          "from": "breastTumorMarkerTestResult",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "breastReceptorTumorMarkerTestResult",
+        "query": {
+          "from": [
+            "estrogenReceptorStatus",
+            "her2ReceptorStatus",
+            "progesteroneReceptorStatus"
+          ],
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "genomicReports",
+        "query": {
+          "from": "genomicReport",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      },
+      {
+        "key": "testosterones",
+        "query": {
+          "from": "testosterone",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": true
+        }
+      }
+    ],
+    [
+      {
+        "key": "uncategorized",
+        "query": {
+          "from": "uncategorized",
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "dedup": false,
+          "size": 1000
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "3cb91478-93a0-434a-a085-5181d2dc3f33",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "34117-2",
+          "display": "History and physical note"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "51847-2",
+          "display": "Evaluation+Plan note"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "34117-2",
+        "display": "History and physical note"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "51847-2",
+        "display": "Evaluation+Plan note"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/83a2a278-ff45-e749-4968-bd121b0100c6"
+  },
+  "encounter": {
+    "reference": "Encounter/7b694003-7922-a9a3-82c3-39317f5cec34"
+  },
+  "effectiveDateTime": "2018-06-02T17:01:16+02:00",
+  "issued": "2018-06-02T17:01:16.450+02:00",
+  "performer": [
+    {
+      "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|9999999896",
+      "display": "Dr. Lesley194 Fisher429"
+    }
+  ],
+  "presentedForm": [
+    {
+      "contentType": "text/plain",
+      "data": "CjIwMTgtMDYtMDIKCiMgQ2hpZWYgQ29tcGxhaW50Ck5vIGNvbXBsYWludHMuCgoKIyBTb2NpYWwgSGlzdG9yeQpQYXRpZW50IGhhcyBuZXZlciBzbW9rZWQgYW5kIGlzIGFuIGFsY29ob2xpYy4KCgpQYXRpZW50IGNvbWVzIGZyb20gYSBoaWdoIHNvY2lvZWNvbm9taWMgYmFja2dyb3VuZC4KClBhdGllbnQgY3VycmVudGx5IGhhcyBBZXRuYS4KCiMgQWxsZXJnaWVzCk5vIEtub3duIEFsbGVyZ2llcy4KCiMgTWVkaWNhdGlvbnMKTm8gQWN0aXZlIE1lZGljYXRpb25zLgoKIyBBc3Nlc3NtZW50IGFuZCBQbGFuClBhdGllbnQgaXMgcHJlc2VudGluZyB3aXRoIG1hbGlnbmFudCBuZW9wbGFzbSBvZiBicmVhc3QgKGRpc29yZGVyKS4KCiMjIFBsYW4="
+    }
+  ]
+}

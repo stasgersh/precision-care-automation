@@ -1,0 +1,222 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "testPatientIdAmitHaze",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/person_id",
+            "value": "cf90fbf6-0ef8-4f32-a5e9-f2528484f40d"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "AmitHaze"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1939-12-14",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "source": "default",
+          "lastUpdated": "2024-05-14T13:50:30.585Z"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/testPatientIdAmitHaze"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ImagingStudy",
+        "id": "9aa86af9-ac3d-42c3-8114-73caa7e8c918",
+        "meta": {
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "ACSN"
+                }
+              ]
+            },
+            "value": "e2e-test_histoImg"
+          }
+        ],
+        "status": "available",
+        "subject": {
+          "reference": "Patient/testPatientIdAmitHaze"
+        },
+        "series": [
+          {
+            "uid": "d60a3376-8810-4872-8a9a-a8ab1d68191c",
+            "modality": {
+              "system": "http://dicom.nema.org/resources/ontology/DCM",
+              "code": "CT"
+            },
+            "bodySite": {
+              "system": "http://snomed.info/sct",
+              "code": "818983003/277113001////",
+              "display": "Multisection^W contrast IV:Find:Pt:Abdomen+Pelvis:Doc:CT/Abdomen�/Pelvis�////"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "ImagingStudy/9aa86af9-ac3d-42c3-8114-73caa7e8c918"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/59758442-94b0-4998-b923-95d4175fdcd6",
+      "resource": {
+        "id": "59758442-94b0-4998-b923-95d4175fdcd6",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/testPatientIdAmitHaze"
+        },
+        "effectiveDateTime": "2000-01-16T10:43:54Z",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "TVIgQlJBSU4gV0lUSE9VVCBBTkQgV0lUSCBDT05UUkFTVCwgKipEQVRFW0phbiAxNyAyMDE4XSA1OjA3IFBNCgpISVNUT1JZOiBBZGRpdGlvbmFsIEluZm9ybWF0aW9uIFtIMVNUXTotPnN0YWdlIGl2IE5TQ0xDIHMvcCBXQlJUOyBOZW9wbGFzbTogQ2hlc3QsIE1ldGFzdGF0aWMsIFJ4IE1vbml0b3IgT3IgRi9VCgpDT01QQVJJU09OOiBNUkkgYnJhaW4gKipEQVRFW05vdiAwOCAyMDE3XQoKSU5UUkFWRU5PVVMgQ09OVFJBU1QgQURNSU5JU1RSQVRJT04gKG1pbGxpbGl0ZXJzIG9mIEdhZGF2aXN0KTogNy41CgpURUNITklRVUU6IE11bHRpcGxhbmFyLCBtdWx0aXNlcXVlbmNlIE1SIGltYWdpbmcgb2YgdGhlIGJyYWluIHdhcyBwZXJmb3JtZWQgYmVmb3JlIGFuZCBhZnRlciBpbnRyYXZlbm91cyBjb250cmFzdCBhZG1pbmlzdHJhdGlvbi4KCkZJTkRJTkdTOiAKCk1peGVkIHJlc3BvbnNlIHdpdGggaW1wcm92ZWQgYXBwZWFyYW5jZSBvZiBhIGZldyBwYXJlbmNoeW1hbCBlbmhhbmNpbmcgbGVzaW9ucyBhcyB3ZWxsIGFzIG1pbGQgaW50ZXJ2YWwgaW5jcmVhc2UgaW4gc2l6ZSBvZiBvdGhlcnMgYW5kIGF0SUQqKipvbmUgbmV3IGxlc2lvbiBpZGVudGlmaWVkLgoKRXhhbXBsZXMgYXJlIGFzIGZvbGxvd3M6CgoqIFR3byBsZXNpb25zIGluIHRoZSBsZWZ0IHBvc3RlcmlvciBmcm9udGFsIGxvYmUgYWxvbmcgdGhlIGNlbnRyYWwgc3VsY3VzIChheGlhbCBwb3N0Y29udHJhc3QgaW1hZ2UgMTggYW5kIDE5KSBhcmUgc2xpZ2h0bHkgZGVjcmVhc2VkIGluIHNpemUuKiBJbnRlcnZhbCBpbmNyZWFzZSBpbiBzaXplIG9mIGEgNSBtbSByaWdodCBmcm9udGFsIGxvYmUgbGVzaW9uLCBwcmV2aW91c2x5IDMgbW0gKGJlc3Qgc2VlbiBvbiBjb3JvbmFsIHBvc3Rjb250cmFzdCBpbWFnZSA5KS4qIE5ldyBvciBuZXdseSBwZXJjZXB0aWJsZSBwdW5jdGF0ZSBsZXNpb24gaW4gdGhlIGxlZnQgaW5mZXJvbWVkaWFsIGZyb250YWwgbG9iZSAoYXhpYWwgaW1hZ2UgMTEpLgoKVGhlcmUgaXMgYSBwdW5jdGF0ZSBmb2N1cyBvZiByZXN0cmljdGVkIGRpZmZ1c2lvbiBhc3NvY2lhdGVkIHdpdGggYSBwb3N0ZXJpb3IgcmlnaHQgZnJvbnRhbCBsZXNpb24uIFN0YWJsZSBwdW5jdGF0ZSBmb2N1cyBvZiBzdXNjZXB0aWJpbGl0eSBlZmZlY3QgaW4gdGhlIGxlZnQgbGF0ZXJhbCBjZXJlYmVsbGFyIGhlbWlzcGhlcmUuIFBhdGNoeSBwZXJpdmVudHJpY3VsYXIgd2hpdGUgbWF0dGVyIFQyIGh5cGVyaW50ZW5zaXR5IGhhcyBwcm9ncmVzc2VkIHNpbmNlIHRoZSBwcmlvciBleGFtLCBsaWtlbHkgcmVsYXRlZCB0byB3aG9sZSBicmFpbiByYWRpYXRpb24uIFRoZXJlIGlzIG5vIGh5ZHJvY2VwaGFsdXMuIE1hcnJvdyBzaWduYWwgaXMgbm9ybWFsLgoKCgpNaXhlZCByZXNwb25zZSB3aXRoIGltcHJvdmVkIGFwcGVhcmFuY2Ugb2YgYSBmZXcgcGFyZW5jaHltYWwgZW5oYW5jaW5nIGxlc2lvbnMgYXMgd2VsbCBhcyBtaWxkIGludGVydmFsIGluY3JlYXNlIGluIHNpemUgb2Ygb3RoZXJzIGFuZCBhdElEKioqb25lIG5ldyBsZXNpb24gaWRlbnRpZmllZC4gU2VlIGFib3ZlIHJlcG9ydCBmb3IgZGV0YWlscy4KCioqTkFNRVtNLCBaWlogWVlZXSwgTUQsIGhhdmUgcmV2aWV3ZWQgdGhlIGltYWdlcyBhbmQgdmVyaWZ5IHRoZSBhYm92ZSBpbnRlcnByZXRhdGlvbiBvbiAqKkRBVEVbSmFuIDE4IDIwMThdIDExOjE4IEFNLgoKRWxlY3Ryb25pY2FsbHkgU2lnbmVkIEJ5OiAqKltOQU1FIFhYWF0u"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433761009",
+              "display": "Computed tomography, abdomen and pelvis; with contrast material(s)"
+            }
+          ],
+          "text": "Computed tomography, abdomen and pelvis; with contrast material(s)"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/59758442-94b0-4998-b923-95d4175fdcd6"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ea174026-4e1c-436a-bcfb-29d9e795966e",
+        "meta": {
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "433761009",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAmitHaze"
+        },
+        "effectiveDateTime": "2011-09-28",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Q1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3QKCkluZGljYXRpb246IFRoZSBwYXRpZW50IHByZXNlbnRlZCB3aXRoIHN5bXB0b21zIG9mIGNoZXN0IHBhaW4gYW5kIHNob3J0bmVzcyBvZiBicmVhdGguIEEgQ1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3Qgd2FzIG9yZGVyZWQgdG8gZXZhbHVhdGUgZm9yIHBvc3NpYmxlIHB1bG1vbmFyeSBlbWJvbGlzbSwgcG5ldW1vbmlhLCBhbmQvb3IgYWJkb21pbmFsIHBhdGhvbG9neS4KClByb2NlZHVyZTogVGhlIHBhdGllbnQgd2FzIGFkbWluaXN0ZXJlZCAxMjAgbUwgb2Ygbm9uLWlvbmljIGNvbnRyYXN0IGFnZW50IGludHJhdmVub3VzbHkgYW5kIHVuZGVyd2VudCBhIENUIHNjYW4gb2YgdGhlIHRob3JheCwgYWJkb21lbiwgYW5kIHBlbHZpcyB1c2luZyBhIDY0LXNsaWNlIENUIHNjYW5uZXIuCgpGaW5kaW5nczoKClRoZSBDVCBzY2FuIHJldmVhbGVkIHRoZSBmb2xsb3dpbmcgZmluZGluZ3M6CgpUaGUgdGhvcmF4OiBObyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20gb3IgcG5ldW1vbmlhIHdhcyBzZWVuLiBUaGUgbHVuZ3Mgd2VyZSBjbGVhciwgd2l0aCBubyBldmlkZW5jZSBvZiBjb25zb2xpZGF0aW9uIG9yIGVmZnVzaW9uLgpUaGUgYWJkb21lbjogVGhlIGxpdmVyLCBzcGxlZW4sIGFuZCBraWRuZXlzIHdlcmUgbm9ybWFsIGluIHNpemUgYW5kIHNoYXBlLiBUaGUgcGFuY3JlYXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBwYW5jcmVhdGl0aXMgb3IgcGFuY3JlYXRpYyBtYXNzLiBUaGUgc21hbGwgYm93ZWwgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvYnN0cnVjdGlvbiBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4gVGhlIGxhcmdlIGJvd2VsIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgZGl2ZXJ0aWN1bGl0aXMgb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuClRoZSBwZWx2aXM6IFRoZSBwZWx2aXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBmcmFjdHVyZSBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4KQ29udHJhc3QgRW5oYW5jZW1lbnQ6CgpUaGUgY29udHJhc3QgYWdlbnQgZW5oYW5jZWQgdGhlIHZpc3VhbGl6YXRpb24gb2YgdGhlIHZhc2N1bGFyIHN0cnVjdHVyZXMsIGluY2x1ZGluZyB0aGUgYW9ydGEsIHB1bG1vbmFyeSBhcnRlcmllcywgYW5kIHJlbmFsIGFydGVyaWVzLiBObyBldmlkZW5jZSBvZiB0aHJvbWJ1cyBvciBlbWJvbHVzIHdhcyBzZWVuIGluIHRoZSBwdWxtb25hcnkgYXJ0ZXJpZXMuCgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIENUIFRob3JheCBBYmRvbWVuIFBlbHZpcyB3aXRoIENvbnRyYXN0LCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBubyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20sIHBuZXVtb25pYSwgb3IgYWJkb21pbmFsIHBhdGhvbG9neS4gVGhlIHBhdGllbnQncyBzeW1wdG9tcyBhcmUgbGlrZWx5IGR1ZSB0byBhbm90aGVyIGNhdXNlLCBhbmQgZnVydGhlciBldmFsdWF0aW9uIGlzIG5lZWRlZCB0byBkZXRlcm1pbmUgdGhlIHVuZGVybHlpbmcgZGlhZ25vc2lzLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIG1hbmFnZW1lbnQgYXMgZGlyZWN0ZWQgYnkgdGhlIHBhdGllbnQncyBwcmltYXJ5IGNhcmUgcGh5c2ljaWFuLgpDb25zaWRlciBmdXJ0aGVyIGltYWdpbmcgc3R1ZGllcywgc3VjaCBhcyBhIHZlbnRpbGF0aW9uLXBlcmZ1c2lvbiBzY2FuIG9yIGEgcHVsbW9uYXJ5IGZ1bmN0aW9uIHRlc3QsIHRvIGZ1cnRoZXIgZXZhbHVhdGUgZm9yIHB1bG1vbmFyeSBlbWJvbGlzbS4KU2lnbmF0dXJlOgoKRHIgWSBY"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/ea174026-4e1c-436a-bcfb-29d9e795966e"
+      }
+    }
+  ]
+}

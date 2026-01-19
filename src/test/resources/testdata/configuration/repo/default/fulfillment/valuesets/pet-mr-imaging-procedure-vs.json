@@ -1,0 +1,20 @@
+{
+  "name": "pet-mr-imaging-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "pet-mr-imaging-procedure-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "1097661000000109",
+              "display": "PET MRI of whole body"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

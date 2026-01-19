@@ -1,0 +1,929 @@
+{
+  "name": "genomic-tumor-marker-test-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "genomic-tumor-marker-test-vs",
+    "description": "Genomic tumor marker set. LOINC: curated subset of the mCODE tumor marker test valueset (http://hl7.org/fhir/us/mcode/ValueSet-mcode-tumor-marker-test-vs.html)",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "69361-4",
+              "display": "PCA3 score in Urine by Molecular genetics method"
+            },
+            {
+              "code": "69362-2",
+              "display": "PCA3 score in Urine Qualitative by Molecular genetics method"
+            },
+            {
+              "code": "72508-5",
+              "display": "UGT1A1 gene c.A(TA)7TAA(*28) [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "78205-2",
+              "display": "ALK gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78210-2",
+              "display": "ALK gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "83059-6",
+              "display": "KRAS gene [VCF] in Cancer specimen by Sequencing"
+            },
+            {
+              "code": "85299-6",
+              "display": "BRAF V600E mutant protein [Presence] in Cancer specimen by Immune stain"
+            },
+            {
+              "code": "43368-0",
+              "display": "Microsatellite instability [Identifier] in Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "62862-8",
+              "display": "Microsatellite instability [Presence] in Tissue by Immune stain"
+            },
+            {
+              "code": "81695-9",
+              "display": "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
+            },
+            {
+              "code": "43399-5",
+              "display": "JAK2 gene p.Val617Phe [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "72333-8",
+              "display": "JAK2 gene p.Val617Phe [Presence] in Bone marrow by Molecular genetics method"
+            },
+            {
+              "code": "31150-6",
+              "display": "ERBB2 gene duplication [Presence] in Tissue by FISH"
+            },
+            {
+              "code": "48674-6",
+              "display": "Genetic diseases [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "48684-5",
+              "display": "X and Y chromosome [Interpretation] in Blood or Marrow by FISH--post bone marrow transplant"
+            },
+            {
+              "code": "48730-6",
+              "display": "X linked heterotaxy [Identifier] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "49028-4",
+              "display": "Microdeletion syndromes [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "49039-1",
+              "display": "Subtelomere analysis [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "49040-9",
+              "display": "Subtelomere analysis [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "49063-1",
+              "display": "Microdeletion syndromes in Specimen by FISH Nominal"
+            },
+            {
+              "code": "49683-6",
+              "display": "ERBB2 gene copy number/Chromosome 17 copy number in Tissue by FISH"
+            },
+            {
+              "code": "50020-7",
+              "display": "Microdeletion syndromes in Blood or Tissue by FISH"
+            },
+            {
+              "code": "50659-2",
+              "display": "Chromosome analysis.interphase [Interpretation] in Bone marrow by FISH Narrative"
+            },
+            {
+              "code": "50684-0",
+              "display": "Chromosome analysis.interphase [Interpretation] in Blood by FISH Narrative"
+            },
+            {
+              "code": "51867-0",
+              "display": "t(9;22)(q34.1;q11)(ABL1,BCR) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "53628-4",
+              "display": "20q chromosome deletion [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "55192-9",
+              "display": "Chromosome analysis.interphase [Interpretation] in Amniotic fluid by FISH Narrative"
+            },
+            {
+              "code": "55193-7",
+              "display": "Chromosome analysis.interphase [Interpretation] in Chorionic villus sample by FISH Narrative"
+            },
+            {
+              "code": "56030-0",
+              "display": "Karyotype [Identifier] in Urine by FISH Narrative"
+            },
+            {
+              "code": "56144-9",
+              "display": "CHIC2 gene 4q12 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "57038-2",
+              "display": "Chromosome 12 aneuploidy in Amniotic fluid or Chorionic villus sample by FISH Nominal"
+            },
+            {
+              "code": "57317-0",
+              "display": "Chromosome 13+18+21+X+Y aneuploidy in Amniotic fluid or Chorionic villus sample by FISH Nominal"
+            },
+            {
+              "code": "57318-8",
+              "display": "Chromosome 13+18+21+X+Y aneuploidy in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "57453-3",
+              "display": "Chromosome 18 aneuploidy in Amniotic fluid or Chorionic villus sample by FISH Nominal"
+            },
+            {
+              "code": "57454-1",
+              "display": "Chromosome 13 aneuploidy in Amniotic fluid or Chorionic villus sample by FISH Nominal"
+            },
+            {
+              "code": "57802-1",
+              "display": "Chromosome analysis.interphase [Interpretation] in Blood or Marrow by FISH Narrative"
+            },
+            {
+              "code": "57906-0",
+              "display": "9p21 chromosome deletion [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "59050-5",
+              "display": "Chromosome analysis.interphase [Interpretation] in Specimen by FISH Narrative"
+            },
+            {
+              "code": "59267-5",
+              "display": "Karyotype [Identifier] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "62344-7",
+              "display": "Chromosome analysis.metaphase panel - Blood by FISH"
+            },
+            {
+              "code": "62345-4",
+              "display": "Chromosome analysis.interphase panel - Blood by FISH"
+            },
+            {
+              "code": "62346-2",
+              "display": "Chromosome analysis.interphase panel - Amniotic fluid by FISH"
+            },
+            {
+              "code": "62347-0",
+              "display": "Chromosome analysis.prenatal panel by FISH"
+            },
+            {
+              "code": "62354-6",
+              "display": "Chromosome analysis.metaphase panel - Amniotic fluid by FISH"
+            },
+            {
+              "code": "62367-8",
+              "display": "Chromosome analysis panel by FISH"
+            },
+            {
+              "code": "63068-1",
+              "display": "TOP2A gene copy number/Chromosome 17 copy number in Tissue by FISH"
+            },
+            {
+              "code": "63070-7",
+              "display": "TOP2A gene 17q21-22 deletion and duplication mutation analysis [Presence] in Tissue by FISH"
+            },
+            {
+              "code": "66950-7",
+              "display": "MALT1 18q21 gene rearrangements in Blood or Tissue by FISH"
+            },
+            {
+              "code": "72652-1",
+              "display": "Subtelomere analysis.long arm [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "72653-9",
+              "display": "Subtelomere analysis.short arm [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "72654-7",
+              "display": "SNRPN gene 15q11 deletion and duplication mutation analysis [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "72725-5",
+              "display": "t(11;14)(q13.2;q32)(MYEOV,IGH) fusion transcript [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "72726-3",
+              "display": "t(4;14)(p16;q32)(FGFR3,IGH) fusion transcript [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "72728-9",
+              "display": "Del(13)(q14) [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "72824-6",
+              "display": "Del(17)(p13) [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "72827-9",
+              "display": "dic(9;20)(p11-13;q11)(wcp9+,wcp20+) [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "73558-9",
+              "display": "Staphylococcus aureus and Staphylococcus sp.coagulase negative rRNA [Identifier] by FISH in Positive blood culture"
+            },
+            {
+              "code": "73749-4",
+              "display": "4p16.3 chromosome deletion [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "73750-2",
+              "display": "RAI1 gene 17p11.2 deletion and duplication mutation analysis [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "73751-0",
+              "display": "5p15.2 (5p-) chromosome deletion [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "74034-0",
+              "display": "MAML2 11q21 gene rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "74860-8",
+              "display": "ERBB2 gene copy number/nucleus in Tissue by FISH"
+            },
+            {
+              "code": "74861-6",
+              "display": "Chromosome 17 copy number/nucleus in Tissue by FISH"
+            },
+            {
+              "code": "76065-2",
+              "display": "6p25 and 6q23 and 11q and 8q24 and 9p21 chromosome partial aneuploidy in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77030-5",
+              "display": "t(1;19)(q23.3;p13.3)(PBX1,TCF3) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77031-3",
+              "display": "t(15;17)(q24.1;q21.1)(PML,RARA) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77032-1",
+              "display": "t(8;14)(q24;q32)(MYC,IGH) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77033-9",
+              "display": "t(14;16)(q32;q23)(IGH,MAF) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77034-7",
+              "display": "inv(16)(p13.1;q22.1)(MYH11,CBFB) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77035-4",
+              "display": "t(14;18)(q32;q21)(IGH,MALT1) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77036-2",
+              "display": "t(11;18)(q21;q21)(BIRC3,MALT1) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77037-0",
+              "display": "t(11;14)(q13;q32)(CCND1,IGH) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77038-8",
+              "display": "t(14;18)(q32;q21.3)(IGH,BCL2) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77039-6",
+              "display": "t(12;21)(p13;q22.3)(ETV6,RUNX1) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77040-4",
+              "display": "t(8;21)(q22;q22.3)(RUNX1T1,RUNX1) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77041-2",
+              "display": "inv(3)(q21;q26.2)+t(3;3)(q21;q26.2)(PSMD2,MECOM) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "77042-0",
+              "display": "t(6;9)(p22;q34)(DEK,NUP214) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78201-1",
+              "display": "4q12 chromosome region rearrangements [Identifier] in Blood or Tissue by FISH Nominal"
+            },
+            {
+              "code": "78202-9",
+              "display": "9q34 chromosome region deletion [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78203-7",
+              "display": "BCL6 gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78204-5",
+              "display": "CCND1 gene duplication [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78206-0",
+              "display": "4q12 chromosome region rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78207-8",
+              "display": "9q34 chromosome region deletion [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78208-6",
+              "display": "BCL6 gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78209-4",
+              "display": "CCND1 gene duplication [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78211-0",
+              "display": "Cells.4q12 chromosome region rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78212-8",
+              "display": "Cells.9q34 chromosome region deletion/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78213-6",
+              "display": "Cells.BCL6 gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78214-4",
+              "display": "Cells.CCND1 gene duplication/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78215-1",
+              "display": "MYC gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78216-9",
+              "display": "TRA+TRD gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78217-7",
+              "display": "RARA gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78218-5",
+              "display": "BCL2 gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78219-3",
+              "display": "MLL gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78220-1",
+              "display": "PDGFRB gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78221-9",
+              "display": "IGH gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78222-7",
+              "display": "MYC gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78223-5",
+              "display": "TRA+TRD gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78224-3",
+              "display": "RARA gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78225-0",
+              "display": "BCL2 gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78226-8",
+              "display": "MLL gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78227-6",
+              "display": "PDGFRB gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78228-4",
+              "display": "IGH gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78229-2",
+              "display": "Cells.MYC gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78230-0",
+              "display": "Cells.RARA gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78231-8",
+              "display": "Cells.TRA+TRD gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78232-6",
+              "display": "Cells.BCL2 gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78233-4",
+              "display": "Cells.ALK gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78234-2",
+              "display": "Cells.MLL gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78235-9",
+              "display": "Cells.PDGFRB gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78236-7",
+              "display": "Cells.IGH gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78237-5",
+              "display": "Chromosome 8 copy number/nucleus in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78238-3",
+              "display": "Chromosome 3 copy number/nucleus in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78245-8",
+              "display": "MYB gene deletion [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78342-3",
+              "display": "MYB gene deletion [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78343-1",
+              "display": "Cells.MYB gene deletion/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78915-6",
+              "display": "FGFR1 gene rearrangements [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "78916-4",
+              "display": "FGFR1 gene rearrangements [Interpretation] in Blood or Tissue by FISH Narrative"
+            },
+            {
+              "code": "78917-2",
+              "display": "Cells.FGFR1 gene rearrangements/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "79206-9",
+              "display": "inv(2)(p21;p23)(EML4,ALK) fusion transcript [Presence] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "81710-6",
+              "display": "PTEN gene [Presence] in Cancer specimen by FISH"
+            },
+            {
+              "code": "81746-0",
+              "display": "Chromosome region 17p13.1 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "81747-8",
+              "display": "Chromosome region 6q22 rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "81748-6",
+              "display": "Chromosome region Yp11.3 deletion AndOr rearrangement in Blood or Tissue by FISH"
+            },
+            {
+              "code": "81749-4",
+              "display": "Chromosome region 13q14 deletion in Bone marrow by FISH"
+            },
+            {
+              "code": "81751-0",
+              "display": "Chromosome 17p13.1 deletion and 14q32 rearrangements in Bone marrow by FISH"
+            },
+            {
+              "code": "81752-8",
+              "display": "Chromosome region 1q21 duplication in Bone marrow by FISH"
+            },
+            {
+              "code": "82238-7",
+              "display": "Chromosome region 15q11-13 deletion and duplication mutation analysis in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "82239-5",
+              "display": "Chromosome region 16p13.3 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82240-3",
+              "display": "Chromosome region 16p13.3 deletion in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "82241-1",
+              "display": "Chromosome region 17p11.2 deletion in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "82242-9",
+              "display": "Chromosome region 17p13.3 deletion in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "82243-7",
+              "display": "Chromosome region 17p13.3 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82244-5",
+              "display": "Chromosome region 1p36 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82245-2",
+              "display": "Chromosome region 22q11.2 deletion and duplication mutation analysis in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "82246-0",
+              "display": "Chromosome region 22q11.2 deletion and duplication mutation analysis in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82247-8",
+              "display": "Chromosome region 7q11.23 deletion in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "82248-6",
+              "display": "Chromosome region 7q11.23 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82249-4",
+              "display": "Chromosome region 8q23.3-24.13 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82250-2",
+              "display": "Chromosome region 1p subtelomere and 1p36 deletion and 1q25 rearrangement in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82251-0",
+              "display": "Chromosome 3 and 7 and 17 aneuploidy and chromosome region 9p21 deletion in Urine by FISH"
+            },
+            {
+              "code": "82253-6",
+              "display": "JAG1 gene deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82256-9",
+              "display": "Chromosome 12 trisomy and chromosome region 11q22.3 and 13q14 and 17p13.1 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82257-7",
+              "display": "SRY gene deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82258-5",
+              "display": "Subtelomere analysis in Bone marrow by FISH"
+            },
+            {
+              "code": "82295-7",
+              "display": "Chromosome region Xp22.33 AndOr Yp11.32 deletion and duplication mutation analysis in Blood or Tissue by FISH"
+            },
+            {
+              "code": "82597-6",
+              "display": "Chromosome painting analysis in Blood or Tissue by FISH"
+            },
+            {
+              "code": "84912-5",
+              "display": "Cells.chromosome region 5q31 deletion/Cells counted in Bone marrow by FISH"
+            },
+            {
+              "code": "84913-3",
+              "display": "Cells.chromosome 12 trisomy/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "84914-1",
+              "display": "Cells.chromosome region 13q14 deletion/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "84915-8",
+              "display": "Cells.chromosome region 11q22.3 deletion/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "84916-6",
+              "display": "Cells.chromosome region 17p13.1 deletion/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "84917-4",
+              "display": "Chromosome Y aneuploidy [Presence] in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "84918-2",
+              "display": "Chromosome X aneuploidy [Presence] in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "84919-0",
+              "display": "Chromosome 21 aneuploidy [Presence] in Amniotic fluid or Chorionic villus sample by FISH"
+            },
+            {
+              "code": "84920-8",
+              "display": "Cells.chromosome region 5q31 deletion/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "84921-6",
+              "display": "Cells.chromosome region 7q31 deletion/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "84922-4",
+              "display": "Cells.chromosome 7 monosomy/Cells counted in Blood or Tissue by FISH"
+            },
+            {
+              "code": "85318-4",
+              "display": "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
+            },
+            {
+              "code": "86239-1",
+              "display": "Cells.chromosome 3 monosomy/Cells counted in Cancer specimen by FISH"
+            },
+            {
+              "code": "87436-2",
+              "display": "Chromosome X and Y aneuploidy in Blood or Tissue by FISH"
+            },
+            {
+              "code": "90043-1",
+              "display": "t(14;20)(q32;q12)(IGH,MAFB) fusion transcript in Blood or Tissue by FISH"
+            },
+            {
+              "code": "90926-7",
+              "display": "MET gene amplification in Blood or Tissue by FISH"
+            },
+            {
+              "code": "90927-5",
+              "display": "RET gene rearrangements in Blood or Tissue by FISH"
+            },
+            {
+              "code": "92905-9",
+              "display": "Chromosome 7 copy number/nucleus in Blood or Tissue by FISH"
+            },
+            {
+              "code": "92906-7",
+              "display": "MET gene copy number/nucleus in Blood or Tissue by FISH"
+            },
+            {
+              "code": "92907-5",
+              "display": "MET gene copy number/Chromosome 7 copy number in Blood or Tissue by FISH"
+            },
+            {
+              "code": "93796-1",
+              "display": "MYCN gene amplification in Blood or Tissue by FISH"
+            },
+            {
+              "code": "93797-9",
+              "display": "MYCN gene copy number/Chromosome 2 copy number in Tissue by FISH"
+            },
+            {
+              "code": "93798-7",
+              "display": "MYCN gene copy number/nucleus in Tissue by FISH"
+            },
+            {
+              "code": "93799-5",
+              "display": "Chromosome 2 copy number/nucleus in Tissue by FISH"
+            },
+            {
+              "code": "93800-1",
+              "display": "1p/1q chromosome deletion [# Ratio] in Tissue by FISH"
+            },
+            {
+              "code": "93801-9",
+              "display": "Chromosome 1 polysomy [Presence] in Tissue by FISH"
+            },
+            {
+              "code": "93802-7",
+              "display": "19q/19p chromosome deletion [# Ratio] in Tissue by FISH"
+            },
+            {
+              "code": "93803-5",
+              "display": "Chromosome 19 polysomy [Presence] in Tissue by FISH"
+            },
+            {
+              "code": "93804-3",
+              "display": "Chromosome 12 copy number/nucleus in Tissue by FISH"
+            },
+            {
+              "code": "93805-0",
+              "display": "MDM2 gene copy number/nucleus in Tissue by FISH"
+            },
+            {
+              "code": "93806-8",
+              "display": "EWSR1 gene rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "93807-6",
+              "display": "FOXO1 gene rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "93808-4",
+              "display": "MDM2 gene amplification in Tissue by FISH"
+            },
+            {
+              "code": "93809-2",
+              "display": "MDM2 gene copy number/Chromosome 12 copy number in Tissue by FISH"
+            },
+            {
+              "code": "93810-0",
+              "display": "SS18 gene rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "94338-1",
+              "display": "Chromosome 13+15+16+18+21+22+X+Y aneuploidy in Products of Conception by FISH"
+            },
+            {
+              "code": "95069-1",
+              "display": "Chromosome 1q and 9 and 11 and 15 aneuploidy and 13q deletion in Bone marrow by FISH"
+            },
+            {
+              "code": "95070-9",
+              "display": "Chromosome 9 and 11 and 15 aneuploidy in Bone marrow by FISH"
+            },
+            {
+              "code": "95071-7",
+              "display": "Chromosome region 14q32 rearrangements in Bone marrow by FISH"
+            },
+            {
+              "code": "95551-8",
+              "display": "Chromosome region 17p11.2 deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "95552-6",
+              "display": "4p16.3 chromosome deletion in Blood or Tissue by FISH"
+            },
+            {
+              "code": "95553-4",
+              "display": "5p15.2 (5p-) chromosome deletion [Identifier] in Blood or Tissue by FISH"
+            },
+            {
+              "code": "95779-5",
+              "display": "TFE3 gene rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "95780-3",
+              "display": "TFEB gene rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "95783-7",
+              "display": "ETV6 gene rearrangements in Blood or Marrow by FISH"
+            },
+            {
+              "code": "95784-5",
+              "display": "FGFR2 gene rearrangements in Tissue by FISH"
+            },
+            {
+              "code": "96494-0",
+              "display": "ABL1 and ABL2 and PDGFRB gene rearrangements in Blood or Tissue by FISH"
+            },
+            {
+              "code": "96495-7",
+              "display": "ABL2 gene rearrangements in Blood or Tissue by FISH"
+            },
+            {
+              "code": "96893-3",
+              "display": "ERBB2 gene duplication in Tumor by FISH"
+            },
+            {
+              "code": "98014-4",
+              "display": "Plasma cell proliferation analysis in Bone marrow by FISH"
+            },
+            {
+              "code": "49490-6",
+              "display": "BCR-ABL1 b2a2 fusion protein [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "55180-4",
+              "display": "Human epididymis protein 4 [Moles/volume] in Serum or Plasma"
+            },
+            {
+              "code": "96044-3",
+              "display": "Human epididymis protein 4 [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "code": "60588-1",
+              "display": "t(15;17)(q24.1;q21.1)(PML,RARA) bcr2 fusion transcript [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "72211-6",
+              "display": "t(15;17)(q24.1;q21.1)(PML,RARA) bcr2 fusion transcript/control transcript [# Ratio] in Bone marrow by Molecular genetics method"
+            },
+            {
+              "code": "72215-7",
+              "display": "t(15;17)(q24.1;q21.1)(PML,RARA) bcr2 fusion transcript/control transcript [# Ratio] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "21636-6",
+              "display": "BRCA1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "21637-4",
+              "display": "BRCA1 gene.c.185 del AG [presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "21638-2",
+              "display": "BRCA1 gene c.5382insC [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "21639-0",
+              "display": "BRCA1 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "79207-7",
+              "display": "BRCA1 gene mutation analysis limited to known familial mutations in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "59041-4",
+              "display": "BRCA1+BRCA2 gene mutations tested for Molgen Nom (Bld/Tiss)"
+            },
+            {
+              "code": "21702-6",
+              "display": "KRAS gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "21703-4",
+              "display": "KRAS gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "53620-1",
+              "display": "KRAS gene mutations found [Identifier] in Bone marrow by Molecular genetics method Nominal"
+            },
+            {
+              "code": "75974-6",
+              "display": "KRAS gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "81420-2",
+              "display": "KRAS and NRAS gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "82535-6",
+              "display": "KRAS gene full mutation analysis in Blood or Tissue by Sequencing"
+            },
+            {
+              "code": "85509-8",
+              "display": "KRAS gene mutations found [Identifier] in Colorectal cancer specimen by Molecular genetics method Nominal"
+            },
+            {
+              "code": "21640-8",
+              "display": "BRCA2 gene c.6174delT [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "38530-2",
+              "display": "BRCA2 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "38531-0",
+              "display": "BRCA2 gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "79208-5",
+              "display": "BRCA2 gene mutation analysis limited to known familial mutations in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "45284-7",
+              "display": "DPYD gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+            },
+            {
+              "code": "47958-4",
+              "display": "FLT3 gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "54447-8",
+              "display": "FLT3 gene targeted mutation analysis in Bone marrow by Molecular genetics method"
+            },
+            {
+              "code": "72520-0",
+              "display": "FLT3 gene p.Asp835+Ile836 [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "79210-1",
+              "display": "FLT3 gene internal tandem duplication [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "85100-6",
+              "display": "FLT3 gene internal tandem duplication [Presence] in Bone marrow by Molecular genetics method"
+            },
+            {
+              "code": "92843-2",
+              "display": "FLT3 gene p.Asp835 mutations [Presence] in Blood or Tissue by Molecular genetics method"
+            },
+            {
+              "code": "48972-4",
+              "display": "FGFR2 gene+FGFR3 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

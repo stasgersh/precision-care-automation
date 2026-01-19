@@ -1,0 +1,32 @@
+{
+  "labels": [
+    {
+      "text": "Date of diagnosis",
+      "paletteColor": 1
+    },
+    {
+      "text": "MDT discussion",
+      "paletteColor": 2
+    },
+    {
+      "text": "Molecular testing",
+      "paletteColor": 3
+    },
+    {
+      "text": "Progression",
+      "paletteColor": 4
+    },
+    {
+      "text": "Recurrence",
+      "paletteColor": 5
+    },
+    {
+      "text": "Adverse Event",
+      "paletteColor": 6
+    },
+    {
+      "text": "To Be Reviewed",
+      "paletteColor": 7
+    }
+  ]
+}

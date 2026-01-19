@@ -1,0 +1,38 @@
+{
+    "resourceType": "DiagnosticReport",
+    "id": "32a61187-1838-4364-92e1-d1bd7dd7b2e0",
+    "status": "final",
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "LP29684-5",
+            "display": "Radiology"
+          }
+        ],
+        "text": "Radiology"
+      }
+    ],
+    "subject": {
+      "reference": "Patient/7cfe48ab-eb05-9ee1-84a4-f59c8a84e05a"
+    },
+    "effectiveDateTime": "2016-03-11",
+    "conclusion": "STABLE",
+    "presentedForm": [
+      {
+        "contentType": "text/plain",
+        "data": "Q1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3QgSW5kaWNhdGlvbjogVGhlIHBhdGllbnQgcHJlc2VudGVkIHdpdGggc3ltcHRvbXMgb2YgY2hlc3QgcGFpbiBhbmQgc2hvcnRuZXNzIG9mIGJyZWF0aC4gQSBDVCBUaG9yYXggQWJkb21lbiBQZWx2aXMgd2l0aCBDb250cmFzdCB3YXMgb3JkZXJlZCB0byBldmFsdWF0ZSBmb3IgcG9zc2libGUgcHVsbW9uYXJ5IGVtYm9saXNtLCBwbmV1bW9uaWEsIGFuZC9vciBhYmRvbWluYWwgcGF0aG9sb2d5LiBQcm9jZWR1cmU6IFRoZSBwYXRpZW50IHdhcyBhZG1pbmlzdGVyZWQgMTIwIG1MIG9mIG5vbi1pb25pYyBjb250cmFzdCBhZ2VudCBpbnRyYXZlbm91c2x5IGFuZCB1bmRlcndlbnQgYSBDVCBzY2FuIG9mIHRoZSB0aG9yYXgsIGFiZG9tZW4sIGFuZCBwZWx2aXMgdXNpbmcgYSA2NC1zbGljZSBDVCBzY2FubmVyLiBGaW5kaW5nczogVGhlIENUIHNjYW4gcmV2ZWFsZWQgdGhlIGZvbGxvd2luZyBmaW5kaW5nczogVGhlIHRob3JheDogTm8gZXZpZGVuY2Ugb2YgcHVsbW9uYXJ5IGVtYm9saXNtIG9yIHBuZXVtb25pYSB3YXMgc2Vlbi4gVGhlIGx1bmdzIHdlcmUgY2xlYXIsIHdpdGggbm8gZXZpZGVuY2Ugb2YgY29uc29saWRhdGlvbiBvciBlZmZ1c2lvbi4gVGhlIGFiZG9tZW46IFRoZSBsaXZlciwgc3BsZWVuLCBhbmQga2lkbmV5cyB3ZXJlIG5vcm1hbCBpbiBzaXplIGFuZCBzaGFwZS4gVGhlIHBhbmNyZWFzIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgcGFuY3JlYXRpdGlzIG9yIHBhbmNyZWF0aWMgbWFzcy4gVGhlIHNtYWxsIGJvd2VsIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2Ygb2JzdHJ1Y3Rpb24gb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuIFRoZSBsYXJnZSBib3dlbCB3YXMgbm9ybWFsLCB3aXRoIG5vIGV2aWRlbmNlIG9mIGRpdmVydGljdWxpdGlzIG9yIGluZmxhbW1hdG9yeSBjaGFuZ2VzLiBUaGUgcGVsdmlzOiBUaGUgcGVsdmlzIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgZnJhY3R1cmUgb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuIENvbnRyYXN0IEVuaGFuY2VtZW50OiBUaGUgY29udHJhc3QgYWdlbnQgZW5oYW5jZWQgdGhlIHZpc3VhbGl6YXRpb24gb2YgdGhlIHZhc2N1bGFyIHN0cnVjdHVyZXMsIGluY2x1ZGluZyB0aGUgYW9ydGEsIHB1bG1vbmFyeSBhcnRlcmllcywgYW5kIHJlbmFsIGFydGVyaWVzLiBObyBldmlkZW5jZSBvZiB0aHJvbWJ1cyBvciBlbWJvbHVzIHdhcyBzZWVuIGluIHRoZSBwdWxtb25hcnkgYXJ0ZXJpZXMuIEltcHJlc3Npb246IEJhc2VkIG9uIHRoZSBDVCBUaG9yYXggQWJkb21lbiBQZWx2aXMgd2l0aCBDb250cmFzdCwgdGhlIGltcHJlc3Npb24gaXMgdGhhdCB0aGUgcGF0aWVudCBoYXMgbm8gZXZpZGVuY2Ugb2YgcHVsbW9uYXJ5IGVtYm9saXNtLCBwbmV1bW9uaWEsIG9yIGFiZG9taW5hbCBwYXRob2xvZ3kuIFRoZSBwYXRpZW50J3Mgc3ltcHRvbXMgYXJlIGxpa2VseSBkdWUgdG8gYW5vdGhlciBjYXVzZSwgYW5kIGZ1cnRoZXIgZXZhbHVhdGlvbiBpcyBuZWVkZWQgdG8gZGV0ZXJtaW5lIHRoZSB1bmRlcmx5aW5nIGRpYWdub3Npcy4gUmVjb21tZW5kYXRpb25zOiBDb250aW51ZSB3aXRoIGZ1cnRoZXIgZXZhbHVhdGlvbiBhbmQgbWFuYWdlbWVudCBhcyBkaXJlY3RlZCBieSB0aGUgcGF0aWVudCdzIHByaW1hcnkgY2FyZSBwaHlzaWNpYW4uIENvbnNpZGVyIGZ1cnRoZXIgaW1hZ2luZyBzdHVkaWVzLCBzdWNoIGFzIGEgdmVudGlsYXRpb24tcGVyZnVzaW9uIHNjYW4gb3IgYSBwdWxtb25hcnkgZnVuY3Rpb24gdGVzdCwgdG8gZnVydGhlciBldmFsdWF0ZSBmb3IgcHVsbW9uYXJ5IGVtYm9saXNtLiBTaWduYXR1cmU6IERyIFkgWA=="
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "433761009",
+          "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        }
+      ],
+      "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+    }
+  }

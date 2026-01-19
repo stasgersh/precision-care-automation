@@ -1,0 +1,22 @@
+{
+  "name": "valid-allergy-verification-status-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "valid-allergy-verification-status-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+          "concept": [
+            {
+              "code": "confirmed"
+            },
+            {
+              "code": "unconfirmed"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

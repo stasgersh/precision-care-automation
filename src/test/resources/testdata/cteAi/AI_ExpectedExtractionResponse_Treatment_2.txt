@@ -1,0 +1,2 @@
+| Eligibility_Key | Expected_Matched_Keywords |
+| Previous treatment with taxane-based chemotherapy | inclusion,criterion,requires,evidence,previous,treatment,taxane-based,chemotherapy,document,absence,documentation,impossible,evidence,unknown |

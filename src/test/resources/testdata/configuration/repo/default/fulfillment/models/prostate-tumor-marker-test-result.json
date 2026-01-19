@@ -1,0 +1,163 @@
+{
+  "configType": "entity",
+  "classId": "prostateTumorMarkerTestResult",
+  "definitions": [
+    {
+      "resourceType": "Observation",
+      "filters": [
+        {
+          "type": "terminology",
+          "conditions": [
+            {
+              "path": "$.code",
+              "include": "prostate-tumor-marker-test-vs"
+            }
+          ]
+        }
+      ],
+      "date": [
+        {
+          "source": {
+            "path": "$.effectivePeriod"
+          },
+          "processor": "periodDateText"
+        },
+        {
+          "source": {
+            "path": "$.effectiveDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.issued"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "value",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.valueCodeableConcept"
+              },
+              "processor": "codeableConceptText"
+            },
+            {
+              "source": {
+                "path": "$.valueString"
+              }
+            },
+            {
+              "source": {
+                "path": "$.valueQuantity"
+              },
+              "processor": "quantityText"
+            },
+            {
+              "source": {
+                "path": "$.valueInteger"
+              }
+            }
+          ]
+        },
+        {
+          "key": "referenceRange",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.referenceRange[*]"
+              }
+            }
+          ]
+        },
+        {
+          "key": "trendKey",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$"
+              },
+              "processor": "trendKey"
+            }
+          ]
+        },
+        {
+          "key": "valueQuantity",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$",
+                "attributes": [
+                  {
+                    "key": "unit",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.unit"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "system",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.system"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "code",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.code"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "value",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.valueQuantity.value"
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$.valueInteger"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "postProcessing": {
+    "subclasses": [
+      {
+        "subclassId": "oncoContext",
+        "filters": []
+      }
+    ]
+  }
+}

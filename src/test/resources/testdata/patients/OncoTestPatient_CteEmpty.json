@@ -1,0 +1,46 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/e0e1117e-8470-462b-b3f7-a5adc78ece44",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "e0e1117e-8470-462b-b3f7-a5adc78ece44",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "CteEmpty"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "111-987-1234",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1992-07-22",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

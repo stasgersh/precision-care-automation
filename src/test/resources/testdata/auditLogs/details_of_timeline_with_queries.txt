@@ -1,0 +1,1 @@
+patient data successfully accessed by fulfillment client for timeline.onco.extended. Queries: \[(.*)\]

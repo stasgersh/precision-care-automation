@@ -1,0 +1,692 @@
+[
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "820144aa-3d56-4bdf-955d-c8058d6698dc",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "2951-2",
+            "display": "Sodium [Moles/volume] in Serum or Plasma"
+          }
+        ],
+        "text": "Na"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 142,
+        "unit": "mEq/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mEq/L"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 135,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          },
+          "high": {
+            "value": 145,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "acf4afe0-8a59-4333-866b-1b08a43fd4af",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "2823-3",
+            "display": "Potassium [Moles/volume] in Serum or Plasma"
+          }
+        ],
+        "text": "Potassium"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 4,
+        "unit": "mEq/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mEq/L"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 3.5,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          },
+          "high": {
+            "value": 5.2,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "399e0616-25b8-490b-9041-a5560713f01c",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "2075-0",
+            "display": "Chloride [Moles/volume] in Serum or Plasma"
+          }
+        ],
+        "text": "Chloride"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 102,
+        "unit": "mEq/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mEq/L"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 96,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          },
+          "high": {
+            "value": 106,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "bdf35a74-8946-4800-8003-7ab9bc7174e2",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "3094-0",
+            "display": "Urea nitrogen [Mass/volume] in Serum or Plasma"
+          }
+        ],
+        "text": "BUN"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 15,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 6,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL"
+          },
+          "high": {
+            "value": 24,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "261c93c3-e55c-473a-8ad5-6eeeeb79e51e",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "2028-9",
+            "display": "Carbon dioxide"
+          }
+        ],
+        "text": "CO2"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 25,
+        "unit": "mEq/L",
+        "system": "http://unitsofmeasure.org",
+        "code": "mEq/L"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 23,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          },
+          "high": {
+            "value": 29,
+            "unit": "mEq/L",
+            "system": "http://unitsofmeasure.org",
+            "code": "mEq/L"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "id": "96a4f4fb-bddd-4460-a5a8-b4356dff8fec",
+      "resourceType": "Observation",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma"
+          }
+        ],
+        "text": "Creatinine"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 1,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 0.6,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL"
+          },
+          "high": {
+            "value": 1.3,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "552d5562-0ca4-4777-9d62-66d8dbd121cb",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+            "code": "1510655",
+            "display": "Glucose"
+          }
+        ],
+        "text": "Glucose"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 65,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 0,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL"
+          },
+          "high": {
+            "value": 100,
+            "unit": "mg/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg/dL"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "aa1487b0-8d0d-43c5-ae7f-d64d59b3c0ec",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "6690-2",
+            "display": "Leukocytes [#/volume] in Blood by Automated count"
+          }
+        ],
+        "text": "Auto WBC"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 5,
+        "unit": "10^3/mL",
+        "system": "http://unitsofmeasure.org",
+        "code": "10^3/mL"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 4.5,
+            "unit": "10^3/mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "10^3/mL"
+          },
+          "high": {
+            "value": 11,
+            "unit": "10^3/mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "10^3/mL"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "97f2f5cf-9811-4b02-9b4d-2689cc1c2dde",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "718-7",
+            "display": "Hemoglobin [Mass/volume] in Blood"
+          }
+        ],
+        "text": "Hgb"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 15,
+        "unit": "g/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "g/dL"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 12,
+            "unit": "g/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "g/dL"
+          },
+          "high": {
+            "value": 17.5,
+            "unit": "g/dL",
+            "system": "http://unitsofmeasure.org",
+            "code": "g/dL"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "f5740855-887e-42e9-9a74-b10e4d9f4859",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "Laboratory"
+            }
+          ],
+          "text": "Laboratory"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "4544-3",
+            "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+          }
+        ],
+        "text": "HCT"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 45,
+        "unit": "%",
+        "system": "http://unitsofmeasure.org",
+        "code": "%"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 36,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          },
+          "high": {
+            "value": 54,
+            "unit": "%",
+            "system": "http://unitsofmeasure.org",
+            "code": "%"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "Observation",
+      "id": "498f3f20-9a14-44c0-a11f-b7825f07005b",
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "laboratory",
+              "display": "laboratory"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "13056-7",
+            "display": "Platelets [#/volume] in Plasma by Automated count"
+          }
+        ],
+        "text": "Plt"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "valueQuantity": {
+        "value": 267,
+        "unit": "10*3/uL",
+        "system": "http://unitsofmeasure.org",
+        "code": "10*3/uL"
+      },
+      "referenceRange": [
+        {
+          "low": {
+            "value": 150,
+            "unit": "10*3/uL",
+            "system": "http://unitsofmeasure.org",
+            "code": "10*3/uL"
+          },
+          "high": {
+            "value": 450,
+            "unit": "10*3/uL",
+            "system": "http://unitsofmeasure.org",
+            "code": "10*3/uL"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "fb5975ae-1542-48fb-877d-f19a5882cb21",
+      "identifier": [
+        {
+          "use": "official",
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "PLAC",
+                "display": "Placer Identifier"
+              }
+            ],
+            "text": "Placer Identifier"
+          },
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+          "value": "794472"
+        }
+      ],
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+              "code": "Lab"
+            }
+          ],
+          "text": "Lab"
+        },
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+              "code": "LAB",
+              "display": "Laboratory"
+            }
+          ],
+          "text": "Laboratory"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.6.12",
+            "code": "80048",
+            "display": "CHG BASIC METABOLIC PANEL CALCIUM TOTAL"
+          }
+        ],
+        "text": "Basic metabolic panel"
+      },
+      "subject": {
+        "reference": "Patient/a001cdff-d9ca-41fa-rem1-a2222340a000"
+      },
+      "effectiveDateTime": "2016-04-18T14:00:00Z",
+      "issued": "2016-04-18T14:00:00Z",
+      "result": [
+        {
+          "reference": "Observation/820144aa-3d56-4bdf-955d-c8058d6698dc",
+          "display": "Component (1): SODIUM (MMOL/L) IN SER/PLAS"
+        },
+        {
+          "reference": "Observation/acf4afe0-8a59-4333-866b-1b08a43fd4af",
+          "display": "Component (1): POTASSIUM (MMOL/L) IN SER/PLAS"
+        },
+        {
+          "reference": "Observation/399e0616-25b8-490b-9041-a5560713f01c",
+          "display": "Component (1): CHLORIDE (MMOL/L) IN SER/PLAS"
+        },
+        {
+          "reference": "Observation/bdf35a74-8946-4800-8003-7ab9bc7174e2",
+          "display": "Component (1): UREA NITROGEN (MG/DL) IN SER/PLAS"
+        },
+        {
+          "reference": "Observation/261c93c3-e55c-473a-8ad5-6eeeeb79e51e",
+          "display": "Component (1): Carbon Dioxid (MG/DL) IN SER/PLAS"
+        },
+        {
+          "reference": "Observation/552d5562-0ca4-4777-9d62-66d8dbd121cb",
+          "display": "Component (1): GLUCOSE"
+        },
+        {
+          "reference": "Observation/96a4f4fb-bddd-4460-a5a8-b4356dff8fec",
+          "display": "Component (1): CREATININE (MG/DL) IN SER/PLAS"
+        }
+      ]
+    },
+    "fullUrl": "DiagnosticReport/fb5975ae-1542-48fb-877d-f19a5882cb21",
+    "request": {
+      "method": "PUT",
+      "url": "DiagnosticReport/fb5975ae-1542-48fb-877d-f19a5882cb21"
+    }
+  }
+]

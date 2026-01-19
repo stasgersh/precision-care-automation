@@ -1,0 +1,10 @@
+{
+  "queries": [
+    {
+      "alias": "testPatient",
+      "query": {
+        "kuku": "testPatient"
+      }
+    }
+  ]
+}

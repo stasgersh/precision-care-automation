@@ -1,0 +1,566 @@
+{
+  "configType": "entity",
+  "classId": "document",
+  "description": "Generic document entity for collecting all referenced resources of progressive summarization",
+  "definitions": [
+    {
+      "resourceType": "DiagnosticReport",
+      "date": [
+        {
+          "source": {
+            "path": "$.effectivePeriod"
+          },
+          "processor": "periodDateText"
+        },
+        {
+          "source": {
+            "path": "$.effectiveDateTime"
+          }
+        },
+        {
+          "source": {
+            "path": "$.issued"
+          }
+        }
+      ],
+      "attributes": [
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              }
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.code"
+              },
+              "processor": "codeableConceptText"
+            },
+            {
+              "source": {
+                "path": "$.presentedForm[*].title"
+              }
+            },
+            {
+              "source": {
+                "path": "$.category"
+              },
+              "processor": "codeableConceptText"
+            }
+          ]
+        },
+        {
+          "key": "status",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.status"
+              }
+            }
+          ]
+        },
+        {
+          "key": "reportContent",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.presentedForm[?(@.contentType =~ \"^text\\/html\" & @.data)]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.data"
+                        },
+                        "processor": "base64BinaryText"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "source": {
+                "path": "$.presentedForm[?(@.contentType =~ \"^text\\/plain\" & @.data)]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.data"
+                        },
+                        "processor": "base64BinaryText"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "source": {
+                "path": "$.presentedForm[?(@.url =~ \"^Binary\" & @.contentType =~ \"^text\\/html\")]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.url",
+                          "refersTo": {
+                            "resourceType": "Binary",
+                            "source": {
+                              "path": "$.data"
+                            },
+                            "processor": "base64BinaryText"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "source": {
+                "path": "$.presentedForm[?(@.url =~ \"^Binary\" & @.contentType =~ \"^text\\/plain\")]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.url",
+                          "refersTo": {
+                            "resourceType": "Binary",
+                            "source": {
+                              "path": "$.data"
+                            },
+                            "processor": "base64BinaryText"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "pdf",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.presentedForm[?(@.contentType =~ \"^application\\/pdf\" & @.data)].data"
+              }
+            },
+            {
+              "source": {
+                "path": "$.presentedForm[?(@.url =~ \"^Binary\" & @.contentType =~ \"^application\\/pdf\")].url",
+                "refersTo": {
+                  "resourceType": "Binary",
+                  "source": {
+                    "path": "$.data"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "date": [
+        {
+          "source": {
+            "path": "$.date"
+          }
+        },
+        {
+          "source": {
+            "path": "$.context.period"
+          },
+          "processor": "periodDateText"
+        }
+      ],
+      "attributes": [
+        {
+          "key": "code",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.type"
+              }
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.type"
+              },
+              "processor": "codeableConceptText"
+            },
+            {
+              "source": {
+                "path": "$.content[*].attachment.title"
+              }
+            },
+            {
+              "source": {
+                "path": "$.category"
+              },
+              "processor": "codeableConceptText"
+            }
+          ]
+        },
+        {
+          "key": "status",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.docStatus"
+              }
+            },
+			{
+              "source": {
+                "path": "$.status"
+              }
+            }
+          ]
+        },
+        {
+          "key": "author",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.author",
+                "attributes": [
+                  {
+                    "key": "name",
+                    "required": true,
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.practitioner",
+                              "refersTo": {
+                                "resourceType": "Practitioner",
+                                "source": {
+                                  "path": "$.name"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "Practitioner",
+                            "source": {
+                              "path": "$.name"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "role",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.code"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "specialty",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.specialty"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "organization",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$",
+                          "refersTo": {
+                            "resourceType": "PractitionerRole",
+                            "source": {
+                              "path": "$.organization",
+                              "refersTo": {
+                                "resourceType": "Organization",
+                                "attributes": [
+                                  {
+                                    "key": "fhirId",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.id"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "name",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.name"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "key": "identifier",
+                                    "valueExtraction": [
+                                      {
+                                        "source": {
+                                          "path": "$.identifier"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "reportContent",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.content[?(@.attachment.contentType =~ \"^text\\/html\" & @.attachment.data)]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.data"
+                        },
+                        "processor": "base64BinaryText"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "source": {
+                "path": "$.content[?(@.attachment.contentType =~ \"^text\\/plain\" & @.attachment.data)]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.data"
+                        },
+                        "processor": "base64BinaryText"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "source": {
+                "path": "$.content[?(@.attachment.url =~ \"^Binary\" & @.attachment.contentType =~ \"^text\\/html\")]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.url",
+                          "refersTo": {
+                            "resourceType": "Binary",
+                            "source": {
+                              "path": "$.data"
+                            },
+                            "processor": "base64BinaryText"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "source": {
+                "path": "$.content[?(@.attachment.url =~ \"^Binary\" & @.attachment.contentType =~ \"^text\\/plain\")]",
+                "attributes": [
+                  {
+                    "key": "content",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.url",
+                          "refersTo": {
+                            "resourceType": "Binary",
+                            "source": {
+                              "path": "$.data"
+                            },
+                            "processor": "base64BinaryText"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "key": "title",
+                    "valueExtraction": [
+                      {
+                        "source": {
+                          "path": "$.attachment.title"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "pdf",
+          "valueExtraction": [
+            {
+              "source": {
+                "path": "$.content[?(@.attachment.contentType =~ \"^application\\/pdf\" & @.attachment.data)].attachment.data"
+              }
+            },
+            {
+              "source": {
+                "path": "$.content[?(@.attachment.url =~ \"^Binary\" & @.attachment.contentType =~ \"^application\\/pdf\")].attachment.url",
+                "refersTo": {
+                  "resourceType": "Binary",
+                  "source": {
+                    "path": "$.data"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

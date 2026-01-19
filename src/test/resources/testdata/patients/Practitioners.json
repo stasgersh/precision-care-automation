@@ -1,0 +1,132 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "9fe5f5cb-11b1-4c7c-aa88-a68a64460c0c",
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "9898989989"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Janet",
+            "given": [
+              "Fraiser"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Fraiser.Janet@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "101 CAMBRIDGE ST"
+            ],
+            "city": "BURLINGTON",
+            "state": "MA",
+            "postalCode": "01803-3768",
+            "country": "US"
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "08108467-0d68-4c9d-bffd-69f68da8529c",
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "5872694371"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Fisher429",
+            "given": [
+              "Lesley194"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "Lesley194.Fisher429@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "101 CAMBRIDGE ST"
+            ],
+            "city": "BURLINGTON",
+            "state": "MA",
+            "postalCode": "01803-3768",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "7491df04-2beb-4ab1-9192-df8f19537047",
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "458796123"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Physician Family Medicine",
+            "given": [
+              "MD"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "pfm.md@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "101 CAMBRIDGE ST"
+            ],
+            "city": "BURLINGTON",
+            "state": "MA",
+            "postalCode": "01803-3768",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      }
+    }
+  ]
+}

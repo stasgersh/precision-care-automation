@@ -1,0 +1,354 @@
+{
+  "name": "pet-imaging-procedure-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "pet-imaging-procedure-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "concept": [
+            {
+              "code": "78431",
+              "display": "Myocardial imaging, positron emission tomography (PET), perfusion study (including ventricular wall motion[s] and/or ejection fraction[s], when performed); multiple studies at rest and stress (exercise or pharmacologic), with concurrently acquired computed tomography transmission scan"
+            },
+            {
+              "code": "78434",
+              "display": "Absolute quantitation of myocardial blood flow (AQMBF), positron emission tomography (PET), rest and pharmacologic stress (List separately in addition to code for primary procedure)"
+            },
+            {
+              "code": "78608",
+              "display": "Brain imaging, positron emission tomography (PET); metabolic evaluation"
+            },
+            {
+              "code": "78609",
+              "display": "Brain imaging, positron emission tomography (PET); perfusion evaluation"
+            },
+            {
+              "code": "78432",
+              "display": "Myocardial imaging, positron emission tomography (PET), combined perfusion with metabolic evaluation study (including ventricular wall motion[s] and/or ejection fraction[s], when performed), dual radiotracer (eg, myocardial viability)"
+            },
+            {
+              "code": "78433",
+              "display": "Myocardial imaging, positron emission tomography (PET), combined perfusion with metabolic evaluation study (including ventricular wall motion[s] and/or ejection fraction[s], when performed), dual radiotracer (eg, myocardial viability); with concurrently acquired computed tomography transmission scan"
+            },
+            {
+              "code": "78459",
+              "display": "Myocardial imaging, positron emission tomography (PET), metabolic evaluation study (including ventricular wall motion[s] and/or ejection fraction[s], when performed), single study"
+            },
+            {
+              "code": "78429",
+              "display": "Myocardial imaging, positron emission tomography (PET), metabolic evaluation study (including ventricular wall motion[s] and/or ejection fraction[s], when performed), single study; with concurrently acquired computed tomography transmission scan"
+            },
+            {
+              "code": "78492",
+              "display": "Myocardial imaging, positron emission tomography (PET), perfusion study (including ventricular wall motion[s] and/or ejection fraction[s], when performed); multiple studies at rest and stress (exercise or pharmacologic)"
+            },
+            {
+              "code": "78491",
+              "display": "Myocardial imaging, positron emission tomography (PET), perfusion study (including ventricular wall motion[s] and/or ejection fraction[s], when performed); single study, at rest or stress (exercise or pharmacologic)"
+            },
+            {
+              "code": "78430",
+              "display": "Myocardial imaging, positron emission tomography (PET), perfusion study (including ventricular wall motion[s] and/or ejection fraction[s], when performed); single study, at rest or stress (exercise or pharmacologic), with concurrently acquired computed tomography transmission scan"
+            },
+            {
+              "code": "78811",
+              "display": "Positron emission tomography (PET) imaging; limited area (eg, chest, head/neck)"
+            },
+            {
+              "code": "78812",
+              "display": "Positron emission tomography (PET) imaging; skull base to mid-thigh"
+            },
+            {
+              "code": "78813",
+              "display": "Positron emission tomography (PET) imaging; whole body"
+            },
+            {
+              "code": "78814",
+              "display": "Positron emission tomography (PET) with concurrently acquired computed tomography (CT) for attenuation correction and anatomical localization imaging; limited area (eg, chest, head/neck)"
+            },
+            {
+              "code": "78815",
+              "display": "Positron emission tomography (PET) with concurrently acquired computed tomography (CT) for attenuation correction and anatomical localization imaging; skull base to mid-thigh"
+            },
+            {
+              "code": "78816",
+              "display": "Positron emission tomography (PET) with concurrently acquired computed tomography (CT) for attenuation correction and anatomical localization imaging; whole body"
+            },
+            {
+              "code": "72202",
+              "display": "Radiologic examination, sacroiliac joints; 3 or more views"
+            },
+            {
+              "code": "76100",
+              "display": "Radiologic examination, single plane body section (eg, tomography), other than with urography"
+            }
+          ]
+        },
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "87905-6",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV:Find:Pt:Head+Neck:Doc:PT+CT"
+            },
+            {
+              "code": "81554-8",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV:Find:Pt:Whole body>Skull base to mid-thigh:Doc:PT+CT"
+            },
+            {
+              "code": "82806-1",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV+W contrast IV:Find:Pt:Whole body:Doc:PT+CT"
+            },
+            {
+              "code": "82809-5",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV+W contrast IV:Find:Pt:Whole body>Skull base to mid-thigh:Doc:PT+CT"
+            },
+            {
+              "code": "87915-5",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV+W Contrast IV:Find:Pt:Whole body>Skull vertex to mid-thigh:Doc:PT+CT"
+            },
+            {
+              "code": "82805-3",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV+WO Contrast:Find:Pt:Whole body:Doc:PT+CT"
+            },
+            {
+              "code": "82808-7",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV+WO Contrast:Find:Pt:Whole body>Skull base to mid-thigh:Doc:PT+CT"
+            },
+            {
+              "code": "82807-9",
+              "display": "Guidance for localization of tumor^W 18F-FDG IV+WO Contrast:Find:Pt:Whole body>Skull vertex to mid-thigh:Doc:PT+CT"
+            },
+            {
+              "code": "82126-4",
+              "display": "Guidance for radiation treatment:Find:Pt:XXX:Doc:PT"
+            },
+            {
+              "code": "81553-0",
+              "display": "Guidance limited for localization of tumor^W 18F-FDG IV:Find:Pt:XXX:Doc:PT+CT"
+            },
+            {
+              "code": "89712-4",
+              "display": "Guidance limited for localization of tumor^W 18F-FDG IV+W contrast IV:Find:Pt:XXX:Doc:PT+CT"
+            },
+            {
+              "code": "81577-9",
+              "display": "Multisection for amyloidosis^W radionuclide IV:Find:Pt:Head>Brain:Doc:PT"
+            },
+            {
+              "code": "87907-2",
+              "display": "Multisection for amyloidosis^W radionuclide IV:Find:Pt:Head>Brain:Doc:PT+CT"
+            },
+            {
+              "code": "81564-7",
+              "display": "Multisection for sarcoidosis^W radionuclide IV:Find:Pt:Chest>Heart:Doc:PT"
+            },
+            {
+              "code": "81565-4",
+              "display": "Multisection for tissue viability^W radionuclide IV:Find:Pt:Chest>Heart:Doc:PT"
+            },
+            {
+              "code": "81559-7",
+              "display": "Multisection limited for simulation^W radionuclide IV:Find:Pt:XXX:Doc:PT+CT"
+            },
+            {
+              "code": "81578-7",
+              "display": "Multisection metabolic^W radionuclide IV:Find:Pt:Head>Brain:Doc:PT"
+            },
+            {
+              "code": "86976-8",
+              "display": "Multisection metabolic^W radionuclide IV:Find:Pt:Head>Brain:Doc:PT+CT"
+            },
+            {
+              "code": "81552-2",
+              "display": "Multisection^W 18F-NaF IV:Find:Pt:Whole body>Bone:Doc:PT+CT"
+            },
+            {
+              "code": "81551-4",
+              "display": "Multisection^W 18F-NaF IV:Find:Pt:Whole body>Skull base to mid-thigh.bone:Doc:PT+CT"
+            },
+            {
+              "code": "81568-8",
+              "display": "Multisection^W multiple states of exercise:Find:Pt:Chest>Heart:Doc:PT.perfusion"
+            },
+            {
+              "code": "57823-7",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Chest>Esophagus:Doc:PT"
+            },
+            {
+              "code": "44137-8",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Chest>Heart:Doc:PT"
+            },
+            {
+              "code": "57822-9",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Chest>Lung:Doc:PT"
+            },
+            {
+              "code": "58742-8",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Head+Neck:Doc:PT"
+            },
+            {
+              "code": "44138-6",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Head>Brain:Doc:PT"
+            },
+            {
+              "code": "81579-5",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Head>Brain:Doc:PT.perfusion"
+            },
+            {
+              "code": "98033-4",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Lower extremity:Doc:PT+CT"
+            },
+            {
+              "code": "44139-4",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Whole body:Doc:PT"
+            },
+            {
+              "code": "58741-0",
+              "display": "Multisection^W radionuclide IV:Find:Pt:Whole body>Skull base to mid-thigh:Doc:PT"
+            },
+            {
+              "code": "44136-0",
+              "display": "Multisection^W radionuclide IV:Find:Pt:XXX:Doc:PT"
+            },
+            {
+              "code": "82800-4",
+              "display": "Multisection^W radionuclide IV+W contrast IV:Find:Pt:Chest>Heart:Doc:PT+CT"
+            },
+            {
+              "code": "82801-2",
+              "display": "Multisection^W radionuclide IV+WO contrast:Find:Pt:Chest>Heart:Doc:PT+CT"
+            },
+            {
+              "code": "81569-6",
+              "display": "Multisection^W single state of exercise:Find:Pt:Chest>Heart:Doc:PT.perfusion"
+            }
+          ]
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "416323006",
+              "display": "PET breast study"
+            },
+            {
+              "code": "241439007",
+              "display": "PET heart study"
+            },
+            {
+              "code": "241440009",
+              "display": "PET myocardial glucose metabolism study"
+            },
+            {
+              "code": "16545811000119100",
+              "display": "PET myocardial metabolism study"
+            },
+            {
+              "code": "788424007",
+              "display": "PET myocardial rest imaging using rubidium-82"
+            },
+            {
+              "code": "241441008",
+              "display": "PET myocardial rest study using N13 ammonia"
+            },
+            {
+              "code": "788433009",
+              "display": "PET myocardial stress imaging using rubidium-82"
+            },
+            {
+              "code": "241442001",
+              "display": "PET myocardial stress study using N13 ammonia"
+            },
+            {
+              "code": "241443006",
+              "display": "PET study for localization of tumor"
+            },
+            {
+              "code": "241444000",
+              "display": "PET study for tumor uptake of glucose"
+            },
+            {
+              "code": "241445004",
+              "display": "PET study for tumor uptake of methionine"
+            },
+            {
+              "code": "82918005",
+              "display": "Positron emission tomography"
+            },
+            {
+              "code": "431228007",
+              "display": "Positron emission tomography carbon 11 choline uptake study"
+            },
+            {
+              "code": "434267000",
+              "display": "Positron emission tomography electrocardiography gated myocardial rest study using fluorodeoxyglucose"
+            },
+            {
+              "code": "432943001",
+              "display": "Positron emission tomography electrocardiography gated myocardial rest study using N13 ammonia"
+            },
+            {
+              "code": "431541005",
+              "display": "Positron emission tomography fluorine 18 choline uptake study"
+            },
+            {
+              "code": "432675001",
+              "display": "Positron emission tomography fluorodeoxyglucose imaging of whole body"
+            },
+            {
+              "code": "432026001",
+              "display": "Positron emission tomography myocardial rest imaging using fluorodeoxyglucose"
+            },
+            {
+              "code": "764666002",
+              "display": "Positron emission tomography of brain"
+            },
+            {
+              "code": "764672002",
+              "display": "Positron emission tomography of brain using Fluorocholine (18-F)"
+            },
+            {
+              "code": "764660008",
+              "display": "Positron emission tomography of brain using fluorodeoxyglucose (18-F)"
+            },
+            {
+              "code": "764667006",
+              "display": "Positron emission tomography of brain using fluorodopa (18-F)"
+            },
+            {
+              "code": "433227008",
+              "display": "Positron emission tomography of heart for cardiac viability using fluorodeoxyglucose"
+            },
+            {
+              "code": "702767007",
+              "display": "Positron emission tomography of whole body"
+            },
+            {
+              "code": "764685004",
+              "display": "Positron emission tomography of whole body using choline C-11"
+            },
+            {
+              "code": "764691002",
+              "display": "Positron emission tomography of whole body using fluorocholine (18-F)"
+            },
+            {
+              "code": "764695006",
+              "display": "Positron emission tomography of whole body using gallium (68-Ga) dotatate"
+            },
+            {
+              "code": "764701000",
+              "display": "Positron emission tomography of whole body using methionine C-11"
+            },
+            {
+              "code": "764709003",
+              "display": "Positron emission tomography using methionine C-11"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

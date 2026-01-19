@@ -1,0 +1,44 @@
+{
+  "name": "oncology-practice-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-practice-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "394592004",
+              "display": "Clinical oncology"
+            },
+            {
+              "code": "408446006",
+              "display": "Gynecological oncology"
+            },
+            {
+              "code": "394593009",
+              "display": "Medical oncology"
+            },
+            {
+              "code": "418002000",
+              "display": "Pediatric oncology"
+            },
+            {
+              "code": "419815003",
+              "display": "Radiation oncology"
+            },
+            {
+              "code": "419321007",
+              "display": "Surgical oncology"
+            },
+            {
+              "code": "419043006",
+              "display": "Urological oncology"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "Patient",
+  "id": "95e74bbb-be19-4d1d-a10b-b5d2d84eb602",
+  "name": [
+    {
+      "use": "official",
+      "family": "TEST_PS",
+      "given": [
+        "Charles"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1972-08-01"
+}

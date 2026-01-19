@@ -1,0 +1,787 @@
+{
+  "id": "${id}",
+  "type": "custom",
+  "metadata": {
+    "name": "Study to Evaluate the Safety and Tolerability of CC-94676 in Participants With Metastatic Castration-Resistant Prostate Cancer",
+    "description": "The purpose of this study is to assess the safety, tolerability and preliminary efficacy of CC-94676 in men with progressive metastatic castration resistant prostate cancer.",
+    "status": "Recruiting",
+    "phase": "1",
+    "link": "https://clinicaltrials.gov/study/NCT04428788?a=23"
+  },
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's date of birth",
+      "value": null
+    },
+    {
+      "id": "gender",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.gender"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's gender",
+      "value": null
+    },
+    {
+      "id": "ecog",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ECOG",
+              "query": {
+                "from": "ecog",
+                "show": [
+                  "attributes.value"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's ecog"
+    },
+    {
+      "id": "histologically",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "pathologyReportAlias",
+              "query": {
+                "from": "pathologyReport",
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.nlpFindings.histologicType.value": {
+                        "eq": "ADENOCARCINOMA"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's histologic type"
+    },
+    {
+      "id": "comorbidity",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ComorbidityAlias",
+              "query": {
+                "show": [
+                  "attributes.date"
+                ],
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "Thromboembolism"
+                      }
+                    }
+                  ]
+                },
+                "from": "comorbidity"
+              }
+            }
+          ]
+        },
+        "ai": null
+      },
+      "display": "Patient's comorbidity",
+      "value": null
+    },
+    {
+      "id": "primary_cancer_type",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "primaryCancerDiseaseAlias",
+              "query": {
+                "from": "primaryCancerDisease"
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's primary cancer types"
+    },
+    {
+      "id": "ADT",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "ADT",
+              "query": {
+                "from": "medication",
+                "show": [
+                  "attributes.code"
+                ],
+                "limit": 1,
+                "filter": {
+                  "must": [
+                    {
+                      "attributes.code.$coding.display": {
+                        "eq": "leuprolide"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's ADT med"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "criteria_age",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "dob"
+        ]
+      },
+      "display": "Age >= 18 years",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "dob",
+              "display": null,
+              "value": null,
+              "expression": "exists(variables.dob) == `false`",
+              "metadata": {
+                "description": "dob is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[]|[0]"
+              }
+            }
+          ],
+          "expression": "dob"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isAgeGt18",
+              "display": "Age is greater than 18",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+              "metadata": {
+                "description": "Age is greater than 18",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.dob.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "isAgeGt18"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isAgeGt18",
+              "display": "[NOT_MET]: Age is greater than 18",
+              "value": null,
+              "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`) >= `18`",
+              "metadata": {
+                "description": "Age is greater than 18",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2024-08-07`,`years`,`int`)",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.dob.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "!(isAgeGt18)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_male",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "gender"
+        ]
+      },
+      "display": "Gender is male",
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "Gender is male",
+              "value": null,
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.gender.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "gender"
+        }
+      ]
+    },
+    {
+      "id": "ECOG_value",
+      "metadata": {
+        "type": "inclusion"
+      },
+      "display": "Eastern Cooperative Oncology Group (ECOG) performance status (PS) 0 or 1",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "isEcogValue",
+              "display": "ECOG value is missing ",
+              "expression": "timestamp()",
+              "metadata": {
+                "description": "ECOG value is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[].attributes.value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.ecog.class_name",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "isEcogValue"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isEcogValue",
+              "display": "ECOG value is missing ",
+              "expression": "parse_date()",
+              "metadata": {
+                "description": "ECOG value is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[].attributes.value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.ecog.class_name",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "isEcogValue"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "isEcogValue",
+              "display": "ECOG value is missing ",
+              "expression": "date_diff()",
+              "metadata": {
+                "description": "ECOG value is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[].attributes.value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.ecog.class_name",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "isEcogValue"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "EcogStatus",
+              "display": "ECOG status is 0 or 1",
+              "expression": "variables.ecog.value[].attributes.value|[0]<=`1`",
+              "metadata": {
+                "description": "ECOG status is 0 or 1",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[].value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.ecog.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "EcogStatus"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "EcogStatusNotMet",
+              "display": "ECOG status is not 0 or 1",
+              "expression": "variables.ecog.value[].attributes.value|[0]>`1`",
+              "metadata": {
+                "description": "ECOG status is not 0 or 1",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.ecog.value[].value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.ecog.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "!EcogStatusNotMet"
+        }
+      ]
+    },
+    {
+      "id": "criteria_histologically",
+      "metadata": {
+        "type": "inclusion"
+      },
+      "display": "must have histologically or cytologically confirmed adenocarcinoma of the prostate",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "ishistologically",
+              "display": "histologically type is missing ",
+              "expression": "exists(variables.histologically`)==`false`",
+              "metadata": {
+                "description": "histologically type is missing",
+                "usingAi": true
+              },
+              "extension": {
+                "displayValue": "variables.histologically.value[].attributes.nlpFindings.histologicType[]|[?contains(value, `ADENOCARCINOMA`)].value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.histologically.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "ishistologically"
+        },
+        {
+          "id": "LIKELY_MET",
+          "items": [
+            {
+              "id": "isProstaticAdenocarcinoma",
+              "display": "histologically type is prostatic adenocarcinoma",
+              "expression": "variables.histologically.value[].attributes.nlpFindings.histologicType[]|[?contains(value, `ADENOCARCINOMA`)]|length(@)>`0`",
+              "metadata": {
+                "description": "histologically type is prostatic adenocarcinoma",
+                "usingAi": true
+              },
+              "extension": {
+                "displayValue": "variables.histologically.value[].attributes.nlpFindings.histologicType[]|[?contains(value, `ADENOCARCINOMA`)].value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.histologically.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "isProstaticAdenocarcinoma"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "isNotProstaticAdenocarcinoma",
+              "display": "histologically type is not prostatic adenocarcinoma",
+              "expression": "variables.histologically.value[].attributes.nlpFindings.histologicType[]|[?contains(value, `ADENOCARCINOMA`)]|length(@)==`0`",
+              "metadata": {
+                "description": "histologically type is not prostatic adenocarcinoma",
+                "usingAi": true
+              },
+              "extension": {
+                "displayValue": "variables.histologically.value[].attributes.nlpFindings.histologicType[]|[?contains(value, `ADENOCARCINOMA`)].value|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.histologically.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "!isNotProstaticAdenocarcinoma"
+        }
+      ]
+    },
+    {
+      "id": "criteria_Comorbidity",
+      "metadata": {
+        "type": "exclusion"
+      },
+      "display": "Clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+      "states": [
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "Thromboembolism",
+              "display": "Clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+              "expression": "!(variables.comorbidity.value[].code.attributes.value[]|[?code.coding[? contains(display, `Thromboembolism`)]].date|[0]| [0]==`null` || delta(@, `2024-07-08`,`years`)>`0` || (delta(@, `2024-07-08`,`years`)==`0` && delta(@, `2024-07-08`,`months`)>`3`))",
+              "metadata": {
+                "description": "No clinically significant venous thromboembolism",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.comorbidity.value[]|[?code.coding[? contains(display, `Thromboembolism`)]].date|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.comorbidity.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "Thromboembolism"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "notThromboembolism",
+              "display": "Not clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+              "expression": "variables.comorbidity.value[].code.attributes.value[]|[?code.coding[? contains(display, `Thromboembolism`)]].date|[0]| [0]==`null` || delta(@, `2024-07-08`,`years`)>`0` || (delta(@, `2024-07-08`,`years`)==`0` && delta(@, `2024-07-08`,`months`)>`3`)",
+              "metadata": {
+                "description": "Clinically significant venous thromboembolism within 3 months prior to the first dose of IP",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.comorbidity.value[].code.attributes.value[]|[?code.coding[? contains(display, `Thromboembolism`)]].date|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.comorbidity.value[].code.attributes.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "notThromboembolism"
+        }
+      ]
+    },
+    {
+      "id": "criteria_male2",
+      "constants": null,
+      "metadata": {
+        "expressionRelation": null,
+        "type": "inclusion",
+        "dependency": [
+          "gender"
+        ]
+      },
+      "display": "Gender is male",
+      "states": [
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "criteria_male2",
+              "display": "Gender is male",
+              "value": null,
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.gender.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "criteria_male2"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "gender",
+              "display": "[NOT_MET]: Gender is male",
+              "value": null,
+              "expression": "variables.gender.value[].attributes.gender|[0]== `male`",
+              "metadata": {
+                "description": "Gender is male",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.gender.value[].attributes.gender|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.gender.class_name",
+                "sourceSummary": null,
+                "sourceFull": null,
+                "sourceEntityId": null,
+                "sourceEntityType": null,
+                "sourceVersion": null
+              }
+            }
+          ],
+          "expression": "!(gender)"
+        }
+      ]
+    },
+    {
+      "id": "criteria_ADT",
+      "metadata": {
+        "type": "inclusion"
+      },
+      "display": "Progressed on androgen deprivation therapy (ADT) and at least one prior secondary hormonal therapy approved for castration-resistant prostate cancer (CRPC)",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "isADT",
+              "display": "Androgen deprivation therapy is missing ",
+              "expression": "exists(variables.ADT`)==`false`",
+              "metadata": {
+                "description": "Androgen deprivation therapy is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.adt.value[].attributes.code.coding[].display|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.adt.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "isADT"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "ADT",
+              "display": "Progressed on androgen deprivation therapy",
+              "expression": "variables.adt.value[].attributes.code.coding[]|length([? contains(display, `leuprolide`)])>`0`",
+              "metadata": {
+                "description": "Progressed on androgen deprivation therapy",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.adt.value[].attributes.code.coding[].display|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.adt.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "ADT"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "notADT",
+              "display": "No androgen deprivation therapy",
+              "expression": "variables.adt.value[].attributes.code.coding[]|length([? contains(display, `leuprolide`)])==`0`",
+              "metadata": {
+                "description": "No androgen deprivation therapy",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": null,
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.adt.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "notADT"
+        }
+      ]
+    },
+    {
+      "id": "criteria_only_prostate_primary_cancer",
+      "metadata": {
+        "type": "exclusion"
+      },
+      "display": "Concurrent Malignancy (present during screening) requiring treatment or history of prior malignancy active within 1 year prior to the first dose of IP",
+      "states": [
+        {
+          "id": "MISSING",
+          "items": [
+            {
+              "id": "isCancerType",
+              "display": "Primary cancer disease type is missing ",
+              "expression": "exists(variables.primary_cancer_type`)==`false`",
+              "metadata": {
+                "description": "Primary cancer disease type is missing",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.primary_cancer_type.value[].code.attributes.coding[].display|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.primary_cancer_type.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "isCancerType"
+        },
+        {
+          "id": "MET",
+          "items": [
+            {
+              "id": "OnlyPrimaryProstateCancer",
+              "display": "Patient  doesn't have additional primary cancer diseases",
+              "expression": "variables.primary_cancer_type.value[].code.attributes.coding[]|length([?! contains(display, `prostate`)])==`0`",
+              "metadata": {
+                "description": "Patient  doesn't have additional primary cancer diseases",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.primary_cancer_type.value[].code.attributes.coding[].display|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.primary_cancer_type.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "(OnlyPrimaryProstateCancer)"
+        },
+        {
+          "id": "NOT_MET",
+          "items": [
+            {
+              "id": "notOnlyPrimaryProstateCancer",
+              "display": "Patient has additional primary cancer diseases",
+              "expression": "variables.value[].code.attributes.coding[]|length([?! contains(display, `prostate`)])>`0`",
+              "metadata": {
+                "description": "Patient has additional primary cancer diseases",
+                "usingAi": false
+              },
+              "extension": {
+                "displayValue": "variables.primary_cancer_type.value[].code.attributes.coding[].display|[0]",
+                "sourceAuthor": null,
+                "sourceDate": null,
+                "sourceTitle": "variables.primary_cancer_type.class_name|[0]",
+                "sourceSummary": null,
+                "sourcefull": null
+              }
+            }
+          ],
+          "expression": "notOnlyPrimaryProstateCancer"
+        }
+      ]
+    }
+  ]
+}

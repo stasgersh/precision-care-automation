@@ -1,0 +1,48 @@
+{
+  "name": "oncology-role-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-role-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "3430008",
+              "display": "Radiation therapist"
+            },
+            {
+              "code": "224552008",
+              "display": "Oncology nurse"
+            },
+            {
+              "code": "309295000",
+              "display": "Clinical oncologist"
+            },
+            {
+              "code": "309336000",
+              "display": "Pediatric oncologist"
+            },
+            {
+              "code": "309415001",
+              "display": "Oncology dietitian"
+            },
+            {
+              "code": "310512001",
+              "display": "Medical oncologist"
+            },
+            {
+              "code": "416186861000087101",
+              "display": "Surgical oncologist"
+            },
+            {
+              "code": "969118571000087109",
+              "display": "Pediatric hematologist or oncologist"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

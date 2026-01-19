@@ -1,0 +1,88 @@
+Alias: $loinc = http://loinc.org
+Alias: $sct = http://snomed.info/sct
+Alias: $us-core-documentreference-category = http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category
+Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+
+Instance: --PATIENT.ID.1--
+InstanceOf: Patient
+Usage: #inline
+* name.use = #official
+* name.family = "TEST_PS"
+* name.given = "SmartSch1"
+* gender = #male
+* birthDate = "1971-09-11"
+
+/**************************************************************
+ * DiagnosticReport before the cut date
+ * AI summary of this report is present in 'Brief history'
+ *************************************************************/
+Instance: --DIAGNOSTIC.REPORT.ID.1--
+InstanceOf: DiagnosticReport
+Usage: #inline
+* status = #final
+* category = $loinc#LP29684-5 "Radiology"
+* category.text = "Radiology"
+* subject = Reference(Patient/--PATIENT.ID.1--)
+* effectiveDateTime = "2005-08-08T16:31:51.000Z"
+* conclusion = "STABLE"
+* presentedForm.contentType = #text/plain
+* presentedForm.data = "Q1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3QKCkluZGljYXRpb246IFRoZSBwYXRpZW50IHByZXNlbnRlZCB3aXRoIHN5bXB0b21zIG9mIGNoZXN0IHBhaW4gYW5kIHNob3J0bmVzcyBvZiBicmVhdGguIEEgQ1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3Qgd2FzIG9yZGVyZWQgdG8gZXZhbHVhdGUgZm9yIHBvc3NpYmxlIHB1bG1vbmFyeSBlbWJvbGlzbSwgcG5ldW1vbmlhLCBhbmQvb3IgYWJkb21pbmFsIHBhdGhvbG9neS4KClByb2NlZHVyZTogVGhlIHBhdGllbnQgd2FzIGFkbWluaXN0ZXJlZCAxMjAgbUwgb2Ygbm9uLWlvbmljIGNvbnRyYXN0IGFnZW50IGludHJhdmVub3VzbHkgYW5kIHVuZGVyd2VudCBhIENUIHNjYW4gb2YgdGhlIHRob3JheCwgYWJkb21lbiwgYW5kIHBlbHZpcyB1c2luZyBhIDY0LXNsaWNlIENUIHNjYW5uZXIuCgpGaW5kaW5nczoKClRoZSBDVCBzY2FuIHJldmVhbGVkIHRoZSBmb2xsb3dpbmcgZmluZGluZ3M6CgpUaGUgdGhvcmF4OiBObyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20gb3IgcG5ldW1vbmlhIHdhcyBzZWVuLiBUaGUgbHVuZ3Mgd2VyZSBjbGVhciwgd2l0aCBubyBldmlkZW5jZSBvZiBjb25zb2xpZGF0aW9uIG9yIGVmZnVzaW9uLgpUaGUgYWJkb21lbjogVGhlIGxpdmVyLCBzcGxlZW4sIGFuZCBraWRuZXlzIHdlcmUgbm9ybWFsIGluIHNpemUgYW5kIHNoYXBlLiBUaGUgcGFuY3JlYXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBwYW5jcmVhdGl0aXMgb3IgcGFuY3JlYXRpYyBtYXNzLiBUaGUgc21hbGwgYm93ZWwgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvYnN0cnVjdGlvbiBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4gVGhlIGxhcmdlIGJvd2VsIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgZGl2ZXJ0aWN1bGl0aXMgb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuClRoZSBwZWx2aXM6IFRoZSBwZWx2aXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBmcmFjdHVyZSBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4KQ29udHJhc3QgRW5oYW5jZW1lbnQ6CgpUaGUgY29udHJhc3QgYWdlbnQgZW5oYW5jZWQgdGhlIHZpc3VhbGl6YXRpb24gb2YgdGhlIHZhc2N1bGFyIHN0cnVjdHVyZXMsIGluY2x1ZGluZyB0aGUgYW9ydGEsIHB1bG1vbmFyeSBhcnRlcmllcywgYW5kIHJlbmFsIGFydGVyaWVzLiBObyBldmlkZW5jZSBvZiB0aHJvbWJ1cyBvciBlbWJvbHVzIHdhcyBzZWVuIGluIHRoZSBwdWxtb25hcnkgYXJ0ZXJpZXMuCgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIENUIFRob3JheCBBYmRvbWVuIFBlbHZpcyB3aXRoIENvbnRyYXN0LCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBubyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20sIHBuZXVtb25pYSwgb3IgYWJkb21pbmFsIHBhdGhvbG9neS4gVGhlIHBhdGllbnQncyBzeW1wdG9tcyBhcmUgbGlrZWx5IGR1ZSB0byBhbm90aGVyIGNhdXNlLCBhbmQgZnVydGhlciBldmFsdWF0aW9uIGlzIG5lZWRlZCB0byBkZXRlcm1pbmUgdGhlIHVuZGVybHlpbmcgZGlhZ25vc2lzLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIG1hbmFnZW1lbnQgYXMgZGlyZWN0ZWQgYnkgdGhlIHBhdGllbnQncyBwcmltYXJ5IGNhcmUgcGh5c2ljaWFuLgpDb25zaWRlciBmdXJ0aGVyIGltYWdpbmcgc3R1ZGllcywgc3VjaCBhcyBhIHZlbnRpbGF0aW9uLXBlcmZ1c2lvbiBzY2FuIG9yIGEgcHVsbW9uYXJ5IGZ1bmN0aW9uIHRlc3QsIHRvIGZ1cnRoZXIgZXZhbHVhdGUgZm9yIHB1bG1vbmFyeSBlbWJvbGlzbS4KU2lnbmF0dXJlOgoKRHIgWSBY"
+* code = $sct#433761009 "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+* code.text = "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+
+/**************************************************************
+ * DocumentReference refers to an Encounter (cut date)
+ * AI summary of this report is present in 'Brief history'
+ *************************************************************/
+Instance: --DOCUMENT.REFERENCE.ID.1--
+InstanceOf: DocumentReference
+Usage: #inline
+* status = #current
+* type.coding[0] = $loinc#34117-2 "History and physical note - test1"
+* category = $us-core-documentreference-category#clinical-note "Clinical Note"
+* subject = Reference(Patient/--PATIENT.ID.1--)
+* date = "2005-09-09T17:31:51.000Z"
+* content.attachment.contentType = #text/plain
+* content.attachment.language = #en-US
+* content.attachment.data = "Q2xpbmljYWwgYW5kIFRyZWF0bWVudCBTdW1tYXJ5XG5cbk1ldCBjb2xvbiBhZGVub2NhcmNpbm9hbSB3aXRoIHNvbGl0YXJ5IG9tZW50YWwgbWV0IC0gYWxsIHZpc2libGUgZGlzZWFzZSByZXNlY3RlZCBNU1MgUkFTL1JBRiBXVCBzL3AgcHJvcGh5bGFjdGljIEhJUEVDIG9uIDEzLzMvMTggKG9uIHRyaWFsKVxuXG5cblxuSGlzdG9yeSwgRXhhbWluYXRpb24gYW5kIEludmVzdGlnYXRpb25zXG5cblVuZGVyd2VudCBwcm9waHlsYWN0aWMgSElQRUMgKHRyaWFsKSBvbiAxMy8zLzE4IER1ZSAjNiBYZWxveCAjNCBhbmQgNSBkb3NlIGRlbGF5IDIgd2Vla3MgZHVlIHRvIGxvdyBQTHQgYW5kIGxvdyBBTkMsIGdpdmVuIDJkYXlzIHMvYyBHQ1NGIChwcmlvciB0byAjNCBidXQgbm90ICM1KSBIaXN0bzogRElBR05PU0lTIChBKSBMZWZ0IHBlbHZpYyBwZXJpdG9uZXVtOyBleGNpc2lvbiBiaW9wc3k6IEZhdCBuZWNyb3NpcywgaW5mbGFtbWF0aW9uLCBmaWJyb3NpcyBhbmQgZm9yZWlnbiBib2R5LXR5cGUgbXVsdGludWNsZWF0ZSBnaWFudCBjZWxsIHJlYWN0aW9uOyAtIG5lZ2F0aXZlIGZvciBtYWxpZ25hbmN5LiAoQikgT21lbnR1bTsgb21lbnRlY3RvbXk6IE5vbi1zcGVjaWZpYyByZWFjdGl2ZSBjaGFuZ2VzOyAtIHR3byBiZW5pZ24gbHltcGggbm9kZXMgKDAvMiksIC0gbmVnYXRpdmUgZm9yIG1hbGlnbmFuY3kuIEJsZHMgdG9kYXkgQU5DIDAuOTYgUEx0IDEyMWsgQ0VBIDYuNCBmcm9tIDQgQ1QgVEFQIDkvNy8xODogQ29uY2x1c2lvbiBTaW5jZSAxMyBBcHIgMjAxOCwgMS4gU3RhdHVzIHBvc3QgaGlnaCBhbnRlcmlvciByZXNlY3Rpb24gd2l0aCBubyBldmlkZW5jZSBvZiBsb2NhbCByZWN1cnJlbmNlIG9yIGludGVydmFsIGNoYW5nZS4gMi4gVGhlIHB1bG1vbmFyeSBub2R1bGVzLCBzdXNwaWNpb3VzIG9mIG1ldGFzdGFzZXMsIGFyZSBzbWFsbGVyLiBUaGUgcmlnaHQgbG93ZXIgbG9iZSBub2R1bGUgaGFzIG5lYXJseSByZXNvbHZlZC4gMy4gVGhlIGNpcmN1bWZlcmVudGlhbCBtdXJhbCB0aGlja2VuaW5nIGluIHRoZSByZWN0dW0gaXMgbGVzcyBwcm9taW5lbnQgYW5kIHJlbWFpbnMgaW5kZXRlcm1pbmF0ZS4gNC4gTm8gbmV3IGRpc3RhbnQgbWV0YXN0YXNpcy4gU1VCSkVDVElWRSBUb2xlcmF0ZWQgd2VsbCBHMSBuZXVyb3BhdGh5IGluIGZpbmdlcnMgYW5kIHRvZXMgRWF0IGFuZCBCTyByZWd1bGFybHksIHdlbGwgTm8gUFIgYmxlZWQgRHJ5IHNraW4sIG5vIFBQRSwgbm90IHVzaW5nIG1vaXN0dXJpc2VycyBPQkVKQ1RJVkUgRUNPRyAxIC0gbGltcHMgYnV0IHRoaXMgaXMgYmFzZWxpZW4gZnJvbSBwcmV2aW91cyBhY2NpZGVudCBIdCAxNzFjbSBXdCA2MC45a2cgZnJvbSA2MC44a2cgZnJvbSA1Ny44a2cgZnJvbSA1Ni44a2cgZnJvbSA1NS40a2cgZnJvbSA1NWtnIGZyb20gNTQuNGtnIEgtUzFTMiBMIC0gTm8gY3JlcHMgQSAtIFNvZnQgTm9udGVuZGVyIFQgMzYuNCBIUiAxMzEvODYgU3BPMiAxMDAlIG9uIFJBIEhSIDcxIEhvbWUgQlAgbW9uaXRvcmluZyBTQlAgMTIwLTE1MG1tSEcgb24gYW1sb2RpcGluZSAyLjVtZyBPTSBJbXA6IE1ldCBjb2xvbiBhZGVub2NhcmNpbm9hbSB3aXRoIHNvbGl0YXJ5IG9tZW50YWwgbWV0IC0gYWxsIHZpc2libGUgZGlzZWFzZSByZXNlY3RlZCBNU1MgUkFTL1JBRiBXVCBzL3AgcHJvcGh5bGFjdGljIEhJUEVDIG9uIDEzLzMvMTggKG9uIHRyaWFsKSBQT3N0LW9wIENUIC0gaW5jcmVhc2UgaW4gb25lIGx1bmcgbW9kdWxlID9tZXQgLSByZXNwb25kaW5nIHRvIFhlbG94XG5cblxuTWFuYWdlbWVudCBGb3IgVGhpcyBWaXNpdFxuXG5QcmNvZWVkIHdpdGggIzYgWGVsb3ggb24gMy85LzE4IEZCQyBPQSBUQ1UgbWUgNCB3ZWVrcyBCbGRzIE9BIENUIFRBUCBiZWZvcmUgVENVIENvbnR0IGFtbG9kaXBpbmUgYXQgMi41bWcgT00sIGFkdmlzZWQgaG9tZSBCUCBtb25pdG9yaW5nLCBLSVYgZnVydGhlciBpbmNyZWFzZSB0byA1bWcgT00gQWR2aXNlZCB0byByZXR1cm4gZWFybHkgaWYgZmV2ZXIvdW53ZWxsIHdoaWxlIG9uIGNoZW1vIFMvVCBUb2xlcmF0aW5nIGNoZW1vIHdlbGwsIHdlIHdvdWxkIGNvbnRpbnVlIFhlbG94IExBc3QgQ1Qgc2hvd3MgbHVuZyBsZXNpb25zIGFyZSBzbWFsbGVyLCBsaWtlbHkgbHVuZyBtZXRzIGFuZCBzdGFnZSA0IGRpc2Vhc2UgV2Ugd291bGQgcmV2aWV3IENUIHJlc3VsdHMgYWdhaW4gd2l0aCByZXBlYXQgQ1QgYWZ0ZXIgdGhpcyBjeWNsZSBUaGV5IHVuZGVyc3RhbmQsIGFncmVlYWJsZSBBbGwgcXVlc3Rpb25zIGFuc3dlcmVkXG5cblxuTWFuYWdlbWVudCBGb3IgVGhpcyBWaXNpdFxuXG5QcmNvZWVkIHdpdGggIzYgWGVsb3ggb24gMy85LzE4IEZCQyBPQSBUQ1UgbWUgNCB3ZWVrcyBCbGRzIE9BIENUIFRBUCBiZWZvcmUgVENVIC0gcG9zdHBvbmUgY3VycmVudCBDVCBhcHB0IHRvIDE3LzkvMTggQ29udHQgYW1sb2RpcGluZSBhdCAyLjVtZyBPTSwgYWR2aXNlZCBob21lIEJQIG1vbml0b3JpbmcsIEtJViBmdXJ0aGVyIGluY3JlYXNlIHRvIDVtZyBPTSBBZHZpc2VkIHRvIHJldHVybiBlYXJseSBpZiBmZXZlci91bndlbGwgd2hpbGUgb24gY2hlbW8gUy9UIFRvbGVyYXRpbmcgY2hlbW8gd2VsbCwgd2Ugd291bGQgY29udGludWUgWGVsb3ggTEFzdCBDVCBzaG93cyBsdW5nIGxlc2lvbnMgYXJlIHNtYWxsZXIsIGxpa2VseSBsdW5nIG1ldHMgYW5kIHN0YWdlIDQgZGlzZWFzZSBXZSB3b3VsZCByZXZpZXcgQ1QgcmVzdWx0cyBhZ2FpbiB3aXRoIHJlcGVhdCBDVCBhZnRlciB0aGlzIGN5Y2xlIFRoZXkgdW5kZXJzdGFuZCwgYWdyZWVhYmxlIEFsbCBxdWVzdGlvbnMgYW5zd2VyZWQ="
+* content.attachment.title = "Test attachment 1"
+* context.encounter = Reference(--ENCOUNTER.ID.1--)
+
+/**************************************************************
+ * Encounter (cut date)
+ *************************************************************/
+Instance: --ENCOUNTER.ID.1--
+InstanceOf: Encounter
+Usage: #inline
+* status = #finished
+* class = $v3-ActCode#AMB
+* type = $sct#162673000 "General examination of patient (procedure)"
+* type.text = "General examination of patient (procedure)"
+* subject = Reference(Patient/--PATIENT.ID.1--)
+* participant.type = $v3-ParticipationType#PPRF "primary performer"
+* participant.type.text = "primary performer"
+* participant.period.start = "2005-09-09T17:31:51.000Z"
+* participant.period.end = "2005-09-09T17:51:51.000Z"
+* period.start = "2005-09-09T17:31:51.000Z"
+* period.end = "2005-09-09T17:51:51.000Z"
+
+/**************************************************************
+ * DiagnosticReport with images after the cut date
+ *************************************************************/
+Instance: --DIAGNOSTIC.REPORT.ID.2--
+InstanceOf: DiagnosticReport
+Usage: #inline
+* status = #final
+* category = $loinc#LP29684-5 "Radiology"
+* category.text = "Radiology"
+* subject = Reference(Patient/--PATIENT.ID.1--)
+* effectiveDateTime = "2005-10-02T10:22:22.000Z"
+* conclusion = "STABLE"
+* presentedForm.contentType = #text/plain
+* presentedForm.data = "b3ZhcmlhbiBjYW5jZXIgd2l0aCBwZXJpdG9uZWFsIGRpc2Vhc2UuIGZhZWNhbCB2b21pdGluZywgZW1wdHkgcmVjdHVtLiA/ZGlzZWFzZSBwcm9ncmVzc2lvbiA/c3ViYWN1dGUgYm93ZWwgb2JzdHJ1Y3Rpb24gdW5lbmhhbmNlZCBpbWFnZXMgYWNxdWlyZWQgZHVlIHRvIHBvb3IgcmVuYWwgZnVuY3Rpb24uIGNvbXBhcmlzb24gbWFkZSB3aXRoIHByZXZpb3VzIGN0IGRhdGVkIDI0IDExIDE0LiBubyBzaWduaWZpY2FudCBpbnRlcnZhbCBjaGFuZ2UgaW4gdGhlIGxvY3VsYXRlZCBhc2NpdGVzIHdpdGhpbiB0aGUgcGVsdmlzLiByaWdodCBoeWRyb25lcGhyb3NpcyB1bmNoYW5nZWQuIGN5c3RzIHdpdGhpbiB0aGUgbGl2ZXIgYW5kIGxlZnQga2lkbmV5IG5vdGVkLiB0aGVyZSBoYXMgYmVlbiBubyBzaWduaWZpY2FudCBpbnRlcnZhbCBjaGFuZ2UgaW4gdGhlIHBlcml0b25lYWwgZGlzZWFzZSBzZWVuIHRocm91Z2hvdXQgdGhlIGFiZG9tZW4gYW5kIHBlbHZpcy4gMTAgbW0gYW9ydG9jYXZhbCBseW1waCBub2RlIGlzIHVuY2hhbmdlZC4gbm8gb3RoZXIgbmV3IGVubGFyZ2VkIGFiZG9taW5hbCBvciBwZWx2aWMgbHltcGggbm9kZXMuIHRoZSBzdG9tYWNoIGlzIGZsdWlkLS1maWxsZWQgYW5kIHNsaWdodGx5IGRpc3RvcnRlZC4gcGFydGlhbGx5IGNhbGNpZmllZCBzZXJvc2FsIGRpc2Vhc2UgaXMgc2VlbiB3aXRoaW4gdGhlIGxlc3NlciBzYWMuIHRoZSBweWxvcnVzIGFwcGVhcnMgYnVsa3ksIHdoaWNoIHh4eCByZXByZXNlbnQgZnVydGhlciBzZXJvc2FsIGRpc2Vhc2UgYXQgdGhpcyBzaXRlLCBidXQgdGhpcyBpcyBhZ2FpbiB1bmNoYW5nZWQgc2luY2Ugbm92ZW1iZXIuIHRoZSBzbWFsbCBhbmQgbGFyZ2UgYm93ZWwgYXJlIG9mIG5vcm1hbCBjYWxpYnJlLiBtaW5vciBhdGVsZWN0YXNpcyBpbiB0aGUgbHVuZyBiYXNlcy4gbm8gcGxldXJhbCBlZmZ1c2lvbi4gbm8gc3VzcGljaW91cyBmb2NhbCBib25lIGxlc2lvbi4gQ09OQ0xVU0lPTiAgc3RhYmxlIGRpc2Vhc2UuIGZsdWlkLS1maWxsZWQgc3RvbWFjaCB3aXRoIHNlcm9zYWwgZGlzZWFzZS4gdGhpY2tlbmVkIHB5bG9ydXMgeHh4IHJlcHJlc2VudCBmdXJ0aGVyIGRpc2Vhc2UgYXQgdGhpcyBzaXRlLiBubyBzbWFsbC0tYm93ZWwgb2JzdHJ1Y3Rpb24u"
+* code = $loinc#16457501000119102 "CT ABDOMEN AND PELVIS"
+* code.text = "CT ABDOMEN AND PELVIS"

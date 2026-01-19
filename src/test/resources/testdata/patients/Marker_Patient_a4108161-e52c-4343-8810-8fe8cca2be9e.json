@@ -1,0 +1,2082 @@
+{
+  "resourceType": "Bundle",
+  "id": "8d2d6cf6-39f7-4174-95f0-7a88a90dcd35",
+  "type": "searchset",
+  "total": 26,
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "a4108161-e52c-4343-8810-8fe8cca2be9e",
+        "meta": {
+          "lastUpdated": "2023-09-14T08:09:05.447+00:00",
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "system": "https://github.com/synthetichealth/synthea",
+            "value": "a4108161-e52c-4343-8810-8fe8cca2be9e"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "value": "a4108161-e52c-4343-8810-8fe8cca2be9e"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "789-65-8121"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver's License"
+                }
+              ],
+              "text": "Driver's License"
+            },
+            "system": "urn:oid:2.16.840.1.113883.4.3.25",
+            "value": "S78983940"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PPN",
+                  "display": "Passport Number"
+                }
+              ],
+              "text": "Passport Number"
+            },
+            "system": "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber",
+            "value": "X78930396X"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "Marker",
+            "family": "Marker",
+            "given": ["Patient"],
+            "prefix": ["Mr."]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-388-5032",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1990-03-21",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/geolocation",
+                "extension": [
+                  {
+                    "url": "latitude",
+                    "valueDecimal": 42.39867885382789
+                  },
+                  {
+                    "url": "longitude",
+                    "valueDecimal": -71.15923573907267
+                  }
+                ]
+              }
+            ],
+            "line": ["173 Rolfson Boulevard Unit 29"],
+            "city": "Boston",
+            "state": "MA",
+            "postalCode": "02129",
+            "country": "US"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "M"
+            }
+          ],
+          "text": "M"
+        },
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0867f3c1-f931-44ce-ba4b-65fb364a2805",
+        "meta": {
+          "lastUpdated": "2023-09-07T05:54:09.824+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "WBC"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2017-09-06T18:46:00Z",
+        "issued": "2017-09-06T18:50:06Z",
+        "valueQuantity": {
+          "value": 250,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0ab9259d-b999-43b7-a5b7-c328592ad797",
+        "meta": {
+          "lastUpdated": "2023-09-07T07:23:23.095+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Total Bilirubin"
+            }
+          ],
+          "text": "Total Bilirubin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2005-09-29T18:46:00Z",
+        "issued": "2005-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 275,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1a92dc0c-d353-48b4-ad6c-177c80b20ec5",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:06:04.635+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "1999-07-29T18:46:00Z",
+        "issued": "1999-07-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 200,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1d3d9f61-2021-44d4-83f2-629d9f8277a3",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:00:55.704+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "1999-07-29T18:46:00Z",
+        "issued": "1999-07-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 350,
+          "unit": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "33d23e56-88e4-4636-a397-7b954ab18f0e",
+        "meta": {
+          "lastUpdated": "2023-09-07T05:59:37.591+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2023-05-29T18:46:00Z",
+        "issued": "2023-05-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 265,
+          "unit": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "416f6bb5-5871-4315-96b8-ea1ea8e66bf6",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:12:11.108+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2023-05-29T18:46:00Z",
+        "issued": "2023-05-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 275,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5552792a-cfa7-4713-88be-af3c8d389950",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:01:47.459+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2005-09-29T18:46:00Z",
+        "issued": "2005-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 290,
+          "unit": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5b028f7d-d9fe-4a63-bf75-31bcd0dd244a",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:13:47.893+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2005-09-29T18:46:00Z",
+        "issued": "2005-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 2750,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6e96ac65-043c-4d31-9057-91bb7c51d361",
+        "meta": {
+          "lastUpdated": "2023-09-07T05:57:06.575+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "WBC"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2011-09-29T18:46:00Z",
+        "issued": "2011-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 225,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7535be0b-8484-44ec-b228-6f9bab8bc334",
+        "meta": {
+          "lastUpdated": "2023-09-07T05:56:34.030+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "WBC"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2005-09-29T18:46:00Z",
+        "issued": "2005-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 290,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "841e3851-977a-4558-a741-6bcbbd1913cf",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:02:44.264+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2017-09-29T18:46:00Z",
+        "issued": "2017-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 300,
+          "unit": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "954f91f7-26ba-42cb-bf1f-7b857d50fcb4",
+        "meta": {
+          "lastUpdated": "2023-09-07T05:57:46.731+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "WBC"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2023-08-29T18:46:00Z",
+        "issued": "2023-08-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 265,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "98542039-a1ae-4e84-bf3c-ab1ff5761be4",
+        "meta": {
+          "lastUpdated": "2023-09-07T07:24:27.379+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Total Bilirubin"
+            }
+          ],
+          "text": "Total Bilirubin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2023-05-29T18:46:00Z",
+        "issued": "2023-05-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 285,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a2a3b632-cece-46d7-bc97-b5b6b805daae",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:13:04.375+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "1999-09-29T18:46:00Z",
+        "issued": "1999-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 300,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bce77fc4-36e6-4a95-a011-2c2ea412bf0e",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:05:22.662+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2017-09-29T18:46:00Z",
+        "issued": "2017-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 250,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bdc23b46-afd1-4051-99ee-35332c00ad11",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:15:13.978+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2017-09-29T18:46:00Z",
+        "issued": "2017-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 500,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ca5e31f7-3fb9-4b7b-9274-7b60651ec6d6",
+        "meta": {
+          "lastUpdated": "2023-09-07T05:55:55.060+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "WBC"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "1999-07-29T18:46:00Z",
+        "issued": "1999-07-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 210,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d2765e92-5b0e-44a8-85ec-b682dc4adbcd",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:14:23.822+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2011-09-29T18:46:00Z",
+        "issued": "2011-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 250,
+          "unit": "x10E3/uL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "x10E3/uL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "x10E3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d2bcff40-36ac-461a-ae21-abb2f8615a15",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:08:43.455+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2023-05-29T18:46:00Z",
+        "issued": "2023-05-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 275,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "da151519-7a26-4305-9209-c167d307f60c",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:06:53.445+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2005-09-29T18:46:00Z",
+        "issued": "2005-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 290,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "da47b053-5296-4eca-81b5-0e925b470a45",
+        "meta": {
+          "lastUpdated": "2023-09-07T07:23:01.259+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Total Bilirubin"
+            }
+          ],
+          "text": "Total Bilirubin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "1999-07-29T18:46:00Z",
+        "issued": "1999-07-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 295,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "dc4a7a90-1b37-4747-aa29-d2078a887d37",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:08:03.033+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2011-09-29T18:46:00Z",
+        "issued": "2011-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 225,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e94858d8-0ed3-4828-815c-56efa4832f76",
+        "meta": {
+          "lastUpdated": "2023-09-07T07:23:39.330+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Total Bilirubin"
+            }
+          ],
+          "text": "Total Bilirubin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2011-09-29T18:46:00Z",
+        "issued": "2011-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 260,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f5325f46-e35c-4362-b2e2-9ae58d0429d0",
+        "meta": {
+          "lastUpdated": "2023-09-07T06:02:20.744+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2011-09-29T18:46:00Z",
+        "issued": "2011-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 325,
+          "unit": "g/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 200,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "fedc4b9c-cf35-466a-832d-9a92fdbbcabb",
+        "meta": {
+          "lastUpdated": "2023-09-07T07:22:21.259+00:00",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1975-2",
+              "display": "Total Bilirubin"
+            }
+          ],
+          "text": "Total Bilirubin"
+        },
+        "subject": {
+          "reference": "Patient/a4108161-e52c-4343-8810-8fe8cca2be9e"
+        },
+        "encounter": {
+          "reference": "Encounter/yyyyyyyyyy"
+        },
+        "effectiveDateTime": "2017-09-29T18:46:00Z",
+        "issued": "2017-09-29T18:50:06Z",
+        "valueQuantity": {
+          "value": 280,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/observation-interpretation",
+                "code": "U",
+                "display": "Significant change up"
+              }
+            ],
+            "text": "Significant change up"
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 290,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 300,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

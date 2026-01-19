@@ -1,0 +1,29 @@
+{
+  "resourceType": "Observation",
+  "id": "1177eb9e-df8c-43aa-ab86-c4360f49d1ee",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "89247-1",
+        "display": "ECOG Performance Status score"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/83a2a278-ff45-e749-4968-bd121b0100c6"
+  },
+  "effectiveDateTime": "2018-04-01",
+  "valueInteger": 3,
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "LA9625-0"
+        }
+      ]
+    }
+  ]
+}

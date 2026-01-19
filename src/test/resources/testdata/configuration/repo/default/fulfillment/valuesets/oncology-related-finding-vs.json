@@ -1,0 +1,203 @@
+{
+  "name": "oncology-related-finding-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "oncology-related-finding-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "275978004",
+              "display": "Screening for malignant neoplasm of colon (procedure)"
+            },
+            {
+              "code": "162573006",
+              "display": "Suspected lung cancer (situation)"
+            },
+            {
+              "code": "315268008",
+              "display": "Suspected prostate cancer (situation)"
+            },
+            {
+              "code": "89164003",
+              "display": "Breast lump (finding)"
+            },
+            {
+              "code": "268543007",
+              "display": "Cancer cervix - screening done (finding)"
+            },
+            {
+              "code": "243878006",
+              "display": "Breast neoplasm screening status (finding)"
+            },
+            {
+              "code": "412738007",
+              "display": "BRCA2 gene mutation positive (finding)"
+            }
+          ]
+        },
+        {
+          "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.728286",
+          "concept": [
+            {
+              "code": "160078",
+              "display": "Breast Mass"
+            },
+            {
+              "code": "110027",
+              "display": "Colon Cancer Screening"
+            },
+            {
+              "code": "16",
+              "display": "Breast Problem"
+            },
+            {
+              "code": "303",
+              "display": "Cancer"
+            },
+            {
+              "code": "302",
+              "display": "Breast Cancer"
+            },
+            {
+              "code": "134",
+              "display": "Flexible Sigmoidoscopy"
+            }
+          ]
+        },
+        {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "concept": [
+            {
+              "code": "C50.811",
+              "display": "Malignant neoplasm of overlapping sites of right female breast"
+            },
+            {
+              "code": "C90.00",
+              "display": "Multiple myeloma (CMS/HCC)"
+            },
+            {
+              "code": "C50.912",
+              "display": "Malignant neoplasm of breast, left"
+            },
+            {
+              "code": "N63",
+              "display": "Lump or mass in breast"
+            },
+            {
+              "code": "Z01.419",
+              "display": "Pap smear, as part of routine gynecological examination"
+            },
+            {
+              "code": "Z12.39",
+              "display": "Screening breast examination"
+            },
+            {
+              "code": "C67.9",
+              "display": "Malignant neoplasm of urinary bladder (CMS/HCC)"
+            },
+            {
+              "code": "D49.6",
+              "display": "Brain tumor (CMS/HCC)"
+            },
+            {
+              "code": "Q85.01",
+              "display": "Type 1 neurofibromatosis (CMS/HCC)"
+            },
+            {
+              "code": "Z15.01",
+              "display": "BRCA2 positive"
+            },
+            {
+              "code": "Z15.02",
+              "display": "BRCA2 positive"
+            },
+            {
+              "code": "C80.1",
+              "display": "Cancer (CMS/HCC)"
+            },
+            {
+              "code": "C91.00",
+              "display": "ALL (acute lymphoblastic leukemia) (CMS/HCC)"
+            },
+            {
+              "code": "C50.919",
+              "display": "Malignant neoplasm of breast (CMS/HCC)"
+            },
+            {
+              "code": "D49.7",
+              "display": "Brain tumor, pineal gland"
+            },
+            {
+              "code": "Z12.31",
+              "display": "Screening mammogram for high-risk patient"
+            }
+          ]
+        },
+        {
+          "system": "http://hl7.org/fhir/sid/icd-9-cm/diagnosis",
+          "concept": [
+            {
+              "code": "203.00",
+              "display": "Multiple myeloma (CMS/HCC)"
+            },
+            {
+              "code": "611.72",
+              "display": "Lump or mass in breast"
+            },
+            {
+              "code": "V76.2",
+              "display": "Pap smear, as part of routine gynecological examination"
+            },
+            {
+              "code": "V76.10",
+              "display": "Screening breast examination"
+            },
+            {
+              "code": "188.9",
+              "display": "Malignant neoplasm of urinary bladder (CMS/HCC)"
+            },
+            {
+              "code": "239.6",
+              "display": "Brain tumor (CMS/HCC)"
+            },
+            {
+              "code": "237.71",
+              "display": "Type 1 neurofibromatosis (CMS/HCC)"
+            },
+            {
+              "code": "V84.01",
+              "display": "BRCA2 positive"
+            },
+            {
+              "code": "199.1",
+              "display": "Cancer (CMS/HCC)"
+            },
+            {
+              "code": "204.00",
+              "display": "ALL (acute lymphoblastic leukemia) (CMS/HCC)"
+            },
+            {
+              "code": "198.5",
+              "display": "Secondary malignant neoplasm of bone and bone marrow"
+            },
+            {
+              "code": "174.9",
+              "display": "Malignant neoplasm of breast (CMS/HCC)"
+            },
+            {
+              "code": "239.7",
+              "display": "Brain tumor, pineal gland"
+            },
+            {
+              "code": "V76.11",
+              "display": "Screening mammogram for high-risk patient"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

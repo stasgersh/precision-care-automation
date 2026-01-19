@@ -1,0 +1,20 @@
+{
+    "name": "adt-medication-vs",
+    "valueset": {
+      "version": "1.0",
+      "url": "adt-medication-vs",
+      "compose": {
+        "include": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "concept": [
+              {
+                "code": "199123",
+                "display": "Bicalutamide 50 MG Oral Tablet"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

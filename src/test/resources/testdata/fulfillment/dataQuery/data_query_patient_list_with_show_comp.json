@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "attributes": {
+        "gender": "male",
+        "id": "0264d1ee-9b64-4723-bf66-560eb4003470"
+      }
+    },
+    {
+      "attributes": {
+        "gender": "female",
+        "id": "04d1c1e4-eb05-4d80-be01-f487d0599ac8"
+      }
+    },
+    {
+      "attributes": {
+        "gender": "female",
+        "id": "05b46423-4e30-47a3-b30d-cd7e9ff31e94"
+      }
+    },
+    {
+      "attributes": {
+        "gender": "male",
+        "id": "08f7e316-ba4f-43ce-b34d-f38aa8570e4d"
+      }
+    }
+    ]
+}

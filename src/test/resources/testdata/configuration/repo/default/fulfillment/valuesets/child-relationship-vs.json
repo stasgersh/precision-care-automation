@@ -1,0 +1,61 @@
+{
+  "name": "child-relationship-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "child-relationship-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "concept": [
+            {
+              "code": "CHILD"
+            },
+            {
+              "code": "CHLDADOPT"
+            },
+            {
+              "code": "DAUADOPT"
+            },
+            {
+              "code": "SONADOPT"
+            },
+            {
+              "code": "CHLDFOST"
+            },
+            {
+              "code": "DAUFOST"
+            },
+            {
+              "code": "SONFOST"
+            },
+            {
+              "code": "DAUC"
+            },
+            {
+              "code": "DAU"
+            },
+            {
+              "code": "STPDAU"
+            },
+            {
+              "code": "NCHILD"
+            },
+            {
+              "code": "SON"
+            },
+            {
+              "code": "SONC"
+            },
+            {
+              "code": "STPSON"
+            },
+            {
+              "code": "STPCHLD"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

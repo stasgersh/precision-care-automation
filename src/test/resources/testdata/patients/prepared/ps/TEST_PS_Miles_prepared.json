@@ -1,0 +1,545 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [
+    {
+      "fullUrl": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a",
+      "request": {
+        "method": "PUT",
+        "url": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+      },
+      "resource": {
+        "resourceType": "Patient",
+        "id": "d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a",
+        "name": [
+          {
+            "use": "official",
+            "family": "TEST_PS",
+            "given": [
+              "Miles"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1988-08-01"
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/a1d2c3b4-5e6f-47a8-9b0c-d1e2f3a4b5c6",
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/a1d2c3b4-5e6f-47a8-9b0c-d1e2f3a4b5c6"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "a1d2c3b4-5e6f-47a8-9b0c-d1e2f3a4b5c6",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "RAD",
+                "system": "http://loinc.org",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "effectiveDateTime": "2003-08-08T16:31:51.000Z",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "Q1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3QKCkluZGljYXRpb246IFRoZSBwYXRpZW50IHByZXNlbnRlZCB3aXRoIHN5bXB0b21zIG9mIGNoZXN0IHBhaW4gYW5kIHNob3J0bmVzcyBvZiBicmVhdGguIEEgQ1QgVGhvcmF4IEFiZG9tZW4gUGVsdmlzIHdpdGggQ29udHJhc3Qgd2FzIG9yZGVyZWQgdG8gZXZhbHVhdGUgZm9yIHBvc3NpYmxlIHB1bG1vbmFyeSBlbWJvbGlzbSwgcG5ldW1vbmlhLCBhbmQvb3IgYWJkb21pbmFsIHBhdGhvbG9neS4KClByb2NlZHVyZTogVGhlIHBhdGllbnQgd2FzIGFkbWluaXN0ZXJlZCAxMjAgbUwgb2Ygbm9uLWlvbmljIGNvbnRyYXN0IGFnZW50IGludHJhdmVub3VzbHkgYW5kIHVuZGVyd2VudCBhIENUIHNjYW4gb2YgdGhlIHRob3JheCwgYWJkb21lbiwgYW5kIHBlbHZpcyB1c2luZyBhIDY0LXNsaWNlIENUIHNjYW5uZXIuCgpGaW5kaW5nczoKClRoZSBDVCBzY2FuIHJldmVhbGVkIHRoZSBmb2xsb3dpbmcgZmluZGluZ3M6CgpUaGUgdGhvcmF4OiBObyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20gb3IgcG5ldW1vbmlhIHdhcyBzZWVuLiBUaGUgbHVuZ3Mgd2VyZSBjbGVhciwgd2l0aCBubyBldmlkZW5jZSBvZiBjb25zb2xpZGF0aW9uIG9yIGVmZnVzaW9uLgpUaGUgYWJkb21lbjogVGhlIGxpdmVyLCBzcGxlZW4sIGFuZCBraWRuZXlzIHdlcmUgbm9ybWFsIGluIHNpemUgYW5kIHNoYXBlLiBUaGUgcGFuY3JlYXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBwYW5jcmVhdGl0aXMgb3IgcGFuY3JlYXRpYyBtYXNzLiBUaGUgc21hbGwgYm93ZWwgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBvYnN0cnVjdGlvbiBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4gVGhlIGxhcmdlIGJvd2VsIHdhcyBub3JtYWwsIHdpdGggbm8gZXZpZGVuY2Ugb2YgZGl2ZXJ0aWN1bGl0aXMgb3IgaW5mbGFtbWF0b3J5IGNoYW5nZXMuClRoZSBwZWx2aXM6IFRoZSBwZWx2aXMgd2FzIG5vcm1hbCwgd2l0aCBubyBldmlkZW5jZSBvZiBmcmFjdHVyZSBvciBpbmZsYW1tYXRvcnkgY2hhbmdlcy4KQ29udHJhc3QgRW5oYW5jZW1lbnQ6CgpUaGUgY29udHJhc3QgYWdlbnQgZW5oYW5jZWQgdGhlIHZpc3VhbGl6YXRpb24gb2YgdGhlIHZhc2N1bGFyIHN0cnVjdHVyZXMsIGluY2x1ZGluZyB0aGUgYW9ydGEsIHB1bG1vbmFyeSBhcnRlcmllcywgYW5kIHJlbmFsIGFydGVyaWVzLiBObyBldmlkZW5jZSBvZiB0aHJvbWJ1cyBvciBlbWJvbHVzIHdhcyBzZWVuIGluIHRoZSBwdWxtb25hcnkgYXJ0ZXJpZXMuCgpJbXByZXNzaW9uOgoKQmFzZWQgb24gdGhlIENUIFRob3JheCBBYmRvbWVuIFBlbHZpcyB3aXRoIENvbnRyYXN0LCB0aGUgaW1wcmVzc2lvbiBpcyB0aGF0IHRoZSBwYXRpZW50IGhhcyBubyBldmlkZW5jZSBvZiBwdWxtb25hcnkgZW1ib2xpc20sIHBuZXVtb25pYSwgb3IgYWJkb21pbmFsIHBhdGhvbG9neS4gVGhlIHBhdGllbnQncyBzeW1wdG9tcyBhcmUgbGlrZWx5IGR1ZSB0byBhbm90aGVyIGNhdXNlLCBhbmQgZnVydGhlciBldmFsdWF0aW9uIGlzIG5lZWRlZCB0byBkZXRlcm1pbmUgdGhlIHVuZGVybHlpbmcgZGlhZ25vc2lzLgoKUmVjb21tZW5kYXRpb25zOgoKQ29udGludWUgd2l0aCBmdXJ0aGVyIGV2YWx1YXRpb24gYW5kIG1hbmFnZW1lbnQgYXMgZGlyZWN0ZWQgYnkgdGhlIHBhdGllbnQncyBwcmltYXJ5IGNhcmUgcGh5c2ljaWFuLgpDb25zaWRlciBmdXJ0aGVyIGltYWdpbmcgc3R1ZGllcywgc3VjaCBhcyBhIHZlbnRpbGF0aW9uLXBlcmZ1c2lvbiBzY2FuIG9yIGEgcHVsbW9uYXJ5IGZ1bmN0aW9uIHRlc3QsIHRvIGZ1cnRoZXIgZXZhbHVhdGUgZm9yIHB1bG1vbmFyeSBlbWJvbGlzbS4KU2lnbmF0dXJlOgoKRHIgWSBY"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "433761009",
+              "system": "http://snomed.info/sct",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        }
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/f0e1d2c3-b4a5-46c7-8d9e-0a1b2c3d4e5f",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/f0e1d2c3-b4a5-46c7-8d9e-0a1b2c3d4e5f"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "f0e1d2c3-b4a5-46c7-8d9e-0a1b2c3d4e5f",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "34117-2",
+              "system": "http://loinc.org",
+              "display": "History and physical note - test1"
+            }
+          ],
+          "text": "History and physical note - test1"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "CLIN",
+                "system": "http://example.org",
+                "display": "Clinical"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "date": "<TODAY>T17:31:51.000Z",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "language": "en-US",
+              "data": "Q2xpbmljYWwgYW5kIFRyZWF0bWVudCBTdW1tYXJ5XG5cbk1ldCBjb2xvbiBhZGVub2NhcmNpbm9hbSB3aXRoIHNvbGl0YXJ5IG9tZW50YWwgbWV0IC0gYWxsIHZpc2libGUgZGlzZWFzZSByZXNlY3RlZCBNU1MgUkFTL1JBRiBXVCBzL3AgcHJvcGh5bGFjdGljIEhJUEVDIG9uIDEzLzMvMTggKG9uIHRyaWFsKVxuXG5cblxuSGlzdG9yeSwgRXhhbWluYXRpb24gYW5kIEludmVzdGlnYXRpb25zXG5cblVuZGVyd2VudCBwcm9waHlsYWN0aWMgSElQRUMgKHRyaWFsKSBvbiAxMy8zLzE4IER1ZSAjNiBYZWxveCAjNCBhbmQgNSBkb3NlIGRlbGF5IDIgd2Vla3MgZHVlIHRvIGxvdyBQTHQgYW5kIGxvdyBBTkMsIGdpdmVuIDJkYXlzIHMvYyBHQ1NGIChwcmlvciB0byAjNCBidXQgbm90ICM1KSBIaXN0bzogRElBR05PU0lTIChBKSBMZWZ0IHBlbHZpYyBwZXJpdG9uZXVtOyBleGNpc2lvbiBiaW9wc3k6IEZhdCBuZWNyb3NpcywgaW5mbGFtbWF0aW9uLCBmaWJyb3NpcyBhbmQgZm9yZWlnbiBib2R5LXR5cGUgbXVsdGludWNsZWF0ZSBnaWFudCBjZWxsIHJlYWN0aW9uOyAtIG5lZ2F0aXZlIGZvciBtYWxpZ25hbmN5LiAoQikgT21lbnR1bTsgb21lbnRlY3RvbXk6IE5vbi1zcGVjaWZpYyByZWFjdGl2ZSBjaGFuZ2VzOyAtIHR3byBiZW5pZ24gbHltcGggbm9kZXMgKDAvMiksIC0gbmVnYXRpdmUgZm9yIG1hbGlnbmFuY3kuIEJsZHMgdG9kYXkgQU5DIDAuOTYgUEx0IDEyMWsgQ0VBIDYuNCBmcm9tIDQgQ1QgVEFQIDkvNy8xODogQ29uY2x1c2lvbiBTaW5jZSAxMyBBcHIgMjAxOCwgMS4gU3RhdHVzIHBvc3QgaGlnaCBhbnRlcmlvciByZXNlY3Rpb24gd2l0aCBubyBldmlkZW5jZSBvZiBsb2NhbCByZWN1cnJlbmNlIG9yIGludGVydmFsIGNoYW5nZS4gMi4gVGhlIHB1bG1vbmFyeSBub2R1bGVzLCBzdXNwaWNpb3VzIG9mIG1ldGFzdGFzZXMsIGFyZSBzbWFsbGVyLiBUaGUgcmlnaHQgbG93ZXIgbG9iZSBub2R1bGUgaGFzIG5lYXJseSByZXNvbHZlZC4gMy4gVGhlIGNpcmN1bWZlcmVudGlhbCBtdXJhbCB0aGlja2VuaW5nIGluIHRoZSByZWN0dW0gaXMgbGVzcyBwcm9taW5lbnQgYW5kIHJlbWFpbnMgaW5kZXRlcm1pbmF0ZS4gNC4gTm8gbmV3IGRpc3RhbnQgbWV0YXN0YXNpcy4gU1VCSkVDVElWRSBUb2xlcmF0ZWQgd2VsbCBHMSBuZXVyb3BhdGh5IGluIGZpbmdlcnMgYW5kIHRvZXMgRWF0IGFuZCBCTyByZWd1bGFybHksIHdlbGwgTm8gUFIgYmxlZWQgRHJ5IHNraW4sIG5vIFBQRSwgbm90IHVzaW5nIG1vaXN0dXJpc2VycyBPQkVKQ1RJVkUgRUNPRyAxIC0gbGltcHMgYnV0IHRoaXMgXG5cblxuTWFuYWdlbWVudCBGb3IgVGhpcyBWaXNpdFxuXG5QcmNvZWVkIHdpdGggIzYgWGVsb3ggb24gMy85LzE4IEZCQyBPQSBUQ1UgbWUgNCB3ZWVrcyBCbGRzIE9BIENUIFRBUCBiZWZvcmUgVENVIENvbnR0IGFtbG9kaXBpbmUgYXQgMi41bWcgT00sIGFkdmlzZWQgaG9tZSBCUCBtb25pdG9yaW5nLCBLSVYgZnVydGhlciBpbmNyZWFzZSB0byA1bWcgT00gQWR2aXNlZCB0byByZXR1cm4gZWFybHkgaWYgZmV2ZXIvdW53ZWxsIHdoaWxlIG9uIGNoZW1vIFMvVCBUb2xlcmF0aW5nIGNoZW1vIHdlbGwsIHdlIHdvdWxkIGNvbnRpbnVlIFhlbG94IExBc3QgQ1Qgc2hvd3MgbHVuZyBsZXNpb25zIGFyZSBzbWFsbGVyLCBsaWtlbHkgbHVuZyBtZXRzIGFuZCBzdGFnZSA0IGRpc2Vhc2UgV2Ugd291bGQgcmV2aWV3IENUIHJlc3VsdHMgYWdhaW4gd2l0aCByZXBlYXQgQ1QgYWZ0ZXIgdGhpcyBjeWNsZSBUaGV5IHVuZGVyc3RhbmQsIGFncmVlYWJsZSBBbGwgcXVlc3Rpb25zIGFuc3dlcmVk"
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/0a9b8c7d-6e5f-4123-9a8b-7c6d5e4f3a2b"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "433761009",
+              "system": "http://snomed.info/sct",
+              "display": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+            }
+          ],
+          "text": "CT THORAX ABDOMEN PELVIS WITH CONTRAST"
+        }
+      }
+    },
+    {
+      "fullUrl": "Encounter/0a9b8c7d-6e5f-4123-9a8b-7c6d5e4f3a2b",
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0a9b8c7d-6e5f-4123-9a8b-7c6d5e4f3a2b"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0a9b8c7d-6e5f-4123-9a8b-7c6d5e4f3a2b",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://snomed.info/sct",
+                "display": "General examination of patient (procedure)"
+              }
+            ],
+            "text": "General examination of patient (procedure)"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "code": "practitioner",
+                    "display": "Practitioner"
+                  }
+                ],
+                "text": "Practitioner"
+              }
+            ],
+            "period": {
+              "start": "<TODAY>T17:31:51.000Z",
+              "end": "<TODAY>T17:51:51.000Z"
+            }
+          }
+        ],
+        "period": {
+          "start": "<TODAY>T17:31:51.000Z",
+          "end": "<TODAY>T17:51:51.000Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/b3c2d1e0-f9a8-4b7c-8d6e-5f4a3b2c1d0e",
+      "request": {
+        "method": "PUT",
+        "url": "DiagnosticReport/b3c2d1e0-f9a8-4b7c-8d6e-5f4a3b2c1d0e"
+      },
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "b3c2d1e0-f9a8-4b7c-8d6e-5f4a3b2c1d0e",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "RAD",
+                "system": "http://loinc.org",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "effectiveDateTime": "2003-10-02T10:22:22.000Z",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "dGhpcyBpcyBvbmx5IGEgdGVzdA=="
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "CTABDP",
+              "system": "http://example.org",
+              "display": "CT ABDOMEN AND PELVIS"
+            }
+          ],
+          "text": "CT ABDOMEN AND PELVIS"
+        }
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/6a7b8c9d-0e1f-4a2b-8c7d-9e0f1a2b3c4d",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/6a7b8c9d-0e1f-4a2b-8c7d-9e0f1a2b3c4d"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "6a7b8c9d-0e1f-4a2b-8c7d-9e0f1a2b3c4d",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "GEN",
+              "system": "http://loinc.org",
+              "display": "General document"
+            }
+          ],
+          "text": "General document"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "CLIN",
+                "system": "http://example.org",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "date": "2000-01-09T13:31:51.000Z",
+        "author": [
+          {
+            "reference": "Practitioner/9ETWWv8Nlc79",
+            "display": "Dr. Charles Burton"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "language": "en-US",
+              "data": "SGVsbG8gd29ybGQ="
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/0a9b8c7d-6e5f-4123-9a8b-7c6d5e4f3a2b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/1a2b3c4d-5e6f-4789-9a0b-c1d2e3f4a5b6",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/1a2b3c4d-5e6f-4789-9a0b-c1d2e3f4a5b6"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "1a2b3c4d-5e6f-4789-9a0b-c1d2e3f4a5b6",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "34117-2",
+              "system": "http://loinc.org",
+              "display": "Emergency department note"
+            }
+          ],
+          "text": "Emergency department note"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "ED",
+                "system": "http://example.org",
+                "display": "Emergency department note"
+              }
+            ],
+            "text": "Emergency department note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "date": "2000-02-02T12:51:51.000Z",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "language": "en-US",
+              "data": "U2FtcGxlIGVtZXJnZW5jeSBub3Rl"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/2b3c4d5e-6f70-48a1-b2c3-d4e5f6a7b8c9",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/2b3c4d5e-6f70-48a1-b2c3-d4e5f6a7b8c9"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "2b3c4d5e-6f70-48a1-b2c3-d4e5f6a7b8c9",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "code": "34117-2",
+              "system": "http://loinc.org",
+              "display": "Emergency department note"
+            }
+          ],
+          "text": "Emergency department note"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "ED",
+                "system": "http://example.org",
+                "display": "Emergency department note"
+              }
+            ],
+            "text": "Emergency department note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "date": "2000-02-02T12:51:51.000Z",
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "language": "en-US",
+              "data": "UERGIFByb2dyZXNz",
+              "title": "ED Progress Note",
+              "creation": "2000-02-02T12:51:51.000Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/1cc5dd3e-6f70-48a1-b2c3-d4e5f6a7b8c9",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/1cc5dd3e-6f70-48a1-b2c3-d4e5f6a7b8c9"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "1cc5dd3e-6f70-48a1-b2c3-d4e5f6a7b8c9",
+        "status": "current",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "CLIN",
+                "system": "http://example.org",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "LP18648-3",
+              "system": "http://loinc.org",
+              "display": "Pathology Report"
+            }
+          ],
+          "text": "Pathology Report"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UHlsb3JpYyBzdHJpY3R1cmV+ICBiZW5pZ24gID9nYXN0cmljIHBvbHlwfiBmdW5kaWM/ICBOb2R1bGFyIGFwcGVhcmVuY2UgaW4gZGlzdGFsIG9lc29waGFndXM/IEEuIEJpb3BzeSB4IDIuICAgQi4gUHlsb3J1cyB4IDYuICBDLiBPZXNvcGhhZ3VzOiBCaW9wc3kgeCA0LiAgUHJlLWNhc3NldHRlZC4gWzNdbnIgQS4gU3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2EgYmlvcHN5IHNob3dpbmcgbm9ybWFsIGFwcGVhcmFuY2VzIHdpdGggbm8gZXZpZGVuY2Ugb2YgYWN0aXZlIGluZmxhbW1hdGlvbjsgZ3JhbnVsb21hczsgYXRyb3BoeTsgaW50ZXN0aW5hbCBtZXRhcGxhc2lhOyBkeXNwbGFzaWEgbm9yIG1hbGlnbmFuY3kuIEhlbGljb2JhY3RlciBweWxvcmktbGlrZSBvcmdhbmlzbXMgYXJlIGFic2VudCBvbiByb3V0aW5lIHN0YWluaW5nLiBEaWFnbm9zdGljIGZlYXR1cmVzIG9mIGZ1bmRpYyBnbGFuZCBwb2x5cCBhcmUgYWJzZW50LiAgICBCLiBOb24tc3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2FsIGJpb3BzaWVzIHNob3dpbmcgbW9kZXJhdGVseSBkaWZmZXJlbnRpYXRlZCBjYXJjaW5vbWEgd2l0aCBvY2Nhc2lvbmFsIHR1bW91ciBuZXN0cyB3aXRoaW4gdGhlIGxhbWluYSBwcm9wcmlhIGRpc3BsYXlpbmcgYSBtaWNyb3BhcGlsbGFyeSBhcmNoaXRlY3R1cmUuIEltbXVub3N0YWluaW5nIHJldmVhbHMgdHVtb3VyIGNlbGwgZXhwcmVzc2lvbiBvZiBDQS0xMjUgYW5kIFdULTEgKG9jY2FzaW9uYWwgY2VsbHMpIHdpdGggbmVnYXRpdmUgc3RhaW5pbmcgZm9yIENEWC0yLiBUaGVzZSBmZWF0dXJlcyBhcmUgaW4ga2VlcGluZyB3aXRoIG1ldGFzdGF0aWMgb3ZhcmlhbiBzZXJvdXMgcGFwaWxsYXJ5IGNhcmNpbm9tYS4gICAgIEMuIEJpb3BzaWVzIHNob3dpbmcgYSBwYXJ0aWFsbHkgY29sbGFwc2VkIG9lc29waGFnZWFsIGN5c3Qgd2l0aCBhIGJpbGF5ZXJlZCBsaW5pbmcuIFRoZXJlIGlzIGFsc28gYSBmcmFnbWVudCBvZiB1bGNlciBzbG91Z2ggbWF0ZXJpYWwuIEEuIEdBU1RSSUMgQklPUFNZOiBOTyBESUFHTk9TVElDIEZFQVRVUkVTIE9GIEZVTkRJQyBHTEFORCBQT0xZUCAgICBCLiBQWUxPUlVTIEJJT1BTSUVTOiBGRUFUVVJFUyBJTiBLRUVQSU5HIFdJVEggTUVUQVNUQVRJQyBPVkFSSUFOIFNFUk9VUyBQQVBJTExBUlkgQ0FSQ0lOT01BICAgIEMuIE9FU09QSEFHRUFMIEJJT1BTSUVTOiBPRVNPUEhBR0VBTCBDWVNUIFdJVEggRVZJREVOQ0UgT0YgVUxDRVJBVElPTg=="
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "date": "2013-10-05T10:23:23.000Z"
+      }
+    },
+    {
+      "fullUrl": "DocumentReference/AdlY12001cd",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/AdlY12001cd"
+      },
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "AdlY12001cd",
+        "status": "current",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "clinical-note",
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                "display": "Clinical Note"
+              }
+            ],
+            "text": "Clinical Note"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "LP18648-3",
+              "system": "http://loinc.org",
+              "display": "Pathology Report"
+            }
+          ],
+          "text": "Pathology Report"
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UHlsb3JpYyBzdHJpY3R1cmV+ICBiZW5pZ24gID9nYXN0cmljIHBvbHlwfiBmdW5kaWM/ICBOb2R1bGFyIGFwcGVhcmVuY2UgaW4gZGlzdGFsIG9lc29waGFndXM/IEEuIEJpb3BzeSB4IDIuICAgQi4gUHlsb3J1cyB4IDYuICBDLiBPZXNvcGhhZ3VzOiBCaW9wc3kgeCA0LiAgUHJlLWNhc3NldHRlZC4gWzNdbnIgQS4gU3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2EgYmlvcHN5IHNob3dpbmcgbm9ybWFsIGFwcGVhcmFuY2VzIHdpdGggbm8gZXZpZGVuY2Ugb2YgYWN0aXZlIGluZmxhbW1hdGlvbjsgZ3JhbnVsb21hczsgYXRyb3BoeTsgaW50ZXN0aW5hbCBtZXRhcGxhc2lhOyBkeXNwbGFzaWEgbm9yIG1hbGlnbmFuY3kuIEhlbGljb2JhY3RlciBweWxvcmktbGlrZSBvcmdhbmlzbXMgYXJlIGFic2VudCBvbiByb3V0aW5lIHN0YWluaW5nLiBEaWFnbm9zdGljIGZlYXR1cmVzIG9mIGZ1bmRpYyBnbGFuZCBwb2x5cCBhcmUgYWJzZW50LiAgICBCLiBOb24tc3BlY2lhbGlzZWQgZ2FzdHJpYyBtdWNvc2FsIGJpb3BzaWVzIHNob3dpbmcgbW9kZXJhdGVseSBkaWZmZXJlbnRpYXRlZCBjYXJjaW5vbWEgd2l0aCBvY2Nhc2lvbmFsIHR1bW91ciBuZXN0cyB3aXRoaW4gdGhlIGxhbWluYSBwcm9wcmlhIGRpc3BsYXlpbmcgYSBtaWNyb3BhcGlsbGFyeSBhcmNoaXRlY3R1cmUuIEltbXVub3N0YWluaW5nIHJldmVhbHMgdHVtb3VyIGNlbGwgZXhwcmVzc2lvbiBvZiBDQS0xMjUgYW5kIFdULTEgKG9jY2FzaW9uYWwgY2VsbHMpIHdpdGggbmVnYXRpdmUgc3RhaW5pbmcgZm9yIENEWC0yLiBUaGVzZSBmZWF0dXJlcyBhcmUgaW4ga2VlcGluZyB3aXRoIG1ldGFzdGF0aWMgb3ZhcmlhbiBzZXJvdXMgcGFwaWxsYXJ5IGNhcmNpbm9tYS4gICAgIEMuIEJpb3BzaWVzIHNob3dpbmcgYSBwYXJ0aWFsbHkgY29sbGFwc2VkIG9lc29waGFnZWFsIGN5c3Qgd2l0aCBhIGJpbGF5ZXJlZCBsaW5pbmcuIFRoZXJlIGlzIGFsc28gYSBmcmFnbWVudCBvZiB1bGNlciBzbG91Z2ggbWF0ZXJpYWwuIEEuIEdBU1RSSUMgQklPUFNZOiBOTyBESUFHTk9TVElDIEZFQVRVUkVTIE9GIEZVTkRJQyBHTEFORCBQT0xZUCAgICBCLiBQWUxPUlVTIEJJT1BTSUVTOiBGRUFUVVJFUyBJTiBLRUVQSU5HIFdJVEggTUVUQVNUQVRJQyBPVkFSSUFOIFNFUk9VUyBQQVBJTExBUlkgQ0FSQ0lOT01BICAgIEMuIE9FU09QSEFHRUFMIEJJT1BTSUVTOiBPRVNPUEhBR0VBTCBDWVNUIFdJVEggRVZJREVOQ0UgT0YgVUxDRVJBVElPTg=="
+            }
+          }
+        ],
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/1b693129-0001-a9a3-12c3-21317d5cec00"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "date": "2002-02-03T10:55:12.000Z"
+      }
+    },
+    {
+      "fullUrl": "Encounter/1b693129-0001-a9a3-12c3-21317d5cec00",
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/1b693129-0001-a9a3-12c3-21317d5cec00"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1b693129-0001-a9a3-12c3-21317d5cec00",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://snomed.info/sct",
+                "display": "General examination of patient (procedure)"
+              }
+            ],
+            "text": "General examination of patient (procedure)"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/d4e9b3f8-6a21-4f5b-9c7d-2e8a1b9c0f3a"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "code": "practitioner",
+                    "display": "Practitioner"
+                  }
+                ],
+                "text": "Practitioner"
+              }
+            ],
+            "period": {
+              "start": "2002-02-03T17:31:51.000Z",
+              "end": "2002-02-03T17:51:51.000Z"
+            }
+          }
+        ],
+        "period": {
+          "start": "2002-02-03T17:31:51.000Z",
+          "end": "2002-02-03T17:51:51.000Z"
+        }
+      }
+    }
+  ]
+}

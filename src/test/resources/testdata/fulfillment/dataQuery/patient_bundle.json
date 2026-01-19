@@ -1,0 +1,74 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "e4101cce-9fbd-58e3-b5e4-c7f390ec15e0",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/person_id",
+            "value": "cf90fbf6-0ef8-4f32-a5e9-f2528484f40d"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "ASCO_R294508888"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1939-12-14",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "source": "default",
+          "lastUpdated": "2024-05-14T13:50:30.585Z"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient"
+      }
+    }
+  ]
+}

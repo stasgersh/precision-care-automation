@@ -1,0 +1,215 @@
+{
+  "id": "patientBanner",
+  "preset": "prostate",
+  "querySetId": "patientProfile",
+  "items": [
+    {
+      "group": "patientProfile",
+      "elements": [
+        {
+          "key": {
+            "constant": "DOB"
+          },
+          "value": {
+            "path": "$.patient.attributes.dob",
+            "processor": "dateOfBirthWithAge"
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": {
+            "constant": "Gender"
+          },
+          "value": {
+            "path": "$.patient.attributes.gender"
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": {
+            "constant": "Weight"
+          },
+          "value": {
+            "path": "$.mostRecentWeight.attributes.value"
+          },
+          "type": "text",
+          "required": true
+        },
+        [
+          {
+            "key": {
+              "constant": "ECOG"
+            },
+            "value": {
+              "path": "$.mostRecentECOG.attributes.value"
+            },
+            "type": "text"
+          },
+          {
+            "key": {
+              "constant": "ECOG"
+            },
+            "value": {
+              "sourceDocument": {
+                "path": "$.mostRecentNlpEcogDocument"
+              },
+              "clpFindings": {
+                "path": "$.attributes.nlpFindings.ecog[0]"
+              }
+            },
+            "type": "nlp",
+            "required": true
+          }
+        ],
+        {
+          "key": {
+            "constant": "Diagnosis"
+          },
+          "value": {
+            "path": "$.earliestGroupedDiagnosis[0].attributes.code",
+            "processor": "codeableConceptText"
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": {
+            "constant": "Histology type"
+          },
+          "value": {
+            "sourceDocument": {
+              "path": "$.mostRecentNlpHistologicTypeDocument"
+            },
+            "clpFindings": {
+              "path": "$.attributes.nlpFindings.histologicType"
+            }
+          },
+          "type": "nlp",
+          "required": true
+        },
+        {
+          "key": {
+            "constant": "Gleason score"
+          },
+          "value": {
+            "path": "$.mostRecentGleasonScore.attributes.value"
+          },
+          "type": "text"
+        },
+        [
+          {
+            "key": {
+              "constant": "Stage - initial"
+            },
+            "value": {
+              "path": "$.earliestGroupedDiagnosis[0].attributes.stage[0].summary",
+              "processor": "codeableConceptText"
+            },
+            "type": "text"
+          },
+          {
+            "key": {
+              "constant": "Stage - initial"
+            },
+            "value": {
+              "sourceDocument": {
+                "path": "$.earliestNlpStageDocument"
+              },
+              "clpFindings": {
+                "path": "$.attributes.nlpFindings.groupStage[0]"
+              }
+            },
+            "type": "nlp",
+            "required": true
+          }
+        ],
+        {
+          "key": {
+            "constant": "Last Tx"
+          },
+          "value": {
+            "path": "$.lastTx.attributes.code",
+            "processor": "codeableConceptText"
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": {
+            "constant": "BMI"
+          },
+          "value": {
+            "path": "$.mostRecentBMI.attributes.value"
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": {
+            "constant": "BSA"
+          },
+          "value": {
+            "path": "$.mostRecentBSA.attributes.value"
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": {
+            "constant": "PSA"
+          },
+          "value": {
+            "path": "$.mostRecentPSA.attributes.value"
+          },
+          "type": "text"
+        },
+        {
+          "key": {
+            "constant": "Molecular profile"
+          },
+          "value": {
+            "path": "$.mostRecentMolecularProfile",
+            "processor": "tumorMarkerText"
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "value": {
+            "label": [
+              {
+                "constant": "Comorbidities"
+              }
+            ],
+            "url": {
+              "constant": "/medical-history#comorbidities"
+            },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [
+              {
+                "constant": "Allergies and intolerances"
+              }
+            ],
+            "url": {
+              "constant": "/medical-history#allergies"
+            },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        }
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "id": "patientProfile"
+    }
+  ]
+}

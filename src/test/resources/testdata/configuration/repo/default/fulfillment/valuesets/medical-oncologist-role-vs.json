@@ -1,0 +1,20 @@
+{
+  "name": "medical-oncologist-role-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "medical-oncologist-role-vs",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "310512001",
+              "display": "Medical oncologist"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

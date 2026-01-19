@@ -1,0 +1,2 @@
+| Eligibility_Key | Expected_Matched_Keywords |
+| Staging 68Ga PSMA-11 PET-MRI date  |  inclusion, criterion, 68Ga PSMA-11 PET-MRI, registration, androgen, metastases |

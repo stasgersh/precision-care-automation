@@ -1,0 +1,64 @@
+{
+  "id": "recentEvents.onco.general",
+  "items": [
+    [
+      {
+        "key": "<SCRIPT/XSS SRC=\"http://xss.rocks/xss.js\"></SCRIPT>",
+        "query": {
+          "from": [
+            "oncologyOutpatientNote",
+            "oncologyMDTReport",
+            "dischargeSummaryNote",
+            "pathologyReport",
+            "labReport",
+            "imagingReport",
+            "radiotherapySummaryNote",
+            "genomicReport"
+          ],
+          "show": [
+            "id",
+            "patient_id",
+            "patient_version",
+            "type",
+            "attributes.code",
+            "attributes.identifier",
+            "attributes.imagingStudy",
+            "attributes.reportContent",
+            "provenance",
+            "url",
+            "date"
+          ],
+          "dedup": true,
+          "filter": {
+            "must": [
+              {
+                "date": {
+                  "range": {
+                    "gte": "TEMPLATE",
+                    "lte": "now/d"
+                  }
+                }
+              },
+              {
+                "attributes.code": {
+                  "neq": null
+                }
+              },
+              {
+                "attributes.status": {
+                  "neq": "registered"
+                }
+              }
+            ]
+          },
+          "sort": [
+            {
+              "date": "desc"
+            }
+          ],
+          "limit": 100
+        }
+      }
+    ]
+  ]
+}

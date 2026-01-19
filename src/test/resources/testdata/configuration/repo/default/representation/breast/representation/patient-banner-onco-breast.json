@@ -1,0 +1,184 @@
+{
+  "id": "patientBanner.onco.breast",
+  "items": [
+    {
+      "group": "patientProfile",
+      "elements": [
+        {
+          "key": { "constant": "PID" },
+          "value": {
+            "path": "$.patient[0]",
+            "processor": { "name": "patientIdentifierValueText" }
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": { "constant": "DOB" },
+          "value": {
+            "path": "$.patient[0].attributes.dob",
+            "processor": { "name": "dateOfBirthWithAge" }
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": { "constant": "Gender" },
+          "value": { "path": "$.patient[0].attributes.gender" },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": { "constant": "Weight" },
+          "value": { "path": "$.mostRecentWeight[0].attributes.value" },
+          "type": "text",
+          "required": true
+        },
+        [
+          {
+            "key": { "constant": "ECOG" },
+            "value": { "path": "$.mostRecentECOG[0].attributes.value" },
+            "type": "text"
+          },
+          {
+            "key": { "constant": "ECOG" },
+            "value": {
+              "sourceDocument": { "path": "$.mostRecentNlpEcogDocument[0]" },
+              "clpFindings": {
+                "path": "$.attributes.clpFindings[*].findings.PerformanceStatus_array[?(@.Performance_Name_str == 'ECOG')][Performance_Status_str,Performance_Status_int]"
+              }
+            },
+            "type": "nlp",
+            "required": true
+          }
+        ],
+        {
+          "key": { "constant": "Diagnosis" },
+          "value": {
+            "path": "$.earliestGroupedDiagnosis[0].attributes.code",
+            "processor": { "name": "codeableConceptText" }
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": { "constant": "Histology type" },
+          "value": {
+            "sourceDocument": {
+              "path": "$.mostRecentNlpHistologicTypeDocument[0]"
+            },
+            "clpFindings": {
+              "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[*].Histologic_Type_str"
+            }
+          },
+          "type": "nlp"
+        },
+        {
+          "key": { "constant": "Gleason score" },
+          "value": { "path": "$.mostRecentGleasonScore[0].attributes.value" },
+          "type": "text"
+        },
+        [
+          {
+            "key": { "constant": "Stage - initial" },
+            "value": {
+              "path": "$.earliestGroupedDiagnosis[0].attributes.stage[0].summary",
+              "processor": { "name": "codeableConceptText" }
+            },
+            "type": "text"
+          },
+          {
+            "key": { "constant": "Stage - initial" },
+            "value": {
+              "sourceDocument": { "path": "$.earliestNlpStageDocument" },
+              "clpFindings": {
+                "path": "$.attributes.clpFindings[*].findings.PrimaryCancer_array[0].Staging_object.Stage_Group_str"
+              }
+            },
+            "type": "nlp",
+            "required": true
+          }
+        ],
+        {
+          "key": { "constant": "Most Recent Tx" },
+          "value": {
+            "path": "$.mostRecentTx[0].attributes.code",
+            "processor": { "name": "codeableConceptText" }
+          },
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": { "constant": "BMI" },
+          "value": { "path": "$.mostRecentBMI[0].attributes.value" },
+          "type": "text"
+        },
+        {
+          "key": { "constant": "BSA" },
+          "value": { "path": "$.mostRecentBSA[0].attributes.value" },
+          "type": "text"
+        },
+        {
+          "key": { "constant": "Molecular profile" },
+          "value": {
+            "path": "$.mostRecentMolecularProfile[0]",
+            "processor": { "name": "tumorMarkerText" }
+          },
+          "type": "text"
+        },
+        {
+          "key": { "constant": "ER" },
+          "value": {
+            "path": "$.mostRecentEstrogenReceptorStatus[0].attributes.value"
+          },
+          "type": "text"
+        },
+        {
+          "key": { "constant": "PR" },
+          "value": {
+            "path": "$.mostRecentProgesteroneReceptorStatus[0].attributes.value"
+          },
+          "type": "text"
+        },
+        {
+          "key": { "constant": "HER2" },
+          "value": {
+            "path": "$.mostRecentHer2ReceptorStatus[0].attributes.value"
+          },
+          "type": "text"
+        },
+        {
+          "key": { "constant": "Menopausal status" },
+          "value": {
+            "sourceDocument": { "path": "$.mostRecentNlpMenopausalStatus[0]" },
+            "clpFindings": {
+              "path": "$.attributes.clpFindings[*].findings.AdditionalPatientInformation_object.Menopausal_Status_str"
+            }
+          },
+          "type": "nlp"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Comorbidities" }],
+            "url": { "constant": "/medical-history#comorbidities" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        },
+        {
+          "value": {
+            "label": [{ "constant": "Allergies and intolerances" }],
+            "url": { "constant": "/medical-history#allergies" },
+            "target": "siteNavigation"
+          },
+          "type": "link"
+        }
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "id": "patientProfile"
+    }
+  ]
+}

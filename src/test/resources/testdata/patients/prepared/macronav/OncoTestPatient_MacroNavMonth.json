@@ -1,0 +1,202 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Patient/a9436622-88be-41e1-93da-da115e438f0e",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "a9436622-88be-41e1-93da-da115e438f0e",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "MacroNavMonth"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "111-987-0002",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1995-07-06",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "4e844434-2282-4ca6-99ee-f5ab4b35f4fb",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report today"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a9436622-88be-41e1-93da-da115e438f0e"
+        },
+        "effectiveDateTime": "<TODAY>T00:10:33+01:00",
+        "conclusion": "Test needed",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/5b3e2e7c-12e3-4e13-836b-ccb7f4717651"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "aa7942d4-c9b7-4ba0-93a9-42190cd344d7",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 28 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a9436622-88be-41e1-93da-da115e438f0e"
+        },
+        "effectiveDateTime": "<28_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: 28 days ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/85cf4bee-2fe7-494f-8c63-ee34f51de3dc"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "8f521f45-8884-4a27-bea4-54c232af9658",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 45 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a9436622-88be-41e1-93da-da115e438f0e"
+        },
+        "effectiveDateTime": "<45_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: 45 days ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/929a548d-4443-4c81-8bce-b34451de0970"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "6e8edf4c-1d11-43c5-97cc-ccbcfb0b3407",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 68 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a9436622-88be-41e1-93da-da115e438f0e"
+        },
+        "effectiveDateTime": "<68_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: 68 days ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/c13a8a93-8acd-4cb1-aa51-2baa9aa6bc33"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "6e8edf4c-1d11-43c5-97cc-cabcfb0b3407",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 6 months ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a9436622-88be-41e1-93da-da115e438f0e"
+        },
+        "effectiveDateTime": "<182_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: 6 months ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/c13a8a93-8acd-4cb1-aa51-2baa9aa6bc33"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "ab878088-c4e9-4700-aecd-d49d33c7e619",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66121-5",
+              "display": "Report 365 days ago"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/a9436622-88be-41e1-93da-da115e438f0e"
+        },
+        "effectiveDateTime": "<365_DAYS_AGO>T14:33:33+01:00",
+        "conclusion": "Test: 365 days ago",
+        "presentedForm": [
+          {
+            "url": "https://onchron-test.com/resource/e624985a-e23b-4da9-908d-d4abe227a57f"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1041 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "ee9b3d18-2f6f-4730-8a45-680655089a8b",
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "Datetime01"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "975215",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1980-07-22",
+        "multipleBirthBoolean": false,
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English"
+                }
+              ],
+              "text": "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "525751b5-928a-432a-82d1-d88c954806c9",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "407450002",
+              "display": "Herpes simplex type 2 infection"
+            }
+          ],
+          "text": "Human herpes simplex virus type 2"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "onsetDateTime": "2019-06-26T01:18:42+04:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "15e708a4-90fd-4a7b-a4d9-5dfb4569d94c",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "13746004",
+              "display": "Bipolar disorder"
+            }
+          ],
+          "text": "Bipolar disorder (No current medications)"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "onsetDateTime": "2017-04-11"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "8fc3df05-3dfb-4697-b52d-7f2aa07c699f",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "781067001",
+              "display": "Polycystic ovary syndrome"
+            }
+          ],
+          "text": "Polycystic ovary syndrome"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "onsetDateTime": "2015-01-01T00:30:00.000Z"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "271fbdc4-b8a8-4c7d-84c5-ff2213aa0526",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+          ]
+        },
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1734919",
+              "display": "cyclophosphamide 1 GM Injection"
+            }
+          ],
+          "text": "cyclophosphamide 1 GM Injection"
+        },
+        "dosage": [
+          {
+            "text": "1 GM",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "261754007",
+                  "display": "Continuous infusion"
+                }
+              ]
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "effectiveDateTime": "2019-02-24T05:27:58-00:00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "96799e9f-aa16-4185-b339-8a6631c43d43",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+          ]
+        },
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "1734919",
+              "display": "cyclophosphamide 1 GM Injection"
+            }
+          ],
+          "text": "cyclophosphamide 1 GM Injection Test2"
+        },
+        "dosage": [
+          {
+            "text": "1 GM",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "261754007",
+                  "display": "Continuous infusion"
+                }
+              ]
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "effectiveDateTime": "2019-02-24"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "ca64cdcf-e7bf-4b52-951c-13145f1cb639",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "757594",
+              "display": "Clavulanate 125 MG"
+            }
+          ],
+          "text": "Clavulanate 125 MG"
+        },
+        "dosageInstruction": [
+          {
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "76601001",
+                  "display": "Intramuscular"
+                }
+              ],
+              "text": "Intramuscular"
+            },
+            "asNeededBoolean": true
+          }
+        ],
+        "authoredOn": "2018-08-31T20:57:19.000Z",
+        "note": [
+          {
+            "text": "patient does not like it"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "requester": {
+          "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|32523523523",
+          "display": "Datetime Practitioner"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "b1b6461a-7919-49d8-abc5-3b2db8f999c2",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "757594",
+              "display": "Jolivette 28 Day Pack"
+            }
+          ],
+          "text": "Jolivette 28 Day Pack"
+        },
+        "dosageInstruction": [
+          {
+            "text": "Every four hours\n",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "34206005",
+                  "display": "Subcutaneous route"
+                }
+              ],
+              "text": "Subcutaneous"
+            },
+            "asNeededBoolean": false
+          }
+        ],
+        "authoredOn": "2018-08-31",
+        "note": [
+          {
+            "text": "Another note"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "requester": {
+          "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|32523523523",
+          "display": "Datetime Practitioner"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1fdb3199-baf0-4721-969f-1773d101818d",
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "32523523523"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Datetime Practitioner",
+            "given": [
+              "MD"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "datetime@example.com",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "101 CAMBRIDGE ST"
+            ],
+            "city": "BURLINGTON",
+            "state": "MA",
+            "postalCode": "01803-3768",
+            "country": "US"
+          }
+        ],
+        "gender": "male"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "cb135657-de38-4583-9e40-27e24428def5",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "583214",
+              "display": "PACLitaxel 100 MG Injection"
+            }
+          ],
+          "text": "PACLitaxel 100 MG Injection"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "dateAsserted": "2017-12-01",
+        "dosage": [
+          {
+            "text": "100 MG",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://standardterms.edqm.eu",
+                  "code": "11204000",
+                  "display": "Gel for injection"
+                }
+              ]
+            },
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d",
+                "boundsPeriod": {
+                  "start": "2017-12-01T08:00:00+01:00",
+                  "end": "2017-12-13"
+                }
+              }
+            }
+          }
+        ],
+        "note": [
+          {
+            "text": "coming from Med Statement"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "d1720030-20a7-4f4a-aff2-3b2419616079",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "106258",
+              "display": "Hydrocortisone 10 MG/ML Topical Cream"
+            }
+          ],
+          "text": "Hydrocortisone 10 MG/ML Topical Cream"
+        },
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "route": {
+              "coding": [
+                {
+                  "system": "http://standardterms.edqm.eu",
+                  "code": "10502000",
+                  "display": "Cream"
+                }
+              ],
+              "text": "Cream"
+            },
+            "additionalInstruction": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "396138008",
+                    "display": "Every sixty hours (qualifier value)"
+                  }
+                ],
+                "text": "Every sixty hours (qualifier value)"
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "frequency": 4,
+                "period": 1,
+                "periodUnit": "d",
+                "boundsPeriod": {
+                  "start": "2015-07-02",
+                  "end": "2015-08-14T20:57:19.000Z"
+                }
+              }
+            },
+            "asNeededBoolean": false,
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 1
+                }
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "authoredOn": "2015-07-02T20:57:19.000Z",
+        "requester": {
+          "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|32523523523",
+          "display": "Datetime Practitioner"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "6cdbde07-a5dd-43d2-8214-9fbcd4edf5a0",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+          ]
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "288086009",
+              "display": "Suture open wound"
+            }
+          ],
+          "text": "Suture open wound"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "performedPeriod": {
+          "start": "2020-03-22",
+          "end": "2020-03-24T17:28:16+02:00"
+        },
+        "note": [
+          {
+            "text": "Suture open wound"
+          }
+        ],
+        "category": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "387713003",
+              "display": "Surgical procedure"
+            }
+          ],
+          "text": "Surgical procedure"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "86eaef17-3cb9-41f9-ba80-3da5c085d056",
+        "extension": [
+          {
+            "valueString": "Provider",
+            "url": "http://open.epic.com/FHIR/StructureDefinition/extension/surgical-history-source"
+          }
+        ],
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "387713003",
+              "display": "Surgical procedure"
+            }
+          ],
+          "text": "Surgical History"
+        },
+        "code": {
+          "text": "APPENDECTOMY"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "performedDateTime": "2019-07-02"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "99205555-9c8f-4a2c-afc0-5e59b4b4897c",
+        "extension": [
+          {
+            "valueString": "Provider",
+            "url": "http://open.epic.com/FHIR/StructureDefinition/extension/surgical-history-source"
+          }
+        ],
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "387713003",
+              "display": "Surgical procedure"
+            }
+          ],
+          "text": "Surgical History"
+        },
+        "code": {
+          "text": "CLEFT PALATE REPAIR"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "performedDateTime": "2019-05-02T00:30:00.000Z"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "18247c44-343d-447f-8b3c-2c2623c1a435",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "version": "4.0.0",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "version": "4.0.0",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          "medication"
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "5487",
+              "display": "HYDROCHLOROTHIAZIDE"
+            },
+            {
+              "system": "urn:oid:2.16.840.1.113883.4.9",
+              "code": "0J48LPH2TH"
+            }
+          ],
+          "text": "HYDROCHLOROTHIAZIDE"
+        },
+        "patient": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "onsetPeriod": {
+          "start": "2019-04-11"
+        },
+        "recordedDate": "2011-04-11T02:00:00Z",
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "Itching"
+                  }
+                ],
+                "text": "Itching"
+              }
+            ],
+            "description": "Itching",
+            "severity": "moderate"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "9d65d505-762f-4386-9dc3-d7d2501ebf01",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Active"
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "9220005",
+              "display": "Plant phenol oil (substance)"
+            }
+          ],
+          "text": "Plant phenol oil"
+        },
+        "patient": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "recordedDate": "2018-07-22",
+        "reaction": [
+          {
+            "id": "4c8c6f37-5080-4a23-8262-9d075c3790f0",
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "271757001",
+                    "display": "Papular eruption (disorder)"
+                  }
+                ],
+                "text": "Papular eruption"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1cf3ccda-8ced-4703-a83c-73bb536950b6",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ],
+            "text": "Social History"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2",
+              "display": "Tobacco smoking status"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "365980008",
+              "display": "Finding of tobacco use and exposure (finding)"
+            }
+          ],
+          "text": "Smoking History"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "effectivePeriod": {
+          "start": "2022-02-02",
+          "end": "2023-03-03"
+        },
+        "issued": "2025-08-05T00:30:00.000Z",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "266927001",
+              "display": "Tobacco smoking consumption unknown"
+            }
+          ],
+          "text": "Never Assessed"
+        }
+      }
+    },
+    {
+      "resource": {
+        "id": "44b99f8f-8c75-4bb2-98c0-9ae9ce67656c",
+        "resourceType": "DiagnosticReport",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "LP29684-5",
+                "display": "Radiology"
+              }
+            ],
+            "text": "Radiology"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "effectiveDateTime": "2022-09-09",
+        "conclusion": "STABLE",
+        "presentedForm": [
+          {
+            "contentType": "text/plain",
+            "data": "dGhpcyBpcyBvbmx5IGEgdGVzdA=="
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "179929004",
+              "display": "Examination of joint under image intensifier (procedure)"
+            }
+          ],
+          "text": "Examination of joint under image intensifier (procedure)"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "3ae9e63f-78aa-4e35-bff7-54b12844c58e",
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PLAC",
+                  "display": "Placer Identifier"
+                }
+              ],
+              "text": "Placer Identifier"
+            },
+            "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.798268",
+            "value": "794588"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab"
+              }
+            ],
+            "text": "Lab"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3"
+            },
+            {
+              "system": "urn:oid:2.16.840.1.113883.6.12",
+              "code": "82465",
+              "display": "CHG ASSAY, BLD/SERUM CHOLESTEROL"
+            }
+          ],
+          "text": "Cholesterol, total"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "effectiveDateTime": "2017-06-07T21:00:00Z",
+        "issued": "2017-06-07T21:00:00Z",
+        "performer": [
+          {
+            "reference": "Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|32523523523"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/d2f4080f-ac87-472b-8620-b0ab7b3df946",
+            "display": "Component (1): CHOLESTEROL (MG/DL) IN SER/PLAS"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d2f4080f-ac87-472b-8620-b0ab7b3df946",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          },
+          {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.840.114350.1.13.0.1.7.10.798268.30",
+                "code": "Lab",
+                "display": "Lab"
+              }
+            ],
+            "text": "Lab"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Cholesterol [Mass/volume] in Serum or Plasma"
+            },
+            {
+              "system": "urn:oid:1.2.840.114350.1.13.0.1.7.2.768282",
+              "code": "1557760",
+              "display": "Cholesterol"
+            }
+          ],
+          "text": "Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/ee9b3d18-2f6f-4730-8a45-680655089a8b"
+        },
+        "effectiveDateTime": "2017-06-07T21:00:00Z",
+        "issued": "2017-06-07T21:00:00Z",
+        "valueQuantity": {
+          "value": 220,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "A",
+                "display": "Abnormal"
+              }
+            ],
+            "text": "Abnormal"
+          }
+        ],
+        "specimen": {
+          "reference": "Specimen/eR7kU7L2.fvslbfka69jGRw3",
+          "display": "Specimen"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "high": {
+              "value": 200,
+              "unit": "mg/dL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/dL"
+            },
+            "text": "0 - 200 mg/dL"
+          }
+        ]
+      }
+    }
+  ]
+}

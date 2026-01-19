@@ -1,0 +1,1602 @@
+{
+  "id": "NCT04457596",
+  "type": "trial",
+  "name": "T-DM1 and Tucatinib Compared with T-DM1 Alone in Preventing Relapses in People with High Risk HER2-Positive Breast Cancer, the CompassHER2 RD Trial",
+  "usingAi": true,
+  "studyCompletion": "2035-05-31",
+  "description": "This phase III trial studies how well trastuzumab emtansine (T-DM1) and tucatinib work in preventing breast cancer from coming back (relapsing) in patients with high risk, HER2 positive breast cancer.\nT-DM1 is a monoclonal antibody, called trastuzumab, linked to a chemotherapy drug, called DM1.\nTrastuzumab is a form of targeted therapy because it attaches to specific molecules (receptors) on the surface of cancer cells, known as HER2 receptors, and delivers DM1 to kill them.\nTucatinib may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth.\nGiving T-DM1 and tucatinib may work better in preventing breast cancer from relapsing in patients with HER2 positive breast cancer compared to T-DM1 alone.",
+  "status": "Recruiting",
+  "phase": "3",
+  "link": "https://clinicaltrials.gov/study/NCT04457596",
+  "constants": null,
+  "variables": [
+    {
+      "id": "dob",
+      "definition": {
+        "fulfillment": {
+          "queries": [
+            {
+              "alias": "PATIENT",
+              "query": {
+                "from": "patient",
+                "show": [
+                  "attributes.dob"
+                ],
+                "dedup": true
+              }
+            }
+          ]
+        }
+      },
+      "display": "Patient's date of birth",
+      "usingAi": false
+    },
+    {
+      "id": "IsHER2Positive",
+      "definition": {
+        "ai": {
+          "criteria": "HER2-positive status based on pretreatment biopsy material and defined as an immunohistochemistry (IHC) score of 3+ and/or positive by in situ hybridization (ISH) according to current ASCO/CAP guidelines."
+        }
+      },
+      "display": "HER2-positive status",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsClinicalStageEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Clinical stage T1-4, N0-3 disease at presentation and residual invasive disease postoperatively."
+        }
+      },
+      "display": "Clinical stage",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsResidualHRNegativeHER2Positive",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has residual HR-negative, HER2 positive (+) disease in the breast and/or lymph nodes per the surgical pathology or patient has HR+ HER2+ cancer and has node-positive residual disease per the surgical pathology report. The presence of residual invasive disease in the breast is not mandatory for these patients."
+        }
+      },
+      "display": "Residual HR-negative, HER2 positive disease",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsWeaklyERPositive",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has weakly ER-positive (1-10%) breast cancer (based on the pretreatment core biopsy) even if he has node-negative disease per the surgical pathology report."
+        }
+      },
+      "display": "Weakly ER-positive breast cancer",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsSynchronousBilateralInvasiveDiseaseEligible",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has synchronous bilateral invasive disease or multifocal disease, with the largest biopsied breast tumor being HER2-positive."
+        }
+      },
+      "display": "Synchronous bilateral invasive disease",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsNeoadjuvantChemotherapyRegimenEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Patients has received neoadjuvant chemotherapy with one of the following regimens: docetaxel/trastuzumab/pertuzumab (THP), paclitaxel/methotrexate/cisplatin (TMP), doxorubicin/cyclophosphamide/paclitaxel/trastuzumab/pertuzumab (AC-TH(P)); docetaxel/carboplatin/trastuzumab/pertuzumab (TCH(P)); fluorouracil/doxorubicin/cyclophosphamide-docetaxel/trastuzumab/pertuzumab (FAC-TH(P)), or fluorouracil/epirubicin/cyclophosphamide-docetaxel/trastuzumab/pertuzumab (FEC-TH(P)). Note: apart from TCHP, where T is docetaxel, treatment with docetaxel or paclitaxel is acceptable."
+        }
+      },
+      "display": "Neoadjuvant chemotherapy regimens",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPriorReceiptOfTDM1Eligible1",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has not received T-DM1 in the neoadjuvant setting. The patient has undergone at least 6 cycles of chemotherapy and HER2-directed therapy over a minimum of 12 weeks, including at least 9 weeks of preoperative taxane and trastuzumab, with or without pertuzumab. "
+        }
+      },
+      "display": "Prior receipt of T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPriorReceiptOfTDM1Eligible2",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received 9 weeks of preoperative taxane, pertuzumab, and margetuximab, with at least 6 cycles of systemic therapy."
+        }
+      },
+      "display": "Prior receipt of T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPriorReceiptOfTDM1Eligible3",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have discontinued paclitaxel or docetaxel prematurely due to toxicity after completing at least nine doses of weekly paclitaxel or three doses of docetaxel."
+        }
+      },
+      "display": "Prior receipt of T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPriorReceiptOfTDM1Eligible4",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received dose-dense chemotherapy regimens."
+        }
+      },
+      "display": "Prior receipt of T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPriorReceiptOfTDM1Eligible5",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received nab-paclitaxel  (Abraxane) instead of paclitaxel or docetaxel."
+        }
+      },
+      "display": "Prior receipt of T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPriorReceiptOfTDM1Eligible6",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received subcutaneous trastuzumab (Hylecta) and subcutaneous trastuzumab and pertuzumab (Phesgo)."
+        }
+      },
+      "display": "Prior receipt of T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsNeoadjuvantSystemicTherapyWithExperimentalHER2TargetedTherapyEligible",
+      "definition": {
+        "ai": {
+          "criteria": "The patient received neoadjuvant systemic therapy that included experimental HER2-targeted therapies, but did not receive a HER2-targeted antibody-drug conjugate (e.g., T-DM1, DS-8201a) or a HER2-targeted tyrosine kinase inhibitor (e.g., tucatinib, lapatinib, neratinib)."
+        }
+      },
+      "display": "Neoadjuvant systemic therapy with experimental HER2-targeted therapy",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsAdjuvantSettingTDM1Eligible1",
+      "definition": {
+        "ai": {
+          "criteria": "The patient has received <= 1 cycle of T-DM1 in the adjuvant setting.The most recent cycle of T-DM1 has been administered <= 5 weeks prior to registration.An interval of no more than 12 weeks between the completion date of the last definitive treatment (e.g. postoperative chemotherapy or radiation, or if neither given, breast surgical date) and the date of registration.Concurrent radiation therapy is permitted while receiving study treatment."
+        }
+      },
+      "display": "Adjuvant setting T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsAdjuvantSettingTDM1Eligible2",
+      "definition": {
+        "ai": {
+          "criteria": "Patients must be registered on study within =< 180 days of the date of the most recent definitive breast cancer surgery (not including reconstructive surgery)."
+        }
+      },
+      "display": "Adjuvant setting T-DM1",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsSystemicChemotherapyCompletionEligible",
+      "definition": {
+        "ai": {
+          "criteria": "All systemic chemotherapy has been completed preoperatively unless the patient is participating in EA1181 (CompassHER2 pathologic complete response [pCR]) or the BIG DECRESCENDO Trial (which is very similar to CompassHER2 pCR in terms of study design, drugs, and eligibility)."
+        }
+      },
+      "display": "Systemic chemotherapy completion",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsResolutionOfToxicitiesEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Toxicities related to prior systemic treatment have been resolved or be at baseline, apart from alopecia and peripheral neuropathy <= grade 1."
+        }
+      },
+      "display": "Resolution of toxicities",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsAdequateExcisionEligible1",
+      "definition": {
+        "ai": {
+          "criteria": "Adequate excision: surgical removal of all clinically evident disease in the breast and lymph nodes as follows: total mastectomy with no gross residual disease at the margin of resection"
+        }
+      },
+      "display": "Adequate excision - no gross residual disease",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsAdequateExcisionEligible2",
+      "definition": {
+        "ai": {
+          "criteria": "Adequate excision: surgical removal of all clinically evident disease in the breast and lymph nodes as follows: breast-conserving surgery with histologically negative margins of excision"
+        }
+      },
+      "display": "Adequate excision -  negative margins of excision",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsECOGPerformanceStatusEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1."
+        }
+      },
+      "display": "ECOG performance status",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsAbsoluteNeutrophilCountEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Absolute neutrophil count (ANC) >= 1,000/mm^3."
+        }
+      },
+      "display": "Absolute neutrophil count",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsHemoglobinLevelEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Hemoglobin >= 8 g/dL ( no packed red blood cells [PRBC] transfusion )."
+        }
+      },
+      "display": "Hemoglobin level",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPlateletCountEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Platelet count >= 100,000/mm^3."
+        }
+      },
+      "display": "Platelet count",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsCreatinineLevelEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Creatinine <= 1.5 x upper limit of normal (ULN)."
+        }
+      },
+      "display": "Creatinine level",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsTotalBilirubinLevelEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Total bilirubin <= 1.0 x upper limit of normal (ULN) or direct bilirubin within the institutional normal range for patients with Gilbert's syndrome."
+        }
+      },
+      "display": "Total bilirubin level",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsASTALTLevelsEligible",
+      "definition": {
+        "ai": {
+          "criteria": "Aspartate aminotransferase (AST)/alanine aminotransferase (ALT) <= 2.5 x upper limit of normal (ULN)."
+        }
+      },
+      "display": "AST/ALT levels",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsScreeningLVEFEligible1",
+      "definition": {
+        "ai": {
+          "criteria": "Screening left ventricular ejection fraction (LVEF) >= 50% on echocardiogram (ECHO) or multiple-gated acquisition (MUGA) after receiving neoadjuvant chemotherapy and no decrease in LVEF by more than 15% absolute percentage points from the pre-chemotherapy LVEF."
+        }
+      },
+      "display": "Screening LVEF - no decrease",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsScreeningLVEFEligible2",
+      "definition": {
+        "ai": {
+          "criteria": "Screening left ventricular ejection fraction (LVEF) >= 50% on echocardiogram (ECHO) or multiple-gated acquisition (MUGA) if pre-chemotherapy LVEF was not assessed, the screening LVEF must be >= 55% after completion of neoadjuvant chemotherapy. Note: LVEF assessment may be repeated once up to 3 weeks following the initial screening assessment to assess eligibility."
+        }
+      },
+      "display": "Screening LVEF - pre-chemotherapy LVEF was not assessed",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsAdjuvantTreatmentWithInvestigationalDrugExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Adjuvant treatment with any anti-cancer investigational drug within 28 days prior to registration."
+        }
+      },
+      "display": "Adjuvant treatment with investigational drug",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPregnancyAndNursingExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "pregnant or nursing"
+        }
+      },
+      "display": "Pregnant or nursing",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsActiveHepatitisBOrCExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has known active and/or untreated hepatitis B or hepatitis C or chronic liver disease are ineligible."
+        }
+      },
+      "display": "Active hepatitis B or C",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsStageIVBreastCancerExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Stage IV (metastatic) breast cancer."
+        }
+      },
+      "display": "Stage IV breast cancer",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPriorInvasiveBreastCancerExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "History of any prior (ipsi- or contralateral) invasive breast cancer within 3 years of registration."
+        }
+      },
+      "display": "Prior invasive breast cancer",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsERHER2ResidualDiseaseExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Patient has ER+ HER2+ residual invasive disease that is lymph node-negative per the surgical pathology report."
+        }
+      },
+      "display": "ER+ HER2+ residual disease",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsRecurrentDiseaseExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Evidence of recurrent disease following preoperative therapy and surgery."
+        }
+      },
+      "display": "Recurrent disease",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsRadiotherapyContraindicationExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Radiotherapy is contraindicated because of medical reasons (e.g., connective tissue disorder or prior ipsilateral breast radiation)."
+        }
+      },
+      "display": "Radiotherapy contraindication",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsAnthracyclineExposureExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "History of exposure to the following cumulative doses of anthracyclines: doxorubicin > 240 mg/m^2; epirubicin or liposomal doxorubicin-hydrochloride (Myocet) > 480 mg/m^2. For other anthracyclines, exposure equivalent to doxorubicin > 240 mg/m^2."
+        }
+      },
+      "display": "Anthracycline exposure",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsSevereUncontrolledSystemicDiseaseExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Current severe, uncontrolled systemic disease."
+        }
+      },
+      "display": "Severe uncontrolled systemic disease",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsMajorSurgicalProcedureExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Major surgical procedure unrelated to breast cancer or significant traumatic injury within 28 days prior to registration or anticipation of the need for major surgery during the course of study treatment."
+        }
+      },
+      "display": "Major surgical procedure",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsIntoleranceToTrastuzumabExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "History of intolerance, including grade 3 to 4 infusion reaction or hypersensitivity to trastuzumab or murine proteins or any components of the product."
+        }
+      },
+      "display": "Intolerance to trastuzumab",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsPeripheralNeuropathyExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Peripheral neuropathy of any etiology that exceeds grade 1."
+        }
+      },
+      "display": "Peripheral neuropathy",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsNonComplianceWithProtocolExcluded",
+      "definition": {
+        "ai": {
+          "criteria": "Assessment by the investigator as being unable or unwilling to comply with the requirements of the protocol."
+        }
+      },
+      "display": "Non-compliance with protocol",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsCardiopulmonaryDysfunctionExcluded1",
+      "definition": {
+        "ai": {
+          "criteria": "Cardiopulmonary dysfunction as defined by any of the following : History of National Cancer Institute (NCI) CTCAE version (v) 5.0 grade >= 3 symptomatic congestive heart failure (CHF) or New York Heart Association (NYHA) criteria class >= II"
+        }
+      },
+      "display": "Cardiopulmonary dysfunction - NCI",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsCardiopulmonaryDysfunctionExcluded2",
+      "definition": {
+        "ai": {
+          "criteria": "Cardiopulmonary dysfunction as defined by any of the following : Angina pectoris requiring anti-anginal medication, serious cardiac arrhythmia not controlled by adequate medication, severe conduction abnormality, or clinically significant valvular disease"
+        }
+      },
+      "display": "Cardiopulmonary dysfunction - angina pectoris",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsCardiopulmonaryDysfunctionExcluded3",
+      "definition": {
+        "ai": {
+          "criteria": "Cardiopulmonary dysfunction as defined by any of the following : High-risk uncontrolled arrhythmias: i.e., atrial tachycardia with a heart rate > 100/min at rest, significant ventricular arrhythmia (ventricular tachycardia) or higher-grade atrioventricular block (AV)-block (second degree AV-block type 2 [Mobitz 2] or third degree AV-block)"
+        }
+      },
+      "display": "Cardiopulmonary dysfunction - uncontrolled arrhythmias",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsCardiopulmonaryDysfunctionExcluded4",
+      "definition": {
+        "ai": {
+          "criteria": "Cardiopulmonary dysfunction as defined by any of the following :Significant symptoms (grade >= 2) relating to left ventricular dysfunction, cardiac arrhythmia, or cardiac ischemia while or since receiving preoperative therapy "
+        }
+      },
+      "display": "Cardiopulmonary dysfunction - left ventricular dysfunction",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsCardiopulmonaryDysfunctionExcluded5",
+      "definition": {
+        "ai": {
+          "criteria": "Cardiopulmonary dysfunction as defined by any of the following : History of a decrease in left ventricular ejection fraction (LVEF) to < 40% with prior trastuzumab treatment (e.g., during preoperative therapy)"
+        }
+      },
+      "display": "Cardiopulmonary dysfunction - left ventricular ejection fraction",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsCardiopulmonaryDysfunctionExcluded6",
+      "definition": {
+        "ai": {
+          "criteria": "Cardiopulmonary dysfunction as defined by any of the following : Uncontrolled hypertension (systolic blood pressure > 180 mmHg and/or diastolic blood pressure > 100 mmHg) "
+        }
+      },
+      "display": "Cardiopulmonary dysfunction - uncontrolled hypertension",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded1",
+      "definition": {
+        "ai": {
+          "criteria": "Use of sensitive CYP3A substrates two weeks before registration and during study treatment."
+        }
+      },
+      "display": "Use of CYP3A4 or CYP2C8 two weeks before registration",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded2",
+      "definition": {
+        "ai": {
+          "criteria": "CYP3A4 or CYP2C8 inducers as concomitant medications within 5 days following discontinuation of tucatinib treatment."
+        }
+      },
+      "display": "CYP3A4 or CYP2C8 within 5 days following discontinuation of tucatinib treatment",
+      "value": null,
+      "usingAi": true
+    },
+    {
+      "id": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded3",
+      "definition": {
+        "ai": {
+          "criteria": "Require medications that are known to be sensitive substrates of CYP3A4 with a narrow therapeutic window."
+        }
+      },
+      "display": "Sensitive substrates of CYP3A4",
+      "value": null,
+      "usingAi": true
+    }
+  ],
+  "criteria": [
+    {
+      "id": "criteria_age",
+      "type": "inclusion",
+      "title": "Age >= 18 years",
+      "allowMissingVariables": [
+        "dob"
+      ],
+      "dependency": [
+        "dob"
+      ],
+      "expression": "isAgeGt18",
+      "subCriteria": [
+        {
+          "id": "isAgeGt18",
+          "title": "Age is greater than 18",
+          "description": "Age is greater than 18",
+          "expression": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-07-30`,`years`,`int`) >= `18`",
+          "explainability": {
+            "displayValue": "variables.dob.value[].attributes.dob|abs_date_diff([0], `2025-07-30`,`years`,`int`)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have HER2-positive status based on pretreatment biopsy material and defined as an immunohistochemistry (IHC) score of 3+ and/or positive by in situ hybridization (ISH) according to current ASCO/CAP guidelines.",
+      "expression": "IsHER2Positive",
+      "id": "IsHER2Positive",
+      "allowMissingVariables": [
+        "IsHER2Positive"
+      ],
+      "dependency": [
+        "IsHER2Positive"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsHER2Positive",
+          "title": "HER2-positive status",
+          "description": "HER2-positive status based on pretreatment biopsy material and defined as an immunohistochemistry (IHC) score of 3+ and/or positive by in situ hybridization (ISH) according to current ASCO/CAP guidelines.",
+          "expression": "variables.IsHER2Positive.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsHER2Positive.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have stage T1-4, N0-3 disease at presentation and residual invasive disease postoperatively.",
+      "expression": "IsClinicalStageEligible",
+      "id": "IsClinicalStageEligible",
+      "allowMissingVariables": [
+        "IsClinicalStageEligible"
+      ],
+      "dependency": [
+        "IsClinicalStageEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsClinicalStageEligible",
+          "title": "Clinical stage",
+          "description": "Clinical stage T1-4, N0-3 disease at presentation and residual invasive disease postoperatively.",
+          "expression": "variables.IsClinicalStageEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsClinicalStageEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have residual HR-negative, HER2 positive (+) disease in the breast and/or lymph nodes per the surgical pathology or patient has HR+ HER2+ cancer and has node-positive residual disease per the surgical pathology report. The presence of residual invasive disease in the breast is not mandatory for these patients.",
+      "expression": "IsResidualHRNegativeHER2Positive",
+      "id": "IsResidualHRNegativeHER2Positive",
+      "allowMissingVariables": [
+        "IsResidualHRNegativeHER2Positive"
+      ],
+      "dependency": [
+        "IsResidualHRNegativeHER2Positive"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsResidualHRNegativeHER2Positive",
+          "title": "Residual HR-negative, HER2 positive",
+          "description": "Patient has residual HR-negative, HER2 positive (+) disease in the breast and/or lymph nodes per the surgical pathology or patient has HR+ HER2+ cancer and has node-positive residual disease per the surgical pathology report. The presence of residual invasive disease in the breast is not mandatory for these patients.",
+          "expression": "variables.IsResidualHRNegativeHER2Positive.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsResidualHRNegativeHER2Positive.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have weakly ER-positive (1-10%) breast cancer (based on the pretreatment core biopsy) are eligible even if they have node-negative disease per the surgical pathology report.",
+      "expression": "IsWeaklyERPositive",
+      "id": "IsWeaklyERPositive",
+      "allowMissingVariables": [
+        "IsWeaklyERPositive"
+      ],
+      "dependency": [
+        "IsWeaklyERPositive"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsWeaklyERPositive",
+          "title": "Weakly ER-positive",
+          "description": "Patient has weakly ER-positive (1-10%) breast cancer (based on the pretreatment core biopsy) even if he has node-negative disease per the surgical pathology report.",
+          "expression": "variables.IsWeaklyERPositive.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsWeaklyERPositive.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have synchronous bilateral invasive disease or multifocal disease, with the largest biopsied breast tumor being HER2-positive.",
+      "expression": "IsSynchronousBilateralInvasiveDiseaseEligible",
+      "id": "IsSynchronousBilateralInvasiveDiseaseEligible",
+      "allowMissingVariables": [
+        "IsSynchronousBilateralInvasiveDiseaseEligible"
+      ],
+      "dependency": [
+        "IsSynchronousBilateralInvasiveDiseaseEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsSynchronousBilateralInvasiveDiseaseEligible",
+          "title": "Synchronous bilateral invasive",
+          "description": "The patient has synchronous bilateral invasive disease or multifocal disease, with the largest biopsied breast tumor being HER2-positive.",
+          "expression": "variables.IsSynchronousBilateralInvasiveDiseaseEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsSynchronousBilateralInvasiveDiseaseEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have received neoadjuvant chemotherapy with one of the following regimens: docetaxel/trastuzumab/pertuzumab (THP), paclitaxel/methotrexate/cisplatin (TMP), doxorubicin/cyclophosphamide/paclitaxel/trastuzumab/pertuzumab (AC-TH(P)); docetaxel/carboplatin/trastuzumab/pertuzumab (TCH(P)); fluorouracil/doxorubicin/cyclophosphamide-docetaxel/trastuzumab/pertuzumab (FAC-TH(P)), or fluorouracil/epirubicin/cyclophosphamide-docetaxel/trastuzumab/pertuzumab (FEC-TH(P)). Note: apart from TCHP, where T is docetaxel, treatment with docetaxel or paclitaxel is acceptable.",
+      "expression": "IsNeoadjuvantChemotherapyRegimenEligible",
+      "id": "IsNeoadjuvantChemotherapyRegimenEligible",
+      "allowMissingVariables": [
+        "IsNeoadjuvantChemotherapyRegimenEligible"
+      ],
+      "dependency": [
+        "IsNeoadjuvantChemotherapyRegimenEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsNeoadjuvantChemotherapyRegimenEligible",
+          "title": "Neoadjuvant chemotherapy regimens",
+          "description": "Neoadjuvant chemotherapy regimens",
+          "expression": "variables.IsNeoadjuvantChemotherapyRegimenEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsNeoadjuvantChemotherapyRegimenEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Participants must have not received T-DM1 in the neoadjuvant setting and must have ...",
+      "expression": "IsPriorReceiptOfTDM1Eligible1 || IsPriorReceiptOfTDM1Eligible2 || IsPriorReceiptOfTDM1Eligible3 || IsPriorReceiptOfTDM1Eligible4 || IsPriorReceiptOfTDM1Eligible5 || IsPriorReceiptOfTDM1Eligible6 || IsNeoadjuvantSystemicTherapyWithExperimentalHER2TargetedTherapyEligible",
+      "id": "IsPriorReceiptOfTDM1Eligible",
+      "allowMissingVariables": [
+        "IsPriorReceiptOfTDM1Eligible1",
+        "IsPriorReceiptOfTDM1Eligible2",
+        "IsPriorReceiptOfTDM1Eligible3",
+        "IsPriorReceiptOfTDM1Eligible4",
+        "IsPriorReceiptOfTDM1Eligible5",
+        "IsPriorReceiptOfTDM1Eligible6",
+        "IsNeoadjuvantSystemicTherapyWithExperimentalHER2TargetedTherapyEligible"
+      ],
+      "dependency": [
+        "IsPriorReceiptOfTDM1Eligible1",
+        "IsPriorReceiptOfTDM1Eligible2",
+        "IsPriorReceiptOfTDM1Eligible3",
+        "IsPriorReceiptOfTDM1Eligible4",
+        "IsPriorReceiptOfTDM1Eligible5",
+        "IsPriorReceiptOfTDM1Eligible6",
+        "IsNeoadjuvantSystemicTherapyWithExperimentalHER2TargetedTherapyEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsPriorReceiptOfTDM1Eligible1",
+          "title": "The patient has not received T-DM1 in the neoadjuvant setting. The patient has undergone at least 6 cycles of chemotherapy and HER2-directed therapy over a minimum of 12 weeks, including at least 9 weeks of preoperative taxane and trastuzumab, with or without pertuzumab.",
+          "description": "6 cycles of chemotherapy and HER2-directed therapy",
+          "expression": "variables.IsPriorReceiptOfTDM1Eligible1.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPriorReceiptOfTDM1Eligible1.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsPriorReceiptOfTDM1Eligible2",
+          "title": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received 9 weeks of preoperative taxane, pertuzumab, and margetuximab, with at least 6 cycles of systemic therapy.",
+          "description": "9 weeks of preoperative taxane, pertuzumab, and margetuximab",
+          "expression": "variables.IsPriorReceiptOfTDM1Eligible2.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPriorReceiptOfTDM1Eligible2.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsPriorReceiptOfTDM1Eligible3",
+          "title": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have discontinued paclitaxel or docetaxel prematurely due to toxicity after completing at least nine doses of weekly paclitaxel or three doses of docetaxel.",
+          "description": "Discontinued paclitaxel or docetaxel prematurely due to toxicity",
+          "expression": "variables.IsPriorReceiptOfTDM1Eligible3.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPriorReceiptOfTDM1Eligible3.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsPriorReceiptOfTDM1Eligible4",
+          "title": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received dose-dense chemotherapy regimens.",
+          "description": "Dose-dense chemotherapy regimens",
+          "expression": "variables.IsPriorReceiptOfTDM1Eligible4.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPriorReceiptOfTDM1Eligible4.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsPriorReceiptOfTDM1Eligible5",
+          "title": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received nab-paclitaxel  (Abraxane) instead of paclitaxel or docetaxel.",
+          "description": "Nab-paclitaxel instead of paclitaxel or docetaxel",
+          "expression": "variables.IsPriorReceiptOfTDM1Eligible5.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPriorReceiptOfTDM1Eligible5.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsPriorReceiptOfTDM1Eligible6",
+          "title": "The patient has not received T-DM1 in the neoadjuvant setting. The patient have received subcutaneous trastuzumab (Hylecta) and subcutaneous trastuzumab and pertuzumab (Phesgo).",
+          "description": "Subcutaneous trastuzumab and subcutaneous trastuzumab and pertuzumab",
+          "expression": "variables.IsPriorReceiptOfTDM1Eligible6.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPriorReceiptOfTDM1Eligible6.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsNeoadjuvantSystemicTherapyWithExperimentalHER2TargetedTherapyEligible",
+          "title": "The patient received neoadjuvant systemic therapy that included experimental HER2-targeted therapies, but did not receive a HER2-targeted antibody-drug conjugate (e.g., T-DM1, DS-8201a) or a HER2-targeted tyrosine kinase inhibitor (e.g., tucatinib, lapatinib, neratinib).",
+          "description": "Neoadjuvant systemic therapy with experimental HER2-targeted therapy",
+          "expression": "variables.IsNeoadjuvantSystemicTherapyWithExperimentalHER2TargetedTherapyEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsNeoadjuvantSystemicTherapyWithExperimentalHER2TargetedTherapyEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "\nPatients may have received =< 1 cycles of T-DM1 in the adjuvant setting. The most recent cycle of T-DM1 should have been administered =< 5 weeks prior to registration.",
+      "expression": "IsAdjuvantSettingTDM1Eligible1 && IsAdjuvantSettingTDM1Eligible2",
+      "id": "IsAdjuvantSettingTDM1Eligible",
+      "allowMissingVariables": [
+        "IsAdjuvantSettingTDM1Eligible1",
+        "IsAdjuvantSettingTDM1Eligible2"
+      ],
+      "dependency": [
+        "IsAdjuvantSettingTDM1Eligible1",
+        "IsAdjuvantSettingTDM1Eligible2"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsAdjuvantSettingTDM1Eligible1",
+          "title": "The patient has received <= 1 cycle of T-DM1 in the adjuvant setting. The most recent cycle of T-DM1 has been administered <= 5 weeks prior to registration.An interval of no more than 12 weeks between the completion date of the last definitive treatment (e.g. postoperative chemotherapy or radiation, or if neither given, breast surgical date) and the date of registration.Concurrent radiation therapy is permitted while receiving study treatment.",
+          "description": "Adjuvant setting T-DM1",
+          "expression": "variables.IsAdjuvantSettingTDM1Eligible1.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsAdjuvantSettingTDM1Eligible1.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsAdjuvantSettingTDM1Eligible2",
+          "title": "Patients must be registered on study within =< 180 days of the date of the most recent definitive breast cancer surgery (not including reconstructive surgery).",
+          "description": "Study registration period",
+          "expression": "variables.IsAdjuvantSettingTDM1Eligible2.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsAdjuvantSettingTDM1Eligible2.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "All systemic chemotherapy should have been completed preoperatively unless participating in EA1181 (CompassHER2 pathologic complete response [pCR]) or the BIG DECRESCENDO Trial (which is very similar to CompassHER2 pCR in terms of study design, drugs, and eligibility).",
+      "expression": "IsSystemicChemotherapyCompletionEligible",
+      "id": "IsSystemicChemotherapyCompletionEligible",
+      "allowMissingVariables": [
+        "IsSystemicChemotherapyCompletionEligible"
+      ],
+      "dependency": [
+        "IsSystemicChemotherapyCompletionEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsSystemicChemotherapyCompletionEligible",
+          "title": "Systemic chemotherapy completion",
+          "description": "Systemic chemotherapy completion",
+          "expression": "variables.IsSystemicChemotherapyCompletionEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsSystemicChemotherapyCompletionEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Toxicities related to prior systemic treatment should have resolved or be at baseline, apart from alopecia and peripheral neuropathy =< grade 1",
+      "expression": "IsResolutionOfToxicitiesEligible",
+      "id": "IsResolutionOfToxicitiesEligible",
+      "allowMissingVariables": [
+        "IsResolutionOfToxicitiesEligible"
+      ],
+      "dependency": [
+        "IsResolutionOfToxicitiesEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsResolutionOfToxicitiesEligible",
+          "title": "Resolution of toxicities",
+          "description": "Resolution of toxicities",
+          "expression": "variables.IsResolutionOfToxicitiesEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsResolutionOfToxicitiesEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Adequate excision: surgical removal of all clinically evident disease in the breast and lymph nodes as follows:",
+      "expression": "IsAdequateExcisionEligible1 || IsAdequateExcisionEligible2",
+      "id": "IsAdequateExcisionEligible",
+      "allowMissingVariables": [
+        "IsAdequateExcisionEligible1",
+        "IsAdequateExcisionEligible2"
+      ],
+      "dependency": [
+        "IsAdequateExcisionEligible1",
+        "IsAdequateExcisionEligible2"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsAdequateExcisionEligible1",
+          "title": "Adequate excision - no gross residual disease",
+          "description": "Adequate excision: surgical removal of all clinically evident disease in the breast and lymph nodes as follows: total mastectomy with no gross residual disease at the margin of resection",
+          "expression": "variables.IsAdequateExcisionEligible1.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsAdequateExcisionEligible1.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsAdequateExcisionEligible2",
+          "title": "Adequate excision -  negative margins of excision",
+          "description": "Adequate excision: surgical removal of all clinically evident disease in the breast and lymph nodes as follows: breast-conserving surgery with histologically negative margins of excision",
+          "expression": "variables.IsAdequateExcisionEligible2.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsAdequateExcisionEligible2.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1",
+      "expression": "IsECOGPerformanceStatusEligible",
+      "id": "IsECOGPerformanceStatusEligible",
+      "allowMissingVariables": [
+        "IsECOGPerformanceStatusEligible"
+      ],
+      "dependency": [
+        "IsECOGPerformanceStatusEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsECOGPerformanceStatusEligible",
+          "title": "ECOG performance status",
+          "description": "Eastern Cooperative Oncology Group (ECOG) performance status 0-1.",
+          "expression": "variables.IsECOGPerformanceStatusEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsECOGPerformanceStatusEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Absolute neutrophil count (ANC) >= 1,000/mm^3",
+      "expression": "IsAbsoluteNeutrophilCountEligible",
+      "id": "IsAbsoluteNeutrophilCountEligible",
+      "allowMissingVariables": [
+        "IsAbsoluteNeutrophilCountEligible"
+      ],
+      "dependency": [
+        "IsAbsoluteNeutrophilCountEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsAbsoluteNeutrophilCountEligible",
+          "title": "Absolute neutrophil count",
+          "description": "Absolute neutrophil count (ANC) >= 1,000/mm^3.",
+          "expression": "variables.IsAbsoluteNeutrophilCountEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsAbsoluteNeutrophilCountEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Hemoglobin >= 8 g/dL ( no packed red blood cells [PRBC] transfusion ).",
+      "expression": "IsHemoglobinLevelEligible",
+      "id": "IsHemoglobinLevelEligible",
+      "allowMissingVariables": [
+        "IsHemoglobinLevelEligible"
+      ],
+      "dependency": [
+        "IsHemoglobinLevelEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsHemoglobinLevelEligible",
+          "title": "Hemoglobin level",
+          "description": "Hemoglobin >= 8 g/dL ( no packed red blood cells [PRBC] transfusion ).",
+          "expression": "variables.IsHemoglobinLevelEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsHemoglobinLevelEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Platelet count >= 100,000/mm^3.",
+      "expression": "IsPlateletCountEligible",
+      "id": "IsPlateletCountEligible",
+      "allowMissingVariables": [
+        "IsPlateletCountEligible"
+      ],
+      "dependency": [
+        "IsPlateletCountEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsPlateletCountEligible",
+          "title": "Platelet count",
+          "description": "Platelet count >= 100,000/mm^3.",
+          "expression": "variables.IsPlateletCountEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPlateletCountEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Creatinine <= 1.5 x upper limit of normal (ULN).",
+      "expression": "IsCreatinineLevelEligible",
+      "id": "IsCreatinineLevelEligible",
+      "allowMissingVariables": [
+        "IsCreatinineLevelEligible"
+      ],
+      "dependency": [
+        "IsCreatinineLevelEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsCreatinineLevelEligible",
+          "title": "Creatinine level",
+          "description": "Creatinine <= 1.5 x upper limit of normal (ULN).",
+          "expression": "variables.IsCreatinineLevelEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsCreatinineLevelEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Total bilirubin <= 1.0 x upper limit of normal (ULN) or direct bilirubin within the institutional normal range for patients with Gilbert's syndrome.",
+      "expression": "IsTotalBilirubinLevelEligible",
+      "id": "IsTotalBilirubinLevelEligible",
+      "allowMissingVariables": [
+        "IsTotalBilirubinLevelEligible"
+      ],
+      "dependency": [
+        "IsTotalBilirubinLevelEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsTotalBilirubinLevelEligible",
+          "title": "Total bilirubin level",
+          "description": "Total bilirubin <= 1.0 x upper limit of normal (ULN) or direct bilirubin within the institutional normal range for patients with Gilbert's syndrome.",
+          "expression": "variables.IsTotalBilirubinLevelEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsTotalBilirubinLevelEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Aspartate aminotransferase (AST)/alanine aminotransferase (ALT) <= 2.5 x upper limit of normal (ULN).",
+      "expression": "IsASTALTLevelsEligible",
+      "id": "IsASTALTLevelsEligible",
+      "allowMissingVariables": [
+        "IsASTALTLevelsEligible"
+      ],
+      "dependency": [
+        "IsASTALTLevelsEligible"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsASTALTLevelsEligible",
+          "title": "AST/ALT levels",
+          "description": "Aspartate aminotransferase (AST)/alanine aminotransferase (ALT) <= 2.5 x upper limit of normal (ULN).",
+          "expression": "variables.IsASTALTLevelsEligible.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsASTALTLevelsEligible.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "inclusion",
+      "title": "Screening LVEF",
+      "expression": "IsScreeningLVEFEligible1 || IsScreeningLVEFEligible2",
+      "id": "IsScreeningLVEFEligible",
+      "allowMissingVariables": [
+        "IsScreeningLVEFEligible1",
+        "IsScreeningLVEFEligible2"
+      ],
+      "dependency": [
+        "IsScreeningLVEFEligible1",
+        "IsScreeningLVEFEligible2"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsScreeningLVEFEligible1",
+          "title": "Screening left ventricular ejection fraction (LVEF) >= 50% on echocardiogram (ECHO) or multiple-gated acquisition (MUGA) after receiving neoadjuvant chemotherapy and no decrease in LVEF by more than 15% absolute percentage points from the pre-chemotherapy LVEF.",
+          "description": "Screening LVEF - no decrease",
+          "expression": "variables.IsScreeningLVEFEligible1.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsScreeningLVEFEligible1.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsScreeningLVEFEligible2",
+          "title": "Screening left ventricular ejection fraction (LVEF) >= 50% on echocardiogram (ECHO) or multiple-gated acquisition (MUGA) if pre-chemotherapy LVEF was not assessed, the screening LVEF must be >= 55% after completion of neoadjuvant chemotherapy. Note: LVEF assessment may be repeated once up to 3 weeks following the initial screening assessment to assess eligibility.",
+          "description": "Screening LVEF - pre-chemotherapy LVEF was not assessed",
+          "expression": "variables.IsScreeningLVEFEligible2.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsScreeningLVEFEligible2.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "No adjuvant treatment with any anti-cancer investigational drug within 28 days prior to registration",
+      "expression": "IsAdjuvantTreatmentWithInvestigationalDrugExcluded",
+      "id": "IsAdjuvantTreatmentWithInvestigationalDrugExcluded",
+      "allowMissingVariables": [
+        "IsAdjuvantTreatmentWithInvestigationalDrugExcluded"
+      ],
+      "dependency": [
+        "IsAdjuvantTreatmentWithInvestigationalDrugExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsAdjuvantTreatmentWithInvestigationalDrugExcluded",
+          "title": "Adjuvant treatment with investigational drug",
+          "description": "Adjuvant treatment with any anti-cancer investigational drug within 28 days prior to registration.",
+          "expression": "variables.IsAdjuvantTreatmentWithInvestigationalDrugExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsAdjuvantTreatmentWithInvestigationalDrugExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Pregnancy or nursing",
+      "expression": "IsPregnancyAndNursingExcluded",
+      "id": "IsPregnancyAndNursingExcluded",
+      "allowMissingVariables": [
+        "IsPregnancyAndNursingExcluded"
+      ],
+      "dependency": [
+        "IsPregnancyAndNursingExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsPregnancyAndNursingExcluded",
+          "title": "Pregnancy or nursing",
+          "description": "pregnant or nursing",
+          "expression": "variables.IsPregnancyAndNursingExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPregnancyAndNursingExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patients with known active and/or untreated hepatitis B or hepatitis C or chronic liver disease are ineligible. ",
+      "expression": "IsActiveHepatitisBOrCExcluded",
+      "id": "IsActiveHepatitisBOrCExcluded",
+      "allowMissingVariables": [
+        "IsActiveHepatitisBOrCExcluded"
+      ],
+      "dependency": [
+        "IsActiveHepatitisBOrCExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsActiveHepatitisBOrCExcluded",
+          "title": "Active hepatitis B or C",
+          "description": "Patient has known active and/or untreated hepatitis B or hepatitis C or chronic liver disease are ineligible.",
+          "expression": "variables.IsActiveHepatitisBOrCExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsActiveHepatitisBOrCExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants with stage IV breast cancer are ineligible.",
+      "expression": "IsStageIVBreastCancerExcluded",
+      "id": "IsStageIVBreastCancerExcluded",
+      "allowMissingVariables": [
+        "IsStageIVBreastCancerExcluded"
+      ],
+      "dependency": [
+        "IsStageIVBreastCancerExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsStageIVBreastCancerExcluded",
+          "title": "Stage IV breast cancer",
+          "description": "Stage IV (metastatic) breast cancer.",
+          "expression": "variables.IsStageIVBreastCancerExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsStageIVBreastCancerExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have history of any prior (ipsi- or contralateral) invasive breast cancer within 3 years of registration.",
+      "expression": "IsPriorInvasiveBreastCancerExcluded",
+      "id": "IsPriorInvasiveBreastCancerExcluded",
+      "allowMissingVariables": [
+        "IsPriorInvasiveBreastCancerExcluded"
+      ],
+      "dependency": [
+        "IsPriorInvasiveBreastCancerExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsPriorInvasiveBreastCancerExcluded",
+          "title": "Prior invasive breast cancer",
+          "description": "History of any prior (ipsi- or contralateral) invasive breast cancer within 3 years of registration.",
+          "expression": "variables.IsPriorInvasiveBreastCancerExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPriorInvasiveBreastCancerExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have ER+ HER2+ residual invasive disease that is lymph node-negative per the surgical pathology report.",
+      "expression": "IsERHER2ResidualDiseaseExcluded",
+      "id": "IsERHER2ResidualDiseaseExcluded",
+      "allowMissingVariables": [
+        "IsERHER2ResidualDiseaseExcluded"
+      ],
+      "dependency": [
+        "IsERHER2ResidualDiseaseExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsERHER2ResidualDiseaseExcluded",
+          "title": "ER+ HER2+ residual disease",
+          "description": "ER+ HER2+ residual disease",
+          "expression": "variables.IsERHER2ResidualDiseaseExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsERHER2ResidualDiseaseExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have evidence of recurrent disease following preoperative therapy and surgery.",
+      "expression": "IsRecurrentDiseaseExcluded",
+      "id": "IsRecurrentDiseaseExcluded",
+      "allowMissingVariables": [
+        "IsRecurrentDiseaseExcluded"
+      ],
+      "dependency": [
+        "IsRecurrentDiseaseExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsRecurrentDiseaseExcluded",
+          "title": "Recurrent disease",
+          "description": "Evidence of recurrent disease following preoperative therapy and surgery.",
+          "expression": "variables.IsRecurrentDiseaseExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsRecurrentDiseaseExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patients for whom radiotherapy would be recommended for breast cancer treatment but for whom it is contraindicated because of medical reasons (e.g., connective tissue disorder or prior ipsilateral breast radiation)",
+      "expression": "IsRadiotherapyContraindicationExcluded",
+      "id": "IsRadiotherapyContraindicationExcluded",
+      "allowMissingVariables": [
+        "IsRadiotherapyContraindicationExcluded"
+      ],
+      "dependency": [
+        "IsRadiotherapyContraindicationExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsRadiotherapyContraindicationExcluded",
+          "title": "Radiotherapy contraindication",
+          "description": "Radiotherapy is contraindicated because of medical reasons (e.g., connective tissue disorder or prior ipsilateral breast radiation).",
+          "expression": "variables.IsRadiotherapyContraindicationExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsRadiotherapyContraindicationExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have history of exposure to the following cumulative doses of anthracyclines: doxorubicin > 240 mg/m^2; epirubicin or liposomal doxorubicin-hydrochloride (Myocet) > 480 mg/m^2. For other anthracyclines, exposure equivalent to doxorubicin > 240 mg/m^2.",
+      "expression": "IsAnthracyclineExposureExcluded",
+      "id": "IsAnthracyclineExposureExcluded",
+      "allowMissingVariables": [
+        "IsAnthracyclineExposureExcluded"
+      ],
+      "dependency": [
+        "IsAnthracyclineExposureExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsAnthracyclineExposureExcluded",
+          "title": "Anthracycline exposure",
+          "description": "History of exposure to the following cumulative doses of anthracyclines: doxorubicin > 240 mg/m^2; epirubicin or liposomal doxorubicin-hydrochloride (Myocet) > 480 mg/m^2. For other anthracyclines, exposure equivalent to doxorubicin > 240 mg/m^2.",
+          "expression": "variables.IsAnthracyclineExposureExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsAnthracyclineExposureExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have severe uncontrolled systemic disease",
+      "expression": "IsSevereUncontrolledSystemicDiseaseExcluded",
+      "id": "IsSevereUncontrolledSystemicDiseaseExcluded",
+      "allowMissingVariables": [
+        "IsSevereUncontrolledSystemicDiseaseExcluded"
+      ],
+      "dependency": [
+        "IsSevereUncontrolledSystemicDiseaseExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsSevereUncontrolledSystemicDiseaseExcluded",
+          "title": "Severe uncontrolled systemic disease",
+          "description": "Current severe, uncontrolled systemic disease.",
+          "expression": "variables.IsSevereUncontrolledSystemicDiseaseExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsSevereUncontrolledSystemicDiseaseExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have major surgical procedure unrelated to breast cancer or significant traumatic injury within 28 days prior to registration or anticipation of the need for major surgery during the course of study treatment.",
+      "expression": "IsMajorSurgicalProcedureExcluded",
+      "id": "IsMajorSurgicalProcedureExcluded",
+      "allowMissingVariables": [
+        "IsMajorSurgicalProcedureExcluded"
+      ],
+      "dependency": [
+        "IsMajorSurgicalProcedureExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsMajorSurgicalProcedureExcluded",
+          "title": "Major surgical procedure",
+          "description": "Major surgical procedure unrelated to breast cancer or significant traumatic injury within 28 days prior to registration or anticipation of the need for major surgery during the course of study treatment.",
+          "expression": "variables.IsMajorSurgicalProcedureExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsMajorSurgicalProcedureExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Participants must not have history of intolerance, including grade 3 to 4 infusion reaction or hypersensitivity to trastuzumab or murine proteins or any components of the product.",
+      "expression": "IsIntoleranceToTrastuzumabExcluded",
+      "id": "IsIntoleranceToTrastuzumabExcluded",
+      "allowMissingVariables": [
+        "IsIntoleranceToTrastuzumabExcluded"
+      ],
+      "dependency": [
+        "IsIntoleranceToTrastuzumabExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsIntoleranceToTrastuzumabExcluded",
+          "title": "Intolerance to trastuzumab",
+          "description": "History of intolerance, including grade 3 to 4 infusion reaction or hypersensitivity to trastuzumab or murine proteins or any components of the product.",
+          "expression": "variables.IsIntoleranceToTrastuzumabExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsIntoleranceToTrastuzumabExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patients with peripheral neuropathy of any etiology that exceeds grade 1 are ineligible.",
+      "expression": "IsPeripheralNeuropathyExcluded",
+      "id": "IsPeripheralNeuropathyExcluded",
+      "allowMissingVariables": [
+        "IsPeripheralNeuropathyExcluded"
+      ],
+      "dependency": [
+        "IsPeripheralNeuropathyExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsPeripheralNeuropathyExcluded",
+          "title": "Peripheral neuropathy",
+          "description": "Peripheral neuropathy of any etiology that exceeds grade 1.",
+          "expression": "variables.IsPeripheralNeuropathyExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsPeripheralNeuropathyExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Assessment by the investigator as being unable or unwilling to comply with the requirements of the protocol.",
+      "expression": "IsNonComplianceWithProtocolExcluded",
+      "id": "IsNonComplianceWithProtocolExcluded",
+      "allowMissingVariables": [
+        "IsNonComplianceWithProtocolExcluded"
+      ],
+      "dependency": [
+        "IsNonComplianceWithProtocolExcluded"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsNonComplianceWithProtocolExcluded",
+          "title": "Non-compliance with protocol",
+          "description": "Assessment by the investigator as being unable or unwilling to comply with the requirements of the protocol.",
+          "expression": "variables.IsNonComplianceWithProtocolExcluded.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsNonComplianceWithProtocolExcluded.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Patients with cardiopulmonary dysfunctions are ineligible",
+      "expression": "IsCardiopulmonaryDysfunctionExcluded1 || IsCardiopulmonaryDysfunctionExcluded2 || IsCardiopulmonaryDysfunctionExcluded3 || IsCardiopulmonaryDysfunctionExcluded4 || IsCardiopulmonaryDysfunctionExcluded5 || IsCardiopulmonaryDysfunctionExcluded6",
+      "id": "IsCardiopulmonaryDysfunctionExcluded",
+      "allowMissingVariables": [
+        "IsCardiopulmonaryDysfunctionExcluded1",
+        "IsCardiopulmonaryDysfunctionExcluded2",
+        "IsCardiopulmonaryDysfunctionExcluded3",
+        "IsCardiopulmonaryDysfunctionExcluded4",
+        "IsCardiopulmonaryDysfunctionExcluded5",
+        "IsCardiopulmonaryDysfunctionExcluded6"
+      ],
+      "dependency": [
+        "IsCardiopulmonaryDysfunctionExcluded1",
+        "IsCardiopulmonaryDysfunctionExcluded2",
+        "IsCardiopulmonaryDysfunctionExcluded3",
+        "IsCardiopulmonaryDysfunctionExcluded4",
+        "IsCardiopulmonaryDysfunctionExcluded5",
+        "IsCardiopulmonaryDysfunctionExcluded6"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsCardiopulmonaryDysfunctionExcluded1",
+          "title": "Cardiopulmonary dysfunction as defined by any of the following : History of National Cancer Institute (NCI) CTCAE version (v) 5.0 grade >= 3 symptomatic congestive heart failure (CHF) or New York Heart Association (NYHA) criteria class >= II.",
+          "description": "Cardiopulmonary dysfunction - NCI",
+          "expression": "variables.IsCardiopulmonaryDysfunctionExcluded1.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsCardiopulmonaryDysfunctionExcluded1.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsCardiopulmonaryDysfunctionExcluded2",
+          "title": "Cardiopulmonary dysfunction as defined by any of the following : Angina pectoris requiring anti-anginal medication, serious cardiac arrhythmia not controlled by adequate medication, severe conduction abnormality, or clinically significant valvular disease",
+          "description": "Cardiopulmonary dysfunction - angina pectoris",
+          "expression": "variables.IsCardiopulmonaryDysfunctionExcluded2.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsCardiopulmonaryDysfunctionExcluded2.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsCardiopulmonaryDysfunctionExcluded3",
+          "title": "Cardiopulmonary dysfunction as defined by any of the following : High-risk uncontrolled arrhythmias: i.e., atrial tachycardia with a heart rate > 100/min at rest, significant ventricular arrhythmia (ventricular tachycardia) or higher-grade atrioventricular block (AV)-block (second degree AV-block type 2 [Mobitz 2] or third degree AV-block)",
+          "description": "Cardiopulmonary dysfunction - uncontrolled arrhythmias",
+          "expression": "variables.IsCardiopulmonaryDysfunctionExcluded3.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsCardiopulmonaryDysfunctionExcluded3.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsCardiopulmonaryDysfunctionExcluded4",
+          "title": "Cardiopulmonary dysfunction as defined by any of the following :Significant symptoms (grade >= 2) relating to left ventricular dysfunction, cardiac arrhythmia, or cardiac ischemia while or since receiving preoperative therapy",
+          "description": "Cardiopulmonary dysfunction - left ventricular dysfunction",
+          "expression": "variables.IsCardiopulmonaryDysfunctionExcluded4.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsCardiopulmonaryDysfunctionExcluded4.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsCardiopulmonaryDysfunctionExcluded5",
+          "title": "Cardiopulmonary dysfunction as defined by any of the following : History of a decrease in left ventricular ejection fraction (LVEF) to < 40% with prior trastuzumab treatment (e.g., during preoperative therapy)",
+          "description": "Cardiopulmonary dysfunction - left ventricular ejection fraction",
+          "expression": "variables.IsCardiopulmonaryDysfunctionExcluded5.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsCardiopulmonaryDysfunctionExcluded5.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsCardiopulmonaryDysfunctionExcluded6",
+          "title": "Cardiopulmonary dysfunction as defined by any of the following : Uncontrolled hypertension (systolic blood pressure > 180 mmHg and/or diastolic blood pressure > 100 mmHg)",
+          "description": "Cardiopulmonary dysfunction - uncontrolled hypertension",
+          "expression": "variables.IsCardiopulmonaryDysfunctionExcluded6.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsCardiopulmonaryDysfunctionExcluded6.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "exclusion",
+      "title": "Use of a strong CYP3A4 or CYP2C8 inhibitor within 2 weeks, or use of a strong CYP3A4 or CYP2C8 inducer within 5 days prior to registration is prohibited.",
+      "expression": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded1 || IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded2 || IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded3 ",
+      "id": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded",
+      "allowMissingVariables": [
+        "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded1",
+        "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded2",
+        "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded3"
+      ],
+      "dependency": [
+        "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded1",
+        "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded2",
+        "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded3"
+      ],
+      "subCriteria": [
+        {
+          "id": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded1",
+          "title": "Use of sensitive CYP3A substrates two weeks before registration and during study treatment.",
+          "description": "Use of sensitive CYP3A substrates two weeks before registration and during study treatment.",
+          "expression": "variables.IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded1.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded1.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded2",
+          "title": "CYP3A4 or CYP2C8 inducers as concomitant medications within 5 days following discontinuation of tucatinib treatment.",
+          "description": "CYP3A4 or CYP2C8 inducers as concomitant medications within 5 days following discontinuation of tucatinib treatment.",
+          "expression": "variables.IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded2.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded2.value.reasoning.join(' ', @)"
+          }
+        },
+        {
+          "id": "IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded3",
+          "title": "Require medications that are known to be sensitive substrates of CYP3A4 with a narrow therapeutic window.",
+          "description": "Require medications that are known to be sensitive substrates of CYP3A4 with a narrow therapeutic window.",
+          "expression": "variables.IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded3.value.response == 'ELIGIBLE'",
+          "explainability": {
+            "displayValue": "variables.IsUseOfCYP3A4OrCYP2C8InhibitorsInducersExcluded3.value.reasoning.join(' ', @)"
+          }
+        }
+      ]
+    }
+  ]
+}

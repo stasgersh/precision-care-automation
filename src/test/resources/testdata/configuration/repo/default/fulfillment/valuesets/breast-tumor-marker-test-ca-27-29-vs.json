@@ -1,0 +1,33 @@
+{
+  "name": "breast-tumor-marker-test-ca-27-29-vs",
+  "valueset": {
+    "version": "1.0",
+    "url": "breast-tumor-marker-test-ca-27-29-vs",
+    "description": "Breast tumor marker set for Cancer Ag 27-29",
+    "compose": {
+      "include": [
+        {
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "17842-6",
+              "display": "Cancer Ag 27-29 [Units/volume] in Serum or Plasma"
+            },
+            {
+              "code": "19187-4",
+              "display": "Cancer Ag 27-29 [Units/volume] in Pleural fluid"
+            },
+            {
+              "code": "2012-3",
+              "display": "Cancer Ag 27-29 [Presence] in Serum or Plasma"
+            },
+            {
+              "code": "50782-2",
+              "display": "Cancer Ag 27-29 [Units/volume] in Cerebral spinal fluid"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

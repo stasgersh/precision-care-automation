@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "8705af90-fe93-48a3-975b-6f5512256fa4",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "vital-signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "29463-7",
+        "display": "Body Weight"
+      }
+    ],
+    "text": "Body Weight"
+  },
+  "subject": {
+    "reference": "Patient/83a2a278-ff45-e749-4968-bd121b0100c6"
+  },
+  "encounter": {
+    "reference": "Encounter/d8ebe751-5a38-cd78-c3b7-3e49ecb7f7f3"
+  },
+  "effectiveDateTime": "2014-02-25T10:53:12+01:00",
+  "issued": "2014-02-25T10:53:12.075+01:00",
+  "valueQuantity": {
+    "value": 80.4,
+    "unit": "kg",
+    "system": "http://unitsofmeasure.org",
+    "code": "kg"
+  },
+  "note": [
+    {
+      "text": "Body Weight 80.4 kg"
+    }
+  ]
+}

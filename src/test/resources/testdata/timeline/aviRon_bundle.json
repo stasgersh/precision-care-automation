@@ -1,0 +1,1087 @@
+{
+  "resourceType": "Bundle",
+  "type": "batch",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "testPatientIdAvi",
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/person_id",
+            "value": "cf90fbf6-0ef8-4f32-a5e9-f2528484f40d"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "OncoTestPatient",
+            "given": [
+              "AviRon"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1939-12-14",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "source": "default",
+          "lastUpdated": "2024-05-14T13:50:30.585Z"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/testPatientIdAvi"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "039bb737-9aff-5b20-97a0-d60f77146a7f",
+        "meta": {
+          "lastUpdated": "2024-05-07T11:24:51.543Z",
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+            "value": "197309356"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "98921000119102",
+              "display": "Pain due to neoplastic disease"
+            }
+          ],
+          "text": "Pain due to neoplastic disease"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "encounter": {
+          "reference": "Encounter/a053bce6-8b37-5d98-b1f0-709ce6bd6cfb"
+        },
+        "onsetDateTime": "2021-04-25T08:38:00.000Z",
+        "abatementDateTime": "2021-04-25T23:59:00.000Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/039bb737-9aff-5b20-97a0-d60f77146a7f"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0cab5117-94bb-5198-b32c-787096bdb760",
+        "meta": {
+          "lastUpdated": "2024-05-07T11:24:51.588Z",
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+            "value": "115638769"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "provisional",
+              "display": "Provisional"
+            }
+          ],
+          "text": "Provisional"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "699214007",
+              "display": "Pressure ulcer of hip"
+            }
+          ],
+          "text": "Pressure ulcer of hip"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "encounter": {
+          "reference": "Encounter/2dd37782-01b4-5ffc-abbf-e19609b6c999"
+        },
+        "onsetDateTime": "2021-06-16T00:00:00.000Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0cab5117-94bb-5198-b32c-787096bdb760"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "34fa2017-6ce1-50f9-aacb-70e5a2f1a1c8",
+        "meta": {
+          "lastUpdated": "2024-05-07T11:24:51.589Z",
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+            "value": "115578847"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "420324007",
+              "display": "Pressure ulcer stage 2"
+            }
+          ],
+          "text": "Pressure ulcer stage 2"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "encounter": {
+          "reference": "Encounter/2dd37782-01b4-5ffc-abbf-e19609b6c999"
+        },
+        "onsetDateTime": "2021-06-16T10:13:00.000Z",
+        "abatementDateTime": "2021-06-16T23:59:00.000Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/34fa2017-6ce1-50f9-aacb-70e5a2f1a1c8"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "5aa90570-d86a-5f9d-b996-6178fee8feaf",
+        "meta": {
+          "lastUpdated": "2024-05-07T11:24:51.590Z",
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+            "value": "22218125"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "14760008",
+              "display": "Constipation"
+            }
+          ],
+          "text": "Constipation"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "encounter": {
+          "reference": "Encounter/9e1708c2-a7ed-5d06-9fb9-1c7d25c877b7"
+        },
+        "onsetDateTime": "2021-05-13T00:00:00.000Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/5aa90570-d86a-5f9d-b996-6178fee8feaf"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "5e6b7f0c-ad52-5b17-81ea-806d64fa0461",
+        "meta": {
+          "lastUpdated": "2024-05-07T14:33:18.300Z",
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+            "value": "753054353"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "C79.31",
+              "display": "Secondary malignant neoplasm of brain"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of brain"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "onsetDateTime": "2020-04-26T08:40:00.000Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/5e6b7f0c-ad52-5b17-81ea-806d64fa0461"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "74dee553-50f9-5b89-885a-0b8b0696ed01",
+        "meta": {
+          "lastUpdated": "2024-05-07T11:24:43.450Z",
+          "source": "default"
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/condition_occurrence_id",
+            "value": "14511953"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "provisional",
+              "display": "Provisional"
+            }
+          ],
+          "text": "Provisional"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "94381002",
+              "display": "Secondary malignant neoplasm of liver"
+            }
+          ],
+          "text": "Secondary malignant neoplasm of liver"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "encounter": {
+          "reference": "Encounter/8f318c7b-9f59-5f8b-aa07-10ac7eac7ac1"
+        },
+        "onsetDateTime": "2017-06-06T00:00:00.000Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/74dee553-50f9-5b89-885a-0b8b0696ed01"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "0043d973-fbe3-5a86-88a6-63238483608c",
+        "meta": {
+          "lastUpdated": "2024-05-07T11:05:15.907Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/drug_exposure_id",
+            "value": "868893462"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197582",
+              "display": "dexamethasone 4 MG Oral Tablet"
+            }
+          ],
+          "text": "dexamethasone 4 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "context": {
+          "reference": "Encounter/61ea6e4c-8796-55f4-82c3-62706e3dc9b7"
+        },
+        "effectiveDateTime": "2016-08-11T13:29:00.000Z",
+        "dosage": [
+          {
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ],
+              "text": "Oral route"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationStatement/0043d973-fbe3-5a86-88a6-63238483608c"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "008f7990-cd70-5064-a438-7ce8e3115311",
+        "meta": {
+          "lastUpdated": "2024-05-07T11:05:19.813Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://ge.com/oncoflow/omop/drug_exposure_id",
+            "value": "228571272"
+          }
+        ],
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "861007",
+              "display": "metformin hydrochloride 500 MG Oral Tablet"
+            }
+          ],
+          "text": "metformin hydrochloride 500 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2016-09-24T21:29:00.000Z",
+        "dosage": [
+          {
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ],
+              "text": "Oral route"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationStatement/008f7990-cd70-5064-a438-7ce8e3115311"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "024e7837-6f6c-4bf3-a30d-f77020504d78",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.169148830Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10334-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2014-06-15",
+        "valueInteger": 24
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/024e7837-6f6c-4bf3-a30d-f77020504d78"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "03f94389-a4e0-4682-b624-4e263a3f1282",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:33.706825359Z",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2015-02-11",
+        "valueQuantity": {
+          "value": 157.70098000000002,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/03f94389-a4e0-4682-b624-4e263a3f1282"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "074fc2fa-48c1-4856-8875-4842528a67f6",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.167326779Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10334-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2015-03-01",
+        "valueInteger": 444
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/074fc2fa-48c1-4856-8875-4842528a67f6"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "08242d78-9aa1-45e3-9971-22c3a8335e08",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.167883415Z",
+          "source": "default"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18782-3",
+              "display": "Radiology Study observation (narrative)"
+            }
+          ],
+          "text": "Findings"
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "valueString": "PROGRESSIVE",
+        "bodySite": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "818983003/277113001////",
+              "display": "Multisection^W contrast IV:Find:Pt:Abdomen+Pelvis:Doc:CT/Abdomen�/Pelvis�////"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/08242d78-9aa1-45e3-9971-22c3a8335e08"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1285e533-91f9-4f6b-98c1-a994ced03819",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:33.708119887Z",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2024-02-20",
+        "valueQuantity": {
+          "value": 55.6,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/1285e533-91f9-4f6b-98c1-a994ced03819"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "12a78365-0b16-49ce-910a-df7b1967698f",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.169286740Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10334-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2013-11-24",
+        "valueInteger": 487
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/12a78365-0b16-49ce-910a-df7b1967698f"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1b54ab1c-a7d7-49e7-b306-a330a55c8a1c",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.170799496Z",
+          "source": "default"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "399042005",
+              "display": "Chemotherapy Cycle Number"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "valueInteger": 2
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/1b54ab1c-a7d7-49e7-b306-a330a55c8a1c"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "26b8a94f-bc75-49bc-9558-93105281bc92",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:33.706529254Z",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2015-02-11",
+        "valueQuantity": {
+          "value": 52.5,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/26b8a94f-bc75-49bc-9558-93105281bc92"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2ee7b886-dcc0-426e-8ca4-7fb4ae77d2e2",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.168963093Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10334-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2014-12-13",
+        "valueInteger": 369
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/2ee7b886-dcc0-426e-8ca4-7fb4ae77d2e2"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "34257db1-42c8-4c1f-ac69-2797ad4cbb73",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.169381763Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10334-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2014-03-16",
+        "valueInteger": 28
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/34257db1-42c8-4c1f-ac69-2797ad4cbb73"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "34257db1-42c8-4c1f-ac69-2797ad4cbb00",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:22.169381763Z",
+          "source": "default",
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10334-1",
+              "display": "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2027-03-16",
+        "valueInteger": 28
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/34257db1-42c8-4c1f-ac69-2797ad4cbb00"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "26b8a94f-bc75-49bc-9558-93105281b111",
+        "meta": {
+          "lastUpdated": "2024-08-09T05:43:33.706529254Z",
+          "source": "default"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/testPatientIdAvi"
+        },
+        "effectiveDateTime": "2025-02-11",
+        "valueQuantity": {
+          "value": 52.5,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/26b8a94f-bc75-49bc-9558-93105281b111"
+      }
+    }
+  ]
+}
